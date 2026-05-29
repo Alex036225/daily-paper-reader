@@ -6,73 +6,46 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-04-30 ~ 2026-05-29
-- 运行时间：2026-05-29 17:54:19 UTC
+- 最新运行日期：2026-05-29
+- 运行时间：2026-05-29 22:06:22 UTC
 - 运行状态：成功
-- 本次总论文数：17
+- 本次总论文数：8
 - 精读区：6
-- 速读区：11
+- 速读区：2
 
 ### 今日简报（AI）
-本周精读聚焦高拟真说话人头生成技术，通过非对称核蒸馏与多条件扩散实现实时、可控的长时动画。  
-值得重点关注实时蒸馏框架与自适应路由机制，二者结合显著提升了生成效率与表现力。  
-如果你也在做数字人或视频对话应用，可以尝试将蒸馏策略融入扩散模型管线，优先保障时序连贯性。
-- 详情：[/20260430-20260529/README](/20260430-20260529/README)
+1) 今日聚焦于长视频音画生成与模型量化，深入拆解了从流式编排到4比特压缩的核心方案。  
+2) 最亮眼的是《StreamChar》用解耦编排实现长时间流式角色音视频生成，以及《Tail-Aware HiFloat4》将大型视频模型高效量化为W4A4格式。  
+3) 对实时生成和端侧部署感兴趣的读者，不妨从《StreamChar》的调度思路和尾部感知量化方法学起。
+- 详情：[/202605/29/README](/202605/29/README)
 
 ### 精读区论文标签
-1. [AsymK-Talker: Real-Time and Long-Horizon Talking Head Generation via Asymmetric Kernel Distillation](/20260430-20260529/2605.02948v1-asymk-talker-real-time-and-long-horizon-talking-head-generation-via-asymmetric-kernel-distillation)  
+1. [StreamChar: Long-Horizon Streaming Character Audio-Video Generation with Decoupled Orchestration](/202605/29/2605.25659v1-streamchar-long-horizon-streaming-character-audio-video-generation-with-decoupled-orchestration)  
    标签：评分：9.0/10、query:wan-av-gen
-   evidence：从图像实时生成音频驱动的说话头部视频，具有精确唇形同步
-2. [MoCoTalk: Multi-Conditional Diffusion with Adaptive Router for Controllable Talking Head Generation](/20260430-20260529/2605.08050v1-mocotalk-multi-conditional-diffusion-with-adaptive-router-for-controllable-talking-head-generation)  
+   evidence：联合音视频生成，通过文本驱动口型同步实现角色动画
+2. [Tail-Aware HiFloat4: W4A4 Post-Training Quantization for Wan2.2](/202605/29/2605.26628v1-tail-aware-hifloat4-w4a4-post-training-quantization-for-wan22)  
    标签：评分：9.0/10、query:wan-av-gen
-   evidence：从参考图像和语音音频生成说话头视频，自适应融合身份、关键点、光照网格与音频，实现精确嘴部动态控制
-3. [RefDecoder: Enhancing Visual Generation with Conditional Video Decoding](/20260430-20260529/2605.15196v1-refdecoder-enhancing-visual-generation-with-conditional-video-decoding)  
+   evidence：针对 Wan2.2 视频生成模型的后训练量化
+3. [Native Audio-Visual Alignment for Generation](/202605/29/2605.30073v1-native-audio-visual-alignment-for-generation)  
    标签：评分：9.0/10、query:wan-av-gen
-   evidence：提出参考条件视频VAE解码器，注入参考图像信号以改善基于图像条件的视频生成细节和一致性
-4. [HighSync: High-Quality Lip Synchronization via Latent Diffusion Models](/20260430-20260529/2605.16918v1-highsync-high-quality-lip-synchronization-via-latent-diffusion-models)  
+   evidence：原生音视频对齐框架实现联合生成，使音频驱动唇部运动同步
+4. [IP-Adapter Is All You Need: Towards Fine-Tuning-Free Diffusion-Based Talking Face Generation](/202605/29/2605.30230v1-ip-adapter-is-all-you-need-towards-fine-tuning-free-diffusion-based-talking-face-generation)  
    标签：评分：9.0/10、query:wan-av-gen
-   evidence：端到端的唇形同步说话脸视频生成
-5. [Rebalancing Reference Frame Dominance to Improve Motion in Image-to-Video Models](/20260430-20260529/2605.19398v2-rebalancing-reference-frame-dominance-to-improve-motion-in-image-to-video-models)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：提出DyMoS策略重新平衡图像到视频模型中的注意力，缓解运动抑制。
-6. [Test-Time Self-Adaptive Conditioning for Stable Audio-Driven Talking-Head Generation](/20260430-20260529/2605.25488v1-test-time-self-adaptive-conditioning-for-stable-audio-driven-talking-head-generation)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：音频驱动说话头生成的自适应条件
+   evidence：利用预训练Stable Diffusion和IP-Adapter实现免微调的说话人脸生成，挖掘嘴唇相关语义
+5. [AVBench: Human-Aligned and Automated Evaluation Benchmark for Audio-Video Generative Models](/202605/29/2605.24652v1-avbench-human-aligned-and-automated-evaluation-benchmark-for-audio-video-generative-models)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：面向音视频生成的基准，含语音同步指标，对唇部同步评估关键
+6. [Baton: Explicit Semantic Blueprints for Joint Video-Audio Generation](/202605/29/2605.25195v1-baton-explicit-semantic-blueprints-for-joint-video-audio-generation)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：联合视频音频生成，采用显式语义规划以实现同步跨模态对齐
 
 ### 速读区论文标签
-1. [AudioFace: Language-Assisted Speech-Driven Facial Animation with Multimodal Language Models](/20260430-20260529/2605.07478v1-audioface-language-assisted-speech-driven-facial-animation-with-multimodal-language-models)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：语音驱动面部动画，预测嘴部混合变形；利用语言线索实现精确唇形同步
-2. [SDTalk: Structured Facial Priors and Dual-Branch Motion Fields for Generalizable Gaussian Talking Head Synthesis](/20260430-20260529/2605.09956v1-sdtalk-structured-facial-priors-and-dual-branch-motion-fields-for-generalizable-gaussian-talking-head-synthesis)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：基于单张图像的3DGS一次性说话头合成，利用结构化先验实现完整头部重建，可泛化至新身份
-3. [Improving Human Image Animation via Semantic Representation Alignment](/20260430-20260529/2605.10523v1-improving-human-image-animation-via-semantic-representation-alignment)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：提出一种改善图像到视频人物动画生成的方法，解决面部失真问题。
-4. [SyncDPO: Enhancing Temporal Synchronization in Video-Audio Joint Generation via Preference Learning](/20260430-20260529/2605.12179v1-syncdpo-enhancing-temporal-synchronization-in-video-audio-joint-generation-via-preference-learning)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：提出使用直接偏好优化的后训练框架SyncDPO，提升视频-音频生成中的时间同步，对唇形同步至关重要
-5. [SwiftI2V: Efficient High-Resolution Image-to-Video Generation via Conditional Segment-wise Generation](/20260430-20260529/2605.06356v1-swifti2v-efficient-high-resolution-image-to-video-generation-via-conditional-segment-wise-generation)  
+1. [LongAV-Compass: Towards Unified Evaluation of Minute-Scale Audio-Visual Generation Across T2AV, I2AV, and V2AV](/202605/29/2605.26244v1-longav-compass-towards-unified-evaluation-of-minute-scale-audio-visual-generation-across-t2av-i2av-and-v2av)  
    标签：评分：7.0/10、query:wan-av-gen
-   evidence：图像到视频生成框架
-6. [Unison: Harmonizing Motion, Speech, and Sound for Human-Centric Audio-Video Generation](/20260430-20260529/2605.08729v1-unison-harmonizing-motion-speech-and-sound-for-human-centric-audio-video-generation)  
+   evidence：图像到音视频生成的评估基准，评估音视频对齐
+2. [DirectorBench: Diagnosing Long-Form Video Generation with Personalized Multi-Agent Evaluation](/202605/29/2605.30090v1-directorbench-diagnosing-long-form-video-generation-with-personalized-multi-agent-evaluation)  
    标签：评分：7.0/10、query:wan-av-gen
-   evidence：协调人类中心视频中的动作、语音和声音；直接解决语音-动作对齐以实现唇形同步
-7. [Image-to-Video Diffusion: From Foundations to Open Frontiers](/20260430-20260529/2605.17248v1-image-to-video-diffusion-from-foundations-to-open-frontiers)  
-   标签：评分：7.0/10、query:wan-av-gen
-   evidence：图像到视频扩散模型的全面综述
-8. [Rebalancing Reference Frame Dominance to Improve Motion in Image-to-Video Models](/20260430-20260529/2605.19398v1-rebalancing-reference-frame-dominance-to-improve-motion-in-image-to-video-models)  
-   标签：评分：7.0/10、query:wan-av-gen
-   evidence：通过重新平衡对参考帧的注意力来改善图像到视频模型中的运动抑制问题
-9. [CapTalk: Text-Guided Stylization and Speech-Driven 3D Head Animation](/20260430-20260529/2605.29316v1-captalk-text-guided-stylization-and-speech-driven-3d-head-animation)  
-   标签：评分：7.0/10、query:wan-av-gen
-   evidence：语音驱动3D头部动画，具有同步唇形运动和风格/情感控制
-10. [ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation](/20260430-20260529/2605.06667v1-actcam-zero-shot-joint-camera-and-3d-motion-control-for-video-generation)  
-   标签：评分：6.0/10、query:wan-av-gen
-   evidence：基于预训练图像到视频扩散模型，实现图像条件下的相机与运动控制视频生成
-11. [Do Joint Audio-Video Generation Models Understand Physics?](/20260430-20260529/2605.07061v1-do-joint-audio-video-generation-models-understand-physics)  
-   标签：评分：6.0/10、query:wan-av-gen
-   evidence：评估联合音视频生成模型，直接聚焦多模态视频生成
+   evidence：评测长视频生成，包括音画同步和口型等诊断
 
 
 <div class="dpr-home-promo-card">
