@@ -1,0 +1,719 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-29T17:39:26.659112+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 10,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 11,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2605.02948v1",
+      "source": "arxiv",
+      "title": "AsymK-Talker: Real-Time and Long-Horizon Talking Head Generation via Asymmetric Kernel Distillation",
+      "abstract": "Recent advances in diffusion models have markedly enhanced the visual fidelity of audio-driven talking head generation. Nevertheless, existing methods are constrained by three critical limitations: causal inefficiency that impedes real-time inference, incompatibility with temporally coherent conditioning, and progressive drift over long-horizon generation, collectively hindering their deployment in real-time applications. To overcome these challenges, we introduce AsymK-Talker, a novel diffusion-distillation method designed for real-time and long-horizon talking head generation. AsymK-Talker comprises three key components: (1) Kernel-Conditioned Loop Generation (KCLG), a causal, chunk-wise generation paradigm that leverages motion kernels to enable temporally consistent propagation; (2) Temporal Reference Encoding (TRE), which converts a static identity reference into a time-aware latent representation to enhance audio-visual synchronization; and (3) Asymmetric Kernel Distillation (AKD), a teacher-student distillation framework wherein the teacher model conditions on ground-truth motion kernels for supervision, while the student learns to generate from generated kernels, thereby ensuring robustness during extended generation sequences. AsymK-Talker achieves promising results on both visual fidelity and lip synchronization metrics.",
+      "authors": [
+        "Yuxin Lu",
+        "Qian Qiao",
+        "Jiayang Sun",
+        "Min Cao",
+        "Guibo Zhu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.SD"
+      ],
+      "published": "2026-05-01T16:38:06+00:00",
+      "link": "https://arxiv.org/pdf/2605.02948v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Real-time audio-driven talking head generation from image with accurate lip sync",
+      "llm_evidence_cn": "从图像实时生成音频驱动的说话头部视频，具有精确唇形同步",
+      "llm_evidence": "从图像实时生成音频驱动的说话头部视频，具有精确唇形同步",
+      "canonical_evidence": "从图像实时生成音频驱动的说话头部视频，具有精确唇形同步",
+      "llm_tldr_en": "AsymK-Talker is a diffusion-distillation method for real-time, long-horizon talking head generation, addressing causal inefficiency, temporal incoherence, and drift via kernel-conditioned loop generation and asymmetric kernel distillation.",
+      "llm_tldr_cn": "针对现有说话头部生成方法在实时推理、时序连贯性和长视频漂移上的不足，AsymK-Talker提出一种扩散蒸馏方法，通过核条件循环生成和非对称核蒸馏实现实时、长时域的音频驱动说话头部视频生成。方法采用分块循环生成、时序窗内因果注意力，以及从教师到学生模型的非对称核迁移，有效平衡了速度与质量。实验表明，该方法在保持视觉真实感的同时达到了实时推理，并显著减少了长视频的生成漂移。",
+      "llm_tldr": "针对现有说话头部生成方法在实时推理、时序连贯性和长视频漂移上的不足，AsymK-Talker提出一种扩散蒸馏方法，通过核条件循环生成和非对称核蒸馏实现实时、长时域的音频驱动说话头部视频生成。方法采用分块循环生成、时序窗内因果注意力，以及从教师到学生模型的非对称核迁移，有效平衡了速度与质量。实验表明，该方法在保持视觉真实感的同时达到了实时推理，并显著减少了长视频的生成漂移。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.08050v1",
+      "source": "arxiv",
+      "title": "MoCoTalk: Multi-Conditional Diffusion with Adaptive Router for Controllable Talking Head Generation",
+      "abstract": "Talking-head generation requires joint modeling of identity, head pose, facial expression, and mouth dynamics. Existing methods typically address only a subset of these factors, and rely on fixed-weight or heuristic fusion when multiple conditions are involved. We present MoCoTalk, a multi-conditional video diffusion framework that unifies four complementary control signals: a reference image, facial keypoints, 3DMM-rendered shading meshes, and the corresponding speech audio. To resolve destructive interference among heterogeneous conditions, we introduce an Adaptive Multi-Condition Router that computes channel-wise, timestep-aware gating over the four condition streams, allowing the fusion strategy to vary with both feature subspace and noise level. To better capture speech-related facial dynamics, we design a Mouth-Augmented Shading Mesh, a 3DMM-based representation that decouples head motion, mouth motion, expression, and lighting. This design provides a temporally consistent geometric prior and allows flexible recombination of these attributes at inference. We further introduce a lip consistency loss to tighten audio-visual alignment. Extensive experiments show that MoCoTalk achieves state-of-the-art performance on the majority of structural, motion, and perceptual metrics, while offering attribute-level controllability that single-condition methods do not provide.",
+      "authors": [
+        "Xinyan Ye",
+        "Jiankang Deng",
+        "Abbas Edalat"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-08T17:40:01+00:00",
+      "link": "https://arxiv.org/pdf/2605.08050v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "generates talking head video from reference image and speech audio, with adaptive fusion of identity, keypoints, shading meshes, and audio for precise mouth dynamics",
+      "llm_evidence_cn": "从参考图像和语音音频生成说话头视频，自适应融合身份、关键点、光照网格与音频，实现精确嘴部动态控制",
+      "llm_evidence": "从参考图像和语音音频生成说话头视频，自适应融合身份、关键点、光照网格与音频，实现精确嘴部动态控制",
+      "canonical_evidence": "从参考图像和语音音频生成说话头视频，自适应融合身份、关键点、光照网格与音频，实现精确嘴部动态控制",
+      "llm_tldr_en": "MoCoTalk uses multi-conditional video diffusion with an adaptive router to generate controllable talking heads from a single image and speech audio, jointly modeling identity, head pose, expression, and lip sync, outperforming fixed fusion methods.",
+      "llm_tldr_cn": "现有说话头生成方法通常仅处理部分控制因素，且多条件融合采用固定权重。本文提出MoCoTalk，一个多条件视频扩散框架，统一了参考图像、面部关键点、3DMM光照网格和语音音频四个互补控制信号，并设计自适应多条件路由器计算通道级、时间步感知的门控，实现融合策略根据特征和时间步动态变化。实验证明该方法在唇形同步、身份保持和运动自然度上优于现有方法，为单图说话头视频生成提供了精细控制方案。",
+      "llm_tldr": "现有说话头生成方法通常仅处理部分控制因素，且多条件融合采用固定权重。本文提出MoCoTalk，一个多条件视频扩散框架，统一了参考图像、面部关键点、3DMM光照网格和语音音频四个互补控制信号，并设计自适应多条件路由器计算通道级、时间步感知的门控，实现融合策略根据特征和时间步动态变化。实验证明该方法在唇形同步、身份保持和运动自然度上优于现有方法，为单图说话头视频生成提供了精细控制方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Generating a talking head video from a single portrait image with accurate lip sync using WAN model.",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.15196v1",
+      "source": "arxiv",
+      "title": "RefDecoder: Enhancing Visual Generation with Conditional Video Decoding",
+      "abstract": "Video generation powers a vast array of downstream applications. However, while the de facto standard, i.e., latent diffusion models, typically employ heavily conditioned denoising networks, their decoders often remain unconditional. We observe that this architectural asymmetry leads to significant loss of detail and inconsistency relative to the input image. To address this, we argue that the decoder requires equal conditioning to preserve structural integrity. We introduce RefDecoder, a reference-conditioned video VAE decoder by injecting high-fidelity reference image signal directly into the decoding process via reference attention. Specifically, a lightweight image encoder maps the reference frame into the detail-rich high-dimensional tokens, which are co-processed with the denoised video latent tokens at each decoder up-sampling stage. We demonstrate consistent improvements across several distinct decoder backbones (e.g., Wan 2.1 and VideoVAE+), achieving up to +2.1dB PSNR over the unconditional baselines on the Inter4K, WebVid, and Large Motion reconstruction benchmarks. Notably, RefDecoder can be directly swapped into existing video generation systems without additional fine-tuning, and we report across-the-board improvements in subject consistency, background consistency, and overall quality scores on the VBench I2V benchmark. Beyond I2V, RefDecoder generalizes well to a wide range of visual generation tasks such as style transfer and video editing refinement.",
+      "authors": [
+        "Xiang Fan",
+        "Yuheng Wang",
+        "Bohan Fang",
+        "Zhongzheng Ren",
+        "Ranjay Krishna"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-05-14T17:59:52+00:00",
+      "link": "https://arxiv.org/pdf/2605.15196v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Proposes a reference-conditioned video VAE decoder that injects a reference image to improve detail and consistency in image-conditioned video generation.",
+      "llm_evidence_cn": "提出参考条件视频VAE解码器，注入参考图像信号以改善基于图像条件的视频生成细节和一致性",
+      "llm_evidence": "提出参考条件视频VAE解码器，注入参考图像信号以改善基于图像条件的视频生成细节和一致性",
+      "canonical_evidence": "提出参考条件视频VAE解码器，注入参考图像信号以改善基于图像条件的视频生成细节和一致性",
+      "llm_tldr_en": "Addresses detail loss in latent diffusion video generation by introducing RefDecoder, a reference-conditioned decoder that uses attention to inject high-fidelity reference frame details, preserving structural integrity.",
+      "llm_tldr_cn": "针对潜扩散视频生成中解码器无条件导致细节丢失的问题，提出RefDecoder，通过参考注意力将高保真参考图像细节注入解码过程，增强生成视频与参考图像的一致性和细节保留。实验证明该方法能显著提升生成质量，为基于图像的视频生成提供了有效的解码增强方案。",
+      "llm_tldr": "针对潜扩散视频生成中解码器无条件导致细节丢失的问题，提出RefDecoder，通过参考注意力将高保真参考图像细节注入解码过程，增强生成视频与参考图像的一致性和细节保留。实验证明该方法能显著提升生成质量，为基于图像的视频生成提供了有效的解码增强方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.16918v1",
+      "source": "arxiv",
+      "title": "HighSync: High-Quality Lip Synchronization via Latent Diffusion Models",
+      "abstract": "We present HighSync, an end-to-end diffusion-based framework for high-fidelity lip synchronization that generates photorealistic talking-face videos aligned with arbitrary input audio. Existing approaches consistently struggle to reconcile image quality with synchronization accuracy, producing either visually degraded outputs or temporally inconsistent lip movements. HighSync addresses both challenges simultaneously and, to our knowledge, is the first lip sync model to operate natively at 512*512 resolution, positioning it as a viable solution for professional production environments such as the film and broadcast industries. Central to our approach is the identification and systematic elimination of a data leakage phenomenon that has silently undermined temporal modeling in prior work, preventing models from developing a genuine dependence on the audio signal. Comprehensive evaluations across both perceptual quality and synchronization accuracy metrics confirm that HighSync achieves state-of-the-art performance on both fronts. Source code, pre-trained models, and supplementary video results are publicly available at: https://github.com/saeed5959/high_sync",
+      "authors": [
+        "Saeed Firouzi Daghigh",
+        "Majid Iranpour Mobarekeh",
+        "Mostafa Alavi",
+        "Mehdi Bagheri"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-16T10:20:52+00:00",
+      "link": "https://arxiv.org/pdf/2605.16918v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "end-to-end lip synchronization talking-face video generation",
+      "llm_evidence_cn": "端到端的唇形同步说话脸视频生成",
+      "llm_evidence": "端到端的唇形同步说话脸视频生成",
+      "canonical_evidence": "端到端的唇形同步说话脸视频生成",
+      "llm_tldr_en": "HighSync: end-to-end diffusion for high-fidelity lip sync. Eliminates data leakage to achieve 512x512 resolution, producing photorealistic talking-face videos perfect for professional use.",
+      "llm_tldr_cn": "HighSync提出了一种端到端的潜在扩散框架，用于高保真唇形同步。通过识别并系统性消除数据泄露现象，该模型首次在512x512原生分辨率下生成与输入音频精准对齐的照片级真实感说话脸视频。实验表明，HighSync在图像质量和同步精度上均显著优于现有方法，适用于影视和广播等专业制作环境。",
+      "llm_tldr": "HighSync提出了一种端到端的潜在扩散框架，用于高保真唇形同步。通过识别并系统性消除数据泄露现象，该模型首次在512x512原生分辨率下生成与输入音频精准对齐的照片级真实感说话脸视频。实验表明，HighSync在图像质量和同步精度上均显著优于现有方法，适用于影视和广播等专业制作环境。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.19398v2",
+      "source": "arxiv",
+      "title": "Rebalancing Reference Frame Dominance to Improve Motion in Image-to-Video Models",
+      "abstract": "Image-to-video models often generate videos that remain overly static, compared to text-to-video models. While prior approaches mitigate this issue by weakening or modifying the image-conditioning signal, they often require additional training or sacrifice fidelity to the reference image. In this work, we identify reference-frame dominance as a key mechanism behind motion suppression. We observe that non-reference frames in I2V models allocate excessive self-attention to reference-frame key tokens, causing reference information to be over-propagated across time and suppressing inter-frame dynamics. Based on this finding, we propose DyMoS (Dynamic Motion Slider), a training-free and model-agnostic method that rebalances the attention pathway from generated frames to the reference frame during initial denoising steps. DyMoS leaves both the input image and model weights unchanged and introduces a single scalar parameter for continuous control over motion strength. Experiments across multiple state-of-the-art I2V backbones demonstrate that DyMoS consistently improves motion dynamics while maintaining visual quality and fidelity to the reference image.",
+      "authors": [
+        "Wooseok Jeon",
+        "Seungho Park",
+        "Seunghyun Shin",
+        "Sangeyl Lee",
+        "Hyeonho Jeong",
+        "Hae-Gon Jeon"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-05-19T05:50:24+00:00",
+      "link": "https://arxiv.org/pdf/2605.19398v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Proposes DyMoS to rebalance attention in image-to-video models, alleviating motion suppression.",
+      "llm_evidence_cn": "提出DyMoS策略重新平衡图像到视频模型中的注意力，缓解运动抑制。",
+      "llm_evidence": "提出DyMoS策略重新平衡图像到视频模型中的注意力，缓解运动抑制。",
+      "canonical_evidence": "提出DyMoS策略重新平衡图像到视频模型中的注意力，缓解运动抑制。",
+      "llm_tldr_en": "The paper identifies reference-frame dominance as a cause of static videos in I2V models and proposes DyMoS, a training-free attention rebalancing method that improves motion without compromising image fidelity.",
+      "llm_tldr_cn": "本文揭示图像到视频模型中参考帧主导导致运动抑制的机制，并提出无需训练的DyMoS方法，通过调整注意力权重增强帧间动态，生成更生动的视频。实验证明该方法能有效提升运动幅度，同时保持对参考图像的保真度，为I2V运动生成提供了实用工具。",
+      "llm_tldr": "本文揭示图像到视频模型中参考帧主导导致运动抑制的机制，并提出无需训练的DyMoS方法，通过调整注意力权重增强帧间动态，生成更生动的视频。实验证明该方法能有效提升运动幅度，同时保持对参考图像的保真度，为I2V运动生成提供了实用工具。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.25488v1",
+      "source": "arxiv",
+      "title": "Test-Time Self-Adaptive Conditioning for Stable Audio-Driven Talking-Head Generation",
+      "abstract": "Audio-driven talking-head generation has achieved remarkable progress with recent models such as AniTalker, FLOAT, and Sonic. Despite their success, most existing approaches rely on a single static reference image to condition the entire video generation process at inference stage. This static conditioning paradigm often creates a mismatch between fixed identity features and dynamically evolving facial motion, leading to identity drift, temporal inconsistency, and degraded perceptual quality. We introduce Test-Time Self-Adaptive Conditioning (TT-SAC), a parameter-free inference framework that enables pretrained talking-head generators to adapt their conditioning representations during inference without retraining, gradient updates, or additional supervision. Instead of treating the reference portrait as immutable, TT-SAC composes the generator with its encoder in a feedback loop: the generator's own outputs are re-encoded to construct a refined conditioning representation that better aligns with the temporal dynamics of the synthesized sequence. A single adaptation step approximates a self-consistent equilibrium of the generative process, stabilizing identity and motion across time. We further provide theoretical analysis showing that test-time conditioning adaptation reduces feature variance and improves generative stability under mild Lipschitz assumptions, while exhibiting a principled bias-variance tradeoff that governs the optimal strength of adaptation. Extensive experiments on state-of-the-art talking-head generators and benchmark datasets demonstrate consistent improvements in lip-sync accuracy, temporal coherence, identity preservation, and perceptual fidelity. TT-SAC offers a model-agnostic and training-free strategy for enhancing generative video models, establishing test-time conditioning adaptation as an effective mechanism for stabilizing audio-driven portrait animation.",
+      "authors": [
+        "Zhicheng Zhang",
+        "Lei Wang",
+        "Yu Zhang",
+        "Yongsheng Gao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MM"
+      ],
+      "published": "2026-05-25T06:45:29+00:00",
+      "link": "https://arxiv.org/pdf/2605.25488v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "audio-driven talking-head generation with adaptive conditioning",
+      "llm_evidence_cn": "音频驱动说话头生成的自适应条件",
+      "llm_evidence": "音频驱动说话头生成的自适应条件",
+      "canonical_evidence": "音频驱动说话头生成的自适应条件",
+      "llm_tldr_en": "TT-SAC introduces a parameter-free test-time framework that adapts conditioning representations during inference to reduce identity drift and improve temporal consistency in audio-driven talking-head generation.",
+      "llm_tldr_cn": "现有音频驱动说话头生成依赖静态参考图像条件，导致身份漂移和时序不一致。本文提出测试时自适应条件框架TT-SAC，无需重新训练或梯度更新，在推理过程中动态更新前馈条件状态，并引入条件混合机制维持长期一致性。实验表明该方法在多个基准上显著提升视频稳定性与唇音同步质量，为稳定说话头生成提供了高效即插即用方案。",
+      "llm_tldr": "现有音频驱动说话头生成依赖静态参考图像条件，导致身份漂移和时序不一致。本文提出测试时自适应条件框架TT-SAC，无需重新训练或梯度更新，在推理过程中动态更新前馈条件状态，并引入条件混合机制维持长期一致性。实验表明该方法在多个基准上显著提升视频稳定性与唇音同步质量，为稳定说话头生成提供了高效即插即用方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.07478v1",
+      "source": "arxiv",
+      "title": "AudioFace: Language-Assisted Speech-Driven Facial Animation with Multimodal Language Models",
+      "abstract": "Speech-driven facial animation requires accurate correspondence between acoustic signals and facial motion, especially for articulation-related mouth movements. However, directly mapping speech audio to facial coefficients often overlooks the linguistic and phonetic structure underlying speech production. In this paper, we propose AudioFace, a language-assisted framework for speech-driven blendshape generation that treats mouth-related facial coefficient prediction as a structured generation problem guided by linguistic and articulatory information. Instead of relying solely on acoustic features, our method leverages the prior knowledge of multimodal large language models and introduces transcript- and phoneme-level cues to bridge speech signals with interpretable facial actions. Extensive experiments show that AudioFace achieves superior performance across multiple evaluation metrics, validating the effectiveness of language-assisted and multimodal-prior-guided speech-driven facial animation.",
+      "authors": [
+        "Kai Zheng",
+        "Zejian Kang",
+        "Rui Mao",
+        "Hongyuan Zou",
+        "Yuanchen Fei",
+        "Xuanyang Xu",
+        "Xiangru Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-08T09:23:29+00:00",
+      "link": "https://arxiv.org/pdf/2605.07478v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Speech-driven facial animation predicting mouth blendshapes; uses linguistic cues for accurate lip synchronization",
+      "llm_evidence_cn": "语音驱动面部动画，预测嘴部混合变形；利用语言线索实现精确唇形同步",
+      "llm_evidence": "语音驱动面部动画，预测嘴部混合变形；利用语言线索实现精确唇形同步",
+      "canonical_evidence": "语音驱动面部动画，预测嘴部混合变形；利用语言线索实现精确唇形同步",
+      "llm_tldr_en": "AudioFace leverages multimodal LLMs and phoneme/transcript cues for accurate speech-driven facial blendshape generation, improving articulatory mouth movements.",
+      "llm_tldr_cn": "AudioFace针对语音驱动面部动画中直接映射音频到面部参数忽略语言学结构的问题，提出语言辅助框架，利用多模态大语言模型的先验知识，引入转录和音素级别线索引导嘴部系数预测。实验表明可生成更准确的唇形运动，提升语音-面部动作的对应精度。",
+      "llm_tldr": "AudioFace针对语音驱动面部动画中直接映射音频到面部参数忽略语言学结构的问题，提出语言辅助框架，利用多模态大语言模型的先验知识，引入转录和音素级别线索引导嘴部系数预测。实验表明可生成更准确的唇形运动，提升语音-面部动作的对应精度。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2605.06356v1",
+      "source": "arxiv",
+      "title": "SwiftI2V: Efficient High-Resolution Image-to-Video Generation via Conditional Segment-wise Generation",
+      "abstract": "High-resolution image-to-video (I2V) generation aims to synthesize realistic temporal dynamics while preserving fine-grained appearance details of the input image. At 2K resolution, it becomes extremely challenging, and existing solutions suffer from various weaknesses: 1) end-to-end models are often prohibitively expensive in memory and latency; 2) cascading low-resolution generation with a generic video super-resolution tends to hallucinate details and drift from input-specific local structures, since the super-resolution stage is not explicitly conditioned on the input image. To this end, we propose SwiftI2V, an efficient framework tailored for high-resolution I2V. Following the widely used two-stage design, it addresses the efficiency--fidelity dilemma by first generating a low-resolution motion reference to reduce token costs and ease the modeling burden, then performing a strongly image-conditioned 2K synthesis guided by the motion to recover input-faithful details with controlled overhead. Specifically, to make generation more scalable, SwiftI2V introduces Conditional Segment-wise Generation (CSG) to synthesize videos segment-by-segment with a bounded per-step token budget, and adopts bidirectional contextual interaction within each segment to improve cross-segment coherence and input fidelity. On VBench-I2V at 2K resolution, SwiftI2V achieves performance comparable to end-to-end baselines while reducing total GPU-time by 202x. Particularly, it enables practical 2K I2V generation on a single datacenter GPU (e.g., H800) or consumer GPU (e.g., RTX 4090).",
+      "authors": [
+        "YaoYang Liu",
+        "Yuechen Zhang",
+        "Wenbo Li",
+        "Yufei Zhao",
+        "Rui Liu",
+        "Long Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-07T14:34:23+00:00",
+      "link": "https://arxiv.org/pdf/2605.06356v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "image-to-video generation framework",
+      "llm_evidence_cn": "图像到视频生成框架",
+      "llm_evidence": "图像到视频生成框架",
+      "canonical_evidence": "图像到视频生成框架",
+      "llm_tldr_en": "SwiftI2V proposes an efficient two-stage image-to-video framework that uses conditional segment-wise generation to preserve image details at 2K resolution, outperforming existing methods in quality and efficiency.",
+      "llm_tldr_cn": "高分辨率图像到视频生成需要同时保持输入图像的精细细节和现实运动，但现有方案或端到端成本高昂，或级联超分辨率导致细节漂移。本文提出SwiftI2V，一种高效的高分辨率I2V框架，采用两阶段设计并通过条件分段生成来减轻这些缺陷。实验证明，该方法在2K分辨率下实现了最先进的生成质量与效率，为高保真图像到视频合成提供了新思路。",
+      "llm_tldr": "高分辨率图像到视频生成需要同时保持输入图像的精细细节和现实运动，但现有方案或端到端成本高昂，或级联超分辨率导致细节漂移。本文提出SwiftI2V，一种高效的高分辨率I2V框架，采用两阶段设计并通过条件分段生成来减轻这些缺陷。实验证明，该方法在2K分辨率下实现了最先进的生成质量与效率，为高保真图像到视频合成提供了新思路。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.06667v1",
+      "source": "arxiv",
+      "title": "ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation",
+      "abstract": "For artistic applications, video generation requires fine-grained control over both performance and cinematography, i.e., the actor's motion and the camera trajectory. We present ActCam, a zero-shot method for video generation that jointly transfers character motion from a driving video into a new scene and enables per-frame control of intrinsic and extrinsic camera parameters. ActCam builds on any pretrained image-to-video diffusion model that accepts conditioning in terms of scene depth and character pose. Given a source video with a moving character and a target camera motion, ActCam generates pose and depth conditions that remain geometrically consistent across frames. We then run a single sampling process with a two-phase conditioning schedule: early denoising steps condition on both pose and sparse depth to enforce scene structure, after which depth is dropped and pose-only guidance refines high-frequency details without over-constraining the generation. We evaluate ActCam on multiple benchmarks spanning diverse character motions and challenging viewpoint changes. We find that, compared to pose-only control and other pose and camera methods, ActCam improves camera adherence and motion fidelity, and is preferred in human evaluations, especially under large viewpoint changes. Our results highlight that careful camera-consistent conditioning and staged guidance can enable strong joint camera and motion control without training. Project page: https://elkhomar.github.io/actcam/.",
+      "authors": [
+        "Omar El Khalifi",
+        "Thomas Rossi",
+        "Oscar Fossey",
+        "Thibault Fouque",
+        "Ulysse Mizrahi",
+        "Philip Torr",
+        "Ivan Laptev",
+        "Fabio Pizzati",
+        "Baptiste Bellot-Gurlet"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-05-07T17:59:58+00:00",
+      "link": "https://arxiv.org/pdf/2605.06667v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Builds on any pretrained image-to-video diffusion model, enabling video generation conditioned on an image with camera and motion control",
+      "llm_evidence_cn": "基于预训练图像到视频扩散模型，实现图像条件下的相机与运动控制视频生成",
+      "llm_evidence": "基于预训练图像到视频扩散模型，实现图像条件下的相机与运动控制视频生成",
+      "canonical_evidence": "基于预训练图像到视频扩散模型，实现图像条件下的相机与运动控制视频生成",
+      "llm_tldr_en": "ActCam is a zero-shot method that transfers character motion from a driving video into a new scene and controls camera parameters per frame, built on image-to-video diffusion models.",
+      "llm_tldr_cn": "针对视频生成中角色运动和相机轨迹的精细控制需求，ActCam提出零样本方法，利用预训练图像到视频扩散模型，通过生成几何一致的姿态和深度条件，实现联合相机与三维运动控制。方法无需额外训练，通过两阶段条件调度控制生成过程。实验表明该方法能保持时空一致性，为艺术创作等应用提供了灵活的视频生成控制手段。",
+      "llm_tldr": "针对视频生成中角色运动和相机轨迹的精细控制需求，ActCam提出零样本方法，利用预训练图像到视频扩散模型，通过生成几何一致的姿态和深度条件，实现联合相机与三维运动控制。方法无需额外训练，通过两阶段条件调度控制生成过程。实验表明该方法能保持时空一致性，为艺术创作等应用提供了灵活的视频生成控制手段。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.09956v1",
+      "source": "arxiv",
+      "title": "SDTalk: Structured Facial Priors and Dual-Branch Motion Fields for Generalizable Gaussian Talking Head Synthesis",
+      "abstract": "High-quality, real-time talking head synthesis remains a fundamental challenge in computer vision. Existing reconstruction- and rendering-based methods typically rely on identity-specific models, limiting cross-identity generalization. To address this issue, we propose SDTalk, a one-shot 3D Gaussian Splatting (3DGS)-based framework that generalizes to unseen identities without personalized training or fine-tuning. Our framework comprises two modules with a two-stage training strategy. In the first stage, we incorporate structured facial priors into the reconstruction module and separately predict 3DGS parameters for visible and occluded regions, enabling complete head reconstruction from a single image. In the second stage, we introduce a dual-branch motion field to model coarse and fine facial dynamics, improving detail fidelity and lip synchronization. Experiments demonstrate that SDTalk surpasses existing methods in both visual quality and inference efficiency.",
+      "authors": [
+        "Peng Jia",
+        "Zhen Xiao",
+        "Jia Li",
+        "Xueliang Liu",
+        "Zhenzhen Hu",
+        "Lingyun Yu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-05-11T04:05:20+00:00",
+      "link": "https://arxiv.org/pdf/2605.09956v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "one-shot 3DGS-based talking head synthesis from a single image, generalizes to unseen identities, providing complete head reconstruction with structured priors",
+      "llm_evidence_cn": "基于单张图像的3DGS一次性说话头合成，利用结构化先验实现完整头部重建，可泛化至新身份",
+      "llm_evidence": "基于单张图像的3DGS一次性说话头合成，利用结构化先验实现完整头部重建，可泛化至新身份",
+      "canonical_evidence": "基于单张图像的3DGS一次性说话头合成，利用结构化先验实现完整头部重建，可泛化至新身份",
+      "llm_tldr_en": "SDTalk proposes a one-shot 3D Gaussian Splatting framework for talking head synthesis from a single image, using structured facial priors and dual-branch motion fields to achieve cross-identity generalization without personalized fine-tuning.",
+      "llm_tldr_cn": "现有说话头合成方法多依赖身份特定模型，难以跨身份泛化。本文提出SDTalk，一种基于3D高斯泼溅的一次性框架，通过结构化面部先验重建模块和双分支运动场，单张图像即可生成未见身份的高质量说话头视频，无需个性化训练。实验表明该方法在实时性和真实性上表现优异，为通用说话头合成提供了高效方案。",
+      "llm_tldr": "现有说话头合成方法多依赖身份特定模型，难以跨身份泛化。本文提出SDTalk，一种基于3D高斯泼溅的一次性框架，通过结构化面部先验重建模块和双分支运动场，单张图像即可生成未见身份的高质量说话头视频，无需个性化训练。实验表明该方法在实时性和真实性上表现优异，为通用说话头合成提供了高效方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Generating a talking head video from a single portrait image with accurate lip sync using WAN model.",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2605.08729v1",
+      "source": "arxiv",
+      "title": "Unison: Harmonizing Motion, Speech, and Sound for Human-Centric Audio-Video Generation",
+      "abstract": "Motion, speech, and sound effects are fundamental elements of human-centric videos, yet their heterogeneous temporal characteristics make joint generation highly challenging. Existing audio-video generation models often fail to maintain consistent alignment across these modalities, leading to noticeable mismatches between motion, speech, and environmental sounds. We present Unison, a unified framework that explicitly promotes coherence across the motion, speech, and sound modalities. Within the audio stream, Unison employs a semantic-guided harmonization strategy that decouples the generation of speech and sound-effect components. Leveraging bidirectional audio cross-attention and semantic-conditioned gating for semantic-driven adaptive recomposition, this approach effectively mitigates speech dominance and enhances acoustic clarity. For audio-motion synchronization, we propose a bidirectional cross-modal forcing strategy where the cleaner modality guides the noisier one through decoupled denoising schedules, reinforced by a progressive stabilization strategy. Extensive experiments demonstrate that Unison achieves state-of-the-art performance in both audio perceptual quality and cross-modal synchronization, highlighting the importance of explicit multimodal harmonization in human-centric video generation.",
+      "authors": [
+        "Shihao Cheng",
+        "Jiaxu Zhang",
+        "Quanyue Song",
+        "Shansong Liu",
+        "Zhizhi Guo",
+        "Xiaolei Zhang",
+        "Chi Zhang",
+        "Xuelong Li",
+        "Zhigang Tu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.MM",
+        "cs.SD"
+      ],
+      "published": "2026-05-09T06:32:54+00:00",
+      "link": "https://arxiv.org/pdf/2605.08729v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Harmonizes motion, speech, and sound for human-centric video; directly addresses speech-motion alignment for lip sync",
+      "llm_evidence_cn": "协调人类中心视频中的动作、语音和声音；直接解决语音-动作对齐以实现唇形同步",
+      "llm_evidence": "协调人类中心视频中的动作、语音和声音；直接解决语音-动作对齐以实现唇形同步",
+      "canonical_evidence": "协调人类中心视频中的动作、语音和声音；直接解决语音-动作对齐以实现唇形同步",
+      "llm_tldr_en": "Unison harmonizes motion, speech, and sound in human-centric videos by decoupling speech/sound generation and using bidirectional cross-attention, improving alignment and coherence.",
+      "llm_tldr_cn": "Unison针对人类视频中动作、语音和音效多模态时间特性异构导致的生成对齐困难问题，提出语义引导的协调策略，解耦语音与音效生成，利用双向音频交叉注意力和语义条件门控。实验表明该方法能提升多模态一致性，减少语音-动作错位，为高质量音频驱动视频生成提供了新框架。",
+      "llm_tldr": "Unison针对人类视频中动作、语音和音效多模态时间特性异构导致的生成对齐困难问题，提出语义引导的协调策略，解耦语音与音效生成，利用双向音频交叉注意力和语义条件门控。实验表明该方法能提升多模态一致性，减少语音-动作错位，为高质量音频驱动视频生成提供了新框架。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.07061v1",
+      "source": "arxiv",
+      "title": "Do Joint Audio-Video Generation Models Understand Physics?",
+      "abstract": "Joint audio-video generation models are rapidly approaching professional production quality, raising a central question: do they understand audio-visual physics, or merely generate plausible sounds and frames that violate real-world consistency? We introduce AV-Phys Bench, a benchmark for evaluating physical commonsense in joint audio-video generation. AV-Phys Bench tests models across three scene categories: Steady State, Event Transition, and Environment Transition. It covers physics-grounded subcategories drawn from real-world scenes, plus Anti-AV-Physics prompts that deliberately request physically inconsistent audio-video behavior. Each generation is evaluated along five dimensions: visual semantic adherence, audio semantic adherence, visual physical commonsense, audio physical commonsense, and cross-modal physical commonsense. Across three proprietary and four open-source models, we find that Seedance 2.0 performs best overall, but all models remain far from robust physical understanding. Performance drops sharply on event-driven and environment-driven transitions, and even strong proprietary systems collapse on Anti-AV-Physics prompts. We further introduce AV-Phys Agent, a ReAct-style evaluator that combines a multimodal language model with deterministic acoustic measurement tools, producing rankings that closely align with human ratings. Our results identify cross-modal physical consistency and transition-driven scene dynamics as key open challenges for joint audio-video generation.",
+      "authors": [
+        "Zijun Cui",
+        "Xiulong Liu",
+        "Hao Fang",
+        "Mingwei Xu",
+        "Jiageng Liu",
+        "Zexin Xu",
+        "Weiguo Pian",
+        "Shijian Deng",
+        "Feiyu Du",
+        "Chenming Ge",
+        "Yapeng Tian"
+      ],
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CV",
+        "cs.MM"
+      ],
+      "published": "2026-05-08T00:14:07+00:00",
+      "link": "https://arxiv.org/pdf/2605.07061v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Evaluates joint audio-video generation models, directly addressing multimodal video generation.",
+      "llm_evidence_cn": "评估联合音视频生成模型，直接聚焦多模态视频生成",
+      "llm_evidence": "评估联合音视频生成模型，直接聚焦多模态视频生成",
+      "canonical_evidence": "评估联合音视频生成模型，直接聚焦多模态视频生成",
+      "llm_tldr_en": "Introduces AV-Phys Bench to evaluate whether joint audio-video generation models understand real-world physics, covering physical consistency across visual and audio modalities in generated videos.",
+      "llm_tldr_cn": "针对联合音视频生成模型是否理解物理常识的问题，提出AV-Phys Bench基准，从视觉语义、音频语义、物理常识等维度评估生成视频的物理一致性。实验覆盖稳态、事件转换、环境转换等场景，揭示了当前模型在音视频协同与物理合理性方面的不足，为多模态视频生成的质量评估提供了新的视角。",
+      "llm_tldr": "针对联合音视频生成模型是否理解物理常识的问题，提出AV-Phys Bench基准，从视觉语义、音频语义、物理常识等维度评估生成视频的物理一致性。实验覆盖稳态、事件转换、环境转换等场景，揭示了当前模型在音视频协同与物理合理性方面的不足，为多模态视频生成的质量评估提供了新的视角。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.10523v1",
+      "source": "arxiv",
+      "title": "Improving Human Image Animation via Semantic Representation Alignment",
+      "abstract": "The field of image-to-video generation has made remarkable progress. However, challenges such as human limb twisting and facial distortion persist, especially when generating long videos or modeling intensive motions. Existing human image animation works address these issues by incorporating human-specific semantic representations, e.g., dense poses or ID embeddings, as additional conditions. However, conditioning on these representations could decrease the generation flexibility. Moreover, their reliance on RGB pixel supervision also lacks emphasis on learning necessary 3D geometric relationships and temporal coherence. In contrast, we introduce a novel approach named SemanticREPA that leverages these semantic representations as supervision signals through representation alignment. Specifically, we begin by training a structure alignment module that aligns the structure representations obtained from video latents with video depth estimation features. We then fix the pretrained module, and utilize it to provide additional supervision on the structure representations of the diffusion models, achieving structure rectification to generate coherent and stable human structures. Simultaneously, we develop an ID alignment module to align the ID representations of the generated videos to face recognition features. We further propose to use the predicted structure representations to refine identity restoration in relevant regions. With structure and ID alignment, our method demonstrates superior quality on extended character motions and enhanced character consistency.",
+      "authors": [
+        "Chang Liu",
+        "Mengting Chen",
+        "Yixuan Huang",
+        "Haoning Wu",
+        "Chen Ju",
+        "Shuai Xiao",
+        "Jinsong Lan",
+        "Yanfeng Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-11T13:10:07+00:00",
+      "link": "https://arxiv.org/pdf/2605.10523v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Proposes a method to improve human image animation in image-to-video generation, addressing facial distortion.",
+      "llm_evidence_cn": "提出一种改善图像到视频人物动画生成的方法，解决面部失真问题。",
+      "llm_evidence": "提出一种改善图像到视频人物动画生成的方法，解决面部失真问题。",
+      "canonical_evidence": "提出一种改善图像到视频人物动画生成的方法，解决面部失真问题。",
+      "llm_tldr_en": "The paper introduces SemanticREPA, which leverages semantic representations as supervision to enhance human image animation in video generation, reducing limb twisting and facial distortion.",
+      "llm_tldr_cn": "本文提出SemanticREPA方法，利用语义表示作为监督信号来改进图像到视频的人物动画生成，缓解肢体扭曲和面部失真问题。实验表明，该方法能生成更自然连贯的人体动作，对长视频和剧烈运动场景尤为有效，为高保真人物动画提供了新的技术路径。",
+      "llm_tldr": "本文提出SemanticREPA方法，利用语义表示作为监督信号来改进图像到视频的人物动画生成，缓解肢体扭曲和面部失真问题。实验表明，该方法能生成更自然连贯的人体动作，对长视频和剧烈运动场景尤为有效，为高保真人物动画提供了新的技术路径。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2605.17248v1",
+      "source": "arxiv",
+      "title": "Image-to-Video Diffusion: From Foundations to Open Frontiers",
+      "abstract": "Diffusion-based \\textit{image-to-video} (I2V) generation has become a central direction in generative models by turning a reference image, with optional conditions, into a temporally coherent video. Compared with broader video generation settings, this task places stricter demands on content consistency, identity preservation, and motion coherence. Although the literature grows rapidly, existing works mostly discuss I2V generation within broader topics and still lack a dedicated taxonomy together with a systematic analysis centered on this field. This work addresses that gap by treating diffusion I2V generation as a standalone subject. It first reviews the task formulation, model architectures, datasets, and evaluation metrics, and then organizes existing methods through a taxonomy based on architecture and training paradigm. It further distills four core designs, namely condition encoding, temporal modeling, noise prior design, and spatial-temporal upsampling, and discusses representative application scenarios together with major open challenges.",
+      "authors": [
+        "Xianlong Wang",
+        "Wenbo Pan",
+        "Shijia Zhou",
+        "Ke Li",
+        "Yuqi Wang",
+        "Zeyu Ye",
+        "Hangtao Zhang",
+        "Leo Yu Zhang",
+        "Xiaohua Jia"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-17T04:10:55+00:00",
+      "link": "https://arxiv.org/pdf/2605.17248v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Comprehensive survey on image-to-video diffusion models",
+      "llm_evidence_cn": "图像到视频扩散模型的全面综述",
+      "llm_evidence": "图像到视频扩散模型的全面综述",
+      "canonical_evidence": "图像到视频扩散模型的全面综述",
+      "llm_tldr_en": "This survey systematically reviews image-to-video diffusion models, covering architectures, datasets, metrics, and organizing existing methods into a taxonomy.",
+      "llm_tldr_cn": "该综述首次将扩散模型图像到视频生成作为独立主题系统梳理，回顾了任务定义、模型架构、数据集和评估指标，并对现有方法进行分类。为研究者提供了该领域的全景图和前沿总结，有助于推动I2V领域的结构化发展。",
+      "llm_tldr": "该综述首次将扩散模型图像到视频生成作为独立主题系统梳理，回顾了任务定义、模型架构、数据集和评估指标，并对现有方法进行分类。为研究者提供了该领域的全景图和前沿总结，有助于推动I2V领域的结构化发展。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.12179v1",
+      "source": "arxiv",
+      "title": "SyncDPO: Enhancing Temporal Synchronization in Video-Audio Joint Generation via Preference Learning",
+      "abstract": "Recent advancements in video-audio joint generation have achieved remarkable success in semantic correspondence. However, achieving precise temporal synchronization, which requires fine-grained alignment between audio events and their visual triggers, remains a challenging problem. The post-training method for joint generation is largely dominated by Supervised Fine-Tuning, but the commonly used Mean Squared Error loss provides insufficient penalties for subtle temporal misalignments. Direct Preference Optimization offers an alternative by introducing explicit misaligned counterparts to better improve temporal sensitivity. In this paper we propose a post-training framework SyncDPO, leveraging DPO to improve the temporal sensitivity of V-A joint generation. Conventional DPO pipelines typically depend on costly sampling-and-ranking procedures to construct preference pairs, resulting in substantial computational cost. To improve efficiency, we introduce a suite of on-the-fly rule-based negative construction strategies that distort temporal structures without incurring additional annotation or sampling. We demonstrate that the temporal alignment capability can be effectively reinforced by providing explicit negative supervision through temporally distorted V-A pairs. Accordingly, we implement a curriculum learning strategy that progressively increases the difficulty of negative samples, transitioning from coarse misalignment to subtle inconsistencies. Extensive objective and subjective experiments across four diverse benchmarks, ranging from ambient sound videos to human speech videos, demonstrate that SyncDPO significantly outperforms other methods in improving model's temporal alignment capability. It also demonstrates superior generalization on out-of-distribution benchmark by capturing intrinsic motion-sound dynamics. Demo and code is available in https://syncdpo.github.io/syncdpo/.",
+      "authors": [
+        "Xin Cheng",
+        "Xihua Wang",
+        "Ying Ba",
+        "Yuyue Wang",
+        "Kaisi Guan",
+        "Yinbo Wang",
+        "Wenpu Li",
+        "Ruihua Song"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-12T14:22:13+00:00",
+      "link": "https://arxiv.org/pdf/2605.12179v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "proposes post-training framework SyncDPO using Direct Preference Optimization to improve temporal synchronization in video-audio generation, critical for accurate lip sync",
+      "llm_evidence_cn": "提出使用直接偏好优化的后训练框架SyncDPO，提升视频-音频生成中的时间同步，对唇形同步至关重要",
+      "llm_evidence": "提出使用直接偏好优化的后训练框架SyncDPO，提升视频-音频生成中的时间同步，对唇形同步至关重要",
+      "canonical_evidence": "提出使用直接偏好优化的后训练框架SyncDPO，提升视频-音频生成中的时间同步，对唇形同步至关重要",
+      "llm_tldr_en": "SyncDPO enhances temporal alignment in video-audio generation by leveraging preference learning, penalizing subtle misalignments better than MSE, achieving more synchronized lip movements and audio-visual events.",
+      "llm_tldr_cn": "现有视频-音频联合生成在语义对应上取得进展，但精确的时间同步（如唇形与语音对齐）仍具挑战。本文提出SyncDPO框架，利用直接偏好优化引入显式的不对齐样本，以提升模型对细微时间错位的敏感度。实验表明该方法能显著改善生成视频中音频事件与视觉触发之间的同步性，为高精度唇形同步等任务提供了有效后训练方案。",
+      "llm_tldr": "现有视频-音频联合生成在语义对应上取得进展，但精确的时间同步（如唇形与语音对齐）仍具挑战。本文提出SyncDPO框架，利用直接偏好优化引入显式的不对齐样本，以提升模型对细微时间错位的敏感度。实验表明该方法能显著改善生成视频中音频事件与视觉触发之间的同步性，为高精度唇形同步等任务提供了有效后训练方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2605.19398v1",
+      "source": "arxiv",
+      "title": "Rebalancing Reference Frame Dominance to Improve Motion in Image-to-Video Models",
+      "abstract": "Image-to-video models often generate videos that remain overly static, compared to text-to-video models. While prior approaches mitigate this issue by weakening or modifying the image-conditioning signal, they often require additional training or sacrifice fidelity to the reference image. In this work, we identify \\emph{reference-frame dominance} as a key mechanism behind motion suppression. We observe that non-reference frames in I2V models allocate excessive self-attention to reference-frame key tokens, causing reference information to be over-propagated across time and suppressing inter-frame dynamics. Based on this finding, we propose DyMoS~(Dynamic Motion Slider), a training-free and model-agnostic method that rebalances the attention pathway from generated frames to the reference frame during initial denoising steps. DyMoS leaves both the input image and model weights unchanged and introduces a single scalar parameter for continuous control over motion strength. Experiments across multiple state-of-the-art I2V backbones demonstrate that DyMoS consistently improves motion dynamics while maintaining visual quality and fidelity to the reference image.",
+      "authors": [
+        "Wooseok Jeon",
+        "Seungho Park",
+        "Seunghyun Shin",
+        "Sangeyl Lee",
+        "Hyeonho Jeong",
+        "Hae-Gon Jeon"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-05-19T05:50:24+00:00",
+      "link": "https://arxiv.org/pdf/2605.19398v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Addresses motion suppression in image-to-video models by rebalancing attention to reference frame",
+      "llm_evidence_cn": "通过重新平衡对参考帧的注意力来改善图像到视频模型中的运动抑制问题",
+      "llm_evidence": "通过重新平衡对参考帧的注意力来改善图像到视频模型中的运动抑制问题",
+      "canonical_evidence": "通过重新平衡对参考帧的注意力来改善图像到视频模型中的运动抑制问题",
+      "llm_tldr_en": "DyMoS rebalances self-attention in I2V models without retraining, reducing reference frame dominance to increase motion dynamics.",
+      "llm_tldr_cn": "该文识别出图像到视频模型中参考帧主导导致运动抑制的现象，提出训练无关的动态运动滑块DyMoS，通过重新分配非参考帧的注意力权重来增强帧间动态。方法无需额外训练，可应用于多种I2V架构，有效提升生成视频的运动丰富度。",
+      "llm_tldr": "该文识别出图像到视频模型中参考帧主导导致运动抑制的现象，提出训练无关的动态运动滑块DyMoS，通过重新分配非参考帧的注意力权重来增强帧间动态。方法无需额外训练，可应用于多种I2V架构，有效提升生成视频的运动丰富度。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.29316v1",
+      "source": "arxiv",
+      "title": "CapTalk: Text-Guided Stylization and Speech-Driven 3D Head Animation",
+      "abstract": "Audio-driven 3D facial animation aims to generate synchronized lip movements and vivid facial expressions from arbitrary audio clips. While existing methods can produce synchronized lip motions, they often rely on predefined identity or style latent features, which limits users' ability to freely control speaking styles. Moreover, applying a fixed style or identity to an entire audio segment typically results in facial animation styles that do not adapt to the emotional content of the audio. To address these challenges, we revisit the entanglement between style and emotion, construct a large-scale dataset with textual descriptions of both style and emotion, and propose a novel talking head generation framework that enables separate control over style and emotion. Our model takes as input both textual descriptions of speaking style and character emotion, as well as the driving audio stream, enabling real-time generation of highly synchronized lip movements and facial expressions that match the provided descriptions. Furthermore, our model supports dynamic emotion control during inference, allowing it to handle scenarios where the target emotion changes throughout the speech.",
+      "authors": [
+        "Xuangeng Chu",
+        "Yuan Gan",
+        "Ziteng Cui",
+        "Shuhong Liu",
+        "Jian Wang",
+        "Bing Zhou",
+        "Tatsuya Harada"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-28T03:46:11+00:00",
+      "link": "https://arxiv.org/pdf/2605.29316v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Speech-driven 3D head animation with synchronized lip movements and style/emotion control",
+      "llm_evidence_cn": "语音驱动3D头部动画，具有同步唇形运动和风格/情感控制",
+      "llm_evidence": "语音驱动3D头部动画，具有同步唇形运动和风格/情感控制",
+      "canonical_evidence": "语音驱动3D头部动画，具有同步唇形运动和风格/情感控制",
+      "llm_tldr_en": "CapTalk enables text-guided stylization and speech-driven 3D facial animation, allowing separate control over style and emotion for natural lip-sync.",
+      "llm_tldr_cn": "CapTalk针对现有语音驱动面部动画风格控制局限的问题，构建风格-情感描述数据集，提出解耦风格与情感的新框架，实现文本引导的个性化语音驱动3D头部动画。实验证明可生成更自然、情感适配的唇形同步与面部表情。",
+      "llm_tldr": "CapTalk针对现有语音驱动面部动画风格控制局限的问题，构建风格-情感描述数据集，提出解耦风格与情感的新框架，实现文本引导的个性化语音驱动3D头部动画。实验证明可生成更自然、情感适配的唇形同步与面部表情。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
