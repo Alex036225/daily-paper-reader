@@ -25,3 +25,73 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: wan-av-gen
+      description: 检索基于WAN模型的I2V视频生成论文，重点在对嘴型等细节
+      enabled: true
+      paper_sources:
+        - arxiv
+        - biorxiv
+      keywords:
+        - keyword: WAN model
+          keyword_cn: WAN模型
+          query: WAN architecture for multimodal generation
+        - keyword: video generation
+          keyword_cn: 视频生成
+          query: video generation using Wan model
+        - keyword: multimodal video generation
+          keyword_cn: 多模态视频生成
+          query: generating video with multiple modalities
+        - keyword: conditional video generation
+          keyword_cn: 条件视频生成
+          query: video generation conditioned on an image
+        - keyword: lip synchronization
+          keyword_cn: 唇形同步
+          query: accurate lip sync in generated videos
+        - keyword: lip motion generation
+          keyword_cn: 嘴唇运动生成
+          query: generating natural lip movements in image-to-video models
+      intent_queries:
+        - query: Generating a talking head video from a single portrait image with accurate lip sync using WAN model.
+          query_cn: 使用WAN模型从单张人像生成说话头视频，要求准确的口型同步。
+          enabled: true
+          source: manual
+          note: ''
+        - query: Image to video generation with audio driven lip motion synthesis.
+          query_cn: 带有音频驱动的唇部运动合成的图像到视频生成。
+          enabled: true
+          source: manual
+          note: ''
+        - query: How to achieve precise lip synchronization in WAN model video generation from images?
+          query_cn: 如何在WAN模型的图像到视频生成中实现精确的口型同步？
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-05-29T17:27:41.401Z'
+source_backends:
+  arxiv:
+    papers_table: arxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_arxiv_papers
+    vector_rpc_exact: match_arxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_arxiv_papers_bm25
+    sync_table: arxiv_sync_status
+    sync_success_value: success
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
+  biorxiv:
+    papers_table: biorxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_biorxiv_papers_exact
+    vector_rpc_exact: match_biorxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_biorxiv_papers_bm25
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
