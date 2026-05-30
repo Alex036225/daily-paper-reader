@@ -1,0 +1,223 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-30T04:11:41.867580+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2605.22996v1",
+      "source": "arxiv",
+      "title": "CoMoGen: COntrollable MOtion Dynamics and Interactions with Mask-Guided Video GENeration",
+      "abstract": "We present CoMoGen, a controllable video generation framework that generates realistic interactive dynamics from a single binary mask sequence conditioned on an input image. CoMoGen introduces a lightweight MaskAdapter that encodes binary mask sequences into a latent residual signal, injected into the Multi Modal Diffusion Transformer (MMDiT) model through a cosine-weighted schedule. Unlike the hierarchical coarse-to-fine design of UNet architectures, MMDiT operates as a sequence of uniform transformer blocks, making it difficult to identify which layers are responsible for the motion generation. Therefore, we propose a novel way to determine \"Motion Layers\" operating in the attention space of MMDiT. We fine-tune the model by using Low-Rank Adaptation (LoRA) to the Motion Layers, without requiring any architecture change in the MMDiT. This selective adaptation enables our method to focus on motion-critical components, yielding reduced computational cost. Despite its simplicity, CoMoGen enables precise subject motion and plausible interactions with surrounding humans, objects, and scenes. Comprehensive experiments on different datasets show that CoMoGen consistently outperforms prior controllable video generation methods and achieves state-of-the-art performance in motion fidelity and perceptual realism. Project page: mericadil.github.io/CoMoGen.",
+      "authors": [
+        "Adil Meric",
+        "Lin Geng Foo",
+        "Mert Kiray",
+        "Benjamin Busam",
+        "Rishabh Dabral",
+        "Christian Theobalt"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-21T19:51:20+00:00",
+      "link": "https://arxiv.org/pdf/2605.22996v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Generates video conditioned on an input image and a binary mask sequence",
+      "llm_evidence_cn": "基于输入图像和二值掩码序列生成视频",
+      "llm_evidence": "基于输入图像和二值掩码序列生成视频",
+      "canonical_evidence": "基于输入图像和二值掩码序列生成视频",
+      "llm_tldr_en": "CoMoGen introduces a lightweight MaskAdapter to encode binary mask sequences into a diffusion transformer for controllable image-to-video generation, and proposes a method to identify motion layers in MMDiT for fine-tuning.",
+      "llm_tldr_cn": "CoMoGen提出一种可控视频生成框架，通过轻量级掩码适配器将二值掩码序列注入多模态扩散变换器，实现从单一图像和掩码引导的运动生成。它还提出一种在MMDiT注意力空间中识别运动层的新方法，通过LoRA微调实现高效交互控制，在多个数据集上验证了方法的有效性与可控性。",
+      "llm_tldr": "CoMoGen提出一种可控视频生成框架，通过轻量级掩码适配器将二值掩码序列注入多模态扩散变换器，实现从单一图像和掩码引导的运动生成。它还提出一种在MMDiT注意力空间中识别运动层的新方法，通过LoRA微调实现高效交互控制，在多个数据集上验证了方法的有效性与可控性。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.26486v1",
+      "source": "arxiv",
+      "title": "LongCat-Video-Avatar 1.5 Technical Report",
+      "abstract": "Despite advances in audio-driven video generation, achieving commercial-grade stability remains challenging. We present LongCat-Video-Avatar 1.5, an upgraded open-source framework prioritizing systematic engineering and production-readiness over architectural novelty. By upgrading the audio encoder to Whisper Large and meticulously scaling our training recipes, v1.5 achieves accurate lip-synchronization, full-body temporal stability, and robust long-video generation with strict identity consistency. Through rigorous data curation and RLHF Training, the model readily generalizes to stylized domains such as anime and animals, and natively handles complex real-world conditions, such as multi-person interactions and object handling. Furthermore, addressing the practical demands of industrial deployment, we employ advanced step distillation to accelerate inference to an optimal 8 NFE, achieving a favorable trade-off between serving efficiency and visual fidelity. The superiority of our approach is validated through extensive quantitative metrics and a rigorous human evaluation conducted on a comprehensive benchmark of over 500 diverse test cases. Results show that v1.5 achieves competitive or superior performance compared to leading closed-source systems (e.g., HeyGen, OmniHuman 1.5, Kling Avatar 2.0) across human-likeness ratings and expert-level quality assessments on our benchmark. With its open-source release, LongCat-Video-Avatar 1.5 narrows the gap between academic research prototypes and commercial-grade deployment.",
+      "authors": [
+        "Meituan LongCat Team",
+        "Xunliang Cai",
+        "Meng Cheng",
+        "Feng Gao",
+        "Zhe Kong",
+        "Jiamu Li",
+        "Le Li",
+        "Weiheng Li",
+        "Hongyu Liu",
+        "Shuai Tan",
+        "Xiaoming Wei",
+        "Tianyu Yang",
+        "Yong Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-26T02:54:12+00:00",
+      "link": "https://arxiv.org/pdf/2605.26486v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "LongCat-Video-Avatar 1.5 achieves accurate lip-synchronization in audio-driven video generation from a single image",
+      "llm_evidence_cn": "LongCat-Video-Avatar 1.5 在音频驱动的单图视频生成中实现精准唇音同步",
+      "llm_evidence": "LongCat-Video-Avatar 1.5 在音频驱动的单图视频生成中实现精准唇音同步",
+      "canonical_evidence": "LongCat-Video-Avatar 1.5 在音频驱动的单图视频生成中实现精准唇音同步",
+      "llm_tldr_en": "LongCat-Video-Avatar 1.5 upgrades audio encoder to Whisper Large and scales training recipes for accurate lip-sync, full-body stability, and long video generation with identity consistency, generalizing to stylized domains.",
+      "llm_tldr_cn": "LongCat-Video-Avatar 1.5 针对音频驱动视频生成商用稳定性不足的问题，提出一个注重工程化与产品就绪性的升级框架。通过将音频编码器升级为Whisper Large并精心扩展训练方案，模型实现了精准唇音同步、全身体现时序稳定和长视频生成中的严格身份一致性。结合数据筛选和RLHF训练，模型可泛化至动漫、动物等风格化领域，并处理多人交互等复杂场景。该工作为生产环境下的说话人视频生成提供了实用的开源基准。",
+      "llm_tldr": "LongCat-Video-Avatar 1.5 针对音频驱动视频生成商用稳定性不足的问题，提出一个注重工程化与产品就绪性的升级框架。通过将音频编码器升级为Whisper Large并精心扩展训练方案，模型实现了精准唇音同步、全身体现时序稳定和长视频生成中的严格身份一致性。结合数据筛选和RLHF训练，模型可泛化至动漫、动物等风格化领域，并处理多人交互等复杂场景。该工作为生产环境下的说话人视频生成提供了实用的开源基准。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.30311v1",
+      "source": "arxiv",
+      "title": "Archon: A Unified Multimodal Model for Holistic Digital Human Generation",
+      "abstract": "Digital humans are fundamental to immersive interaction, yet creating a unified model for holistic modalities, including text, audio, motion, and visual content, remains an open challenge. In this paper, we present Archon, a fully pretrained, human-centric unified multimodal model for holistic avatar generation. Archon unifies seven modalities with modality-specific tokenizers, and a native autoregressive unified multimodal model pretrained on synchronized modalities and 72 diverse tasks to model holistic joint distributions. To address the token explosion challenge in high-fidelity talking videos, we introduce a memory-efficient semantic video reparameterization, achieving 4x token reduction while preserving fine-grained dynamics, coupled with a semantic-driven video diffusion decoder. We further propose a \"Thinking in Modality\" that decomposes ambiguous cross-modal tasks into stepwise thinking in an alternative chain of modality, progressively enhancing fidelity and controllability. Extensive experiments demonstrate that Archon achieves superior or comparable performance across diverse digital human generation tasks, validating the effectiveness of our unified framework. Project page: https://zju3dv.github.io/archon/.",
+      "authors": [
+        "Chong Bao",
+        "Shichen Liu",
+        "Lijun Yu",
+        "David Futschik",
+        "Stylianos Moschoglou",
+        "Shefali Srivastava",
+        "Ziqian Bai",
+        "Feitong Tan",
+        "Guofeng Zhang",
+        "Zhaopeng Cui",
+        "Sean Fanello",
+        "Yinda Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-05-28T17:53:27+00:00",
+      "link": "https://arxiv.org/pdf/2605.30311v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "unified multimodal model for holistic avatar generation; addresses token explosion in high-fidelity talking videos",
+      "llm_evidence_cn": "统一多模态模型用于整体虚拟人生成；解决高保真说话视频的令牌爆炸问题",
+      "llm_evidence": "统一多模态模型用于整体虚拟人生成；解决高保真说话视频的令牌爆炸问题",
+      "canonical_evidence": "统一多模态模型用于整体虚拟人生成；解决高保真说话视频的令牌爆炸问题",
+      "llm_tldr_en": "Archon is a pretrained multimodal model for generating holistic digital humans unifying seven modalities. It addresses token explosion in talking videos with a semantic reparameterization, achieving 4x compression while preserving dynamics.",
+      "llm_tldr_cn": "针对现有方法难以生成包含文字、音频、动作和视觉的整体型数字人的问题，提出Archon统一多模态模型，融合七种模态并预训练于72个任务；针对高保真说话视频的令牌爆炸问题，设计记忆高效的语义视频重参数化，实现4倍令牌压缩且保留细粒度动态，从而生成高保真且多模态同步的虚拟人视频，为沉浸式交互提供核心基础。",
+      "llm_tldr": "针对现有方法难以生成包含文字、音频、动作和视觉的整体型数字人的问题，提出Archon统一多模态模型，融合七种模态并预训练于72个任务；针对高保真说话视频的令牌爆炸问题，设计记忆高效的语义视频重参数化，实现4倍令牌压缩且保留细粒度动态，从而生成高保真且多模态同步的虚拟人视频，为沉浸式交互提供核心基础。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.24176v1",
+      "source": "arxiv",
+      "title": "Loki: Representation over Architecture for Diffusion-Based Portrait Animation",
+      "abstract": "Portrait animation transfers a driver clip's facial expression and head pose onto a single reference image while preserving the reference's identity. State-of-the-art diffusion systems address this by stacking trained modules for expression, pose, and identity in turn, paying for it in trainable parameters, proprietary corpora, and residual entanglement between the very axes the system is meant to control independently. This complexity compensates for an upstream choice -- learning facial expression and head pose from RGB, a representation in which identity, pose, and expression are inseparable without being learned apart. Loki steps out of RGB on the conditioning path. Driver expression and head pose are encoded by a face model whose parameter axes are identity-orthogonal by construction, then rasterised into a spatial map that the diffusion backbone consumes natively. Identity is routed separately through the diffusion backbone's own pretrained features via lightweight key-value injection. Because the parametric representation factorises identity from expression and pose, cross ID reenactment reduces to a coefficient substitution at inference, requiring no cross ID training data. Loki requires ~43% fewer inference parameters than leading diffusion baselines and trained on 1496x less video samples. We define two metrics that directly measure whether the generated head pose trajectory and facial expression followed the driver's -- the questions portrait animation actually asks; Loki leads or co-leads on both.",
+      "authors": [
+        "Pouyan Navard",
+        "Sernam Lim"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-22T19:54:37+00:00",
+      "link": "https://arxiv.org/pdf/2605.24176v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Loki generates portrait animation by transferring expression and pose from a driver clip, enabling natural lip movements in image-to-video",
+      "llm_evidence_cn": "Loki 通过传递驱动视频的表情和姿态生成肖像动画，在图像到视频中实现自然唇动",
+      "llm_evidence": "Loki 通过传递驱动视频的表情和姿态生成肖像动画，在图像到视频中实现自然唇动",
+      "canonical_evidence": "Loki 通过传递驱动视频的表情和姿态生成肖像动画，在图像到视频中实现自然唇动",
+      "llm_tldr_en": "Loki uses a face model parameterization to encode driver expression and pose, decoupling identity, pose, and expression for diffusion-based portrait animation with improved controllability and efficiency.",
+      "llm_tldr_cn": "Loki 针对扩散肖像动画中模块堆叠导致的参数冗余和轴间纠缠问题，提出从表示层面进行解耦。现有方法直接从RGB学习表情和头部姿态，导致身份、姿态、表情难以分离。Loki 改用可解释的人脸模型参数编码驱动表达，无需叠加多个模块，实现了简洁且独立的控制。该方法在保持参考图像身份的同时，能准确传递驱动视频的表情和头部姿态，为肖像动画提供了更高效的方案。",
+      "llm_tldr": "Loki 针对扩散肖像动画中模块堆叠导致的参数冗余和轴间纠缠问题，提出从表示层面进行解耦。现有方法直接从RGB学习表情和头部姿态，导致身份、姿态、表情难以分离。Loki 改用可解释的人脸模型参数编码驱动表达，无需叠加多个模块，实现了简洁且独立的控制。该方法在保持参考图像身份的同时，能准确传递驱动视频的表情和头部姿态，为肖像动画提供了更高效的方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Generating a talking head video from a single portrait image with accurate lip sync using WAN model.",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.28056v1",
+      "source": "arxiv",
+      "title": "CogPortrait: Fine-Grained Eye-Region Control in Portrait Animation via Hierarchical Agent Planning",
+      "abstract": "Portrait animation methods have achieved substantial visual quality and lip synchronization, but fine-grained manipulation of the eye region still faces a trade-off between input granularity and motion accuracy. Existing methods using emotion labels or coarse text prompts are insufficient for describing subtle ocular dynamics, whereas approaches based on Action Units or driving videos provide higher fidelity at the cost of a heavier input burden. These limitations are still restrictive for beyond-emotion states (e.g., thinking) and drowsiness. In light of the above, we propose CogPortrait, a two-stage framework that generates portrait animations from high-level labels. In the first stage, three chain-of-thought Multimodal Large Language Models (MLLMs) agents compile high-level labels into facial keypoints through temporal event planning, prototype retrieval, and composition from a real-behavior library, and semantic-physiological constraint enforcement. In the second stage, a DiT-based video generation backbone synthesizes the final animation conditioned on the keypoints, reference portrait, audio, and text prompt, enhanced by a dynamic classifier-free guidance strategy with eye-region-aware reweighting and KTO-based refinement for boundary cases. We further introduce the EMH benchmark covering diverse emotions and beyond-emotion categories with two AU-level metrics for evaluating fine-grained eye-region and head-motion control. Extensive experiments on HDTF and the EMH benchmark demonstrate that CogPortrait achieves more precise eye-region control than existing methods while maintaining supe- rior visual quality and identity consistency",
+      "authors": [
+        "He Feng",
+        "Yongjia Ma",
+        "Donglin Di",
+        "Lei Fan",
+        "Tonghua Su"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-27T07:02:31+00:00",
+      "link": "https://arxiv.org/pdf/2605.28056v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Generates portrait animation from a single image",
+      "llm_evidence_cn": "从单张图像生成肖像动画",
+      "llm_evidence": "从单张图像生成肖像动画",
+      "canonical_evidence": "从单张图像生成肖像动画",
+      "llm_tldr_en": "CogPortrait proposes a two-stage hierarchical agent planning framework for fine-grained eye-region control in portrait animation, achieving high-quality lip synchronization and natural eye movements from high-level labels.",
+      "llm_tldr_cn": "针对现有肖像动画方法在眼部精细控制上的不足，CogPortrait提出一种两阶段分层智能体规划框架，从高层标签生成具有自然唇语同步和精细眼部动画的肖像视频。该框架通过思维链多模态大语言模型将抽象指令细化为空间语义动作单元，再驱动动画生成，实验证明其能有效控制眼部状态和动态，丰富了肖像动画的情感表达维度。",
+      "llm_tldr": "针对现有肖像动画方法在眼部精细控制上的不足，CogPortrait提出一种两阶段分层智能体规划框架，从高层标签生成具有自然唇语同步和精细眼部动画的肖像视频。该框架通过思维链多模态大语言模型将抽象指令细化为空间语义动作单元，再驱动动画生成，实验证明其能有效控制眼部状态和动态，丰富了肖像动画的情感表达维度。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

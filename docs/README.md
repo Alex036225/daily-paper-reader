@@ -6,46 +6,37 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-29
-- 运行时间：2026-05-29 22:06:22 UTC
+- 最新运行日期：2026-05-21 ~ 2026-05-30
+- 运行时间：2026-05-30 04:18:57 UTC
 - 运行状态：成功
-- 本次总论文数：8
-- 精读区：6
-- 速读区：2
+- 本次总论文数：5
+- 精读区：4
+- 速读区：1
 
 ### 今日简报（AI）
-1) 今日聚焦于长视频音画生成与模型量化，深入拆解了从流式编排到4比特压缩的核心方案。  
-2) 最亮眼的是《StreamChar》用解耦编排实现长时间流式角色音视频生成，以及《Tail-Aware HiFloat4》将大型视频模型高效量化为W4A4格式。  
-3) 对实时生成和端侧部署感兴趣的读者，不妨从《StreamChar》的调度思路和尾部感知量化方法学起。
-- 详情：[/202605/29/README](/202605/29/README)
+近两周聚焦高分视频生成，精读《CoMoGen》（10分）与《LongCat-Video-Avatar 1.5》（10分），前者实现掩码引导的运动与交互可控，后者探索高质量视频头像生成。
+最值得关注的方向是视频生成的可控交互与个性化肖像驱动，可通过掩码精准编辑人物动态或刻画细腻眼部表现。
+若想上手，可从这些人像视频工具中挑选一个开源项目，尝试用自己拍摄的动作片段驱动虚拟角色。
+- 详情：[/20260521-20260530/README](/20260521-20260530/README)
 
 ### 精读区论文标签
-1. [StreamChar: Long-Horizon Streaming Character Audio-Video Generation with Decoupled Orchestration](/202605/29/2605.25659v1-streamchar-long-horizon-streaming-character-audio-video-generation-with-decoupled-orchestration)  
+1. [CoMoGen: COntrollable MOtion Dynamics and Interactions with Mask-Guided Video GENeration](/20260521-20260530/2605.22996v1-comogen-controllable-motion-dynamics-and-interactions-with-mask-guided-video-generation)  
+   标签：评分：10.0/10、query:wan-av-gen
+   evidence：基于输入图像和二值掩码序列生成视频
+2. [LongCat-Video-Avatar 1.5 Technical Report](/20260521-20260530/2605.26486v1-longcat-video-avatar-15-technical-report)  
+   标签：评分：10.0/10、query:wan-av-gen
+   evidence：LongCat-Video-Avatar 1.5 在音频驱动的单图视频生成中实现精准唇音同步
+3. [Archon: A Unified Multimodal Model for Holistic Digital Human Generation](/20260521-20260530/2605.30311v1-archon-a-unified-multimodal-model-for-holistic-digital-human-generation)  
    标签：评分：9.0/10、query:wan-av-gen
-   evidence：联合音视频生成，通过文本驱动口型同步实现角色动画
-2. [Tail-Aware HiFloat4: W4A4 Post-Training Quantization for Wan2.2](/202605/29/2605.26628v1-tail-aware-hifloat4-w4a4-post-training-quantization-for-wan22)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：针对 Wan2.2 视频生成模型的后训练量化
-3. [Native Audio-Visual Alignment for Generation](/202605/29/2605.30073v1-native-audio-visual-alignment-for-generation)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：原生音视频对齐框架实现联合生成，使音频驱动唇部运动同步
-4. [IP-Adapter Is All You Need: Towards Fine-Tuning-Free Diffusion-Based Talking Face Generation](/202605/29/2605.30230v1-ip-adapter-is-all-you-need-towards-fine-tuning-free-diffusion-based-talking-face-generation)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：利用预训练Stable Diffusion和IP-Adapter实现免微调的说话人脸生成，挖掘嘴唇相关语义
-5. [AVBench: Human-Aligned and Automated Evaluation Benchmark for Audio-Video Generative Models](/202605/29/2605.24652v1-avbench-human-aligned-and-automated-evaluation-benchmark-for-audio-video-generative-models)  
+   evidence：统一多模态模型用于整体虚拟人生成；解决高保真说话视频的令牌爆炸问题
+4. [Loki: Representation over Architecture for Diffusion-Based Portrait Animation](/20260521-20260530/2605.24176v1-loki-representation-over-architecture-for-diffusion-based-portrait-animation)  
    标签：评分：8.0/10、query:wan-av-gen
-   evidence：面向音视频生成的基准，含语音同步指标，对唇部同步评估关键
-6. [Baton: Explicit Semantic Blueprints for Joint Video-Audio Generation](/202605/29/2605.25195v1-baton-explicit-semantic-blueprints-for-joint-video-audio-generation)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：联合视频音频生成，采用显式语义规划以实现同步跨模态对齐
+   evidence：Loki 通过传递驱动视频的表情和姿态生成肖像动画，在图像到视频中实现自然唇动
 
 ### 速读区论文标签
-1. [LongAV-Compass: Towards Unified Evaluation of Minute-Scale Audio-Visual Generation Across T2AV, I2AV, and V2AV](/202605/29/2605.26244v1-longav-compass-towards-unified-evaluation-of-minute-scale-audio-visual-generation-across-t2av-i2av-and-v2av)  
+1. [CogPortrait: Fine-Grained Eye-Region Control in Portrait Animation via Hierarchical Agent Planning](/20260521-20260530/2605.28056v1-cogportrait-fine-grained-eye-region-control-in-portrait-animation-via-hierarchical-agent-planning)  
    标签：评分：7.0/10、query:wan-av-gen
-   evidence：图像到音视频生成的评估基准，评估音视频对齐
-2. [DirectorBench: Diagnosing Long-Form Video Generation with Personalized Multi-Agent Evaluation](/202605/29/2605.30090v1-directorbench-diagnosing-long-form-video-generation-with-personalized-multi-agent-evaluation)  
-   标签：评分：7.0/10、query:wan-av-gen
-   evidence：评测长视频生成，包括音画同步和口型等诊断
+   evidence：从单张图像生成肖像动画
 
 
 <div class="dpr-home-promo-card">
