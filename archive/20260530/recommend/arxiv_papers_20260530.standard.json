@@ -1,0 +1,99 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-30T20:55:15.217415+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2605.27891v1",
+      "source": "arxiv",
+      "title": "SmartDirector: Keyframe-Conditioned Cinematic Video Generation with Narrative Pacing Control",
+      "abstract": "The narrative quality of a video fundamentally determines its perceptual value. Although existing video generation methods can produce visually appealing content, they predominantly rely on sparse conditioning signals such as text prompts or first/last frames, which limits precise control over narrative structure and temporal pacing. In this paper, we propose SmartDirector, a framework that enhances the narrative capacity of video generation models through multiple keyframes. SmartDirector supports flexible generation scenarios including single-shot generation, multi-shot narrative synthesis, and video extension. The framework operates in two stages: Director-Gen generates a low-resolution video conditioned on the provided keyframes, and Director-SR refines the output by exploiting high-resolution keyframes as semantic anchors to recover fine-grained details. To enable robust multi-keyframe training, we construct a data pipeline that curates single-shot and multi-shot sequences from movies. Extensive experiments demonstrate that SmartDirector substantially outperforms existing state-of-the-art approaches. We will release the code to facilitate further research.",
+      "authors": [
+        "Zhida Zhang",
+        "Jie Ma",
+        "Zhan Peng",
+        "Haoxue Wu",
+        "Yang Han",
+        "Jun Liang",
+        "Jie Cao",
+        "Jing Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-05-27T03:16:09+00:00",
+      "link": "https://arxiv.org/pdf/2605.27891v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Keyframe-conditioned video generation from images",
+      "llm_evidence_cn": "基于关键帧图像条件的视频生成",
+      "llm_evidence": "基于关键帧图像条件的视频生成",
+      "canonical_evidence": "基于关键帧图像条件的视频生成",
+      "llm_tldr_en": "SmartDirector enables narrative-rich video generation conditioned on multiple keyframes, using a two-stage process: low-resolution Director-Gen and refinement for precise pacing control.",
+      "llm_tldr_cn": "SmartDirector通过多个关键帧条件增强视频生成的叙事能力，支持单镜头生成、多镜头叙事合成和视频延伸。框架包含两阶段：Director-Gen生成低分辨率视频，然后通过细化保证叙事节奏控制。方法解决了现有视频生成依赖稀疏提示导致叙事结构控制不足的问题，在实验中提升了生成视频的叙事质量和用户控制力。",
+      "llm_tldr": "SmartDirector通过多个关键帧条件增强视频生成的叙事能力，支持单镜头生成、多镜头叙事合成和视频延伸。框架包含两阶段：Director-Gen生成低分辨率视频，然后通过细化保证叙事节奏控制。方法解决了现有视频生成依赖稀疏提示导致叙事结构控制不足的问题，在实验中提升了生成视频的叙事质量和用户控制力。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.28056v1",
+      "source": "arxiv",
+      "title": "CogPortrait: Fine-Grained Eye-Region Control in Portrait Animation via Hierarchical Agent Planning",
+      "abstract": "Portrait animation methods have achieved substantial visual quality and lip synchronization, but fine-grained manipulation of the eye region still faces a trade-off between input granularity and motion accuracy. Existing methods using emotion labels or coarse text prompts are insufficient for describing subtle ocular dynamics, whereas approaches based on Action Units or driving videos provide higher fidelity at the cost of a heavier input burden. These limitations are still restrictive for beyond-emotion states (e.g., thinking) and drowsiness. In light of the above, we propose CogPortrait, a two-stage framework that generates portrait animations from high-level labels. In the first stage, three chain-of-thought Multimodal Large Language Models (MLLMs) agents compile high-level labels into facial keypoints through temporal event planning, prototype retrieval, and composition from a real-behavior library, and semantic-physiological constraint enforcement. In the second stage, a DiT-based video generation backbone synthesizes the final animation conditioned on the keypoints, reference portrait, audio, and text prompt, enhanced by a dynamic classifier-free guidance strategy with eye-region-aware reweighting and KTO-based refinement for boundary cases. We further introduce the EMH benchmark covering diverse emotions and beyond-emotion categories with two AU-level metrics for evaluating fine-grained eye-region and head-motion control. Extensive experiments on HDTF and the EMH benchmark demonstrate that CogPortrait achieves more precise eye-region control than existing methods while maintaining supe- rior visual quality and identity consistency",
+      "authors": [
+        "He Feng",
+        "Yongjia Ma",
+        "Donglin Di",
+        "Lei Fan",
+        "Tonghua Su"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-27T07:02:31+00:00",
+      "link": "https://arxiv.org/pdf/2605.28056v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Portrait animation with lip synchronization and fine-grained eye control",
+      "llm_evidence_cn": "肖像动画实现唇音同步和精细眼部控制",
+      "llm_evidence": "肖像动画实现唇音同步和精细眼部控制",
+      "canonical_evidence": "肖像动画实现唇音同步和精细眼部控制",
+      "llm_tldr_en": "CogPortrait introduces a two-stage framework using hierarchical agent planning to achieve fine-grained eye-region control in portrait animation while maintaining lip sync, addressing the trade-off between input granularity and motion accuracy.",
+      "llm_tldr_cn": "针对肖像动画中唇同步已取得良好效果但眼部细微控制仍存在输入粒度与动作精度矛盾的问题，CogPortrait提出基于层次化代理规划的两阶段框架，从高层标签生成动画，通过多模态大模型链式推理实现细粒度眼部控制，在保证唇同步和视觉质量的同时支持超越情绪的状态表达，为高度可控的虚拟人动画提供了新思路。",
+      "llm_tldr": "针对肖像动画中唇同步已取得良好效果但眼部细微控制仍存在输入粒度与动作精度矛盾的问题，CogPortrait提出基于层次化代理规划的两阶段框架，从高层标签生成动画，通过多模态大模型链式推理实现细粒度眼部控制，在保证唇同步和视觉质量的同时支持超越情绪的状态表达，为高度可控的虚拟人动画提供了新思路。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
