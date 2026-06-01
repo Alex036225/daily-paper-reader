@@ -1,0 +1,69 @@
+{
+  "label": "2026-06-01",
+  "date": "2026-06-01",
+  "generated_at": "2026-06-01T22:53:56",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202606/01/2605.29488v1-anymo-scaling-any-modality-conditional-motion-generation-with-masked-modeling",
+      "section": "deep",
+      "title_en": "AnyMo: Scaling Any-Modality Conditional Motion Generation with Masked Modeling",
+      "authors": "Yiheng Li, Zhuo Li, Ruibing Hou, Yingjie Chen, Hong Chang, Hao Liu, Shiguang Shan",
+      "date": "2026-05-28",
+      "pdf": "https://arxiv.org/pdf/2605.29488v1",
+      "score": "8.0",
+      "evidence": "语音驱动的人体运动生成实现精准唇动同步",
+      "tldr": "条件人体运动生成多受限于固定模态配置与任务专用架构，跨模态交互与大规模对齐数据不足。本工作引入OmniHuMo数据集，含5000+小时运动与320万序列及精细对齐的多模态标注，并构建AnyMo统一框架，采用残差FSQ运动分词器与可扩展掩码建模Transformer，支持任意模态组合。实验表明AnyMo实现高保真合成，同时灵活控制空间与风格属性，揭示了多模态条件运动生成的缩放潜力。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Conditional human motion generation remains a fundamental challenge in computer vision and robotics. Despite significant progress, current methods are often constrained by fixed modality configurations and task-specific architectures, leaving cross-modal interactions and the scaling laws of multimodal-conditioned synthesis largely underexplored. A key bottleneck is the scarcity of large-scale modality-aligned motion data, limiting generalization across diverse control signals. In this work, we introduce OmniHuMo, a large-scale, high-quality dataset comprising over 5,000 hours of motion and 3.2 million sequences with precisely aligned multimodal annotations (e.g., text, speech, music, and trajectory). Leveraging OmniHuMo, we propose AnyMo, a unified multimodal framework combining a Residual FSQ-based motion tokenizer with a scalable masked modeling transformer, enabling high-quality motion synthesis under arbitrary modality combinations. Extensive experiments show that AnyMo achieves high-fidelity synthesis while offering flexible control over both spatial and stylistic attributes.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/01/2605.31294v1-toktalk-expressive-real-time-facial-animation-from-audio-llm-tokens",
+      "section": "deep",
+      "title_en": "TokTalk: Expressive Real-time Facial Animation from Audio-LLM Tokens",
+      "authors": "Qingcheng Zhao, Yifang Pan, Karan Singh",
+      "date": "2026-05-29",
+      "pdf": "https://arxiv.org/pdf/2605.31294v1",
+      "score": "8.0",
+      "evidence": "从音频令牌直接生成面部动画，实现说话人视频中的精准唇形同步",
+      "tldr": "对话虚拟形象因级联流水线而缺乏表情自然度，现有Audio-LLM的音频token蕴含丰富面部信息。本文提出TokTalk，使用分块条件流匹配模型直接从流式音频token实时生成3D表达性面部动画，轻量适配策略可无缝融入任意基于token的Audio-LLM。实验证明，该方案在延迟持平前提下显著提升表现力，并在聊天机器人、用户虚拟形象和动画导演场景中验证，为实时对话虚拟形象动画树立新基准。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Recent advances in Audio-LLMs like GPT-4o have ushered in an era of conversational interaction with language models. Conversational avatars however, still seem robotic in facial expression and conversational flow, in part due to sequential stages of speech recognition, text generation, turn-based text response, speech synthesis, and audio driven facial animation. Based on our insight that audio-tokens produced by current Audio-LLMs carry sufficient information to reconstruct a plausible facial performance, we present TokTalk, a system that directly outputs expressive facial animation in real-time from streaming audio-tokens. We construct a novel audio-token to 3D facial motion dataset, on which TokTalk is trained using a Chunk-based Conditional Flow Matching model. A lightweight adaptation strategy allows our trained model to seamlessly connect to any token-based Audio-LLM at minimal computational overhead. Our chunk-based processing further enables parametric trade-off between latency and facial quality, shown through ablation studies. We further show that the real-time performance of TokTalk is comparable in latency to prior art solutions, and significantly favorable (via a perceptual study) in terms of quality, expressivity and control of the 3D facial performance. We showcase TokTalk's flexibility using a chatbot Avatar, a voice-driven user Avatar, and an animation Director's interface, as diverse audio-visual face applications.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/01/2605.25193v2-spongebob-sync-aware-harmonious-audio-visual-generative-editing",
+      "section": "quick",
+      "title_en": "SpongeBob: Sync-Aware Harmonious Audio-Visual Generative Editing",
+      "authors": "Sen Liang, Cong Wang, Fengbin Guan, Zhentao Yu, Yiting Lu, Yuanzhi Wang, Yuan Zhou, Xin Li, Zhibo Chen",
+      "date": "2026-05-24",
+      "pdf": "https://arxiv.org/pdf/2605.25193v2",
+      "score": "6.0",
+      "evidence": "同步感知机制在视频编辑中对齐视觉与声音事件，实现音画同步",
+      "tldr": "现有视频编辑方法常因缺乏模态交互导致音画不同步和上下文冲突。SpongeBob提出端到端音视频联合编辑框架，通过同步感知机制（双向注意力、时序对齐和空间约束）对齐视觉编辑与声音事件，同时利用上下文感知模块避免语义冲突，实现和谐一致的音视频编辑。实验表明其在同步性和一致性上优于现有方法。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Visual and acoustic events in the physical world are inherently coupled, yet existing video editing methods typically adopt decoupled pipelines, lacking bidirectional modality interaction. This results in two key limitations: (i) audio-visual desynchronization and (ii) contextual conflicts between generated audio and preserved content. To address these, we propose SpongeBob, the first end-to-end audio-visual joint editing framework featuring bidirectional cross-modal interaction. For synchronization, a Sync-Aware Mechanism aligns visual edits with sound events via bidirectional attention, temporal alignment, and spatial constraints. For contextual consistency, a Context-Aware Module leverages acoustic and visual context attention to prevent semantic clashes. Additionally, we introduce Sync-Preserving Training and Guidance (SPTG) to enhance alignment without degrading quality. Due to the scarcity of paired data, we construct a scalable data pipeline and a large-scale subject-level dataset. We also propose SpongeBob-Bench for systematic evaluation. Experiments show SpongeBob significantly outperforms existing baselines, improving Sync-C by 30% and Ctx-F1 by 12.5%. Our project page is available at: https://hy-spongebob.github.io/.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/01/2605.30895v1-camgeo-sparse-camera-conditioned-image-to-video-generation-with-3d-geometry-priors",
+      "section": "quick",
+      "title_en": "CamGeo: Sparse Camera-Conditioned Image-to-Video Generation with 3D Geometry Priors",
+      "authors": "Xuanyi Liu, Deyi Ji, Liqun Liu, Lanyun Zhu, Xuhang Chen, Qianxiong Xu, Peng Shu, Huan Yu, Jie Jiang, Feng Gao, Siwei Ma",
+      "date": "2026-05-29",
+      "pdf": "https://arxiv.org/pdf/2605.30895v1",
+      "score": "6.0",
+      "evidence": "以相机位姿为条件、带3D几何先验的图像到视频生成",
+      "tldr": "稀疏相机条件下I2V生成面临几何一致性挑战。CamGeo通过训练阶段蒸馏预训练视频转3D模型（VGGT）的几何知识，将关键帧轨迹提炼和跨视角约束融入扩散模型，在不增加推理延迟的情况下生成几何一致的高质量视频。实验显示其在视角准确性和运动平滑性上超越现有方法。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Sparse camera-conditioned image-to-video generation presents a pivotal challenge: synthesizing geometrically consistent 3D motion from minimal pose cues. Existing methods, which largely rely on dense supervision or naive interpolation, suffer from severe pose drift and motion discontinuities due to the lack of robust 3D priors. In this paper, we introduce CamGeo, a novel framework that distills rich 3D geometric knowledge from a pre-trained video-to-3D model (VGGT) directly into the diffusion backbone. To achieve this without incurring inference latency, we propose a training-only distillation strategy. Specifically, CamGeo incorporates: (1) keyframe trajectory distillation that enforces cycle-consistency with sparse input poses, (2) cross-frame consistency distillation with both camera trajectory and depth constraints to generate consistent structure across unsupervised frames, and (3) a three-stage coarse-to-fine curriculum learning, progressively scales geometric complexity, from global structure coherence to fine-grained refinement, achieving stable optimization. Extensive experiments demonstrate that CamGeo achieves consistent improvements under various sparsity ratios.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

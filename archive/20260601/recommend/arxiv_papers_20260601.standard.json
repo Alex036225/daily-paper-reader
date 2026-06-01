@@ -1,0 +1,183 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-01T22:47:35.104029+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2605.29488v1",
+      "source": "arxiv",
+      "title": "AnyMo: Scaling Any-Modality Conditional Motion Generation with Masked Modeling",
+      "abstract": "Conditional human motion generation remains a fundamental challenge in computer vision and robotics. Despite significant progress, current methods are often constrained by fixed modality configurations and task-specific architectures, leaving cross-modal interactions and the scaling laws of multimodal-conditioned synthesis largely underexplored. A key bottleneck is the scarcity of large-scale modality-aligned motion data, limiting generalization across diverse control signals. In this work, we introduce OmniHuMo, a large-scale, high-quality dataset comprising over 5,000 hours of motion and 3.2 million sequences with precisely aligned multimodal annotations (e.g., text, speech, music, and trajectory). Leveraging OmniHuMo, we propose AnyMo, a unified multimodal framework combining a Residual FSQ-based motion tokenizer with a scalable masked modeling transformer, enabling high-quality motion synthesis under arbitrary modality combinations. Extensive experiments show that AnyMo achieves high-fidelity synthesis while offering flexible control over both spatial and stylistic attributes.",
+      "authors": [
+        "Yiheng Li",
+        "Zhuo Li",
+        "Ruibing Hou",
+        "Yingjie Chen",
+        "Hong Chang",
+        "Hao Liu",
+        "Shiguang Shan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-05-28T07:15:19+00:00",
+      "link": "https://arxiv.org/pdf/2605.29488v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Speech-driven human motion generation enables accurate lip synchronization",
+      "llm_evidence_cn": "语音驱动的人体运动生成实现精准唇动同步",
+      "llm_evidence": "语音驱动的人体运动生成实现精准唇动同步",
+      "canonical_evidence": "语音驱动的人体运动生成实现精准唇动同步",
+      "llm_tldr_en": "AnyMo introduces OmniHuMo, a large-scale multimodal motion dataset, and a unified masked modeling framework to enable any-modality conditional human motion generation including speech-driven lip sync.",
+      "llm_tldr_cn": "现有条件运动生成方法受限于固定模态组合，缺乏大规模多模态对齐数据。AnyMo提出OmniHuMo数据集（含文本、语音、音乐等）和统一掩码建模框架，可接受任意模态条件生成高质量人体运动，特别为语音驱动的精准唇形合成提供了强基线。实验展示了多模态条件下的卓越生成能力。",
+      "llm_tldr": "现有条件运动生成方法受限于固定模态组合，缺乏大规模多模态对齐数据。AnyMo提出OmniHuMo数据集（含文本、语音、音乐等）和统一掩码建模框架，可接受任意模态条件生成高质量人体运动，特别为语音驱动的精准唇形合成提供了强基线。实验展示了多模态条件下的卓越生成能力。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.31294v1",
+      "source": "arxiv",
+      "title": "TokTalk: Expressive Real-time Facial Animation from Audio-LLM Tokens",
+      "abstract": "Recent advances in Audio-LLMs like GPT-4o have ushered in an era of conversational interaction with language models. Conversational avatars however, still seem robotic in facial expression and conversational flow, in part due to sequential stages of speech recognition, text generation, turn-based text response, speech synthesis, and audio driven facial animation. Based on our insight that audio-tokens produced by current Audio-LLMs carry sufficient information to reconstruct a plausible facial performance, we present TokTalk, a system that directly outputs expressive facial animation in real-time from streaming audio-tokens. We construct a novel audio-token to 3D facial motion dataset, on which TokTalk is trained using a Chunk-based Conditional Flow Matching model. A lightweight adaptation strategy allows our trained model to seamlessly connect to any token-based Audio-LLM at minimal computational overhead. Our chunk-based processing further enables parametric trade-off between latency and facial quality, shown through ablation studies. We further show that the real-time performance of TokTalk is comparable in latency to prior art solutions, and significantly favorable (via a perceptual study) in terms of quality, expressivity and control of the 3D facial performance. We showcase TokTalk's flexibility using a chatbot Avatar, a voice-driven user Avatar, and an animation Director's interface, as diverse audio-visual face applications.",
+      "authors": [
+        "Qingcheng Zhao",
+        "Yifang Pan",
+        "Karan Singh"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-29T13:31:11+00:00",
+      "link": "https://arxiv.org/pdf/2605.31294v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Direct facial animation from audio tokens for accurate lip-sync in talking head generation",
+      "llm_evidence_cn": "从音频令牌直接生成面部动画，实现说话人视频中的精准唇形同步",
+      "llm_evidence": "从音频令牌直接生成面部动画，实现说话人视频中的精准唇形同步",
+      "canonical_evidence": "从音频令牌直接生成面部动画，实现说话人视频中的精准唇形同步",
+      "llm_tldr_en": "TokTalk uses audio tokens from Audio-LLMs to directly generate expressive real-time facial animation, enabling accurate lip-sync for talking head videos from a single image.",
+      "llm_tldr_cn": "对话式虚拟形象的面部表情仍显机械，部分原因在于语音驱动的面部动画需要多阶段处理。TokTalk 发现音频大语言模型的音频令牌已携带足够信息，可直接生成富有表现力的实时面部动画。该方法构建了音频令牌到三维面部运动的数据集，并训练了基于块的流匹配模型，实现了从流式音频令牌到自然唇形同步的端到端输出，为从单张图像生成唇形精准的说话人视频提供了高效方案。",
+      "llm_tldr": "对话式虚拟形象的面部表情仍显机械，部分原因在于语音驱动的面部动画需要多阶段处理。TokTalk 发现音频大语言模型的音频令牌已携带足够信息，可直接生成富有表现力的实时面部动画。该方法构建了音频令牌到三维面部运动的数据集，并训练了基于块的流匹配模型，实现了从流式音频令牌到自然唇形同步的端到端输出，为从单张图像生成唇形精准的说话人视频提供了高效方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.25193v2",
+      "source": "arxiv",
+      "title": "SpongeBob: Sync-Aware Harmonious Audio-Visual Generative Editing",
+      "abstract": "Visual and acoustic events in the physical world are inherently coupled, yet existing video editing methods typically adopt decoupled pipelines, lacking bidirectional modality interaction. This results in two key limitations: (i) audio-visual desynchronization and (ii) contextual conflicts between generated audio and preserved content. To address these, we propose SpongeBob, the first end-to-end audio-visual joint editing framework featuring bidirectional cross-modal interaction. For synchronization, a Sync-Aware Mechanism aligns visual edits with sound events via bidirectional attention, temporal alignment, and spatial constraints. For contextual consistency, a Context-Aware Module leverages acoustic and visual context attention to prevent semantic clashes. Additionally, we introduce Sync-Preserving Training and Guidance (SPTG) to enhance alignment without degrading quality. Due to the scarcity of paired data, we construct a scalable data pipeline and a large-scale subject-level dataset. We also propose SpongeBob-Bench for systematic evaluation. Experiments show SpongeBob significantly outperforms existing baselines, improving Sync-C by 30% and Ctx-F1 by 12.5%. Our project page is available at: https://hy-spongebob.github.io/.",
+      "authors": [
+        "Sen Liang",
+        "Cong Wang",
+        "Fengbin Guan",
+        "Zhentao Yu",
+        "Yiting Lu",
+        "Yuanzhi Wang",
+        "Yuan Zhou",
+        "Xin Li",
+        "Zhibo Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-24T17:50:45+00:00",
+      "link": "https://arxiv.org/pdf/2605.25193v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Sync-Aware Mechanism aligns visual edits with sound events for audio-visual synchronization",
+      "llm_evidence_cn": "同步感知机制在视频编辑中对齐视觉与声音事件，实现音画同步",
+      "llm_evidence": "同步感知机制在视频编辑中对齐视觉与声音事件，实现音画同步",
+      "canonical_evidence": "同步感知机制在视频编辑中对齐视觉与声音事件，实现音画同步",
+      "llm_tldr_en": "SpongeBob introduces bidirectional cross-modal interaction for audio-visual editing, with a Sync-Aware Mechanism aligning visual edits to sound events to ensure synchronization.",
+      "llm_tldr_cn": "现有视频编辑方法常因缺乏模态交互导致音画不同步和上下文冲突。SpongeBob提出端到端音视频联合编辑框架，通过同步感知机制（双向注意力、时序对齐和空间约束）对齐视觉编辑与声音事件，同时利用上下文感知模块避免语义冲突，实现和谐一致的音视频编辑。实验表明其在同步性和一致性上优于现有方法。",
+      "llm_tldr": "现有视频编辑方法常因缺乏模态交互导致音画不同步和上下文冲突。SpongeBob提出端到端音视频联合编辑框架，通过同步感知机制（双向注意力、时序对齐和空间约束）对齐视觉编辑与声音事件，同时利用上下文感知模块避免语义冲突，实现和谐一致的音视频编辑。实验表明其在同步性和一致性上优于现有方法。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.30895v1",
+      "source": "arxiv",
+      "title": "CamGeo: Sparse Camera-Conditioned Image-to-Video Generation with 3D Geometry Priors",
+      "abstract": "Sparse camera-conditioned image-to-video generation presents a pivotal challenge: synthesizing geometrically consistent 3D motion from minimal pose cues. Existing methods, which largely rely on dense supervision or naive interpolation, suffer from severe pose drift and motion discontinuities due to the lack of robust 3D priors. In this paper, we introduce CamGeo, a novel framework that distills rich 3D geometric knowledge from a pre-trained video-to-3D model (VGGT) directly into the diffusion backbone. To achieve this without incurring inference latency, we propose a training-only distillation strategy. Specifically, CamGeo incorporates: (1) keyframe trajectory distillation that enforces cycle-consistency with sparse input poses, (2) cross-frame consistency distillation with both camera trajectory and depth constraints to generate consistent structure across unsupervised frames, and (3) a three-stage coarse-to-fine curriculum learning, progressively scales geometric complexity, from global structure coherence to fine-grained refinement, achieving stable optimization. Extensive experiments demonstrate that CamGeo achieves consistent improvements under various sparsity ratios.",
+      "authors": [
+        "Xuanyi Liu",
+        "Deyi Ji",
+        "Liqun Liu",
+        "Lanyun Zhu",
+        "Xuhang Chen",
+        "Qianxiong Xu",
+        "Peng Shu",
+        "Huan Yu",
+        "Jie Jiang",
+        "Feng Gao",
+        "Siwei Ma"
+      ],
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-05-29T06:29:07+00:00",
+      "link": "https://arxiv.org/pdf/2605.30895v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Image-to-video generation conditioned on camera pose with 3D geometry priors",
+      "llm_evidence_cn": "以相机位姿为条件、带3D几何先验的图像到视频生成",
+      "llm_evidence": "以相机位姿为条件、带3D几何先验的图像到视频生成",
+      "canonical_evidence": "以相机位姿为条件、带3D几何先验的图像到视频生成",
+      "llm_tldr_en": "CamGeo proposes a framework that distills 3D geometric knowledge into a diffusion model for sparse camera-conditioned image-to-video generation, improving geometric consistency.",
+      "llm_tldr_cn": "稀疏相机条件下I2V生成面临几何一致性挑战。CamGeo通过训练阶段蒸馏预训练视频转3D模型（VGGT）的几何知识，将关键帧轨迹提炼和跨视角约束融入扩散模型，在不增加推理延迟的情况下生成几何一致的高质量视频。实验显示其在视角准确性和运动平滑性上超越现有方法。",
+      "llm_tldr": "稀疏相机条件下I2V生成面临几何一致性挑战。CamGeo通过训练阶段蒸馏预训练视频转3D模型（VGGT）的几何知识，将关键帧轨迹提炼和跨视角约束融入扩散模型，在不增加推理延迟的情况下生成几何一致的高质量视频。实验显示其在视角准确性和运动平滑性上超越现有方法。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
