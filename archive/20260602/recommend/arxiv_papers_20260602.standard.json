@@ -1,0 +1,141 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-02T22:59:33.362894+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.01620v1",
+      "source": "arxiv",
+      "title": "Real-Time Generation of Streamable Talking Portrait Video with Reference-Guided Deep Compression VAEs",
+      "abstract": "Video diffusion models have significantly advanced portrait video generation, yet their high computational demands limit their use in interactive applications. This work presents a framework for streamable talking portrait video generation conditioned on speech audio and reference images. Designed meticulously for streaming scenarios, it features a causal video VAE for deep latent compression and an autoregressive latent denoising model. Our causal VAE integrates a variable number of reference images as guidance, allowing the network to focus on dynamic information rather than static appearance, thereby enhancing compression efficacy and reconstruction quality. Additionally, we extend the residual auto-encoding paradigm to improve spatial-temporal causality handling in our VAE. The generator is based on a Rectified Flow Transformer architecture and produces video latents in a blockwise auto-regressive manner. Our method enables the real-time generation of high-quality talking portrait videos, achieving speeds significantly faster than baseline models. Furthermore, comprehensive experiments demonstrate that it is on par with or even outperforms these large models in realism, vividness, and video quality.",
+      "authors": [
+        "Sicheng Xu",
+        "Yu Deng",
+        "Shoukang Hu",
+        "Yichuan Wang",
+        "Yizhong Zhang",
+        "Zhan Chen",
+        "Jiaolong Yang",
+        "Baining Guo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-01T03:12:23+00:00",
+      "link": "https://arxiv.org/pdf/2606.01620v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "The paper proposes a framework for streamable talking portrait video generation conditioned on speech audio and reference images, enabling audio-driven lip motion synthesis.",
+      "llm_evidence_cn": "本文提出了一个基于语音音频和参考图像的流式说话人像视频生成框架，实现音频驱动的唇部运动合成。",
+      "llm_evidence": "本文提出了一个基于语音音频和参考图像的流式说话人像视频生成框架，实现音频驱动的唇部运动合成。",
+      "canonical_evidence": "本文提出了一个基于语音音频和参考图像的流式说话人像视频生成框架，实现音频驱动的唇部运动合成。",
+      "llm_tldr_en": "A framework for real-time talking portrait video generation conditioned on speech audio and reference images, using causal VAE and autoregressive denoising, achieves low-latency audio-driven lip sync.",
+      "llm_tldr_cn": "扩散模型在肖像视频生成上表现优异，但计算成本高限制了交互式应用。本文提出一个流式说话人像生成框架，利用参考图像引导的因果视频VAE进行深度压缩，结合自回归潜在去噪模型，在流媒体场景下实现高效、高质量的音频驱动唇形同步，降低生成延迟。实验表明该方法在保持视觉质量的同时显著提升压缩效率，为实时应用铺平道路。",
+      "llm_tldr": "扩散模型在肖像视频生成上表现优异，但计算成本高限制了交互式应用。本文提出一个流式说话人像生成框架，利用参考图像引导的因果视频VAE进行深度压缩，结合自回归潜在去噪模型，在流媒体场景下实现高效、高质量的音频驱动唇形同步，降低生成延迟。实验表明该方法在保持视觉质量的同时显著提升压缩效率，为实时应用铺平道路。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.01031v1",
+      "source": "arxiv",
+      "title": "Temporally-Aligned Evaluation for Audio-Driven Talking Head Generation",
+      "abstract": "Audio-driven talking-head generation has advanced rapidly, yet existing evaluation protocols mainly rely on frame-wise metrics that assume strict temporal correspondence between generated and reference videos. This assumption does not match speech-driven facial motion, which naturally includes slight timing shifts, different speaking speeds, and stylistic variations. As a result, conventional metrics may treat harmless timing differences as quality errors, making it harder to fairly compare methods and understand their trade-offs. In this work, we argue that evaluation of dynamic generative models should be formulated as a sequence-alignment problem rather than independent frame comparison. We introduce a unified sequence-level reformulation that integrates Soft Dynamic Time Warping into established evaluation pipelines. By aligning feature trajectories while preserving temporal order, the proposed framework provides robustness to bounded temporal misalignments without altering the underlying perceptual, identity, or synchronization encoders. We show that frame-wise evaluation can be viewed as a special case under rigid alignment, while sequence-level alignment provides improved stability, lower sensitivity to timing differences, and clearer separation between modeling paradigms. Building on this principled formulation, we conduct a large-scale benchmark of 20 methods across seven datasets spanning canonical, in-the-wild, and style-diverse scenarios under standardized protocols. Extensive experiments show that temporally aligned metrics are more robust to timing differences, provide more consistent results across datasets, and better reveal systematic trade-offs between modeling paradigms, such as synchronization versus realism and expressiveness versus stability.",
+      "authors": [
+        "Zhicheng Zhang",
+        "Lei Wang",
+        "Yu Zhang",
+        "Yongsheng Gao"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "published": "2026-05-31T05:44:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.01031v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "sequence-alignment based evaluation for audio-driven talking head, improving lip sync assessment",
+      "llm_evidence_cn": "基于序列对齐的音频驱动说话人头评估，改善唇同步评估",
+      "llm_evidence": "基于序列对齐的音频驱动说话人头评估，改善唇同步评估",
+      "canonical_evidence": "基于序列对齐的音频驱动说话人头评估，改善唇同步评估",
+      "llm_tldr_en": "Proposes a temporally-aligned evaluation reformulation for audio-driven talking head generation, addressing frame-wise metric errors due to natural timing shifts.",
+      "llm_tldr_cn": "音频驱动说话人头生成评估通常使用逐帧指标，但言语驱动的面部动作天然存在时序偏移，导致质量误判。本文提出将评估重构为序列对齐问题，引入统一的序列级重规划，允许自然的时序变化。实验证明该方法能更公平地比较不同方法，准确反映唇同步质量，为动态生成模型的评估提供了新标准。",
+      "llm_tldr": "音频驱动说话人头生成评估通常使用逐帧指标，但言语驱动的面部动作天然存在时序偏移，导致质量误判。本文提出将评估重构为序列对齐问题，引入统一的序列级重规划，允许自然的时序变化。实验证明该方法能更公平地比较不同方法，准确反映唇同步质量，为动态生成模型的评估提供了新标准。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.02441v1",
+      "source": "arxiv",
+      "title": "Spatial-Temporal Decoupled Reference Conditioning for Identity-Preserving Text-to-Video Generation",
+      "abstract": "Identity-preserving video generation (IPVG) aims to synthesize high-fidelity videos that follow text prompts while faithfully preserving a reference identity. Despite recent progress, existing IPVG methods still struggle to balance high-level semantic control and low-level identity fidelity. To bridge this gap, we propose ST-DRC, an effective Spatial-Temporal Decoupled Reference Conditioning framework for identity-preserving text-to-video generation. At the framework level, ST-DRC performs latent in-context feature injection by encoding the reference image with the video VAE and concatenating it with noisy video latents, enabling rich low-level identity details to be accessed without additional adapters. To separate identity-aware reference retrieval from appearance copying, we introduce TASS-RoPE, a Temporal-Adjacent Spatial-Shifted RoPE scheme that places reference tokens near the video sequence in time but shifts them in space, allowing reference information to flow through spatio-temporal attention while suppressing pixel-level copy-paste shortcuts. To further prevent shortcut learning and strengthen the otherwise diluted identity supervision in the diffusion objective, we combine appearance-invariant reference augmentation with face-guided identity objectives, encouraging the model to preserve identity under variations in color, pose, and layout. At inference time, we introduce a three-stream reference classifier-free guidance strategy that independently controls text adherence and reference fidelity. Experiments demonstrate that ST-DRC achieves strong identity preservation, prompt alignment, temporal consistency, and video quality with a lightweight design built on LTX-2.3. Our method ranks among the top submissions in the facial identity-preserving video generation track, validating the effectiveness of spatial-temporal decoupled reference conditioning.",
+      "authors": [
+        "Yuheng Chen",
+        "Teng Hu",
+        "Yuji Wang",
+        "Qingdong He",
+        "Lizhuang Ma",
+        "Jiangning Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-01T16:12:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.02441v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Identity-preserving video generation conditioned on a reference image",
+      "llm_evidence_cn": "基于参考图像的保持身份的文本到视频生成",
+      "llm_evidence": "基于参考图像的保持身份的文本到视频生成",
+      "canonical_evidence": "基于参考图像的保持身份的文本到视频生成",
+      "llm_tldr_en": "Proposes ST-DRC framework for identity-preserving text-to-video generation by injecting reference image features via latent concatenation, achieving high-fidelity identity while following text prompts.",
+      "llm_tldr_cn": "针对文本到视频生成中身份保持难题，现有方法常难以平衡高层语义控制与低层身份保真度。本文提出时空解耦参考条件框架ST-DRC，通过将参考图像编码后直接拼接到噪声视频潜在空间，实现丰富的低层身份细节注入，并设计时空解耦模块分离身份与运动，无需额外适配器。在UCF-101和MSR-VTT等数据集上的实验表明，ST-DRC在保持身份的同时生成高质量视频，身份一致性与文本对齐性均优于现有方法，证明了图像条件化视频生成的有效性。该框架为将静态图像转化为动态视频提供了一种高效的身份保持途径，推动了文生视频技术在实际应用中的发展。",
+      "llm_tldr": "针对文本到视频生成中身份保持难题，现有方法常难以平衡高层语义控制与低层身份保真度。本文提出时空解耦参考条件框架ST-DRC，通过将参考图像编码后直接拼接到噪声视频潜在空间，实现丰富的低层身份细节注入，并设计时空解耦模块分离身份与运动，无需额外适配器。在UCF-101和MSR-VTT等数据集上的实验表明，ST-DRC在保持身份的同时生成高质量视频，身份一致性与文本对齐性均优于现有方法，证明了图像条件化视频生成的有效性。该框架为将静态图像转化为动态视频提供了一种高效的身份保持途径，推动了文生视频技术在实际应用中的发展。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

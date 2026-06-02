@@ -6,34 +6,31 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-01
-- 运行时间：2026-06-01 22:53:41 UTC
+- 最新运行日期：2026-06-02
+- 运行时间：2026-06-02 23:04:30 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：2
+- 本次总论文数：3
+- 精读区：1
 - 速读区：2
 
 ### 今日简报（AI）
-今日拆解4篇多模态生成新作，重点精读运动与动画领域两篇8分研究。  
-最值得关注的是利用掩码建模统一任意条件驱动人体运动生成，以及通过音频-语言模型实现表情实时动画化。  
-若对AIGC动态内容感兴趣，可从音频驱动面部动画切入，尝试复现轻量级实时方案。
-- 详情：[/202606/01/README](/202606/01/README)
+今日精选3篇AI论文，精读一篇满分突破实现实时流式说话人视频生成。  
+亮点在《Real-Time … Talking Portrait》用参考引导深度压缩VAE，让高清虚拟人可低延迟在线播放；同时关注了音频驱动面部评估与身份保持视频生成。  
+建议普通读者先体验实时虚拟人demo，感受“一句话生成可直播的数字分身”。
+- 详情：[/202606/02/README](/202606/02/README)
 
 ### 精读区论文标签
-1. [AnyMo: Scaling Any-Modality Conditional Motion Generation with Masked Modeling](/202606/01/2605.29488v1-anymo-scaling-any-modality-conditional-motion-generation-with-masked-modeling)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：语音驱动的人体运动生成实现精准唇动同步
-2. [TokTalk: Expressive Real-time Facial Animation from Audio-LLM Tokens](/202606/01/2605.31294v1-toktalk-expressive-real-time-facial-animation-from-audio-llm-tokens)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：从音频令牌直接生成面部动画，实现说话人视频中的精准唇形同步
+1. [Real-Time Generation of Streamable Talking Portrait Video with Reference-Guided Deep Compression VAEs](/202606/02/2606.01620v1-real-time-generation-of-streamable-talking-portrait-video-with-reference-guided-deep-compression-vaes)  
+   标签：评分：10.0/10、query:wan-av-gen
+   evidence：本文提出了一个基于语音音频和参考图像的流式说话人像视频生成框架，实现音频驱动的唇部运动合成。
 
 ### 速读区论文标签
-1. [SpongeBob: Sync-Aware Harmonious Audio-Visual Generative Editing](/202606/01/2605.25193v2-spongebob-sync-aware-harmonious-audio-visual-generative-editing)  
+1. [Temporally-Aligned Evaluation for Audio-Driven Talking Head Generation](/202606/02/2606.01031v1-temporally-aligned-evaluation-for-audio-driven-talking-head-generation)  
+   标签：评分：7.0/10、query:wan-av-gen
+   evidence：基于序列对齐的音频驱动说话人头评估，改善唇同步评估
+2. [Spatial-Temporal Decoupled Reference Conditioning for Identity-Preserving Text-to-Video Generation](/202606/02/2606.02441v1-spatial-temporal-decoupled-reference-conditioning-for-identity-preserving-text-to-video-generation)  
    标签：评分：6.0/10、query:wan-av-gen
-   evidence：同步感知机制在视频编辑中对齐视觉与声音事件，实现音画同步
-2. [CamGeo: Sparse Camera-Conditioned Image-to-Video Generation with 3D Geometry Priors](/202606/01/2605.30895v1-camgeo-sparse-camera-conditioned-image-to-video-generation-with-3d-geometry-priors)  
-   标签：评分：6.0/10、query:wan-av-gen
-   evidence：以相机位姿为条件、带3D几何先验的图像到视频生成
+   evidence：基于参考图像的保持身份的文本到视频生成
 
 
 <div class="dpr-home-promo-card">
