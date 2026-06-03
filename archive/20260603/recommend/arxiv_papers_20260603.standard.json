@@ -1,0 +1,105 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-03T22:33:20.783742+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2605.30895v2",
+      "source": "arxiv",
+      "title": "CamGeo: Sparse Camera-Conditioned Image-to-Video Generation with 3D Geometry Priors",
+      "abstract": "Sparse camera-conditioned image-to-video generation presents a pivotal challenge: synthesizing geometrically consistent 3D motion from minimal pose cues. Existing methods, which largely rely on dense supervision or naive interpolation, suffer from severe pose drift and motion discontinuities due to the lack of robust 3D priors. In this paper, we introduce CamGeo, a novel framework that distills rich 3D geometric knowledge from a pre-trained video-to-3D model (VGGT) directly into the diffusion backbone. To achieve this without incurring inference latency, we propose a training-only distillation strategy. Specifically, CamGeo incorporates: (1) keyframe trajectory distillation that enforces cycle-consistency with sparse input poses, (2) cross-frame consistency distillation with both camera trajectory and depth constraints to generate consistent structure across unsupervised frames, and (3) a three-stage coarse-to-fine curriculum learning, progressively scales geometric complexity, from global structure coherence to fine-grained refinement, achieving stable optimization. Extensive experiments demonstrate that CamGeo achieves consistent improvements under various sparsity ratios.",
+      "authors": [
+        "Xuanyi Liu",
+        "Deyi Ji",
+        "Liqun Liu",
+        "Lanyun Zhu",
+        "Xuhang Chen",
+        "Qianxiong Xu",
+        "Peng Shu",
+        "Huan Yu",
+        "Jie Jiang",
+        "Feng Gao",
+        "Siwei Ma"
+      ],
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-05-29T06:29:07+00:00",
+      "link": "https://arxiv.org/pdf/2605.30895v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Image-to-video generation from a single image and sparse camera poses",
+      "llm_evidence_cn": "基于单张图像和稀疏相机姿态的图像到视频生成",
+      "llm_evidence": "基于单张图像和稀疏相机姿态的图像到视频生成",
+      "canonical_evidence": "基于单张图像和稀疏相机姿态的图像到视频生成",
+      "llm_tldr_en": "Proposes CamGeo, which distills 3D geometry priors into a diffusion backbone for sparse camera-conditioned image-to-video generation, achieving geometrically consistent videos without inference overhead.",
+      "llm_tldr_cn": "现有稀疏相机条件下的图像到视频生成缺乏三维几何先验，导致姿态漂移和运动不连续。本文提出CamGeo，从视频到3D模型蒸馏几何知识至扩散模型，通过训练时关键帧轨迹蒸馏和跨注意力引导，在无推理延迟下生成几何一致且运动平滑的视频。实验表明该方法有效提升了相机条件图像到视频的生成质量。",
+      "llm_tldr": "现有稀疏相机条件下的图像到视频生成缺乏三维几何先验，导致姿态漂移和运动不连续。本文提出CamGeo，从视频到3D模型蒸馏几何知识至扩散模型，通过训练时关键帧轨迹蒸馏和跨注意力引导，在无推理延迟下生成几何一致且运动平滑的视频。实验表明该方法有效提升了相机条件图像到视频的生成质量。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.03972v1",
+      "source": "arxiv",
+      "title": "AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation",
+      "abstract": "We present AAD-1, an Asymmetric Adversarial Distillation framework for One-step autoregressive image-to-video generation. State-of-the-art methods adopt adversarial distillation but suffer from motion collapse and training instability, resulting in static videos. AAD-1 addresses these challenges through two key designs in architecture and training strategy. Our key architectural insight is to break the symmetry between generator and discriminator. While the generator remains causal to preserve autoregressive sampling capability, the discriminator attends bidirectionally over the full spatiotemporal context and produces a single holistic realism score for the entire video sequence. This asymmetric design enables the discriminator to effectively detect global temporal failures and long-range drift that cause motion collapse in autoregressive generation. To stabilize training, we introduce a phased strategy that first uses distribution matching to bootstrap a stable one-step generator, providing a warm-up phase that brings the student distribution closer to the teacher before adversarial distillation begins. Extensive experiments on VBench demonstrate that AAD-1 achieves state-of-the-art performance in one-step autoregressive video generation.",
+      "authors": [
+        "Haobo Li",
+        "Yanhong Zeng",
+        "Yunhong Lu",
+        "Jiapeng Zhu",
+        "Hao Ouyang",
+        "Qiuyu Wang",
+        "Ka Leong Cheng",
+        "Yujun Shen",
+        "Zhipeng Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-02T17:55:30+00:00",
+      "link": "https://arxiv.org/pdf/2606.03972v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "one-step autoregressive image-to-video generation",
+      "llm_evidence_cn": "一步自回归图像到视频生成",
+      "llm_evidence": "一步自回归图像到视频生成",
+      "canonical_evidence": "一步自回归图像到视频生成",
+      "llm_tldr_en": "Proposes AAD-1, an asymmetric adversarial distillation framework for one-step I2V generation, breaking generator-discriminator symmetry to address motion collapse, achieving fast and dynamic video synthesis.",
+      "llm_tldr_cn": "现有对抗蒸馏方法用于图像到视频生成存在运动坍塌和训练不稳定问题，本文提出AAD-1框架，通过非对称生成器-判别器设计解决该难题。生成器保持因果性以保留自回归采样能力，判别器则时空双向注意并给出整体真实度评分，使得判别器能有效捕捉运动动态。实验显示该方法生成动态视频质量高，实现了一步高效推理，为I2V加速提供了新方案。",
+      "llm_tldr": "现有对抗蒸馏方法用于图像到视频生成存在运动坍塌和训练不稳定问题，本文提出AAD-1框架，通过非对称生成器-判别器设计解决该难题。生成器保持因果性以保留自回归采样能力，判别器则时空双向注意并给出整体真实度评分，使得判别器能有效捕捉运动动态。实验显示该方法生成动态视频质量高，实现了一步高效推理，为I2V加速提供了新方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

@@ -6,31 +6,28 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-02
-- 运行时间：2026-06-02 23:04:30 UTC
+- 最新运行日期：2026-06-03
+- 运行时间：2026-06-03 22:38:59 UTC
 - 运行状态：成功
-- 本次总论文数：3
+- 本次总论文数：2
 - 精读区：1
-- 速读区：2
+- 速读区：1
 
 ### 今日简报（AI）
-今日精选3篇AI论文，精读一篇满分突破实现实时流式说话人视频生成。  
-亮点在《Real-Time … Talking Portrait》用参考引导深度压缩VAE，让高清虚拟人可低延迟在线播放；同时关注了音频驱动面部评估与身份保持视频生成。  
-建议普通读者先体验实时虚拟人demo，感受“一句话生成可直播的数字分身”。
-- 详情：[/202606/02/README](/202606/02/README)
+今日精读一篇 9 分图像到视频生成新作，速读一篇对抗蒸馏加速技术，聚焦视频生成的几何可控性与高效推理。  
+最值得关注：CamGeo 利用稀疏相机条件与 3D 几何先验，让单图生视频获得显式多视角结构；AAD-1 则用非对称对抗蒸馏将自回归视频生成推至一步生成。  
+建议读者尝试用相机视角约束生成连贯视频，同时关注蒸馏框架在速度与画质间的博弈。
+- 详情：[/202606/03/README](/202606/03/README)
 
 ### 精读区论文标签
-1. [Real-Time Generation of Streamable Talking Portrait Video with Reference-Guided Deep Compression VAEs](/202606/02/2606.01620v1-real-time-generation-of-streamable-talking-portrait-video-with-reference-guided-deep-compression-vaes)  
-   标签：评分：10.0/10、query:wan-av-gen
-   evidence：本文提出了一个基于语音音频和参考图像的流式说话人像视频生成框架，实现音频驱动的唇部运动合成。
+1. [CamGeo: Sparse Camera-Conditioned Image-to-Video Generation with 3D Geometry Priors](/202606/03/2605.30895v2-camgeo-sparse-camera-conditioned-image-to-video-generation-with-3d-geometry-priors)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：基于单张图像和稀疏相机姿态的图像到视频生成
 
 ### 速读区论文标签
-1. [Temporally-Aligned Evaluation for Audio-Driven Talking Head Generation](/202606/02/2606.01031v1-temporally-aligned-evaluation-for-audio-driven-talking-head-generation)  
+1. [AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation](/202606/03/2606.03972v1-aad-1-asymmetric-adversarial-distillation-for-one-step-autoregressive-video-generation)  
    标签：评分：7.0/10、query:wan-av-gen
-   evidence：基于序列对齐的音频驱动说话人头评估，改善唇同步评估
-2. [Spatial-Temporal Decoupled Reference Conditioning for Identity-Preserving Text-to-Video Generation](/202606/02/2606.02441v1-spatial-temporal-decoupled-reference-conditioning-for-identity-preserving-text-to-video-generation)  
-   标签：评分：6.0/10、query:wan-av-gen
-   evidence：基于参考图像的保持身份的文本到视频生成
+   evidence：一步自回归图像到视频生成
 
 
 <div class="dpr-home-promo-card">
