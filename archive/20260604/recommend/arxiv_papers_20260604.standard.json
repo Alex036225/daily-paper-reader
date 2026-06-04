@@ -1,0 +1,139 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-04T21:59:19.842839+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.03402v2",
+      "source": "arxiv",
+      "title": "Mamba-Enhanced Implicit Motion Learning for Audio-Driven Portrait Animation",
+      "abstract": "Audio-driven human motion video generation aims to synthesize realistic and temporally coherent human animations from a single static image, with applications in talking-head synthesis, co-speech gesture generation, and dynamic presentations. Moving beyond conventional keypoint-based methods that often struggle to capture subtle motion dynamics, We propose a novel implicit-motion framework for generating realistic and temporally coherent human motion videos from a single static image and audio. Our approach uses a two-stage pipeline that decouples motion prediction from rendering. The first stage integrates appearance priors and hierarchical depth cues into a region-aware attention mechanism to model latent motion features. The second stage employs a Mamba-enhanced diffusion model to directly predict these features from audio and the source image, enabling unsupervised learning of fine-grained motion patterns. This decoupled architecture enhances flexibility and efficiency. Trained on a new 380-hour high-quality dataset, our method outperforms prior work across multiple public benchmarks and our collected data in accuracy, naturalness, and temporal coherence, setting a new state-of-the-art.",
+      "authors": [
+        "Xuan Wei",
+        "Jiahui Chen",
+        "Kaiheng Li",
+        "Mingyu Shao",
+        "Qingqi Hong"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-02T09:43:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.03402v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "generates realistic talking-head videos from a single image and audio with audio-driven lip motion",
+      "llm_evidence_cn": "从单张图像和音频生成逼真的说话头部视频，实现音频驱动的嘴唇运动",
+      "llm_evidence": "从单张图像和音频生成逼真的说话头部视频，实现音频驱动的嘴唇运动",
+      "canonical_evidence": "从单张图像和音频生成逼真的说话头部视频，实现音频驱动的嘴唇运动",
+      "llm_tldr_en": "Proposes an implicit-motion framework with Mamba enhancement for audio-driven portrait animation from a single image, achieving realistic lip-sync and motion coherence.",
+      "llm_tldr_cn": "该论文针对传统关键点方法难以捕捉细微运动的问题，提出一种基于Mamba增强的隐式运动学习框架，从单张静态图像和音频生成逼真且时序一致的说话头部视频。框架解耦运动预测与渲染，第一阶段结合外观先验与分层深度线索建模隐运动特征，第二阶段利用Mamba提升时序建模能力，在合成自然唇形同步和身体微动作方面表现出色，为肖像动画提供了高效方案。",
+      "llm_tldr": "该论文针对传统关键点方法难以捕捉细微运动的问题，提出一种基于Mamba增强的隐式运动学习框架，从单张静态图像和音频生成逼真且时序一致的说话头部视频。框架解耦运动预测与渲染，第一阶段结合外观先验与分层深度线索建模隐运动特征，第二阶段利用Mamba提升时序建模能力，在合成自然唇形同步和身体微动作方面表现出色，为肖像动画提供了高效方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.03972v2",
+      "source": "arxiv",
+      "title": "AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation",
+      "abstract": "We present AAD-1, an Asymmetric Adversarial Distillation framework for One-step autoregressive image-to-video generation. State-of-the-art methods adopt adversarial distillation but suffer from motion collapse and training instability, resulting in static videos. AAD-1 addresses these challenges through two key designs in architecture and training strategy. Our key architectural insight is to break the symmetry between generator and discriminator. While the generator remains causal to preserve autoregressive sampling capability, the discriminator attends bidirectionally over the full spatiotemporal context and produces a single holistic realism score for the entire video sequence. This asymmetric design enables the discriminator to effectively detect global temporal failures and long-range drift that cause motion collapse in autoregressive generation. To stabilize training, we introduce a phased strategy that first uses distribution matching to bootstrap a stable one-step generator, providing a warm-up phase that brings the student distribution closer to the teacher before adversarial distillation begins. Extensive experiments on VBench demonstrate that AAD-1 achieves state-of-the-art performance in one-step autoregressive video generation.",
+      "authors": [
+        "Haobo Li",
+        "Yanhong Zeng",
+        "Yunhong Lu",
+        "Jiapeng Zhu",
+        "Hao Ouyang",
+        "Qiuyu Wang",
+        "Ka Leong Cheng",
+        "Yujun Shen",
+        "Zhipeng Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-02T17:55:30+00:00",
+      "link": "https://arxiv.org/pdf/2606.03972v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Proposes one-step autoregressive image-to-video generation model",
+      "llm_evidence_cn": "提出一步自回归图像到视频生成模型",
+      "llm_evidence": "提出一步自回归图像到视频生成模型",
+      "canonical_evidence": "提出一步自回归图像到视频生成模型",
+      "llm_tldr_en": "Introduces AAD-1, an asymmetric adversarial distillation framework for one-step autoregressive image-to-video generation, overcoming motion collapse and training instability.",
+      "llm_tldr_cn": "针对现有对抗蒸馏方法在图像到视频生成中易致运动坍塌和训练不稳定问题，提出AAD-1框架。通过打破生成器与判别器的对称性，使判别器具备双向时空上下文以给出整体真实性评分，结合课程式训练策略，在单步推理下生成动态丰富的真实视频。",
+      "llm_tldr": "针对现有对抗蒸馏方法在图像到视频生成中易致运动坍塌和训练不稳定问题，提出AAD-1框架。通过打破生成器与判别器的对称性，使判别器具备双向时空上下文以给出整体真实性评分，结合课程式训练策略，在单步推理下生成动态丰富的真实视频。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.03183v1",
+      "source": "arxiv",
+      "title": "Inference-Time Scaling for Joint Audio-Video Generation",
+      "abstract": "Joint audio-video generation aims to synthesize realistic audio-video pairs that are both semantically aligned with text prompts and precisely synchronized. While existing joint audio-video generation models often require substantial training resources to improve fidelity, Inference-Time Scaling (ITS) has recently emerged as a promising training-free alternative in single-modality domains. However, extending ITS from a single modality to multimodal domains is non-trivial, as it requires balancing multiple heterogeneous objectives. In this paper, we present the first comprehensive study of ITS for joint audio-video generation. We first demonstrate that a multi-verifier framework is essential to address the limitations of single-objective guidance, including asymmetric performance trade-offs and verifier hacking. Through systematic analysis, we then identify an optimal multi-verifier combination that yields balanced improvements across all quality dimensions. Finally, to effectively aggregate diverse reward signals, we propose Adaptive Reward Weighting (ARW), a novel test-time optimization algorithm. ARW treats reward aggregation as an online optimization problem, utilizing learnable parameters to calibrate reward variances without requiring prior knowledge of reward distributions, thereby ensuring robust multi-objective selection. Experimental results on VGGSound and JavisBench-mini benchmarks demonstrate that our framework significantly enhances semantic alignment, perceptual quality, and audio-visual synchronization of generated outputs. Synthesized samples and code are available on the project page: https://jung-jaemin.github.io/ITS-AVGen-Proj.",
+      "authors": [
+        "Jaemin Jung",
+        "Kyeongha Rho",
+        "Inkyu Shin",
+        "Joon Son Chung"
+      ],
+      "primary_category": "cs.MM",
+      "categories": [
+        "cs.MM",
+        "cs.CV",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "published": "2026-06-02T05:41:41+00:00",
+      "link": "https://arxiv.org/pdf/2606.03183v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Studies inference-time scaling for joint audio-video generation with precise synchronization",
+      "llm_evidence_cn": "研究面向音视频联合生成的推理时缩放方法，强调精确同步",
+      "llm_evidence": "研究面向音视频联合生成的推理时缩放方法，强调精确同步",
+      "canonical_evidence": "研究面向音视频联合生成的推理时缩放方法，强调精确同步",
+      "llm_tldr_en": "Presents the first comprehensive study of inference-time scaling for joint audio-video generation, introducing a multi-verifier framework to balance heterogeneous objectives and improve synchronization.",
+      "llm_tldr_cn": "针对现有联合音视频生成模型训练成本高、同步性不足的问题，首次系统研究推理时缩放（ITS）在音视频联合生成中的应用。提出多验证器框架，协调语义对齐与时间同步等多目标，无需重新训练即可提升生成音视频对的同步精度和逼真度，为音频驱动的唇动合成等任务提供了轻量级优化方案。",
+      "llm_tldr": "针对现有联合音视频生成模型训练成本高、同步性不足的问题，首次系统研究推理时缩放（ITS）在音视频联合生成中的应用。提出多验证器框架，协调语义对齐与时间同步等多目标，无需重新训练即可提升生成音视频对的同步精度和逼真度，为音频驱动的唇动合成等任务提供了轻量级优化方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
