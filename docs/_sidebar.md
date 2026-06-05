@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-05 <!--dpr-date:20260605-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/05/2606.06042v1-loomvideo-unifying-multimodal-inputs-into-video-generation-and-editing" data-sidebar-item="{&quot;title&quot;: &quot;LoomVideo: Unifying Multimodal Inputs into Video Generation and Editing&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.06042v1-loomvideo-unifying-multimodal-inputs-into-video-generation-and-editing&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;用于多模态输入视频生成与编辑的统一架构&quot;}">LoomVideo: Unifying Multimodal Inputs into Video Generation and Editing</a>
   * 2026-06-04 <!--dpr-date:20260604-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/04/2606.03402v2-mamba-enhanced-implicit-motion-learning-for-audio-driven-portrait-animation" data-sidebar-item="{&quot;title&quot;: &quot;Mamba-Enhanced Implicit Motion Learning for Audio-Driven Portrait Animation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.03402v2-mamba-enhanced-implicit-motion-learning-for-audio-driven-portrait-animation&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;从单张图像和音频生成逼真的说话头部视频，实现音频驱动的嘴唇运动&quot;}">Mamba-Enhanced Implicit Motion Learning for Audio-Driven Portrait Animation</a>

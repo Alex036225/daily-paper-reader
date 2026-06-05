@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-05",
+  "date": "2026-06-05",
+  "generated_at": "2026-06-05T21:50:02",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/05/2606.06042v1-loomvideo-unifying-multimodal-inputs-into-video-generation-and-editing",
+      "section": "deep",
+      "title_en": "LoomVideo: Unifying Multimodal Inputs into Video Generation and Editing",
+      "authors": "Jianzong Wu, Hao Lian, Jiongfan Yang, Dachao Hao, Ye Tian, Yunhai Tong, Jingyuan Zhu, Biaolong Chen, Qiaosong Qi, Aixi Zhang, Wanggui He, Mushui Liu, Jinlong Liu, Hao Jiang",
+      "date": "2026-06-04",
+      "pdf": "https://arxiv.org/pdf/2606.06042v1",
+      "score": "8.0",
+      "evidence": "用于多模态输入视频生成与编辑的统一架构",
+      "tldr": "现有统一视频生成与编辑模型多依赖13B以上大模型，且通过Token拼接引入源视频条件，导致计算开销激增。LoomVideo提出5B参数高效架构，以多模态大语言模型替代标准文本编码器，并设计零开销Scale-and-Add条件机制，避免序列拼接。该模型在多项基准达到最优，尤其在电商场景表现突出，推理速度实现5.41倍以上加速，为实用视频基础模型开辟新路径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Developing unified video generation and editing models capable of interpreting interleaved multimodal inputs is a promising yet challenging frontier field. Existing unified frameworks predominantly rely on massive models (typically 13B parameters or more) and incorporate source video conditions for editing by concatenating sequence tokens. This concatenation inevitably doubles the sequence length, quadrupling the computational complexity of the self-attention mechanism and introducing prohibitive overhead. To address these bottlenecks, we present LoomVideo, a highly efficient 5B-parameter unified architecture for both video generation and editing. LoomVideo replaces the standard text encoder with a Multimodal Large Language Model (MLLM) and employs Deepstack injection mechanism to align multi-layer MLLM features with the Diffusion Transformer (DiT). Crucially, we introduce a zero-overhead Scale-and-Add conditioning approach for video editing. By scaling and directly adding the clean source video latent to the noised target latent, this elegant design eliminates the need for token concatenation, drastically reducing computational cost while maintaining robust capabilities for complex, non-rigid edits. Furthermore, a Negative Temporal RoPE strategy is seamlessly integrated to handle multiple reference images. Extensive experiments demonstrate that our compact 5B model achieves state-of-the-art or highly competitive performance across comprehensive benchmarks, exhibiting exceptional superiority in e-commerce and fashion generation scenarios. Benefiting from the zero-overhead conditioning mechanism, LoomVideo achieves at least a 5.41x acceleration in inference speed compared to models of similar capabilities, paving the way for highly practical and efficient video foundation models.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
