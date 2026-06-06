@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-06 <!--dpr-date:20260606-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/06/2606.00658v1-collaborative-few-step-distillation-and-low-bit-quantization-for-wan22-dual-expert-video-diffusion-models" data-sidebar-item="{&quot;title&quot;: &quot;Collaborative Few-Step Distillation and Low-Bit Quantization for Wan2.2 Dual-Expert Video Diffusion Models&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.00658v1-collaborative-few-step-distillation-and-low-bit-quantization-for-wan22-dual-expert-video-diffusion-models&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;直接针对Wan2.2视频扩散模型进行高效生成&quot;}">Collaborative Few-Step Distillation and Low-Bit Quantization for Wan2.2 Dual-Expert Video Diffusion Models</a>
   * 2026-06-05 <!--dpr-date:20260605-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/05/2606.06042v1-loomvideo-unifying-multimodal-inputs-into-video-generation-and-editing" data-sidebar-item="{&quot;title&quot;: &quot;LoomVideo: Unifying Multimodal Inputs into Video Generation and Editing&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.06042v1-loomvideo-unifying-multimodal-inputs-into-video-generation-and-editing&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;用于多模态输入视频生成与编辑的统一架构&quot;}">LoomVideo: Unifying Multimodal Inputs into Video Generation and Editing</a>

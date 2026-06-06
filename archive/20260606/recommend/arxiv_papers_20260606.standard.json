@@ -1,0 +1,59 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-06T20:25:28.951360+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.00658v1",
+      "source": "arxiv",
+      "title": "Collaborative Few-Step Distillation and Low-Bit Quantization for Wan2.2 Dual-Expert Video Diffusion Models",
+      "abstract": "Large video diffusion models achieve strong visual quality but remain expensive to deploy because each sample requires many denoising steps and a large resident parameter footprint. This paper studies a deployment-oriented compression pipeline for Wan2.2-T2V-A14B by combining few-step distribution-matching distillation with low-bit quantization. The pipeline follows the model's dual-expert denoising route, calibrates the high-noise and low-noise branches separately, protects sensitive entrance layers, and uses HiF4-style low-bit representation to improve dynamic-range coverage. Quantization is calibrated on the distilled few-step student rather than on the original long-step trajectory, reducing activation-distribution mismatch during inference. The proposed co-design keeps the quantized model close to the same-step full-precision model and surpasses the original full-precision baseline at 8 and 20 steps on average. The 20-step setting gives the best quality-efficiency trade-off in the tested configurations.",
+      "authors": [
+        "Jinyang Du",
+        "Shenghao Jin",
+        "Ziqian Xu",
+        "Ruihao Gong",
+        "Shiqiao Gu",
+        "Yang Yong",
+        "Jinyang Guo",
+        "Xianglong Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-05-30T10:15:26+00:00",
+      "link": "https://arxiv.org/pdf/2606.00658v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Directly works on Wan2.2 video diffusion model for efficient generation",
+      "llm_evidence_cn": "直接针对Wan2.2视频扩散模型进行高效生成",
+      "llm_evidence": "直接针对Wan2.2视频扩散模型进行高效生成",
+      "canonical_evidence": "直接针对Wan2.2视频扩散模型进行高效生成",
+      "llm_tldr_en": "Proposes a deployment-oriented compression pipeline for Wan2.2-T2V-A14B combining few-step distillation and low-bit quantization, enabling efficient video generation while preserving quality.",
+      "llm_tldr_cn": "针对Wan2.2视频扩散模型部署成本高的问题，提出一种结合少步蒸馏与低位量化的压缩流水线，实现对双专家去噪分支的分别校准并保护敏感入口层，在保持视觉质量的同时大幅降低计算开销，为将WAN模型实际应用于视频生成提供了高效推理方案。",
+      "llm_tldr": "针对Wan2.2视频扩散模型部署成本高的问题，提出一种结合少步蒸馏与低位量化的压缩流水线，实现对双专家去噪分支的分别校准并保护敏感入口层，在保持视觉质量的同时大幅降低计算开销，为将WAN模型实际应用于视频生成提供了高效推理方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}

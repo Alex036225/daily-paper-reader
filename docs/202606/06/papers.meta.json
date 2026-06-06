@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-06",
+  "date": "2026-06-06",
+  "generated_at": "2026-06-06T20:27:08",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/06/2606.00658v1-collaborative-few-step-distillation-and-low-bit-quantization-for-wan22-dual-expert-video-diffusion-models",
+      "section": "deep",
+      "title_en": "Collaborative Few-Step Distillation and Low-Bit Quantization for Wan2.2 Dual-Expert Video Diffusion Models",
+      "authors": "Jinyang Du, Shenghao Jin, Ziqian Xu, Ruihao Gong, Shiqiao Gu, Yang Yong, Jinyang Guo, Xianglong Liu",
+      "date": "2026-05-30",
+      "pdf": "https://arxiv.org/pdf/2606.00658v1",
+      "score": "8.0",
+      "evidence": "直接针对Wan2.2视频扩散模型进行高效生成",
+      "tldr": "大型视频扩散模型部署成本高，需减少推理步数和参数规模。本文针对Wan2.2双专家模型，提出协同少步蒸馏与低比特量化的压缩方案，分别校准高/低噪声分支并保护敏感层。实验表明，量化学生模型在8步和20步下超越原全精度基线，20步设定取得最佳质量-效率平衡，为视频生成模型轻量化部署提供了有效路径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Large video diffusion models achieve strong visual quality but remain expensive to deploy because each sample requires many denoising steps and a large resident parameter footprint. This paper studies a deployment-oriented compression pipeline for Wan2.2-T2V-A14B by combining few-step distribution-matching distillation with low-bit quantization. The pipeline follows the model's dual-expert denoising route, calibrates the high-noise and low-noise branches separately, protects sensitive entrance layers, and uses HiF4-style low-bit representation to improve dynamic-range coverage. Quantization is calibrated on the distilled few-step student rather than on the original long-step trajectory, reducing activation-distribution mismatch during inference. The proposed co-design keeps the quantized model close to the same-step full-precision model and surpasses the original full-precision baseline at 8 and 20 steps on average. The 20-step setting gives the best quality-efficiency trade-off in the tested configurations.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
