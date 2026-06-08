@@ -1,0 +1,65 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-08T21:39:35.341752+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.06042v2",
+      "source": "arxiv",
+      "title": "LoomVideo: Unifying Multimodal Inputs into Video Generation and Editing",
+      "abstract": "Developing unified video generation and editing models capable of interpreting interleaved multimodal inputs is a promising yet challenging frontier field. Existing unified frameworks predominantly rely on massive models (typically 13B parameters or more) and incorporate source video conditions for editing by concatenating sequence tokens. This concatenation inevitably doubles the sequence length, quadrupling the computational complexity of the self-attention mechanism and introducing prohibitive overhead. To address these bottlenecks, we present LoomVideo, a highly efficient 5B-parameter unified architecture for both video generation and editing. LoomVideo replaces the standard text encoder with a Multimodal Large Language Model (MLLM) and employs Deepstack injection mechanism to align multi-layer MLLM features with the Diffusion Transformer (DiT). Crucially, we introduce a zero-overhead Scale-and-Add conditioning approach for video editing. By scaling and directly adding the clean source video latent to the noised target latent, this elegant design eliminates the need for token concatenation, drastically reducing computational cost while maintaining robust capabilities for complex, non-rigid edits. Furthermore, a Negative Temporal RoPE strategy is seamlessly integrated to handle multiple reference images. Extensive experiments demonstrate that our compact 5B model achieves state-of-the-art or highly competitive performance across comprehensive benchmarks, exhibiting exceptional superiority in e-commerce and fashion generation scenarios. Benefiting from the zero-overhead conditioning mechanism, LoomVideo achieves at least a 5.41x acceleration in inference speed compared to models of similar capabilities, paving the way for highly practical and efficient video foundation models.",
+      "authors": [
+        "Jianzong Wu",
+        "Hao Lian",
+        "Jiongfan Yang",
+        "Dachao Hao",
+        "Ye Tian",
+        "Yunhai Tong",
+        "Jingyuan Zhu",
+        "Biaolong Chen",
+        "Qiaosong Qi",
+        "Aixi Zhang",
+        "Wanggui He",
+        "Mushui Liu",
+        "Jinlong Liu",
+        "Pipei Huang",
+        "Hao Jiang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-04T11:35:26+00:00",
+      "link": "https://arxiv.org/pdf/2606.06042v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Unified framework for video generation from multimodal inputs, including text and possibly images",
+      "llm_evidence_cn": "统一多模态输入的视频生成框架，支持文本、图像等条件",
+      "llm_evidence": "统一多模态输入的视频生成框架，支持文本、图像等条件",
+      "canonical_evidence": "统一多模态输入的视频生成框架，支持文本、图像等条件",
+      "llm_tldr_en": "LoomVideo is an efficient 5B-parameter unified model for video generation and editing from interleaved multimodal inputs, using an MLLM encoder and decoupled sequence processing to handle long sequences efficiently.",
+      "llm_tldr_cn": "现有统一视频生成与编辑模型依赖超大模型且序列长度加倍导致计算开销巨大。本文提出LoomVideo，一个高效的5B参数统一架构，用多模态大语言模型替代文本编码器，并采用解耦序列处理减少自注意力复杂度。实验表明，该模型能利用交错多模态输入进行高质量视频生成与编辑，在效率与性能间取得平衡，推动了多模态视频生成的发展。",
+      "llm_tldr": "现有统一视频生成与编辑模型依赖超大模型且序列长度加倍导致计算开销巨大。本文提出LoomVideo，一个高效的5B参数统一架构，用多模态大语言模型替代文本编码器，并采用解耦序列处理减少自注意力复杂度。实验表明，该模型能利用交错多模态输入进行高质量视频生成与编辑，在效率与性能间取得平衡，推动了多模态视频生成的发展。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
