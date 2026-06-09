@@ -1,0 +1,39 @@
+{
+  "label": "2026-06-09",
+  "date": "2026-06-09",
+  "generated_at": "2026-06-09T21:48:26",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202606/09/2606.06903v1-beyond-skeletons-learning-animation-directly-from-driving-videos-with-same2x-training-strategy",
+      "section": "deep",
+      "title_en": "Beyond Skeletons: Learning Animation Directly from Driving Videos with Same2X Training Strategy",
+      "authors": "Yuan Zeng, Yujia Shi, Yuhao Yang, Dongxia Liu, Zongqing Lu, Wenming Yang, Qingmin Liao",
+      "date": "2026-06-05",
+      "pdf": "https://arxiv.org/pdf/2606.06903v1",
+      "score": "9.0",
+      "evidence": "从静态图像和驱动视频的面部表情线索生成动画",
+      "tldr": "现有图像动画方法依赖易出错的姿态估计，限制了在遮挡和复杂姿态下的表现。本文提出DirectAnimator框架，直接从原始驱动视频中学习，避免姿态提取。通过设计包含姿态、面部和位置线索的驱动三元组，并利用CueFusion DiT模块在去噪过程中实现可靠控制，该方法能生成自然且生动的动画视频。实验表明，该方法在多种挑战场景下均优于基于姿态的方法，为图像到视频生成提供了更鲁棒的解决方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Human image animation aims to generate a video from a static reference image, guided by pose information extracted from a driving video. Existing approaches often rely on pose estimators to extract intermediate representations, but such signals are prone to errors under occlusion or complex poses. Building on these observations, we present DirectAnimator, a framework that bypasses pose extraction and directly learns from raw driving videos. We introduce a Driving Cue Triplet consisting of pose, face, and location cues that captures motion, expression, and alignment in a semantically rich yet stable form, and we fuse them through a CueFusion DiT block for reliable control during denoising. To make learning dependable when the driving and reference identities differ, we devise a Same2X training strategy that aligns cross-ID features with those learned from same-ID data, regularizing optimization and accelerating convergence. Extensive experiments demonstrate that DirectAnimator attains state-of-the-art visual quality and identity preservation while remaining robust to occlusions and complex articulation, and it does so with fewer computational resources. Our project page is at https://directanimator.github.io/.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/09/2606.06885v1-freeanimate-training-free-human-image-animation-with-preview-guided-denoising",
+      "section": "deep",
+      "title_en": "FreeAnimate: Training-Free Human Image Animation with Preview-Guided Denoising",
+      "authors": "Yuan Zeng, Yujia Shi, Zongqing Lu, QingMin Liao",
+      "date": "2026-06-05",
+      "pdf": "https://arxiv.org/pdf/2606.06885v1",
+      "score": "8.0",
+      "evidence": "从单张图像实现免训练的人体图像动画",
+      "tldr": "现有的人物图像动画方法通常依赖大规模训练数据，限制了泛化能力和可及性。本文提出无需训练的FreeAnimate框架，通过新颖的预览生成策略提供时序与结构先验，有效引导姿态对齐和背景一致性，并引入增强注意力模块。实验显示其超越现有训练无关和训练型基线，质量媲美最先进方法，为高效、通用的人物动画生成开辟新路径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Human Image Animation has seen significant advancements, primarily driven by diffusion models. However, existing methods typically demand substantial training data and resources to achieve high-quality results, limiting generalization and accessibility. In this work, we introduce \\emph{FreeAnimate}, a training-free framework that leverages the inherent capabilities of image diffusion models to enable temporal consistency, identity preservation, and background stability. Our approach incorporates a novel preview generation strategy that provides temporal and structural priors from generated preview frames, effectively guiding pose alignment and background consistency without training. Additionally, FreeAnimate introduces Inversion-Boosted Attention and Reference-Anchored Self-Attention modules to guarantee temporal consistency and identity preservation. Experimental results demonstrate that FreeAnimate outperforms existing training-free competitors and training-based baseline methods, achieving generation quality comparable to state-of-the-art methods and offering robust generalization across diverse datasets. Our project page is at https://freeani.github.io/.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

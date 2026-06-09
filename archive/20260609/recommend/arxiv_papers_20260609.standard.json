@@ -1,0 +1,96 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-09T21:44:32.924019+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.06903v1",
+      "source": "arxiv",
+      "title": "Beyond Skeletons: Learning Animation Directly from Driving Videos with Same2X Training Strategy",
+      "abstract": "Human image animation aims to generate a video from a static reference image, guided by pose information extracted from a driving video. Existing approaches often rely on pose estimators to extract intermediate representations, but such signals are prone to errors under occlusion or complex poses. Building on these observations, we present DirectAnimator, a framework that bypasses pose extraction and directly learns from raw driving videos. We introduce a Driving Cue Triplet consisting of pose, face, and location cues that captures motion, expression, and alignment in a semantically rich yet stable form, and we fuse them through a CueFusion DiT block for reliable control during denoising. To make learning dependable when the driving and reference identities differ, we devise a Same2X training strategy that aligns cross-ID features with those learned from same-ID data, regularizing optimization and accelerating convergence. Extensive experiments demonstrate that DirectAnimator attains state-of-the-art visual quality and identity preservation while remaining robust to occlusions and complex articulation, and it does so with fewer computational resources. Our project page is at https://directanimator.github.io/.",
+      "authors": [
+        "Yuan Zeng",
+        "Yujia Shi",
+        "Yuhao Yang",
+        "Dongxia Liu",
+        "Zongqing Lu",
+        "Wenming Yang",
+        "Qingmin Liao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-05T04:39:46+00:00",
+      "link": "https://arxiv.org/pdf/2606.06903v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "generates animation from a static image using driving video cues including face and expression",
+      "llm_evidence_cn": "从静态图像和驱动视频的面部表情线索生成动画",
+      "llm_evidence": "从静态图像和驱动视频的面部表情线索生成动画",
+      "canonical_evidence": "从静态图像和驱动视频的面部表情线索生成动画",
+      "llm_tldr_en": "This paper presents DirectAnimator, a framework that animates a static reference image into a video by directly learning from raw driving videos without relying on error-prone pose estimators, introducing a Driving Cue Triplet and CueFusion DiT block for robust motion and expression control.",
+      "llm_tldr_cn": "现有图像动画方法依赖易出错的姿态估计，限制了在遮挡和复杂姿态下的表现。本文提出DirectAnimator框架，直接从原始驱动视频中学习，避免姿态提取。通过设计包含姿态、面部和位置线索的驱动三元组，并利用CueFusion DiT模块在去噪过程中实现可靠控制，该方法能生成自然且生动的动画视频。实验表明，该方法在多种挑战场景下均优于基于姿态的方法，为图像到视频生成提供了更鲁棒的解决方案。",
+      "llm_tldr": "现有图像动画方法依赖易出错的姿态估计，限制了在遮挡和复杂姿态下的表现。本文提出DirectAnimator框架，直接从原始驱动视频中学习，避免姿态提取。通过设计包含姿态、面部和位置线索的驱动三元组，并利用CueFusion DiT模块在去噪过程中实现可靠控制，该方法能生成自然且生动的动画视频。实验表明，该方法在多种挑战场景下均优于基于姿态的方法，为图像到视频生成提供了更鲁棒的解决方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.06885v1",
+      "source": "arxiv",
+      "title": "FreeAnimate: Training-Free Human Image Animation with Preview-Guided Denoising",
+      "abstract": "Human Image Animation has seen significant advancements, primarily driven by diffusion models. However, existing methods typically demand substantial training data and resources to achieve high-quality results, limiting generalization and accessibility. In this work, we introduce \\emph{FreeAnimate}, a training-free framework that leverages the inherent capabilities of image diffusion models to enable temporal consistency, identity preservation, and background stability. Our approach incorporates a novel preview generation strategy that provides temporal and structural priors from generated preview frames, effectively guiding pose alignment and background consistency without training. Additionally, FreeAnimate introduces Inversion-Boosted Attention and Reference-Anchored Self-Attention modules to guarantee temporal consistency and identity preservation. Experimental results demonstrate that FreeAnimate outperforms existing training-free competitors and training-based baseline methods, achieving generation quality comparable to state-of-the-art methods and offering robust generalization across diverse datasets. Our project page is at https://freeani.github.io/.",
+      "authors": [
+        "Yuan Zeng",
+        "Yujia Shi",
+        "Zongqing Lu",
+        "QingMin Liao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-05T04:06:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.06885v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "training-free human image animation from a single image",
+      "llm_evidence_cn": "从单张图像实现免训练的人体图像动画",
+      "llm_evidence": "从单张图像实现免训练的人体图像动画",
+      "canonical_evidence": "从单张图像实现免训练的人体图像动画",
+      "llm_tldr_en": "FreeAnimate enables training-free human image animation from a single image by using preview frames for temporal consistency and Inversion-Boosted Attention for identity preservation.",
+      "llm_tldr_cn": "FreeAnimate提出一种免训练框架，利用预训练图像扩散模型的能力，通过预览生成提供时序和结构先验，并结合反演增强注意力保持身份一致性，从单张图像生成人体动画视频。该方法解决了现有方法对大量数据和训练的依赖，降低了资源需求，为图像到视频的人体动画生成提供了高效方案。",
+      "llm_tldr": "FreeAnimate提出一种免训练框架，利用预训练图像扩散模型的能力，通过预览生成提供时序和结构先验，并结合反演增强注意力保持身份一致性，从单张图像生成人体动画视频。该方法解决了现有方法对大量数据和训练的依赖，降低了资源需求，为图像到视频的人体动画生成提供了高效方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
