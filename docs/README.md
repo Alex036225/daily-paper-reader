@@ -6,26 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-09
-- 运行时间：2026-06-09 21:48:17 UTC
+- 最新运行日期：2026-06-10
+- 运行时间：2026-06-10 21:21:06 UTC
 - 运行状态：成功
-- 本次总论文数：2
-- 精读区：2
+- 本次总论文数：3
+- 精读区：3
 - 速读区：0
 
 ### 今日简报（AI）
-今日精读两篇人物动画生成论文，发现无需骨骼就能让静态照片“活”起来的新思路。  
-《Beyond Skeletons》用同身份双样本训练直接从驾驶视频学会肢体驱动，《FreeAnimate》以预览引导去噪实现零训练动画，质量与可控性俱佳。  
-想尝鲜的读者可从FreeAnimate方案入手，它在消费级显卡上就能跑通，适合快速制作趣味动态头像。
-- 详情：[/202606/09/README](/202606/09/README)
+今日精读两篇高分论文：一篇让轻量模型学会“想象”未来交互，另一篇用自学习提升高斯人脸的生动程度。  
+方向极简：小参数世界模型也能高效预演多步后果，免手工标注即可驱动高保真数字人表情。  
+普通读者可关注：未来智能体将更善于“先想后动”，虚拟角色也会以更低成本呈现细腻神态。
+- 详情：[/202606/10/README](/202606/10/README)
 
 ### 精读区论文标签
-1. [Beyond Skeletons: Learning Animation Directly from Driving Videos with Same2X Training Strategy](/202606/09/2606.06903v1-beyond-skeletons-learning-animation-directly-from-driving-videos-with-same2x-training-strategy)  
+1. [Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination](/202606/10/2606.10040v1-efficient-wam-a-1b-parameter-world-action-model-with-low-cost-future-imagination)  
    标签：评分：9.0/10、query:wan-av-gen
-   evidence：从静态图像和驱动视频的面部表情线索生成动画
-2. [FreeAnimate: Training-Free Human Image Animation with Preview-Guided Denoising](/202606/09/2606.06885v1-freeanimate-training-free-human-image-animation-with-preview-guided-denoising)  
+   evidence：使用从WAN-2.2-5B迁移的紧凑视频专家
+2. [Self-Learning Expression Deformations for Data-Efficient Gaussian Avatars](/202606/10/2606.05912v1-self-learning-expression-deformations-for-data-efficient-gaussian-avatars)  
    标签：评分：8.0/10、query:wan-av-gen
-   evidence：从单张图像实现免训练的人体图像动画
+   evidence：自学习表情变形实现数据高效的说话头生成，支持自然唇动
+3. [Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization](/202606/10/2606.11180v1-lip-forcing-few-step-autoregressive-diffusion-for-real-time-lip-synchronization)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：通过少步自回归扩散实现实时唇形同步
 
 ### 速读区论文标签
 - 本次无速读推荐。

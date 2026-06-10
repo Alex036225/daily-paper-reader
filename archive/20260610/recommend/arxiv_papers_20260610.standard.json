@@ -1,0 +1,144 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-10T21:17:06.349009+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.10040v1",
+      "source": "arxiv",
+      "title": "Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination",
+      "abstract": "World-Action Models (WAMs) have emerged as a promising paradigm for embodied control by coupling future visual prediction with action generation. However, most existing WAMs rely on photorealistic future prediction, which incurs high inference latency and makes real-time robot deployment difficult. This motivates a more efficient WAM design that preserves the control benefits of future visual prediction while reducing its inference cost. We introduce Efficient-WAM, a World-Action Model that reduces the cost of future imagination while preserving its control benefit. Efficient-WAM improves inference efficiency via a compact video expert transferred from WAN-2.2-5B, token-sparse video latents, and asymmetric video-action denoising that allocates fewer sampling steps to video than to actions. Instead of optimizing the future branch for visual fidelity, Efficient-WAM treats future video prediction as a compact guidance signal for action generation. Comprehensive experiments on RoboTwin 2.0 and real-world manipulation tasks show that Efficient-WAM maintains strong action performance despite visibly coarse future predictions. While maintaining competitive control capabilities, our 1B-parameter model can reduce per-chunk latency to around 100 ms during physical deployment, achieving a 30x speedup over existing WAMs.",
+      "authors": [
+        "Jiajun Li",
+        "Tiecheng Guo",
+        "Yifan Ye",
+        "Rongyu Zhang",
+        "Xiaowei Chi",
+        "Qianpu Sun",
+        "Ying Li",
+        "Yunfan Lou",
+        "Yan Huang",
+        "Zhihe Lu",
+        "Meng Guo",
+        "Shanghang Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-08T18:14:08+00:00",
+      "link": "https://arxiv.org/pdf/2606.10040v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Uses compact video expert transferred from WAN-2.2-5B",
+      "llm_evidence_cn": "使用从WAN-2.2-5B迁移的紧凑视频专家",
+      "llm_evidence": "使用从WAN-2.2-5B迁移的紧凑视频专家",
+      "canonical_evidence": "使用从WAN-2.2-5B迁移的紧凑视频专家",
+      "llm_tldr_en": "Efficient-WAM builds a world-action model by transferring a video expert from WAN-2.2-5B, using sparse latents and asymmetric denoising for efficient future video prediction in robotics, demonstrating WAN's video generation capabilities for embodied control.",
+      "llm_tldr_cn": "为降低世界-动作模型中未来预测的高推理成本，本文提出Efficient-WAM，从WAN-2.2-5B视频生成模型迁移紧凑视频专家，结合稀疏视频潜变量和非对称视频-动作去噪，在保持控制性能的同时大幅降低计算量；实验表明该方法使实时机器人部署成为可能，证明了WAN架构在具身控制中的迁移有效性。",
+      "llm_tldr": "为降低世界-动作模型中未来预测的高推理成本，本文提出Efficient-WAM，从WAN-2.2-5B视频生成模型迁移紧凑视频专家，结合稀疏视频潜变量和非对称视频-动作去噪，在保持控制性能的同时大幅降低计算量；实验表明该方法使实时机器人部署成为可能，证明了WAN架构在具身控制中的迁移有效性。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.11180v1",
+      "source": "arxiv",
+      "title": "Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization",
+      "abstract": "Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference. We present Lip Forcing, to our knowledge the first autoregressive diffusion method for video-to-video (V2V) lip synchronization, which distills a 14B audio-conditioned bidirectional video diffusion teacher into causal students. At inference, the students generate each chunk in only two denoising steps without inference-time CFG, enabling real-time lip synchronization. A lip-sync-specific teacher-trajectory analysis reveals a CFG fidelity-sync tradeoff: no-CFG predictions favor reference fidelity, whereas CFG-guided predictions favor synchronization within a mid-trajectory band. Lip Forcing translates this finding into three analysis-derived components: Sync-Window DMD, a two-step inference schedule, and a SyncNet-based reward. We validate Lip Forcing at two student scales, both distilled from the 14B teacher. The 1.3B student crosses into real-time streaming at 31 FPS, $17.6\\times$ faster than its same-scale bidirectional model. The 14B student, the largest diffusion model reported for V2V lip synchronization, runs $39.8\\times$ faster than its teacher at comparable reference fidelity. Time-to-first-frame is sub-millisecond at both scales, far below every diffusion baseline.",
+      "authors": [
+        "Paul Hyunbin Cho",
+        "Jinhyuk Jang",
+        "SeokYoung Lee",
+        "Joungbin Lee",
+        "Siyoon Jin",
+        "Heeseong Shin",
+        "Jung Yi",
+        "Yunjin Park",
+        "Chulmin Park",
+        "Seungryong Kim"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-09T17:56:36+00:00",
+      "link": "https://arxiv.org/pdf/2606.11180v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "real-time lip synchronization via few-step autoregressive diffusion",
+      "llm_evidence_cn": "通过少步自回归扩散实现实时唇形同步",
+      "llm_evidence": "通过少步自回归扩散实现实时唇形同步",
+      "canonical_evidence": "通过少步自回归扩散实现实时唇形同步",
+      "llm_tldr_en": "Proposes Lip Forcing, an autoregressive diffusion method that distills a 14B audio-conditioned video diffusion teacher into causal students for real-time lip sync with only two denoising steps, addressing efficiency bottleneck of existing bidirectional models.",
+      "llm_tldr_cn": "针对扩散模型在唇形同步中因双向注意力和多步去噪导致无法实时推理的问题，提出Lip Forcing，首次将自回归扩散应用于视频到视频唇形同步，通过将140亿参数的双向教师模型蒸馏为因果学生模型，仅需两步去噪即可实时生成与音频对齐的嘴部运动。实验表明，该方法在保持视听同步精度的同时实现实时推断，并揭示了无分类器引导（CFG）在同步保真度上的权衡。该工作为实时虚拟人生成等应用提供了高效可行的唇形同步方案。",
+      "llm_tldr": "针对扩散模型在唇形同步中因双向注意力和多步去噪导致无法实时推理的问题，提出Lip Forcing，首次将自回归扩散应用于视频到视频唇形同步，通过将140亿参数的双向教师模型蒸馏为因果学生模型，仅需两步去噪即可实时生成与音频对齐的嘴部运动。实验表明，该方法在保持视听同步精度的同时实现实时推断，并揭示了无分类器引导（CFG）在同步保真度上的权衡。该工作为实时虚拟人生成等应用提供了高效可行的唇形同步方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.05912v1",
+      "source": "arxiv",
+      "title": "Self-Learning Expression Deformations for Data-Efficient Gaussian Avatars",
+      "abstract": "Modeling dynamic facial expressions using 3D Gaussian representations remains challenging due to their unstructured nature. Conventional Gaussian avatar pipelines require extensive multiview and sequential expression data, limiting scalability and accessibility. In this work, we introduce Self-Adaptive Gaussian Expression (SAGE), a framework for self-learning expression-induced Gaussian deformations that enables high-fidelity, animatable avatars from minimal input data. Our method jointly optimizes 2D Gaussian surfels and a Signed Distance Field (SDF) to enforce compact, surface-aligned Gaussian distributions, while a self-supervised expression learning phase replaces long training sequences with geometric and appearance consistency constraints. This design allows flexible deployment across multiple reconstruction regimes: in the multiview setting, only a single frame (timestep) is required instead of thousands; in the monocular setting, only head rotations are needed without expression sequences; and in the one-shot setting, no pretraining or priors are necessary. Experiments demonstrate that our approach achieves reconstruction and animation quality comparable to state-of-the-art methods, while reducing data requirements by several orders of magnitude. Our results highlight the potential of self-supervised Gaussian deformation learning as a step toward accessible, data-efficient avatar creation.",
+      "authors": [
+        "Jiahao Yang",
+        "Xiaohang Yang",
+        "Qing Wang",
+        "Yilan Dong",
+        "Gregory Slabaugh",
+        "Shanxin Yuan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-04T09:18:33+00:00",
+      "link": "https://arxiv.org/pdf/2606.05912v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Self-learning expression deformations enable data-efficient talking head generation with natural lip movements",
+      "llm_evidence_cn": "自学习表情变形实现数据高效的说话头生成，支持自然唇动",
+      "llm_evidence": "自学习表情变形实现数据高效的说话头生成，支持自然唇动",
+      "canonical_evidence": "自学习表情变形实现数据高效的说话头生成，支持自然唇动",
+      "llm_tldr_en": "Proposes SAGE, a framework that learns expression-induced Gaussian deformations from minimal data, enabling high-fidelity animatable avatars without extensive multiview sequences, advancing data-efficient talking head generation.",
+      "llm_tldr_cn": "针对传统高斯化身管线需要大量多视角和序列数据的问题，本文提出SAGE框架，通过自学习表情引起的形变，从极少输入数据中构建高保真可动画化身。该方法联合优化2D高斯洒点与有符号距离场，并采用自监督表情学习阶段，用几何与外观一致性约束替代长序列训练，从而实现了数据高效的动态面部生成。实验表明SAGE在减少数据需求的同时保持了出色的面部动画质量，为单图说话头生成提供了有效途径。该框架不仅能从单张肖像图生成动态面部，还有望与音频驱动结合，实现精准唇同步。",
+      "llm_tldr": "针对传统高斯化身管线需要大量多视角和序列数据的问题，本文提出SAGE框架，通过自学习表情引起的形变，从极少输入数据中构建高保真可动画化身。该方法联合优化2D高斯洒点与有符号距离场，并采用自监督表情学习阶段，用几何与外观一致性约束替代长序列训练，从而实现了数据高效的动态面部生成。实验表明SAGE在减少数据需求的同时保持了出色的面部动画质量，为单图说话头生成提供了有效途径。该框架不仅能从单张肖像图生成动态面部，还有望与音频驱动结合，实现精准唇同步。",
+      "llm_tags": [
+        "query:wan-av-gen:composite"
+      ],
+      "matched_query_tag": "query:wan-av-gen:composite",
+      "matched_query_text": "Papers central to 检索基于WAN模型的I2V视频生成论文，重点在对嘴型等细节, especially work that connects or combines: WAN architecture for multimodal generation; video generation using Wan model; generating video with multiple modalities; video generation conditioned on an image; accurate lip sync in generated videos; generating natural lip movements in image-to-video models; Generating a talking head video from a single portrait image with accurate lip sync using WAN model.; Image to video generation with audio driven lip motion synthesis.; How to achieve precise lip synchronization in WAN model video generation from images?.",
+      "matched_requirement_id": "req-composite-wan-av-gen",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
