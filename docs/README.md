@@ -6,32 +6,34 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-10
-- 运行时间：2026-06-10 21:21:06 UTC
+- 最新运行日期：2026-06-11
+- 运行时间：2026-06-11 22:18:37 UTC
 - 运行状态：成功
-- 本次总论文数：3
-- 精读区：3
-- 速读区：0
+- 本次总论文数：4
+- 精读区：1
+- 速读区：3
 
 ### 今日简报（AI）
-今日精读两篇高分论文：一篇让轻量模型学会“想象”未来交互，另一篇用自学习提升高斯人脸的生动程度。  
-方向极简：小参数世界模型也能高效预演多步后果，免手工标注即可驱动高保真数字人表情。  
-普通读者可关注：未来智能体将更善于“先想后动”，虚拟角色也会以更低成本呈现细腻神态。
-- 详情：[/202606/10/README](/202606/10/README)
+📌 今日精读了满分论文ARGUS的堆叠多视角身份马赛克注入，并速览了麦格克效应大规模视听数据集、神经点云动画及另一篇身份一致性视频生成方法。
+🔥 核心看点：身份保持视频生成正从单帧迈向多视角融合，ARGUS 通过马赛克注入与堆叠策略实现了主体一致性，而同期的 HarmoView 也在多视角约束上发力。
+🚀 下步建议：若关注AI视频生成，不妨从 ARGUS 的身份注入逻辑和 McGurk 视听数据集入手，这两份资源能快速建立对身份保持与跨模态同步的认知。
+- 详情：[/202606/11/README](/202606/11/README)
 
 ### 精读区论文标签
-1. [Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination](/202606/10/2606.10040v1-efficient-wam-a-1b-parameter-world-action-model-with-low-cost-future-imagination)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：使用从WAN-2.2-5B迁移的紧凑视频专家
-2. [Self-Learning Expression Deformations for Data-Efficient Gaussian Avatars](/202606/10/2606.05912v1-self-learning-expression-deformations-for-data-efficient-gaussian-avatars)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：自学习表情变形实现数据高效的说话头生成，支持自然唇动
-3. [Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization](/202606/10/2606.11180v1-lip-forcing-few-step-autoregressive-diffusion-for-real-time-lip-synchronization)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：通过少步自回归扩散实现实时唇形同步
+1. [ARGUS: Stacked Multi-View Identity Mosaic Injection for Subject-Preserving Video Generation](/202606/11/2606.11670v1-argus-stacked-multi-view-identity-mosaic-injection-for-subject-preserving-video-generation)  
+   标签：评分：10.0/10、query:wan-av-gen
+   evidence：基于WAN的主体保留视频生成框架
 
 ### 速读区论文标签
-- 本次无速读推荐。
+1. [Hearing Lips and Seeing Voices After Fifty Years: A Large-Scale McGurk Illusion Dataset for Audiovisual Speech Research](/202606/11/biorxiv-10-64898-2026-06-09-731046-v1-hearing-lips-and-seeing-voices-after-fifty-years-a-large-scale-mcgurk-illusion-dataset-for-audiovisual-speech-research)  
+   标签：评分：7.0/10、query:wan-av-gen
+   evidence：大规模视听语音错觉数据集支持音频驱动的唇动合成
+2. [RigPAPR: Rig-Based Animation of Static Neural Point Clouds from a Fixed-Viewpoint Video](/202606/11/2606.06685v1-rigpapr-rig-based-animation-of-static-neural-point-clouds-from-a-fixed-viewpoint-video)  
+   标签：评分：6.0/10、query:wan-av-gen
+   evidence：从I2V生成的视频驱动动画，改善关节运动，与自然唇动相关
+3. [HarmoView: Harmonizing Multi-View Constraints for Identity-Consistent Video Generation](/202606/11/2606.10839v1-harmoview-harmonizing-multi-view-constraints-for-identity-consistent-video-generation)  
+   标签：评分：6.0/10、query:wan-av-gen
+   evidence：从多视角图像生成身份一致的视频
 
 
 <div class="dpr-home-promo-card">
