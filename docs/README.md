@@ -6,34 +6,31 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-11
-- 运行时间：2026-06-11 22:18:37 UTC
+- 最新运行日期：2026-06-12
+- 运行时间：2026-06-12 21:11:47 UTC
 - 运行状态：成功
-- 本次总论文数：4
+- 本次总论文数：3
 - 精读区：1
-- 速读区：3
+- 速读区：2
 
 ### 今日简报（AI）
-📌 今日精读了满分论文ARGUS的堆叠多视角身份马赛克注入，并速览了麦格克效应大规模视听数据集、神经点云动画及另一篇身份一致性视频生成方法。
-🔥 核心看点：身份保持视频生成正从单帧迈向多视角融合，ARGUS 通过马赛克注入与堆叠策略实现了主体一致性，而同期的 HarmoView 也在多视角约束上发力。
-🚀 下步建议：若关注AI视频生成，不妨从 ARGUS 的身份注入逻辑和 McGurk 视听数据集入手，这两份资源能快速建立对身份保持与跨模态同步的认知。
-- 详情：[/202606/11/README](/202606/11/README)
+今日精读视频生成生态论文，速览了长视频一致性与异步加速方法。  
+最值得关注的方向是构建开放域定制视频的完整工具集，以及用层级潜变量提升长时序一致性。  
+建议创作者关注视频生成从单模型走向全流程生态的趋势，动手尝试开源工具链。
+- 详情：[/202606/12/README](/202606/12/README)
 
 ### 精读区论文标签
-1. [ARGUS: Stacked Multi-View Identity Mosaic Injection for Subject-Preserving Video Generation](/202606/11/2606.11670v1-argus-stacked-multi-view-identity-mosaic-injection-for-subject-preserving-video-generation)  
-   标签：评分：10.0/10、query:wan-av-gen
-   evidence：基于WAN的主体保留视频生成框架
+1. [A Comprehensive Ecosystem for Open-Domain Customized Video Generation](/202606/12/2606.11783v1-a-comprehensive-ecosystem-for-open-domain-customized-video-generation)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：基于身份图像和文本条件，通过参数高效适配多模态DiT实现定制视频生成
 
 ### 速读区论文标签
-1. [Hearing Lips and Seeing Voices After Fifty Years: A Large-Scale McGurk Illusion Dataset for Audiovisual Speech Research](/202606/11/biorxiv-10-64898-2026-06-09-731046-v1-hearing-lips-and-seeing-voices-after-fifty-years-a-large-scale-mcgurk-illusion-dataset-for-audiovisual-speech-research)  
-   标签：评分：7.0/10、query:wan-av-gen
-   evidence：大规模视听语音错觉数据集支持音频驱动的唇动合成
-2. [RigPAPR: Rig-Based Animation of Static Neural Point Clouds from a Fixed-Viewpoint Video](/202606/11/2606.06685v1-rigpapr-rig-based-animation-of-static-neural-point-clouds-from-a-fixed-viewpoint-video)  
+1. [RhymeFlow: Training-Free Acceleration for Video Generation with Asynchronous Denoising Flow Scheduling](/202606/12/2606.06309v1-rhymeflow-training-free-acceleration-for-video-generation-with-asynchronous-denoising-flow-scheduling)  
    标签：评分：6.0/10、query:wan-av-gen
-   evidence：从I2V生成的视频驱动动画，改善关节运动，与自然唇动相关
-3. [HarmoView: Harmonizing Multi-View Constraints for Identity-Consistent Video Generation](/202606/11/2606.10839v1-harmoview-harmonizing-multi-view-constraints-for-identity-consistent-video-generation)  
+   evidence：无需训练的视频生成异步去噪流调度加速，适用于类似WAN的DiT模型
+2. [MilliVid: Hierarchical Latents for Long-Range Consistency in Video Generation](/202606/12/2606.09056v1-millivid-hierarchical-latents-for-long-range-consistency-in-video-generation)  
    标签：评分：6.0/10、query:wan-av-gen
-   evidence：从多视角图像生成身份一致的视频
+   evidence：层次潜在变量实现视频生成长程一致性，提升视频质量
 
 
 <div class="dpr-home-promo-card">

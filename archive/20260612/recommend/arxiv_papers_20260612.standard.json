@@ -1,0 +1,142 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-12T21:08:32.347993+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.11783v1",
+      "source": "arxiv",
+      "title": "A Comprehensive Ecosystem for Open-Domain Customized Video Generation",
+      "abstract": "Recent progress in video generation has shown impressive visual synthesis capabilities. However, open-domain customized video generation remains limited by the lack of large-scale, annotated datasets capturing diverse identity-specific attributes. To address this, we introduce PexelsCustom-1M, the first publicly available million-scale dataset for identity-preserving video generation, containing one million curated <identity, text, video> triplets across 8,000+ categories. Leveraging this, we propose CustoMDiT, a parameter-efficient framework that adapts a pretrained multimodal Diffusion Transformer into a customized video generator with only 8% additional learnable parameters. Our method surpasses prior state-of-the-art. However, benchmarks such as DreamBooth cover only 100 classes, which is insufficient for real-world applications. To overcome this, we construct OpenCustom, a new benchmark with 1,000+ categories, created via cross-dataset knowledge fusion from ImageNet and MS-COCO. Extensive experiments confirm the advantages of both our dataset and model. We will open-source the entire ecosystem--including dataset, pipeline, benchmark, and implementations--to support further research.",
+      "authors": [
+        "Jingxu Zhang",
+        "Yuqian Hong",
+        "Daneul Kim",
+        "Kai Qiu",
+        "Qi Dai",
+        "Jianmin Bao",
+        "Yifan Yang",
+        "Xiaoyan Sun",
+        "Chong Luo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-10T08:15:52+00:00",
+      "link": "https://arxiv.org/pdf/2606.11783v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Customized video generation conditioned on identity image and text using parameter-efficient adaptation of multimodal DiT",
+      "llm_evidence_cn": "基于身份图像和文本条件，通过参数高效适配多模态DiT实现定制视频生成",
+      "llm_evidence": "基于身份图像和文本条件，通过参数高效适配多模态DiT实现定制视频生成",
+      "canonical_evidence": "基于身份图像和文本条件，通过参数高效适配多模态DiT实现定制视频生成",
+      "llm_tldr_en": "CustoMDiT adapts a pretrained multimodal Diffusion Transformer into a customized video generator using only 8% additional parameters, conditioned on identity image, achieving state-of-the-art customized video generation.",
+      "llm_tldr_cn": "针对开放域定制化视频生成缺少大规模标注数据的问题，该工作构建了百万级PexelsCustom-1M数据集，并提出参数高效的CustoMDiT框架，以仅8%的额外参数将预训练多模态DiT适配为定制视频生成器，实现了身份保留的视频生成。该方法在多样化类别上超越了先前的最优方法，为定制化视频生成提供了数据和方法支撑。",
+      "llm_tldr": "针对开放域定制化视频生成缺少大规模标注数据的问题，该工作构建了百万级PexelsCustom-1M数据集，并提出参数高效的CustoMDiT框架，以仅8%的额外参数将预训练多模态DiT适配为定制视频生成器，实现了身份保留的视频生成。该方法在多样化类别上超越了先前的最优方法，为定制化视频生成提供了数据和方法支撑。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.06309v1",
+      "source": "arxiv",
+      "title": "RhymeFlow: Training-Free Acceleration for Video Generation with Asynchronous Denoising Flow Scheduling",
+      "abstract": "Video generation models based on Diffusion Transformers (DiTs) have achieved remarkable performance in video synthesis, yet they suffer from high inference latency and computational costs due to the quadratic complexity of 3D attention. Existing acceleration methods primarily reduce computational complexity within each individual denoising steps through techniques such as sparse attention and KV-caching. However, they rigidly adhere to the inherent constraint of the standard diffusion pipeline: every frame in the target video sequence must be subjected to a complete, dense denoising process across all diffusion timesteps. We observe that due to the corresponding contents and motions among adjacent frames, when keyframes with critical semantic transitions are anchored, the intermediate states of others often follow more predictable trajectories, which indicates that such uniform, dense denoising process is inherently redundant for natural video data. To this end, we introduce \\textbf{RhymeFlow}, a training-free framework that decouples the denoising trajectories of different frames. Specifically, we first identify a sparse set of pivotal key frames that dominate the latent semantic evolution. Then, only these keyframes undergo dense, step-by-step denoising to ensure structural integrity, while non-keyframes progressively skip denoising steps to minimize computational cost. Since skipped intermediate states of non-keyframes break the temporal coherence in keyframe denoising steps, leading to visual degradation, we further introduce a latent trajectory projection module, which enables keyframes to interact with a complete and temporally consistent sequence representation. Extensive experiments on current DiT-based video generation models demonstrate our method outperforms existing baselines with higher inference speed and better visual quality.",
+      "authors": [
+        "Chensheng Dai",
+        "Shengjun Zhang",
+        "Yifan Li",
+        "Zhang Zhang",
+        "Zheng Zhu",
+        "Yueqi Duan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-04T15:49:37+00:00",
+      "link": "https://arxiv.org/pdf/2606.06309v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Training-free acceleration for video generation with asynchronous denoising flow scheduling, applicable to DiT-based models like Wan",
+      "llm_evidence_cn": "无需训练的视频生成异步去噪流调度加速，适用于类似WAN的DiT模型",
+      "llm_evidence": "无需训练的视频生成异步去噪流调度加速，适用于类似WAN的DiT模型",
+      "canonical_evidence": "无需训练的视频生成异步去噪流调度加速，适用于类似WAN的DiT模型",
+      "llm_tldr_en": "RhymeFlow accelerates video DiT inference by scheduling denoising flows asynchronously across frames, reducing cost without training.",
+      "llm_tldr_cn": "为降低视频扩散变压器的推理延迟和计算成本，本文提出RhymeFlow异步去噪流调度方法。通过观察帧间运动，让关键帧经历完整去噪而相邻帧仅部分去噪，打破传统所有帧全步去噪的约束。该方法无需额外训练，在保持视频质量的同时实现显著加速，适用于各类基于DiT的视频生成模型。",
+      "llm_tldr": "为降低视频扩散变压器的推理延迟和计算成本，本文提出RhymeFlow异步去噪流调度方法。通过观察帧间运动，让关键帧经历完整去噪而相邻帧仅部分去噪，打破传统所有帧全步去噪的约束。该方法无需额外训练，在保持视频质量的同时实现显著加速，适用于各类基于DiT的视频生成模型。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.09056v1",
+      "source": "arxiv",
+      "title": "MilliVid: Hierarchical Latents for Long-Range Consistency in Video Generation",
+      "abstract": "Video generative models have become increasingly powerful, but long-range consistency remains challenging to achieve because even a few dozen frames require impractically long transformer sequence lengths. We show that this issue can be mitigated by generating video using coarse-to-fine rollout within a multi-scale token space. Our approach is simple: first, we pre-train an autoencoder that compresses each frame into a hierarchy of tokens, with levels ranging from the typical latent resolution to only a handful of tokens per frame. The coarsest levels capture the most consequential information, such as scene layout and semantics, while finer levels add high-frequency appearance and texture. Then, we train a video diffusion model to generate these tokens using coarse-to-fine rollout. By carefully controlling the level of detail at which frames are generated and used as context during each rollout step, we are able to preserve long-range consistency in geometry and object permanence while spending less compute on the long-range consistency of less perceptually relevant details. We validate this approach using a custom dataset of long Minecraft videos, where it produces substantially more consistent rollouts compared to existing baselines.",
+      "authors": [
+        "Ishaan Preetam Chandratreya",
+        "David Charatan",
+        "Basile Van Hoorick",
+        "Sergey Zakharov",
+        "Vitor Guizilini",
+        "Phillip Isola",
+        "Vincent Sitzmann"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-06-08T05:46:01+00:00",
+      "link": "https://arxiv.org/pdf/2606.09056v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Hierarchical latents for long-range consistency in video generation, improving video quality",
+      "llm_evidence_cn": "层次潜在变量实现视频生成长程一致性，提升视频质量",
+      "llm_evidence": "层次潜在变量实现视频生成长程一致性，提升视频质量",
+      "canonical_evidence": "层次潜在变量实现视频生成长程一致性，提升视频质量",
+      "llm_tldr_en": "MilliVid generates videos with long-range consistency using a hierarchical latent representation and coarse-to-fine rollout, reducing required sequence lengths.",
+      "llm_tldr_cn": "针对视频生成中长序列变压器难以处理和远距离帧一致性问题，本文提出MilliVid方法。通过预训练层次自编码器将帧压缩为多尺度token，并在粗粒度token上首先生成全局布局和语义，再到细粒度token添加纹理细节，实现由粗到精的逐步生成。实验证明该方法能有效保持长视频中场景外观和语义的一致性。",
+      "llm_tldr": "针对视频生成中长序列变压器难以处理和远距离帧一致性问题，本文提出MilliVid方法。通过预训练层次自编码器将帧压缩为多尺度token，并在粗粒度token上首先生成全局布局和语义，再到细粒度token添加纹理细节，实现由粗到精的逐步生成。实验证明该方法能有效保持长视频中场景外观和语义的一致性。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

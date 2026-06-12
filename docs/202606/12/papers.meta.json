@@ -1,0 +1,54 @@
+{
+  "label": "2026-06-12",
+  "date": "2026-06-12",
+  "generated_at": "2026-06-12T21:11:56",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202606/12/2606.11783v1-a-comprehensive-ecosystem-for-open-domain-customized-video-generation",
+      "section": "deep",
+      "title_en": "A Comprehensive Ecosystem for Open-Domain Customized Video Generation",
+      "authors": "Jingxu Zhang, Yuqian Hong, Daneul Kim, Kai Qiu, Qi Dai, Jianmin Bao, Yifan Yang, Xiaoyan Sun, Chong Luo",
+      "date": "2026-06-10",
+      "pdf": "https://arxiv.org/pdf/2606.11783v1",
+      "score": "8.0",
+      "evidence": "基于身份图像和文本条件，通过参数高效适配多模态DiT实现定制视频生成",
+      "tldr": "开放域定制视频生成因缺乏大规模身份标注数据集而发展受限。本文构建了首个百万级、8000+类别的PexelsCustom-1M身份-文本-视频三元组数据集，并提出CustoMDiT模型，仅增加8%参数微调预训练扩散Transformer以实现高效定制生成。为解决基准类别不足，进一步推出融合ImageNet和MS-COCO知识的OpenCustom千类基准，实验结果验证了数据集和模型的显著优势。该完整生态系统即将开源，为个性化视频生成研究提供坚实基础。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Recent progress in video generation has shown impressive visual synthesis capabilities. However, open-domain customized video generation remains limited by the lack of large-scale, annotated datasets capturing diverse identity-specific attributes. To address this, we introduce PexelsCustom-1M, the first publicly available million-scale dataset for identity-preserving video generation, containing one million curated <identity, text, video> triplets across 8,000+ categories. Leveraging this, we propose CustoMDiT, a parameter-efficient framework that adapts a pretrained multimodal Diffusion Transformer into a customized video generator with only 8% additional learnable parameters. Our method surpasses prior state-of-the-art. However, benchmarks such as DreamBooth cover only 100 classes, which is insufficient for real-world applications. To overcome this, we construct OpenCustom, a new benchmark with 1,000+ categories, created via cross-dataset knowledge fusion from ImageNet and MS-COCO. Extensive experiments confirm the advantages of both our dataset and model. We will open-source the entire ecosystem--including dataset, pipeline, benchmark, and implementations--to support further research.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/12/2606.06309v1-rhymeflow-training-free-acceleration-for-video-generation-with-asynchronous-denoising-flow-scheduling",
+      "section": "quick",
+      "title_en": "RhymeFlow: Training-Free Acceleration for Video Generation with Asynchronous Denoising Flow Scheduling",
+      "authors": "Chensheng Dai, Shengjun Zhang, Yifan Li, Zhang Zhang, Zheng Zhu, Yueqi Duan",
+      "date": "2026-06-04",
+      "pdf": "https://arxiv.org/pdf/2606.06309v1",
+      "score": "6.0",
+      "evidence": "无需训练的视频生成异步去噪流调度加速，适用于类似WAN的DiT模型",
+      "tldr": "扩散视频生成模型因3D注意力计算成本高，现有加速方法仍要求每帧经历全部去噪步骤，导致冗余计算。RhymeFlow提出异步去噪调度，识别关键帧并仅对其密集去噪，非关键帧跳步加速，并利用潜在轨迹投影保持时序一致性。实验表明，该方法在DiT模型上推理速度更快且视频质量更好，实现训练无关的即插即用加速。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Video generation models based on Diffusion Transformers (DiTs) have achieved remarkable performance in video synthesis, yet they suffer from high inference latency and computational costs due to the quadratic complexity of 3D attention. Existing acceleration methods primarily reduce computational complexity within each individual denoising steps through techniques such as sparse attention and KV-caching. However, they rigidly adhere to the inherent constraint of the standard diffusion pipeline: every frame in the target video sequence must be subjected to a complete, dense denoising process across all diffusion timesteps. We observe that due to the corresponding contents and motions among adjacent frames, when keyframes with critical semantic transitions are anchored, the intermediate states of others often follow more predictable trajectories, which indicates that such uniform, dense denoising process is inherently redundant for natural video data. To this end, we introduce \\textbf{RhymeFlow}, a training-free framework that decouples the denoising trajectories of different frames. Specifically, we first identify a sparse set of pivotal key frames that dominate the latent semantic evolution. Then, only these keyframes undergo dense, step-by-step denoising to ensure structural integrity, while non-keyframes progressively skip denoising steps to minimize computational cost. Since skipped intermediate states of non-keyframes break the temporal coherence in keyframe denoising steps, leading to visual degradation, we further introduce a latent trajectory projection module, which enables keyframes to interact with a complete and temporally consistent sequence representation. Extensive experiments on current DiT-based video generation models demonstrate our method outperforms existing baselines with higher inference speed and better visual quality.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/12/2606.09056v1-millivid-hierarchical-latents-for-long-range-consistency-in-video-generation",
+      "section": "quick",
+      "title_en": "MilliVid: Hierarchical Latents for Long-Range Consistency in Video Generation",
+      "authors": "Ishaan Preetam Chandratreya, David Charatan, Basile Van Hoorick, Sergey Zakharov, Vitor Guizilini, Phillip Isola, Vincent Sitzmann",
+      "date": "2026-06-08",
+      "pdf": "https://arxiv.org/pdf/2606.09056v1",
+      "score": "6.0",
+      "evidence": "层次潜在变量实现视频生成长程一致性，提升视频质量",
+      "tldr": "视频生成模型的长程一致性因全帧长序列计算过高而受限。MilliVid提出多尺度层次化token空间，粗粒度token捕获场景语义与布局，细粒度token补充纹理细节，并通过粗到精的扩散生成逐步推进。在Minecraft长视频数据集上，该方法显著提升了视频时序一致性与物体持续性，且减少了对高感知无关细节的一致性计算开销。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Video generative models have become increasingly powerful, but long-range consistency remains challenging to achieve because even a few dozen frames require impractically long transformer sequence lengths. We show that this issue can be mitigated by generating video using coarse-to-fine rollout within a multi-scale token space. Our approach is simple: first, we pre-train an autoencoder that compresses each frame into a hierarchy of tokens, with levels ranging from the typical latent resolution to only a handful of tokens per frame. The coarsest levels capture the most consequential information, such as scene layout and semantics, while finer levels add high-frequency appearance and texture. Then, we train a video diffusion model to generate these tokens using coarse-to-fine rollout. By carefully controlling the level of detail at which frames are generated and used as context during each rollout step, we are able to preserve long-range consistency in geometry and object permanence while spending less compute on the long-range consistency of less perceptually relevant details. We validate this approach using a custom dataset of long Minecraft videos, where it produces substantially more consistent rollouts compared to existing baselines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
