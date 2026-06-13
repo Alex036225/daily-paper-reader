@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-13",
+  "date": "2026-06-13",
+  "generated_at": "2026-06-13T20:51:45",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/13/2606.08393v1-smc-ita-sequential-monte-carlo-inference-time-alignment-for-video-to-audio-generation",
+      "section": "quick",
+      "title_en": "SMC-ITA: Sequential Monte Carlo Inference-Time Alignment for Video-to-Audio Generation",
+      "authors": "Haoyu Zhang, Yuta Oshima, Xingjian Du, Chunfeng Wang, Irene Li, Yusuke Iwasawa, Yutaka Matsuo",
+      "date": "2026-06-07",
+      "pdf": "https://arxiv.org/pdf/2606.08393v1",
+      "score": "6.0",
+      "evidence": "关注视频到音频生成的视听对齐，使用基于奖励的时间同步方法",
+      "tldr": "视频到音频生成需同时满足视听对齐、语义一致等要求，但推理时对齐研究不足。本文将其建模为搜索问题，提出SMC-ITA，利用前瞻奖励估计和序列蒙特卡罗重采样实现自适应计算分配。相比单轨迹采样，DeSync相对降低55.67%，IB-score和音频质量分别提升20.23%和15.44%，并在相同计算预算下超越Best-of-N和Beam Search。该方法为流匹配V2A推理提供了高效对齐策略。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Video-to-audio (V2A) generation must jointly satisfy audiovisual alignment, semantic consistency, temporal synchronization, and perceptual quality. While prior work has mainly focused on model architecture, multimodal conditioning, and training objectives, inference-time alignment for V2A remains underexplored. In this paper, we study inference-time alignment for flow-matching-based V2A generation and formulate it as a search problem. We propose Sequential Monte Carlo Inference-Time Alignment (SMC-ITA), which combines lookahead-based reward estimation and sequential Monte Carlo resampling to reallocate computation adaptively using multi-dimensional cross-modal rewards. SMC-ITA improves over naive single-trajectory sampling, achieving a 55.67% relative reduction in DeSync, a 20.23% improvement in IB-score, and a 15.44% improvement in Audio Quality. Under matched NFE budgets, it also achieves the best overall trade-off among the compared search baselines, outperforming Best-of-N and Beam Search. Ablation studies further show that lookahead improves the reliability of intermediate reward estimates and that systematic resampling is a strong practical default for V2A inference-time alignment.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

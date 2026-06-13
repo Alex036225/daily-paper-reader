@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-13 <!--dpr-date:20260613-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/13/2606.08393v1-smc-ita-sequential-monte-carlo-inference-time-alignment-for-video-to-audio-generation" data-sidebar-item="{&quot;title&quot;: &quot;SMC-ITA: Sequential Monte Carlo Inference-Time Alignment for Video-to-Audio Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.08393v1-smc-ita-sequential-monte-carlo-inference-time-alignment-for-video-to-audio-generation&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;关注视频到音频生成的视听对齐，使用基于奖励的时间同步方法&quot;}">SMC-ITA: Sequential Monte Carlo Inference-Time Alignment for Video-to-Audio Generation</a>
   * 2026-06-12 <!--dpr-date:20260612-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/12/2606.11783v1-a-comprehensive-ecosystem-for-open-domain-customized-video-generation" data-sidebar-item="{&quot;title&quot;: &quot;A Comprehensive Ecosystem for Open-Domain Customized Video Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.11783v1-a-comprehensive-ecosystem-for-open-domain-customized-video-generation&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;基于身份图像和文本条件，通过参数高效适配多模态DiT实现定制视频生成&quot;}">A Comprehensive Ecosystem for Open-Domain Customized Video Generation</a>
