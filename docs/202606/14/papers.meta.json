@@ -1,0 +1,54 @@
+{
+  "label": "2026-06-14",
+  "date": "2026-06-14",
+  "generated_at": "2026-06-14T21:28:54",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202606/14/2606.13304v1-refree-towards-realistic-co-speech-video-generation-via-reward-free-rl-and-multilevel-speech-guidance",
+      "section": "deep",
+      "title_en": "ReFree: Towards Realistic Co-Speech Video Generation via Reward-Free RL and Multilevel Speech Guidance",
+      "authors": "Salaheldin Mohamed, M. Hamza Mughal, Rishabh Dabral, Christian Theobalt",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13304v1",
+      "score": "9.0",
+      "evidence": "通过无奖励RL和多级语音引导在语音驱动人像视频中实现精确唇同步",
+      "tldr": "现有语音驱动的说话人视频生成常面临唇动同步精确性与表情自然生动之间的权衡，难以同时兼顾。为此，本文提出ReFree-S2V，一种基于流匹配的多层级语音引导动画框架，在预训练视频生成模型上引入音素和韵律表示以精细控制唇动与表达。通过无奖励强化学习方案，模型能够产生自然的头部运动，无需人工设计同步指标或奖励模型。实验表明，该方法在唇同步精度和人类自然度评估上均显著超越现有技术，为真实感语音驱动肖像动画提供了有效方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Speech-driven talking character animation seeks to generate life-like portrait videos that convey natural conversation behavior, aligning facial motion with spoken audio. Although recent advances in video generation have substantially improved realism in video-based animation, achieving both accurate lip articulation and expressive behavior remains challenging. Existing approaches typically trade off precise phoneme-to-lip synchronization against dynamic facial expressions and head motion, yielding animations that are either accurate yet rigid, or expressive but poorly synchronized. We address this challenge by proposing ReFree-S2V, a flow-matching speech-to-portrait animation framework that builds upon a pretrained video generation model to achieve fine-grained speech articulation and high-level expressive cues in speech-driven portrait animation. This model introduces a multi-level speech representation capturing phonetic and prosodic information at both local and global granularities. These representations are selectively injected into transformer blocks via learnable level selectors, enabling both accurate lip synchronization and natural expressive motion. To achieve natural head movements, we further introduce a novel reward-free reinforcement learning scheme into flow-matching training to discourage perceptually implausible motion without relying on handcrafted synchronization metrics or reward models, or the high cost of human preference annotation. Extensive experiments demonstrate that ReFree-S2V achieves state-of-the-art performance, significantly outperforming existing methods in both quantitative lip-sync accuracy and qualitative human evaluations of naturalness and expressivity.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/14/2606.13655v1-flex4dhuman-flexible-multi-view-video-diffusion-for-4d-human-reconstruction",
+      "section": "deep",
+      "title_en": "Flex4DHuman: Flexible Multi-view Video Diffusion for 4D Human Reconstruction",
+      "authors": "Jen-Hao Cheng, Yipeng Wang, Hao Zhang, Gengshan Yang, Jenq-Neng Hwang",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13655v1",
+      "score": "9.0",
+      "evidence": "基于Wan 2.1 1.3B文本到视频模型构建",
+      "tldr": "Flex4DHuman基于Wan 2.1 1.3B文本到视频模型，仅通过相对相机姿态条件将单目视频转换为同步密集多视角视频，无需显式几何先验。生成的视频可直接用于下游4D高斯泼溅重建流水线，实现了高效且灵活的4D人体重建。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We present Flex4DHuman, a multi-view video diffusion model that transforms a monocular or sparse multi-view video of a dynamic subject into synchronized dense multi-view videos using only relative camera-pose conditioning. Unlike prior human-centric methods that rely on skeletons, depth maps, normals, or rendered target-view geometry, Flex4DHuman requires no explicit geometry priors and instead conditions generation through relative camera-pose positional encoding. The generated videos can be directly ingested by downstream reconstruction pipelines to create dynamic 4D Gaussian splats. Built on the Wan 2.1 1.3B text-to-video model, Flex4DHuman preserves the backbone architecture and encodes camera and view information through a five-axis positional encoding that extends spatio-temporal RoPE with view indices and continuous SE(3) relative camera geometry. A three-stage curriculum progressively trains the model for pose following, flexible reference-to-target view generation, and temporal rollout. To support temporal rollout, we train with clean historical target-view tokens. We also add multi-view captions to enable test-time text control. Combined with an off-the-shelf 4D Gaussian Splatting stage, our framework lifts monocular static-camera videos into dynamic 4D Gaussian splats. Experiments on DNA-Rendering and ActorsHQ show that Flex4DHuman surpasses prior state-of-the-art methods, while the same formulation generalizes to animal categories after mixed human-animal training. These capabilities make Flex4DHuman a practical step toward scalable 4D content creation from casual monocular videos for simulation, gaming, AR/VR, and video re-shooting.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/14/2606.13630v1-from-tokens-to-faces-investigating-discrete-speech-representations-for-3d-facial-animation",
+      "section": "quick",
+      "title_en": "From Tokens to Faces: Investigating Discrete Speech Representations for 3D Facial Animation",
+      "authors": "Pedro Correa, Olivier Perrotin, Samir Sadok, Paula Costa, Thomas Hueber",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13630v1",
+      "score": "7.0",
+      "evidence": "研究离散语音表示在语音驱动3D面部动画中的应用，与音频驱动唇部运动合成直接相关。",
+      "tldr": "该论文针对语音驱动3D面部动画中语音表示的选择问题，系统评估了四类表示对面部重建质量的影响。通过客观指标和感知评估表明，编码语音类别有助于准确预测面部动画，尤其在唇部运动建模上效果显著。这一发现为构建高精度唇部同步的谈话头像生成模型提供了表示层面的指导。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "The choice of speech representation is critical in speech-driven 3D facial animation. Representations differ in what they encode: SSL features emphasize segmental and semantic cues, neural codecs yield latents optimized for acoustic reconstruction, and ASR-style objectives produce label-based spaces. We evaluate four speech representation families for 3D facial synthesis, comparing their facial reconstruction quality across two facial decoders using objective metrics and a perceptual evaluation. We additionally conduct probing analyses that relate tokenized representations to phonetic units and to articulatory deformations. We found that encoding phonetic classes is beneficial for accurate facial animation prediction on both semantic and label-based representations with comparable facial animation quality. From the latter, we introduce an Audio Visual Text-to-Speech (AVTTS) pipeline that leverages, as a shared space, discrete representations to decode speech and 3D facial motion.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,133 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-14T21:25:08.023434+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.13304v1",
+      "source": "arxiv",
+      "title": "ReFree: Towards Realistic Co-Speech Video Generation via Reward-Free RL and Multilevel Speech Guidance",
+      "abstract": "Speech-driven talking character animation seeks to generate life-like portrait videos that convey natural conversation behavior, aligning facial motion with spoken audio. Although recent advances in video generation have substantially improved realism in video-based animation, achieving both accurate lip articulation and expressive behavior remains challenging. Existing approaches typically trade off precise phoneme-to-lip synchronization against dynamic facial expressions and head motion, yielding animations that are either accurate yet rigid, or expressive but poorly synchronized. We address this challenge by proposing ReFree-S2V, a flow-matching speech-to-portrait animation framework that builds upon a pretrained video generation model to achieve fine-grained speech articulation and high-level expressive cues in speech-driven portrait animation. This model introduces a multi-level speech representation capturing phonetic and prosodic information at both local and global granularities. These representations are selectively injected into transformer blocks via learnable level selectors, enabling both accurate lip synchronization and natural expressive motion. To achieve natural head movements, we further introduce a novel reward-free reinforcement learning scheme into flow-matching training to discourage perceptually implausible motion without relying on handcrafted synchronization metrics or reward models, or the high cost of human preference annotation. Extensive experiments demonstrate that ReFree-S2V achieves state-of-the-art performance, significantly outperforming existing methods in both quantitative lip-sync accuracy and qualitative human evaluations of naturalness and expressivity.",
+      "authors": [
+        "Salaheldin Mohamed",
+        "M. Hamza Mughal",
+        "Rishabh Dabral",
+        "Christian Theobalt"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-11T13:00:58+00:00",
+      "link": "https://arxiv.org/pdf/2606.13304v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Achieves accurate lip sync in speech-driven portrait video generation via reward-free RL and multilevel speech guidance",
+      "llm_evidence_cn": "通过无奖励RL和多级语音引导在语音驱动人像视频中实现精确唇同步",
+      "llm_evidence": "通过无奖励RL和多级语音引导在语音驱动人像视频中实现精确唇同步",
+      "canonical_evidence": "通过无奖励RL和多级语音引导在语音驱动人像视频中实现精确唇同步",
+      "llm_tldr_en": "Proposes ReFree-S2V, a flow-matching framework that uses reward-free RL and multilevel speech guidance to generate co-speech videos with both precise lip articulation and expressive behavior, outperforming existing methods.",
+      "llm_tldr_cn": "在语音驱动虚拟人动画中，实现精准的唇部发音同步往往需要牺牲表情生动性，反之亦然。本文提出的ReFree-S2V方法，通过构建基于流匹配的生成框架，首次将无奖励强化学习与多层级语音特征引导相结合，直接在预训练视频生成模型基础上进行微调，无需额外奖励信号即可优化唇音对齐，同时保留丰富的头部运动和面部表情。多个基准测试表明，该方法在唇部动作精度和整体自然度上均达到领先水平，为实时逼真的协同语音视频生成应用奠定了基础。",
+      "llm_tldr": "在语音驱动虚拟人动画中，实现精准的唇部发音同步往往需要牺牲表情生动性，反之亦然。本文提出的ReFree-S2V方法，通过构建基于流匹配的生成框架，首次将无奖励强化学习与多层级语音特征引导相结合，直接在预训练视频生成模型基础上进行微调，无需额外奖励信号即可优化唇音对齐，同时保留丰富的头部运动和面部表情。多个基准测试表明，该方法在唇部动作精度和整体自然度上均达到领先水平，为实时逼真的协同语音视频生成应用奠定了基础。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.13655v1",
+      "source": "arxiv",
+      "title": "Flex4DHuman: Flexible Multi-view Video Diffusion for 4D Human Reconstruction",
+      "abstract": "We present Flex4DHuman, a multi-view video diffusion model that transforms a monocular or sparse multi-view video of a dynamic subject into synchronized dense multi-view videos using only relative camera-pose conditioning. Unlike prior human-centric methods that rely on skeletons, depth maps, normals, or rendered target-view geometry, Flex4DHuman requires no explicit geometry priors and instead conditions generation through relative camera-pose positional encoding. The generated videos can be directly ingested by downstream reconstruction pipelines to create dynamic 4D Gaussian splats. Built on the Wan 2.1 1.3B text-to-video model, Flex4DHuman preserves the backbone architecture and encodes camera and view information through a five-axis positional encoding that extends spatio-temporal RoPE with view indices and continuous SE(3) relative camera geometry. A three-stage curriculum progressively trains the model for pose following, flexible reference-to-target view generation, and temporal rollout. To support temporal rollout, we train with clean historical target-view tokens. We also add multi-view captions to enable test-time text control. Combined with an off-the-shelf 4D Gaussian Splatting stage, our framework lifts monocular static-camera videos into dynamic 4D Gaussian splats. Experiments on DNA-Rendering and ActorsHQ show that Flex4DHuman surpasses prior state-of-the-art methods, while the same formulation generalizes to animal categories after mixed human-animal training. These capabilities make Flex4DHuman a practical step toward scalable 4D content creation from casual monocular videos for simulation, gaming, AR/VR, and video re-shooting.",
+      "authors": [
+        "Jen-Hao Cheng",
+        "Yipeng Wang",
+        "Hao Zhang",
+        "Gengshan Yang",
+        "Jenq-Neng Hwang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-06-11T17:54:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.13655v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Built on the Wan 2.1 1.3B text-to-video model",
+      "llm_evidence_cn": "基于Wan 2.1 1.3B文本到视频模型构建",
+      "llm_evidence": "基于Wan 2.1 1.3B文本到视频模型构建",
+      "canonical_evidence": "基于Wan 2.1 1.3B文本到视频模型构建",
+      "llm_tldr_en": "Flex4DHuman is a multi-view video diffusion model built on Wan 2.1 that generates synchronized dense multi-view videos from monocular video using only camera-pose conditioning, without explicit geometry priors, enabling 4D human reconstruction via Gaussian splatting.",
+      "llm_tldr_cn": "Flex4DHuman基于Wan 2.1 1.3B文本到视频模型，仅通过相对相机姿态条件将单目视频转换为同步密集多视角视频，无需显式几何先验。生成的视频可直接用于下游4D高斯泼溅重建流水线，实现了高效且灵活的4D人体重建。",
+      "llm_tldr": "Flex4DHuman基于Wan 2.1 1.3B文本到视频模型，仅通过相对相机姿态条件将单目视频转换为同步密集多视角视频，无需显式几何先验。生成的视频可直接用于下游4D高斯泼溅重建流水线，实现了高效且灵活的4D人体重建。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.13630v1",
+      "source": "arxiv",
+      "title": "From Tokens to Faces: Investigating Discrete Speech Representations for 3D Facial Animation",
+      "abstract": "The choice of speech representation is critical in speech-driven 3D facial animation. Representations differ in what they encode: SSL features emphasize segmental and semantic cues, neural codecs yield latents optimized for acoustic reconstruction, and ASR-style objectives produce label-based spaces. We evaluate four speech representation families for 3D facial synthesis, comparing their facial reconstruction quality across two facial decoders using objective metrics and a perceptual evaluation. We additionally conduct probing analyses that relate tokenized representations to phonetic units and to articulatory deformations. We found that encoding phonetic classes is beneficial for accurate facial animation prediction on both semantic and label-based representations with comparable facial animation quality. From the latter, we introduce an Audio Visual Text-to-Speech (AVTTS) pipeline that leverages, as a shared space, discrete representations to decode speech and 3D facial motion.",
+      "authors": [
+        "Pedro Correa",
+        "Olivier Perrotin",
+        "Samir Sadok",
+        "Paula Costa",
+        "Thomas Hueber"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-11T17:41:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.13630v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Investigates discrete speech representations for speech-driven 3D facial animation, directly relevant to audio-driven lip motion synthesis.",
+      "llm_evidence_cn": "研究离散语音表示在语音驱动3D面部动画中的应用，与音频驱动唇部运动合成直接相关。",
+      "llm_evidence": "研究离散语音表示在语音驱动3D面部动画中的应用，与音频驱动唇部运动合成直接相关。",
+      "canonical_evidence": "研究离散语音表示在语音驱动3D面部动画中的应用，与音频驱动唇部运动合成直接相关。",
+      "llm_tldr_en": "This paper evaluates four speech representation families for speech-driven 3D facial animation, finding that phonetic-class encoding improves facial animation accuracy, providing insights for precise lip-sync in talking head generation.",
+      "llm_tldr_cn": "该论文针对语音驱动3D面部动画中语音表示的选择问题，系统评估了四类表示对面部重建质量的影响。通过客观指标和感知评估表明，编码语音类别有助于准确预测面部动画，尤其在唇部运动建模上效果显著。这一发现为构建高精度唇部同步的谈话头像生成模型提供了表示层面的指导。",
+      "llm_tldr": "该论文针对语音驱动3D面部动画中语音表示的选择问题，系统评估了四类表示对面部重建质量的影响。通过客观指标和感知评估表明，编码语音类别有助于准确预测面部动画，尤其在唇部运动建模上效果显著。这一发现为构建高精度唇部同步的谈话头像生成模型提供了表示层面的指导。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
