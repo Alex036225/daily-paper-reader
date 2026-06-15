@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-15 <!--dpr-date:20260615-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/15/2606.13971v1-prompt2effect-training-free-image-to-video-model-specialization-via-lora-generation" data-sidebar-item="{&quot;title&quot;: &quot;Prompt2Effect: Training-Free Image-to-Video Model Specialization via LoRA Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.13971v1-prompt2effect-training-free-image-to-video-model-specialization-via-lora-generation&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;通过生成LoRA权重实现I2V扩散模型个性化，直接相关于图像条件的视频生成&quot;}">Prompt2Effect: Training-Free Image-to-Video Model Specialization via LoRA Generation</a>
   * 2026-06-14 <!--dpr-date:20260614-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/14/2606.13304v1-refree-towards-realistic-co-speech-video-generation-via-reward-free-rl-and-multilevel-speech-guidance" data-sidebar-item="{&quot;title&quot;: &quot;ReFree: Towards Realistic Co-Speech Video Generation via Reward-Free RL and Multilevel Speech Guidance&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.13304v1-refree-towards-realistic-co-speech-video-generation-via-reward-free-rl-and-multilevel-speech-guidance&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;通过无奖励RL和多级语音引导在语音驱动人像视频中实现精确唇同步&quot;}">ReFree: Towards Realistic Co-Speech Video Generation via Reward-Free RL and Multilevel Speech Guidance</a>

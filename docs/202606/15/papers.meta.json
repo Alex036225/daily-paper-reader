@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-15",
+  "date": "2026-06-15",
+  "generated_at": "2026-06-15T22:20:20",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/15/2606.13971v1-prompt2effect-training-free-image-to-video-model-specialization-via-lora-generation",
+      "section": "deep",
+      "title_en": "Prompt2Effect: Training-Free Image-to-Video Model Specialization via LoRA Generation",
+      "authors": "Xiaomeng Yang, Yanyu Li, Gordon Guocheng Qian, Ivan Skorokhodov, Viacheslav Ivanov, Avalon Vinella, Xuan Zhang, Yanzhi Wang, Sergey Tulyakov, Anil Kag",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13971v1",
+      "score": "8.0",
+      "evidence": "通过生成LoRA权重实现I2V扩散模型个性化，直接相关于图像条件的视频生成",
+      "tldr": "针对图像到视频（I2V）扩散模型个性化的高成本，本文提出Prompt2Effect，一个权重驱动超网络，单步生成效果特定的LoRA权重，免除逐效果训练，通过基于冻结模型权重形状的条件注入，实现了逼真且零样本的视觉特效合成，显著提高了I2V模型交互控制效率。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Personalizing Image-to-Video (I2V) diffusion models with specific visual effects is increasingly demanded for high-end video generation. Current practice requires training a separate Low-Rank Adaptation (LoRA) module for each effect, incurring substantial data curation and iterative optimization costs that hinder interactive control. We present Prompt2Effect, a weight-driven hypernetwork that amortizes per-effect training by directly synthesizing effect-specific LoRA weights in a single forward pass. Unlike prior hypernetworks that regress adapter weights purely from semantics, Prompt2Effect is explicitly conditioned on the frozen base model weights, grounding weight prediction in the structural geometry of each layer. Furthermore, instead of predicting raw LoRA matrices, we introduce an SVD-canonicalized parameterization that resolves factorization ambiguity and stabilizes large-scale weight synthesis. Together, these design principles enable accurate and scalable LoRA prediction for high-dimensional I2V diffusion models. Extensive experiments demonstrate that Prompt2Effect achieves on-par or superior video quality and effect alignment compared to conventional LoRA fine-tuning, while reducing the computational cost from 56 GPU training hours to 3.3 seconds of hypernetwork inference. When used as initialization for subsequent fine-tuning, our predicted weights further improve final performance and accelerate optimization by approximately 10x.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

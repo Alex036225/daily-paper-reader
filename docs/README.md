@@ -6,31 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-14
-- 运行时间：2026-06-14 21:28:48 UTC
+- 最新运行日期：2026-06-15
+- 运行时间：2026-06-15 22:20:14 UTC
 - 运行状态：成功
-- 本次总论文数：3
-- 精读区：2
-- 速读区：1
+- 本次总论文数：1
+- 精读区：1
+- 速读区：0
 
 ### 今日简报（AI）
-今日精读了两篇9分顶会新作，聚焦视频生成与4D人体重建。  
-《ReFree》用无需奖励模型的强化学习与多级语音引导，让虚拟人说话更自然；《Flex4DHuman》则通过灵活多视图扩散模型，从视频快速重建动态人体。  
-想跟上AI生成真实感数字人的最新突破，这两篇值得细读，尤其关注其摆脱复杂标注的实用思路。
-- 详情：[/202606/14/README](/202606/14/README)
+今天啃了一篇图像到视频模型定制化的新方法，无需额外训练就能生成定制LoRA权重。  
+最值得关注的是提出了一种“训练自由”的路子，用提示就能直接合成风格化或特效化的视频模型适配器。  
+如果你也想低成本让视频模型学会特定效果，可以试试用提示词驱动LoRA生成这条捷径。
+- 详情：[/202606/15/README](/202606/15/README)
 
 ### 精读区论文标签
-1. [ReFree: Towards Realistic Co-Speech Video Generation via Reward-Free RL and Multilevel Speech Guidance](/202606/14/2606.13304v1-refree-towards-realistic-co-speech-video-generation-via-reward-free-rl-and-multilevel-speech-guidance)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：通过无奖励RL和多级语音引导在语音驱动人像视频中实现精确唇同步
-2. [Flex4DHuman: Flexible Multi-view Video Diffusion for 4D Human Reconstruction](/202606/14/2606.13655v1-flex4dhuman-flexible-multi-view-video-diffusion-for-4d-human-reconstruction)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：基于Wan 2.1 1.3B文本到视频模型构建
+1. [Prompt2Effect: Training-Free Image-to-Video Model Specialization via LoRA Generation](/202606/15/2606.13971v1-prompt2effect-training-free-image-to-video-model-specialization-via-lora-generation)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：通过生成LoRA权重实现I2V扩散模型个性化，直接相关于图像条件的视频生成
 
 ### 速读区论文标签
-1. [From Tokens to Faces: Investigating Discrete Speech Representations for 3D Facial Animation](/202606/14/2606.13630v1-from-tokens-to-faces-investigating-discrete-speech-representations-for-3d-facial-animation)  
-   标签：评分：7.0/10、query:wan-av-gen
-   evidence：研究离散语音表示在语音驱动3D面部动画中的应用，与音频驱动唇部运动合成直接相关。
+- 本次无速读推荐。
 
 
 <div class="dpr-home-promo-card">
