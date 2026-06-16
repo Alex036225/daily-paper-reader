@@ -1,0 +1,54 @@
+{
+  "label": "2026-06-16",
+  "date": "2026-06-16",
+  "generated_at": "2026-06-16T23:10:42",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202606/16/2606.15848v1-emozone-talker-regional-semantic-control-of-audio-driven-3dgs-talking-heads-via-facial-action-units",
+      "section": "deep",
+      "title_en": "EmoZone-Talker: Regional Semantic Control of Audio-Driven 3DGS Talking Heads via Facial Action Units",
+      "authors": "Tingting Chen, Shaojun Wang, Huaye Zhang, Diqiong Jiang, Chenglizhao Chen",
+      "date": "2026-06-14",
+      "pdf": "https://arxiv.org/pdf/2606.15848v1",
+      "score": "8.0",
+      "evidence": "音频驱动说话头合成，通过面部动作单元实现细粒度唇同步与表情控制",
+      "tldr": "当前基于3D高斯泼溅的说话头合成中，音频驱动与显式表情信号存在内在冲突，导致表情控制不够精细且时空不一致。本文提出EmoZone-Talker框架，将问题形式化为跨模态冲突下的时空协调任务。通过基于解剖先验的协同区域与优先注意力偏置（SZ-PAB）显式解耦模态贡献，并设计通道独立时间AU编码器（CIT-AE）建模连贯的动态，集成到3D高斯变形中。实验表明，该方法显著提升了表情可控性和真实感，尤其在上脸精度和时间连贯性方面，同时保持了高渲染质量和唇音同步，为可解释的精细表情控制提供了新方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "3D Gaussian Splatting (3DGS) has shown strong potential for high-fidelity talking head synthesis. However, enabling fine-grained, interpretable, and editable facial expression control remains fundamentally challenging due to intrinsic conflicts between speech-driven facial dynamics and explicit expression signals. Existing methods rely on implicit multimodal fusion, leading to spatial entanglement and temporal instability. We present EmoZone-Talker, a novel framework that reformulates audio-driven facial animation as a structured spatial-temporal coordination problem under cross-modal conflicts. Our approach introduces an explicit spatial disentanglement and temporal dynamics modeling of facial motion. Specifically, we propose Synergy Zones with Prioritized Attention Bias (SZ-PAB) to explicitly decouple modality contributions via region-wise constraints guided by anatomical priors, and a Channel-Independent Temporal AU Encoder (CIT-AE) to model temporally coherent AU dynamics. By integrating these representations into 3D Gaussian deformation, EmoZone-Talker enables precise and interpretable control over facial expressions. Extensive experiments demonstrate that our method improves expression controllability and realism, with notable gains in upper-face accuracy and temporal coherence, while preserving high rendering quality and accurate lip synchronization. Code will be publicly released to facilitate reproducibility and further research.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/16/2606.13655v2-flex4dhuman-flexible-multi-view-video-diffusion-for-4d-human-reconstruction",
+      "section": "quick",
+      "title_en": "Flex4DHuman: Flexible Multi-view Video Diffusion for 4D Human Reconstruction",
+      "authors": "Jen-Hao Cheng, Yipeng Wang, Hao Zhang, Gengshan Yang, Jenq-Neng Hwang",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13655v2",
+      "score": "6.0",
+      "evidence": "基于 Wan 2.1 文本到视频模型的多视角视频生成",
+      "tldr": "动态人体4D重建依赖多视角视频，现有方法需骨架、深度等显式几何先验，难以从单目/稀疏输入生成高质量动态内容。Flex4DHuman提出一种灵活的多视角视频扩散模型，仅利用相对相机姿态的五轴位置编码，在Wan 2.1架构上通过三阶段课程训练，将单目/稀疏视频转换为同步密集多视角视频，无需任何几何先验。输出的多视角视频可直接与4D高斯泼溅结合，重建为动态4D高斯场。实验表明，该方法在DNA-Rendering和ActorsHQ数据集上超越前人，并经人-动物混合训练后可泛化至动物类别，为仿真、游戏、AR/VR等提供可扩展的4D内容创建路径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We present Flex4DHuman, a multi-view video diffusion model that transforms a monocular or sparse multi-view video of a dynamic subject into synchronized dense multi-view videos using only relative camera-pose conditioning. Unlike prior human-centric methods that rely on skeletons, depth maps, normals, or rendered target-view geometry, Flex4DHuman requires no explicit geometry priors and instead conditions generation through relative camera-pose positional encoding. The generated videos can be directly ingested by downstream reconstruction pipelines to create dynamic 4D Gaussian splats. Built on the Wan 2.1 1.3B text-to-video model, Flex4DHuman preserves the backbone architecture and encodes camera and view information through a five-axis positional encoding that extends spatio-temporal RoPE with view indices and continuous SE(3) relative camera geometry. A three-stage curriculum progressively trains the model for pose following, flexible reference-to-target view generation, and temporal rollout. To support temporal rollout, we train with clean historical target-view tokens. We also add multi-view captions to enable test-time text control. Combined with an off-the-shelf 4D Gaussian Splatting stage, our framework lifts monocular static-camera videos into dynamic 4D Gaussian splats. Experiments on DNA-Rendering and ActorsHQ show that Flex4DHuman surpasses prior state-of-the-art methods, while the same formulation generalizes to animal categories after mixed human-animal training. These capabilities make Flex4DHuman a practical step toward scalable 4D content creation from casual monocular videos for simulation, gaming, AR/VR, and video re-shooting.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/16/2606.13872v1-avatar-v-scaling-video-reference-avatar-video-generation",
+      "section": "quick",
+      "title_en": "Avatar V: Scaling Video-Reference Avatar Video Generation",
+      "authors": "Benjamin Liang, Ce Chen, Desmond Lin, Ivan Somov, Jiajun Zhao, Jiewei Yuan, Jingfeng Zhang, Junhao Huang, Nik Nolte, Pedram Haqiqi, Penghan Wang, Rong Yan, Rui Zhang, Sam Prokopchuk, Sivan Wang, Viktor Goriachko, Yi Ren, Yuanming Li, Yutao Chen, Zhenhui Ye, Zhibin Hong, Zilong Nie, Zujin Guo",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13872v1",
+      "score": "6.0",
+      "evidence": "忠实再现说话节奏和表情动态的虚拟人视频",
+      "tldr": "现有虚拟形象视频生成多基于单张图像，难以复现个体的动态说话节奏与微表情行为。Avatar V通过视频参考条件化身份建模，引入线性复杂度的稀疏参考注意力，学习静态面部特征与动态行为模式，结合数据引擎与五阶段训练流水线，实现1080p无限时长高清生成。在跨场景基准上，其身份保持、唇同步等指标达业界最优，显著超越Seedance 2.0等系统，为生产级虚拟人规模化提供高效框架。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Generating avatar videos that are not merely visually similar to a target individual but behaviorally recognizable, faithfully reproducing their talking rhythm, gestural tendencies, and expression dynamics, remains an open challenge. Existing methods predominantly condition on single static images, which provide insufficient identity information and cannot capture dynamic motion traits, while standard pixel-level objectives underserve the perceptually critical facial regions that determine avatar fidelity. We present Avatar V, a production-scale framework that addresses these limitations through video-reference-conditioned identity modeling. Rather than compressing identity into fixed-size embeddings, the model conditions directly on the full token sequence of a reference video, learning to reproduce both static identity attributes (facial geometry, skin texture) and dynamic behavioral patterns (talking rhythm, micro-expressions) through attention over the reference context. We introduce Sparse Reference Attention, an asymmetric mechanism achieving linear-complexity conditioning on arbitrarily long references; a motion representation stream enabling closed-loop talking style transfer; and an identity-aware super-resolution refiner inheriting the full reference conditioning. These are supported by a data engine curating 100M+ training clips from 50M raw videos, and a five-stage training pipeline with flow matching pre-training, personality fine-tuning, two-phase distillation (>10x acceleration), and RLHF alignment, deployed across thousands of GPUs. Avatar V generates 1080p videos of unlimited duration, achieving state-of-the-art identity preservation, lip synchronization, and generation quality on our cross-scene benchmark, consistently outperforming leading systems including Seedance 2.0, Kling O3 Pro, Veo 3.1, and OmniHuman 1.5 in both automated metrics and human evaluation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

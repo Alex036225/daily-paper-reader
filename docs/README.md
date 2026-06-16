@@ -6,26 +6,31 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-15
-- 运行时间：2026-06-15 22:20:14 UTC
+- 最新运行日期：2026-06-16
+- 运行时间：2026-06-16 23:10:33 UTC
 - 运行状态：成功
-- 本次总论文数：1
+- 本次总论文数：3
 - 精读区：1
-- 速读区：0
+- 速读区：2
 
 ### 今日简报（AI）
-今天啃了一篇图像到视频模型定制化的新方法，无需额外训练就能生成定制LoRA权重。  
-最值得关注的是提出了一种“训练自由”的路子，用提示就能直接合成风格化或特效化的视频模型适配器。  
-如果你也想低成本让视频模型学会特定效果，可以试试用提示词驱动LoRA生成这条捷径。
-- 详情：[/202606/15/README](/202606/15/README)
+今日精读一篇 3D 说话人头像新作，并速览两篇 4D 人体与视频头像生成研究，全览数字人前沿动态。
+最值得看：EmoZone-Talker 用面部动作单元实现音频驱动的区域语义控制，可精细调节唇部、眼部等局部表情，为高保真虚拟角色带来更真实的联动感。
+建议读者关注“动作单元解耦 + 3D 高斯泼溅”这一技术路线，它有望让定制化表情生成在影视、会议等场景更快落地。
+- 详情：[/202606/16/README](/202606/16/README)
 
 ### 精读区论文标签
-1. [Prompt2Effect: Training-Free Image-to-Video Model Specialization via LoRA Generation](/202606/15/2606.13971v1-prompt2effect-training-free-image-to-video-model-specialization-via-lora-generation)  
+1. [EmoZone-Talker: Regional Semantic Control of Audio-Driven 3DGS Talking Heads via Facial Action Units](/202606/16/2606.15848v1-emozone-talker-regional-semantic-control-of-audio-driven-3dgs-talking-heads-via-facial-action-units)  
    标签：评分：8.0/10、query:wan-av-gen
-   evidence：通过生成LoRA权重实现I2V扩散模型个性化，直接相关于图像条件的视频生成
+   evidence：音频驱动说话头合成，通过面部动作单元实现细粒度唇同步与表情控制
 
 ### 速读区论文标签
-- 本次无速读推荐。
+1. [Flex4DHuman: Flexible Multi-view Video Diffusion for 4D Human Reconstruction](/202606/16/2606.13655v2-flex4dhuman-flexible-multi-view-video-diffusion-for-4d-human-reconstruction)  
+   标签：评分：6.0/10、query:wan-av-gen
+   evidence：基于 Wan 2.1 文本到视频模型的多视角视频生成
+2. [Avatar V: Scaling Video-Reference Avatar Video Generation](/202606/16/2606.13872v1-avatar-v-scaling-video-reference-avatar-video-generation)  
+   标签：评分：6.0/10、query:wan-av-gen
+   evidence：忠实再现说话节奏和表情动态的虚拟人视频
 
 
 <div class="dpr-home-promo-card">
