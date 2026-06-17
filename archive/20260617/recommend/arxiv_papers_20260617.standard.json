@@ -1,0 +1,57 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-17T20:51:54.943257+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.13376v1",
+      "source": "arxiv",
+      "title": "MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold",
+      "abstract": "We present MoVerse, a real-time video world model that creates an interactively navigable scene from a single narrow-field-of-view image. This setting is challenging because the input observes only a small fraction of the environment, while interactive roaming requires a complete surrounding world, persistent geometry, controllable camera motion, and temporally coherent high-fidelity observations. MoVerse addresses this problem by separating world construction from observation rendering. It first expands the input into a gravity-aligned 360$^\\circ$ panorama with topology-aware diffusion, closing the missing field of view before 3D reasoning. It then lifts the panorama into a persistent 3D Gaussian scaffold using panoramic geometry-aware residual prediction, yielding a dense and directly renderable spatial memory. Finally, a Gaussian-conditioned video renderer translates scaffold renderings along user-specified camera trajectories into photorealistic video. To make this renderer practical for interaction, we train a bidirectional diffusion teacher for high-quality conditional rendering and distill it into a causal autoregressive student for bounded-latency streaming. This design combines the controllability and long-range consistency of explicit 3D representations with the perceptual quality of generative video models. MoVerse supports real-time scene roaming at 8~FPS on a single NVIDIA RTX~4090 GPU, demonstrating a practical path toward single-image world creation with interactive video output.",
+      "authors": [
+        "Yang Zhou",
+        "Ziheng Wang",
+        "Yuqin Lu",
+        "Haofeng Liu",
+        "Jun Liang",
+        "Shengfeng He",
+        "Jing Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-11T14:01:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.13376v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "creates an interactively navigable scene from a single narrow-field-of-view image",
+      "llm_evidence_cn": "从单张窄视场图像生成可交互导航的场景",
+      "llm_evidence": "从单张窄视场图像生成可交互导航的场景",
+      "canonical_evidence": "从单张窄视场图像生成可交互导航的场景",
+      "llm_tldr_en": "MoVerse is a real-time video world model that generates an interactively navigable 3D scene from a single image. It first expands the input to a 360° panorama using topology-aware diffusion, then lifts it into a persistent 3D Gaussian scaffold for rendering novel views with coherent observations. Experiments show high-fidelity and temporally coherent scene synthesis, enabling immersive virtual exploration from limited input.",
+      "llm_tldr_cn": "MoVerse提出了一种实时视频世界模型，能够从单张窄视场图像生成可交互导航的完整3D场景。该方法首先利用拓扑感知扩散将输入扩展为360°全景图，随后通过全景几何感知残差预测将其提升为持久的3D高斯支架，用于渲染新视角并保持时序一致性。实验表明，该方法能从有限输入中合成高保真、可漫游的虚拟环境，为图像到视频的沉浸式建模提供了新途径。",
+      "llm_tldr": "MoVerse提出了一种实时视频世界模型，能够从单张窄视场图像生成可交互导航的完整3D场景。该方法首先利用拓扑感知扩散将输入扩展为360°全景图，随后通过全景几何感知残差预测将其提升为持久的3D高斯支架，用于渲染新视角并保持时序一致性。实验表明，该方法能从有限输入中合成高保真、可漫游的虚拟环境，为图像到视频的沉浸式建模提供了新途径。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}

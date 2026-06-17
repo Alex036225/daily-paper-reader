@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-17",
+  "date": "2026-06-17",
+  "generated_at": "2026-06-17T20:53:41",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/17/2606.13376v1-moverse-real-time-video-world-modeling-with-panoramic-gaussian-scaffold",
+      "section": "deep",
+      "title_en": "MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold",
+      "authors": "Yang Zhou, Ziheng Wang, Yuqin Lu, Haofeng Liu, Jun Liang, Shengfeng He, Jing Li",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13376v1",
+      "score": "8.0",
+      "evidence": "从单张窄视场图像生成可交互导航的场景",
+      "tldr": "单张窄视场图像难以支持交互式场景漫游，需重建完整环境。MoVerse将世界构建与渲染分离，先用拓扑感知扩散生成360°全景，再升维为持久的3D高斯支架，最后用高斯条件视频渲染器输出逼真视频。该方法在RTX 4090上实现8 FPS实时漫游，结合显式3D表示与生成模型质量，为单图像世界创建提供实用方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We present MoVerse, a real-time video world model that creates an interactively navigable scene from a single narrow-field-of-view image. This setting is challenging because the input observes only a small fraction of the environment, while interactive roaming requires a complete surrounding world, persistent geometry, controllable camera motion, and temporally coherent high-fidelity observations. MoVerse addresses this problem by separating world construction from observation rendering. It first expands the input into a gravity-aligned 360$^\\circ$ panorama with topology-aware diffusion, closing the missing field of view before 3D reasoning. It then lifts the panorama into a persistent 3D Gaussian scaffold using panoramic geometry-aware residual prediction, yielding a dense and directly renderable spatial memory. Finally, a Gaussian-conditioned video renderer translates scaffold renderings along user-specified camera trajectories into photorealistic video. To make this renderer practical for interaction, we train a bidirectional diffusion teacher for high-quality conditional rendering and distill it into a causal autoregressive student for bounded-latency streaming. This design combines the controllability and long-range consistency of explicit 3D representations with the perceptual quality of generative video models. MoVerse supports real-time scene roaming at 8~FPS on a single NVIDIA RTX~4090 GPU, demonstrating a practical path toward single-image world creation with interactive video output.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

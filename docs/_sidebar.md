@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-17 <!--dpr-date:20260617-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/17/2606.13376v1-moverse-real-time-video-world-modeling-with-panoramic-gaussian-scaffold" data-sidebar-item="{&quot;title&quot;: &quot;MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.13376v1-moverse-real-time-video-world-modeling-with-panoramic-gaussian-scaffold&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;从单张窄视场图像生成可交互导航的场景&quot;}">MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold</a>
   * 2026-06-16 <!--dpr-date:20260616-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/16/2606.15848v1-emozone-talker-regional-semantic-control-of-audio-driven-3dgs-talking-heads-via-facial-action-units" data-sidebar-item="{&quot;title&quot;: &quot;EmoZone-Talker: Regional Semantic Control of Audio-Driven 3DGS Talking Heads via Facial Action Units&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.15848v1-emozone-talker-regional-semantic-control-of-audio-driven-3dgs-talking-heads-via-facial-action-units&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;音频驱动说话头合成，通过面部动作单元实现细粒度唇同步与表情控制&quot;}">EmoZone-Talker: Regional Semantic Control of Audio-Driven 3DGS Talking Heads via Facial Action Units</a>
