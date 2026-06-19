@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-19 <!--dpr-date:20260619-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/19/2606.19495v1-loosecontrolvideo-directorial-video-control-using-spatial-blocking" data-sidebar-item="{&quot;title&quot;: &quot;LooseControlVideo: Directorial Video Control using Spatial Blocking&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.19495v1-loosecontrolvideo-directorial-video-control-using-spatial-blocking&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;在Wan 2.2骨干网络上微调实现视频生成的3D控制&quot;}">LooseControlVideo: Directorial Video Control using Spatial Blocking</a>
   * 2026-06-17 <!--dpr-date:20260617-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/17/2606.13376v1-moverse-real-time-video-world-modeling-with-panoramic-gaussian-scaffold" data-sidebar-item="{&quot;title&quot;: &quot;MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.13376v1-moverse-real-time-video-world-modeling-with-panoramic-gaussian-scaffold&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;从单张窄视场图像生成可交互导航的场景&quot;}">MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold</a>

@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-19",
+  "date": "2026-06-19",
+  "generated_at": "2026-06-19T21:42:24",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/19/2606.19495v1-loosecontrolvideo-directorial-video-control-using-spatial-blocking",
+      "section": "deep",
+      "title_en": "LooseControlVideo: Directorial Video Control using Spatial Blocking",
+      "authors": "Shariq Farooq Bhat, Niloy J. Mitra, Kalyan Sunkavalli",
+      "date": "2026-06-17",
+      "pdf": "https://arxiv.org/pdf/2606.19495v1",
+      "score": "8.0",
+      "evidence": "在Wan 2.2骨干网络上微调实现视频生成的3D控制",
+      "tldr": "文本到视频生成中，精确3D空间编排仍具挑战，深度条件模型需密集帧级指导，作者负担重。本文提出松散控制视频框架，通过在Wan 2.2骨干网络上微调，使用稀疏定向3D框作为遮挡代理，实现直观导演式控制。用户指定高层布局和轨迹，模型生成逼真遮挡、动态和交互。该方法减轻了动态场景的创作劳动，展示了基于Wan模型的视频生成控制新范式。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Precise 3D spatial orchestration in text-to-video generation remains a significant challenge, particularly for multi-object scenes where semantic layout and temporal dynamics are often entangled. While existing depth-conditioned models achieve good structural fidelity, they necessitate dense, frame-accurate guidance that is labor-intensive to author for dynamic events involving deformable objects. We present LooseControlVideo, a framework that enables intuitive and expressive control by using sparse, oriented 3D boxes as a \"blocking\" proxy. This allows users to author high-level layout and trajectory while leveraging a video generative model to generate realistic occlusions, dynamics and interactions. We achieve this by fine-tuning a Wan 2.2 backbone on a video dataset annotated with DNOCS, a novel encoding for 3D size, orientation and depth-ordered occlusions. Furthermore, our method allows for localized refinement, such as adjusting a jump trajectory or adding an interaction, with minimal disruption to the global scene context. Extensive evaluations on the nuScenes, HO-3D, and BEHAVE benchmarks demonstrate that LooseControlVideo significantly outperforms existing 2D-box and flow-based baselines. Our findings indicate a 1.2x to 3x improvement in Trajectory Error; 2x improvement in Rigid Motion Consistency; and a 1.5x to 2x increase in Occlusion Accuracy over current state-of-the-art layout-conditioned models, demonstrating that oriented 3D primitives provide good geometric prior for complex, multi-agent video authoring.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
