@@ -1,0 +1,54 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-20T20:15:02.664770+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.19073v1",
+      "source": "arxiv",
+      "title": "Taming I2V models for Image HOI Editing: A Cognitive Benchmark and Agentic Self-Correcting Framework",
+      "abstract": "Current image editing methods excel at static attributes but fail at complex Human-Object Interactions (HOI), a critical challenge unaddressed by existing benchmarks that conflate HOI with static attributes, relying on global metrics incapable of simultaneously assessing dynamic interaction validity and entangled human-object pair preservation. Thus, we first introduce HOI-Edit, a comprehensive benchmark with three progressive cognitive levels, which features an automated metric HOI-Eval that reliably evaluates instance-level interaction by letting VLM Q&A after thinking with images containing grounded Human-Object pairs. Considering the task's essence of remodeling dynamic relationships, we benchmark Image-to-Video (I2V) models, finding them inherently suited for dynamic editing due to their temporal generation capabilities. Crucially, beyond superior performance, this capability provides a \"replay of the failure process,\" offering unique diagnosability into why errors occur. We thus propose SCPE (Self-Correcting Process Editing), a novel, agentic self-correcting framework that constrains the generation of I2V models through iteratively refined prompts, enabling the generated videos to more accurately present the target HOI. Extracted frames from these videos are the final editing results. On HOI-Edit, SCPE achieves performance competitive with state-of-the-art (SOTA) editing models like Nano Banana on interaction. Code is available at https://github.com/oceanflowlab/HOI-Edit.",
+      "authors": [
+        "Jiayi Gao",
+        "Qingchao Chen",
+        "Yuxin Peng",
+        "Yang Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-17T13:44:26+00:00",
+      "link": "https://arxiv.org/pdf/2606.19073v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Directly benchmarks and utilizes Image-to-Video (I2V) models for human-object interaction editing",
+      "llm_evidence_cn": "直接基准测试并利用I2V模型进行人-物交互编辑",
+      "llm_evidence": "直接基准测试并利用I2V模型进行人-物交互编辑",
+      "canonical_evidence": "直接基准测试并利用I2V模型进行人-物交互编辑",
+      "llm_tldr_en": "Proposes a cognitive benchmark and agentic framework for taming I2V models in human-object interaction editing, addressing limitations of static image editing.",
+      "llm_tldr_cn": "针对当前图像编辑在复杂人-物交互上失效的问题，提出HOI-Edit认知基准与自校正框架，利用I2V模型重塑动态关系，并设计自动化评估指标HOI-Eval，有效提升了交互编辑的可靠性与实例级评估能力，为复杂场景下的视频生成提供了可控编辑方法。",
+      "llm_tldr": "针对当前图像编辑在复杂人-物交互上失效的问题，提出HOI-Edit认知基准与自校正框架，利用I2V模型重塑动态关系，并设计自动化评估指标HOI-Eval，有效提升了交互编辑的可靠性与实例级评估能力，为复杂场景下的视频生成提供了可控编辑方法。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}

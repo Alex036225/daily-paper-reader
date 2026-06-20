@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-20 <!--dpr-date:20260620-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/20/2606.19073v1-taming-i2v-models-for-image-hoi-editing-a-cognitive-benchmark-and-agentic-self-correcting-framework" data-sidebar-item="{&quot;title&quot;: &quot;Taming I2V models for Image HOI Editing: A Cognitive Benchmark and Agentic Self-Correcting Framework&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.19073v1-taming-i2v-models-for-image-hoi-editing-a-cognitive-benchmark-and-agentic-self-correcting-framework&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;直接基准测试并利用I2V模型进行人-物交互编辑&quot;}">Taming I2V models for Image HOI Editing: A Cognitive Benchmark and Agentic Self-Correcting Framework</a>
   * 2026-06-19 <!--dpr-date:20260619-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/19/2606.19495v1-loosecontrolvideo-directorial-video-control-using-spatial-blocking" data-sidebar-item="{&quot;title&quot;: &quot;LooseControlVideo: Directorial Video Control using Spatial Blocking&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.19495v1-loosecontrolvideo-directorial-video-control-using-spatial-blocking&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;在Wan 2.2骨干网络上微调实现视频生成的3D控制&quot;}">LooseControlVideo: Directorial Video Control using Spatial Blocking</a>

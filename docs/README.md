@@ -6,23 +6,23 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-19
-- 运行时间：2026-06-19 21:42:17 UTC
+- 最新运行日期：2026-06-20
+- 运行时间：2026-06-20 20:16:40 UTC
 - 运行状态：成功
 - 本次总论文数：1
 - 精读区：1
 - 速读区：0
 
 ### 今日简报（AI）
-今日精读一篇视频生成控制新作，探索用空间阻隔实现导演级视频操控。  
-研究发现通过松散的空间约束，可在无需精确掩码的情况下，大幅提升对视频内容布局与运动轨迹的控制灵活度。  
-若你关心AI视频创作，建议关注其“空间阻隔”框架，它或将成为简化视频分镜编排的关键技术。
-- 详情：[/202606/19/README](/202606/19/README)
+今天切中“人-物交互”编辑的软肋：用视频生成模型修图，首次祭出认知基准与自纠代理框架，得分8.0。  
+揭示了I2V模型在HOI编辑中的典型认知错位，且代理式自纠正闭环能显著拉高编辑可信度。  
+建议亲手试用其认知基准工具链，并尝试把自纠正思路迁移到你的图像/视频合成流。
+- 详情：[/202606/20/README](/202606/20/README)
 
 ### 精读区论文标签
-1. [LooseControlVideo: Directorial Video Control using Spatial Blocking](/202606/19/2606.19495v1-loosecontrolvideo-directorial-video-control-using-spatial-blocking)  
+1. [Taming I2V models for Image HOI Editing: A Cognitive Benchmark and Agentic Self-Correcting Framework](/202606/20/2606.19073v1-taming-i2v-models-for-image-hoi-editing-a-cognitive-benchmark-and-agentic-self-correcting-framework)  
    标签：评分：8.0/10、query:wan-av-gen
-   evidence：在Wan 2.2骨干网络上微调实现视频生成的3D控制
+   evidence：直接基准测试并利用I2V模型进行人-物交互编辑
 
 ### 速读区论文标签
 - 本次无速读推荐。
