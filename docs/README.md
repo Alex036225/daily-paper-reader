@@ -6,23 +6,19 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-20
-- 运行时间：2026-06-20 20:16:40 UTC
+- 最新运行日期：2026-06-21
+- 运行时间：2026-06-21 20:36:49 UTC
 - 运行状态：成功
-- 本次总论文数：1
-- 精读区：1
+- 本次总论文数：0
+- 精读区：0
 - 速读区：0
 
 ### 今日简报（AI）
-今天切中“人-物交互”编辑的软肋：用视频生成模型修图，首次祭出认知基准与自纠代理框架，得分8.0。  
-揭示了I2V模型在HOI编辑中的典型认知错位，且代理式自纠正闭环能显著拉高编辑可信度。  
-建议亲手试用其认知基准工具链，并尝试把自纠正思路迁移到你的图像/视频合成流。
-- 详情：[/202606/20/README](/202606/20/README)
+> 今日无新推荐，系统未产出可展示论文。
+- 详情：[/202606/21/README](/202606/21/README)
 
 ### 精读区论文标签
-1. [Taming I2V models for Image HOI Editing: A Cognitive Benchmark and Agentic Self-Correcting Framework](/202606/20/2606.19073v1-taming-i2v-models-for-image-hoi-editing-a-cognitive-benchmark-and-agentic-self-correcting-framework)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：直接基准测试并利用I2V模型进行人-物交互编辑
+- 本次无精读推荐。
 
 ### 速读区论文标签
 - 本次无速读推荐。
