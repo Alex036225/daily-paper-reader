@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-22",
+  "date": "2026-06-22",
+  "generated_at": "2026-06-22T22:40:11",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/22/2606.19958v1-sketchkeyanime-reference-anchored-sparse-key-sketch-animation-synthesis",
+      "section": "deep",
+      "title_en": "SketchKeyAnime: Reference-anchored Sparse Key-Sketch Animation Synthesis",
+      "authors": "Meixi Li, Xianlin Zhang, Yue Zhang, Xueming Li",
+      "date": "2026-06-18",
+      "pdf": "https://arxiv.org/pdf/2606.19958v1",
+      "score": "8.0",
+      "evidence": "从单张参考图像和稀疏关键草图生成动画，代表图像条件的视频生成。",
+      "tldr": "传统动画制作依赖密集手工绘制，现有视频生成方法需密集边界帧或完整草图序列，难以用于低成本输入。SketchKeyAnime 创新地从单张参考图与少量带时间戳的关键草图出发，设计双分支条件机制编码局部几何与语义时序，通过草图交叉注意力融合条件，并采用自适应加权损失强化关键帧监督。在 Sakuga-42M 数据集上，该方法 EDMD 降低 31.9%，FVD 降低 9.5%，展现出卓越的草图保真度与时间一致性。这验证了稀疏草图动画合成的高效性，为低成本高可控动画创作开辟了新路径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Traditional animation production relies heavily on manual drawing and iterative refinement, particularly for key-pose design, in-betweening, and character coloring. While existing animation and video generation methods have made notable progress, they typically depend on RGB boundary frames, dense frame-wise conditions, or complete sketch sequences, limiting their applicability under low-cost input conditions. We present SketchKeyAnime, a video diffusion framework for generating structurally controllable, appearance-consistent, and temporally coherent animations from sparse key-sketch inputs. Given a single reference RGB image and a few temporally indexed key sketches, SketchKeyAnime introduces a dual-branch conditioning mechanism to encode local geometric constraints alongside semantic-temporal context. It leverages Sketch Cross Attention to fuse reference image and sketch conditions with learnable gating, and incorporates an Adaptive Weighted Loss to strengthen supervision on key-sketch frames and line-art regions. Experimental results on the Aesthetic subset of Sakuga-42M show that our approach consistently outperforms representative animation interpolation and sketch-guided generation baselines. Compared to the best-performing baseline, SketchKeyAnime reduces EDMD by 31.9\\% and FVD by 9.5\\%, demonstrating superior sketch fidelity and temporal coherence, while achieving the best overall performance across most quantitative metrics. These results validate the proposed framework and highlight its potential for low-cost, highly controllable animation creation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

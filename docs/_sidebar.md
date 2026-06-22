@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-22 <!--dpr-date:20260622-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/22/2606.19958v1-sketchkeyanime-reference-anchored-sparse-key-sketch-animation-synthesis" data-sidebar-item="{&quot;title&quot;: &quot;SketchKeyAnime: Reference-anchored Sparse Key-Sketch Animation Synthesis&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.19958v1-sketchkeyanime-reference-anchored-sparse-key-sketch-animation-synthesis&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;从单张参考图像和稀疏关键草图生成动画，代表图像条件的视频生成。&quot;}">SketchKeyAnime: Reference-anchored Sparse Key-Sketch Animation Synthesis</a>
   * 2026-06-20 <!--dpr-date:20260620-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/20/2606.19073v1-taming-i2v-models-for-image-hoi-editing-a-cognitive-benchmark-and-agentic-self-correcting-framework" data-sidebar-item="{&quot;title&quot;: &quot;Taming I2V models for Image HOI Editing: A Cognitive Benchmark and Agentic Self-Correcting Framework&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.19073v1-taming-i2v-models-for-image-hoi-editing-a-cognitive-benchmark-and-agentic-self-correcting-framework&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;直接基准测试并利用I2V模型进行人-物交互编辑&quot;}">Taming I2V models for Image HOI Editing: A Cognitive Benchmark and Agentic Self-Correcting Framework</a>

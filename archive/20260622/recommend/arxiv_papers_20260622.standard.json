@@ -1,0 +1,54 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-22T22:38:51.117246+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.19958v1",
+      "source": "arxiv",
+      "title": "SketchKeyAnime: Reference-anchored Sparse Key-Sketch Animation Synthesis",
+      "abstract": "Traditional animation production relies heavily on manual drawing and iterative refinement, particularly for key-pose design, in-betweening, and character coloring. While existing animation and video generation methods have made notable progress, they typically depend on RGB boundary frames, dense frame-wise conditions, or complete sketch sequences, limiting their applicability under low-cost input conditions. We present SketchKeyAnime, a video diffusion framework for generating structurally controllable, appearance-consistent, and temporally coherent animations from sparse key-sketch inputs. Given a single reference RGB image and a few temporally indexed key sketches, SketchKeyAnime introduces a dual-branch conditioning mechanism to encode local geometric constraints alongside semantic-temporal context. It leverages Sketch Cross Attention to fuse reference image and sketch conditions with learnable gating, and incorporates an Adaptive Weighted Loss to strengthen supervision on key-sketch frames and line-art regions. Experimental results on the Aesthetic subset of Sakuga-42M show that our approach consistently outperforms representative animation interpolation and sketch-guided generation baselines. Compared to the best-performing baseline, SketchKeyAnime reduces EDMD by 31.9\\% and FVD by 9.5\\%, demonstrating superior sketch fidelity and temporal coherence, while achieving the best overall performance across most quantitative metrics. These results validate the proposed framework and highlight its potential for low-cost, highly controllable animation creation.",
+      "authors": [
+        "Meixi Li",
+        "Xianlin Zhang",
+        "Yue Zhang",
+        "Xueming Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-18T08:56:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.19958v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Generates animations from a single reference image and sparse key sketches, exemplifying image-conditioned video generation.",
+      "llm_evidence_cn": "从单张参考图像和稀疏关键草图生成动画，代表图像条件的视频生成。",
+      "llm_evidence": "从单张参考图像和稀疏关键草图生成动画，代表图像条件的视频生成。",
+      "canonical_evidence": "从单张参考图像和稀疏关键草图生成动画，代表图像条件的视频生成。",
+      "llm_tldr_en": "SketchKeyAnime generates controllable animations from a single reference image and sparse key sketches using a video diffusion model with dual-branch conditioning, enabling low-cost animation synthesis.",
+      "llm_tldr_cn": "现有动画生成依赖密集条件或完整草图序列，SketchKeyAnime提出从单张参考图像和稀疏关键草图生成动画的视频扩散框架。方法采用双分支条件机制编码局部几何和全局外观，实现结构可控、外观一致且时序连贯的动画合成。实验表明，该方法在低输入成本下能生成高质量动画，为动漫制作提供了高效工具。",
+      "llm_tldr": "现有动画生成依赖密集条件或完整草图序列，SketchKeyAnime提出从单张参考图像和稀疏关键草图生成动画的视频扩散框架。方法采用双分支条件机制编码局部几何和全局外观，实现结构可控、外观一致且时序连贯的动画合成。实验表明，该方法在低输入成本下能生成高质量动画，为动漫制作提供了高效工具。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
