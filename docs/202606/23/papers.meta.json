@@ -1,0 +1,69 @@
+{
+  "label": "2026-06-23",
+  "date": "2026-06-23",
+  "generated_at": "2026-06-23T22:14:57",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202606/23/2606.22905v1-interactiveavatar-real-time-streaming-video-generation-for-consistent-and-intent-aware-avatars",
+      "section": "deep",
+      "title_en": "InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars",
+      "authors": "Quanyue Song, Yishan He, Yanfei Zhang, Shihao Cheng, Zhixiang He, Zhizhi Guo, Chi Zhang, Xuelong Li, Caigui Jiang",
+      "date": "2026-06-22",
+      "pdf": "https://arxiv.org/pdf/2606.22905v1",
+      "score": "9.0",
+      "evidence": "音频驱动的化身生成，保持视觉时间一致性",
+      "tldr": "现有扩散模型在实时音频驱动虚拟人生成中，难以保持长时间视觉一致性且无法感知用户意图。本文提出InteractiveAvatar框架，结合自回归蒸馏实现无限时长实时流式生成，引入长短期视觉记忆机制压缩历史信息以保持连贯性，并设计推理-反应模块实现意图对齐的语音动作生成。实验表明，该方法在长时间生成中视觉一致性最佳，并支持复杂实时交互。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Recent diffusion-based models have enabled realistic audio-driven avatar generation in real-time streaming. However, existing approaches struggle to maintain visual temporal consistency and fail to explicitly perceive user intent in complex interactive streaming scenarios. To address these challenges, we propose InteractiveAvatar, a real-time infinite-streaming video generation framework that supports visually consistent avatar video generation and intent-aware interactions. With autoregressive distillation, InteractiveAvatar achieves real-time str-eaming generation of human avatars over arbitrarily long durations. For visual consistency, we introduce a Long-Short Visual Memory (LSVM) mechanism that flexibly compresses historical visual information into compact tokens, preserving both short-range coherence and long-term consistency. To generate avatars with speeches and actions aligned with user intent, we propose a Reasoning-Reaction Module (RRM), which incorporates a State-Cycling strategy and a Cache-Switching mechanism. Extensive experimental results over diverse scenarios demonstrate that our method achieves state-of-the-art visual consistency in long-duration generation, while enabling complex user-avatar interaction in real time.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/23/2606.21970v1-integrating-facial-generation-into-full-duplex-spoken-dialogue-systems",
+      "section": "deep",
+      "title_en": "Integrating Facial Generation into Full-Duplex Spoken Dialogue Systems",
+      "authors": "Jingjing Jiang, Atsumoto Ohashi, Ryuichiro Higashinaka",
+      "date": "2026-06-20",
+      "pdf": "https://arxiv.org/pdf/2606.21970v1",
+      "score": "8.0",
+      "evidence": "从音频和用户面部输入联合生成语音和面部运动，实现音频驱动的唇形同步。",
+      "tldr": "全双工语音对话系统如Moshi仅支持音频交互，缺少面部表情。Moshi-Face首次联合处理用户音频和面部输入，通过VQ-VAE面部编解码器将3D网格转换为离散令牌，并扩展Transformer模块非自回归生成同步面部运动。实验显示，模型在低延迟下实现音视频对齐，且保持原有对话质量，为更自然的人机交互奠定了基础。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Full-duplex spoken dialogue models, such as Moshi, enable natural, low-latency voice conversations. However, they remain limited to the audio modality, lacking the facial expressions that are integral to human communication. We present Moshi-Face, the first full-duplex dialogue model that jointly processes the user's audio and facial input while simultaneously generating speech and facial motion. We first construct a vector-quantized variational autoencoder (VQ-VAE) as a face codec that encodes 3D head meshes extracted from facial videos into compact discrete tokens, referred to as face tokens, and conversely reconstructs 3D meshes from these tokens. We then extend Moshi with a Face Transformer module that generates face tokens non-autoregressively, enabling Moshi-Face to produce synchronized audio and face tokens in real time. Experiments show that Moshi-Face achieves audiovisual alignment at low latency while preserving the dialogue quality of the original audio-only model.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/23/2606.22347v1-customizing-video-portraits-via-identity-actiondecoupling",
+      "section": "deep",
+      "title_en": "Customizing Video Portraits via Identity-ActionDecoupling",
+      "authors": "Junxiong Lin, Haoran Wang, Xinji Mai, Zeng Tao, Xuan Tong, Ivy Pan, Wenqiang Zhang",
+      "date": "2026-06-21",
+      "pdf": "https://arxiv.org/pdf/2606.22347v1",
+      "score": "8.0",
+      "evidence": "在身份保留的图像到视频生成中控制面部动态以实现更自然的唇部运动",
+      "tldr": "现有的身份保留文本-视频生成方法因忽略了面部嵌入中的身份无关信息，导致面部运动单调或不准确。本文提出身份-动作解耦（IaD）框架，通过身份解耦损失和文本对齐损失，将身份与动作分离，从参考图像生成时序一致、身份一致且面部动态自然的视频，尤其改善了唇部运动。实验表明，该方法无需微调即可生成自然流畅的唇部运动。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Identity-Preserving Text-to-Video Generation (IPT2V) seeks to synthesize a temporally coherent video from a reference image and a textual description, while simultaneously preserving the subject's identity and allowing fine-grained control over facial dynamics. Although recent methods such as ID-Animator and ConsisID inject identity features only at inference time, they ignored the ID-irrelevant information contained in Facial embedding, leading to monotonous or inaccurate facial movements that poorly follow the prompt. We introduce Identity-Action Decoupling (IaD) framework as well as two loss function Identity Decoupling Loss and Text Alignment Loss to solve this problem. Without any subject-specific fine-tuning, IaD yields videos that (1) maintain cross-temporal identity consistency and (2) exhibit rich, controllable expressions and scene variations that closely match the input text.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/23/2606.22772v1-locc-detection-and-localization-of-lip-syncing-deepfakes-via-counterfactual-frame-consistency",
+      "section": "quick",
+      "title_en": "LoCC: Detection and Localization of Lip-Syncing Deepfakes via Counterfactual Frame Consistency",
+      "authors": "Soumyya Kanti Datta, Shan Jia, Siwei Lyu",
+      "date": "2026-06-22",
+      "pdf": "https://arxiv.org/pdf/2606.22772v1",
+      "score": "6.0",
+      "evidence": "通过建模帧一致性检测并定位唇形同步深度伪造，直接关系唇形同步评估",
+      "tldr": "LoCC提出一种反事实帧一致性框架，通过衡量视频帧与基于相邻帧生成的反事实估计之间的不一致性，在片段和帧级别上精细检测和定位唇形同步深度伪造。该方法揭示真实视频与伪造视频在唇部区域的时序不稳定差异，不仅提升深伪检测性能，也为评估和改进唇形同步生成质量提供了思路。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Lip-syncing deepfakes are among the most challenging forms of manipulated media because their artifacts are localized almost exclusively to the mouth region and evolve dynamically over time. Detecting such deepfakes requires precise temporal and spatial modeling of lip motion. In this paper, we propose LoCC, a novel detection framework that performs fine-grained detection and localization of lip-syncing deepfakes at both segment and frame levels. Unlike prior approaches that analyze videos holistically, our method evaluates whether each frame aligns with a counterfactual estimate generated from its temporal neighbors. Real videos exhibit strong and stable consistency, whereas lip-sync deepfakes introduce localized inconsistencies. Following a teacher-student learning paradigm, our model effectively captures these frame-level discrepancies and achieves superior performance over state-of-the-art methods on multiple benchmark lip-syncing deepfake datasets, including LAV-DF, AVDF1M, FakeAVCeleb, and KODF, and generalizes well across compression levels and datasets.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
