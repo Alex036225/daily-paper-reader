@@ -1,0 +1,54 @@
+{
+  "label": "2026-06-24",
+  "date": "2026-06-24",
+  "generated_at": "2026-06-24T21:41:42",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202606/24/2606.20774v1-trimotion-modality-agnostic-camera-control-for-video-generation",
+      "section": "deep",
+      "title_en": "TriMotion: Modality-Agnostic Camera Control for Video Generation",
+      "authors": "Seunghyun Shin, Jifei Song, Wooseok Jeon, Hae-Gon Jeon, Jiankang Deng",
+      "date": "2026-06-18",
+      "pdf": "https://arxiv.org/pdf/2606.20774v1",
+      "score": "8.0",
+      "evidence": "模态无关的相机控制视频生成框架",
+      "tldr": "视频生成中的相机运动控制至关重要，但现有方法仅支持单一控制模态，难以融合视频、位姿和文本描述。TriMotion提出模态无关框架，通过共享运动嵌入空间统一映射异构输入，并基于几何外参构建Motion Triplet数据集，及潜在运动一致性损失，驱动生成视频在潜在空间精确跟随目标轨迹。实验显示，该方法能生成高质量视频，准确跟随三种输入模态下的相机轨迹，并避免了像素空间解码开销。此外，共享嵌入空间支持顺序运动合成与跨模态运动插值，扩展了视频生成的应用场景。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Camera motion control is essential for directing viewpoint changes in generative systems. However, existing methods typically condition the generation process on a single specific modality, such as explicit pose trajectories or reference videos, limiting their ability to support heterogeneous user inputs. To address this limitation, we present TriMotion, a modality-agnostic framework for camera-controlled video generation that maps video, pose, and text inputs, describing the same camera trajectory into a shared motion embedding space. Learning such a space requires synchronized supervision across modalities. Therefore, we build the Motion Triplet Dataset by extending a Multi-Cam Video Dataset with geometry-grounded motion descriptions derived from camera extrinsics. We further introduce a latent motion consistency objective that leverages the motion embedding space to encourage the generated video to follow the target camera trajectory directly in latent space, avoiding the cost of pixel-space decoding. Extensive experiments show that TriMotion generates high-quality videos that accurately follow the target camera trajectories across all three modalities. Beyond standard generation, the shared motion embedding space also enables flexible applications such as sequential motion composition and cross-modal motion interpolation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/24/2606.22835v1-orthomotiondisentangling-camera-and-subject-motion-via-geometry-semantics-orthogonal-attention",
+      "section": "quick",
+      "title_en": "OrthoMotion:Disentangling Camera and Subject Motion via Geometry Semantics Orthogonal Attention",
+      "authors": "Zijie Meng",
+      "date": "2026-06-22",
+      "pdf": "https://arxiv.org/pdf/2606.22835v1",
+      "score": "7.0",
+      "evidence": "视频生成中解耦相机与主体运动控制",
+      "tldr": "可控视频生成需要独立控制相机与主体运动，但二维条件使两者在光流中基于逆深度比例纠缠，无法分离。OrthoMotion通过几何语义正交注意力解耦：将相机运动建模为RoPE相位的保范旋转，主体运动建模为交叉注意力的门控值注入，并以代数互补性和解耦正则化器确保响应子空间正交。该方法同时取得最优相机与主体精度，将串扰降低超2.4倍且无保真度损失，首次通过构造而非涌现实现运动解耦。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Controllable video generation demands independent command of the camera and the subject, yet 2D conditioning entangles them: camera- and object-induced optical flow share the same inverse-depth (1/Z) scaling and cannot be separated from image evidence alone. We first prove that this entanglement is representational, not architectural -- the 2D camera/object split is a non-identifiable inverse problem -- and therefore reframe decoupling as a question of operator design. We resolve it at the level of the attention operator. OrthoMotion routes camera motion into a geometric channel, a norm-preserving rotation of the rotary position embedding (RoPE) phase, and subject motion into a semantic channel, a gated value injection in cross-attention. Because these sub-operators are algebraically complementary -- a rotation versus a translation of the affine action on tokens -- a lightweight decoupling regularizer provably drives their response subspaces to orthogonality, so the two controls stop interfering. To our knowledge OrthoMotion is the first method to guarantee disentanglement by construction rather than hope for it to emerge. It attains state-of-the-art camera and subject accuracy at once while minimizing cross-talk, which we quantify with a new Cross-Talk Error (CTE) metric, cutting cross-talk by more than 2.4x with no loss in fidelity and generalizing across backbones.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/24/2606.23041v1-spar-semantic-pixel-self-alignment-and-adaptive-routing-for-unified-multimodal-models",
+      "section": "quick",
+      "title_en": "SPAR: Semantic-Pixel Self-Alignment and Adaptive Routing for Unified Multimodal Models",
+      "authors": "Hongxiang Li, Hongxu Chen, Chenyang Zhu, Xiaoshuang Huang, Jiayin Cai, Xiaolong Jiang, Yao Hu, Long Chen",
+      "date": "2026-06-22",
+      "pdf": "https://arxiv.org/pdf/2606.23041v1",
+      "score": "7.0",
+      "evidence": "统一多模态框架桥接语义感知与像素生成",
+      "tldr": "多模态大语言模型在视觉理解上成功，但视觉生成受限于语义感知与像素重建的特征差异。本文提出SPAR框架，通过非对称双流分词器实现语义-像素自对齐，并采用动态令牌路由自适应聚合特征。实验表明SPAR在统一架构中取得最优生成与重建质量，同时保持强大视觉理解能力，推动了统一多模态模型的发展。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Multimodal Large Language Models (MLLMs) have achieved remarkable success in visual understanding but remain constrained in visual generation due to the fundamental feature discrepancy between semantic perception and pixel-level reconstruction. Bridging this gap requires overcoming two core challenges: endowing semantic encoders with high-fidelity reconstruction capabilities, and effectively aligning generative models with semantic spaces without relying on external teachers. To this end, we propose a novel unified multimodal framework featuring \\textbf{S}emantic-\\textbf{P}ixel self-alignment and \\textbf{A}daptive \\textbf{R}outing (\\textbf{SPAR}). First, to reconcile semantic perception with pixel-level reconstruction, we introduce an asymmetric dual-stream unified tokenizer. A lightweight semantic stream anchors discriminative features, while a Transformer-augmented pixel stream recovers fine-grained visual details into a unified compact latent space. Second, to eliminate external dependencies, we propose a self-aligned generation paradigm that natively leverages this optimized tokenizer as an internal alignment teacher for the diffusion model. Furthermore, to facilitate flexible multimodal interaction within this unified space, we introduce Dynamic Token Routing, which enables each token to adaptively aggregate multi-layer MLLM features based on its distinct semantic demands. Extensive experiments demonstrate that SPAR establishes the state-of-the-art for unified architectures, achieving exceptional generation and reconstruction quality while preserving foundational visual understanding capabilities.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

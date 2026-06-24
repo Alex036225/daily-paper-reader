@@ -1,0 +1,136 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-24T21:37:43.706651+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.20774v1",
+      "source": "arxiv",
+      "title": "TriMotion: Modality-Agnostic Camera Control for Video Generation",
+      "abstract": "Camera motion control is essential for directing viewpoint changes in generative systems. However, existing methods typically condition the generation process on a single specific modality, such as explicit pose trajectories or reference videos, limiting their ability to support heterogeneous user inputs. To address this limitation, we present TriMotion, a modality-agnostic framework for camera-controlled video generation that maps video, pose, and text inputs, describing the same camera trajectory into a shared motion embedding space. Learning such a space requires synchronized supervision across modalities. Therefore, we build the Motion Triplet Dataset by extending a Multi-Cam Video Dataset with geometry-grounded motion descriptions derived from camera extrinsics. We further introduce a latent motion consistency objective that leverages the motion embedding space to encourage the generated video to follow the target camera trajectory directly in latent space, avoiding the cost of pixel-space decoding. Extensive experiments show that TriMotion generates high-quality videos that accurately follow the target camera trajectories across all three modalities. Beyond standard generation, the shared motion embedding space also enables flexible applications such as sequential motion composition and cross-modal motion interpolation.",
+      "authors": [
+        "Seunghyun Shin",
+        "Jifei Song",
+        "Wooseok Jeon",
+        "Hae-Gon Jeon",
+        "Jiankang Deng"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-06-18T16:07:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.20774v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "modality-agnostic framework for camera-controlled video generation",
+      "llm_evidence_cn": "模态无关的相机控制视频生成框架",
+      "llm_evidence": "模态无关的相机控制视频生成框架",
+      "canonical_evidence": "模态无关的相机控制视频生成框架",
+      "llm_tldr_en": "TriMotion proposes a modality-agnostic framework for camera-controlled video generation that maps video, pose, and text inputs into a shared motion embedding space, enabling heterogeneous input for viewpoint control.",
+      "llm_tldr_cn": "现有相机运动控制方法依赖单一模态输入，如姿态轨迹或参考视频，难以支持多样化用户输入。TriMotion提出一种模态无关框架，将描述同一相机轨迹的视频、姿态和文本输入映射到共享运动嵌入空间，实现相机运动的统一控制。该方法构建了运动三元组数据集，扩展多相机视频数据并融入几何推导的运动描述，实验表明其能有效支持多种模态的相机控制视频生成。",
+      "llm_tldr": "现有相机运动控制方法依赖单一模态输入，如姿态轨迹或参考视频，难以支持多样化用户输入。TriMotion提出一种模态无关框架，将描述同一相机轨迹的视频、姿态和文本输入映射到共享运动嵌入空间，实现相机运动的统一控制。该方法构建了运动三元组数据集，扩展多相机视频数据并融入几何推导的运动描述，实验表明其能有效支持多种模态的相机控制视频生成。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.22835v1",
+      "source": "arxiv",
+      "title": "OrthoMotion:Disentangling Camera and Subject Motion via Geometry Semantics Orthogonal Attention",
+      "abstract": "Controllable video generation demands independent command of the camera and the subject, yet 2D conditioning entangles them: camera- and object-induced optical flow share the same inverse-depth (1/Z) scaling and cannot be separated from image evidence alone. We first prove that this entanglement is representational, not architectural -- the 2D camera/object split is a non-identifiable inverse problem -- and therefore reframe decoupling as a question of operator design. We resolve it at the level of the attention operator. OrthoMotion routes camera motion into a geometric channel, a norm-preserving rotation of the rotary position embedding (RoPE) phase, and subject motion into a semantic channel, a gated value injection in cross-attention. Because these sub-operators are algebraically complementary -- a rotation versus a translation of the affine action on tokens -- a lightweight decoupling regularizer provably drives their response subspaces to orthogonality, so the two controls stop interfering. To our knowledge OrthoMotion is the first method to guarantee disentanglement by construction rather than hope for it to emerge. It attains state-of-the-art camera and subject accuracy at once while minimizing cross-talk, which we quantify with a new Cross-Talk Error (CTE) metric, cutting cross-talk by more than 2.4x with no loss in fidelity and generalizing across backbones.",
+      "authors": [
+        "Zijie Meng"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-22T04:15:14+00:00",
+      "link": "https://arxiv.org/pdf/2606.22835v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "video generation with disentangled camera and subject motion control",
+      "llm_evidence_cn": "视频生成中解耦相机与主体运动控制",
+      "llm_evidence": "视频生成中解耦相机与主体运动控制",
+      "canonical_evidence": "视频生成中解耦相机与主体运动控制",
+      "llm_tldr_en": "OrthoMotion tackles the entanglement of camera and subject motion in controllable video generation by redesigning the attention operator to separate geometric and semantic motion channels.",
+      "llm_tldr_cn": "可控视频生成要求独立控制相机与主体，但2D条件信号将二者纠缠。OrthoMotion证明该纠缠源于表示层面的非可辨识性，并在注意力算子层面解耦：将相机运动路由至几何通道，通过RoPE相位旋转实现；主体运动路由至语义通道，通过跨注意力门控注入。该方法有效分离了运动源，提升了视频生成的可控性。",
+      "llm_tldr": "可控视频生成要求独立控制相机与主体，但2D条件信号将二者纠缠。OrthoMotion证明该纠缠源于表示层面的非可辨识性，并在注意力算子层面解耦：将相机运动路由至几何通道，通过RoPE相位旋转实现；主体运动路由至语义通道，通过跨注意力门控注入。该方法有效分离了运动源，提升了视频生成的可控性。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.23041v1",
+      "source": "arxiv",
+      "title": "SPAR: Semantic-Pixel Self-Alignment and Adaptive Routing for Unified Multimodal Models",
+      "abstract": "Multimodal Large Language Models (MLLMs) have achieved remarkable success in visual understanding but remain constrained in visual generation due to the fundamental feature discrepancy between semantic perception and pixel-level reconstruction. Bridging this gap requires overcoming two core challenges: endowing semantic encoders with high-fidelity reconstruction capabilities, and effectively aligning generative models with semantic spaces without relying on external teachers. To this end, we propose a novel unified multimodal framework featuring \\textbf{S}emantic-\\textbf{P}ixel self-alignment and \\textbf{A}daptive \\textbf{R}outing (\\textbf{SPAR}). First, to reconcile semantic perception with pixel-level reconstruction, we introduce an asymmetric dual-stream unified tokenizer. A lightweight semantic stream anchors discriminative features, while a Transformer-augmented pixel stream recovers fine-grained visual details into a unified compact latent space. Second, to eliminate external dependencies, we propose a self-aligned generation paradigm that natively leverages this optimized tokenizer as an internal alignment teacher for the diffusion model. Furthermore, to facilitate flexible multimodal interaction within this unified space, we introduce Dynamic Token Routing, which enables each token to adaptively aggregate multi-layer MLLM features based on its distinct semantic demands. Extensive experiments demonstrate that SPAR establishes the state-of-the-art for unified architectures, achieving exceptional generation and reconstruction quality while preserving foundational visual understanding capabilities.",
+      "authors": [
+        "Hongxiang Li",
+        "Hongxu Chen",
+        "Chenyang Zhu",
+        "Xiaoshuang Huang",
+        "Jiayin Cai",
+        "Xiaolong Jiang",
+        "Yao Hu",
+        "Long Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-22T08:48:19+00:00",
+      "link": "https://arxiv.org/pdf/2606.23041v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "unified multimodal framework bridging semantic perception and pixel generation",
+      "llm_evidence_cn": "统一多模态框架桥接语义感知与像素生成",
+      "llm_evidence": "统一多模态框架桥接语义感知与像素生成",
+      "canonical_evidence": "统一多模态框架桥接语义感知与像素生成",
+      "llm_tldr_en": "SPAR proposes a unified multimodal model with semantic-pixel self-alignment and adaptive routing to overcome the discrepancy between semantic understanding and visual generation in MLLMs.",
+      "llm_tldr_cn": "多模态大语言模型在视觉理解上成功，但因语义感知与像素级重建的特征差异而受限。SPAR提出语义-像素自对齐和自适应路由框架，通过自对齐机制赋予语义编码器高保真重建能力，并无需外部教师对齐生成模型与语义空间，实现了理解和生成的统一。实验表明该方法在多种任务上取得了先进性能。",
+      "llm_tldr": "多模态大语言模型在视觉理解上成功，但因语义感知与像素级重建的特征差异而受限。SPAR提出语义-像素自对齐和自适应路由框架，通过自对齐机制赋予语义编码器高保真重建能力，并无需外部教师对齐生成模型与语义空间，实现了理解和生成的统一。实验表明该方法在多种任务上取得了先进性能。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
