@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-25 <!--dpr-date:20260625-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/25/2606.25041v1-wan-streamer-v01-end-to-end-real-time-interactive-foundation-models" data-sidebar-item="{&quot;title&quot;: &quot;Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.25041v1-wan-streamer-v01-end-to-end-real-time-interactive-foundation-models&quot;, &quot;score&quot;: &quot;10.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;使用WAN架构的端到端音视频交互模型&quot;}">Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models</a>
   * 2026-06-24 <!--dpr-date:20260624-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/24/2606.20774v1-trimotion-modality-agnostic-camera-control-for-video-generation" data-sidebar-item="{&quot;title&quot;: &quot;TriMotion: Modality-Agnostic Camera Control for Video Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.20774v1-trimotion-modality-agnostic-camera-control-for-video-generation&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;模态无关的相机控制视频生成框架&quot;}">TriMotion: Modality-Agnostic Camera Control for Video Generation</a>
