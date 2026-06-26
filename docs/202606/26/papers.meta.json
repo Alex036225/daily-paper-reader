@@ -1,0 +1,54 @@
+{
+  "label": "2026-06-26",
+  "date": "2026-06-26",
+  "generated_at": "2026-06-26T20:50:59",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202606/26/2606.25041v2-wan-streamer-v01-end-to-end-real-time-interactive-foundation-models",
+      "section": "deep",
+      "title_en": "Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models",
+      "authors": "Lianghua Huang, Zhi-Fan Wu, Wei Wang, Yupeng Shi, Mengyang Feng, Junjie He, Chen-Wei Xie, Yu Liu, Jingren Zhou, Ang Wang, Bang Zhang, Baole Ai, Chen Liang, Cheng Yu, Chongyang Zhong, Jinwei Qi, Kai Zhu, Pandeng Li, Peng Zhang, Wenyuan Zhang, Xinhua Cheng, Yitong Huang, Yun Zheng, Zoubin Bi",
+      "date": "2026-06-23",
+      "pdf": "https://arxiv.org/pdf/2606.25041v2",
+      "score": "10.0",
+      "evidence": "提出Wan-Streamer，一种端到端的实时音视频交互基础模型，在单个Transformer中统一语言、音频和视频生成。",
+      "tldr": "当前实时视听交互系统多依赖级联模块，导致高延迟和误差累积。Wan-Streamer提出端到端流式基础模型，在一个Transformer中统一处理语言、音频、视频的输入输出，利用块因果注意力与低延迟多模态令牌调度实现160ms流式单元。模型侧响应延迟约200ms，总交互延迟约550ms，支持亚秒级双工通信。该工作消除了对外部模块的依赖，为低延迟多模态交互提供了统一范式。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We present Wan-Streamer, a native-streaming, end-to-end interactive foundation model designed from the ground up for real-time, low-latency, full-duplex audio-visual interaction. Wan-Streamer seamlessly models language, audio, and video as both input and output within a single Transformer, where the sequence is represented as interleaved visual, audio, and text input tokens together with visual, audio, and text output tokens, coordinated by block-causal attention for incremental streaming. Unlike cascaded interactive systems that rely on separate VAD, ASR, language, TTS, audio-driven animation, or video-generation modules, Wan-Streamer does not rely on external language, speech, avatar, or video-generation modules: perception, reasoning, generation, response timing, turn management, and cross-modal synchronization are learned jointly within one unified model, reducing pipeline latency and error accumulation. To support natural audio-visual responsiveness, we redesign the entire stack around streamability, including causal encoders, causal decoders, block-causal attention, and low-latency multimodal token scheduling, enabling streaming units as short as 160 ms at 25 fps. Wan-Streamer achieves approximately 200 ms model-side response latency and approximately 550 ms total interaction latency when combined with 350 ms bidirectional network latency, supporting sub-second duplex audio-visual communication. These results position Wan-Streamer as a unified, end-to-end, multimodal interactive foundation model for low-latency streaming interaction.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/26/2606.20891v1-go-with-the-track-video-compositing-and-motion-control-with-point-tracking",
+      "section": "deep",
+      "title_en": "Go-with-the-Track: Video Compositing and Motion Control with Point Tracking",
+      "authors": "Koichi Namekata, Yash Kant, Zhizheng Liu, Ryan D Burgert, Yuancheng Xu, Kuan Heng Lin, Emmett Steven, Julien Philip, Li Ma, Andrea Vedaldi, Paul Debevec, Ning Yu",
+      "date": "2026-06-18",
+      "pdf": "https://arxiv.org/pdf/2606.20891v1",
+      "score": "8.0",
+      "evidence": "提出基于参考图像和点跟踪的图像到视频生成方法，实现精确运动控制",
+      "tldr": "电影制作中的视频生成常面临参考图像合成与运动控制难以统一的挑战。Go-with-the-Track通过联合多参考图像和参考锚定点追踪条件，提出空间感知点追踪嵌入，实现精确的逐帧合成与运动控制。在混合训练策略下，单模型即达到优越的运动与参考控制效果，并支持多参考视频生成、点追踪驱动合成以及相机控制等新功能，为视频编辑提供灵活高效的工具。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Filmmaking demands precise motion control and reference image compositing -- capabilities that existing methods treat separately. Point-track-conditioned image-to-video models restrict content insertion to the first frame, while reference-to-video models lack fine-grained spatial-temporal control over how reference content integrates across frames.   We present Go-with-the-Track, which unifies both capabilities by jointly conditioning on multiple reference images and reference-anchored point-tracks -- extending conventional point-tracks to explicitly establish correspondences between generated frames and reference images, thus enabling precise compositing and motion control throughout the video.   To achieve this, we introduce spatially-aware point-track embeddings that encode the full sequence of point-track coordinates using a coordinate-wise MLP followed by temporal pooling. This representation captures the spatial characteristics of each point-track (serving as a unique identifier), while the embedding similarity correlates directly with spatial proximity, enhancing the model's ability to distinguish and associate point-tracks. We inject these point-track embeddings into a video diffusion transformer via a lightweight adapter, resolving the pixel-to-patch resolution mismatch while avoiding the substantial motion detail loss inherent in naive point-track subsampling.   We use a hybrid training strategy to train jointly on dynamic, static, and synthetic scene video datasets to boost motion controllability. Experiments demonstrate that Go-with-the-Track achieves superior motion and reference control in a single model and enables new capabilities: multi-reference conditioned video generation with point-track driven compositing, as well as camera control for both static and dynamic scenes. Project Page: https://eyeline-labs.github.io/Go-with-the-Track/",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/26/2606.25040v1-chorus-ii-cross-request-sparsity-reuse-for-efficient-image-to-video-generation",
+      "section": "deep",
+      "title_en": "Chorus II: Cross-Request Sparsity Reuse for Efficient Image-to-Video Generation",
+      "authors": "Hao Liu, Chenghuan Huang, Hao Liu, Xing Cai, Chen Li, Ziyang Ma, Jing Lyu, Nong Xiao, Jiangsu Du",
+      "date": "2026-06-23",
+      "pdf": "https://arxiv.org/pdf/2606.25040v1",
+      "score": "8.0",
+      "evidence": "提出跨请求稀疏复用以实现高效图像到视频生成",
+      "tldr": "图像到视频扩散模型因推理成本高而难以大规模部署，实际请求常包含重复效果和布局。现有加速方法多利用特征复用，但未考虑稀疏注意力模式的跨请求一致性。本文提出Chorus II框架，以跨请求稀疏掩码复用为核心，复用历史高质量稀疏掩码避免在线预测，并可选结合特征复用与轻量引导增强以避免语义漂移。实验表明，默认配置下生成质量无损，推理速度提升2.16倍。该工作为高效图像到视频服务提供了实用的跨请求加速方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Serving diffusion models for image-to-video generation is computationally expensive, posing significant challenges for large-scale deployment. Real I2V workloads often contain similar requests, such as repeated effect templates, related subjects, and recurring shot layouts. Existing cross-request acceleration methods mainly exploit this redundancy through feature reuse. We observe that similar I2V requests also share highly consistent sparse attention patterns, enabling historical sparse masks to serve as request-conditioned priors with almost no online mask-prediction overhead. We propose a cross-request reuse framework centered on \\textbf{sparsity reuse}, with \\textbf{feature reuse} as an optional extension safeguarded by a lightweight \\textbf{guidance enhancement}. Our sparsity reuse is implemented as shared sparse mask reuse, which reuses high-quality sparse masks from similar historical requests to avoid per-request online mask prediction. Optional feature reuse applies downsampled computation to highly redundant spatiotemporal regions, mitigating boundary artifacts while preserving efficiency gains. Guidance enhancement reinforces image/text conditioning after reuse, mitigating semantic drift and condition-adherence issues. Experiments show that default sparsity reuse configuration preserves generation quality with a \\textbf{2.16$\\times$} speedup.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
