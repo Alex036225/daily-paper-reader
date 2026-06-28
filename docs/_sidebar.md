@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-28 <!--dpr-date:20260628-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/28/2606.24232v1-fica-feed-forward-instant-gaussian-codec-avatars-from-a-single-portrait-image" data-sidebar-item="{&quot;title&quot;: &quot;FiCA: Feed-forward instant Gaussian Codec Avatars from a Single Portrait Image&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.24232v1-fica-feed-forward-instant-gaussian-codec-avatars-from-a-single-portrait-image&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;从单张肖像图像生成可驱动的3D化身，实现单图到视频的说话头像生成&quot;}">FiCA: Feed-forward instant Gaussian Codec Avatars from a Single Portrait Image</a>
   * 2026-06-26 <!--dpr-date:20260626-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/26/2606.25041v2-wan-streamer-v01-end-to-end-real-time-interactive-foundation-models" data-sidebar-item="{&quot;title&quot;: &quot;Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.25041v2-wan-streamer-v01-end-to-end-real-time-interactive-foundation-models&quot;, &quot;score&quot;: &quot;10.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;提出Wan-Streamer，一种端到端的实时音视频交互基础模型，在单个Transformer中统一语言、音频和视频生成。&quot;}">Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models</a>
