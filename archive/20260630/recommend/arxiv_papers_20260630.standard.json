@@ -1,0 +1,158 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-30T21:19:54.701077+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.25041v3",
+      "source": "arxiv",
+      "title": "Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models",
+      "abstract": "We present Wan-Streamer, a native-streaming, end-to-end interactive foundation model designed from the ground up for real-time, low-latency, full-duplex audio-visual interaction. Wan-Streamer seamlessly models language, audio, and video as both input and output within a single Transformer, where the sequence is represented as interleaved visual, audio, and text input tokens together with visual, audio, and text output tokens, coordinated by block-causal attention for incremental streaming. Unlike cascaded interactive systems that rely on separate VAD, ASR, language, TTS, audio-driven animation, or video-generation modules, Wan-Streamer does not rely on external language, speech, avatar, or video-generation modules: perception, reasoning, generation, response timing, turn management, and cross-modal synchronization are learned jointly within one unified model, reducing pipeline latency and error accumulation. To support natural audio-visual responsiveness, we redesign the entire stack around streamability, including causal encoders, causal decoders, block-causal attention, and low-latency multimodal token scheduling, enabling streaming units as short as 160 ms at 25 fps. Wan-Streamer achieves approximately 200 ms model-side response latency and approximately 550 ms total interaction latency when combined with 350 ms bidirectional network latency, supporting sub-second duplex audio-visual communication. These results position Wan-Streamer as a unified, end-to-end, multimodal interactive foundation model for low-latency streaming interaction.",
+      "authors": [
+        "Lianghua Huang",
+        "Zhi-Fan Wu",
+        "Wei Wang",
+        "Yupeng Shi",
+        "Mengyang Feng",
+        "Junjie He",
+        "Chen-Wei Xie",
+        "Yu Liu",
+        "Jingren Zhou",
+        "Ang Wang",
+        "Bang Zhang",
+        "Baole Ai",
+        "Chen Liang",
+        "Cheng Yu",
+        "Chongyang Zhong",
+        "Jinwei Qi",
+        "Kai Zhu",
+        "Pandeng Li",
+        "Peng Zhang",
+        "Wenyuan Zhang",
+        "Xinhua Cheng",
+        "Yitong Huang",
+        "Yun Zheng",
+        "Yuzheng Wang",
+        "Zoubin Bi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.SD"
+      ],
+      "published": "2026-06-23T18:01:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.25041v3",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Wan-Streamer is an end-to-end multimodal foundation model for audio-visual interaction, directly aligning with WAN architecture for multimodal generation",
+      "llm_evidence_cn": "Wan-Streamer是一个端到端多模态基础模型，用于音视频交互，直接对应WAN多模态生成架构",
+      "llm_evidence": "Wan-Streamer是一个端到端多模态基础模型，用于音视频交互，直接对应WAN多模态生成架构",
+      "canonical_evidence": "Wan-Streamer是一个端到端多模态基础模型，用于音视频交互，直接对应WAN多模态生成架构",
+      "llm_tldr_en": "Wan-Streamer is a native-streaming transformer that models language, audio, and video as both input and output, enabling real-time full-duplex audio-visual interaction without external modules.",
+      "llm_tldr_cn": "Wan-Streamer是一个原生流式端到端交互基础模型，通过单一Transformer联合建模语言、音频和视频的输入与输出，实现实时全双工音视频交互，无需外部语音或视频生成模块。该方法解决了传统级联系统模块繁多、延迟高的问题，在统一架构下完成感知、推理与生成。实验表明其能实现低延迟高质量的多模态交互，为实时音视频AI应用提供了新的基础框架。",
+      "llm_tldr": "Wan-Streamer是一个原生流式端到端交互基础模型，通过单一Transformer联合建模语言、音频和视频的输入与输出，实现实时全双工音视频交互，无需外部语音或视频生成模块。该方法解决了传统级联系统模块繁多、延迟高的问题，在统一架构下完成感知、推理与生成。实验表明其能实现低延迟高质量的多模态交互，为实时音视频AI应用提供了新的基础框架。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "WAN architecture for multimodal generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.30145v1",
+      "source": "arxiv",
+      "title": "FacePlex: Full-Duplex Joint Speech-Facial Motion Generation for Conversational Avatars",
+      "abstract": "Natural face-to-face conversation requires real-time speech generation together with synchronized facial motion. Existing systems only partially address this problem: speech-only full-duplex models can generate speech in real time but do not produce facial motion, while audio-driven facial motion models animate a face from already available audio rather than jointly generating speech and motion online. To bridge this gap, we first formalize full-duplex joint speech-facial motion generation, where speech tokens and facial motion tokens are produced together every step. Building on this formulation, we propose FacePlex, a unified streaming framework with two key components. First, Rolling Flow Matching adapts flow matching to online motion generation by committing new motion frames at each streaming step. Second, Rolling Cross-Attention couples the streaming audio queue with the motion queue, allowing speech and facial motion to condition each other as generation progresses. Through extensive experiments, ablation studies, and a user study, we show that FacePlex enables full-duplex joint speech-facial motion generation under online streaming constraints, while achieving stronger lip-sync quality and motion fidelity than audio-driven facial motion baselines.",
+      "authors": [
+        "Habin Lim",
+        "Jae-Ho Lee",
+        "Hah Min Lew",
+        "Ji-Su Kang",
+        "Gyeong-Moon Park"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-06-29T11:22:50+00:00",
+      "link": "https://arxiv.org/pdf/2606.30145v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Joint speech-facial motion generation with audio-driven lip motion synthesis for avatars",
+      "llm_evidence_cn": "面向化身的音频驱动唇动合成联合语音面部运动生成",
+      "llm_evidence": "面向化身的音频驱动唇动合成联合语音面部运动生成",
+      "canonical_evidence": "面向化身的音频驱动唇动合成联合语音面部运动生成",
+      "llm_tldr_en": "FacePlex introduces a full-duplex streaming framework that jointly generates speech and audio-driven facial motion (including lip sync) in real time for conversational avatars, using Rolling Flow Matching and a two-stage training scheme.",
+      "llm_tldr_cn": "针对现有对话系统无法实时同时生成语音与同步面部运动的问题，本文提出FacePlex，一种全双工流式框架，将语音生成与音频驱动的面部运动（包括唇动）统一为每一步联合生成过程。通过滚动流匹配和两阶段训练，模型实现低延迟的自然对话化身动画，显著提升了在线交互中的唇音同步精度。",
+      "llm_tldr": "针对现有对话系统无法实时同时生成语音与同步面部运动的问题，本文提出FacePlex，一种全双工流式框架，将语音生成与音频驱动的面部运动（包括唇动）统一为每一步联合生成过程。通过滚动流匹配和两阶段训练，模型实现低延迟的自然对话化身动画，显著提升了在线交互中的唇音同步精度。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.28568v1",
+      "source": "arxiv",
+      "title": "KM-Speaker: Keypoint-Based Style Control for High-Quality Speech-Driven 3D Facial Animation and Dialogue Localization",
+      "abstract": "Speech-driven 3D facial animation methods face significant challenges in simultaneously achieving high-fidelity motion and precise artistic control at production quality. Existing controllable models typically learn global style control by relying on large-scale, low-quality \\emph{in-the-wild} datasets that compromise overall animation realism. Furthermore, these frameworks often lack the fine-grained temporal precision required for demanding tasks such as dialogue localization (e.g., dubbing), where matching specific facial expressions is as critical as lip synchronization. We present KM-Speaker (Keypoint-Matching Speaker), a novel keypoint-conditioned flow-based generative framework that provides both global style guidance and frame-level temporal control from reference performances. We propose a disentanglement strategy that separates audio-driven lip motion from keypoint-driven upper-face dynamics, together with a global style context preservation mechanism to ensure coherent full-face expressiveness. KM-Speaker advances example-based 3D facial animation by achieving high-fidelity motion and flexible controllability in a data-constrained setting, consistently outperforming state-of-the-art methods in lip-sync accuracy, style adherence, and expressive temporal control.",
+      "authors": [
+        "Arthur Josi",
+        "Emeline Got",
+        "Abdallah Dib",
+        "Luiz Gustavo Hafemann",
+        "Rafael M. O. Cruz"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "published": "2026-06-26T19:48:44+00:00",
+      "link": "https://arxiv.org/pdf/2606.28568v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "speech-driven 3D facial animation with precise lip synchronization and dialogue localization",
+      "llm_evidence_cn": "语音驱动3D面部动画，具有精确唇形同步和对话定位",
+      "llm_evidence": "语音驱动3D面部动画，具有精确唇形同步和对话定位",
+      "canonical_evidence": "语音驱动3D面部动画，具有精确唇形同步和对话定位",
+      "llm_tldr_en": "KM-Speaker introduces a keypoint-conditioned flow-based generative framework for high-quality speech-driven 3D facial animation, achieving global style control and fine-grained temporal precision for tasks like dubbing with accurate lip sync.",
+      "llm_tldr_cn": "语言驱动的3D面部动画方法难以同时实现高保真运动和精确的艺术控制，且缺乏细粒度时序精度用于配音等需要精确唇形同步的任务。该论文提出KM-Speaker，一种基于关键点调节的流式生成框架，在提供全局风格控制的同时，通过关键点匹配实现毫秒级时序精度。实验表明，该方法在唇形同步和面部表情再现上均优于现有技术，为高质量语音动画和配音应用提供了有力工具。",
+      "llm_tldr": "语言驱动的3D面部动画方法难以同时实现高保真运动和精确的艺术控制，且缺乏细粒度时序精度用于配音等需要精确唇形同步的任务。该论文提出KM-Speaker，一种基于关键点调节的流式生成框架，在提供全局风格控制的同时，通过关键点匹配实现毫秒级时序精度。实验表明，该方法在唇形同步和面部表情再现上均优于现有技术，为高质量语音动画和配音应用提供了有力工具。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
