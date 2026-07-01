@@ -1,0 +1,186 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-01T20:57:06.217372+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.30849v1",
+      "source": "arxiv",
+      "title": "SyncCache: Exploiting Asymmetric Dynamics for Fast Audio-Driven Portrait Animation",
+      "abstract": "Diffusion Transformers (DiTs) have significantly advanced audio-driven portrait animation, but their high computational cost leads to substantial inference latency. Although training-free diffusion caching accelerates inference significant, existing methods are primarily developed for text-conditioned generation and overlook the spatial and modality imbalances inherent in audio-driven portrait animation. In this paper, we propose SyncCache, a training-free caching acceleration method tailored for DiT-based portrait animation that explicitly exploits asymmetric dynamics. Specifically, high-frequency dynamics driven by audio conditions and concentrated in human regions are more challenging and critical to cache and reuse than the low-frequency visual background in portrait animation. First, we introduce Spatially-Asymmetric Probing to prioritize error sensitivity in dynamic human region. Second, through Modality-Decoupled Caching, we bypass heavy DiT block by reusing stable inter-block residuals, while continuously recomputing lightweight audio blocks to preserve precise lip synchronization. Furthermore, we introduce a cache ratio to control cache capacity and formulate memory-adaptive cache selection as an offline dynamic programming problem without online overhead. Extensive experiments demonstrate that SyncCache achieves superior speed-quality trade-offs, delivering up to 4.12x acceleration on HunyuanVideo-Avatar and 3.75x on Wan-S2V with near-lossless visual fidelity and precise audio alignment.",
+      "authors": [
+        "Juncheng Ma",
+        "Yuxuan Du",
+        "Yanan Sun",
+        "Zhening Xing",
+        "Changlin Li",
+        "Zhenyu Tang",
+        "Bo Li",
+        "Peng-Tao Jiang",
+        "Li Yuan",
+        "Daquan Zhou",
+        "Yonghong Tian"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "published": "2026-06-29T19:26:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.30849v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "audio-driven portrait animation with asymmetric dynamics caching",
+      "llm_evidence_cn": "音频驱动的肖像动画，利用非对称动力学缓存加速",
+      "llm_evidence": "音频驱动的肖像动画，利用非对称动力学缓存加速",
+      "canonical_evidence": "音频驱动的肖像动画，利用非对称动力学缓存加速",
+      "llm_tldr_en": "SyncCache proposes a training-free caching method for DiT-based audio-driven portrait animation, leveraging asymmetric spatial and modality dynamics to significantly reduce inference latency while maintaining generation quality.",
+      "llm_tldr_cn": "针对扩散变换器在音频驱动肖像动画中推理成本高的问题，SyncCache提出训练无关的缓存加速方法，显式利用音频条件驱动的高频动态与人体区域空间不平衡性。在保持动画质量的同时大幅降低时延，为实时肖像动画提供了高效解决方案。",
+      "llm_tldr": "针对扩散变换器在音频驱动肖像动画中推理成本高的问题，SyncCache提出训练无关的缓存加速方法，显式利用音频条件驱动的高频动态与人体区域空间不平衡性。在保持动画质量的同时大幅降低时延，为实时肖像动画提供了高效解决方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.29337v1",
+      "source": "arxiv",
+      "title": "W4A4 Quantization for Inference on Wan2.2-I2V-A14B",
+      "abstract": "We summarize our submission to Sub-Challenge 1: W4A4 Quantization for Inference (HiF4 / MXFP4) of the ICME 2026 Low-Bit-width Large-Model Quantization Challenge. The sub-challenge targets 4-bit weight and 4-bit activation inference on Wan-AI/Wan2.2-I2V-A14B under HiF4 or MXFP4 numerical formats. We adapt two complementary ideas from LLM quantization, MixQ-style mixed precision for sparse activation outliers and SmoothQuant-style per-channel smoothing, together with block-wise HiF4 packing for Wan2.2 feed-forward linear layers. Calibration on representative OpenS2V-5M batches identifies heavy-tailed activation channels; smoothing rebalances dynamic range before W4A4 rounding; and a dual-branch GEMM preserves outlier columns in higher precision while the bulk of channels use strict W4A4. On official VBench I2V metrics, our pipeline stays within 2-3.5 percent of FP16 on most quality axes and improves motion smoothness, outperforming a native HiFloat4 baseline that degrades roughly 5 percent relative to FP16 across all reported scores.",
+      "authors": [
+        "Yidong Chen",
+        "Chengyu Shi",
+        "Jiahao Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.DC"
+      ],
+      "published": "2026-06-28T11:12:52+00:00",
+      "link": "https://arxiv.org/pdf/2606.29337v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Quantization method applied to Wan2.2-I2V-A14B image-to-video model.",
+      "llm_evidence_cn": "应用于Wan2.2-I2V-A14B图像到视频模型的量化方法。",
+      "llm_evidence": "应用于Wan2.2-I2V-A14B图像到视频模型的量化方法。",
+      "canonical_evidence": "应用于Wan2.2-I2V-A14B图像到视频模型的量化方法。",
+      "llm_tldr_en": "This paper adapts mixed-precision and smoothing techniques for 4-bit weight and 4-bit activation quantization on the Wan2.2-I2V-A14B model, enabling efficient inference for image-to-video generation.",
+      "llm_tldr_cn": "该文针对Wan2.2-I2V-A14B图像到视频模型，提出了W4A4量化方案。通过MixQ风格混合精度处理激活异常值、SmoothQuant方式逐通道平滑，以及块级HiF4打包，实现权重与激活的4比特定量化。校准阶段识别出重尾分布通道，平滑后重新平衡动态范围；双分支GEMM保留异常列高精度，其余通道低位计算。该方法有效压缩模型，降低推理开销，为WAN I2V模型的高效部署提供了量化方案。",
+      "llm_tldr": "该文针对Wan2.2-I2V-A14B图像到视频模型，提出了W4A4量化方案。通过MixQ风格混合精度处理激活异常值、SmoothQuant方式逐通道平滑，以及块级HiF4打包，实现权重与激活的4比特定量化。校准阶段识别出重尾分布通道，平滑后重新平衡动态范围；双分支GEMM保留异常列高精度，其余通道低位计算。该方法有效压缩模型，降低推理开销，为WAN I2V模型的高效部署提供了量化方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.30811v1",
+      "source": "arxiv",
+      "title": "AVTok: 1D Unified Tokenization for Holistic Audio-Video Generation",
+      "abstract": "Audio-video generation has recently gained unprecedented research attention, aiming to synthesize high-quality sounding video content with fine-grained synchronization and semantic alignment between the auditory and visual components. The preceding methods predominantly adopt a dual-branch design with separate tokenization and generation modules per modality, neglecting the representation gap while necessitating intensive computational resources for proper training. Inspired by recent advancements in one-dimensional visual tokenization, we present \\textbf{AVTok}, a novel unified tokenizer designated for holistic audio-video generation. AVTok features a dual-stream transformer-based architecture with shared encoder-decoder and modal-specific learnable queries to efficiently and effectively encode an audio-video pair into a compact one-dimensional latent representation with a unified codebook. To cope with the heterogeneous information imbalance that hinders AVTok from exploiting aligned audio-visual information, we devise a hierarchical training strategy to progressively realize reconstruction capabilities for each modality. Extensive experiments demonstrate that AVTok excels both in audio-video reconstruction and when integrated into downstream pipelines for audio-to-video, video-to-audio, and class-conditional joint audio-video generation. AVTok paves the way for the challenge of joint audio-video tokenization and provides a potential direction to build unified large multimodal models for audio-video generation.",
+      "authors": [
+        "Kien T. Pham",
+        "I Chieh Chen",
+        "Qifeng Chen",
+        "Long Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.MM",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "published": "2026-06-29T18:35:17+00:00",
+      "link": "https://arxiv.org/pdf/2606.30811v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "unified tokenizer for holistic audio-video generation, synthesizing sounding video with synchronization",
+      "llm_evidence_cn": "用于整体音视频生成的统一分词器，合成具有同步性的有声视频",
+      "llm_evidence": "用于整体音视频生成的统一分词器，合成具有同步性的有声视频",
+      "canonical_evidence": "用于整体音视频生成的统一分词器，合成具有同步性的有声视频",
+      "llm_tldr_en": "Proposes AVTok, a unified 1D tokenizer for audio-video generation using a dual-stream transformer, achieving high-quality synthesis with fine-grained synchronization.",
+      "llm_tldr_cn": "针对音视频生成中双分支设计带来的表示差距和资源消耗问题，提出AVTok统一分词器。采用双流Transformer架构，共享编码器-解码器并设置模态特定可学习查询，实现一维统一表示。实验表明该方法能高质量合成音视频，具有细粒度同步性，为音视频生成提供了高效统一的方案。",
+      "llm_tldr": "针对音视频生成中双分支设计带来的表示差距和资源消耗问题，提出AVTok统一分词器。采用双流Transformer架构，共享编码器-解码器并设置模态特定可学习查询，实现一维统一表示。实验表明该方法能高质量合成音视频，具有细粒度同步性，为音视频生成提供了高效统一的方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.29473v1",
+      "source": "arxiv",
+      "title": "MAVIN: Multi-Shot Audio-Visual Generation with Narrative Control",
+      "abstract": "While recent generative models produce high-fidelity videos, they struggle with the complex narrative control required for coherent multi-shot audio-visual generation. Existing methods suffer from temporal misalignment, limited controllability, and incomplete scripting. In this paper, we propose MAVIN, the first framework for multi-shot audio-visual generation with customized narrative control. To resolve temporal misalignment, we propose boundary-aware attention, which leverages hierarchical captions and boundary-aware token routing to render audio-visual elements within their respective temporal boundaries. To improve the controllability for multi-subject scenarios, we propose ID-aware propagation, utilizing identity embeddings and an identity-aware mask to bind specific identities to consistent visual appearances and vocal timbres. To provide comprehensive audio-visual narratives, we present a multi-agent scripting pipeline to transform free-form user inputs into hierarchical captions. Furthermore, we construct MAVINSet, a multi-shot audio-visual dataset for robust training and evaluation. Extensive experiments demonstrate that MAVIN achieves state-of-the-art performance, opening up a new avenue for integrating generative models into professional filmmaking workflows.",
+      "authors": [
+        "Kaiqi Liu",
+        "Yunyao Mao",
+        "Ziqi Cai",
+        "Zheng Geng",
+        "Jing Wang",
+        "Qiulin Wang",
+        "Xintao Wang",
+        "Pengfei Wan",
+        "Kun Gai",
+        "Shuchen Weng",
+        "Boxin Shi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-28T16:01:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.29473v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "multi-shot audio-visual generation with boundary-aware attention and ID-aware propagation for temporal alignment",
+      "llm_evidence_cn": "多镜头音视频生成，使用边界感知注意力和身份感知传播实现时序对齐",
+      "llm_evidence": "多镜头音视频生成，使用边界感知注意力和身份感知传播实现时序对齐",
+      "canonical_evidence": "多镜头音视频生成，使用边界感知注意力和身份感知传播实现时序对齐",
+      "llm_tldr_en": "Proposes MAVIN, a framework for multi-shot audio-visual generation with narrative control, resolving temporal misalignment and improving controllability.",
+      "llm_tldr_cn": "针对多镜头音视频生成中的时序错位和可控性不足问题，提出MAVIN框架。采用边界感知注意力和身份感知传播，利用层次化描述和边界令牌路由确保音视频元素在时间边界内渲染。实现了具有叙事控制的高质量多镜头音视频合成，为复杂视频生成提供了解决方案。",
+      "llm_tldr": "针对多镜头音视频生成中的时序错位和可控性不足问题，提出MAVIN框架。采用边界感知注意力和身份感知传播，利用层次化描述和边界令牌路由确保音视频元素在时间边界内渲染。实现了具有叙事控制的高质量多镜头音视频合成，为复杂视频生成提供了解决方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

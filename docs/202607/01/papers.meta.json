@@ -1,0 +1,69 @@
+{
+  "label": "2026-07-01",
+  "date": "2026-07-01",
+  "generated_at": "2026-07-01T21:03:58",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202607/01/2606.30849v1-synccache-exploiting-asymmetric-dynamics-for-fast-audio-driven-portrait-animation",
+      "section": "deep",
+      "title_en": "SyncCache: Exploiting Asymmetric Dynamics for Fast Audio-Driven Portrait Animation",
+      "authors": "Juncheng Ma, Yuxuan Du, Yanan Sun, Zhening Xing, Changlin Li, Zhenyu Tang, Bo Li, Peng-Tao Jiang, Li Yuan, Daquan Zhou, Yonghong Tian",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.30849v1",
+      "score": "9.0",
+      "evidence": "音频驱动的肖像动画，利用非对称动力学缓存加速",
+      "tldr": "音频驱动肖像动画中扩散变换器推理延迟高，现有训练免费缓存方法忽略空间与模态不对称动态。SyncCache提出空间不对称探针以敏感情感区域，模态解耦缓存重用稳定残差而持续计算轻量音频块，并动态规划自适应缓存容量。在HunyuanVideo-Avatar上加速4.12倍，Wan-S2V上加速3.75倍，实现近无损视觉与精确口型对齐。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Diffusion Transformers (DiTs) have significantly advanced audio-driven portrait animation, but their high computational cost leads to substantial inference latency. Although training-free diffusion caching accelerates inference significant, existing methods are primarily developed for text-conditioned generation and overlook the spatial and modality imbalances inherent in audio-driven portrait animation. In this paper, we propose SyncCache, a training-free caching acceleration method tailored for DiT-based portrait animation that explicitly exploits asymmetric dynamics. Specifically, high-frequency dynamics driven by audio conditions and concentrated in human regions are more challenging and critical to cache and reuse than the low-frequency visual background in portrait animation. First, we introduce Spatially-Asymmetric Probing to prioritize error sensitivity in dynamic human region. Second, through Modality-Decoupled Caching, we bypass heavy DiT block by reusing stable inter-block residuals, while continuously recomputing lightweight audio blocks to preserve precise lip synchronization. Furthermore, we introduce a cache ratio to control cache capacity and formulate memory-adaptive cache selection as an offline dynamic programming problem without online overhead. Extensive experiments demonstrate that SyncCache achieves superior speed-quality trade-offs, delivering up to 4.12x acceleration on HunyuanVideo-Avatar and 3.75x on Wan-S2V with near-lossless visual fidelity and precise audio alignment.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/01/2606.29337v1-w4a4-quantization-for-inference-on-wan22-i2v-a14b",
+      "section": "deep",
+      "title_en": "W4A4 Quantization for Inference on Wan2.2-I2V-A14B",
+      "authors": "Yidong Chen, Chengyu Shi, Jiahao Liu",
+      "date": "2026-06-28",
+      "pdf": "https://arxiv.org/pdf/2606.29337v1",
+      "score": "8.0",
+      "evidence": "应用于Wan2.2-I2V-A14B图像到视频模型的量化方法。",
+      "tldr": "针对Wan2.2-I2V-A14B在4比特权重与激活量化下的精度损失，我们设计了一种结合MixQ混合精度异常值处理、SmoothQuant逐通道平滑及HiF4块级打包的校准推理方案。在VBench I2V评测中，质量维度仅下降2-3.5%，运动平滑度获得改善，远超原生HiFloat4基线（降级约5%）。该工作验证了异构精度量化策略在视频生成模型上的有效性，为低比特部署提供了参考。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We summarize our submission to Sub-Challenge 1: W4A4 Quantization for Inference (HiF4 / MXFP4) of the ICME 2026 Low-Bit-width Large-Model Quantization Challenge. The sub-challenge targets 4-bit weight and 4-bit activation inference on Wan-AI/Wan2.2-I2V-A14B under HiF4 or MXFP4 numerical formats. We adapt two complementary ideas from LLM quantization, MixQ-style mixed precision for sparse activation outliers and SmoothQuant-style per-channel smoothing, together with block-wise HiF4 packing for Wan2.2 feed-forward linear layers. Calibration on representative OpenS2V-5M batches identifies heavy-tailed activation channels; smoothing rebalances dynamic range before W4A4 rounding; and a dual-branch GEMM preserves outlier columns in higher precision while the bulk of channels use strict W4A4. On official VBench I2V metrics, our pipeline stays within 2-3.5 percent of FP16 on most quality axes and improves motion smoothness, outperforming a native HiFloat4 baseline that degrades roughly 5 percent relative to FP16 across all reported scores.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/01/2606.30811v1-avtok-1d-unified-tokenization-for-holistic-audio-video-generation",
+      "section": "deep",
+      "title_en": "AVTok: 1D Unified Tokenization for Holistic Audio-Video Generation",
+      "authors": "Kien T. Pham, I Chieh Chen, Qifeng Chen, Long Chen",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.30811v1",
+      "score": "8.0",
+      "evidence": "用于整体音视频生成的统一分词器，合成具有同步性的有声视频",
+      "tldr": "现有音视频生成方法多采用双分支独立标记与生成模块，忽略模态间表示差异且训练开销大。本文提出AVTok，一种基于双流Transformer的统一标记器，通过共享编解码器和模态特定可学习查询，将音视频对编码为紧凑的一维潜表示与统一码本。为缓解异构信息不平衡，采用分层训练策略逐步提升各模态重建能力。实验表明AVTok在音视频重建及下游音到视频、视频到音频、类条件联合生成任务中表现优异，为构建统一音视频大模型提供了可行方向。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Audio-video generation has recently gained unprecedented research attention, aiming to synthesize high-quality sounding video content with fine-grained synchronization and semantic alignment between the auditory and visual components. The preceding methods predominantly adopt a dual-branch design with separate tokenization and generation modules per modality, neglecting the representation gap while necessitating intensive computational resources for proper training. Inspired by recent advancements in one-dimensional visual tokenization, we present \\textbf{AVTok}, a novel unified tokenizer designated for holistic audio-video generation. AVTok features a dual-stream transformer-based architecture with shared encoder-decoder and modal-specific learnable queries to efficiently and effectively encode an audio-video pair into a compact one-dimensional latent representation with a unified codebook. To cope with the heterogeneous information imbalance that hinders AVTok from exploiting aligned audio-visual information, we devise a hierarchical training strategy to progressively realize reconstruction capabilities for each modality. Extensive experiments demonstrate that AVTok excels both in audio-video reconstruction and when integrated into downstream pipelines for audio-to-video, video-to-audio, and class-conditional joint audio-video generation. AVTok paves the way for the challenge of joint audio-video tokenization and provides a potential direction to build unified large multimodal models for audio-video generation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/01/2606.29473v1-mavin-multi-shot-audio-visual-generation-with-narrative-control",
+      "section": "quick",
+      "title_en": "MAVIN: Multi-Shot Audio-Visual Generation with Narrative Control",
+      "authors": "Kaiqi Liu, Yunyao Mao, Ziqi Cai, Zheng Geng, Jing Wang, Qiulin Wang, Xintao Wang, Pengfei Wan, Kun Gai, Shuchen Weng, Boxin Shi",
+      "date": "2026-06-28",
+      "pdf": "https://arxiv.org/pdf/2606.29473v1",
+      "score": "7.0",
+      "evidence": "多镜头音视频生成，使用边界感知注意力和身份感知传播实现时序对齐",
+      "tldr": "现有生成模型难以实现多镜头音视频生成的复杂叙事控制，面临时序错位与可控性不足。MAVIN提出边界感知注意力与身份感知传播，结合多智能体脚本流水线，解决时序对齐与多主体一致性。在构建的MAVINSet数据集上取得最优性能，为专业影视制作融入生成模型开辟新途径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "While recent generative models produce high-fidelity videos, they struggle with the complex narrative control required for coherent multi-shot audio-visual generation. Existing methods suffer from temporal misalignment, limited controllability, and incomplete scripting. In this paper, we propose MAVIN, the first framework for multi-shot audio-visual generation with customized narrative control. To resolve temporal misalignment, we propose boundary-aware attention, which leverages hierarchical captions and boundary-aware token routing to render audio-visual elements within their respective temporal boundaries. To improve the controllability for multi-subject scenarios, we propose ID-aware propagation, utilizing identity embeddings and an identity-aware mask to bind specific identities to consistent visual appearances and vocal timbres. To provide comprehensive audio-visual narratives, we present a multi-agent scripting pipeline to transform free-form user inputs into hierarchical captions. Furthermore, we construct MAVINSet, a multi-shot audio-visual dataset for robust training and evaluation. Extensive experiments demonstrate that MAVIN achieves state-of-the-art performance, opening up a new avenue for integrating generative models into professional filmmaking workflows.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
