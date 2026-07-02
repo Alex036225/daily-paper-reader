@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-02",
+  "date": "2026-07-02",
+  "generated_at": "2026-07-02T21:34:29",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/02/2607.00959v1-gaussianemotalker-real-time-emotional-talking-head-synthesis-with-audio-driven-and-blendshape-based-3d-gaussian-splatting",
+      "section": "deep",
+      "title_en": "GaussianEmoTalker: Real-Time Emotional Talking Head Synthesis with Audio-Driven and Blendshape-Based 3D Gaussian Splatting",
+      "authors": "Haijie Yang, Zhenyu Zhang, Yixuan Dong, Jianjun Qian, Jian Yang",
+      "date": "2026-07-01",
+      "pdf": "https://arxiv.org/pdf/2607.00959v1",
+      "score": "9.0",
+      "evidence": "音频驱动的说话头合成，实现唇形同步",
+      "tldr": "音频驱动说话头合成在唇同步和视觉质量上取得长足进步，但生成强度可控的情感表达仍具挑战，尤其在实时场景下。本文提出GaussianEmoTalker，将情感动画建模为中性到情感的残差变形，先构建身份特定的中性高斯混合形状空间，再通过空间-音频-情感注意力融合多模态信号，实现高效情感渲染。实验表明该方法在视频质量、唇同步、情感可控性及实时性上优于现有方案，为实时情感说话头合成提供了新途径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Audio-driven talking head synthesis has achieved impressive progress in lip synchronization and visual quality, yet generating expressive emotional avatars with controllable intensity remains challenging, especially under real-time constraints. In this paper, we present GaussianEmoTalker, an audio-driven framework for real-time emotional talking head synthesis based on 3D Gaussian Splatting. Instead of directly predicting the final emotional avatar from speech, we formulate emotional animation as a neutral-to-emotional residual deformation problem. GaussianEmoTalker first constructs an identity-specific neutral talking space with GaussianBlendshapes, which provides high-fidelity Gaussian attributes and phoneme-synchronized neutral motion. It then predicts an emotion-conditioned residual deformation by combining mesh displacement cues, audio features, emotion categories, and intensity encodings. To fuse these heterogeneous signals, we introduce a spatial-audio-emotion attention module that estimates the offsets of Gaussian attributes for expressive and temporally stable rendering. Extensive experiments demonstrate that GaussianEmoTalker achieves competitive video quality, accurate lip synchronization, controllable emotional expression, and real-time rendering compared with recent emotional talking head methods. Our project page is available at https://njust-yang.github.io/GaussianEmoTalker.github.io/",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/02/2607.00726v1-av-syncbench-decoupled-benchmarking-of-temporal-and-semantic-audio-visual-synchronization",
+      "section": "quick",
+      "title_en": "AV-SyncBench: Decoupled Benchmarking of Temporal and Semantic Audio-Visual Synchronization",
+      "authors": "Tianhong Zhou, Mingyang Han, Boyu Li, Yuxuan Jiang, Jiaxin Ye, Dongxiao Wang, Haoxiang Shi, Kunpeng Wang, Jun Song, Cheng Yu, Bo Zheng",
+      "date": "2026-07-01",
+      "pdf": "https://arxiv.org/pdf/2607.00726v1",
+      "score": "6.0",
+      "evidence": "针对视听同步时间与语义一致性的评估基准",
+      "tldr": "音视频特征提取是多模态理解与生成的基础，但现有评估协议存在维度偏差，常耦合语义匹配与时间偏移检测，无法独立评估时序与语义一致性。为此，AV-SyncBench首次将时间与语义评估解耦，基于野外视频构建数据集，涵盖语音、音乐、声音三大类，跨越10个场景并设计5项挑战任务，通过自动筛选与人工验证确保声源可视。数据集包含3269个视频、38390个样本，并测试了五个代表性模型，以量化特征在同步对齐及下游任务中的表现。评估结果揭示了不同模型在时间偏移敏感度和语义匹配上的差异。该基准为音视频同步研究提供了标准化的独立评估工具，促进模型优化。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Audio-visual feature extraction is a fundamental component of multimodal understanding and generation tasks. However, existing evaluation protocols for feature extraction models exhibit dimensional bias, typically focusing on either semantic matching or temporal offset detection. Moreover, their data construction remains coupled, preventing independent assessment of temporal and semantic consistency. We propose AV-SyncBench, the first benchmark to fully separate temporal and semantic evaluation for audio-visual synchronization. Built from in-the-wild videos, it spans Voice, Music, and Sound across 10 scenarios and 5 challenge tasks. Data are automatically filtered and manually verified to ensure on-screen sound sources. The benchmark contains 3,269 videos and 38,390 samples, and we evaluate five representative models to quantify feature quality for alignment and downstream tasks. The code and dataset are available at: https://fgt7t6g.github.io/AV-SyncBench.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

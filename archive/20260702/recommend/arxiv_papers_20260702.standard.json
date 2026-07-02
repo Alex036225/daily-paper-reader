@@ -1,0 +1,102 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-02T21:31:44.859270+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.00959v1",
+      "source": "arxiv",
+      "title": "GaussianEmoTalker: Real-Time Emotional Talking Head Synthesis with Audio-Driven and Blendshape-Based 3D Gaussian Splatting",
+      "abstract": "Audio-driven talking head synthesis has achieved impressive progress in lip synchronization and visual quality, yet generating expressive emotional avatars with controllable intensity remains challenging, especially under real-time constraints. In this paper, we present GaussianEmoTalker, an audio-driven framework for real-time emotional talking head synthesis based on 3D Gaussian Splatting. Instead of directly predicting the final emotional avatar from speech, we formulate emotional animation as a neutral-to-emotional residual deformation problem. GaussianEmoTalker first constructs an identity-specific neutral talking space with GaussianBlendshapes, which provides high-fidelity Gaussian attributes and phoneme-synchronized neutral motion. It then predicts an emotion-conditioned residual deformation by combining mesh displacement cues, audio features, emotion categories, and intensity encodings. To fuse these heterogeneous signals, we introduce a spatial-audio-emotion attention module that estimates the offsets of Gaussian attributes for expressive and temporally stable rendering. Extensive experiments demonstrate that GaussianEmoTalker achieves competitive video quality, accurate lip synchronization, controllable emotional expression, and real-time rendering compared with recent emotional talking head methods. Our project page is available at https://njust-yang.github.io/GaussianEmoTalker.github.io/",
+      "authors": [
+        "Haijie Yang",
+        "Zhenyu Zhang",
+        "Yixuan Dong",
+        "Jianjun Qian",
+        "Jian Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-01T13:56:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.00959v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "audio-driven talking head synthesis with lip synchronization",
+      "llm_evidence_cn": "音频驱动的说话头合成，实现唇形同步",
+      "llm_evidence": "音频驱动的说话头合成，实现唇形同步",
+      "canonical_evidence": "音频驱动的说话头合成，实现唇形同步",
+      "llm_tldr_en": "GaussianEmoTalker achieves real-time emotional talking head synthesis with precise lip sync from audio, using 3D Gaussian splatting and blendshapes.",
+      "llm_tldr_cn": "音频驱动说话头合成在唇形同步方面已取得进展，但生成可控强度的表情化虚拟人仍具挑战。本文提出GaussianEmoTalker，基于3D高斯散射的音频驱动实时情感说话头框架。通过将情感动画建模为中性到情感的残差变形，并利用高斯混合形状，实现了高保真嘴唇同步与可控情感表达，推动了实时虚拟人应用。",
+      "llm_tldr": "音频驱动说话头合成在唇形同步方面已取得进展，但生成可控强度的表情化虚拟人仍具挑战。本文提出GaussianEmoTalker，基于3D高斯散射的音频驱动实时情感说话头框架。通过将情感动画建模为中性到情感的残差变形，并利用高斯混合形状，实现了高保真嘴唇同步与可控情感表达，推动了实时虚拟人应用。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.00726v1",
+      "source": "arxiv",
+      "title": "AV-SyncBench: Decoupled Benchmarking of Temporal and Semantic Audio-Visual Synchronization",
+      "abstract": "Audio-visual feature extraction is a fundamental component of multimodal understanding and generation tasks. However, existing evaluation protocols for feature extraction models exhibit dimensional bias, typically focusing on either semantic matching or temporal offset detection. Moreover, their data construction remains coupled, preventing independent assessment of temporal and semantic consistency. We propose AV-SyncBench, the first benchmark to fully separate temporal and semantic evaluation for audio-visual synchronization. Built from in-the-wild videos, it spans Voice, Music, and Sound across 10 scenarios and 5 challenge tasks. Data are automatically filtered and manually verified to ensure on-screen sound sources. The benchmark contains 3,269 videos and 38,390 samples, and we evaluate five representative models to quantify feature quality for alignment and downstream tasks. The code and dataset are available at: https://fgt7t6g.github.io/AV-SyncBench.",
+      "authors": [
+        "Tianhong Zhou",
+        "Mingyang Han",
+        "Boyu Li",
+        "Yuxuan Jiang",
+        "Jiaxin Ye",
+        "Dongxiao Wang",
+        "Haoxiang Shi",
+        "Kunpeng Wang",
+        "Jun Song",
+        "Cheng Yu",
+        "Bo Zheng"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "published": "2026-07-01T10:12:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.00726v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "audio-visual synchronization benchmark for evaluating temporal and semantic consistency",
+      "llm_evidence_cn": "针对视听同步时间与语义一致性的评估基准",
+      "llm_evidence": "针对视听同步时间与语义一致性的评估基准",
+      "canonical_evidence": "针对视听同步时间与语义一致性的评估基准",
+      "llm_tldr_en": "AV-SyncBench separates temporal and semantic audio-visual sync evaluation, enabling better assessment of multimodal generation models.",
+      "llm_tldr_cn": "AV-SyncBench解决了现有视听同步评估中时间与语义维度耦合、无法独立衡量模型性能的局限。它构建覆盖语音、音乐、声音的十个场景五项任务的基准，分离时间偏移检测和语义匹配评估。结果表明该基准能有效区分模型在不同维度上的同步能力，为理解与生成模型提供更精细的评估工具。",
+      "llm_tldr": "AV-SyncBench解决了现有视听同步评估中时间与语义维度耦合、无法独立衡量模型性能的局限。它构建覆盖语音、音乐、声音的十个场景五项任务的基准，分离时间偏移检测和语义匹配评估。结果表明该基准能有效区分模型在不同维度上的同步能力，为理解与生成模型提供更精细的评估工具。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
