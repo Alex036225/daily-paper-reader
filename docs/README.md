@@ -6,22 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-04
-- 运行时间：2026-07-04 21:22:22 UTC
+- 最新运行日期：2026-07-05
+- 运行时间：2026-07-05 21:25:44 UTC
 - 运行状态：成功
-- 本次总论文数：0
+- 本次总论文数：1
 - 精读区：0
-- 速读区：0
+- 速读区：1
 
 ### 今日简报（AI）
-> 今日无新推荐，系统未产出可展示论文。
-- 详情：[/202607/04/README](/202607/04/README)
+今日速读一篇7分论文，展示如何从稀疏人像快速生成可驱动4D头部化身。  
+核心看点是前馈网络实现秒级重建，摆脱传统优化耗时，且支持动态重光照与表情控制。  
+若你关注数字人实时创建，不妨优先查看其稀疏输入下的泛化能力与效率突破。
+- 详情：[/202607/05/README](/202607/05/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-- 本次无速读推荐。
+1. [FFAvatar: Feed-Forward 4D Head Avatar Reconstruction from Sparse Portrait Images](/202607/05/2606.30347v1-ffavatar-feed-forward-4d-head-avatar-reconstruction-from-sparse-portrait-images)  
+   标签：评分：7.0/10、query:wan-av-gen
+   evidence：从稀疏肖像图像快速重建可动画的4D头部化身
 
 
 <div class="dpr-home-promo-card">

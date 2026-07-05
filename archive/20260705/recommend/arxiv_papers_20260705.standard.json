@@ -1,0 +1,56 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-05T21:24:05.953874+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2606.30347v1",
+      "source": "arxiv",
+      "title": "FFAvatar: Feed-Forward 4D Head Avatar Reconstruction from Sparse Portrait Images",
+      "abstract": "We present FFAvatar, a Transformer-based 3D Gaussian framework for fast construction of high-quality and animatable 4D head avatars from one or more reference portrait images. Unlike existing feed-forward approaches that require a fixed number of input views, FFAvatar supports incremental reconstruction, progressively refining the avatar representation as additional reference images become available. At the core of our method is an alternating attention mechanism that disentangles identity appearance from expression and viewpoint variations, enabling the reconstruction of a canonical 3D appearance that remains consistent across poses and facial expressions. To balance visual fidelity and computational efficiency, we introduce a sparse-to-dense learning paradigm. Coarse appearance features are first learned using sparse primitives anchored to the FLAME vertex level and are subsequently densified in the UV domain to capture fine-grained geometric and texture details. We further propose a plug-and-play motion refinement module that enables subject-specific dynamic personalization by modeling residual motion beyond parametric deformation. Extensive experiments demonstrate that FFAvatar efficiently produces high-fidelity and controllable 4D head avatars, achieving superior flexibility, driving efficiency, and identity-consistent rendering across diverse expressions and viewpoints.",
+      "authors": [
+        "Jianjiang Yao",
+        "Ke Xian",
+        "Renxiang Dai",
+        "Robert Caiming Qiu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-29T14:21:33+00:00",
+      "link": "https://arxiv.org/pdf/2606.30347v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "fast 4D head avatar reconstruction from sparse portrait images enabling animation",
+      "llm_evidence_cn": "从稀疏肖像图像快速重建可动画的4D头部化身",
+      "llm_evidence": "从稀疏肖像图像快速重建可动画的4D头部化身",
+      "canonical_evidence": "从稀疏肖像图像快速重建可动画的4D头部化身",
+      "llm_tldr_en": "FFAvatar rapidly constructs animatable head avatars from few reference images using Transformer and 3D Gaussian Splatting, supporting incremental refinement and disentangling identity from expression.",
+      "llm_tldr_cn": "针对从少量图像快速构建可动画头部化身的需求，提出基于Transformer和3D高斯泼溅的FFAvatar框架。该框架支持增量重建，利用交替注意力机制分离身份与表情，从而从肖像图像生成一致的可驱动3D头像。实验证明，其能在稀疏输入下实现高保真且可实时驱动的头部视频生成。",
+      "llm_tldr": "针对从少量图像快速构建可动画头部化身的需求，提出基于Transformer和3D高斯泼溅的FFAvatar框架。该框架支持增量重建，利用交替注意力机制分离身份与表情，从而从肖像图像生成一致的可驱动3D头像。实验证明，其能在稀疏输入下实现高保真且可实时驱动的头部视频生成。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

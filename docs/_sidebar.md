@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-07-05 <!--dpr-date:20260705-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/05/2606.30347v1-ffavatar-feed-forward-4d-head-avatar-reconstruction-from-sparse-portrait-images" data-sidebar-item="{&quot;title&quot;: &quot;FFAvatar: Feed-Forward 4D Head Avatar Reconstruction from Sparse Portrait Images&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.30347v1-ffavatar-feed-forward-4d-head-avatar-reconstruction-from-sparse-portrait-images&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;从稀疏肖像图像快速重建可动画的4D头部化身&quot;}">FFAvatar: Feed-Forward 4D Head Avatar Reconstruction from Sparse Portrait Images</a>
   * 2026-07-02 <!--dpr-date:20260702-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/02/2607.00959v1-gaussianemotalker-real-time-emotional-talking-head-synthesis-with-audio-driven-and-blendshape-based-3d-gaussian-splatting" data-sidebar-item="{&quot;title&quot;: &quot;GaussianEmoTalker: Real-Time Emotional Talking Head Synthesis with Audio-Driven and Blendshape-Based 3D Gaussian Splatting&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.00959v1-gaussianemotalker-real-time-emotional-talking-head-synthesis-with-audio-driven-and-blendshape-based-3d-gaussian-splatting&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;音频驱动的说话头合成，实现唇形同步&quot;}">GaussianEmoTalker: Real-Time Emotional Talking Head Synthesis with Audio-Driven and Blendshape-Based 3D Gaussian Splatting</a>

@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-05",
+  "date": "2026-07-05",
+  "generated_at": "2026-07-05T21:25:52",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/05/2606.30347v1-ffavatar-feed-forward-4d-head-avatar-reconstruction-from-sparse-portrait-images",
+      "section": "quick",
+      "title_en": "FFAvatar: Feed-Forward 4D Head Avatar Reconstruction from Sparse Portrait Images",
+      "authors": "Jianjiang Yao, Ke Xian, Renxiang Dai, Robert Caiming Qiu",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.30347v1",
+      "score": "7.0",
+      "evidence": "从稀疏肖像图像快速重建可动画的4D头部化身",
+      "tldr": "现有前馈头部化身重建方法通常依赖固定数量输入视图，难以灵活处理增量重建场景。FFAvatar采用基于Transformer的3D高斯框架，通过交替注意力机制解耦身份外观与表情、视角变化，重建姿态一致的标准外观；引入稀疏到密集学习范式，先用FLAME顶点级稀疏基元学习粗特征，再在UV域稠密化捕捉细粒度几何纹理，并加入即插即用运动细化模块。从稀疏肖像图像高效生成高保真可控4D化身，在灵活性、驱动效率和跨表情视角的身份一致性渲染上表现卓越，推动了高效个性化数字头像的发展。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We present FFAvatar, a Transformer-based 3D Gaussian framework for fast construction of high-quality and animatable 4D head avatars from one or more reference portrait images. Unlike existing feed-forward approaches that require a fixed number of input views, FFAvatar supports incremental reconstruction, progressively refining the avatar representation as additional reference images become available. At the core of our method is an alternating attention mechanism that disentangles identity appearance from expression and viewpoint variations, enabling the reconstruction of a canonical 3D appearance that remains consistent across poses and facial expressions. To balance visual fidelity and computational efficiency, we introduce a sparse-to-dense learning paradigm. Coarse appearance features are first learned using sparse primitives anchored to the FLAME vertex level and are subsequently densified in the UV domain to capture fine-grained geometric and texture details. We further propose a plug-and-play motion refinement module that enables subject-specific dynamic personalization by modeling residual motion beyond parametric deformation. Extensive experiments demonstrate that FFAvatar efficiently produces high-fidelity and controllable 4D head avatars, achieving superior flexibility, driving efficiency, and identity-consistent rendering across diverse expressions and viewpoints.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
