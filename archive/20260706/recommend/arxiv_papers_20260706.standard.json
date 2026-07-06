@@ -1,0 +1,98 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-06T21:18:41.804739+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.00861v1",
+      "source": "arxiv",
+      "title": "TrajLoc: Trajectory-Attention Localization for Multi-Object Motion Control",
+      "abstract": "Controlling the motion of multiple objects in image-to-video (I2V) generation requires preserving object identities while enforcing adherence to distinct target trajectories. This becomes particularly challenging as the number of objects increases and their paths intersect or occlude one another. Existing approaches entangle multiple trajectories within a shared, dense conditioning signal, making object-level correspondence difficult to preserve in crowded scenes. We depart from this paradigm and enforce a strict, per object spatial constraint that isolates instances independently. Our method, TrajLoc, achieves this directly within the attention layers by substituting the cross-attention weights of each object token with a Gaussian heatmap centered on its target location at every frame. The same per object token interface carries trajectory and depth through a learned embedding and preserves identity by encoding first frame appearance in place of an object token. Evaluations across six datasets, featuring up to 20 simultaneously controlled objects and out of distribution real world scenes, demonstrate that our method consistently improves both visual fidelity and trajectory adherence. Applied to two architecturally distinct backbones (CogVideoX 5B and WaN 2.1 14B), our approach achieves average gains of +4.3 dB PSNR and a 51% reduction in trajectory end point error compared to the strongest baselines. Project page: https://sela-omer.github.io/traj-loc/",
+      "authors": [
+        "Omer Sela",
+        "Inbar Huberman-Spiegelglas",
+        "Michael Rotman",
+        "Sagie Benaim",
+        "Avi Ben-Cohen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-01T12:25:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.00861v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "controls multi-object motion in image-to-video generation using trajectory attention localization",
+      "llm_evidence_cn": "通过轨迹注意力定位控制图像到视频生成中的多物体运动",
+      "llm_evidence": "通过轨迹注意力定位控制图像到视频生成中的多物体运动",
+      "canonical_evidence": "通过轨迹注意力定位控制图像到视频生成中的多物体运动",
+      "llm_tldr_en": "Introduces TrajLoc, which enforces per-object spatial constraints in attention layers for precise multi-object motion control in image-to-video generation.",
+      "llm_tldr_cn": "提出 TrajLoc 方法，在图像到视频生成的注意力层中为每个对象施加独立的空间约束，以高斯热力图替代交叉注意力权重，实现多人/多物场景下的精确轨迹控制，解决拥挤场景中对象对应关系难保持的问题。",
+      "llm_tldr": "提出 TrajLoc 方法，在图像到视频生成的注意力层中为每个对象施加独立的空间约束，以高斯热力图替代交叉注意力权重，实现多人/多物场景下的精确轨迹控制，解决拥挤场景中对象对应关系难保持的问题。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.30514v1",
+      "source": "arxiv",
+      "title": "3D Scene-Adaptive Trajectory-Controllable Human Image Animation with Camera Movement",
+      "abstract": "Human image animation, which aims to generate a video of a reference subject following a provided action sequence, has received increasing research interest. With the development of diffusion-based/flow-based video foundation models, existing animation works have began to upgrade the guidance information from 2D skeleton/pose to 3D modeling conditions. Despite achieving reasonable results, these approaches face challenges in synthesizing trajectory-controllable human motion within natural scene under changed camera views. In this work, we present a scene-adaptive human image animation framework that controls both human motion and camera trajectories within a reconstructed 3D environment for video generation. To achieve this, we first develop a ground-adaptive 3D motion retargeting approach to enable user-friendly motion trajectory control adapting to the changes of elevations of ground and orientations automatically. Then we design a viewpoint-adaptive latent fusion mechanism to inject point-cloud geometric priors through scene-visibility masking into the generative process, providing precise guidance of viewpoint changes under camera control. Experiments on two standard human image animation benchmark datasets demonstrate remarkable improvements of our method over the state of the arts in related video generation metics. Project page: https://robinhood256100.github.io/web-disp",
+      "authors": [
+        "Deyin Liu",
+        "Jicheng Xu",
+        "Lin Yuanbo Wu",
+        "Xiaowei Zhao",
+        "Xiatian Zhu",
+        "Zhe Jin",
+        "Anjan Dutta"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T16:22:54+00:00",
+      "link": "https://arxiv.org/pdf/2606.30514v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "generates video of a reference subject from an image, with trajectory and camera control",
+      "llm_evidence_cn": "从参考图像生成主体视频，并控制轨迹和摄像机",
+      "llm_evidence": "从参考图像生成主体视频，并控制轨迹和摄像机",
+      "canonical_evidence": "从参考图像生成主体视频，并控制轨迹和摄像机",
+      "llm_tldr_en": "Proposes a framework for animating a single person image with 3D scene-adaptive and trajectory-controllable motion and camera movement, enabling realistic image-to-video generation.",
+      "llm_tldr_cn": "提出一种场景自适应的人像动画框架，从单张参考人物图像生成视频，支持在重建的3D环境中同时控制人体运动和摄像机轨迹，实现逼真的图像到视频生成。",
+      "llm_tldr": "提出一种场景自适应的人像动画框架，从单张参考人物图像生成视频，支持在重建的3D环境中同时控制人体运动和摄像机轨迹，实现逼真的图像到视频生成。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

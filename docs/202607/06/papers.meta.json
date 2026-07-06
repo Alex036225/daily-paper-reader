@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-06",
+  "date": "2026-07-06",
+  "generated_at": "2026-07-06T21:22:18",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/06/2607.00861v1-trajloc-trajectory-attention-localization-for-multi-object-motion-control",
+      "section": "deep",
+      "title_en": "TrajLoc: Trajectory-Attention Localization for Multi-Object Motion Control",
+      "authors": "Omer Sela, Inbar Huberman-Spiegelglas, Michael Rotman, Sagie Benaim, Avi Ben-Cohen",
+      "date": "2026-07-01",
+      "pdf": "https://arxiv.org/pdf/2607.00861v1",
+      "score": "8.0",
+      "evidence": "通过轨迹注意力定位控制图像到视频生成中的多物体运动",
+      "tldr": "在图像到视频生成中，控制多个物体的运动轨迹时，现有方法因将轨迹纠缠在共享条件中，难以在密集场景下保持物体独立对应。TrajLoc通过在注意力层直接用高斯热图替代物体标记的交叉注意力权重，对每个物体施加独立空间约束，实现严格轨迹定位。在6个数据集上，控制多达20个物体的测试中，该方法相比最强基线平均提升4.3 dB PSNR，轨迹终点误差降低51%，并成功适配两种不同架构骨干模型。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Controlling the motion of multiple objects in image-to-video (I2V) generation requires preserving object identities while enforcing adherence to distinct target trajectories. This becomes particularly challenging as the number of objects increases and their paths intersect or occlude one another. Existing approaches entangle multiple trajectories within a shared, dense conditioning signal, making object-level correspondence difficult to preserve in crowded scenes. We depart from this paradigm and enforce a strict, per object spatial constraint that isolates instances independently. Our method, TrajLoc, achieves this directly within the attention layers by substituting the cross-attention weights of each object token with a Gaussian heatmap centered on its target location at every frame. The same per object token interface carries trajectory and depth through a learned embedding and preserves identity by encoding first frame appearance in place of an object token. Evaluations across six datasets, featuring up to 20 simultaneously controlled objects and out of distribution real world scenes, demonstrate that our method consistently improves both visual fidelity and trajectory adherence. Applied to two architecturally distinct backbones (CogVideoX 5B and WaN 2.1 14B), our approach achieves average gains of +4.3 dB PSNR and a 51% reduction in trajectory end point error compared to the strongest baselines. Project page: https://sela-omer.github.io/traj-loc/",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/06/2606.30514v1-3d-scene-adaptive-trajectory-controllable-human-image-animation-with-camera-movement",
+      "section": "quick",
+      "title_en": "3D Scene-Adaptive Trajectory-Controllable Human Image Animation with Camera Movement",
+      "authors": "Deyin Liu, Jicheng Xu, Lin Yuanbo Wu, Xiaowei Zhao, Xiatian Zhu, Zhe Jin, Anjan Dutta",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.30514v1",
+      "score": "7.0",
+      "evidence": "从参考图像生成主体视频，并控制轨迹和摄像机",
+      "tldr": "现有基于3D条件的人体图像动画难以在变化相机视角下合成轨迹可控的自然场景运动。本文提出一个场景自适应框架，在重建的3D环境中联合控制人体运动与相机轨迹，通过地面自适应3D动作重定向和视角自适应潜在融合机制实现。在标准基准上，该方法显著超越现有技术，为相机运动下的高可控人体视频生成提供了新方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Human image animation, which aims to generate a video of a reference subject following a provided action sequence, has received increasing research interest. With the development of diffusion-based/flow-based video foundation models, existing animation works have began to upgrade the guidance information from 2D skeleton/pose to 3D modeling conditions. Despite achieving reasonable results, these approaches face challenges in synthesizing trajectory-controllable human motion within natural scene under changed camera views. In this work, we present a scene-adaptive human image animation framework that controls both human motion and camera trajectories within a reconstructed 3D environment for video generation. To achieve this, we first develop a ground-adaptive 3D motion retargeting approach to enable user-friendly motion trajectory control adapting to the changes of elevations of ground and orientations automatically. Then we design a viewpoint-adaptive latent fusion mechanism to inject point-cloud geometric priors through scene-visibility masking into the generative process, providing precise guidance of viewpoint changes under camera control. Experiments on two standard human image animation benchmark datasets demonstrate remarkable improvements of our method over the state of the arts in related video generation metics. Project page: https://robinhood256100.github.io/web-disp",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

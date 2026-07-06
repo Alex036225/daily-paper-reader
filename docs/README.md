@@ -6,26 +6,28 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-05
-- 运行时间：2026-07-05 21:25:44 UTC
+- 最新运行日期：2026-07-06
+- 运行时间：2026-07-06 21:22:04 UTC
 - 运行状态：成功
-- 本次总论文数：1
-- 精读区：0
+- 本次总论文数：2
+- 精读区：1
 - 速读区：1
 
 ### 今日简报（AI）
-今日速读一篇7分论文，展示如何从稀疏人像快速生成可驱动4D头部化身。  
-核心看点是前馈网络实现秒级重建，摆脱传统优化耗时，且支持动态重光照与表情控制。  
-若你关注数字人实时创建，不妨优先查看其稀疏输入下的泛化能力与效率突破。
-- 详情：[/202607/05/README](/202607/05/README)
+今日探索动态场景下的运动控制，精读多物体轨迹定位，速读带相机运动的3D人体动画。  
+最值得关注的是轨迹注意力驱动的精准多物体操控，以及场景自适应且轨迹可控的相机动画方案。  
+建议相关领域读者重点跟进轨迹解耦与空间自适应技术，以增强生成模型的动作控制力。
+- 详情：[/202607/06/README](/202607/06/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [TrajLoc: Trajectory-Attention Localization for Multi-Object Motion Control](/202607/06/2607.00861v1-trajloc-trajectory-attention-localization-for-multi-object-motion-control)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：通过轨迹注意力定位控制图像到视频生成中的多物体运动
 
 ### 速读区论文标签
-1. [FFAvatar: Feed-Forward 4D Head Avatar Reconstruction from Sparse Portrait Images](/202607/05/2606.30347v1-ffavatar-feed-forward-4d-head-avatar-reconstruction-from-sparse-portrait-images)  
+1. [3D Scene-Adaptive Trajectory-Controllable Human Image Animation with Camera Movement](/202607/06/2606.30514v1-3d-scene-adaptive-trajectory-controllable-human-image-animation-with-camera-movement)  
    标签：评分：7.0/10、query:wan-av-gen
-   evidence：从稀疏肖像图像快速重建可动画的4D头部化身
+   evidence：从参考图像生成主体视频，并控制轨迹和摄像机
 
 
 <div class="dpr-home-promo-card">
