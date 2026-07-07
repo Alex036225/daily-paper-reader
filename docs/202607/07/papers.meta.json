@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-07",
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07T22:10:49",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/07/2607.04443v1-wan-streamer-v02-higher-resolution-same-latency",
+      "section": "deep",
+      "title_en": "Wan-Streamer v0.2: Higher Resolution, Same Latency",
+      "authors": "Lianghua Huang, Zhi-Fan Wu, Yupeng Shi, Wei Wang, Mengyang Feng, Junjie He, Chen-Wei Xie, Yu Liu, Jingren Zhou, Ang Wang, Bang Zhang, Baole Ai, Chen Liang, Cheng Yu, Chongyang Zhong, Jinwei Qi, Kai Zhu, Pandeng Li, Peng Zhang, Wenyuan Zhang, Xinhua Cheng, Yitong Huang, Yun Zheng, Yuxiang Bao, Yuzheng Wang, Zoubin Bi",
+      "date": "2026-07-05",
+      "pdf": "https://arxiv.org/pdf/2607.04443v1",
+      "score": "9.0",
+      "evidence": "Wan-Streamer v0.2 是原生流式端到端音视频交互模型",
+      "tldr": "针对Wan-Streamer v0.1分辨率不足的问题，v0.2将交互输出流从192x336提升至640x368，同时保持模型侧约200毫秒低延迟。通过将thinker保留为单GPU低延迟流式感知路径，performer扩展为多GPU Ulysses上下文并行，高分辨率视频潜在序列分片去噪，音频序列不分片，实现场景细节可辨的实时对话。该架构升级在25FPS下维持紧凑的thinker-performer边界，总交互延迟约550毫秒，展示了高分辨率流式交互的可行性。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We present Wan-Streamer v0.2, a latency-preserving upgrade of the native-streaming, end-to-end audio-visual interaction model. v0.2 keeps the v0.1 modeling formulation, but raises the interactive output stream from 192x336 to 640x368 while preserving approximately 200 ms model-side signal-to-signal latency at 25 FPS. The higher-resolution stream supports scene-grounded mid-shot agents whose posture, gaze, hands, nearby objects, and local scene layout remain legible during real-time conversation. To support the larger visual stream without adding user-visible delay, v0.2 keeps the thinker as a single-GPU low-latency path for streaming perception, the short language/state Transformer pass that builds the generation cache, and final decoding. The performer becomes a multi-GPU Ulysses-style context-parallel group for the expensive next-unit latent generation. Each performer rank writes incoming K/V into a pre-sharded local cache. The long high-resolution latent video sequence is split across ranks for denoising and gathered through Ulysses communication, while the much shorter audio latent sequence is generated without sequence sharding. In this split, the thinker's language/state computation reaches the performer only as K/V conditioning, so no separate language sequence has to be communicated inside the performer group. This concentrates additional hardware on visual generation while preserving the compact thinker-performer boundary, keeping total remote interaction latency at approximately 550 ms when a 350 ms bidirectional network budget is included.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/07/2607.03803v1-cinemobile-on-device-image-to-video-diffusion-for-cinematic-camera-motion-generation",
+      "section": "quick",
+      "title_en": "CineMobile: On-Device Image-to-Video Diffusion for Cinematic Camera Motion Generation",
+      "authors": "Xuyao Huang, Zelai Deng, Xu Wang, Xizhong Xiao, Zhijie Deng",
+      "date": "2026-07-04",
+      "pdf": "https://arxiv.org/pdf/2607.03803v1",
+      "score": "6.0",
+      "evidence": "用于电影级相机运动生成的图像到视频扩散模型",
+      "tldr": "移动设备对具有电影级运镜效果的图像到视频生成需求日益增长，但现有扩散模型参数量大、去噪步骤多，导致计算开销过高。CineMobile通过蒸馏引导剪枝、扩散蒸馏与强化学习压缩为4步生成器、混合后训练量化至1GB以下，实现高效部署。相比Wan2.1教师模型，生成速度提升40倍，在H200 GPU和天玑8400平台上分别以0.6秒和20秒每步延迟生成49帧480p视频，内存峰值仅1.8GB，为移动端高质量视频创作提供了可行方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "The growing demand for image-to-video creation on mobile devices has increasingly focused on cinematic motion effects like bullet time, dolly zoom, slow motion, etc. While Diffusion Transformers (DiTs) exhibit strong performance in video generation, their large parameter sizes and multi-step iterative denoising processes lead to substantial computational overhead, making efficient generation on mobile devices challenging. We propose CineMobile to bridge the gap. In particular, CineMobile adopts a three-fold optimization strategy: (1) leveraging a distillation-guided pruning approach to derive a compact yet efficient model that retains the essential video generation capabilities required for cinematic effects; (2) optimizing the compressed model into a 4-step generator via a combination of diffusion distillation and reinforcement learning; (3) employing a hybrid post-training quantization strategy to compress the model footprint to under 1 GB. Experimental results show that compared to the teacher model with the Wan 2.1 architecture, CineMobile achieves a 40x speedup in generation while maintaining comparable visual quality. Specifically, CineMobile generates 49-frame 480p videos with a per-step denoising latency of 0.6s on an NVIDIA H200 GPU and 20s on the MediaTek Dimensity 8400 Ultimate 5G platform, with a peak memory usage of 1.8 GB, demonstrating its practical applicability for mobile-based image-to-video creation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

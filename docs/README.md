@@ -6,28 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-06
-- 运行时间：2026-07-06 21:22:04 UTC
+- 最新运行日期：2026-07-07
+- 运行时间：2026-07-07 22:10:26 UTC
 - 运行状态：成功
 - 本次总论文数：2
 - 精读区：1
 - 速读区：1
 
 ### 今日简报（AI）
-今日探索动态场景下的运动控制，精读多物体轨迹定位，速读带相机运动的3D人体动画。  
-最值得关注的是轨迹注意力驱动的精准多物体操控，以及场景自适应且轨迹可控的相机动画方案。  
-建议相关领域读者重点跟进轨迹解耦与空间自适应技术，以增强生成模型的动作控制力。
-- 详情：[/202607/06/README](/202607/06/README)
+今日关注视频生成新突破，Wan-Streamer v0.2 实现“提分辨率不增延迟”，流畅生成高画质视频。最值得留意的是流式高分辨率生成与移动端运镜控制两个方向。若你对实时视频创作感兴趣，不妨先从 Wan-Streamer 的轻量升级思路入手。
+- 详情：[/202607/07/README](/202607/07/README)
 
 ### 精读区论文标签
-1. [TrajLoc: Trajectory-Attention Localization for Multi-Object Motion Control](/202607/06/2607.00861v1-trajloc-trajectory-attention-localization-for-multi-object-motion-control)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：通过轨迹注意力定位控制图像到视频生成中的多物体运动
+1. [Wan-Streamer v0.2: Higher Resolution, Same Latency](/202607/07/2607.04443v1-wan-streamer-v02-higher-resolution-same-latency)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：Wan-Streamer v0.2 是原生流式端到端音视频交互模型
 
 ### 速读区论文标签
-1. [3D Scene-Adaptive Trajectory-Controllable Human Image Animation with Camera Movement](/202607/06/2606.30514v1-3d-scene-adaptive-trajectory-controllable-human-image-animation-with-camera-movement)  
-   标签：评分：7.0/10、query:wan-av-gen
-   evidence：从参考图像生成主体视频，并控制轨迹和摄像机
+1. [CineMobile: On-Device Image-to-Video Diffusion for Cinematic Camera Motion Generation](/202607/07/2607.03803v1-cinemobile-on-device-image-to-video-diffusion-for-cinematic-camera-motion-generation)  
+   标签：评分：6.0/10、query:wan-av-gen
+   evidence：用于电影级相机运动生成的图像到视频扩散模型
 
 
 <div class="dpr-home-promo-card">
