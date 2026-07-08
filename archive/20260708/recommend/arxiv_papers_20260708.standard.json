@@ -1,0 +1,233 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-08T21:49:20.059138+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.06173v1",
+      "source": "arxiv",
+      "title": "MobileWan: Closing the Quality Gap for Mobile Video Diffusion",
+      "abstract": "Recent advances in video diffusion have been driven by scaling transformer-based architectures to billions of parameters, substantially improving visual fidelity and motion coherence. In contrast, existing mobile video diffusion models remain limited to relatively small parameter budgets, typically 0.4-1.8B, restricting generation quality. In this work, we show that high-quality mobile video generation does not require small models. Instead, we demonstrate that a server-scale 5B-parameter video diffusion transformer can be deployed efficiently on memory-constrained mobile hardware through recurrent reformulation and structured compression. Starting from Wan2.2-5B, we rely on a recurrence distillation framework that converts video generation into a chunk-wise autoregressive process with constant-memory attention computation. Combined with causal linear attention, the model operates as an RNN at inference time while preserving temporal coherence across chunks. We further propose a learnable attention head pruning method based on binary per-head gates optimized end-to-end using a noise-biased sparsity objective and distillation-based finetuning. Together with sampling-step distillation and memory-optimized VAE decoding, MobileWan becomes the first 5B-scale video diffusion model deployable on a commercial mobile device. Our system generates 5-second 480x832 videos at 16 FPS in 20 seconds end-to-end latency, achieving a VBench score of 83.79 and establishing a new state of the art in mobile video generation. Project page: https://qualcomm-ai-research.github.io/mobilewan",
+      "authors": [
+        "Mohsen Ghafoorian",
+        "Denis Korzhenkov",
+        "Adil Karjauv",
+        "Ioannis Lelekas",
+        "Noor Fathima",
+        "Spyridon Stasis",
+        "Hanno Ackermann",
+        "Boris van Breugel",
+        "Markus Nagel",
+        "Fatih Porikli",
+        "Animesh Karnewar",
+        "Amirhossein Habibian"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-07T11:52:46+00:00",
+      "link": "https://arxiv.org/pdf/2607.06173v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Starts from Wan2.2-5B for video generation",
+      "llm_evidence_cn": "从 Wan2.2-5B 出发进行视频生成",
+      "llm_evidence": "从 Wan2.2-5B 出发进行视频生成",
+      "canonical_evidence": "从 Wan2.2-5B 出发进行视频生成",
+      "llm_tldr_en": "MobileWan deploys the 5B-parameter Wan2.2 video diffusion model on mobile devices via recurrence distillation and structured compression, closing the quality gap with server-scale models.",
+      "llm_tldr_cn": "现有移动视频扩散模型受限于小参数量，生成质量不足。MobileWan从5B参数的Wan2.2模型出发，通过循环蒸馏和结构化压缩将其高效部署到移动端，将视频生成转化为分块自回归过程。实验表明，该方法在移动硬件上实现了与服务器级模型相当的视觉保真度和运动连贯性，证明高质量移动视频生成无需依赖小模型。",
+      "llm_tldr": "现有移动视频扩散模型受限于小参数量，生成质量不足。MobileWan从5B参数的Wan2.2模型出发，通过循环蒸馏和结构化压缩将其高效部署到移动端，将视频生成转化为分块自回归过程。实验表明，该方法在移动硬件上实现了与服务器级模型相当的视觉保真度和运动连贯性，证明高质量移动视频生成无需依赖小模型。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.04443v2",
+      "source": "arxiv",
+      "title": "Wan-Streamer v0.2: Higher Resolution, Same Latency",
+      "abstract": "We present Wan-Streamer v0.2, a latency-preserving upgrade of the native-streaming, end-to-end audio-visual interaction model. v0.2 keeps the v0.1 modeling formulation, but raises the interactive output stream from 192x336 to 640x368 while preserving approximately 200 ms model-side signal-to-signal latency at 25 FPS. The higher-resolution stream supports scene-grounded mid-shot agents whose posture, gaze, hands, nearby objects, and local scene layout remain legible during real-time conversation. To support the larger visual stream without adding user-visible delay, v0.2 keeps the thinker as a single-GPU low-latency path for streaming perception, the short language/state Transformer pass that builds the generation cache, and final decoding. The performer becomes a multi-GPU Ulysses-style context-parallel group for the expensive next-unit latent generation. Each performer rank writes incoming K/V into a pre-sharded local cache. The long high-resolution latent video sequence is split across ranks for denoising and gathered through Ulysses communication, while the much shorter audio latent sequence is generated without sequence sharding. In this split, the thinker's language/state computation reaches the performer only as K/V conditioning, so no separate language sequence has to be communicated inside the performer group. This concentrates additional hardware on visual generation while preserving the compact thinker-performer boundary, keeping total remote interaction latency at approximately 550 ms when a 350 ms bidirectional network budget is included.",
+      "authors": [
+        "Lianghua Huang",
+        "Zhi-Fan Wu",
+        "Yupeng Shi",
+        "Wei Wang",
+        "Mengyang Feng",
+        "Junjie He",
+        "Chen-Wei Xie",
+        "Yu Liu",
+        "Jingren Zhou",
+        "Ang Wang",
+        "Bang Zhang",
+        "Baole Ai",
+        "Chen Liang",
+        "Cheng Yu",
+        "Chongyang Zhong",
+        "Jinwei Qi",
+        "Kai Zhu",
+        "Pandeng Li",
+        "Peng Zhang",
+        "Wenyuan Zhang",
+        "Xinhua Cheng",
+        "Yitong Huang",
+        "Yun Zheng",
+        "Yuxiang Bao",
+        "Yuzheng Wang",
+        "Zoubin Bi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "published": "2026-07-05T18:05:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.04443v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Wan-Streamer is an end-to-end audio-visual interaction model for streaming video generation",
+      "llm_evidence_cn": "Wan-Streamer是一个端到端音视频交互模型，可生成流媒体视频",
+      "llm_evidence": "Wan-Streamer是一个端到端音视频交互模型，可生成流媒体视频",
+      "canonical_evidence": "Wan-Streamer是一个端到端音视频交互模型，可生成流媒体视频",
+      "llm_tldr_en": "Wan-Streamer v0.2 upgrades the real-time audiovisual interaction model to 640x368 resolution while maintaining 200ms latency, enabling legible mid-shot agents for conversation.",
+      "llm_tldr_cn": "Wan-Streamer v0.2在保持约200毫秒延迟的前提下，将交互式音视频生成模型的分辨率从192x336提升至640x368，使得中景对话代理的姿态、神情和手部细节更清晰。该模型为端到端流式架构，直接输出视频流，无需后处理，适用于实时对话场景。",
+      "llm_tldr": "Wan-Streamer v0.2在保持约200毫秒延迟的前提下，将交互式音视频生成模型的分辨率从192x336提升至640x368，使得中景对话代理的姿态、神情和手部细节更清晰。该模型为端到端流式架构，直接输出视频流，无需后处理，适用于实时对话场景。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.03118v1",
+      "source": "arxiv",
+      "title": "Vidu S1: A Real-Time Interactive Video Generation Model",
+      "abstract": "We introduce Vidu S1, a real-time interactive video generation model supporting voice control of digital characters. Users can control video generation content at any moment through voice instructions. Vidu S1 supports infinite-length real-time video generation without blurring, drift, or visual distortion. Built with TurboDiffusion and TurboServe, Vidu S1 outputs 540p real-time videos at up to 42 FPS on regular consumer GPUs. Users can upload custom images of real people, anime, and pets, and choose different voice tones for personalized experiences. Experiments show that Vidu S1 achieves the best performance across all test metrics while fully meeting real-time inference requirements. A playable online demo is available at https://vidu.com/vidu-stream.",
+      "authors": [
+        "Jintao Zhang",
+        "Kai Jiang",
+        "Jintao Chen",
+        "Xu Wang",
+        "Yang Luo",
+        "Yuji Wang",
+        "Dechuang Chen",
+        "Jungang Li",
+        "Chengyang Ye",
+        "Marco Chen",
+        "Hongzhou Zhu",
+        "Min Zhao",
+        "Yuxuan Jiang",
+        "Zhengkun Huang",
+        "Chendong Xiang",
+        "Kaiwen Zheng",
+        "Haoxu Wang",
+        "Xiaohang Wang",
+        "Qi Jia",
+        "Xin Chen",
+        "Yimin Chen",
+        "Youhe Jiang",
+        "Fangcheng Fu",
+        "Zhijie Deng",
+        "Fan Bao",
+        "Jianfei Chen",
+        "Jun Zhu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-03T08:58:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.03118v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Real-time interactive video generation with voice control of characters, implying audio-driven lip motion",
+      "llm_evidence_cn": "实时交互视频生成，语音控制角色，暗示音频驱动唇形同步",
+      "llm_evidence": "实时交互视频生成，语音控制角色，暗示音频驱动唇形同步",
+      "canonical_evidence": "实时交互视频生成，语音控制角色，暗示音频驱动唇形同步",
+      "llm_tldr_en": "Vidu S1 enables real-time voice-controlled video generation with custom images, producing talking characters at 42 FPS without visual drift.",
+      "llm_tldr_cn": "Vidu S1提出实时交互视频生成模型，支持通过语音指令控制数字角色，用户可上传肖像并选择音色实现个性化体验。基于TurboDiffusion与TurboServe，模型在消费级GPU上达到540p、42 FPS的无损实时生成。实验显示，该方法在各类指标上最佳且完全满足实时性，可用于音频驱动的说话人视频合成，虽未显式强调唇形同步但已在交互中实现。",
+      "llm_tldr": "Vidu S1提出实时交互视频生成模型，支持通过语音指令控制数字角色，用户可上传肖像并选择音色实现个性化体验。基于TurboDiffusion与TurboServe，模型在消费级GPU上达到540p、42 FPS的无损实时生成。实验显示，该方法在各类指标上最佳且完全满足实时性，可用于音频驱动的说话人视频合成，虽未显式强调唇形同步但已在交互中实现。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.04311v2",
+      "source": "arxiv",
+      "title": "Aura: Consistent Multi-Subject Video Generation via VLM-Grounded Semantic Alignment",
+      "abstract": "Subject-driven and multi-element video generation are central to controllable video synthesis, but existing methods still struggle to preserve identity consistency and model complex relationships among multiple subjects. In this paper, we propose Aura, a unified framework for high-fidelity and identity-consistent video generation. To better capture scene dynamics and subject interactions, we introduce AI director-level captions that provide dense and structured descriptions of video content. We further leverage a vision-language model (VLM) with learnable queries to extract multimodal semantic features from textual and visual references, covering both global semantics and fine-grained visual cues. To bridge the representational gap between the VLM and the Diffusion Transformer (DiT), we design a two-stage alignment strategy that progressively maps VLM features into the DiT feature space. For visual conditioning, we adopt token concatenation to inject reference information directly into the generation process. To distinguish heterogeneous subject types and reduce common copy-paste artifacts, we develop a subject-aware RoPE-Shift mechanism. To further differentiate reference images of different categories, we introduce subject-aware learnable tokens. In addition, we introduce Memory Tokens to balance the training signal across examples with different numbers of reference subjects. During inference, Progressive-APG (Adaptive Prompt Guidance) further alleviates oversaturation and improves semantic alignment with user prompts. Finally, we build a high-quality video-subject image dataset through a dedicated data construction pipeline. Extensive experiments show that our method achieves state-of-the-art performance on both single-subject generation and more challenging multi-element scenarios.",
+      "authors": [
+        "Zixiang Zhou",
+        "Zhentao Yu",
+        "Yifeng Ma",
+        "Hongmei Wang",
+        "Wenqing Yu",
+        "Cong Wang",
+        "Zilin Yang",
+        "Rui Chen",
+        "Jiarong Ou",
+        "Yezhou Liu",
+        "Yuan Zhou",
+        "Qinglin Lu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-05T13:54:33+00:00",
+      "link": "https://arxiv.org/pdf/2607.04311v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Aura generates identity-consistent videos from textual and visual references, enabling image-conditioned video generation",
+      "llm_evidence_cn": "Aura基于文本和视觉参考生成身份一致的视频，实现图像到视频生成",
+      "llm_evidence": "Aura基于文本和视觉参考生成身份一致的视频，实现图像到视频生成",
+      "canonical_evidence": "Aura基于文本和视觉参考生成身份一致的视频，实现图像到视频生成",
+      "llm_tldr_en": "Aura is a unified framework for identity-consistent multi-subject video generation, using VLM-grounded semantic features from both textual and visual references.",
+      "llm_tldr_cn": "Aura提出了一种基于视觉语言模型语义对齐的视频生成框架，能够从文本和参考图像中提取多模态特征，生成身份一致的多主体视频。该方法通过AI导演级别的密集描述和可学习查询，有效建模了主体间的复杂交互和场景动态，提升了视频合成的一致性和保真度。",
+      "llm_tldr": "Aura提出了一种基于视觉语言模型语义对齐的视频生成框架，能够从文本和参考图像中提取多模态特征，生成身份一致的多主体视频。该方法通过AI导演级别的密集描述和可学习查询，有效建模了主体间的复杂交互和场景动态，提升了视频合成的一致性和保真度。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

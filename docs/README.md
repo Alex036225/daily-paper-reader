@@ -6,26 +6,34 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-07
-- 运行时间：2026-07-07 22:10:26 UTC
+- 最新运行日期：2026-07-08
+- 运行时间：2026-07-08 21:55:20 UTC
 - 运行状态：成功
-- 本次总论文数：2
-- 精读区：1
-- 速读区：1
+- 本次总论文数：4
+- 精读区：2
+- 速读区：2
 
 ### 今日简报（AI）
-今日关注视频生成新突破，Wan-Streamer v0.2 实现“提分辨率不增延迟”，流畅生成高画质视频。最值得留意的是流式高分辨率生成与移动端运镜控制两个方向。若你对实时视频创作感兴趣，不妨先从 Wan-Streamer 的轻量升级思路入手。
-- 详情：[/202607/07/README](/202607/07/README)
+移动视频生成迎来双核驱动：MobileWan 让移动端画质逼近云端，Wan-Streamer v0.2 实现分辨率跃升而零延迟。  
+最值得跟进的方向是移动端高效视频扩散模型的质量突破，以及实时高分辨率生成的技术优化。  
+建议读者直接体验 MobileWan 的轻量级应用，或关注 Wan-Streamer 升级对直播生成场景的体验提升。
+- 详情：[/202607/08/README](/202607/08/README)
 
 ### 精读区论文标签
-1. [Wan-Streamer v0.2: Higher Resolution, Same Latency](/202607/07/2607.04443v1-wan-streamer-v02-higher-resolution-same-latency)  
+1. [MobileWan: Closing the Quality Gap for Mobile Video Diffusion](/202607/08/2607.06173v1-mobilewan-closing-the-quality-gap-for-mobile-video-diffusion)  
    标签：评分：9.0/10、query:wan-av-gen
-   evidence：Wan-Streamer v0.2 是原生流式端到端音视频交互模型
+   evidence：从 Wan2.2-5B 出发进行视频生成
+2. [Wan-Streamer v0.2: Higher Resolution, Same Latency](/202607/08/2607.04443v2-wan-streamer-v02-higher-resolution-same-latency)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：Wan-Streamer是一个端到端音视频交互模型，可生成流媒体视频
 
 ### 速读区论文标签
-1. [CineMobile: On-Device Image-to-Video Diffusion for Cinematic Camera Motion Generation](/202607/07/2607.03803v1-cinemobile-on-device-image-to-video-diffusion-for-cinematic-camera-motion-generation)  
+1. [Vidu S1: A Real-Time Interactive Video Generation Model](/202607/08/2607.03118v1-vidu-s1-a-real-time-interactive-video-generation-model)  
+   标签：评分：7.0/10、query:wan-av-gen
+   evidence：实时交互视频生成，语音控制角色，暗示音频驱动唇形同步
+2. [Aura: Consistent Multi-Subject Video Generation via VLM-Grounded Semantic Alignment](/202607/08/2607.04311v2-aura-consistent-multi-subject-video-generation-via-vlm-grounded-semantic-alignment)  
    标签：评分：6.0/10、query:wan-av-gen
-   evidence：用于电影级相机运动生成的图像到视频扩散模型
+   evidence：Aura基于文本和视觉参考生成身份一致的视频，实现图像到视频生成
 
 
 <div class="dpr-home-promo-card">
