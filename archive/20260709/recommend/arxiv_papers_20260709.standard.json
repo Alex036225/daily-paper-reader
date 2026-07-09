@@ -1,0 +1,204 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-09T21:35:42.156732+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.04443v3",
+      "source": "arxiv",
+      "title": "Wan-Streamer v0.2: Higher Resolution, Same Latency",
+      "abstract": "We present Wan-Streamer v0.2, a latency-preserving upgrade of the native-streaming, end-to-end audio-visual interaction model. v0.2 keeps the v0.1 modeling formulation, but raises the interactive output stream from 192x336 to 640x368 while preserving approximately 200 ms model-side signal-to-signal latency at 25 FPS. The higher-resolution stream supports scene-grounded mid-shot agents whose posture, gaze, hands, nearby objects, and local scene layout remain legible during real-time conversation. To support the larger visual stream without adding user-visible delay, v0.2 keeps the thinker as a single-GPU low-latency path for streaming perception, the short language/state Transformer pass that builds the generation cache, and final decoding. The performer becomes a multi-GPU Ulysses-style context-parallel group for the expensive next-unit latent generation. Each performer rank writes incoming K/V into a pre-sharded local cache. The long high-resolution latent video sequence is split across ranks for denoising and gathered through Ulysses communication, while the much shorter audio latent sequence is generated without sequence sharding. In this split, the thinker's language/state computation reaches the performer only as K/V conditioning, so no separate language sequence has to be communicated inside the performer group. This concentrates additional hardware on visual generation while preserving the compact thinker-performer boundary, keeping total remote interaction latency at approximately 550 ms when a 350 ms bidirectional network budget is included.",
+      "authors": [
+        "Lianghua Huang",
+        "Zhi-Fan Wu",
+        "Yupeng Shi",
+        "Wei Wang",
+        "Mengyang Feng",
+        "Junjie He",
+        "Chen-Wei Xie",
+        "Yu Liu",
+        "Jingren Zhou",
+        "Ang Wang",
+        "Bang Zhang",
+        "Baole Ai",
+        "Chen Liang",
+        "Cheng Yu",
+        "Chongyang Zhong",
+        "Jinwei Qi",
+        "Kai Zhu",
+        "Pandeng Li",
+        "Peng Zhang",
+        "Wenyuan Zhang",
+        "Xinhua Cheng",
+        "Yitong Huang",
+        "Yun Zheng",
+        "Yuxiang Bao",
+        "Yuzheng Wang",
+        "Zoubin Bi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "published": "2026-07-05T18:05:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.04443v3",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Wan-Streamer, end-to-end audio-visual interaction, real-time streaming, talking head generation",
+      "llm_evidence_cn": "Wan-Streamer端到端视听交互模型，实时流式推理，生成说话人视频",
+      "llm_evidence": "Wan-Streamer端到端视听交互模型，实时流式推理，生成说话人视频",
+      "canonical_evidence": "Wan-Streamer端到端视听交互模型，实时流式推理，生成说话人视频",
+      "llm_tldr_en": "Latency-preserving upgrade of Wan-Streamer to higher resolution (640x368) for real-time audio-visual interaction with scene-grounded mid-shot agents, maintaining 200ms latency.",
+      "llm_tldr_cn": "针对实时视听交互模型分辨率受限问题，Wan-Streamer v0.2在不增加延迟的前提下将输出流分辨率从192x336提升至640x368，依然保持约200毫秒模型信号延迟。通过多GPU表演者解码、单GPU思考者感知等架构优化，支持更高清的沉浸式对话代理，其姿势、凝视、手势等细节清晰可辨。实验证明在实时交互场景下实现了画质与延迟的平衡突破，扩展了流式视听模型的实用边界。",
+      "llm_tldr": "针对实时视听交互模型分辨率受限问题，Wan-Streamer v0.2在不增加延迟的前提下将输出流分辨率从192x336提升至640x368，依然保持约200毫秒模型信号延迟。通过多GPU表演者解码、单GPU思考者感知等架构优化，支持更高清的沉浸式对话代理，其姿势、凝视、手势等细节清晰可辨。实验证明在实时交互场景下实现了画质与延迟的平衡突破，扩展了流式视听模型的实用边界。",
+      "llm_tags": [
+        "query:wan-av-gen:composite"
+      ],
+      "matched_query_tag": "query:wan-av-gen:composite",
+      "matched_query_text": "Papers central to 检索基于WAN模型的I2V视频生成论文，重点在对嘴型等细节, especially work that connects or combines: WAN architecture for multimodal generation; video generation using Wan model; generating video with multiple modalities; video generation conditioned on an image; accurate lip sync in generated videos; generating natural lip movements in image-to-video models; Generating a talking head video from a single portrait image with accurate lip sync using WAN model.; Image to video generation with audio driven lip motion synthesis.; How to achieve precise lip synchronization in WAN model video generation from images?.",
+      "matched_requirement_id": "req-composite-wan-av-gen",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.01962v1",
+      "source": "arxiv",
+      "title": "NeoMap: Training-free Novel-View Synthesis from Single Images and Videos",
+      "abstract": "We study the challenging problem of novel view video synthesis from single images or monocular videos. Existing methods, which operate under the assumption that pre-trained video models lack native novel view synthesis capability and enforce view alignment via camera conditioning, task-specific fine-tuning, or stepwise hard denoising guidance, often suffer from artifacts and compromised global scene consistency. In this paper, we introduce NeoMap, a novel training-free framework designed to locate high-fidelity, view-consistent novel view solutions from general pre-trained video models. The key to our approach is the core insight that promising novel view solutions are inherently encoded within the natural video data manifold learned by pre-trained models, and the core challenge is simply to locate this optimal solution. We solve this via our core mechanism: convergent manifold alternating projection iterations that optimize the initial noise. Extensive experiments demonstrate that NeoMap significantly outperforms all existing methods across 3 standard novel view synthesis benchmarks, including the challenging Tanks-and-Temples, LLFF and DAVIS datasets, achieving state-of-the-art generation fidelity and top-tier view consistency.",
+      "authors": [
+        "Jinxi Li",
+        "Tianyi Zhang",
+        "Yafei Yang",
+        "Zihui Zhang",
+        "Peng Huang",
+        "Koon Wing Macgyver Lin",
+        "Bo Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.RO"
+      ],
+      "published": "2026-07-02T09:56:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.01962v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Generates novel view videos from a single image, directly realizing image-conditioned video generation.",
+      "llm_evidence_cn": "从单张图像生成新视角视频，直接实现图像条件视频生成。",
+      "llm_evidence": "从单张图像生成新视角视频，直接实现图像条件视频生成。",
+      "canonical_evidence": "从单张图像生成新视角视频，直接实现图像条件视频生成。",
+      "llm_tldr_en": "NeoMap enables novel view video synthesis from single images without training, by finding view-consistent solutions within pre-trained video models' data manifold, achieving high fidelity and scene consistency without fine-tuning.",
+      "llm_tldr_cn": "针对从单张图像或单目视频生成新视角视频的难题，本文提出NeoMap，一种无需训练的新颖框架。该方法利用预训练视频模型天然学到的数据流形中蕴含的可行新视角解，通过定位高质量、视角一致的解决方案，无需任务特定微调即实现了优异的生成效果。实验表明，NeoMap能生成高保真、全局一致的新视角视频，克服了现有方法中的伪影和场景不一致问题，为单图到多视角视频合成提供了新思路。",
+      "llm_tldr": "针对从单张图像或单目视频生成新视角视频的难题，本文提出NeoMap，一种无需训练的新颖框架。该方法利用预训练视频模型天然学到的数据流形中蕴含的可行新视角解，通过定位高质量、视角一致的解决方案，无需任务特定微调即实现了优异的生成效果。实验表明，NeoMap能生成高保真、全局一致的新视角视频，克服了现有方法中的伪影和场景不一致问题，为单图到多视角视频合成提供了新思路。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.02798v1",
+      "source": "arxiv",
+      "title": "Track the Noise, Move the World:3D-Grounded Motion-Consistent Noise for Controllable Video Generation",
+      "abstract": "Modern image-and-text-to-video diffusion models can synthesize highly realistic videos by iteratively denoising an initial Gaussian noise tensor conditioned on reference image and text inputs. However, existing approaches still lack precise and unified controllability over both object motion and camera motion within a single generation process. We present UniCaMo, a unified framework that enables simultaneous control of object trajectories and camera viewpoints by directly constructing the input noise of the diffusion model. Specifically, UniCaMo builds a shared 3D-grounded motion-consistent noise space across latent video frames. Sparse 3D point tracks are used to warp the Gaussian noise of the reference frame along desired object trajectories, while a virtual spherical noise representation provides globally consistent noise values for newly revealed scene regions under camera motion. By combining local track-guided noise warping with global sphere-based noise sampling, UniCaMo maintains geometric and temporal consistency under both object movement and viewpoint changes. Because UniCaMo modifies only the input noise, it requires no auxiliary adapters, control branches, or architectural changes to the underlying video diffusion model. With lightweight LoRA fine-tuning on large pretrained video diffusion models, including Wan 2.1 (14B), UniCaMo achieves state-of-the-art results in both video quality and motion controllability on standard controllable video generation benchmarks.",
+      "authors": [
+        "Long Vu",
+        "Tan Ngo",
+        "Animesh Karnewar",
+        "Amir Habibian",
+        "Binh-Son Hua",
+        "Hung Bui",
+        "Minh Hoai Nguyen",
+        "Phong Nguyen-Ha"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-02T22:17:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.02798v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes image-and-text-to-video generation with motion control via noise manipulation",
+      "llm_evidence_cn": "提出基于图像和文本条件、通过噪声操控实现运动控制的视频生成方法",
+      "llm_evidence": "提出基于图像和文本条件、通过噪声操控实现运动控制的视频生成方法",
+      "canonical_evidence": "提出基于图像和文本条件、通过噪声操控实现运动控制的视频生成方法",
+      "llm_tldr_en": "This paper presents UniCaMo, a unified framework for controllable video generation from image and text, enabling simultaneous control of object and camera motion by constructing motion-consistent noise.",
+      "llm_tldr_cn": "针对现有图像/文本到视频扩散模型缺乏对物体和相机运动统一控制的问题，提出UniCaMo框架，通过构建三维运动一致的初始噪声空间，实现基于参考图像的物体轨迹和相机视角联合控制。实验表明该方法无需微调即可增强视频生成的可控性，对图像到视频精细生成有参考价值。",
+      "llm_tldr": "针对现有图像/文本到视频扩散模型缺乏对物体和相机运动统一控制的问题，提出UniCaMo框架，通过构建三维运动一致的初始噪声空间，实现基于参考图像的物体轨迹和相机视角联合控制。实验表明该方法无需微调即可增强视频生成的可控性，对图像到视频精细生成有参考价值。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.03018v2",
+      "source": "arxiv",
+      "title": "$C^3$ASD: Multi-Level Consistency-Driven Representation Learning",
+      "abstract": "Active Speaker Detection determines whether a visible person in a video is speaking at each moment. While recent audio-visual fusion methods perform well on clean data, they degrade under real-world corruptions such as background noise, occlusion, or simultaneous modality degradation. We attribute this limitation to the absence of explicit consistency constraints that promote robust, semantically aligned representations across modalities. Without such guidance, models tend to learn fragile modality-specific shortcuts that fail under corrupted conditions. We propose $C^3$ASD, a multi-level consistency-driven framework with three complementary constraints: embedding-level inter-modality consistency aligns audio-visual representations during speech; sequence-level intra-modality consistency separates speaking and non-speaking clusters via track-aware contrastive learning; and prediction-level consistency stabilizes fusion through knowledge distillation. Extensive experiments demonstrate significant improvements under diverse audio, visual and joint corruptions, while maintaining competitive performance on clean data.",
+      "authors": [
+        "Jin Hong",
+        "Jisoo Park",
+        "Junseok Kwon"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "published": "2026-07-03T06:53:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.03018v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Learns robust audio-visual representations via multi-level consistency for active speaker detection, transferable to lip sync tasks.",
+      "llm_evidence_cn": "通过多层级一致性学习鲁棒视听表征，可用于提升唇音同步。",
+      "llm_evidence": "通过多层级一致性学习鲁棒视听表征，可用于提升唇音同步。",
+      "canonical_evidence": "通过多层级一致性学习鲁棒视听表征，可用于提升唇音同步。",
+      "llm_tldr_en": "C^3ASD proposes a multi-level consistency-driven framework for active speaker detection, using embedding-level, sequence-level, and segment-level constraints to align audio-visual representations, achieving robustness under corruptions and providing a strong foundation for lip-sync related tasks.",
+      "llm_tldr_cn": "针对现实场景中噪声、遮挡等退化条件下主动说话人检测性能下降的问题，本文提出C^3ASD，一种多层级一致性驱动的框架。通过嵌入级、序列级和片段级三种互补约束，强制对齐说话期间的视听表征，避免模型学习脆弱的模态特定捷径。实验表明，该方法在多种退化条件下显著优于现有融合方法，为唇音同步等需要鲁棒视听对齐的任务提供了有效表征学习方案。",
+      "llm_tldr": "针对现实场景中噪声、遮挡等退化条件下主动说话人检测性能下降的问题，本文提出C^3ASD，一种多层级一致性驱动的框架。通过嵌入级、序列级和片段级三种互补约束，强制对齐说话期间的视听表征，避免模型学习脆弱的模态特定捷径。实验表明，该方法在多种退化条件下显著优于现有融合方法，为唇音同步等需要鲁棒视听对齐的任务提供了有效表征学习方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
