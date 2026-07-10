@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-07-10 <!--dpr-date:20260710-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/10/2607.04443v3-wan-streamer-v02-higher-resolution-same-latency" data-sidebar-item="{&quot;title&quot;: &quot;Wan-Streamer v0.2: Higher Resolution, Same Latency&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.04443v3-wan-streamer-v02-higher-resolution-same-latency&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;Wan-Streamer v0.2是一个基于WAN的视听交互模型，用于多模态生成&quot;}">Wan-Streamer v0.2: Higher Resolution, Same Latency</a>
   * 2026-07-09 <!--dpr-date:20260709-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/09/2607.04443v3-wan-streamer-v02-higher-resolution-same-latency" data-sidebar-item="{&quot;title&quot;: &quot;Wan-Streamer v0.2: Higher Resolution, Same Latency&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.04443v3-wan-streamer-v02-higher-resolution-same-latency&quot;, &quot;score&quot;: &quot;10.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;Wan-Streamer端到端视听交互模型，实时流式推理，生成说话人视频&quot;}">Wan-Streamer v0.2: Higher Resolution, Same Latency</a>

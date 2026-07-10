@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-10",
+  "date": "2026-07-10",
+  "generated_at": "2026-07-10T21:44:09",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/10/2607.04443v3-wan-streamer-v02-higher-resolution-same-latency",
+      "section": "deep",
+      "title_en": "Wan-Streamer v0.2: Higher Resolution, Same Latency",
+      "authors": "Lianghua Huang, Zhi-Fan Wu, Yupeng Shi, Wei Wang, Mengyang Feng, Junjie He, Chen-Wei Xie, Yu Liu, Jingren Zhou, Ang Wang, Bang Zhang, Baole Ai, Chen Liang, Cheng Yu, Chongyang Zhong, Jinwei Qi, Kai Zhu, Pandeng Li, Peng Zhang, Wenyuan Zhang, Xinhua Cheng, Yitong Huang, Yun Zheng, Yuxiang Bao, Yuzheng Wang, Zoubin Bi",
+      "date": "2026-07-05",
+      "pdf": "https://arxiv.org/pdf/2607.04443v3",
+      "score": "9.0",
+      "evidence": "Wan-Streamer v0.2是一个基于WAN的视听交互模型，用于多模态生成",
+      "tldr": "实时音视频交互中提升分辨率常导致延迟增加，Wan-Streamer v0.2通过优化系统架构解决此问题。它将thinker保持为单GPU流式感知，performer扩展为多GPU Ulysses并行生成，仅传递K/V条件以减少通信。输出分辨率从192×336升至640×368，模型端延迟仍约200ms，总交互延迟约550ms。该方案在不牺牲延迟下大幅增强视觉清晰度，支持实时场景中代理的姿势、视线等细节理解。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We present Wan-Streamer v0.2, a latency-preserving upgrade of the native-streaming, end-to-end audio-visual interaction model. v0.2 keeps the v0.1 modeling formulation, but raises the interactive output stream from 192x336 to 640x368 while preserving approximately 200 ms model-side signal-to-signal latency at 25 FPS. The higher-resolution stream supports scene-grounded mid-shot agents whose posture, gaze, hands, nearby objects, and local scene layout remain legible during real-time conversation. To support the larger visual stream without adding user-visible delay, v0.2 keeps the thinker as a single-GPU low-latency path for streaming perception, the short language/state Transformer pass that builds the generation cache, and final decoding. The performer becomes a multi-GPU Ulysses-style context-parallel group for the expensive next-unit latent generation. Each performer rank writes incoming K/V into a pre-sharded local cache. The long high-resolution latent video sequence is split across ranks for denoising and gathered through Ulysses communication, while the much shorter audio latent sequence is generated without sequence sharding. In this split, the thinker's language/state computation reaches the performer only as K/V conditioning, so no separate language sequence has to be communicated inside the performer group. This concentrates additional hardware on visual generation while preserving the compact thinker-performer boundary, keeping total remote interaction latency at approximately 550 ms when a 350 ms bidirectional network budget is included.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

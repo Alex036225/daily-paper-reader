@@ -1,0 +1,79 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-10T21:42:10.956155+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2607.04443v3",
+      "source": "arxiv",
+      "title": "Wan-Streamer v0.2: Higher Resolution, Same Latency",
+      "abstract": "We present Wan-Streamer v0.2, a latency-preserving upgrade of the native-streaming, end-to-end audio-visual interaction model. v0.2 keeps the v0.1 modeling formulation, but raises the interactive output stream from 192x336 to 640x368 while preserving approximately 200 ms model-side signal-to-signal latency at 25 FPS. The higher-resolution stream supports scene-grounded mid-shot agents whose posture, gaze, hands, nearby objects, and local scene layout remain legible during real-time conversation. To support the larger visual stream without adding user-visible delay, v0.2 keeps the thinker as a single-GPU low-latency path for streaming perception, the short language/state Transformer pass that builds the generation cache, and final decoding. The performer becomes a multi-GPU Ulysses-style context-parallel group for the expensive next-unit latent generation. Each performer rank writes incoming K/V into a pre-sharded local cache. The long high-resolution latent video sequence is split across ranks for denoising and gathered through Ulysses communication, while the much shorter audio latent sequence is generated without sequence sharding. In this split, the thinker's language/state computation reaches the performer only as K/V conditioning, so no separate language sequence has to be communicated inside the performer group. This concentrates additional hardware on visual generation while preserving the compact thinker-performer boundary, keeping total remote interaction latency at approximately 550 ms when a 350 ms bidirectional network budget is included.",
+      "authors": [
+        "Lianghua Huang",
+        "Zhi-Fan Wu",
+        "Yupeng Shi",
+        "Wei Wang",
+        "Mengyang Feng",
+        "Junjie He",
+        "Chen-Wei Xie",
+        "Yu Liu",
+        "Jingren Zhou",
+        "Ang Wang",
+        "Bang Zhang",
+        "Baole Ai",
+        "Chen Liang",
+        "Cheng Yu",
+        "Chongyang Zhong",
+        "Jinwei Qi",
+        "Kai Zhu",
+        "Pandeng Li",
+        "Peng Zhang",
+        "Wenyuan Zhang",
+        "Xinhua Cheng",
+        "Yitong Huang",
+        "Yun Zheng",
+        "Yuxiang Bao",
+        "Yuzheng Wang",
+        "Zoubin Bi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "published": "2026-07-05T18:05:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.04443v3",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Wan-Streamer v0.2 is a WAN-based audio-visual interaction model for multimodal generation",
+      "llm_evidence_cn": "Wan-Streamer v0.2是一个基于WAN的视听交互模型，用于多模态生成",
+      "llm_evidence": "Wan-Streamer v0.2是一个基于WAN的视听交互模型，用于多模态生成",
+      "canonical_evidence": "Wan-Streamer v0.2是一个基于WAN的视听交互模型，用于多模态生成",
+      "llm_tldr_en": "Wan-Streamer v0.2 upgrades the native-streaming Wan model to higher resolution (640x368) while preserving ~200ms latency, enabling real-time multimodal audio-visual interaction with legible agents.",
+      "llm_tldr_cn": "本文提出了Wan-Streamer v0.2，在保持约200毫秒延迟的前提下将交互式视听流分辨率从192x336提升至640x368。该模型基于WAN架构，支持实时多模态对话，生成的半身代理姿态、视线、手部动作及场景细节清晰可辨。实验表明，通过多GPU表演者设计，高分辨率流式生成未增加用户感知延迟，为实时交互系统提供了实用方案。",
+      "llm_tldr": "本文提出了Wan-Streamer v0.2，在保持约200毫秒延迟的前提下将交互式视听流分辨率从192x336提升至640x368。该模型基于WAN架构，支持实时多模态对话，生成的半身代理姿态、视线、手部动作及场景细节清晰可辨。实验表明，通过多GPU表演者设计，高分辨率流式生成未增加用户感知延迟，为实时交互系统提供了实用方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "WAN architecture for multimodal generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
