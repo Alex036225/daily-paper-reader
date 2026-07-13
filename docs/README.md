@@ -6,19 +6,23 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-12
-- 运行时间：2026-07-12 21:10:25 UTC
+- 最新运行日期：2026-07-13
+- 运行时间：2026-07-13 21:22:56 UTC
 - 运行状态：成功
-- 本次总论文数：0
-- 精读区：0
+- 本次总论文数：1
+- 精读区：1
 - 速读区：0
 
 ### 今日简报（AI）
-> 今日无新推荐，系统未产出可展示论文。
-- 详情：[/202607/12/README](/202607/12/README)
+今天解锁分钟级音乐编舞：用分层框架生成连贯的长时舞蹈动作。  
+最亮眼的方向是“跨模态节拍对齐”和“全局-局部舞蹈结构建模”，让AI舞者不再“跳几秒就乱”。  
+下一步可以关注它如何控制风格迁移，自己试试换首歌看效果。
+- 详情：[/202607/13/README](/202607/13/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation](/202607/13/2607.09581v1-wan-dancer-a-hierarchical-framework-for-minute-scale-coherent-music-to-dance-generation)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：提出Wan-Dancer视频扩散框架用于舞蹈生成，符合WAN模型视频生成。
 
 ### 速读区论文标签
 - 本次无速读推荐。

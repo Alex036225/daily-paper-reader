@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-13",
+  "date": "2026-07-13",
+  "generated_at": "2026-07-13T21:23:05",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/13/2607.09581v1-wan-dancer-a-hierarchical-framework-for-minute-scale-coherent-music-to-dance-generation",
+      "section": "deep",
+      "title_en": "Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation",
+      "authors": "Mingyang Huang, Peng Zhang, Li Hu, Guangyuan Wang, Bang Zhang",
+      "date": "2026-07-10",
+      "pdf": "https://arxiv.org/pdf/2607.09581v1",
+      "score": "9.0",
+      "evidence": "提出Wan-Dancer视频扩散框架用于舞蹈生成，符合WAN模型视频生成。",
+      "tldr": "为解决从音乐直接生成长时间、高清且节奏同步的舞蹈视频的难题，本文提出了一种分层框架Wan-Dancer，将过程解耦为全局关键帧规划与局部时序细化，利用全曲音乐上下文确保长程生成质量。实验表明该方法能有效缓解时序漂移和动作重复，实现分钟级连贯舞蹈视频生成，为音乐驱动的视频合成提供了新途径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Generating long-duration, high-definition, and rhythmically synchronized dance videos directly from music remains a significant challenge, primarily due to the temporal constraints of current diffusion models, which typically fail beyond 20 seconds. Existing approaches, whether they rely on intermediate 3D skeletons or on end-to-end video synthesis, suffer from temporal drift, identity inconsistency, and repetitive motion patterns when extended to longer horizons. To address these limitations, we propose a novel hierarchical framework for minute-scale coherent music-to-dance generation. Our method decouples the process into global keyframe planning and local temporal refinement, leveraging full-track musical context to ensure long-range coherence. Key innovations include dynamic frame rate adaptation via time-mapped RoPE embeddings for precise alignment, an optical-flow-based loss function to enhance motion continuity, and motion-speed control to preserve high-fidelity details during rapid movements. Extensive experiments demonstrate that our framework surpasses the conventional duration barrier, generating stable, 720p/30fps videos exceeding one minute with superior temporal stability. Furthermore, the model exhibits robust versatility across five distinct dance genres, conditioned on both audio and textual prompts, establishing a new state-of-the-art in coherent, long-form dance video synthesis.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
