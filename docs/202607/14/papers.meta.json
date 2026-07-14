@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-14",
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T21:38:29",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/14/2607.10860v1-au-guided-synthetic-video-generation-for-micro-expression-recognition",
+      "section": "deep",
+      "title_en": "AU-Guided Synthetic Video Generation for Micro-Expression Recognition",
+      "authors": "Pei-Sze Tan, Sailaja Rajanala, Yee-Fan Tan, Raphael C. -W. Phan, Huey-Fang Ong",
+      "date": "2026-07-12",
+      "pdf": "https://arxiv.org/pdf/2607.10860v1",
+      "score": "9.0",
+      "evidence": "基于动作单元的图像到视频生成",
+      "tldr": "微表情识别受限于现有数据集规模小、人口覆盖窄和情感标签有限。我们提出EquiME，一个基于AU引导图像到视频生成的合成数据集，包含75K视频和自动推断的人口统计元数据。在SAMM和CASME II上的跨数据集评估显示，用EquiME训练的模型取得了有竞争力的性能，且在不同架构上表现稳定。该工作为微表情识别提供了高质量合成数据资源。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Micro-expression recognition is limited by the small scale, narrow demographic coverage, and restricted emotion labels of existing datasets. We introduce EquiME, a synthetic micro-expression dataset built from AU-guided image-to-video generation. EquiME contains 75K videos generated from 15K source face images across five target emotions, together with automatically inferred demographic metadata and video-quality measurements. We evaluate EquiME using frame-pair similarity, spatial variation, and no-reference perceptual-quality metrics, together with cross-dataset MER experiments on SAMM and CASME II. Models trained on EquiME achieve competitive cross-dataset performance on SAMM and CASME II and show comparatively low variation across the four evaluated architectures. This paper focuses on the dataset design, the structured AU-conditioning pipeline used for video generation, and the empirical evidence needed to assess EquiME as a synthetic MER resource. Project page: https://kirito-blade.github.io/me-vlm/",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/14/2607.09581v2-wan-dancer-a-hierarchical-framework-for-minute-scale-coherent-music-to-dance-generation",
+      "section": "deep",
+      "title_en": "Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation",
+      "authors": "Mingyang Huang, Peng Zhang, Li Hu, Guangyuan Wang, Bang Zhang",
+      "date": "2026-07-10",
+      "pdf": "https://arxiv.org/pdf/2607.09581v2",
+      "score": "8.0",
+      "evidence": "Wan-Dancer 使用 WAN 模型进行音乐到舞蹈的视频生成，属于多模态生成任务。",
+      "tldr": "当前扩散模型仅能生成20秒以内的音乐舞蹈视频，存在时间漂移与动作重复问题。本文提出Wan-Dancer分层框架，将生成分解为全局关键帧规划与局部时间优化，利用全曲音乐上下文确保长程连贯。通过时间映射RoPE嵌入、光流损失函数及运动速度控制，实现分钟级高清视频生成。该方法生成超过一分钟的720p/30fps稳定视频，支持五种舞蹈类型，树立了长时舞蹈视频合成的新标杆。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Generating long-duration, high-definition, and rhythmically synchronized dance videos directly from music remains a significant challenge, primarily due to the temporal constraints of current diffusion models, which typically fail beyond 20 seconds. Existing approaches, whether they rely on intermediate 3D skeletons or on end-to-end video synthesis, suffer from temporal drift, identity inconsistency, and repetitive motion patterns when extended to longer horizons. To address these limitations, we propose a novel hierarchical framework for minute-scale coherent music-to-dance generation. Our method decouples the process into global keyframe planning and local temporal refinement, leveraging full-track musical context to ensure long-range coherence. Key innovations include dynamic frame rate adaptation via time-mapped RoPE embeddings for precise alignment, an optical-flow-based loss function to enhance motion continuity, and motion-speed control to preserve high-fidelity details during rapid movements. Extensive experiments demonstrate that our framework surpasses the conventional duration barrier, generating stable, 720p/30fps videos exceeding one minute with superior temporal stability. Furthermore, the model exhibits robust versatility across five distinct dance genres, conditioned on both audio and textual prompts, establishing a new state-of-the-art in coherent, long-form dance video synthesis.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

@@ -6,23 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-13
-- 运行时间：2026-07-13 21:22:56 UTC
+- 最新运行日期：2026-07-14
+- 运行时间：2026-07-14 21:38:17 UTC
 - 运行状态：成功
-- 本次总论文数：1
-- 精读区：1
+- 本次总论文数：2
+- 精读区：2
 - 速读区：0
 
 ### 今日简报（AI）
-今天解锁分钟级音乐编舞：用分层框架生成连贯的长时舞蹈动作。  
-最亮眼的方向是“跨模态节拍对齐”和“全局-局部舞蹈结构建模”，让AI舞者不再“跳几秒就乱”。  
-下一步可以关注它如何控制风格迁移，自己试试换首歌看效果。
-- 详情：[/202607/13/README](/202607/13/README)
+今日聚焦生成式AI，精读两篇应用型研究，分别是利用动作单元合成视频提升微表情识别，以及分层框架实现分钟级连贯音乐舞蹈生成。  
+最值得关注的是：用AU引导的合成数据可大幅缓解微表情样本稀缺难题，而Wan-Dancer能在长时序舞蹈中保持动作的连贯性与音乐匹配度。  
+对普通读者来说，未来情感识别和虚拟人创作的门槛会进一步降低，不妨留意这些技术如何落地到心理健康筛查或短视频自动编舞中。
+- 详情：[/202607/14/README](/202607/14/README)
 
 ### 精读区论文标签
-1. [Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation](/202607/13/2607.09581v1-wan-dancer-a-hierarchical-framework-for-minute-scale-coherent-music-to-dance-generation)  
+1. [AU-Guided Synthetic Video Generation for Micro-Expression Recognition](/202607/14/2607.10860v1-au-guided-synthetic-video-generation-for-micro-expression-recognition)  
    标签：评分：9.0/10、query:wan-av-gen
-   evidence：提出Wan-Dancer视频扩散框架用于舞蹈生成，符合WAN模型视频生成。
+   evidence：基于动作单元的图像到视频生成
+2. [Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation](/202607/14/2607.09581v2-wan-dancer-a-hierarchical-framework-for-minute-scale-coherent-music-to-dance-generation)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：Wan-Dancer 使用 WAN 模型进行音乐到舞蹈的视频生成，属于多模态生成任务。
 
 ### 速读区论文标签
 - 本次无速读推荐。
