@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-16",
+  "date": "2026-07-16",
+  "generated_at": "2026-07-16T21:21:30",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/16/2607.11081v1-controlling-motion-transfer-in-diffusion-transformers-via-attention-heads",
+      "section": "quick",
+      "title_en": "Controlling Motion Transfer in Diffusion Transformers via Attention Heads",
+      "authors": "Sunyoung Jung, Jiwoo Park, Yoonseok Choi, Kyobin Choo, Ming-Hsuan Yang, Seong Jae Hwang",
+      "date": "2026-07-13",
+      "pdf": "https://arxiv.org/pdf/2607.11081v1",
+      "score": "7.0",
+      "evidence": "分析DiT中运动特化注意力头以控制运动迁移，可用于精确唇动生成",
+      "tldr": "扩散变换器（DiT）推动了高质量视频生成，但实现精确运动转移仍具挑战，主因对DiT内部注意力头的运动和结构表征机制认识不足。本文分析视频DiT注意力头，识别出分别专长于运动与空间结构的特定头，基于此提出无需参数更新的头感知可控运动转移方法，通过语义对应引导从运动头提取运动线索、选择性注入结构头以保留原图结构。实验证明，该方法能够精准迁移运动并保持目标语义一致，为解释可控视频生成提供了新视角，并有望促进更灵活的视频编辑应用。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Diffusion Transformers (DiTs) have advanced video generation with high-quality, temporally coherent results. However, extending them to motion transfer, which requires following reference motion while aligning with a target prompt, remains challenging due to limited understanding of motion and structure representations within DiTs. We analyze video DiTs at the attention-head level and identify distinct heads specialized for motion and spatial structure. Based on this insight, we propose a head-aware controllable motion transfer framework that requires no parameter updates. Our method refines motion cues from motion-specialized heads via semantic correspondence guidance and preserves structure through selective feature injection. This head-level control not only enables accurate motion transfer but also provides an interpretable foundation for controllable video generation with DiTs.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

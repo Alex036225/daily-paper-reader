@@ -1,0 +1,58 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-16T21:19:43.361672+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.11081v1",
+      "source": "arxiv",
+      "title": "Controlling Motion Transfer in Diffusion Transformers via Attention Heads",
+      "abstract": "Diffusion Transformers (DiTs) have advanced video generation with high-quality, temporally coherent results. However, extending them to motion transfer, which requires following reference motion while aligning with a target prompt, remains challenging due to limited understanding of motion and structure representations within DiTs. We analyze video DiTs at the attention-head level and identify distinct heads specialized for motion and spatial structure. Based on this insight, we propose a head-aware controllable motion transfer framework that requires no parameter updates. Our method refines motion cues from motion-specialized heads via semantic correspondence guidance and preserves structure through selective feature injection. This head-level control not only enables accurate motion transfer but also provides an interpretable foundation for controllable video generation with DiTs.",
+      "authors": [
+        "Sunyoung Jung",
+        "Jiwoo Park",
+        "Yoonseok Choi",
+        "Kyobin Choo",
+        "Ming-Hsuan Yang",
+        "Seong Jae Hwang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-13T04:44:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.11081v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "analyzes motion-specialized attention heads in DiTs to control motion transfer, applicable to precise lip motion generation",
+      "llm_evidence_cn": "分析DiT中运动特化注意力头以控制运动迁移，可用于精确唇动生成",
+      "llm_evidence": "分析DiT中运动特化注意力头以控制运动迁移，可用于精确唇动生成",
+      "canonical_evidence": "分析DiT中运动特化注意力头以控制运动迁移，可用于精确唇动生成",
+      "llm_tldr_en": "Identifies motion-specialized attention heads in video Diffusion Transformers and proposes a head-aware framework for controllable motion transfer without parameter updates, enabling potential fine-grained control of generated motions like lip movements.",
+      "llm_tldr_cn": "为解决视频扩散Transformer中运动迁移缺乏可控性的问题，论文在注意力头层面分析并识别出专门负责运动和空间结构的特定头。基于此提出无需参数更新的头感知可控运动迁移框架，通过运动特化头的语义对应引导优化运动线索，并通过选择性特征注入保留结构。该方法为生成视频中的精细运动（如唇部动作）控制提供了通用工具。",
+      "llm_tldr": "为解决视频扩散Transformer中运动迁移缺乏可控性的问题，论文在注意力头层面分析并识别出专门负责运动和空间结构的特定头。基于此提出无需参数更新的头感知可控运动迁移框架，通过运动特化头的语义对应引导优化运动线索，并通过选择性特征注入保留结构。该方法为生成视频中的精细运动（如唇部动作）控制提供了通用工具。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
