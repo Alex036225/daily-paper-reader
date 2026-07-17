@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-17",
+  "date": "2026-07-17",
+  "generated_at": "2026-07-17T21:07:56",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/17/2607.14189v1-multiref-compass-towards-comprehensive-evaluation-of-multi-reference-to-audio-video-generation",
+      "section": "deep",
+      "title_en": "MultiRef-Compass: Towards Comprehensive Evaluation of Multi-Reference-to-Audio-Video Generation",
+      "authors": "Xiaohan Zhang, Yuqing Wen, Junlin Chen, Yuqi Tang, Yiting He, Lizhuo Shao, Weiming Zhu, Tengfei Liu, Yang Shi, Jialu Chen, Yuanxing Zhang, Huaxiong Li",
+      "date": "2026-07-15",
+      "pdf": "https://arxiv.org/pdf/2607.14189v1",
+      "score": "9.0",
+      "evidence": "多参考到音视频生成的同步视听基准，直接适用于图像到音频驱动唇同步视频生成",
+      "tldr": "多参考到音视频生成（MR2AV）要求模型联合推理多个参考并生成同步的视听内容，但现有基准缺乏对该任务的全面评估。为此，我们提出MultiRef-Compass基准，包含350个覆盖多视角主体保留、多实体绑定等场景的样本，并定义了四维14指标的评价协议，融合自动指标与MLLM-as-a-Judge框架。在8个代表性系统上的实验表明，各维度均存在较大改进空间。该基准为MR2AV研究提供了统一、可解释的评估基础，推动领域向前发展。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Multi-reference-to-audio-video (MR2AV) generation aims to generate coherent audio-video content conditioned on multiple references and textual instructions. Existing benchmarks mainly focus on text-driven generation, single-reference subject preservation, or isolated audio-video alignment, leaving the emerging MR2AV setting largely unexplored. Compared with these settings, MR2AV requires models to jointly reason over multiple references while generating synchronized visual and audio content. Models must not only preserve each reference faithfully but also correctly bind and compose multiple referenced entities into coherent audio-visual events. To address this gap, we introduce MultiRef-Compass, a unified benchmark for MR2AV generation. It comprises $350$ carefully curated samples constructed through a scalable and controllable asset-composition pipeline, covering multi-view subject preservation, multi-entity binding, and human-object-scene composition. To provide interpretable assessment, MultiRef-Compass defines an evaluation protocol with four dimensions: Basic Quality, Reference Consistency, Audio-Visual Consistency, and Instruction Following, using 14 sub-metrics. MultiRef-Compass integrates automatic metrics with a rejudging-enhanced MLLM-as-a-Judge framework, enabling scalable and auditable evaluation of both perceptual fidelity and reference-conditioned composition. Extensive experiments on eight representative MR2AV systems reveal substantial room for improvement across multiple evaluation dimensions, underscoring the need for a comprehensive benchmark and positioning MultiRef-Compass as a foundation for future MR2AV research.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/17/2607.15038v1-video--world--event-stream",
+      "section": "deep",
+      "title_en": "Video = World + Event Stream",
+      "authors": "Lianghua Huang, Zhi-Fan Wu, Yupeng Shi, Wei Wang, Mengyang Feng, Cheng Yu, Chen Liang, Junjie He, Chen-Wei Xie, Yu Liu, Jingren Zhou, Ang Wang, Bang Zhang, Baole Ai, Chongyang Zhong, Jinwei Qi, Kai Zhu, Pandeng Li, Peng Zhang, Wenyuan Zhang, Xinhua Cheng, Yitong Huang, Yun Zheng, Yuxiang Bao, Yuzheng Wang, Zhiwei Lin, Zoubin Bi",
+      "date": "2026-07-16",
+      "pdf": "https://arxiv.org/pdf/2607.15038v1",
+      "score": "9.0",
+      "evidence": "提出了Wan-Streamer v0.3，基于WAN的视频生成模型",
+      "tldr": "针对视频生成中世界状态与事件流分离建模的问题，提出Wan-Streamer框架，将视频分解为世界和事件流，通过大规模预训练预测世界如何实时响应变化，可支持多种下游实时生成任务。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We present Wan-Streamer v0.3, which reframes our native-streaming interaction model under a single organizing view: a video is a world plus an event stream. The world is the persistent context in which a video unfolds, including the environment, scene, subjects, ambient acoustic conditions, voice characteristics, and other relatively stable conditions. The event stream is everything that changes over time within that world, including scene or environmental changes, subject behavior, speech, and other sounds. This yields a general-purpose pretraining task over large amounts of real video: given a world and incoming input, predict how the world moves, changes, and responds in real time. The resulting competence can be specialized to a broad family of real-time downstream tasks. We instantiate it on real-time full-duplex audio-visual interaction, where the event stream is the agent's speech together with free-form behavior. Functionally, the model's multimodal understanding process is vision-language-action-like: it maps multimodal user input to language-form speech and behavior actions. Wan-Streamer v0.3 preserves the v0.2 operating point: 640x368 video at 25 FPS, a 160 ms streaming unit, approximately 200 ms model-side response latency, and approximately 550 ms total interaction latency under a 350 ms bidirectional network budget.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
