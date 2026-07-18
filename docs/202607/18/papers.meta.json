@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-18",
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T20:26:03",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/18/2607.14202v1-keyframe-compass-towards-comprehensive-evaluation-of-keyframe-conditioned-video-generation",
+      "section": "quick",
+      "title_en": "KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation",
+      "authors": "Yuqi Tang, Tengfei Liu, Yizheng Lai, Yuran Wang, Yang Shi, Wanshun Su, Zhuoran Zhang, Qixun Wang, Xiaohan Zhang, Xinlei Yu, Xuehai Bai, Xuanyu Zhu, Bohan Zeng, Bozhou Li, Shujie Li, Yifan Dai, Yujie Wei, Shixuan Liu, Haotian Wang, Jialu Chen, Yuanxing Zhang",
+      "date": "2026-07-15",
+      "pdf": "https://arxiv.org/pdf/2607.14202v1",
+      "score": "7.0",
+      "evidence": "关键帧条件视频生成评测",
+      "tldr": "基于多关键帧的视频生成工作流日益普及，但模型能否准确执行关键帧并维持视频质量仍存疑。我们提出首个全面基准KeyFrame-Compass，包含386个精心策划的样本，覆盖三个领域、多种视频结构和关键帧密度，并设计自动评估框架从六个维度衡量关键帧执行与整体质量。在九个主流系统上的实验发现，当前模型普遍存在关键帧忠实度与生成自然性之间的权衡，密度增加时性能恶化，且多数开源模型无法解析故事板网格的时序顺序。该工作为关键帧条件视频生成提供了标准化评估体系。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Video generation increasingly relies on keyframe-based workflows, where creators specify a sequence of reference images to guide generation. Although recent models support multi-keyframe conditioning, it remains unclear whether they can faithfully reproduce the prescribed keyframes while maintaining overall video quality. We present KeyFrame-Compass, the first comprehensive benchmark for evaluating keyframe-conditioned video generation. The benchmark contains 386 carefully curated samples spanning three application domains, two video structures, two prompt granularities, two conditioning formats, and four keyframe densities, enabling controlled analysis under diverse generation settings. We further introduce an automated evaluation framework that jointly measures keyframe execution and overall video quality. Specifically, we decompose keyframe execution into six complementary metrics covering presence, fidelity, temporal ordering, localization, persistence, and uniqueness, while assessing overall video quality through evidence-grounded MLLM judgments augmented with specialized perception models. Experiments on nine representative video generation systems reveal several fundamental limitations. Current models exhibit a clear trade-off between faithful keyframe execution and natural video synthesis. Their performance further degrades as keyframe constraints become denser and most open-source models also fail to interpret storyboard-grid inputs as temporally ordered keyframe sequences.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/18/2607.14681v1-rebind-multi-reference-video-editing-via-structured-instructions-with-explicit-reference-relationships",
+      "section": "quick",
+      "title_en": "ReBind: Multi-Reference Video Editing via Structured Instructions with Explicit Reference Relationships",
+      "authors": "Xinyu Liu, Shihao Li, Weihong Lin, Xinlong Chen, Yang Shi, Yujin Han, Yiyang Cai, Yanghao Wang, Ruibin Yuan, Yuanxing Zhang, Pengfei Wan, Wenhan Luo, Yike Guo",
+      "date": "2026-07-16",
+      "pdf": "https://arxiv.org/pdf/2607.14681v1",
+      "score": "6.0",
+      "evidence": "多参考图像条件视频编辑",
+      "tldr": "多参考图像条件视频编辑中，现有扩散模型难以精确协调多个视觉源信息，根源在于编辑指令缺乏显式参考关系，通用多模态大语言模型也无法可靠生成。为此，提出ReBind框架，核心是在语义指令中嵌入参考令牌，在指定位置建立视觉属性与参考源之间的确定性绑定，消除歧义。具体设计了ReBind-Instruct专用多模态模型，通过两阶段渐进训练学习生成带绑定的指令；并开发ReBind-Edit，轻量适配文本到视频模型以遵从绑定。实验表明，ReBind指令质量大幅领先通用模型，编辑性能在开源方法中达最优，为多参考视频编辑提供了结构化解决方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Recent diffusion-based video generation models have made significant progress in multi-reference image-conditioned video editing. However, existing methods still struggle to coordinate information from multiple visual sources accurately. We identify a critical deficiency in existing approaches. Existing editing instructions lack explicit reference relationships, and most multimodal large language models (MLLMs) cannot generate them reliably. To address this problem, we propose ReBind, a systematic framework that introduces semantic instructions with embedded reference tokens as the intermediate representation for multi-reference image-conditioned video editing. Our key insight is embedding reference tokens at semantic positions to eliminate ambiguity and establish precise bindings between visual attributes and their sources. We develop ReBind-Instruct, a specialized MLLM that learns to establish explicit bindings between visual attributes and their reference sources through a two-stage progressive scheme for precise reference relationships. We further develop ReBind-Edit, which enables lightweight adaptation of text-to-video models to coordinate multiple references by binding visual attributes to their designated sources. Extensive experiments demonstrate that ReBind substantially outperforms general-purpose MLLMs in instruction quality and achieves state-of-the-art performance among open-source methods on reference image conditioned video editing. Our project webpage: https://rebind-mrv2v.github.io/.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
