@@ -1,6 +1,11 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-07-21 <!--dpr-date:20260721-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/21/2607.17985v1-keyframe-anchored-identity-preservation-for-sequential-action-video-generation" data-sidebar-item="{&quot;title&quot;: &quot;Keyframe-Anchored Identity Preservation for Sequential-Action Video Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.17985v1-keyframe-anchored-identity-preservation-for-sequential-action-video-generation&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;基于身份保持关键帧的视频生成&quot;}">Keyframe-Anchored Identity Preservation for Sequential-Action Video Generation</a>
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/21/2607.14423v1-emergent-region-level-facial-correspondence-in-frozen-vision-foundation-models" data-sidebar-item="{&quot;title&quot;: &quot;Emergent Region-Level Facial Correspondence in Frozen Vision Foundation Models&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.14423v1-emergent-region-level-facial-correspondence-in-frozen-vision-foundation-models&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;DINOv3特征提供包括嘴部在内的区域级面部对应，有助于唇形生成。&quot;}">Emergent Region-Level Facial Correspondence in Frozen Vision Foundation Models</a>
   * 2026-07-20 <!--dpr-date:20260720-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/20/2607.15038v2-video--world--event-stream" data-sidebar-item="{&quot;title&quot;: &quot;Video = World + Event Stream&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.15038v2-video--world--event-stream&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;Wan-Streamer v0.3 是基于 Wan 架构的视频生成模型，直接对应使用 Wan 模型进行视频生成的需求。&quot;}">Video = World + Event Stream</a>

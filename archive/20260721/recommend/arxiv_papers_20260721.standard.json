@@ -1,0 +1,94 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-21T21:23:02.800739+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.17985v1",
+      "source": "arxiv",
+      "title": "Keyframe-Anchored Identity Preservation for Sequential-Action Video Generation",
+      "abstract": "Identity-preserving text-to-video generation aims to synthesize a video that accurately follows a textual description while maintaining the recognizability of a user-specified subject throughout. The IPVG26 challenge extends this framework from a single holistic prompt to a temporally structured specification. The model additionally receives a sequence of timestamped action captions and must render the subject performing these actions in the specified order. This temporal structure presents a challenge not encountered in previous identity-preserving generation tasks, as the subject must continuously perform a scripted sequence of distinct actions while maintaining a consistent identity. However, end-to-end video generators are prone to appearance drift as motion accumulates and the depicted actions change. We address this challenge with a training-free, three-stage pipeline framework. An action-aware prompt polishment stage first rewrites the inputs into image-generation prompts that specify the terminal state of each action. An identity-preserving generation stage then produces the keyframe sequence by conditioning each frame jointly on the reference identity and its predecessor, thereby decoupling time-invariant appearance from time-varying pose. Finally, an identity-aware inference enhancement stage synthesizes the intermediate segments using multi-reference guidance and identity-driven noise searching, both of which reinforce identity fidelity during sampling. Our method ranked third on the official Track 2 leaderboard, demonstrating competitive performance and strong generality.",
+      "authors": [
+        "Zhenjie Liu",
+        "Binyan Chen",
+        "Hao Chen",
+        "Tong Pan",
+        "Shangfei Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.MM"
+      ],
+      "published": "2026-07-20T14:16:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.17985v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "video generation conditioned on identity-preserving keyframe",
+      "llm_evidence_cn": "基于身份保持关键帧的视频生成",
+      "llm_evidence": "基于身份保持关键帧的视频生成",
+      "canonical_evidence": "基于身份保持关键帧的视频生成",
+      "llm_tldr_en": "Proposes a method for text-to-video generation that preserves a subject's identity across sequential actions by anchoring with a reference keyframe, addressing the IPVG26 challenge.",
+      "llm_tldr_cn": "针对文本到视频生成中难以保持主体身份一致性的问题，特别是在顺序动作视频中，提出基于关键帧锚定的方法，利用参考关键帧图像引导，确保主体在执行一系列动作时外观不变。实验（参与IPVG26挑战）表明该方法能有效维持身份一致性，为需要长时间跨度的可控视频生成提供基础。",
+      "llm_tldr": "针对文本到视频生成中难以保持主体身份一致性的问题，特别是在顺序动作视频中，提出基于关键帧锚定的方法，利用参考关键帧图像引导，确保主体在执行一系列动作时外观不变。实验（参与IPVG26挑战）表明该方法能有效维持身份一致性，为需要长时间跨度的可控视频生成提供基础。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.14423v1",
+      "source": "arxiv",
+      "title": "Emergent Region-Level Facial Correspondence in Frozen Vision Foundation Models",
+      "abstract": "Frozen self-supervised vision models can align parts of generic objects, but it remains unclear whether this correspondence extends to human faces, where global layout is shared while identity-specific appearance varies sharply. We test whether frozen DINOv3 features define a region-level facial coordinate system: a feature space in which eyes, brows, nose, mouth, skin, and hair remain distinguishable across people and across time without face-specific training. Using DINOv3 ViT-L/16 patch embeddings and FaRL only as a face-part labeling interface, we evaluate cross-identity nearest-neighbor matching and temporal label propagation on 200 CelebDF-v2 real videos. DINOv3 achieves 83.0% region-level semantic accuracy under unconstrained cross-identity matching, compared with a 23.0% area-weighted random baseline, and 95.5% temporal tracking accuracy without a learned temporal module. A no-FaRL control collapses to 0.9%, showing that FaRL supplies semantic initialization while DINOv3 supplies dense spatial correspondence. The strongest correspondence appears at an intermediate layer: block 18 gives a 4.93x same-region versus cross-region discrimination ratio, compared with 1.48x at the final block. Against CLIP ViT-L/14, DINOv3 shows only a small aggregate advantage but a +16.8 pp gain on anatomical regions, indicating that image-level contrastive supervision captures coarse facial layout but not fine-grained anatomical identity. These results establish frozen DINOv3 as a strong zero-shot representation for region-level facial correspondence and identify intermediate self-supervised features as the most useful layer for dense face analysis.",
+      "authors": [
+        "Izaldein Al-Zyoud",
+        "Abdulmotaleb El Saddik"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "eess.IV"
+      ],
+      "published": "2026-07-15T23:23:28+00:00",
+      "link": "https://arxiv.org/pdf/2607.14423v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "DINOv3 features provide region-level facial correspondence including mouth, useful for lip movement generation.",
+      "llm_evidence_cn": "DINOv3特征提供包括嘴部在内的区域级面部对应，有助于唇形生成。",
+      "llm_evidence": "DINOv3特征提供包括嘴部在内的区域级面部对应，有助于唇形生成。",
+      "canonical_evidence": "DINOv3特征提供包括嘴部在内的区域级面部对应，有助于唇形生成。",
+      "llm_tldr_en": "Frozen DINOv3 vision model exhibits emergent region-level facial correspondence, achieving 83% accuracy in mouth region matching without face-specific training, providing a foundation for lip sync in video generation.",
+      "llm_tldr_cn": "针对冻结自监督视觉模型能否捕捉面部区域对应的问题，本文发现冻结的DINOv3模型无需面部专项训练即可区分眼眉鼻口等区域，在跨身份匹配中实现83%的语义准确率。该成果为视频生成中的精确唇形同步提供了鲁棒的面部区域先验，有望指导口型区域的对齐与合成。",
+      "llm_tldr": "针对冻结自监督视觉模型能否捕捉面部区域对应的问题，本文发现冻结的DINOv3模型无需面部专项训练即可区分眼眉鼻口等区域，在跨身份匹配中实现83%的语义准确率。该成果为视频生成中的精确唇形同步提供了鲁棒的面部区域先验，有望指导口型区域的对齐与合成。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating natural lip movements in image-to-video models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
