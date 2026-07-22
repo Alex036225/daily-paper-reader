@@ -6,28 +6,28 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-21
-- 运行时间：2026-07-21 21:26:23 UTC
+- 最新运行日期：2026-07-22
+- 运行时间：2026-07-22 21:28:42 UTC
 - 运行状态：成功
 - 本次总论文数：2
 - 精读区：1
 - 速读区：1
 
 ### 今日简报（AI）
-今日精读视频生成新方法，速览了冻结视觉模型的人脸对齐涌现现象。  
-最值得关注：关键帧锚定身份保持技术使动作序列视频更连贯，而冻结模型竟能自发捕捉区域级面部对应。  
-对生成连贯视频或人脸分析有兴趣的读者，不妨思考如何将二者结合，探索无需微调的面部控制新路径。
-- 详情：[/202607/21/README](/202607/21/README)
+今日精读物理推理驱动的视频生成新方案DeforM，速读以人为本的视频个性化方法HOMIE。
+最值得关注：DeforM通过时空掩码引导视频生成遵循物理规律，让画面运动更真实可信。
+下步可尝试将“物理推理+视频生成”的思路引入你的内容创作，探索更自然的动态视频效果。
+- 详情：[/202607/22/README](/202607/22/README)
 
 ### 精读区论文标签
-1. [Keyframe-Anchored Identity Preservation for Sequential-Action Video Generation](/202607/21/2607.17985v1-keyframe-anchored-identity-preservation-for-sequential-action-video-generation)  
+1. [DeforM: Reasoning-Guided Physics-Aware Video Generation via Spatial-Temporal Masking](/202607/22/2607.18664v1-deform-reasoning-guided-physics-aware-video-generation-via-spatial-temporal-masking)  
    标签：评分：8.0/10、query:wan-av-gen
-   evidence：基于身份保持关键帧的视频生成
+   evidence：图像到视频生成框架，具有物理感知推理
 
 ### 速读区论文标签
-1. [Emergent Region-Level Facial Correspondence in Frozen Vision Foundation Models](/202607/21/2607.14423v1-emergent-region-level-facial-correspondence-in-frozen-vision-foundation-models)  
+1. [HOMIE: Human-object Centric Video Personalization via Multimodal Intelligent Enhancement](/202607/22/2607.18217v2-homie-human-object-centric-video-personalization-via-multimodal-intelligent-enhancement)  
    标签：评分：7.0/10、query:wan-av-gen
-   evidence：DINOv3特征提供包括嘴部在内的区域级面部对应，有助于唇形生成。
+   evidence：基于人-物参考图像的视频个性化生成
 
 
 <div class="dpr-home-promo-card">

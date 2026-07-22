@@ -1,0 +1,100 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-22T21:25:17.981172+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.18664v1",
+      "source": "arxiv",
+      "title": "DeforM: Reasoning-Guided Physics-Aware Video Generation via Spatial-Temporal Masking",
+      "abstract": "Video generation models achieve high visual quality but often struggle to generate physics-aware videos. Unlike rigid-body motion, which can be described by explicit trajectories or formulas, complex deformation dynamics remain challenging to synthesize. We observe that a lack of physical reasoning for localizing dynamic areas allows irrelevant regions to dilute the model's attention, leading to generation failure. In this paper, we propose DeforM, a reasoning-guided image-to-video generation framework that directs the model's focus toward physics-critical regions. To reason about and localize these critical regions, we introduce a VLM-guided physical reasoning module, DeforM-Reason, to identify target objects and generate spatial-temporal masks. For physical guidance, we develop two alternative strategies: DeforM-Free for training-free mechanism analysis and DeforM-Injection as a powerful training-based generator. Experimental results demonstrate that DeforM improves the realism of generated deformation scenarios, outperforming baseline models in both visual quality and physical consistency.",
+      "authors": [
+        "Yunyi Li",
+        "Yu Qiao",
+        "Yaohui Wang",
+        "Xinyuan Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-21T03:23:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.18664v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "image-to-video generation framework with physics-aware reasoning",
+      "llm_evidence_cn": "图像到视频生成框架，具有物理感知推理",
+      "llm_evidence": "图像到视频生成框架，具有物理感知推理",
+      "canonical_evidence": "图像到视频生成框架，具有物理感知推理",
+      "llm_tldr_en": "DeforM is a reasoning-guided image-to-video framework that uses a VLM to identify physics-critical regions and spatial-temporal masking to improve deformation dynamics in generated videos.",
+      "llm_tldr_cn": "DeforM提出一种推理引导的图像到视频生成框架，通过VLM定位物理关键区域并施加时空掩码，使模型聚焦于目标物体的形变动态，解决复杂形变运动生成中的物理不一致问题。",
+      "llm_tldr": "DeforM提出一种推理引导的图像到视频生成框架，通过VLM定位物理关键区域并施加时空掩码，使模型聚焦于目标物体的形变动态，解决复杂形变运动生成中的物理不一致问题。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.18217v2",
+      "source": "arxiv",
+      "title": "HOMIE: Human-object Centric Video Personalization via Multimodal Intelligent Enhancement",
+      "abstract": "Human-object centric video personalization (HOCVP) is a core task within subject-driven video generation. However, existing methods suffer from two key limitations. First, most approaches focusing on inter-subject personalization still struggle to strike a balance between high subject fidelity and accurate interaction patterns between humans and diverse objects, especially when objects represent abstract concepts such as logos. Second, while intra-subject references (e.g., OCR maps, multi-view inputs) are expected to enhance subject fidelity, most existing works lack mechanisms to understand such latent correspondence. To address both challenges, we propose HOMIE, an HOCVP framework that tackles both inter- and intra-subject input settings in a unified manner. Compared to previous approaches, HOMIE proposes a better MLLM integration strategy to extract knowledge of reference-level relationships without compromising the controllability of text encoders or incurring costly re-alignment. Specifically, we introduce global multimodal guidance within self-attention to better align MLLM-derived semantic features with VAE tokens. Furthermore, we propose modality-reference embedding to differentiate tokens from MLLM features and VAE tokens and associate intra-subject reference image tokens. Extensive experiments validate that our method achieves state-of-the-art performance across various HOCVP tasks. Project Page: https://yiyangcai.github.io/homie-page.github.io/",
+      "authors": [
+        "Yiyang Cai",
+        "Nan Chen",
+        "Rongchang Xie",
+        "Junwen Pan",
+        "Chunyang Jiang",
+        "Cheng Chen",
+        "Wen Zhou",
+        "Zhenbang Sun",
+        "Wei Xue",
+        "Wenhan Luo",
+        "Yike Guo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-20T17:51:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.18217v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "video personalization conditioned on human and object reference images",
+      "llm_evidence_cn": "基于人-物参考图像的视频个性化生成",
+      "llm_evidence": "基于人-物参考图像的视频个性化生成",
+      "canonical_evidence": "基于人-物参考图像的视频个性化生成",
+      "llm_tldr_en": "Proposes HOMIE, a human-object centric video personalization framework that uses multimodal references (e.g., OCR maps, multi-view inputs) to enhance subject fidelity and interaction accuracy.",
+      "llm_tldr_cn": "HOMIE框架针对人-物中心视频个性化，通过多模态智能增强解决主体保真度与交互模式准确性之间的平衡问题。利用OCR地图、多视角输入等参考信息，理解隐式对应关系，提高生成质量。",
+      "llm_tldr": "HOMIE框架针对人-物中心视频个性化，通过多模态智能增强解决主体保真度与交互模式准确性之间的平衡问题。利用OCR地图、多视角输入等参考信息，理解隐式对应关系，提高生成质量。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
