@@ -6,28 +6,22 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-22
-- 运行时间：2026-07-22 21:28:42 UTC
+- 最新运行日期：2026-07-23
+- 运行时间：2026-07-23 21:39:23 UTC
 - 运行状态：成功
-- 本次总论文数：2
-- 精读区：1
-- 速读区：1
+- 本次总论文数：0
+- 精读区：0
+- 速读区：0
 
 ### 今日简报（AI）
-今日精读物理推理驱动的视频生成新方案DeforM，速读以人为本的视频个性化方法HOMIE。
-最值得关注：DeforM通过时空掩码引导视频生成遵循物理规律，让画面运动更真实可信。
-下步可尝试将“物理推理+视频生成”的思路引入你的内容创作，探索更自然的动态视频效果。
-- 详情：[/202607/22/README](/202607/22/README)
+> 今日无新推荐，系统未产出可展示论文。
+- 详情：[/202607/23/README](/202607/23/README)
 
 ### 精读区论文标签
-1. [DeforM: Reasoning-Guided Physics-Aware Video Generation via Spatial-Temporal Masking](/202607/22/2607.18664v1-deform-reasoning-guided-physics-aware-video-generation-via-spatial-temporal-masking)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：图像到视频生成框架，具有物理感知推理
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [HOMIE: Human-object Centric Video Personalization via Multimodal Intelligent Enhancement](/202607/22/2607.18217v2-homie-human-object-centric-video-personalization-via-multimodal-intelligent-enhancement)  
-   标签：评分：7.0/10、query:wan-av-gen
-   evidence：基于人-物参考图像的视频个性化生成
+- 本次无速读推荐。
 
 
 <div class="dpr-home-promo-card">
