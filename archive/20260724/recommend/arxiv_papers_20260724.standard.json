@@ -1,0 +1,137 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-24T21:38:23.197683+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.21580v1",
+      "source": "arxiv",
+      "title": "GraphVid: Interactive Graph-Controllable Video Generation",
+      "abstract": "Controllable video generation remains challenging due to the difficulty of specifying precise multi-object interactions using text prompts or motion-control inputs that primarily constrain pixel movement. In practice, trajectory-based control often requires users to draw accurate tracks for multiple objects, which scales poorly with scene complexity and becomes ambiguous under occlusion or overlap. To enable flexible yet precise multi-subject control, we introduce $\\textbf{GraphVid}$, a graph-conditioned image-to-video generation model that enables interactive control through structured interaction graphs. We further curate $\\textbf{GraphVid-Bench}$, a large-scale interaction-centric video dataset with structured relational annotations to enable training of interaction-aware video generation models. Despite using substantially less training data and fewer trainable parameters than prior motion-control methods, GraphVid delivers strong controllability and video quality. Compared with Motion-I2V, GraphVid reduces FID by up to 39.9% and FVD by 37.6%, while improving PSNR (9.87=>15.98) and SSIM (0.38=>0.61). Our results highlight the potential of structured semantic interfaces as a powerful paradigm for controllable video generation.",
+      "authors": [
+        "Vedant Shah",
+        "Onkar Susladkar",
+        "Tushar Prakash",
+        "Kiet Nguyen",
+        "Tianjio Yu",
+        "Adheesh Juvekar",
+        "Muntasir Waheed",
+        "Ismini Lourentzou"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-23T17:56:30+00:00",
+      "link": "https://arxiv.org/pdf/2607.21580v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Image-to-video generation model with interactive graph-based control",
+      "llm_evidence_cn": "基于图的交互式图像到视频生成模型",
+      "llm_evidence": "基于图的交互式图像到视频生成模型",
+      "canonical_evidence": "基于图的交互式图像到视频生成模型",
+      "llm_tldr_en": "Introduces a graph-conditioned image-to-video model that enables precise multi-object interaction control, aided by a large-scale dataset with structured relational annotations.",
+      "llm_tldr_cn": "针对文本或轨迹难以精确控制视频中多物体交互的问题，本文提出GraphVid，一种图条件的图像到视频生成模型，通过结构化交互图实现灵活的精确控制，并构建了大规模关系标注数据集供训练。实验表明该方法在复杂场景下有效提升了多主体交互生成的准确性。",
+      "llm_tldr": "针对文本或轨迹难以精确控制视频中多物体交互的问题，本文提出GraphVid，一种图条件的图像到视频生成模型，通过结构化交互图实现灵活的精确控制，并构建了大规模关系标注数据集供训练。实验表明该方法在复杂场景下有效提升了多主体交互生成的准确性。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.14595v1",
+      "source": "arxiv",
+      "title": "MagicPrompt: Ultra-Lightweight Prompt Tuning for Video Generation",
+      "abstract": "Large-scale video diffusion models (VDMs) deliver strong generation performance, but full fine-tuning for downstream tasks incurs prohibitive computational costs. Existing parameter-efficient fine-tuning (PEFT) methods have two critical flaws on billion-scale models: they still require substantial trainable parameters, and reward-based training suffers from noise-induced optimization instability in condition-guided tasks. We propose MagicPrompt, a lightweight framework that achieves extreme parameter efficiency and stable reward optimization. It first adopts Attention-Embedded Prompt Tuning, which steers generation via lightweight soft prompts with orders of magnitude fewer parameters while preserving pre-trained knowledge. It further introduces Dual-Space Reward Feedback Optimization, which uses self-supervised latent objectives to improve condition-guided reward training. Experiments show MagicPrompt reaches competitive performance with less than 1\\% trainable parameters and notably reduces training costs.",
+      "authors": [
+        "Yinhan Zhang",
+        "Dinwei Tan",
+        "Xianghao Kong",
+        "Yue Ma",
+        "Yeying Jin",
+        "Anyi Rao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-16T05:46:59+00:00",
+      "link": "https://arxiv.org/pdf/2607.14595v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Ultra-lightweight prompt tuning for video diffusion models, enabling efficient adaptation for condition-guided tasks like lip-sync I2V",
+      "llm_evidence_cn": "用于视频扩散模型的超轻量级提示调优，可高效适应条件引导任务，如唇音同步 I2V",
+      "llm_evidence": "用于视频扩散模型的超轻量级提示调优，可高效适应条件引导任务，如唇音同步 I2V",
+      "canonical_evidence": "用于视频扩散模型的超轻量级提示调优，可高效适应条件引导任务，如唇音同步 I2V",
+      "llm_tldr_en": "MagicPrompt proposes an extremely parameter-efficient fine-tuning method for video diffusion models, using soft prompts and dual-space alignment, which can be applied to adapt models like WAN for image-to-video generation with lip sync.",
+      "llm_tldr_cn": "MagicPrompt 为大规模视频扩散模型提出了超轻量级参数高效微调框架，通过注意力嵌入提示调优和双空间对齐实现稳定优化。该方法可大幅降低将 WAN 模型适配到图像到视频唇音同步等条件生成任务的计算成本，具有广泛的方法学桥梁价值。",
+      "llm_tldr": "MagicPrompt 为大规模视频扩散模型提出了超轻量级参数高效微调框架，通过注意力嵌入提示调优和双空间对齐实现稳定优化。该方法可大幅降低将 WAN 模型适配到图像到视频唇音同步等条件生成任务的计算成本，具有广泛的方法学桥梁价值。",
+      "llm_tags": [
+        "query:wan-av-gen:composite"
+      ],
+      "matched_query_tag": "query:wan-av-gen:composite",
+      "matched_query_text": "Papers central to 检索基于WAN模型的I2V视频生成论文，重点在对嘴型等细节, especially work that connects or combines: WAN architecture for multimodal generation; video generation using Wan model; generating video with multiple modalities; video generation conditioned on an image; accurate lip sync in generated videos; generating natural lip movements in image-to-video models; Generating a talking head video from a single portrait image with accurate lip sync using WAN model.; Image to video generation with audio driven lip motion synthesis.; How to achieve precise lip synchronization in WAN model video generation from images?.",
+      "matched_requirement_id": "req-composite-wan-av-gen",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.15667v1",
+      "source": "arxiv",
+      "title": "PE-Field 4D: Video Generation Models as Canvas",
+      "abstract": "Diffusion Transformers have recently achieved strong performance in video generation, yet controlling scene geometry under viewpoint changes and camera motion remains challenging. In this work, we revisit the role of positional encoding in video diffusion transformers and show that it provides a useful spatial bias for geometry-aware control. Specifically, if reference tokens are encoded according to their projected locations in the target view, the denoising model is encouraged to retrieve content from position aligned regions of the input video. Building on this observation, we introduce a geometry-aware cross-attention mechanism that enables target video latent tokens to attend to structured context tokens derived from reference images or frames. To establish correspondence between the reference content and the target camera trajectory, we equip the context tokens with a projected positional encoding scheme that combines target-view 2D reprojection with depth-aware disambiguation. At the same time, we preserve the original spatiotemporal positional encoding of the generated video latent, allowing geometric guidance to be injected while maintaining consistency with the video model's native latent structure. The resulting framework provides a simple and effective approach for controllable video generation. It improves spatial controllability in viewpoint-dependent editing tasks, including camera re-trajectory, novel-view video synthesis, and geometry-aware video editing, while preserving the generative prior of the underlying video diffusion model. The code is available at: https://github.com/MTLab/PE-Field.",
+      "authors": [
+        "Yunpeng Bai",
+        "Haoxiang Li",
+        "Qixing Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-17T06:22:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.15667v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Uses reference images for geometry-aware control in video generation",
+      "llm_evidence_cn": "利用参考图像在视频生成中进行几何感知控制",
+      "llm_evidence": "利用参考图像在视频生成中进行几何感知控制",
+      "canonical_evidence": "利用参考图像在视频生成中进行几何感知控制",
+      "llm_tldr_en": "Proposes a geometry-aware cross-attention mechanism that conditions video generation on reference images to control scene geometry under view changes.",
+      "llm_tldr_cn": "针对视频扩散模型中难以控制场景几何和视角变化的问题，本文重新审视位置编码的作用，提出一种几何感知的交叉注意力机制，使目标视频潜在令牌能够关注来自参考图像的结构化上下文令牌，从而实现对生成视频中几何布局的精确控制。实验表明该方法有效提升了视角变化下的几何一致性。",
+      "llm_tldr": "针对视频扩散模型中难以控制场景几何和视角变化的问题，本文重新审视位置编码的作用，提出一种几何感知的交叉注意力机制，使目标视频潜在令牌能够关注来自参考图像的结构化上下文令牌，从而实现对生成视频中几何布局的精确控制。实验表明该方法有效提升了视角变化下的几何一致性。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

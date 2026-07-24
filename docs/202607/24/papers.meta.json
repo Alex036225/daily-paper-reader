@@ -1,0 +1,54 @@
+{
+  "label": "2026-07-24",
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T21:42:24",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202607/24/2607.21580v1-graphvid-interactive-graph-controllable-video-generation",
+      "section": "deep",
+      "title_en": "GraphVid: Interactive Graph-Controllable Video Generation",
+      "authors": "Vedant Shah, Onkar Susladkar, Tushar Prakash, Kiet Nguyen, Tianjio Yu, Adheesh Juvekar, Muntasir Waheed, Ismini Lourentzou",
+      "date": "2026-07-23",
+      "pdf": "https://arxiv.org/pdf/2607.21580v1",
+      "score": "9.0",
+      "evidence": "基于图的交互式图像到视频生成模型",
+      "tldr": "视频生成中，多对象交互的精确控制颇具挑战，现有文本或轨迹输入在遮挡和重叠场景下难以灵活应对。我们提出GraphVid，一种基于交互图的图像到视频生成模型，让用户通过结构化关系图控制多主体运动，并为此构建了大规模数据集GraphVid-Bench。与Motion-I2V相比，GraphVid使用更少数据和参数，却使FID降低39.9%、FVD降低37.6%，PSNR从9.87提升至15.98，SSIM从0.38提升至0.61。结果表明，结构化语义接口是可控视频生成的有效范式，克服了轨迹控制的歧义性，为交互式视频生成开辟了新路径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Controllable video generation remains challenging due to the difficulty of specifying precise multi-object interactions using text prompts or motion-control inputs that primarily constrain pixel movement. In practice, trajectory-based control often requires users to draw accurate tracks for multiple objects, which scales poorly with scene complexity and becomes ambiguous under occlusion or overlap. To enable flexible yet precise multi-subject control, we introduce $\\textbf{GraphVid}$, a graph-conditioned image-to-video generation model that enables interactive control through structured interaction graphs. We further curate $\\textbf{GraphVid-Bench}$, a large-scale interaction-centric video dataset with structured relational annotations to enable training of interaction-aware video generation models. Despite using substantially less training data and fewer trainable parameters than prior motion-control methods, GraphVid delivers strong controllability and video quality. Compared with Motion-I2V, GraphVid reduces FID by up to 39.9% and FVD by 37.6%, while improving PSNR (9.87=>15.98) and SSIM (0.38=>0.61). Our results highlight the potential of structured semantic interfaces as a powerful paradigm for controllable video generation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/24/2607.14595v1-magicprompt-ultra-lightweight-prompt-tuning-for-video-generation",
+      "section": "quick",
+      "title_en": "MagicPrompt: Ultra-Lightweight Prompt Tuning for Video Generation",
+      "authors": "Yinhan Zhang, Dinwei Tan, Xianghao Kong, Yue Ma, Yeying Jin, Anyi Rao",
+      "date": "2026-07-16",
+      "pdf": "https://arxiv.org/pdf/2607.14595v1",
+      "score": "7.0",
+      "evidence": "用于视频扩散模型的超轻量级提示调优，可高效适应条件引导任务，如唇音同步 I2V",
+      "tldr": "大规模视频扩散模型全微调成本高昂，现有参数高效方法在十亿参数模型上仍面临参数冗余和奖励训练不稳定的问题。MagicPrompt通过注意力嵌入的软提示微调以极少参数驱动生成，并利用双空间奖励反馈优化提升条件引导稳定性。仅需不足1%可训练参数即达竞争性能，显著降低训练开销，为视频生成高效适配提供新范式。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Large-scale video diffusion models (VDMs) deliver strong generation performance, but full fine-tuning for downstream tasks incurs prohibitive computational costs. Existing parameter-efficient fine-tuning (PEFT) methods have two critical flaws on billion-scale models: they still require substantial trainable parameters, and reward-based training suffers from noise-induced optimization instability in condition-guided tasks. We propose MagicPrompt, a lightweight framework that achieves extreme parameter efficiency and stable reward optimization. It first adopts Attention-Embedded Prompt Tuning, which steers generation via lightweight soft prompts with orders of magnitude fewer parameters while preserving pre-trained knowledge. It further introduces Dual-Space Reward Feedback Optimization, which uses self-supervised latent objectives to improve condition-guided reward training. Experiments show MagicPrompt reaches competitive performance with less than 1\\% trainable parameters and notably reduces training costs.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/24/2607.15667v1-pe-field-4d-video-generation-models-as-canvas",
+      "section": "quick",
+      "title_en": "PE-Field 4D: Video Generation Models as Canvas",
+      "authors": "Yunpeng Bai, Haoxiang Li, Qixing Huang",
+      "date": "2026-07-17",
+      "pdf": "https://arxiv.org/pdf/2607.15667v1",
+      "score": "7.0",
+      "evidence": "利用参考图像在视频生成中进行几何感知控制",
+      "tldr": "视频扩散模型在视角变化下难以控制场景几何。本文发现位置编码可为模型提供空间偏差，若将参考帧按目标视图投影位置编码，能促使去噪过程从对齐区域检索内容。据此提出几何感知交叉注意力机制，结合投影位置编码和深度消歧，有效注入几何引导并保持原生视频潜结构。该方法提升了相机重轨迹、新视角合成等任务的空间可控性，同时保留了生成先验。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Diffusion Transformers have recently achieved strong performance in video generation, yet controlling scene geometry under viewpoint changes and camera motion remains challenging. In this work, we revisit the role of positional encoding in video diffusion transformers and show that it provides a useful spatial bias for geometry-aware control. Specifically, if reference tokens are encoded according to their projected locations in the target view, the denoising model is encouraged to retrieve content from position aligned regions of the input video. Building on this observation, we introduce a geometry-aware cross-attention mechanism that enables target video latent tokens to attend to structured context tokens derived from reference images or frames. To establish correspondence between the reference content and the target camera trajectory, we equip the context tokens with a projected positional encoding scheme that combines target-view 2D reprojection with depth-aware disambiguation. At the same time, we preserve the original spatiotemporal positional encoding of the generated video latent, allowing geometric guidance to be injected while maintaining consistency with the video model's native latent structure. The resulting framework provides a simple and effective approach for controllable video generation. It improves spatial controllability in viewpoint-dependent editing tasks, including camera re-trajectory, novel-view video synthesis, and geometry-aware video editing, while preserving the generative prior of the underlying video diffusion model. The code is available at: https://github.com/MTLab/PE-Field.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
