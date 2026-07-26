@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-26",
+  "date": "2026-07-26",
+  "generated_at": "2026-07-26T21:11:53",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/26/2607.20922v1-fa-lam-focus-aware-large-avatar-model-for-one-shot-4d-animatable-gaussian-head",
+      "section": "quick",
+      "title_en": "FA-LAM: Focus-Aware Large Avatar Model for One-Shot 4D Animatable Gaussian Head",
+      "authors": "Yingdong Hu, Yisheng He, Yiming Jiang, Zehong Lin, Steven Hoi, Jun Zhang",
+      "date": "2026-07-23",
+      "pdf": "https://arxiv.org/pdf/2607.20922v1",
+      "score": "7.0",
+      "evidence": "从单张人像图像一键生成可动画头部",
+      "tldr": "本文针对现有方法在一次性头像生成中注意力激活错误与重构-动画任务冲突问题，提出焦点感知大型化身模型FA-LAM。该方法利用对称语义注意力正则化，结合头部对称性与语义先验，解耦重构与动画训练，实现从单张图像重建高质量3D及动态4D头部。实验表明，FA-LAM显著提升头部生成质量与动画真实性，为单图驱动可说话头像提供有效技术路径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We propose FA-LAM, a Focus-Aware Large Avatar Model for one-shot animatable Gaussian head creation, while simultaneously enabling static 3D and dynamic 4D full-head recovery. The core of our method lies in a thorough analysis of the attention mechanisms and the entangled reconstruction and animation training pipeline adopted by prior state-of-the-art approaches. Our analysis identifies two main factors that compromise the quality of 3D full-head generation: (1) incorrect and noisy attention activations, and (2) conflicts between the tasks of reconstruction and animation. To address the first issue, we introduce a symmetric and semantic attention regularization strategy that leverages the inherent semantics and structural symmetry of human heads. To disentangle the objectives of reconstruction and animation, we develop a novel dual-phase training pipeline that separates the model's capabilities for large-view hallucination and animation into distinct modules. Moreover, we enhance our model to support multi-view and streaming 4D reconstruction in an efficient and memory-friendly manner through a core autoregressive modification with tailored visibility-aware token fusion. Collectively, these innovations enable FA-LAM to reconstruct animatable Gaussian full heads with superior quality, particularly in fine facial regions and large viewing angles.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

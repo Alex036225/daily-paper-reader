@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-07-26 <!--dpr-date:20260726-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/26/2607.20922v1-fa-lam-focus-aware-large-avatar-model-for-one-shot-4d-animatable-gaussian-head" data-sidebar-item="{&quot;title&quot;: &quot;FA-LAM: Focus-Aware Large Avatar Model for One-Shot 4D Animatable Gaussian Head&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.20922v1-fa-lam-focus-aware-large-avatar-model-for-one-shot-4d-animatable-gaussian-head&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;从单张人像图像一键生成可动画头部&quot;}">FA-LAM: Focus-Aware Large Avatar Model for One-Shot 4D Animatable Gaussian Head</a>
   * 2026-07-24 <!--dpr-date:20260724-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/24/2607.21580v1-graphvid-interactive-graph-controllable-video-generation" data-sidebar-item="{&quot;title&quot;: &quot;GraphVid: Interactive Graph-Controllable Video Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.21580v1-graphvid-interactive-graph-controllable-video-generation&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;基于图的交互式图像到视频生成模型&quot;}">GraphVid: Interactive Graph-Controllable Video Generation</a>

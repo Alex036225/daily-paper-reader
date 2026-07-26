@@ -1,0 +1,57 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-26T21:09:19.318912+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.20922v1",
+      "source": "arxiv",
+      "title": "FA-LAM: Focus-Aware Large Avatar Model for One-Shot 4D Animatable Gaussian Head",
+      "abstract": "We propose FA-LAM, a Focus-Aware Large Avatar Model for one-shot animatable Gaussian head creation, while simultaneously enabling static 3D and dynamic 4D full-head recovery. The core of our method lies in a thorough analysis of the attention mechanisms and the entangled reconstruction and animation training pipeline adopted by prior state-of-the-art approaches. Our analysis identifies two main factors that compromise the quality of 3D full-head generation: (1) incorrect and noisy attention activations, and (2) conflicts between the tasks of reconstruction and animation. To address the first issue, we introduce a symmetric and semantic attention regularization strategy that leverages the inherent semantics and structural symmetry of human heads. To disentangle the objectives of reconstruction and animation, we develop a novel dual-phase training pipeline that separates the model's capabilities for large-view hallucination and animation into distinct modules. Moreover, we enhance our model to support multi-view and streaming 4D reconstruction in an efficient and memory-friendly manner through a core autoregressive modification with tailored visibility-aware token fusion. Collectively, these innovations enable FA-LAM to reconstruct animatable Gaussian full heads with superior quality, particularly in fine facial regions and large viewing angles.",
+      "authors": [
+        "Yingdong Hu",
+        "Yisheng He",
+        "Yiming Jiang",
+        "Zehong Lin",
+        "Steven Hoi",
+        "Jun Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-23T04:57:22+00:00",
+      "link": "https://arxiv.org/pdf/2607.20922v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "one-shot animatable head generation from a single portrait image",
+      "llm_evidence_cn": "从单张人像图像一键生成可动画头部",
+      "llm_evidence": "从单张人像图像一键生成可动画头部",
+      "canonical_evidence": "从单张人像图像一键生成可动画头部",
+      "llm_tldr_en": "FA-LAM proposes a focus-aware large avatar model for one-shot creation of animatable 3D/4D heads, addressing attention noise and task conflicts via symmetric semantic attention regularization, achieving high-quality head animation from a single image.",
+      "llm_tldr_cn": "本文针对现有方法在一次性头像生成中注意力激活错误与重构-动画任务冲突问题，提出焦点感知大型化身模型FA-LAM。该方法利用对称语义注意力正则化，结合头部对称性与语义先验，解耦重构与动画训练，实现从单张图像重建高质量3D及动态4D头部。实验表明，FA-LAM显著提升头部生成质量与动画真实性，为单图驱动可说话头像提供有效技术路径。",
+      "llm_tldr": "本文针对现有方法在一次性头像生成中注意力激活错误与重构-动画任务冲突问题，提出焦点感知大型化身模型FA-LAM。该方法利用对称语义注意力正则化，结合头部对称性与语义先验，解耦重构与动画训练，实现从单张图像重建高质量3D及动态4D头部。实验表明，FA-LAM显著提升头部生成质量与动画真实性，为单图驱动可说话头像提供有效技术路径。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Generating a talking head video from a single portrait image with accurate lip sync using WAN model.",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
