@@ -1,0 +1,59 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-27T21:18:37.869006+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2607.20174v1",
+      "source": "arxiv",
+      "title": "StreamHOI: Interaction-aware Temporal Memory Adaptation for Streaming HOI Video Generation",
+      "abstract": "Existing human--object interaction (HOI) video generation methods are largely limited to offline short-video generation with complex driving conditions, making them unsuitable for real-time interactive applications. We present \\emph{StreamHOI}, a low-latency streaming framework for long-duration HOI video generation. Instead of converting heavily conditioned HOI pipelines into streaming systems, we study how an image-to-video streaming generator should organize historical memory to preserve interactions under bounded latency. We find that the standard sink-local memory design faces a trade-off in streaming HOI generation, and different transformer blocks show different historical-memory preferences for HOI regions and surrounding regions. To match memory composition with block behavior, StreamHOI performs offline HOI-aware block profiling and applies bias-guided memory-specialized training to adapt the generator to block-specific memory layouts. We further introduce a memory distance scaling module to strengthen long-range access to early interaction states. Extensive comparisons with both long-video baselines and recent HOI generation methods demonstrate that StreamHOI achieves strong interaction plausibility, object fidelity, human quality and efficiency, reaching 17.6 FPS with 0.75s first-chunk latency.",
+      "authors": [
+        "Zejing Rao",
+        "Haoxian Zhang",
+        "Xiaoqiang Liu",
+        "Yiping Meng",
+        "Guoxin Zhang",
+        "Pengfei Wan",
+        "Fan Tang",
+        "Tong-Yee Lee"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-22T14:06:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.20174v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "image-to-video streaming generator for human-object interaction",
+      "llm_evidence_cn": "面向人-物交互的图像到视频流式生成器",
+      "llm_evidence": "面向人-物交互的图像到视频流式生成器",
+      "canonical_evidence": "面向人-物交互的图像到视频流式生成器",
+      "llm_tldr_en": "StreamHOI is a low-latency streaming framework for long-duration HOI video generation from a single image, addressing how to organize historical memory in image-to-video generation for streaming. It adapts memory via interaction-aware temporal memory across transformer blocks.",
+      "llm_tldr_cn": "现有HOI视频生成方法受限于离线短时生成，无法满足实时交互应用的低延迟需求。本文提出StreamHOI流式框架，从单张图像生成长时间人-物交互视频，核心是研究图像到视频流式生成器的历史记忆组织问题，发现不同Transformer块对HOI区域和背景的记忆偏好不同，并提出交互感知的时序记忆适应机制。实验表明该方法能有效平衡延迟与交互保真度。该工作为实时流式视频生成提供了新思路。",
+      "llm_tldr": "现有HOI视频生成方法受限于离线短时生成，无法满足实时交互应用的低延迟需求。本文提出StreamHOI流式框架，从单张图像生成长时间人-物交互视频，核心是研究图像到视频流式生成器的历史记忆组织问题，发现不同Transformer块对HOI区域和背景的记忆偏好不同，并提出交互感知的时序记忆适应机制。实验表明该方法能有效平衡延迟与交互保真度。该工作为实时流式视频生成提供了新思路。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
