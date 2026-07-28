@@ -6,23 +6,19 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-27
-- 运行时间：2026-07-27 21:20:54 UTC
+- 最新运行日期：2026-07-28
+- 运行时间：2026-07-28 21:43:30 UTC
 - 运行状态：成功
-- 本次总论文数：1
-- 精读区：1
+- 本次总论文数：0
+- 精读区：0
 - 速读区：0
 
 ### 今日简报（AI）
-今日精读了一篇基于时空记忆增强的流式人-物交互视频生成新方案。  
-最值得关注的方向是：让模型像人一样记住“刚才发生了什么”，从而生成更连贯、自然的实时交互视频。  
-如果想提升自己对AI视频生成的理解，不妨从这篇的“交互感知时序记忆”机制入手。
-- 详情：[/202607/27/README](/202607/27/README)
+> 今日无新推荐，系统未产出可展示论文。
+- 详情：[/202607/28/README](/202607/28/README)
 
 ### 精读区论文标签
-1. [StreamHOI: Interaction-aware Temporal Memory Adaptation for Streaming HOI Video Generation](/202607/27/2607.20174v1-streamhoi-interaction-aware-temporal-memory-adaptation-for-streaming-hoi-video-generation)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：面向人-物交互的图像到视频流式生成器
+- 本次无精读推荐。
 
 ### 速读区论文标签
 - 本次无速读推荐。
