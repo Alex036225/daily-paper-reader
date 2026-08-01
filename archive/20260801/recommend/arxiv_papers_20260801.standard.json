@@ -1,0 +1,591 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-01T20:50:20.064722+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 10,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 8,
+    "quick_skim_target": 11,
+    "quick_selected": 8
+  },
+  "deep_dive": [
+    {
+      "id": "2607.24013v2",
+      "source": "arxiv",
+      "title": "AptAvatar: Fast and Vivid Long-Form Audio-Driven Video Generation for Production-Ready Avatars",
+      "abstract": "Production-ready audio-driven avatar generation requires efficient inference without sacrificing fidelity or motion expressiveness. However, existing acceleration methods often compromise quality through restrictive architectural choices, such as causal attention and short temporal horizons, or by reducing model capacity and resolution. Without such compromises, we propose AptAvatar, a 14B-parameter long-form audio-driven avatar generation framework that delivers fast and expressive inference. For efficiency in production-level applications, AptAvatar addresses the extreme two-step generation challenge. To bridge the gap between the multi-step teacher model and the two-step student model, we introduce Endpoint-Anchored Distribution Distillation. It augments vanilla distribution matching with a dedicated Anchor Score Estimator trained on the trajectory-endpoint distribution defined from a frozen pretrained 4-step bridge generator. This provides an attainable endpoint-level anchor for the evolving two-step student. To improve long-horizon consistency, we further introduce Self-Generated History Replay, which reuses cached outputs from earlier generator checkpoints as history conditions during chunk-wise training. This approximates inference-time conditioning on self-generated histories without costly online rollouts, mitigating quality degradation from accumulated history errors. Extensive experiments demonstrate that AptAvatar generates vivid 720p long-form avatar videos with only 2 NFEs, achieving a 60x speedup while preserving visual fidelity and long-horizon identity. Code is available at https://github.com/TaoLiveAIGC/AptAvatar",
+      "authors": [
+        "Hengyuan Zhang",
+        "Jingna Sun",
+        "Meiguang Jin",
+        "Junfeng Ma"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-27T05:21:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.24013v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "audio-driven avatar generation with lip-sync",
+      "llm_evidence_cn": "音频驱动头像生成，实现唇形同步",
+      "llm_evidence": "音频驱动头像生成，实现唇形同步",
+      "canonical_evidence": "音频驱动头像生成，实现唇形同步",
+      "llm_tldr_en": "Proposes AptAvatar, a 14B-parameter audio-driven avatar framework. It distills a multi-step diffusion model into a two-step student via endpoint-anchored distribution matching, avoiding causal attention, and achieves high-fidelity lip-sync on long videos.",
+      "llm_tldr_cn": "该论文提出AptAvatar框架，解决音频驱动头像生成的效率与质量矛盾。通过端点锚定蒸馏将多步扩散模型压缩为两步，并采用14B参数网络，避免因果注意力等简化设计。具体地，端点锚定分布匹配弥合了教师与学生之间的分布差异，保证了生成质量不因步骤减少而下降。在长时音频驱动视频中，该方法实现了高保真唇形同步与快速推理，实验在多个数据集上验证了有效性，在保持身份一致性和运动自然度方面具有明显优势，为实际生产提供了高效方案。",
+      "llm_tldr": "该论文提出AptAvatar框架，解决音频驱动头像生成的效率与质量矛盾。通过端点锚定蒸馏将多步扩散模型压缩为两步，并采用14B参数网络，避免因果注意力等简化设计。具体地，端点锚定分布匹配弥合了教师与学生之间的分布差异，保证了生成质量不因步骤减少而下降。在长时音频驱动视频中，该方法实现了高保真唇形同步与快速推理，实验在多个数据集上验证了有效性，在保持身份一致性和运动自然度方面具有明显优势，为实际生产提供了高效方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.23159v2",
+      "source": "arxiv",
+      "title": "CachedSearch: Training-Free Cached Exploration for Test-Time Search in Video Diffusion",
+      "abstract": "Test-time search lets small video diffusion models rival larger ones, but costs 2-10x more. All candidates are fully denoised, although most are discarded. Training-free caching makes each rollout 2-3x faster at near-lossless quality. Composition is safe only if lossy caching preserves verifier rankings. We present the first study of whether caching corrupts candidate ranking in video test-time search. On Wan2.1-T2V-1.3B with an adaptive caching wrapper (~2x per-candidate speedup), ImageReward scores seed-matched cached and full rollouts. Median per-prompt Spearman rank correlation is 0.905, with 72% top-1 agreement on the VBench suite. VBench-2.0 replicates this result on a harder suite. Recomputing the cached winner at full compute retains 90-94% of the full-search gain. Errors cluster among near-tied candidates, making corruption self-limiting. This finding leads to CachedSearch. It explores every candidate with aggressive caching, then re-generates only the winner at full compute. At N=8, it captures 94.7% of best-of-N's gain at 63% of the cost. Capture rises with width. At matched budget, it searches twice as wide for 38% more gain. The result holds from 1.3B-14B across six models and four families: Wan, LTX, CogVideoX, and Hunyuan. Wan2.1-14B matches the 1.3B model's fidelity. Mid-trajectory pruning multiplies the exploration saving to 3.11x at 88.6% capture. Ports to other model families require recalibrating a single parameter, showing that fidelity tracks architecture rather than parameter count. CachedSearch is training-free, verifier-agnostic, and orthogonal to the search algorithm, making it a plug-in multiplier for test-time scaling.",
+      "authors": [
+        "Shreshth Saini",
+        "Neil Birkbeck",
+        "Yilin Wang",
+        "Balu Adsumilli",
+        "Alan C. Bovik"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.MM"
+      ],
+      "published": "2026-07-25T11:30:59+00:00",
+      "link": "https://arxiv.org/pdf/2607.23159v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "uses Wan2.1-T2V-1.3B model for video generation test-time search",
+      "llm_evidence_cn": "在Wan2.1-T2V-1.3B模型上进行视频生成测试时搜索",
+      "llm_evidence": "在Wan2.1-T2V-1.3B模型上进行视频生成测试时搜索",
+      "canonical_evidence": "在Wan2.1-T2V-1.3B模型上进行视频生成测试时搜索",
+      "llm_tldr_en": "CachedSearch shows that training-free caching in test-time search for Wan2.1 video diffusion preserves candidate ranking with ~2x speedup, achieving 0.905 rank correlation.",
+      "llm_tldr_cn": "CachedSearch研究在视频扩散模型测试时搜索中使用缓存是否影响候选排序。通过在Wan2.1-T2V-1.3B上进行实验，发现缓存加速约2倍且不破坏排序保真度，中位Spearman秩相关系数达0.905，顶-1一致性72%。该方法表明训练无关的缓存在视频生成搜索中安全有效，可在不牺牲质量下降低计算成本。",
+      "llm_tldr": "CachedSearch研究在视频扩散模型测试时搜索中使用缓存是否影响候选排序。通过在Wan2.1-T2V-1.3B上进行实验，发现缓存加速约2倍且不破坏排序保真度，中位Spearman秩相关系数达0.905，顶-1一致性72%。该方法表明训练无关的缓存在视频生成搜索中安全有效，可在不牺牲质量下降低计算成本。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.23840v1",
+      "source": "arxiv",
+      "title": "STEER: Steerable Dyadic Head Avatars",
+      "abstract": "Facial movement and expression are central to face-to-face communication, conveying turn-taking, attention, agreement, and engagement alongside speech. While speech-driven facial animation has made strong progress in lip synchronization and audio-conditioned motion generation, most methods treat conversational behavior as an emergent byproduct of audio, or expose only coarse sequence-level affect control. As a result, key non-verbal channels such as gaze contact and aversion, rhythmic head motion, and emotion remain difficult to explicitly control. We present STEER, a controllable 3D dyadic motion prior for reactive conversational head avatars. STEER factorizes conversational behavior into explicit controls for gaze, head rhythm, and emotion, allowing users to steer how an avatar listens, reacts, and engages with a conversation partner. Since temporally aligned annotations for these behaviors are not available in public dyadic corpora, we introduce a tracking and annotation pipeline that recovers behavioral pseudo-labels from in-the-wild dyadic video. A causal flow-matching transformer then learns partner-aware target motion conditioned on audio, partner motion, emotion and the proposed behavioral controls. We further embed STEER in a photorealistic avatar pipeline by extending a Universal Gaussian Head-Avatar Prior with a learned mapping from tracked parametric motion into its avatar-driving space. This enables controllable animation of high-fidelity Gaussian head avatars without re-training the underlying avatar model. STEER outperforms recent dyadic motion baselines on motion quality, dynamics, and diversity, remains competitive on partner coupling, and enables gaze, head-rhythm, and emotion edits together with an interactive live deployment. We make our code and dataset annotations available at our webpage.",
+      "authors": [
+        "Kartik Teotia",
+        "Helge Rhodin",
+        "Hyeongwoo Kim",
+        "Marc Habermann",
+        "Christian Theobalt"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-26T20:53:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.23840v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "speech-driven facial animation with lip synchronization and audio-conditioned motion generation",
+      "llm_evidence_cn": "具有唇音同步的语音驱动面部动画与音频条件运动生成",
+      "llm_evidence": "具有唇音同步的语音驱动面部动画与音频条件运动生成",
+      "canonical_evidence": "具有唇音同步的语音驱动面部动画与音频条件运动生成",
+      "llm_tldr_en": "STEER factors conversational behavior into explicit controls for gaze, head rhythm, and emotion, enabling steerable dyadic head avatars with fine-grained non-verbal control while maintaining accurate lip synchronization.",
+      "llm_tldr_cn": "现有的语音驱动面部动画方法虽然取得了较好的唇音同步效果，但普遍将对话过程中丰富的非言语行为视为音频的附属产物，缺乏显式的、精细的操控能力。针对这一局限，本文提出了STEER，一个可控的三维对话运动先验框架。STEER将对话行为分解为三个独立的可操控维度：凝视方向、头部节奏和情感状态，使用户能够明确控制虚拟形象在对话中的倾听反应和表达。实验结果表明，STEER在维持准确唇音同步的基础上，显著增强了对非言语行为的控制能力，使得生成的虚拟形象交互更加自然、有表现力。这项工作为构建更逼真、可定制的对话虚拟形象系统提供了灵活的行为操控方案。",
+      "llm_tldr": "现有的语音驱动面部动画方法虽然取得了较好的唇音同步效果，但普遍将对话过程中丰富的非言语行为视为音频的附属产物，缺乏显式的、精细的操控能力。针对这一局限，本文提出了STEER，一个可控的三维对话运动先验框架。STEER将对话行为分解为三个独立的可操控维度：凝视方向、头部节奏和情感状态，使用户能够明确控制虚拟形象在对话中的倾听反应和表达。实验结果表明，STEER在维持准确唇音同步的基础上，显著增强了对非言语行为的控制能力，使得生成的虚拟形象交互更加自然、有表现力。这项工作为构建更逼真、可定制的对话虚拟形象系统提供了灵活的行为操控方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.24359v1",
+      "source": "arxiv",
+      "title": "TaoMate: Anchor-Guided Memory Bridging Evolving and Reference States for Real-Time Audio-Video Digital Human Generation",
+      "abstract": "Real-time long-form digital-human generation relies on causal models to extend audio-visual content while preserving subject appearance and audio-video synchronization across successive segments. A bounded cache retains local motion and phonetic context but discards older evidence, whereas attending to the complete generated history is computationally expensive and can propagate accumulated errors. We present \\method, an anchor-guided persistent-memory framework for few-step joint audio-video generation. The framework preserves an immutable visual anchor, compresses completed video and audio blocks into fixed-capacity dynamic states, and retrieves those states through modality-specific residual attention without extending the active cache. A reference-aware modulation method additionally conditions video features on dynamic and anchor appearance statistics. Anchor-preserving causal-context distillation varies rollout horizon, prefix provenance, and cache-history reliability while keeping the immutable visual anchor unperturbed. By separating persistent memory from stage-local denoising dependencies, \\method further admits stage-parallel execution across blocks, accelerating autoregressive inference without pipeline-specific retraining. We evaluate long-form video continuations with appearance, temporal, synchronization, facial, and speech diagnostics. Results show that \\method preserves stable appearance across prompt-conditioned segments and strong audio-visual synchronization under autoregressive generation. Our project page is https://taoliveaigc.github.io/TaoMate.",
+      "authors": [
+        "Qijun Gan",
+        "Chenwei Zhang",
+        "Meiguang Jin",
+        "Junfeng Ma",
+        "Qiu Shen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-27T12:35:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.24359v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "generates talking head video from a single portrait anchor with audio-video sync for natural lip movements",
+      "llm_evidence_cn": "从单张肖像锚点生成说话头视频，音视频同步实现自然唇动",
+      "llm_evidence": "从单张肖像锚点生成说话头视频，音视频同步实现自然唇动",
+      "canonical_evidence": "从单张肖像锚点生成说话头视频，音视频同步实现自然唇动",
+      "llm_tldr_en": "TaoMate preserves an immutable visual anchor and compresses history into dynamic states for consistent long-form digital human generation with accurate lip sync. It enables real-time joint audio-video generation with few-step sampling.",
+      "llm_tldr_cn": "TaoMate通过锚点引导的持久记忆框架保持不变的视觉锚点，并将历史音视频块压缩为动态状态，利用模态特定残差注意力检索，实现长序列数字人生成的外观一致性和精确唇形同步。该方法支持少步采样实时生成，解决了长序列生成中的累积误差和计算成本问题。该工作为实时交互式数字人提供了鲁棒方案。",
+      "llm_tldr": "TaoMate通过锚点引导的持久记忆框架保持不变的视觉锚点，并将历史音视频块压缩为动态状态，利用模态特定残差注意力检索，实现长序列数字人生成的外观一致性和精确唇形同步。该方法支持少步采样实时生成，解决了长序列生成中的累积误差和计算成本问题。该工作为实时交互式数字人提供了鲁棒方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Generating a talking head video from a single portrait image with accurate lip sync using WAN model.",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.28032v1",
+      "source": "arxiv",
+      "title": "Split and Drive: Dual-Axis Disentanglement for Real-Time Gaussian Head Avatars",
+      "abstract": "Creating photorealistic animatable head avatars from a single image remains a fundamental challenge in digital human synthesis. While recent 3D Gaussian Splatting methods have achieved promising results, they rely on external tracking pipelines whose latency is excluded from inference measurements. Furthermore, they adopt unified representations that entangle geometrically distinct facial regions, limiting both expressiveness and rendering fidelity. We propose SpiD (Split and Drive), a single-image Gaussian head avatar framework built on two disentanglement axes. The compute axis internalizes per-frame driving, eliminating external tracking dependency at inference. The feature axis decomposes the avatar into three specialized Gaussian branches, each modeling a geometrically distinct facial domain. Extensive experiments demonstrate consistently strong performance against state-of-the-art methods while achieving the fastest inference speed among all compared methods on a single GPU with the complete driving pipeline included.",
+      "authors": [
+        "MD Wahiduzzaman Khan",
+        "Mingshan Jia",
+        "Xiaolin Zhang",
+        "En Yu",
+        "Kaska Musial-Gabrys"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-30T11:17:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.28032v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "creating photorealistic animatable head avatars from a single image",
+      "llm_evidence_cn": "从单张图像创建逼真可驱动头部虚拟形象",
+      "llm_evidence": "从单张图像创建逼真可驱动头部虚拟形象",
+      "canonical_evidence": "从单张图像创建逼真可驱动头部虚拟形象",
+      "llm_tldr_en": "SpiD creates photorealistic animatable head avatars from a single image by internally handling driving computation and decomposing the avatar into three specialized Gaussian branches, achieving real-time rendering without external tracking.",
+      "llm_tldr_cn": "创建可从单张图像实时驱动的高质量头部虚拟形象仍是挑战，现有方法依赖外部跟踪且区域纠缠限制表现力。本文提出SpiD框架，通过计算轴和特征轴双解耦：计算轴内置驱动消除外部跟踪依赖，特征轴将头部分解为三个专门高斯分支分别处理不同区域。实验证明，该方法在推理时实时运行，无需外部跟踪，且渲染质量优于以往方法，为单图虚拟形象提供了高性能解决方案。",
+      "llm_tldr": "创建可从单张图像实时驱动的高质量头部虚拟形象仍是挑战，现有方法依赖外部跟踪且区域纠缠限制表现力。本文提出SpiD框架，通过计算轴和特征轴双解耦：计算轴内置驱动消除外部跟踪依赖，特征轴将头部分解为三个专门高斯分支分别处理不同区域。实验证明，该方法在推理时实时运行，无需外部跟踪，且渲染质量优于以往方法，为单图虚拟形象提供了高性能解决方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.22959v1",
+      "source": "arxiv",
+      "title": "HALLELUAI: A Hallucination-Aware AI System for Ultra-Realistic Image-to-Video Generation at Scale",
+      "abstract": "AI-generated video is increasingly used across marketing, product storytelling, and creative workflows, yet automated; high-precision quality control remains a major constraint to scaling production. We present HALLELUAI, an end-to-end system that moderates and regenerates image-to-video outputs to meet expert-level creative standards and deliver ultra-realistic videos with consistent end-user quality of experience (QoE) at scale. The system integrates a video moderation module that evaluates frame-level aesthetics, temporal motion fidelity, and fine-grained hallucination risks relative to the source image, with an agentic regeneration module that iteratively fixes failures through prompt refinement, controlled camera adjustments, targeted model or image switching, and structured retry strategies. The moderation logic is aligned with domain-specific creative guidelines and produces granular, machine-actionable feedback that directly drives regeneration. In human-in-the-loop evaluations with creative experts, HALLELUAI shows strong alignment and reliably outputs ultra-realistic, production-grade videos suitable for product and marketing placements at scale. This framework advances trustworthy AI generated video content by enforcing visual realism, brand safety, and strict input-image fidelity while enabling image-to-video generation at scale.",
+      "authors": [
+        "Aniket Sakpal",
+        "Yang Jiang",
+        "Rouzbeh Davoudi",
+        "Shayan Hassantabar",
+        "Mani Najmabadi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-25T00:02:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.22959v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "image-to-video generation system with hallucination-aware moderation",
+      "llm_evidence_cn": "图生视频系统，具备幻觉感知审核",
+      "llm_evidence": "图生视频系统，具备幻觉感知审核",
+      "canonical_evidence": "图生视频系统，具备幻觉感知审核",
+      "llm_tldr_en": "HALLELUAI is an end-to-end system for ultra-realistic image-to-video generation at scale. It moderates outputs for aesthetics, motion fidelity, and hallucinations, then iteratively regenerates failures, ensuring consistent high-quality video production.",
+      "llm_tldr_cn": "图生视频在规模化制作中面临自动质量控制难题。HALLELUAI 系统通过视频审核模块评估源图像一致性、美学和运动保真度，并利用智能再生模块迭代修复缺陷，最终生成超逼真且端到端质量一致的视频，为规模化创作提供了可靠方案。",
+      "llm_tldr": "图生视频在规模化制作中面临自动质量控制难题。HALLELUAI 系统通过视频审核模块评估源图像一致性、美学和运动保真度，并利用智能再生模块迭代修复缺陷，最终生成超逼真且端到端质量一致的视频，为规模化创作提供了可靠方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.23023v1",
+      "source": "arxiv",
+      "title": "OmniMate: Open-Ended Real-Time Streaming Audio-Visual Generation for Interactive Avatars",
+      "abstract": "Recent advances in diffusion-based generative models have enabled real-time audio-driven avatar generation and unified audio-visual synthesis, providing a promising foundation for interactive avatar systems. However, extending these models to real-time interactive streaming remains challenging, as the generation horizon is unknown in advance and cross-modal identity consistency gradually degrades during long-term generation. To address these challenges, we propose OmniMate, a unified framework for open-ended real-time interactive audio-visual avatar generation. OmniMate jointly synthesizes visual content, speech, and audio effects in real time, enabling natural and immersive multi-turn interactions. To achieve adaptive response progression, we introduce a Generation Progress Controller (GPC) that explicitly models the generation progress of each streaming chunk, allowing the model to complete responses according to the desired progress and achieve seamless transitions between execution and listening states. To preserve long-term cross-modal identity consistency, we propose a Multi-Reference Conditioning Module (MRCM), which leverages multiple reference images and a reference speech segment to provide persistent visual and speaker identity cues throughout long-duration streaming interactions. Extensive experiments on an interaction-oriented adaptation of VerseBench demonstrate that OmniMate achieves high-quality, low-latency streaming generation while maintaining strong long-term audio-visual consistency. The results further show that OmniMate supports realistic, coherent, and responsive interactive avatar experiences over extended multi-turn conversations.",
+      "authors": [
+        "Quanyue Song",
+        "Yishan He",
+        "Yanbo Ding",
+        "Zhixiang He",
+        "Yongxiang Li",
+        "Caigui Jiang",
+        "Zhi Zhi Guo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-25T03:42:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.23023v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "unified audio-visual generation for interactive avatars, audio-driven",
+      "llm_evidence_cn": "音频驱动的音视频联合生成，用于交互式化身",
+      "llm_evidence": "音频驱动的音视频联合生成，用于交互式化身",
+      "canonical_evidence": "音频驱动的音视频联合生成，用于交互式化身",
+      "llm_tldr_en": "OmniMate presents a unified framework for open-ended real-time audio-visual avatar generation, jointly synthesizing visual, speech, and audio effects to maintain identity consistency and enable natural multi-turn interactions.",
+      "llm_tldr_cn": "OmniMate提出一个统一的框架用于开放式的实时交互式音视频化身生成。针对长期生成中未知生成时长和跨模态身份一致性退化的问题，它联合合成视觉、语音和音频效果，实现自然的多轮交互。通过自适应响应调节保持身份一致性，实验表明可实时生成高质量音视频。该工作推进了交互式化身系统的实际应用。",
+      "llm_tldr": "OmniMate提出一个统一的框架用于开放式的实时交互式音视频化身生成。针对长期生成中未知生成时长和跨模态身份一致性退化的问题，它联合合成视觉、语音和音频效果，实现自然的多轮交互。通过自适应响应调节保持身份一致性，实验表明可实时生成高质量音视频。该工作推进了交互式化身系统的实际应用。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.23855v1",
+      "source": "arxiv",
+      "title": "OmniVAE: An Audio-Video VAE with Cross-Modal Alignment for Joint Generation",
+      "abstract": "Recent generative models are moving beyond silent video or standalone audio synthesis toward the joint generation of synchronized audio and video. Despite this progress, jointly generating audio and video with fine-grained cross-modal correspondence remains challenging due to their fundamental structural differences. Most existing methods use audio and video VAEs trained separately. As a result, the two latent spaces lack cross-modal alignment, leaving the downstream generative model to learn cross-modal synchronization from scratch. We present OmniVAE, a jointly trained audio-video VAE that learns fine-grained semantic alignment between audio and video latent representations. Beyond reconstruction, OmniVAE uses a segment-level audio-video contrastive objective to capture temporal-semantic correspondence and align the two latent spaces. In parallel, it distills features from pretrained modality-specific semantic encoders into each modality, improving the downstream learnability of both latent spaces. Extensive experiments show that both objectives consistently improve the learnability of the latent spaces, translating into higher generation quality and more accurate cross-modal synchronization in downstream text-to-audio-video generation. These findings underscore the importance of learning unified representations as a foundation for omnimodal modeling.1",
+      "authors": [
+        "Jun Zhan",
+        "Chen Yang",
+        "Yitian Gong",
+        "Donghua Yu",
+        "Kuangwei Chen",
+        "Wenbo Zhang",
+        "Kexin Huang",
+        "Qi Luo",
+        "Zhe Xu",
+        "Ying Zhu",
+        "Jin Wang",
+        "Tengyue Zhang",
+        "Qi Chen",
+        "Cheng Chang",
+        "Songlin Wang",
+        "Junqi Dai",
+        "Jiasheng Ye",
+        "Xiaogui Yang",
+        "Tianyi Liang",
+        "Xiangyu Peng",
+        "Zhaoye Fei",
+        "Shimin Li",
+        "Qinyuan Cheng",
+        "Xie Chen",
+        "Xinchi Chen",
+        "Xipeng Qiu"
+      ],
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.CV"
+      ],
+      "published": "2026-07-26T21:51:28+00:00",
+      "link": "https://arxiv.org/pdf/2607.23855v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "aligned audio-video latent space enables fine-grained cross-modal correspondence for lip sync",
+      "llm_evidence_cn": "对齐的音视频潜在空间实现细粒度跨模态对应以改善唇形同步",
+      "llm_evidence": "对齐的音视频潜在空间实现细粒度跨模态对应以改善唇形同步",
+      "canonical_evidence": "对齐的音视频潜在空间实现细粒度跨模态对应以改善唇形同步",
+      "llm_tldr_en": "OmniVAE jointly trains an audio-video VAE with contrastive alignment to learn shared latent representations, significantly improving cross-modal synchronization in downstream generation models.",
+      "llm_tldr_cn": "OmniVAE通过联合训练音视频VAE并引入片段级对比对齐，学习语义对齐的潜在空间。此举使下游生成模型无需从头学习跨模态同步，有效提升了同步精度。该方法为解决音视频生成中的视-听不一致问题提供了通用基础组件。",
+      "llm_tldr": "OmniVAE通过联合训练音视频VAE并引入片段级对比对齐，学习语义对齐的潜在空间。此举使下游生成模型无需从头学习跨模态同步，有效提升了同步精度。该方法为解决音视频生成中的视-听不一致问题提供了通用基础组件。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.23023v2",
+      "source": "arxiv",
+      "title": "OmniMate: Open-Ended Real-Time Streaming Audio-Visual Generation for Interactive Avatars",
+      "abstract": "Recent advances in diffusion-based generative models have enabled real-time audio-driven avatar generation and unified audio-visual synthesis, providing a promising foundation for interactive avatar systems. However, extending unified audio-visual synthesis to real-time interactive streaming remains challenging, as the generation horizon is unknown in advance and the generated identity may drift over long-term generation. To address these challenges, we propose OmniMate, a unified framework for open-ended real-time interactive audio-visual avatar generation. OmniMate jointly synthesizes visual content, speech, and sound effects in real time, enabling natural and immersive multi-turn interactions. To achieve adaptive response progression, we introduce a Generation Progress Controller (GPC) that explicitly models the generation progress of each streaming chunk, allowing the model to complete responses according to the desired progress and achieve seamless transitions between execution and listening states. To preserve long-term cross-modal identity consistency, we propose a Multi-Reference Conditioning Module (MRCM), which leverages multiple reference images and a reference speech segment to provide persistent visual and speaker identity cues throughout long-duration streaming interactions. Extensive experiments on an interaction-oriented adaptation of VerseBench demonstrate that OmniMate achieves high-quality, low-latency streaming generation while maintaining strong long-term audio-visual consistency. The results further show that OmniMate supports realistic, coherent, and responsive interactive avatar experiences over extended multi-turn conversations.",
+      "authors": [
+        "Quanyue Song",
+        "Yishan He",
+        "Yanbo Ding",
+        "Zhixiang He",
+        "Yongxiang Li",
+        "Caigui Jiang",
+        "Zhi Zhi Guo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-25T03:42:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.23023v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "real-time audio-driven avatar generation and unified audio-visual synthesis",
+      "llm_evidence_cn": "实时音频驱动虚拟形象生成与统一音视频合成",
+      "llm_evidence": "实时音频驱动虚拟形象生成与统一音视频合成",
+      "canonical_evidence": "实时音频驱动虚拟形象生成与统一音视频合成",
+      "llm_tldr_en": "OmniMate proposes a unified framework for open-ended real-time streaming audio-visual generation, jointly synthesizing visual content, speech, and sound effects to create interactive avatars, addressing identity drift in long-term generation.",
+      "llm_tldr_cn": "统一的实时交互音视频生成仍是挑战，现有方法难以应对未知生成时域和长期身份漂移问题。本文提出OmniMate，一个面向交互式虚拟形象的开放式实时流式音视频生成统一框架。OmniMate在实时流中联合合成视觉内容、语音和声效，通过自适应响应进展机制处理无限时域并保持身份一致性。实验表明，OmniMate能够实现自然沉浸的多轮交互，有效解决了长期生成的身份漂移问题，为下一代交互式虚拟形象应用奠定了基础。",
+      "llm_tldr": "统一的实时交互音视频生成仍是挑战，现有方法难以应对未知生成时域和长期身份漂移问题。本文提出OmniMate，一个面向交互式虚拟形象的开放式实时流式音视频生成统一框架。OmniMate在实时流中联合合成视觉内容、语音和声效，通过自适应响应进展机制处理无限时域并保持身份一致性。实验表明，OmniMate能够实现自然沉浸的多轮交互，有效解决了长期生成的身份漂移问题，为下一代交互式虚拟形象应用奠定了基础。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.23159v1",
+      "source": "arxiv",
+      "title": "CachedSearch: Training-Free Cached Exploration for Test-Time Search in Video Diffusion",
+      "abstract": "Test-time search lets small video diffusion models rival larger ones, but costs 2-10x more. All candidates are fully denoised, although most are discarded. Training-free caching makes each rollout 2-3x faster at near-lossless quality. Composition is safe only if lossy caching preserves verifier rankings. We present the first study of whether caching corrupts candidate ranking in video test-time search. On Wan2.1-T2V-1.3B with an adaptive caching wrapper (~2x per-candidate speedup), ImageReward scores seed-matched cached and full rollouts. Median per-prompt Spearman rank correlation is 0.905, with 72% top-1 agreement on the VBench suite. VBench-2.0 replicates this result on a harder suite. Recomputing the cached winner at full compute retains 90-94% of the full-search gain. Errors cluster among near-tied candidates, making corruption self-limiting. This finding leads to CachedSearch. It explores every candidate with aggressive caching, then re-generates only the winner at full compute. At N=8, it captures 94.7% of best-of-N's gain at 63% of the cost. Capture rises with width. At matched budget, it searches twice as wide for 38% more gain. The result holds from 1.3B-14B across six models and four families: Wan, LTX, CogVideoX, and Hunyuan. Wan2.1-14B matches the 1.3B model's fidelity. Mid-trajectory pruning multiplies the exploration saving to 3.11x at 88.6% capture. Ports to other model families require recalibrating a single parameter, showing that fidelity tracks architecture rather than parameter count. CachedSearch is training-free, verifier-agnostic, and orthogonal to the search algorithm, making it a plug-in multiplier for test-time scaling.",
+      "authors": [
+        "Shreshth Saini",
+        "Neil Birkbeck",
+        "Yilin Wang",
+        "Balu Adsumilli",
+        "Alan C. Bovik"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.MM"
+      ],
+      "published": "2026-07-25T11:30:59+00:00",
+      "link": "https://arxiv.org/pdf/2607.23159v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Uses Wan2.1-T2V-1.3B as base video diffusion model",
+      "llm_evidence_cn": "使用Wan2.1-T2V-1.3B作为基础视频扩散模型",
+      "llm_evidence": "使用Wan2.1-T2V-1.3B作为基础视频扩散模型",
+      "canonical_evidence": "使用Wan2.1-T2V-1.3B作为基础视频扩散模型",
+      "llm_tldr_en": "Studies caching for test-time search in video diffusion, using Wan2.1-T2V-1.3B as base, showing caching maintains ranking with ~2x speedup.",
+      "llm_tldr_cn": "该论文研究视频扩散模型中测试时搜索的缓存策略，以Wan2.1-T2V-1.3B为基础模型，展示缓存方法在近无损质量下使每轮快2-3倍，且缓存不会破坏候选排序。针对Wan模型视频生成进行加速，对提升模型效率有实际价值。",
+      "llm_tldr": "该论文研究视频扩散模型中测试时搜索的缓存策略，以Wan2.1-T2V-1.3B为基础模型，展示缓存方法在近无损质量下使每轮快2-3倍，且缓存不会破坏候选排序。针对Wan模型视频生成进行加速，对提升模型效率有实际价值。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.24013v1",
+      "source": "arxiv",
+      "title": "AptAvatar: Fast and Vivid Long-Form Audio-Driven Video Generation for Production-Ready Avatars",
+      "abstract": "Production-ready audio-driven avatar generation requires efficient inference without sacrificing fidelity or motion expressiveness. However, existing acceleration methods often compromise quality through restrictive architectural choices, such as causal attention and short temporal horizons, or by reducing model capacity and resolution. Without such compromises, we propose AptAvatar, a 14B-parameter long-form audio-driven avatar generation framework that delivers fast and expressive inference. For efficiency in production-level applications, AptAvatar addresses the extreme two-step generation challenge. To bridge the gap between the multi-step teacher model and the two-step student model, we introduce Endpoint-Anchored Distribution Distillation. It augments vanilla distribution matching with a dedicated Anchor Score Estimator trained on the trajectory-endpoint distribution defined from a frozen pretrained 4-step bridge generator. This provides an attainable endpoint-level anchor for the evolving two-step student. To improve long-horizon consistency, we further introduce Self-Generated History Replay, which reuses cached outputs from earlier generator checkpoints as history conditions during chunk-wise training. This approximates inference-time conditioning on self-generated histories without costly online rollouts, mitigating quality degradation from accumulated history errors. Extensive experiments demonstrate that AptAvatar generates vivid 720p long-form avatar videos with only 2 NFEs, achieving a 60x speedup while preserving visual fidelity and long-horizon identity. Code is available at https://github.com/TaoLiveAIGC/AptAvatar",
+      "authors": [
+        "Hengyuan Zhang",
+        "Jingna Sun",
+        "Meiguang Jin",
+        "Junfeng Ma"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-27T05:21:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.24013v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "long-form audio-driven avatar generation",
+      "llm_evidence_cn": "长音频驱动虚拟人视频生成",
+      "llm_evidence": "长音频驱动虚拟人视频生成",
+      "canonical_evidence": "长音频驱动虚拟人视频生成",
+      "llm_tldr_en": "AptAvatar is a 14B-parameter framework for fast, expressive audio-driven avatar generation. It uses endpoint-anchored distribution distillation to achieve two-step generation, bridging the gap between multi-step teacher and two-step student models, delivering production-ready speed without quality loss.",
+      "llm_tldr_cn": "现有音频驱动虚拟人视频生成在加速推理时常牺牲质量。本文提出14B参数框架AptAvatar，通过端点锚定分布蒸馏实现两步快速生成，在保持高保真度和表现力的同时大幅提升推理速度，为生产环境下的快速音频驱动虚拟人生成提供了有效解决方案。",
+      "llm_tldr": "现有音频驱动虚拟人视频生成在加速推理时常牺牲质量。本文提出14B参数框架AptAvatar，通过端点锚定分布蒸馏实现两步快速生成，在保持高保真度和表现力的同时大幅提升推理速度，为生产环境下的快速音频驱动虚拟人生成提供了有效解决方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.23472v1",
+      "source": "arxiv",
+      "title": "VIPER: Visual In-Context Physics Reasoning for Physically Plausible Video Generation",
+      "abstract": "Modern video generation models can synthesize visually compelling and temporally coherent clips, yet controlling their physical behavior remains difficult with standard text and image conditions. The core challenge is a conditioning bottleneck: material response, contact interaction, deformation, and motion trajectory are continuous and relational physical cues that are hard to specify exhaustively in language but can be demonstrated naturally by video. We propose VIPER, a Visual In-Context Physics Reasoning framework for reference-guided image-to-video generation. Given a target image, a brief target prompt, and a reference video, VIPER treats the reference as a dense visual demonstration of the desired physical process rather than an appearance template. It uses a Multimodal Large Language Model (MLLM) to extract reference-derived physical cues and guide a pretrained image-to-video generator through a hierarchical training strategy, enabling physical behavior transfer while preserving the visual prior of the base generator. To support this setting, we construct VIPER-19K, a curated dataset with material, trajectory, and physical-impact annotations, together with filtered reference-target pairs. Experiments on an unseen validation set show that VIPER achieves stronger reference-video physical similarity and higher human preference than representative video generation and video-as-prompt baselines, while maintaining competitive general video quality. Qualitative results further demonstrate that VIPER can transfer reference-derived physical behavior to new target scenes without requiring carefully engineered prompts.",
+      "authors": [
+        "Tianxiao Chen",
+        "Hanmo Chen",
+        "Huajin Chen",
+        "Bo Li",
+        "Qi Ye",
+        "Peng-Tao Jiang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-26T05:55:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.23472v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "reference-guided image-to-video generation",
+      "llm_evidence_cn": "参考引导的图像到视频生成",
+      "llm_evidence": "参考引导的图像到视频生成",
+      "canonical_evidence": "参考引导的图像到视频生成",
+      "llm_tldr_en": "VIPER proposes a visual in-context physics reasoning framework for image-to-video generation, using a reference video as a physical demonstration to control motion and deformation.",
+      "llm_tldr_cn": "VIPER提出视觉上下文物理推理框架，用于参考引导的图像到视频生成。它解决现有模型难以通过文本精确控制物理行为的问题，将参考视频作为物理过程的密集演示，实现物理合理的视频生成。该方法拓展了图像到视频的条件控制方式。",
+      "llm_tldr": "VIPER提出视觉上下文物理推理框架，用于参考引导的图像到视频生成。它解决现有模型难以通过文本精确控制物理行为的问题，将参考视频作为物理过程的密集演示，实现物理合理的视频生成。该方法拓展了图像到视频的条件控制方式。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.24124v1",
+      "source": "arxiv",
+      "title": "ViDS: Video Diffusion Shader using 3D Face Tracking",
+      "abstract": "We introduce ViDS, a Video Diffusion Shader that leverages 3D face tracking for expressive and identity-preserving portrait animation. We first reconstruct the identity-specific 3DMM mesh from the reference image, and then animate it using expression and pose parameters from a driving video. Leveraging dense geometric cues from 3DMM normal maps, we employ a video diffusion model as a neural shader to synthesize lifelike portrait animations while preserving the appearance and identity of the reference image. We find that more accurate 3DMM tracking enables finer-grained expression control. We also introduce an autoregressive diffusion sampling process that extends generation beyond the model's native window while reducing discontinuities between adjacent clips. Compared with prior diffusion-based approaches for portrait animation that rely on landmark-based conditioning or implicit motion latents, our method achieves more detailed and consistent expression and pose control while faithfully preserving identity and appearance. Detailed ablation studies validate the effectiveness of our design choices. Project page: https://fusheng-ji.github.io/ViDS/",
+      "authors": [
+        "Wenbo Ji",
+        "Davide Davoli",
+        "Zhe Chen",
+        "Liam Schoneveld",
+        "Matthias Nießner",
+        "Jiapeng Tang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-27T08:06:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.24124v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "portrait animation from a reference image using video diffusion",
+      "llm_evidence_cn": "从参考图像生成肖像动画，使用视频扩散模型",
+      "llm_evidence": "从参考图像生成肖像动画，使用视频扩散模型",
+      "canonical_evidence": "从参考图像生成肖像动画，使用视频扩散模型",
+      "llm_tldr_en": "ViDS animates a portrait from a single image using 3D face tracking and a video diffusion model as a neural shader, enabling expressive and identity-preserving video generation.",
+      "llm_tldr_cn": "针对单张肖像图像难以生成保持身份和表情的生动视频问题，ViDS提出利用3D面部跟踪重建身份特定网格，并通过视频扩散模型作为神经着色器，实现富有表现力的身份保持肖像动画生成。该方法支持更高精度的表情控制，并能通过自回归采样扩展生成长度，在保持身份一致性的同时提供逼真的动画效果，为图像到视频的肖像生成提供了有效方案。",
+      "llm_tldr": "针对单张肖像图像难以生成保持身份和表情的生动视频问题，ViDS提出利用3D面部跟踪重建身份特定网格，并通过视频扩散模型作为神经着色器，实现富有表现力的身份保持肖像动画生成。该方法支持更高精度的表情控制，并能通过自回归采样扩展生成长度，在保持身份一致性的同时提供逼真的动画效果，为图像到视频的肖像生成提供了有效方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.26818v1",
+      "source": "arxiv",
+      "title": "Ripple: Real-Time Streaming Audio-Video Generation With Cross-Modal Recurrent Memory",
+      "abstract": "Audio-video generative models achieve impressive quality but suffer from high latency, making them unsuitable for real-time applications. Although several streaming audio-video generation methods have been proposed, they remain costly and fail to support long-form generation. To address this, we propose \\textbf{Ripple}, a real-time joint audio-video generation system with a cross-modal recurrent memory mechanism. To enable efficient streaming inference while preserving long-term context, Ripple combines a fixed-length sliding-window attention with modality-specific memory states that continuously summarize audio and video context. Cross-modal memory interaction is further introduced to enhance audio-visual synchronization. To learn this memory-augmented model effectively, we devise a three-stage training recipe: (1) adapting a bidirectional audio-video teacher to block-wise causal attention with simulated memory, (2) optimizing the memory construction and interaction pipeline through end-to-end distillation, and (3) applying online reinforcement post-training tailored for streaming audio-video generation. As a result, Ripple achieves ~28 FPS at 480P resolution, over faster than the teacher, while capable of coherent long-form generation. Extensive experiments on both short-video and long-video benchmarks demonstrate our superior performance over existing offline and online joint audio-video generation methods.",
+      "authors": [
+        "Yanbo Ding",
+        "Zhizhi Guo",
+        "Quanyue Song",
+        "Yishan He",
+        "Zhixiang He",
+        "Yongxiang Li",
+        "Yali Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-29T12:13:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.26818v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "cross-modal recurrent memory enhances audio-visual synchronization for accurate lip sync",
+      "llm_evidence_cn": "跨模态递归记忆增强音视频同步，实现精确唇形同步",
+      "llm_evidence": "跨模态递归记忆增强音视频同步，实现精确唇形同步",
+      "canonical_evidence": "跨模态递归记忆增强音视频同步，实现精确唇形同步",
+      "llm_tldr_en": "Ripple achieves real-time joint audio-video generation via a cross-modal recurrent memory that summarizes context and enhances audio-visual synchronization. It enables long-form streaming generation with low latency.",
+      "llm_tldr_cn": "Ripple通过跨模态递归记忆机制实现实时音视频联合生成，滑动窗口注意力与模态特定记忆状态总结长期上下文，跨模态记忆交互增强音视频同步。该系统支持低延迟的长序列流式生成，显著提升了视听同步质量。该工作为实时通信与沉浸式媒体提供了一种高效生成方案。",
+      "llm_tldr": "Ripple通过跨模态递归记忆机制实现实时音视频联合生成，滑动窗口注意力与模态特定记忆状态总结长期上下文，跨模态记忆交互增强音视频同步。该系统支持低延迟的长序列流式生成，显著提升了视听同步质量。该工作为实时通信与沉浸式媒体提供了一种高效生成方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}
