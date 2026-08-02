@@ -1,0 +1,107 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-02T21:02:05.245894+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.26694v1",
+      "source": "arxiv",
+      "title": "Visko Orbis 1.0: A Live Model for Real-Time Interactive Long Video Generation",
+      "abstract": "We present Visko Orbis 1.0, a Live Model for real-time, interactive long-video generation. Users can change the prompt at any moment during generation, and the update becomes visible in real time. Visko Orbis 1.0 supports long-form text-to-video, image-to-video, and video continuation, with multilingual prompts and prompt switching while generation is in progress. A bounded multi-scale memory preserves subjects, scenes, and style across chunks, sustaining hour-scale rollouts without evident quality or color drift. Built on a distilled chunk-wise streaming generator and a streaming video upscaler, Visko Orbis 1.0 delivers real-time 4K video generation at 24 FPS using an optimized GPU serving engine. In long-form Arena comparisons, Visko Orbis 1.0 obtains the highest overall-preference and temporal-stability ratings among state-of-the-art real-time interactive video-generation systems.",
+      "authors": [
+        "Xiangbo Gao",
+        "Siyuan Yang",
+        "Ping He",
+        "Mingyang Wu",
+        "Yuheng Wu",
+        "Yushen Zuo",
+        "Jiongze Yu",
+        "Ryan Cui",
+        "Hongyuan Hua",
+        "Devin Ma",
+        "Xiao Jin",
+        "Yubo Yuan",
+        "Qing Yin",
+        "Jie Yang",
+        "Zhengzhong Tu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-29T09:40:23+00:00",
+      "link": "https://arxiv.org/pdf/2607.26694v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Supports image-to-video among other modes, enabling real-time interactive long video generation.",
+      "llm_evidence_cn": "支持图像到视频等多种模式，实现实时交互式长视频生成。",
+      "llm_evidence": "支持图像到视频等多种模式，实现实时交互式长视频生成。",
+      "canonical_evidence": "支持图像到视频等多种模式，实现实时交互式长视频生成。",
+      "llm_tldr_en": "Visko Orbis 1.0 is a live model for real-time, interactive long-video generation supporting text-to-video, image-to-video, and video continuation with prompt switching and hour-scale rollouts.",
+      "llm_tldr_cn": "Visko Orbis 1.0是一个实时交互式长视频生成直播模型，支持文本到视频、图像到视频和视频续写，通过有界多尺度记忆维持主体、场景和风格一致性，可进行小时级连续生成而不出现质量退化和颜色漂移，并实现4K实时生成。该模型为交互式长视频创作提供了高效解决方案。",
+      "llm_tldr": "Visko Orbis 1.0是一个实时交互式长视频生成直播模型，支持文本到视频、图像到视频和视频续写，通过有界多尺度记忆维持主体、场景和风格一致性，可进行小时级连续生成而不出现质量退化和颜色漂移，并实现4K实时生成。该模型为交互式长视频创作提供了高效解决方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.26646v1",
+      "source": "arxiv",
+      "title": "Genie Sim PanoWorld: An Infinite Indoor 3D World Generation Pipeline via Panoramic Scene Modeling and Simulation",
+      "abstract": "We address the problem of reconstructing a high-fidelity, freely navigable 3D scene from a single $360^\\circ$ panorama, without per-scene optimization or multi-view capture. Existing methods either lack metric trajectory control, which hinders reliable downstream 3D reconstruction, or struggle with large disocclusions under long-range camera motion while requiring high-end multi-GPU servers.We present Genie Sim PanoWorld, a two-stage feed-forward pipeline that bridges generation and reconstruction via an explicit, trajectory-controllable panoramic video. A NavMesh-planned $\\mathrm{SE}(3)$ roaming trajectory is injected into a latent video diffusion model through dense geometry-warped conditioning; long--short trajectory mixed training and a self-consistency objective based on shortcut models together yield high-fidelity video in four CFG-free denoising steps.   A feed-forward panoramic reconstructor then lifts the generated video into a high-fidelity   3D Gaussian scene that supports real-time, free-viewpoint roaming and can be directly used as a simulation-ready asset for embodied AI applications. Experiments show that Genie Sim PanoWorld   outperforms geometry-conditioned baselines in both panoramic video generation and   downstream 3D reconstruction, while generalizing zero-shot to unseen indoor scenes.",
+      "authors": [
+        "Yongxin Su",
+        "Linjie Hou",
+        "Feng Wang",
+        "Jialin Tang",
+        "Zhijun Li",
+        "Qian Wang",
+        "Maoqing Yao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-29T09:08:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.26646v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "generates panoramic video from a single 360° image",
+      "llm_evidence_cn": "从单张360°图像生成全景视频",
+      "llm_evidence": "从单张360°图像生成全景视频",
+      "canonical_evidence": "从单张360°图像生成全景视频",
+      "llm_tldr_en": "Generates a trajectory-controllable panoramic video from a single 360° image, enabling high-fidelity free-viewpoint navigation without per-scene optimization.",
+      "llm_tldr_cn": "针对从单张全景图重建可自由导航3D场景的难题，提出两阶段前馈流程，利用轨迹可控的潜在视频扩散模型生成全景视频，无需逐场景优化即可实现高保真自由视点漫游。",
+      "llm_tldr": "针对从单张全景图重建可自由导航3D场景的难题，提出两阶段前馈流程，利用轨迹可控的潜在视频扩散模型生成全景视频，无需逐场景优化即可实现高保真自由视点漫游。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
