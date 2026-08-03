@@ -6,28 +6,34 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-02
-- 运行时间：2026-08-02 21:05:59 UTC
+- 最新运行日期：2026-08-03
+- 运行时间：2026-08-03 21:50:54 UTC
 - 运行状态：成功
-- 本次总论文数：2
+- 本次总论文数：4
 - 精读区：1
-- 速读区：1
+- 速读区：3
 
 ### 今日简报（AI）
-今日聚焦实时视频生成与无限3D世界构建：成功精读《Visko Orbis 1.0》实时交互长视频模型与速读《Genie Sim PanoWorld》室内场景生成管线。  
-值得留意“可操控的实时长视频生成”与“全景模拟驱动的无限3D世界”两条前沿路径，它们分别让AI创作像直播一样连续可控、让虚拟空间像搭积木一样自动延展。  
-下一步不妨亲自体验它们背后的交互范式——想象一下，你动动嘴或眼就能生成一段连贯视频，或漫步于永不重复的虚拟房间。
-- 详情：[/202608/02/README](/202608/02/README)
+🎬 今日聚焦多模态生成新范式：精读一篇音频-视频联合VAE，速览三篇涵盖音唇同步、视频路由与人脸跨模态研究。
+🔥 最值得关注：OmniVAE用跨模态对齐实现音视频统一生成，TongueReenact将舌头几何融入人脸重演，告别嘴部僵硬。
+📌 对视频创作感兴趣的读者，建议从OmniVAE的开源代码入手，体验音画联动的生成效果。
+- 详情：[/202608/03/README](/202608/03/README)
 
 ### 精读区论文标签
-1. [Visko Orbis 1.0: A Live Model for Real-Time Interactive Long Video Generation](/202608/02/2607.26694v1-visko-orbis-10-a-live-model-for-real-time-interactive-long-video-generation)  
+1. [OmniVAE: An Audio-Video VAE with Cross-Modal Alignment for Joint Generation](/202608/03/2607.23855v2-omnivae-an-audio-video-vae-with-cross-modal-alignment-for-joint-generation)  
    标签：评分：8.0/10、query:wan-av-gen
-   evidence：支持图像到视频等多种模式，实现实时交互式长视频生成。
+   evidence：联合训练的音频-视频VAE实现细粒度语义对齐，支持同步音视频生成
 
 ### 速读区论文标签
-1. [Genie Sim PanoWorld: An Infinite Indoor 3D World Generation Pipeline via Panoramic Scene Modeling and Simulation](/202608/02/2607.26646v1-genie-sim-panoworld-an-infinite-indoor-3d-world-generation-pipeline-via-panoramic-scene-modeling-and-simulation)  
+1. [TongueReenact: Geometry-Anchored Tongue Synthesis for Face Reenactment](/202608/03/2607.28039v1-tonguereenact-geometry-anchored-tongue-synthesis-for-face-reenactment)  
    标签：评分：7.0/10、query:wan-av-gen
-   evidence：从单张360°图像生成全景视频
+   evidence：舌部动态传递，实现面部重演中逼真的口腔内部
+2. [MoRoute: Dynamic Routing for In-Context Multimodal Video Generation](/202608/03/2607.29545v1-moroute-dynamic-routing-for-in-context-multimodal-video-generation)  
+   标签：评分：7.0/10、query:wan-av-gen
+   evidence：单个模型内基于文本、图像和视频条件的多模态视频生成
+3. [Face and Voice Cross-modal Association with Learning Convex Feature Embedding](/202608/03/2607.28129v1-face-and-voice-cross-modal-association-with-learning-convex-feature-embedding)  
+   标签：评分：6.0/10、query:wan-av-gen
+   evidence：提出人脸与声音的跨模态特征嵌入方法，可用于唇形同步
 
 
 <div class="dpr-home-promo-card">

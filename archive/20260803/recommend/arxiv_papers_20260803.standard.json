@@ -1,0 +1,196 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-03T21:45:03.750561+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2607.23855v2",
+      "source": "arxiv",
+      "title": "OmniVAE: An Audio-Video VAE with Cross-Modal Alignment for Joint Generation",
+      "abstract": "Recent generative models are moving beyond silent video or standalone audio synthesis toward the joint generation of synchronized audio and video. Despite this progress, jointly generating audio and video with fine-grained cross-modal correspondence remains challenging due to their fundamental structural differences. Most existing methods use audio and video VAEs trained separately. As a result, the two latent spaces lack cross-modal alignment, leaving the downstream generative model to learn cross-modal synchronization from scratch. We present OmniVAE, a jointly trained audio-video VAE that learns fine-grained semantic alignment between audio and video latent representations. Beyond reconstruction, OmniVAE uses a segment-level audio-video contrastive objective to capture temporal-semantic correspondence and align the two latent spaces. In parallel, it distills features from pretrained modality-specific semantic encoders into each modality, improving the downstream learnability of both latent spaces. Extensive experiments show that both objectives consistently improve the learnability of the latent spaces, translating into higher generation quality and more accurate cross-modal synchronization in downstream text-to-audio-video generation. These findings underscore the importance of learning unified representations as a foundation for omnimodal modeling.1",
+      "authors": [
+        "Jun Zhan",
+        "Chen Yang",
+        "Yitian Gong",
+        "Donghua Yu",
+        "Kuangwei Chen",
+        "Wenbo Zhang",
+        "Kexin Huang",
+        "Qi Luo",
+        "Zhe Xu",
+        "Ying Zhu",
+        "Jin Wang",
+        "Tengyue Zhang",
+        "Qi Chen",
+        "Cheng Chang",
+        "Songlin Wang",
+        "Junqi Dai",
+        "Jiasheng Ye",
+        "Xiaogui Yang",
+        "Tianyi Liang",
+        "Xiangyu Peng",
+        "Zhaoye Fei",
+        "Shimin Li",
+        "Qinyuan Cheng",
+        "Xie Chen",
+        "Xinchi Chen",
+        "Xipeng Qiu"
+      ],
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.CV"
+      ],
+      "published": "2026-07-26T21:51:28+00:00",
+      "link": "https://arxiv.org/pdf/2607.23855v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "jointly trained audio-video VAE with fine-grained semantic alignment, enabling synchronized audio-video generation",
+      "llm_evidence_cn": "联合训练的音频-视频VAE实现细粒度语义对齐，支持同步音视频生成",
+      "llm_evidence": "联合训练的音频-视频VAE实现细粒度语义对齐，支持同步音视频生成",
+      "canonical_evidence": "联合训练的音频-视频VAE实现细粒度语义对齐，支持同步音视频生成",
+      "llm_tldr_en": "OmniVAE proposes a jointly trained VAE that aligns audio and video latent spaces using contrastive learning, allowing downstream generative models to produce synchronized audio and video without learning cross-modal alignment from scratch.",
+      "llm_tldr_cn": "OmniVAE 针对现有联合音视频生成中因独立训练VAE导致音视频潜在空间缺乏对齐的问题，提出一种联合训练的音频-视频VAE。通过分段级音视频对比学习，OmniVAE在潜在空间中强制实现细粒度语义对齐，使得下游生成模型不再需要从头学习跨模态同步。实验表明，该方法能够生成语义一致且时间同步的音视频内容，在唇音同步等任务上具有明显优势。这为需要精确音频驱动视觉时序的任务提供了重要的基础模型支持。",
+      "llm_tldr": "OmniVAE 针对现有联合音视频生成中因独立训练VAE导致音视频潜在空间缺乏对齐的问题，提出一种联合训练的音频-视频VAE。通过分段级音视频对比学习，OmniVAE在潜在空间中强制实现细粒度语义对齐，使得下游生成模型不再需要从头学习跨模态同步。实验表明，该方法能够生成语义一致且时间同步的音视频内容，在唇音同步等任务上具有明显优势。这为需要精确音频驱动视觉时序的任务提供了重要的基础模型支持。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.28039v1",
+      "source": "arxiv",
+      "title": "TongueReenact: Geometry-Anchored Tongue Synthesis for Face Reenactment",
+      "abstract": "Modern face reenactment systems achieve impressive pose and expression transfer using geometry-driven representations. However, they largely ignore tongue dynamics, leading to anatomically inconsistent mouth interiors during speech and expressive motions. We introduce the first framework for cross-identity tongue dynamics transfer in face reenactment. We propose a foundation-model-assisted bootstrapping pipeline that produces a dedicated tongue segmentation model for in-the-wild reenactment without curated annotations. We further introduce a spatially constrained latent masked diffusion model for realistic tongue synthesis, with adaptive mask dilation for seamless mouth boundary transitions. Extensive experiments demonstrate improvements of more than two times over all baselines on every tongue-specific metric. We additionally propose a VLM-based evaluation protocol that replicates expert annotation at scale, confirming perceptual superiority across all ablation variants.",
+      "authors": [
+        "MD Wahiduzzaman Khan",
+        "Mingshan Jia",
+        "Xiaolin Zhang",
+        "En Yu",
+        "Kaska Musial-Gabrys"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-30T11:23:36+00:00",
+      "link": "https://arxiv.org/pdf/2607.28039v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Tongue dynamics transfer for realistic mouth interiors in face reenactment",
+      "llm_evidence_cn": "舌部动态传递，实现面部重演中逼真的口腔内部",
+      "llm_evidence": "舌部动态传递，实现面部重演中逼真的口腔内部",
+      "canonical_evidence": "舌部动态传递，实现面部重演中逼真的口腔内部",
+      "llm_tldr_en": "This paper addresses the lack of tongue dynamics in face reenactment, which causes unrealistic mouth interiors during speech. It introduces a foundation-model-assisted tongue segmentation pipeline and a spatially constrained diffusion model for tongue synthesis, significantly improving mouth consistency and lip sync quality.",
+      "llm_tldr_cn": "现代面部重演系统忽略舌部动态，导致说话时口腔内部不真实。本文提出首个跨身份舌部动态传递框架，利用基础模型辅助的舌部分割流程和空间约束扩散模型，逼真合成舌部，无缝融合口腔边界。实验表明，该方法大幅提升口腔一致性，可为逼真口型同步提供关键支撑。",
+      "llm_tldr": "现代面部重演系统忽略舌部动态，导致说话时口腔内部不真实。本文提出首个跨身份舌部动态传递框架，利用基础模型辅助的舌部分割流程和空间约束扩散模型，逼真合成舌部，无缝融合口腔边界。实验表明，该方法大幅提升口腔一致性，可为逼真口型同步提供关键支撑。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating natural lip movements in image-to-video models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.28129v1",
+      "source": "arxiv",
+      "title": "Face and Voice Cross-modal Association with Learning Convex Feature Embedding",
+      "abstract": "Face-and-voice association learning is one of the most challenging tasks in deep learning. In this paper, we propose a simple but powerful cross-modal feature embedding method for the association of faces and voices. Previous work has studied cross-modal association tasks to establish the correlation between voice clips and facial images. These works have addressed cross-modal discrimination but underestimate the importance of handling heterogeneity in inter-modal features between audio and video, resulting in a lot of false positives and false negatives. To tackle the problem, the proposed method learns the embeddings of cross-modal features by making another feature exist between cross-modal features, facilitating the voice and face features of the same person to be embedded in a convex hull. Moreover, the incorporation of cross-modal attention mechanisms with convex embedding techniques represents a highly effective strategy for the attenuation of false positives and false negatives, accomplished via the minimization of inter-class discrepancies. We exhaustively evaluated our method for cross-modal verification, matching, and retrieval tasks on the large-scale VoxCeleb dataset. Extensive experimental results demonstrate that the proposed method achieves notable improvements over existing state-of-the-art methods.",
+      "authors": [
+        "Taewan Kim",
+        "Jiwoo Kang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.IR"
+      ],
+      "published": "2026-07-30T12:37:58+00:00",
+      "link": "https://arxiv.org/pdf/2607.28129v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes cross-modal feature embedding for face-voice association, useful for lip sync",
+      "llm_evidence_cn": "提出人脸与声音的跨模态特征嵌入方法，可用于唇形同步",
+      "llm_evidence": "提出人脸与声音的跨模态特征嵌入方法，可用于唇形同步",
+      "canonical_evidence": "提出人脸与声音的跨模态特征嵌入方法，可用于唇形同步",
+      "llm_tldr_en": "Addresses face-voice association by learning convex cross-modal embeddings that handle feature heterogeneity, improving cross-modal discrimination; provides foundational approach for lip sync tasks.",
+      "llm_tldr_cn": "针对人脸与声音关联中跨模态特征异质性问题，提出凸特征嵌入方法，通过在特征间插入另一特征促进对齐，提升跨模态判别能力，为唇形同步提供基础方法。",
+      "llm_tldr": "针对人脸与声音关联中跨模态特征异质性问题，提出凸特征嵌入方法，通过在特征间插入另一特征促进对齐，提升跨模态判别能力，为唇形同步提供基础方法。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.29545v1",
+      "source": "arxiv",
+      "title": "MoRoute: Dynamic Routing for In-Context Multimodal Video Generation",
+      "abstract": "Multimodal video generation aims to generate and edit videos conditioned on arbitrary combinations of text, images, and videos within a single model, allowing diverse tasks to share complementary data and generative priors. Unifying these tasks requires multimodal understanding of diverse conditions, which is typically provided by a pretrained vision-language model (VLM). A key challenge is how to connect the VLM's hierarchical multimodal representations with a pretrained video diffusion transformer (DiT). Existing methods either inject features from only the final or a few manually selected VLM layers, or jointly train architecture-matched understanding and generation streams, making it difficult to reuse heterogeneous pretrained backbones. We introduce MoRoute, a unified multimodal video generation framework that formulates a frozen VLM and a pretrained video DiT with different architectures as heterogeneous experts connected through dynamic layer routing. For each input, a lightweight block-wise router enables every DiT block to select the VLM layer most relevant to its generation stage, thereby learning an adaptive correspondence between multimodal understanding and video synthesis. MoRoute further incorporates reference images and source videos directly into the DiT token sequence through unified in-context conditioning, preserving fine-grained visual details across diverse generation and editing tasks. Experiments on IntelligentVBench, OpenVE-Bench, and RefVIE-Bench show that MoRoute consistently surpasses the best competing method on each benchmark, improving the average score by 0.15, 0.18, and 0.34 on a 1-5 scale, respectively.",
+      "authors": [
+        "Chong Gao",
+        "Jie Ma",
+        "Zhan Peng",
+        "Chongxiao Wang",
+        "Haoxue Wu",
+        "Jun Liang",
+        "Guanbin Li",
+        "Jing Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-31T15:38:56+00:00",
+      "link": "https://arxiv.org/pdf/2607.29545v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "multimodal video generation conditioned on text, images, and videos in a single model",
+      "llm_evidence_cn": "单个模型内基于文本、图像和视频条件的多模态视频生成",
+      "llm_evidence": "单个模型内基于文本、图像和视频条件的多模态视频生成",
+      "canonical_evidence": "单个模型内基于文本、图像和视频条件的多模态视频生成",
+      "llm_tldr_en": "MoRoute introduces dynamic routing to connect a pretrained VLM with a video diffusion transformer for multimodal video generation from arbitrary combinations of text, images, and videos.",
+      "llm_tldr_cn": "MoRoute 旨在解决统一模型中多模态视频生成的关键挑战：如何连接预训练视觉语言模型的多模态层次化表示与视频扩散变换器。现有方法大多仅注入固定少数层的特征，难以复用异构预训练模型。本文提出动态路由机制，以任务感知的方式选择性融合VLM中间层表示，使得单个模型能够接受文本、图像和视频的任意组合作为条件，实现统一的多模态视频编辑与生成。该方法提升了对不同模态条件的适应性，并促进了任务间的数据共享与生成先验复用。",
+      "llm_tldr": "MoRoute 旨在解决统一模型中多模态视频生成的关键挑战：如何连接预训练视觉语言模型的多模态层次化表示与视频扩散变换器。现有方法大多仅注入固定少数层的特征，难以复用异构预训练模型。本文提出动态路由机制，以任务感知的方式选择性融合VLM中间层表示，使得单个模型能够接受文本、图像和视频的任意组合作为条件，实现统一的多模态视频编辑与生成。该方法提升了对不同模态条件的适应性，并促进了任务间的数据共享与生成先验复用。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

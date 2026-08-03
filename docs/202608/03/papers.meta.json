@@ -1,0 +1,69 @@
+{
+  "label": "2026-08-03",
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T21:51:10",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202608/03/2607.23855v2-omnivae-an-audio-video-vae-with-cross-modal-alignment-for-joint-generation",
+      "section": "deep",
+      "title_en": "OmniVAE: An Audio-Video VAE with Cross-Modal Alignment for Joint Generation",
+      "authors": "Jun Zhan, Chen Yang, Yitian Gong, Donghua Yu, Kuangwei Chen, Wenbo Zhang, Kexin Huang, Qi Luo, Zhe Xu, Ying Zhu, Jin Wang, Tengyue Zhang, Qi Chen, Cheng Chang, Songlin Wang, Junqi Dai, Jiasheng Ye, Xiaogui Yang, Tianyi Liang, Xiangyu Peng, Zhaoye Fei, Shimin Li, Qinyuan Cheng, Xie Chen, Xinchi Chen, Xipeng Qiu",
+      "date": "2026-07-26",
+      "pdf": "https://arxiv.org/pdf/2607.23855v2",
+      "score": "8.0",
+      "evidence": "联合训练的音频-视频VAE实现细粒度语义对齐，支持同步音视频生成",
+      "tldr": "现有音视频联合生成方法通常采用分别训练的VAE，导致音视频潜在空间缺乏跨模态对齐，下游生成模型需从零自主学习同步，难以保证细粒度一致性。为解决该问题，OmniVAE提出一种联合训练的音视频VAE，通过两个关键技术实现对齐：一是段级音视频对比学习，显式捕获音频与视频片段间的时间语义对应；二是从预训练的模态特定语义编码器蒸馏知识，增强各模态潜在空间的可学习性。实验表明，这两个目标共同提升了潜在空间的质量，使得在下游文本到音视频生成任务中，生成内容的质量和音画同步准确性均显著提高。该工作强调了学习统一跨模态表示作为全模态建模基础的重要性，为未来研究指明方向。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Recent generative models are moving beyond silent video or standalone audio synthesis toward the joint generation of synchronized audio and video. Despite this progress, jointly generating audio and video with fine-grained cross-modal correspondence remains challenging due to their fundamental structural differences. Most existing methods use audio and video VAEs trained separately. As a result, the two latent spaces lack cross-modal alignment, leaving the downstream generative model to learn cross-modal synchronization from scratch. We present OmniVAE, a jointly trained audio-video VAE that learns fine-grained semantic alignment between audio and video latent representations. Beyond reconstruction, OmniVAE uses a segment-level audio-video contrastive objective to capture temporal-semantic correspondence and align the two latent spaces. In parallel, it distills features from pretrained modality-specific semantic encoders into each modality, improving the downstream learnability of both latent spaces. Extensive experiments show that both objectives consistently improve the learnability of the latent spaces, translating into higher generation quality and more accurate cross-modal synchronization in downstream text-to-audio-video generation. These findings underscore the importance of learning unified representations as a foundation for omnimodal modeling.1",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/03/2607.28039v1-tonguereenact-geometry-anchored-tongue-synthesis-for-face-reenactment",
+      "section": "quick",
+      "title_en": "TongueReenact: Geometry-Anchored Tongue Synthesis for Face Reenactment",
+      "authors": "MD Wahiduzzaman Khan, Mingshan Jia, Xiaolin Zhang, En Yu, Kaska Musial-Gabrys",
+      "date": "2026-07-30",
+      "pdf": "https://arxiv.org/pdf/2607.28039v1",
+      "score": "7.0",
+      "evidence": "舌部动态传递，实现面部重演中逼真的口腔内部",
+      "tldr": "现代面部重演系统忽略舌部动态，导致说话时口腔内部不真实。本文提出首个跨身份舌部动态传递框架，利用基础模型辅助的舌部分割流程和空间约束扩散模型，逼真合成舌部，无缝融合口腔边界。实验表明，该方法大幅提升口腔一致性，可为逼真口型同步提供关键支撑。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Modern face reenactment systems achieve impressive pose and expression transfer using geometry-driven representations. However, they largely ignore tongue dynamics, leading to anatomically inconsistent mouth interiors during speech and expressive motions. We introduce the first framework for cross-identity tongue dynamics transfer in face reenactment. We propose a foundation-model-assisted bootstrapping pipeline that produces a dedicated tongue segmentation model for in-the-wild reenactment without curated annotations. We further introduce a spatially constrained latent masked diffusion model for realistic tongue synthesis, with adaptive mask dilation for seamless mouth boundary transitions. Extensive experiments demonstrate improvements of more than two times over all baselines on every tongue-specific metric. We additionally propose a VLM-based evaluation protocol that replicates expert annotation at scale, confirming perceptual superiority across all ablation variants.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/03/2607.29545v1-moroute-dynamic-routing-for-in-context-multimodal-video-generation",
+      "section": "quick",
+      "title_en": "MoRoute: Dynamic Routing for In-Context Multimodal Video Generation",
+      "authors": "Chong Gao, Jie Ma, Zhan Peng, Chongxiao Wang, Haoxue Wu, Jun Liang, Guanbin Li, Jing Li",
+      "date": "2026-07-31",
+      "pdf": "https://arxiv.org/pdf/2607.29545v1",
+      "score": "7.0",
+      "evidence": "单个模型内基于文本、图像和视频条件的多模态视频生成",
+      "tldr": "多模态视频生成任务需理解文本、图像、视频等多种条件，现有方法或仅用VLM最后层特征，或需联合训练架构匹配模型，限制了预训练骨干重用。MoRoute将冻结VLM和预训练视频DiT视为异构专家，通过轻量块路由器动态层路由，使每个DiT块选择最相关VLM层；同时，以统一上下文调节直接将参考视觉纳入令牌序列，保留细节。在IntelligentVBench等三个基准上，MoRoute显著超越最佳竞争方法，平均分提升最高0.34（1-5分制）。实现了异构模型的无缝融合与高效重用，为多模态视频生成提供新范式。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Multimodal video generation aims to generate and edit videos conditioned on arbitrary combinations of text, images, and videos within a single model, allowing diverse tasks to share complementary data and generative priors. Unifying these tasks requires multimodal understanding of diverse conditions, which is typically provided by a pretrained vision-language model (VLM). A key challenge is how to connect the VLM's hierarchical multimodal representations with a pretrained video diffusion transformer (DiT). Existing methods either inject features from only the final or a few manually selected VLM layers, or jointly train architecture-matched understanding and generation streams, making it difficult to reuse heterogeneous pretrained backbones. We introduce MoRoute, a unified multimodal video generation framework that formulates a frozen VLM and a pretrained video DiT with different architectures as heterogeneous experts connected through dynamic layer routing. For each input, a lightweight block-wise router enables every DiT block to select the VLM layer most relevant to its generation stage, thereby learning an adaptive correspondence between multimodal understanding and video synthesis. MoRoute further incorporates reference images and source videos directly into the DiT token sequence through unified in-context conditioning, preserving fine-grained visual details across diverse generation and editing tasks. Experiments on IntelligentVBench, OpenVE-Bench, and RefVIE-Bench show that MoRoute consistently surpasses the best competing method on each benchmark, improving the average score by 0.15, 0.18, and 0.34 on a 1-5 scale, respectively.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/03/2607.28129v1-face-and-voice-cross-modal-association-with-learning-convex-feature-embedding",
+      "section": "quick",
+      "title_en": "Face and Voice Cross-modal Association with Learning Convex Feature Embedding",
+      "authors": "Taewan Kim, Jiwoo Kang",
+      "date": "2026-07-30",
+      "pdf": "https://arxiv.org/pdf/2607.28129v1",
+      "score": "6.0",
+      "evidence": "提出人脸与声音的跨模态特征嵌入方法，可用于唇形同步",
+      "tldr": "跨模态人脸与声音关联学习中，现有方法忽视音频与视频的异质性，导致大量假阳性/假阴性。本文提出学习凸特征嵌入，使同一人的声纹与人脸特征处于凸包中，并引入跨模态注意力机制，有效缩小类间差异。在VoxCeleb上，验证、匹配、检索任务均取得显著提升，为跨模态身份关联提供了高可靠方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Face-and-voice association learning is one of the most challenging tasks in deep learning. In this paper, we propose a simple but powerful cross-modal feature embedding method for the association of faces and voices. Previous work has studied cross-modal association tasks to establish the correlation between voice clips and facial images. These works have addressed cross-modal discrimination but underestimate the importance of handling heterogeneity in inter-modal features between audio and video, resulting in a lot of false positives and false negatives. To tackle the problem, the proposed method learns the embeddings of cross-modal features by making another feature exist between cross-modal features, facilitating the voice and face features of the same person to be embedded in a convex hull. Moreover, the incorporation of cross-modal attention mechanisms with convex embedding techniques represents a highly effective strategy for the attenuation of false positives and false negatives, accomplished via the minimization of inter-class discrepancies. We exhaustively evaluated our method for cross-modal verification, matching, and retrieval tasks on the large-scale VoxCeleb dataset. Extensive experimental results demonstrate that the proposed method achieves notable improvements over existing state-of-the-art methods.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
