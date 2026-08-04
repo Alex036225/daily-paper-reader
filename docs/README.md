@@ -6,34 +6,46 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-03
-- 运行时间：2026-08-03 21:50:54 UTC
+- 最新运行日期：2026-08-04
+- 运行时间：2026-08-04 21:45:19 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：1
-- 速读区：3
+- 本次总论文数：8
+- 精读区：6
+- 速读区：2
 
 ### 今日简报（AI）
-🎬 今日聚焦多模态生成新范式：精读一篇音频-视频联合VAE，速览三篇涵盖音唇同步、视频路由与人脸跨模态研究。
-🔥 最值得关注：OmniVAE用跨模态对齐实现音视频统一生成，TongueReenact将舌头几何融入人脸重演，告别嘴部僵硬。
-📌 对视频创作感兴趣的读者，建议从OmniVAE的开源代码入手，体验音画联动的生成效果。
-- 详情：[/202608/03/README](/202608/03/README)
+今日精读视频世界模型与说话人头部生成双项满分突破，速读侧重高效音视频对齐与生成缓存。
+最值得关注：视频世界模型（Wonder）取得更优效果，说话人脸生成（LeapTalk）打破延迟-质量权衡。
+下步可关注这两项技术如何落地到虚拟数字人与实时视频生成应用中。
+- 详情：[/202608/04/README](/202608/04/README)
 
 ### 精读区论文标签
-1. [OmniVAE: An Audio-Video VAE with Cross-Modal Alignment for Joint Generation](/202608/03/2607.23855v2-omnivae-an-audio-video-vae-with-cross-modal-alignment-for-joint-generation)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：联合训练的音频-视频VAE实现细粒度语义对齐，支持同步音视频生成
+1. [Wonder: Video World Model Done Better](/202608/04/2607.26037v1-wonder-video-world-model-done-better)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：从单张图像生成可控视频
+2. [LeapTalk: Breaking the Latency-Quality Trade-off in Talking Head Generation](/202608/04/2608.00079v1-leaptalk-breaking-the-latency-quality-trade-off-in-talking-head-generation)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：单步桥蒸馏实现实时说话头生成
+3. [Video Models as Native 4D Renderers: World-Grounded Conditioning from Animated Mesh](/202608/04/2608.00094v1-video-models-as-native-4d-renderers-world-grounded-conditioning-from-animated-mesh)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：扩展Wan2.2进行4D渲染，利用图像到视频先验，明确使用Wan模型
+4. [Geometry-guided Emotion Modulation for Controllable and Photorealistic Emotional Talking Face Generation](/202608/04/2608.00663v1-geometry-guided-emotion-modulation-for-controllable-and-photorealistic-emotional-talking-face-generation)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：音频驱动的情感说话人脸生成，利用扩散模型和几何先验实现精确唇形同步
+5. [ETHead: Generating Expressive 3D Facial Animation and Head Movement from Speech](/202608/04/2608.01605v1-ethead-generating-expressive-3d-facial-animation-and-head-movement-from-speech)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：从语音生成具唇形同步的3D面部动画
+6. [Proxy Avatar Meets Low-Rank Caching: Real-Time One-Shot Emotion-Controllable Portrait Animation](/202608/04/2608.01978v1-proxy-avatar-meets-low-rank-caching-real-time-one-shot-emotion-controllable-portrait-animation)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：一次性音频驱动人像动画，具备实时嘴型同步与表情控制
 
 ### 速读区论文标签
-1. [TongueReenact: Geometry-Anchored Tongue Synthesis for Face Reenactment](/202608/03/2607.28039v1-tonguereenact-geometry-anchored-tongue-synthesis-for-face-reenactment)  
+1. [FATE: Frame-Level Audio-Visual Temporal Embedding](/202608/04/2608.01310v1-fate-frame-level-audio-visual-temporal-embedding)  
    标签：评分：7.0/10、query:wan-av-gen
-   evidence：舌部动态传递，实现面部重演中逼真的口腔内部
-2. [MoRoute: Dynamic Routing for In-Context Multimodal Video Generation](/202608/03/2607.29545v1-moroute-dynamic-routing-for-in-context-multimodal-video-generation)  
+   evidence：帧级视听时序嵌入用于精确嘴型同步对齐
+2. [EchoCache: Energy-Guided Cross-Modal Caching for Efficient Audio-Driven Video Generation](/202608/04/2608.02474v1-echocache-energy-guided-cross-modal-caching-for-efficient-audio-driven-video-generation)  
    标签：评分：7.0/10、query:wan-av-gen
-   evidence：单个模型内基于文本、图像和视频条件的多模态视频生成
-3. [Face and Voice Cross-modal Association with Learning Convex Feature Embedding](/202608/03/2607.28129v1-face-and-voice-cross-modal-association-with-learning-convex-feature-embedding)  
-   标签：评分：6.0/10、query:wan-av-gen
-   evidence：提出人脸与声音的跨模态特征嵌入方法，可用于唇形同步
+   evidence：音频驱动视频生成，具备跨模态对齐，适用于唇部运动合成。
 
 
 <div class="dpr-home-promo-card">

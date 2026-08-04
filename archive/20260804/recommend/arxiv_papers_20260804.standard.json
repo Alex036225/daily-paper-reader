@@ -1,0 +1,344 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-04T21:39:27.330429+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 6,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.26037v1",
+      "source": "arxiv",
+      "title": "Wonder: Video World Model Done Better",
+      "abstract": "We present Wonder, a general-purpose video world model for real-time, camera-controllable world exploration. Given an image or a conditional video, Wonder constructs a playable world where users can navigate interactively by moving the camera, discovering unseen regions, and revisiting previously observed areas in real time and over a long-term horizon. Achieving this capability requires a system-level co-design of control method, memory mechanism, and training strategy. We introduce a novel camera conditioning with a dense coordinate field whose renderings provide spatially aligned motion and orientation cues, allowing the model to interpret camera motion directly as visual evidence. To support fast and precise memory retrieval over a growing generation context, we propose an efficient sparse attention-based memory mechanism, enabling the model to selectively attend to a small set of relevant context tokens at inference time, regardless of actual context length. We further develop several techniques to rectify the self-forcing-style distillation pipeline, improving the student model's ability to respect control signals, as well as maintaining diverse generation modes and long-term memory from the teacher. Together, these components enable Wonder to synthesize diverse, minute-scale videos at 16 FPS while preserving coherent geometry, appearance, and dynamics across long rollouts. Beyond image-to-video generation, Wonder naturally supports video-conditioned generation, allowing existing dynamic scenes to be re-shot in real time.",
+      "authors": [
+        "Jiacong Xu",
+        "Hanwen Jiang",
+        "Zhixin Shu",
+        "Kalyan Sunkavalli",
+        "Vishal M. Patel",
+        "Yiqun Mei"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-28T17:45:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.26037v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "generates controllable video from a single image",
+      "llm_evidence_cn": "从单张图像生成可控视频",
+      "llm_evidence": "从单张图像生成可控视频",
+      "canonical_evidence": "从单张图像生成可控视频",
+      "llm_tldr_en": "Wonder generates a controllable, real-time video world from a single image, enabling long-horizon camera navigation with dense coordinate fields and efficient memory retrieval.",
+      "llm_tldr_cn": "Wonder提出一种通用视频世界模型，能够从单张图像或条件视频构建可交互的世界，用户可通过移动相机实时探索未知区域。该方法通过密集坐标场渲染提供空间对齐的运动和方向线索，并设计高效记忆检索机制以支持长视界生成。实验表明，Wonder在实时性和长期一致性方面优于现有方法，为交互式视频生成和虚拟世界构建提供了新颖的技术途径。",
+      "llm_tldr": "Wonder提出一种通用视频世界模型，能够从单张图像或条件视频构建可交互的世界，用户可通过移动相机实时探索未知区域。该方法通过密集坐标场渲染提供空间对齐的运动和方向线索，并设计高效记忆检索机制以支持长视界生成。实验表明，Wonder在实时性和长期一致性方面优于现有方法，为交互式视频生成和虚拟世界构建提供了新颖的技术途径。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.00079v1",
+      "source": "arxiv",
+      "title": "LeapTalk: Breaking the Latency-Quality Trade-off in Talking Head Generation",
+      "abstract": "Long-form and real-time talking-head generation remains challenging due to a latency-quality trade-off: inefficient multi-step diffusion prohibits streaming generation, whereas real-time autoregressive approaches suffer from error accumulation and identity drift. To address this drawback, we propose LeapTalk, a novel framework that achieves stable and real-time talking-head generation with a single forward step, scaling to arbitrarily long videos. At the heart of our approach lies a single-step bridge distillation scheme. On the one hand, departing from the conventional noise-to-data paradigm, we introduce a data-to-data transport formulation based on a Brownian bridge. Anchored by a persistent reference, this strategy effectively mitigates identity drift and enhances long-term temporal stability. On the other hand, to enable smooth knowledge transfer from a pre-trained diffusion teacher to the student bridge model, we explore a heterogeneous distillation framework with an SNR-aligned time transformation $Φ(τ)$, which bridges the functional discrepancy between the two models. Moreover, we propose an audio-driven classifier-free guidance mechanism to maintain fine-grained lip synchronization under extreme step reduction. Extensive experiments demonstrate that our method achieves high-fidelity and temporally consistent video generation with only 1 step at up to 200 FPS, significantly outperforming existing approaches in both efficiency and stability. Project Page: https://zhangrongxiang.github.io/leaptalk-page/",
+      "authors": [
+        "Rongxiang Zhang",
+        "Songhua Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "published": "2026-07-29T14:44:57+00:00",
+      "link": "https://arxiv.org/pdf/2608.00079v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "single-step bridge distillation for real-time talking-head generation",
+      "llm_evidence_cn": "单步桥蒸馏实现实时说话头生成",
+      "llm_evidence": "单步桥蒸馏实现实时说话头生成",
+      "canonical_evidence": "单步桥蒸馏实现实时说话头生成",
+      "llm_tldr_en": "LeapTalk breaks the latency-quality trade-off for talking-head generation via a single-step bridge distillation, enabling stable, real-time generation from a single image with arbitrarily long videos.",
+      "llm_tldr_cn": "长时和实时说话头生成面临延迟与质量的权衡。LeapTalk提出一种基于布朗桥的数据到数据传输公式和单步桥蒸馏方案，仅需一次前向传播即可稳定生成高质量的说话头视频，并支持任意长度视频。该方法有效缓解了身份漂移，推动了实时说话头生成的实用化。",
+      "llm_tldr": "长时和实时说话头生成面临延迟与质量的权衡。LeapTalk提出一种基于布朗桥的数据到数据传输公式和单步桥蒸馏方案，仅需一次前向传播即可稳定生成高质量的说话头视频，并支持任意长度视频。该方法有效缓解了身份漂移，推动了实时说话头生成的实用化。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Generating a talking head video from a single portrait image with accurate lip sync using WAN model.",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.00094v1",
+      "source": "arxiv",
+      "title": "Video Models as Native 4D Renderers: World-Grounded Conditioning from Animated Mesh",
+      "abstract": "Pretrained video diffusion models can act as renderers when the desired scene state is already specified by an animated mesh, a camera trajectory, and a reference image. This 4D generative rendering setting raises a representation question: what image-format condition lets a video backbone obey both camera motion and scene-internal animation? We propose DAR, a reference-guided renderer that extends Wan2.2 camera control from Plücker rays alone to a joint camera-plus-geometry interface. DAR projects a neural 4D G-buffer (tracking, world position, and normal) from the animated mesh and injects it through a widened control adapter while preserving the pretrained image-to-video prior. The central design choice is the pair of tracking and world position. Tracking identifies the persistent surface element that should carry appearance; world position gives its current scene-coordinate state; normal supplies local shape. Depth plus calibrated rays can recover 3D in principle, but depth is a camera-dependent chart in which camera and object motion are mixed. On the 68-case DAR-4D benchmark, LoRA DAR reaches PSNR 23.22, SSIM 0.895, and LPIPS 0.134, improving over off-the-shelf Wan2.2-Depth by 1.54 dB PSNR; a full fine-tune reaches PSNR 25.36 and SSIM 0.917. Matched ablations show that replacing world position by depth reduces PSNR by 1.26--1.55 dB at every checkpoint, supporting tracking+world-position correspondence as a practical 4D rendering condition.",
+      "authors": [
+        "Junhao Chen",
+        "Mingjin Chen",
+        "Henghaofan Zhang",
+        "Minglin Chen",
+        "Liaoyuan Fan",
+        "Boran Zhang",
+        "Saining Zhang",
+        "Mingze Sun",
+        "Hao Zhao",
+        "Ruqi Huang",
+        "Zhihao Li",
+        "Yufei Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-30T16:55:28+00:00",
+      "link": "https://arxiv.org/pdf/2608.00094v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Extends Wan2.2 for 4D rendering with image-to-video prior, explicitly uses Wan model",
+      "llm_evidence_cn": "扩展Wan2.2进行4D渲染，利用图像到视频先验，明确使用Wan模型",
+      "llm_evidence": "扩展Wan2.2进行4D渲染，利用图像到视频先验，明确使用Wan模型",
+      "canonical_evidence": "扩展Wan2.2进行4D渲染，利用图像到视频先验，明确使用Wan模型",
+      "llm_tldr_en": "DAR extends the Wan2.2 diffusion model to perform 4D generative rendering from an animated mesh and reference image, enabling joint camera and geometry control.",
+      "llm_tldr_cn": "针对从动画网格和参考图像进行4D生成渲染的需求，本文提出DAR，通过投影神经4D G-buffer并扩展Wan2.2的控制适配器，实现相机和物体动画的联合条件化。该方法保留了预训练的图像到视频先验，并支持精准的世界接地控制。为利用视频扩散模型作为可控制渲染器提供了新途径。",
+      "llm_tldr": "针对从动画网格和参考图像进行4D生成渲染的需求，本文提出DAR，通过投影神经4D G-buffer并扩展Wan2.2的控制适配器，实现相机和物体动画的联合条件化。该方法保留了预训练的图像到视频先验，并支持精准的世界接地控制。为利用视频扩散模型作为可控制渲染器提供了新途径。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.00663v1",
+      "source": "arxiv",
+      "title": "Geometry-guided Emotion Modulation for Controllable and Photorealistic Emotional Talking Face Generation",
+      "abstract": "Audio-driven emotional talking face generation aims to synthesize realistic videos with expressive facial dynamics. However, existing methods struggle to balance controllability and visual fidelity. Although implicit representations capture rich semantics, they lack structural guidance, often resulting in averaged emotional expressions. In contrast, explicit geometric methods offer better control over facial expressions but tend to sacrifice high-frequency texture details. To address it, we propose GemTalk, a diffusion-based framework that combines the semantic richness of implicit representations with the structural precision of explicit geometric priors. We introduce a Vision-guided Audio Emotion Projection (V-AEP) module to extract implicit emotional lip and expression features. At the same time, a Diffusion-based Geometric Priors Generator (D-GPG) generates identity-aware blendshape coefficients as explicit structural priors. Crucially, our Geometry-guided Emotion Modulation (GEM) module leverages these geometric priors to recalibrate the magnitude of implicit features, enabling precise, continuous control over emotional expressions, especially emotion intensity, without sacrificing visual quality. Extensive experiments show GemTalk achieves superior performance in photo-realism, and facial emotional dynamics.",
+      "authors": [
+        "Chenggong Hu",
+        "Shaoyin Ma",
+        "Yi Wang",
+        "Li Sun",
+        "Mingli Song",
+        "Jie Song"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-01T13:33:38+00:00",
+      "link": "https://arxiv.org/pdf/2608.00663v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "audio-driven emotional talking face generation with diffusion model and geometric priors for accurate lip sync",
+      "llm_evidence_cn": "音频驱动的情感说话人脸生成，利用扩散模型和几何先验实现精确唇形同步",
+      "llm_evidence": "音频驱动的情感说话人脸生成，利用扩散模型和几何先验实现精确唇形同步",
+      "canonical_evidence": "音频驱动的情感说话人脸生成，利用扩散模型和几何先验实现精确唇形同步",
+      "llm_tldr_en": "GemTalk proposes a diffusion-based framework combining implicit and geometric priors to generate photorealistic emotional talking faces from audio, improving lip synchronization and expression control.",
+      "llm_tldr_cn": "针对音频驱动情感说话人脸生成中可控性与视觉保真度难以平衡的问题，本文提出GemTalk，一种结合隐式语义与显式几何先验的扩散框架。通过引入视觉引导的音频情感投影模块和几何调制，它能够生成具有精确唇形同步和自然情感表达的照片级真实感视频。实验证明，该方法在唇形同步精度和表情自然度上均优于现有方法，为多模态生成提供了有效的技术路径。",
+      "llm_tldr": "针对音频驱动情感说话人脸生成中可控性与视觉保真度难以平衡的问题，本文提出GemTalk，一种结合隐式语义与显式几何先验的扩散框架。通过引入视觉引导的音频情感投影模块和几何调制，它能够生成具有精确唇形同步和自然情感表达的照片级真实感视频。实验证明，该方法在唇形同步精度和表情自然度上均优于现有方法，为多模态生成提供了有效的技术路径。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.01605v1",
+      "source": "arxiv",
+      "title": "ETHead: Generating Expressive 3D Facial Animation and Head Movement from Speech",
+      "abstract": "Generating expressive 3D talking heads solely from speech remains a significant challenge due to the scarcity of high-fidelity 3D data, which limits the modeling of complex emotional motion patterns. In this paper, we introduce \\textbf{E}xpressive \\textbf{T}alking \\textbf{Head} (ETHead), a method for generating 3D facial and head motions that vividly align with the emotional content of input speech. To overcome the data limitations, we design a self-distillation framework that leverages large-scale 2D talking videos to pre-train a specialized speech encoder. By incorporating a novel emotion-modulated probabilistic masking mechanism, this framework aligns speech representations with expressive visual dynamics, allowing the encoder to extract features highly correlated with facial and head motions directly from audio. These features are then leveraged to guide 3D generation, enriching input cues and providing explicit supervision through a joint speech-motion latent space. Extensive experiments demonstrate that ETHead substantially outperforms state-of-the-art methods. Furthermore, our motion-aligned speech encoder can serve as a transferable module, offering a general solution for enhancing expressiveness in other 3D talking head animation frameworks. The project page is available at https://verdure-oss.github.io/ETHead.github.io/.",
+      "authors": [
+        "Jiu-Cheng Xie",
+        "Jiwang Zheng",
+        "Yongkang Xia",
+        "Jian Xiong",
+        "Chi-Man Pun",
+        "Hao Gao",
+        "Feng Xu"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR"
+      ],
+      "published": "2026-08-03T02:24:23+00:00",
+      "link": "https://arxiv.org/pdf/2608.01605v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "generates 3D facial animation with lip sync from speech",
+      "llm_evidence_cn": "从语音生成具唇形同步的3D面部动画",
+      "llm_evidence": "从语音生成具唇形同步的3D面部动画",
+      "canonical_evidence": "从语音生成具唇形同步的3D面部动画",
+      "llm_tldr_en": "ETHead generates expressive 3D talking heads with lip-synced motions from speech, using self-distillation on 2D videos and emotion-modulated masking to overcome 3D data scarcity.",
+      "llm_tldr_cn": "ETHead直接从语音生成富有情绪表达的3D说话人头动画，克服了高保真3D数据稀缺的挑战。该方法利用大规模2D说话视频预训练语音编码器，并通过自蒸馏和情绪调制的概率掩码机制将语音与视觉动态对齐。实验结果表明，ETHead能生成与输入语音情绪高度匹配的面部与头部运动，为虚拟人和数字内容创作提供了高质量的唇形同步解决方案。",
+      "llm_tldr": "ETHead直接从语音生成富有情绪表达的3D说话人头动画，克服了高保真3D数据稀缺的挑战。该方法利用大规模2D说话视频预训练语音编码器，并通过自蒸馏和情绪调制的概率掩码机制将语音与视觉动态对齐。实验结果表明，ETHead能生成与输入语音情绪高度匹配的面部与头部运动，为虚拟人和数字内容创作提供了高质量的唇形同步解决方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.01978v1",
+      "source": "arxiv",
+      "title": "Proxy Avatar Meets Low-Rank Caching: Real-Time One-Shot Emotion-Controllable Portrait Animation",
+      "abstract": "Audio-driven portrait animation has advanced rapidly with diffusion-based generative models, yet real-time one-shot generation with expressive emotion control remains challenging. Existing methods often suffer from insufficient emotion-aware motion priors and expensive appearance computation during multi-step denoising. To address these issues, we propose Proxy Avatar Meets Low-Rank Caching, a cascaded framework for real-time one-shot emotion-controllable portrait animation. Instead of directly generating the target portrait from audio, our method uses a Gaussian-based emotion proxy avatar as a reusable motion generator, which is trained once on a single identity to produce expressive driving videos from audio and emotion labels. Since the proxy avatar only provides motion rather than target appearance or geometry, a large-scale one-shot retargeting model further extracts identity-independent motion from the proxy performance and adapts it to arbitrary target portraits. To improve inference efficiency, we introduce zero-shot appearance reuse with low-rank caching, which caches reference appearance features at the initial denoising step and models subsequent feature variations using lightweight low-rank adapters. Extensive experiments demonstrate that our method achieves stronger emotional expressiveness, better identity-preserving animation, and substantially reduced inference cost, enabling real-time one-shot portrait animation.",
+      "authors": [
+        "Haijie Yang",
+        "Jindi Bao",
+        "Yixuan Dong",
+        "Hongliang Zhang",
+        "Jian Bi",
+        "Hao Tang",
+        "Zhenyu Zhang",
+        "Jianjun Qian",
+        "Jian Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-03T09:41:59+00:00",
+      "link": "https://arxiv.org/pdf/2608.01978v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "one-shot audio-driven portrait animation with real-time lip sync and emotion control",
+      "llm_evidence_cn": "一次性音频驱动人像动画，具备实时嘴型同步与表情控制",
+      "llm_evidence": "一次性音频驱动人像动画，具备实时嘴型同步与表情控制",
+      "canonical_evidence": "一次性音频驱动人像动画，具备实时嘴型同步与表情控制",
+      "llm_tldr_en": "Introduces a cascaded framework with Gaussian-based proxy avatar and low-rank caching for real-time, one-shot, emotion-controllable portrait animation from audio, achieving both speed and expressiveness.",
+      "llm_tldr_cn": "该论文针对一次性人脸动画实时性与表情可控性的挑战，提出代理化身与低秩缓存级联框架，用高斯代理化身生成富有表情的驱动视频，再通过低秩缓存高效计算外观，实现音频驱动实时人脸动画，无需多步去噪，在保持高表情保真度同时大幅降低推理延迟，为实时交互式虚拟人脸提供了高效方案。",
+      "llm_tldr": "该论文针对一次性人脸动画实时性与表情可控性的挑战，提出代理化身与低秩缓存级联框架，用高斯代理化身生成富有表情的驱动视频，再通过低秩缓存高效计算外观，实现音频驱动实时人脸动画，无需多步去噪，在保持高表情保真度同时大幅降低推理延迟，为实时交互式虚拟人脸提供了高效方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.01310v1",
+      "source": "arxiv",
+      "title": "FATE: Frame-Level Audio-Visual Temporal Embedding",
+      "abstract": "When a dog opens its mouth and barks, humans naturally recognize what the sound is and when it occurs. Building audio-visual models with this same ability requires representations that capture both semantic and temporal alignment. Current approaches fall short on one side or the other: embedding models match semantic but lose temporal information; synchronization models capture temporal offsets but lack semantic understanding. To bridge this gap, we propose FATE, Frame-level Audio-visual Temporal Embedding. Unlike prior embedding models that pool each modality into a single embedding and discard temporal information, FATE retains frame-level sequences, aligns them on the physical timeline, and computes similarity over strictly aligned frame pairs. Unlike synchronization models that output only an offset prediction, FATE encodes synchronization in a reusable embedding space, trained with a joint objective combining cross-video semantic and within-video temporal contrastive learning to capture both what sounds and when it occurs. Across three tasks, FATE surpasses the strongest baseline on temporal and semantic retrieval by a large margin, matches fully supervised methods on event localization in a zero-shot setting, and achieves the best correlation with human judgments as a generation evaluation metric. The source code can be found at \\texttt{https://github.com/guankaisi/FATE}.",
+      "authors": [
+        "Kaisi Guan",
+        "Bingzi Zhang",
+        "Xihua Wang",
+        "Ying Ba",
+        "Xin Cheng",
+        "Yijing Chen",
+        "Ruihua Song"
+      ],
+      "primary_category": "cs.MM",
+      "categories": [
+        "cs.MM"
+      ],
+      "published": "2026-08-02T15:26:21+00:00",
+      "link": "https://arxiv.org/pdf/2608.01310v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "frame-level audio-visual temporal embedding for precise lip-sync alignment",
+      "llm_evidence_cn": "帧级视听时序嵌入用于精确嘴型同步对齐",
+      "llm_evidence": "帧级视听时序嵌入用于精确嘴型同步对齐",
+      "canonical_evidence": "帧级视听时序嵌入用于精确嘴型同步对齐",
+      "llm_tldr_en": "Proposes FATE, a frame-level audio-visual temporal embedding that captures both semantic and temporal alignment by retaining frame-level sequences and aligning them on the physical timeline, improving audio-visual synchronization tasks.",
+      "llm_tldr_cn": "现有音视频嵌入模型或丢失时序信息或缺乏语义理解。FATE提出帧级音视频时序嵌入，保留帧级序列并在物理时间轴上严格对齐，同时捕获语义和时序一致性，在音视频同步和检索任务上表现优异，为视频生成中的嘴型同步评估提供了更精确的特征表示和度量方法，有助于提升生成内容的质量。",
+      "llm_tldr": "现有音视频嵌入模型或丢失时序信息或缺乏语义理解。FATE提出帧级音视频时序嵌入，保留帧级序列并在物理时间轴上严格对齐，同时捕获语义和时序一致性，在音视频同步和检索任务上表现优异，为视频生成中的嘴型同步评估提供了更精确的特征表示和度量方法，有助于提升生成内容的质量。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.02474v1",
+      "source": "arxiv",
+      "title": "EchoCache: Energy-Guided Cross-Modal Caching for Efficient Audio-Driven Video Generation",
+      "abstract": "Audio-driven video generation (A2V) has achieved promising progress in synthesizing temporally coherent and audio-visually aligned videos, yet its inference remains expensive due to the iterative denoising process of diffusion models. Existing caching methods mainly exploit temporal redundancy in visual features while overlooking the cross-modal alignment of A2V, where audio drives visual generation with highly non-uniform temporal importance. In this paper, we identify two levels of misalignment in existing A2V caching methods: temporal-semantic and computation-storage misalignment. To address them, we propose EchoCache, an energy-guided cross-modal caching framework for efficient A2V generation. EchoCache leverages audio time-frequency energy as a saliency anchor to guide latent-level cache updates and further introduces a dynamic timestep-latent caching mechanism with quantized cache management for joint efficiency and memory optimization. Extensive experiments on mainstream A2V models show that EchoCache consistently improves the latency-quality trade-off while preserving generation quality and audio-visual consistency. In particular, on Wan2.2-S2V over the EMTD benchmark, EchoCache achieves a 2.46x speedup with the best overall performance. Code is available at https://github.com/IF-LAB-PKU/EchoCache.",
+      "authors": [
+        "Jiayu Chen",
+        "Xiaoyu Wu",
+        "Rongshan Gao",
+        "Maoliang Li",
+        "Zihao Zheng",
+        "Xinhao Sun",
+        "Hailong Zou",
+        "Guojie Luo",
+        "Xiang Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-03T16:42:54+00:00",
+      "link": "https://arxiv.org/pdf/2608.02474v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Audio-driven video generation with cross-modal alignment, applicable to lip motion synthesis.",
+      "llm_evidence_cn": "音频驱动视频生成，具备跨模态对齐，适用于唇部运动合成。",
+      "llm_evidence": "音频驱动视频生成，具备跨模态对齐，适用于唇部运动合成。",
+      "canonical_evidence": "音频驱动视频生成，具备跨模态对齐，适用于唇部运动合成。",
+      "llm_tldr_en": "Proposes EchoCache, an energy-guided caching framework that leverages audio time-frequency importance to prune visual features, improving efficiency of audio-driven video generation while maintaining audio-visual alignment.",
+      "llm_tldr_cn": "针对音频驱动视频生成（A2V）推理成本高的问题，提出能量引导的跨模态缓存框架EchoCache。该框架利用音频时频能量重要性指导视觉特征缓存选择，解决现有缓存方法中时序语义和计算存储的双重错位问题。实验表明，EchoCache在保持音画同步质量的同时显著降低了计算开销，对实时唇形合成等应用具有推动作用。",
+      "llm_tldr": "针对音频驱动视频生成（A2V）推理成本高的问题，提出能量引导的跨模态缓存框架EchoCache。该框架利用音频时频能量重要性指导视觉特征缓存选择，解决现有缓存方法中时序语义和计算存储的双重错位问题。实验表明，EchoCache在保持音画同步质量的同时显著降低了计算开销，对实时唇形合成等应用具有推动作用。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
