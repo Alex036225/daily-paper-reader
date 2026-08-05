@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-05",
+  "date": "2026-08-05",
+  "generated_at": "2026-08-05T21:51:50",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/05/2608.00094v2-video-models-as-native-4d-renderers-world-grounded-conditioning-from-animated-mesh",
+      "section": "deep",
+      "title_en": "Video Models as Native 4D Renderers: World-Grounded Conditioning from Animated Mesh",
+      "authors": "Junhao Chen, Mingjin Chen, Henghaofan Zhang, Minglin Chen, Liaoyuan Fan, Boran Zhang, Saining Zhang, Mingze Sun, Hao Zhao, Ruqi Huang, Zhihao Li, Yufei Wang",
+      "date": "2026-07-30",
+      "pdf": "https://arxiv.org/pdf/2608.00094v2",
+      "score": "9.0",
+      "evidence": "扩展 Wan2.2 实现基于参考图像的图像到视频生成。",
+      "tldr": "DAR 基于 Wan2.2 扩展，通过参考图像和动画网格实现参考引导的4D渲染，支持相机和几何控制下的图像条件视频生成，直接服务于 I2V 任务。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Pretrained video diffusion models can act as renderers when the desired scene state is already specified by an animated mesh, a camera trajectory, and a reference image. This 4D generative rendering setting raises a representation question: what image-format condition lets a video backbone obey both camera motion and scene-internal animation? We propose DAR, a reference-guided renderer that extends Wan2.2 camera control from Plücker rays alone to a joint camera-plus-geometry interface. DAR projects a neural 4D G-buffer (tracking, world position, and normal) from the animated mesh and injects it through a widened control adapter while preserving the pretrained image-to-video prior. The central design choice is the pair of tracking and world position. Tracking identifies the persistent surface element that should carry appearance; world position gives its current scene-coordinate state; normal supplies local shape. Depth plus calibrated rays can recover 3D in principle, but depth is a camera-dependent chart in which camera and object motion are mixed. On the 68-case DAR-4D benchmark, LoRA DAR reaches PSNR 23.22, SSIM 0.895, and LPIPS 0.134, improving over off-the-shelf Wan2.2-Depth by 1.54 dB PSNR; a full fine-tune reaches PSNR 25.36 and SSIM 0.917. Matched ablations show that replacing world position by depth reduces PSNR by 1.26--1.55 dB at every checkpoint, supporting tracking+world-position correspondence as a practical 4D rendering condition.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

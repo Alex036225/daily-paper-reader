@@ -1,0 +1,62 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-05T21:48:32.496813+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2608.00094v2",
+      "source": "arxiv",
+      "title": "Video Models as Native 4D Renderers: World-Grounded Conditioning from Animated Mesh",
+      "abstract": "Pretrained video diffusion models can act as renderers when the desired scene state is already specified by an animated mesh, a camera trajectory, and a reference image. This 4D generative rendering setting raises a representation question: what image-format condition lets a video backbone obey both camera motion and scene-internal animation? We propose DAR, a reference-guided renderer that extends Wan2.2 camera control from Plücker rays alone to a joint camera-plus-geometry interface. DAR projects a neural 4D G-buffer (tracking, world position, and normal) from the animated mesh and injects it through a widened control adapter while preserving the pretrained image-to-video prior. The central design choice is the pair of tracking and world position. Tracking identifies the persistent surface element that should carry appearance; world position gives its current scene-coordinate state; normal supplies local shape. Depth plus calibrated rays can recover 3D in principle, but depth is a camera-dependent chart in which camera and object motion are mixed. On the 68-case DAR-4D benchmark, LoRA DAR reaches PSNR 23.22, SSIM 0.895, and LPIPS 0.134, improving over off-the-shelf Wan2.2-Depth by 1.54 dB PSNR; a full fine-tune reaches PSNR 25.36 and SSIM 0.917. Matched ablations show that replacing world position by depth reduces PSNR by 1.26--1.55 dB at every checkpoint, supporting tracking+world-position correspondence as a practical 4D rendering condition.",
+      "authors": [
+        "Junhao Chen",
+        "Mingjin Chen",
+        "Henghaofan Zhang",
+        "Minglin Chen",
+        "Liaoyuan Fan",
+        "Boran Zhang",
+        "Saining Zhang",
+        "Mingze Sun",
+        "Hao Zhao",
+        "Ruqi Huang",
+        "Zhihao Li",
+        "Yufei Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-30T16:55:28+00:00",
+      "link": "https://arxiv.org/pdf/2608.00094v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Extends Wan2.2 for image-to-video generation conditioned on a reference image.",
+      "llm_evidence_cn": "扩展 Wan2.2 实现基于参考图像的图像到视频生成。",
+      "llm_evidence": "扩展 Wan2.2 实现基于参考图像的图像到视频生成。",
+      "canonical_evidence": "扩展 Wan2.2 实现基于参考图像的图像到视频生成。",
+      "llm_tldr_en": "DAR extends the Wan2.2 model for reference-guided 4D rendering from an animated mesh and a reference image, enabling image-conditioned video generation with camera and geometry control.",
+      "llm_tldr_cn": "DAR 基于 Wan2.2 扩展，通过参考图像和动画网格实现参考引导的4D渲染，支持相机和几何控制下的图像条件视频生成，直接服务于 I2V 任务。",
+      "llm_tldr": "DAR 基于 Wan2.2 扩展，通过参考图像和动画网格实现参考引导的4D渲染，支持相机和几何控制下的图像条件视频生成，直接服务于 I2V 任务。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}

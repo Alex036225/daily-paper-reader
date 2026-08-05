@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-05 <!--dpr-date:20260805-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/05/2608.00094v2-video-models-as-native-4d-renderers-world-grounded-conditioning-from-animated-mesh" data-sidebar-item="{&quot;title&quot;: &quot;Video Models as Native 4D Renderers: World-Grounded Conditioning from Animated Mesh&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.00094v2-video-models-as-native-4d-renderers-world-grounded-conditioning-from-animated-mesh&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;扩展 Wan2.2 实现基于参考图像的图像到视频生成。&quot;}">Video Models as Native 4D Renderers: World-Grounded Conditioning from Animated Mesh</a>
   * 2026-08-04 <!--dpr-date:20260804-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/04/2607.26037v1-wonder-video-world-model-done-better" data-sidebar-item="{&quot;title&quot;: &quot;Wonder: Video World Model Done Better&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.26037v1-wonder-video-world-model-done-better&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;从单张图像生成可控视频&quot;}">Wonder: Video World Model Done Better</a>
