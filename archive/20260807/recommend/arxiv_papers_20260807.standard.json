@@ -1,0 +1,94 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-07T02:13:08.771337+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2608.03335v1",
+      "source": "arxiv",
+      "title": "SPADE: An Input-Adaptive Sparse Attention Engine for Fast Video Diffusion Models Inference",
+      "abstract": "Video diffusion transformers (vDiTs) generate high quality but pay quadratic self-attention cost, making inference prohibitive at video-token scales. The challenge is input-adaptive sparsity: selecting critical Q/K/V tokens with negligible overhead and executing them for end-to-end gains. We present SPADE, a training-free sparse-attention engine of three parts: (i) vDiT-SSR, a specification defining 3D blocking candidates and formalizing dynamic masks via Summarizer/Estimator expressions; (ii) runtime scheme generation using SICS and a head-wise policy; and (iii) an executor with low-overhead index search, flash block-sparse attention, and kernel grouping. Across Hunyuan-Video and Wan 2.1/2.2 for text-to-video and image-to-video generation, SPADE raises sparsity and speed while preserving quality, accelerating attention by 2.26x-3.40x and end-to-end inference by 1.49x-1.80x. Our code is open-sourced at https://github.com/6somehow/DAC-SPADE.",
+      "authors": [
+        "Shanghao Liu",
+        "Renze Chen",
+        "Size Zheng",
+        "Yuanqiang Liu",
+        "Yun",
+        "Liang",
+        "Hailong Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-04T08:47:57+00:00",
+      "link": "https://arxiv.org/pdf/2608.03335v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "sparse attention for Wan 2.1/2.2 video generation",
+      "llm_evidence_cn": "针对 Wan 2.1/2.2 视频生成的稀疏注意力加速",
+      "llm_evidence": "针对 Wan 2.1/2.2 视频生成的稀疏注意力加速",
+      "canonical_evidence": "针对 Wan 2.1/2.2 视频生成的稀疏注意力加速",
+      "llm_tldr_en": "SPADE is a training-free sparse attention engine that accelerates video diffusion transformers, tested on Wan 2.1/2.2 for text-to-video and image-to-video, enabling efficient lip-sync video generation.",
+      "llm_tldr_cn": "视频扩散变压器因二次自注意力成本导致推理缓慢。本文提出 SPADE，一个免训练的稀疏注意力引擎，包含专用稀疏规范、动态掩码生成和高效执行器。在 Hunyuan-Video 和 Wan 2.1/2.2 的文生视频和图生视频任务上验证，大幅降低计算开销，为在 Wan 模型上快速生成唇形同步视频提供可能。",
+      "llm_tldr": "视频扩散变压器因二次自注意力成本导致推理缓慢。本文提出 SPADE，一个免训练的稀疏注意力引擎，包含专用稀疏规范、动态掩码生成和高效执行器。在 Hunyuan-Video 和 Wan 2.1/2.2 的文生视频和图生视频任务上验证，大幅降低计算开销，为在 Wan 模型上快速生成唇形同步视频提供可能。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.04709v1",
+      "source": "arxiv",
+      "title": "EmpaAva: An Open-source Agentic 3D-Avatar Empathetic Live Chatbot",
+      "abstract": "This paper presents EmpaAva, to our knowledge the first open-source, agentic 3D-avatar empathetic chatbot, which carries empathetic response generation (ERG) from text-only exchanges into live, face-to-face interaction. Through a video-call-like interface, a user speaks to a 3D digital human that reads their affect from speech and optional vision, and replies with emotional speech, lip-synced facial motion, and photorealistic 3D Gaussian rendering. At its core, an LLM coordinates a Tri-Agent Architecture, in which perception, empathetic response planning, and embodied rendering form a closed loop, paired with a Response Planning layer that compiles each reply into an executable multimodal plan, keeping voice, expression, and rendering on one empathetic intent. Building on strong open-source modules, EmpaAva supplies the intelligence that binds them into one controllable, inspectable experience. In automatic and human evaluations, EmpaAva surpasses text-only, 2D talking-face, and multimodal avatar baselines in emotion understanding, response quality, and audio-visual consistency. We open-source EmpaAva with an online live demo.",
+      "authors": [
+        "Jie Yang",
+        "Wenhao Xu",
+        "Shuhui Lin",
+        "Hao Fei"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-08-05T11:23:40+00:00",
+      "link": "https://arxiv.org/pdf/2608.04709v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "lip-synced facial motion and photorealistic 3D Gaussian rendering",
+      "llm_evidence_cn": "唇同步面部运动和照片级3D高斯渲染",
+      "llm_evidence": "唇同步面部运动和照片级3D高斯渲染",
+      "canonical_evidence": "唇同步面部运动和照片级3D高斯渲染",
+      "llm_tldr_en": "EmpaAva is an open-source agentic 3D-avatar chatbot that produces empathetic responses with emotional speech and lip-synced facial animation, enabling live face-to-face interaction.",
+      "llm_tldr_cn": "针对共情对话仅限文本的问题，提出首个开源的自主3D虚拟人共情实时聊天机器人。通过三代理架构和大语言模型协调感知、规划与渲染，生成情感语音和唇同步的面部动画，实现逼真的面对面交互，为多模态人机交互提供实时数字人方案。",
+      "llm_tldr": "针对共情对话仅限文本的问题，提出首个开源的自主3D虚拟人共情实时聊天机器人。通过三代理架构和大语言模型协调感知、规划与渲染，生成情感语音和唇同步的面部动画，实现逼真的面对面交互，为多模态人机交互提供实时数字人方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}

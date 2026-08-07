@@ -6,23 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-05
-- 运行时间：2026-08-05 21:51:36 UTC
+- 最新运行日期：2026-08-07
+- 运行时间：2026-08-07 02:17:39 UTC
 - 运行状态：成功
-- 本次总论文数：1
-- 精读区：1
+- 本次总论文数：2
+- 精读区：2
 - 速读区：0
 
 ### 今日简报（AI）
-1) 今日精读一篇重磅论文，探索如何让视频模型像原生 4D 渲染器那样，直接从动画网格生成世界锚定的连贯视频。  
-2) 核心结论是：将传统动画网格与视频扩散模型结合，能实现真正物理扎实的 4D 场景生成，大幅超越现有视角合成方法。  
-3) 如果你对可交互的虚拟世界或数字孪生感兴趣，建议跟踪这个方向，它可能打通“建模即渲染”的新范式。
-- 详情：[/202608/05/README](/202608/05/README)
+今日深入分析了视频生成加速利器SPADE和3D虚拟人共情聊天机器人EmpaAva。
+视频扩散模型推理效率因稀疏注意力引擎SPADE大幅提升，而EmpaAva则开辟了有亲和力的3D数字人实时共情对话的新路径。
+若您关注生成效率，请细读SPADE的输入自适应设计；若对人机交互感兴趣，不妨体验EmpaAva的开源实现。
+- 详情：[/202608/07/README](/202608/07/README)
 
 ### 精读区论文标签
-1. [Video Models as Native 4D Renderers: World-Grounded Conditioning from Animated Mesh](/202608/05/2608.00094v2-video-models-as-native-4d-renderers-world-grounded-conditioning-from-animated-mesh)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：扩展 Wan2.2 实现基于参考图像的图像到视频生成。
+1. [SPADE: An Input-Adaptive Sparse Attention Engine for Fast Video Diffusion Models Inference](/202608/07/2608.03335v1-spade-an-input-adaptive-sparse-attention-engine-for-fast-video-diffusion-models-inference)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：针对 Wan 2.1/2.2 视频生成的稀疏注意力加速
+2. [EmpaAva: An Open-source Agentic 3D-Avatar Empathetic Live Chatbot](/202608/07/2608.04709v1-empaava-an-open-source-agentic-3d-avatar-empathetic-live-chatbot)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：唇同步面部运动和照片级3D高斯渲染
 
 ### 速读区论文标签
 - 本次无速读推荐。
