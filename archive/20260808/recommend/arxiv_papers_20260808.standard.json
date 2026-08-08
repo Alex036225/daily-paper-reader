@@ -1,0 +1,202 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-08T20:49:11.575146+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2608.06009v1",
+      "source": "arxiv",
+      "title": "Wan-Animate-2: Pushing the Application Boundaries of Character Animation",
+      "abstract": "Character image animation remains a foundational yet challenging task in computer vision. Existing approaches can be broadly categorized into three paradigms: methods based on explicit motion representations suffer from extraction errors and identity drift; methods based on implicit motion features lose fine-grained dynamics through compression; and in-context learning approaches avoid intermediate representations but incur prohibitive computational costs. Furthermore, all current systems are designed for offline synthesis, unable to meet the real-time requirements of interactive applications such as digital avatars and live-streaming hosts. To address these limitations, we present Wan-Animate-2, an end-to-end character animation framework that directly consumes the driving video within a redesigned Diffusion Transformer. Our architecture achieves superior motion fidelity and identity preservation by eliminating intermediate motion extractors entirely. We further introduce text driven viewpoint control that decouples the output camera perspective from the driving video--a capability rarely supported by prior character animation methods that rely on explicit motion representations. Beyond generation quality, we present Wan-Animate-2-Lite, an efficient variant that reduces inference latency to real-time thresholds through a three-stage training paradigm: teacher forcing pretraining with error buffer mechanism, and Self-Forcing distillation with chunk-wise backpropagation. This enables streaming character animation for interactive applications, opening new deployment scenarios that were previously infeasible. Qualitative evaluations and user studies demonstrate that Wan-Animate-2 achieves high-fidelity animation results across diverse characters and motion patterns. To foster further research and community development, we will release the Wan-Animate-2-Base model weights to the public.",
+      "authors": [
+        "Guangyuan Wang",
+        "Li Hu",
+        "Dechao Meng",
+        "Zhongyi Zhang",
+        "Peng Zhang",
+        "Mingyang Huang",
+        "Ruoshi Zhang",
+        "Ke Sun",
+        "Zhe Zhang",
+        "Xingjun Wang",
+        "Gang Cheng",
+        "Bang Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-06T13:13:10+00:00",
+      "link": "https://arxiv.org/pdf/2608.06009v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Wan-Animate-2 is an end-to-end character animation framework using the WAN model for video generation from images.",
+      "llm_evidence_cn": "Wan-Animate-2是采用WAN模型的端到端角色动画框架，从图像生成视频。",
+      "llm_evidence": "Wan-Animate-2是采用WAN模型的端到端角色动画框架，从图像生成视频。",
+      "canonical_evidence": "Wan-Animate-2是采用WAN模型的端到端角色动画框架，从图像生成视频。",
+      "llm_tldr_en": "Wan-Animate-2 is an end-to-end character animation framework using WAN to overcome limitations of explicit motion, implicit features, and offline synthesis.",
+      "llm_tldr_cn": "Wan-Animate-2提出端到端角色动画框架，利用WAN模型克服现有方法在运动提取、细节丢失和实时性方面的局限，实现了高质量的图像到视频角色动画。",
+      "llm_tldr": "Wan-Animate-2提出端到端角色动画框架，利用WAN模型克服现有方法在运动提取、细节丢失和实时性方面的局限，实现了高质量的图像到视频角色动画。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.05218v1",
+      "source": "arxiv",
+      "title": "PD-GS: Phoneme-Driven 3DGS for Audio-Driven Talking Heads",
+      "abstract": "3D Gaussian Splatting (3DGS) enables fast, photorealistic talking-head rendering, yet accurate lip articulation remains elusive: mouth motion is often over-smoothed and may violate hard articulatory constraints such as bilabial closures, producing the notorious ``leaky mouth'' artifact. A key difficulty is that brief, discrete articulatory events are inferred from a continuous acoustic embedding under a regression objective, which biases predictions toward averaged mouth configurations. While modern self-supervised speech encoders provide rich prosodic and phonetic cues, they do not provide an explicit, frame-aligned linguistic target that reliably disambiguates closure-level events. We propose \\textbf{Phoneme-Driven Gaussian Splatting (PD-GS)}, which augments a 3DGS talker with time-aligned phoneme tokens obtained from an automatic ASR and forced-alignment pipeline. Our core component, the \\textbf{Linguistic Fusion Module (LFM)}, adaptively fuses continuous audio context with discrete phoneme embeddings through a learned gate, allowing the model to preserve smooth audio-driven dynamics while strengthening phoneme guidance on articulation-critical segments. PD-GS is trained purely from monocular video using image reconstruction and lip landmark supervision. On HDTF, PD-GS achieves the best lip geometry among the compared baselines (LMD 2.66) and qualitatively reduces closure violations in challenging phoneme sequences, yielding more linguistically faithful neural avatars.",
+      "authors": [
+        "Ao Fu",
+        "Yi Zhou"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.SD"
+      ],
+      "published": "2026-08-05T10:31:42+00:00",
+      "link": "https://arxiv.org/pdf/2608.05218v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Phoneme-driven talking head generation that enforces hard articulatory constraints to avoid leaky mouth and improve lip synchronization.",
+      "llm_evidence_cn": "音素驱动的说话人头像生成，施加硬性发音约束以避免漏嘴，改进唇同步。",
+      "llm_evidence": "音素驱动的说话人头像生成，施加硬性发音约束以避免漏嘴，改进唇同步。",
+      "canonical_evidence": "音素驱动的说话人头像生成，施加硬性发音约束以避免漏嘴，改进唇同步。",
+      "llm_tldr_en": "To overcome over-smoothed mouth motion and leaky mouth artifacts in audio-driven talking heads, PD-GS uses phoneme-driven 3D Gaussian Splatting with explicit articulatory constraints, achieving precise lip articulation and bilabial closures.",
+      "llm_tldr_cn": "针对音频驱动说话人头像中唇部运动过度平滑和漏嘴瑕疵的问题，本文提出音素驱动的高斯泼溅方法（PD-GS），通过显式引入音素序列和硬性发音约束，实现了精确的唇部发音和双唇闭合，生成更加自然准确的说话视频。",
+      "llm_tldr": "针对音频驱动说话人头像中唇部运动过度平滑和漏嘴瑕疵的问题，本文提出音素驱动的高斯泼溅方法（PD-GS），通过显式引入音素序列和硬性发音约束，实现了精确的唇部发音和双唇闭合，生成更加自然准确的说话视频。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.05663v1",
+      "source": "arxiv",
+      "title": "Vorch-Streamer: Extending Human Audio-Visual Generation to Real-Time Long-Form Streaming",
+      "abstract": "Real-time long-form avatar audio--video generation requires causal, continuous synthesis while maintaining audiovisual synchronization and visual consistency. Adapting a pretrained bidirectional model to this setting presents two key dilemmas. First, autoregressively reusing generated blocks as context creates exposure bias, causing errors and visual drift to accumulate over long rollouts. Second, a global speech utterance does not indicates a causal generator which portion should be spoken next when only limited local audio--video context is available. We present \\textbf{Vorch-Streamer}, a post-training framework that addresses these challenges and enables real-time long-form Text-to-Audio-Video (T2AV) streaming. We construct a synthetic corpus of 80K avatar clips spanning 12--21 seconds and first train a causal generator with mixed Teacher Forcing and Diffusion Forcing. We then apply long-horizon Self Forcing with DMD distillation, exposing the model to its own rollout distribution while preserving the quality of the pretrained bidirectional teacher. To explicitly control speech progression, an external language model predicts discrete 25-Hz speech-planning tokens, whose continuous features condition the audio diffusion branch and align each causal block with the content it should speak. With bounded causal context and four-step denoising, Vorch-Streamer jointly generates audio and video from text at 27.12 FPS, exceeding the 24-FPS real-time playback rate while maintaining competitive audio--lip synchronization and strong identity preservation over long-form generation.",
+      "authors": [
+        "Menglin Han",
+        "Yang Ding",
+        "Yulei Lu",
+        "Haoran Yu",
+        "Xin Ma",
+        "Junyi Chen",
+        "Zhangkai Ni",
+        "Lin Ma",
+        "Yaohui Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "published": "2026-08-06T07:00:37+00:00",
+      "link": "https://arxiv.org/pdf/2608.05663v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Real-time long-form avatar audio-video generation with audiovisual synchronization",
+      "llm_evidence_cn": "实时长形式虚拟人音视频生成，保持视听同步",
+      "llm_evidence": "实时长形式虚拟人音视频生成，保持视听同步",
+      "canonical_evidence": "实时长形式虚拟人音视频生成，保持视听同步",
+      "llm_tldr_en": "Vorch-Streamer is a post-training framework that enables real-time long-form Text-to-Audio-Video streaming by addressing exposure bias and local-global context mismatch in causal generation from pretrained bidirectional models, ensuring audiovisual synchronization.",
+      "llm_tldr_cn": "现有预训练双向模型无法直接用于实时长形式虚拟人音视频生成，存在自回归曝露偏差和局部上下文与全局语音匹配问题。Vorch-Streamer提出后训练框架，通过构建合成纠错数据和局部音频-视频提示，实现实时文本到音视频流式生成，有效保持视听同步和视觉一致性。实验表明该方法能减少错误累积，支持长时间连续生成，为实时虚拟人交互提供了新范式。",
+      "llm_tldr": "现有预训练双向模型无法直接用于实时长形式虚拟人音视频生成，存在自回归曝露偏差和局部上下文与全局语音匹配问题。Vorch-Streamer提出后训练框架，通过构建合成纠错数据和局部音频-视频提示，实现实时文本到音视频流式生成，有效保持视听同步和视觉一致性。实验表明该方法能减少错误累积，支持长时间连续生成，为实时虚拟人交互提供了新范式。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.05803v1",
+      "source": "arxiv",
+      "title": "Vorch-Omni: Multi-Task Orchestration of Sight and Sound",
+      "abstract": "Recent advances in generative video modeling have enabled diverse generation, reference-based synthesis, extension, and editing, but existing approaches often rely on fragmented task-specific models. A general model must distinguish heterogeneous target, source, and reference signals to determine what to generate, preserve, or use as guidance, while reducing interference among tasks. Joint audio-visual generation further increases this challenge by introducing diverse conditioning and output configurations across modalities. We present Vorch-Omni, a unified multi-task framework for audio-visual synthesis based on an arbitrary-condition-to-arbitrary-output formulation. It flexibly treats video and audio signals as either conditioning inputs or generation targets. Token-level conditioning masks and task identifiers distinguish targets, source content, and references, while position types separate temporal context from independent conditions. To capture semantic and structural information, Vorch-Omni employs complementary visual conditioning pathways: a vision-language model interprets sampled frames with text instructions, and a video VAE encodes conditions into latent tokens for direct guidance. We further build a distributed data pipeline to curate diverse temporally aligned audio-visual clips, generate structured captions and metadata, and balance heterogeneous task distributions. Built on a single flow-matching diffusion transformer without task-specific architectural changes, Vorch-Omni supports over 10 tasks, including text-to-video, text-to-audio-video, image- and reference-conditioned generation, temporal extension, audio-driven generation, video transformation, and audio-visual editing. This unified framework provides a scalable foundation for general-purpose audio-visual generation and manipulation.",
+      "authors": [
+        "Vorch Team",
+        "Xiaoyu Chen",
+        "Yang Ding",
+        "Cong Han",
+        "Menglin Han",
+        "Yuxin Hong",
+        "Jiebo Hou",
+        "Zequn Jie",
+        "Xiang Li",
+        "Jing Liu",
+        "Qi Liu",
+        "Yulei Lu",
+        "Siyuan Luo",
+        "Lin Ma",
+        "Xin Ma",
+        "Yinlong Qian",
+        "Peng Shi",
+        "Fang Wan",
+        "Siqi Wang",
+        "Yaohui Wang",
+        "Yaole Wang",
+        "Yidi Wu",
+        "Siqian Yang",
+        "Mingyu Yin",
+        "Haoran Yu",
+        "Gang Yue",
+        "Lisai Zhang",
+        "Yuting Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-06T09:38:30+00:00",
+      "link": "https://arxiv.org/pdf/2608.05803v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "unified audio-visual synthesis framework generating video with sound",
+      "llm_evidence_cn": "统一视听生成框架，生成带声音的视频",
+      "llm_evidence": "统一视听生成框架，生成带声音的视频",
+      "canonical_evidence": "统一视听生成框架，生成带声音的视频",
+      "llm_tldr_en": "Vorch-Omni presents a unified multi-task framework for audio-visual synthesis based on arbitrary-condition-to-arbitrary-output. It treats video and audio as either condition or target, enabling joint generation of coherent multimodal content. Experiments demonstrate effective audio-visual generation across various tasks, offering a general solution for video with multiple modalities.",
+      "llm_tldr_cn": "当前多模态生成方法通常针对特定任务设计，缺乏通用性，尤其在视听联合生成中处理异质条件极具挑战。Vorch-Omni构建了基于任意条件到任意输出范式的统一多任务框架，通过灵活设定视频和音频信号作为条件或生成目标，并采用扩散模型实现音视频同步合成。实验表明该框架在多项任务上能生成连贯的视听内容，为通用的多模态视频生成提供了有效方案。",
+      "llm_tldr": "当前多模态生成方法通常针对特定任务设计，缺乏通用性，尤其在视听联合生成中处理异质条件极具挑战。Vorch-Omni构建了基于任意条件到任意输出范式的统一多任务框架，通过灵活设定视频和音频信号作为条件或生成目标，并采用扩散模型实现音视频同步合成。实验表明该框架在多项任务上能生成连贯的视听内容，为通用的多模态视频生成提供了有效方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
