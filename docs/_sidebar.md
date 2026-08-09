@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-09 <!--dpr-date:20260809-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/09/2608.05776v1-vorch-director-interactive-world-story-model-via-noise-aware-error-rectification" data-sidebar-item="{&quot;title&quot;: &quot;Vorch-Director: Interactive World Story Model via Noise-Aware Error Rectification&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.05776v1-vorch-director-interactive-world-story-model-via-noise-aware-error-rectification&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;噪声感知残差修正缓解长视频生成中的视听不同步&quot;}">Vorch-Director: Interactive World Story Model via Noise-Aware Error Rectification</a>
   * 2026-08-08 <!--dpr-date:20260808-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/08/2608.06009v1-wan-animate-2-pushing-the-application-boundaries-of-character-animation" data-sidebar-item="{&quot;title&quot;: &quot;Wan-Animate-2: Pushing the Application Boundaries of Character Animation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.06009v1-wan-animate-2-pushing-the-application-boundaries-of-character-animation&quot;, &quot;score&quot;: &quot;10.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;Wan-Animate-2是采用WAN模型的端到端角色动画框架，从图像生成视频。&quot;}">Wan-Animate-2: Pushing the Application Boundaries of Character Animation</a>

@@ -6,35 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-08
-- 运行时间：2026-08-08 20:52:19 UTC
+- 最新运行日期：2026-08-09
+- 运行时间：2026-08-09 20:43:28 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：4
-- 速读区：0
+- 本次总论文数：1
+- 精读区：0
+- 速读区：1
 
 ### 今日简报（AI）
-今日精研两篇顶会论文，聚焦于角色动画与音频驱动数字人的前沿突破。  
-Wan-Animate-2 将角色动画应用边界大幅前推，而 PD-GS 则用音素精准驱动 3D 高斯模型，实现了更低延迟的说话头像生成。  
-建议重点关注生成式动画与实时交互的融合趋势，这两项技术组合或将重塑虚拟人产业。
-- 详情：[/202608/08/README](/202608/08/README)
+今天速读了一篇关于交互式世界故事生成的工作，提出用噪声感知错误纠正来提升故事连贯性。  
+核心方案是通过识别并修正生成过程中的错误信号，让模型在用户交互下保持长篇故事的逻辑一致性。  
+如果你对 AI 叙事感兴趣，可以留意这类噪声建模思路如何让聊天机器人讲出更流畅的长故事。
+- 详情：[/202608/09/README](/202608/09/README)
 
 ### 精读区论文标签
-1. [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](/202608/08/2608.06009v1-wan-animate-2-pushing-the-application-boundaries-of-character-animation)  
-   标签：评分：10.0/10、query:wan-av-gen
-   evidence：Wan-Animate-2是采用WAN模型的端到端角色动画框架，从图像生成视频。
-2. [PD-GS: Phoneme-Driven 3DGS for Audio-Driven Talking Heads](/202608/08/2608.05218v1-pd-gs-phoneme-driven-3dgs-for-audio-driven-talking-heads)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：音素驱动的说话人头像生成，施加硬性发音约束以避免漏嘴，改进唇同步。
-3. [Vorch-Streamer: Extending Human Audio-Visual Generation to Real-Time Long-Form Streaming](/202608/08/2608.05663v1-vorch-streamer-extending-human-audio-visual-generation-to-real-time-long-form-streaming)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：实时长形式虚拟人音视频生成，保持视听同步
-4. [Vorch-Omni: Multi-Task Orchestration of Sight and Sound](/202608/08/2608.05803v1-vorch-omni-multi-task-orchestration-of-sight-and-sound)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：统一视听生成框架，生成带声音的视频
+- 本次无精读推荐。
 
 ### 速读区论文标签
-- 本次无速读推荐。
+1. [Vorch-Director: Interactive World Story Model via Noise-Aware Error Rectification](/202608/09/2608.05776v1-vorch-director-interactive-world-story-model-via-noise-aware-error-rectification)  
+   标签：评分：7.0/10、query:wan-av-gen
+   evidence：噪声感知残差修正缓解长视频生成中的视听不同步
 
 
 <div class="dpr-home-promo-card">

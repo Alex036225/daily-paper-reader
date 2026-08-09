@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-09",
+  "date": "2026-08-09",
+  "generated_at": "2026-08-09T20:43:39",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/09/2608.05776v1-vorch-director-interactive-world-story-model-via-noise-aware-error-rectification",
+      "section": "quick",
+      "title_en": "Vorch-Director: Interactive World Story Model via Noise-Aware Error Rectification",
+      "authors": "Lisai Zhang, Yidi Wu, Qi Liu, Xin Ma, Yang Ding, Gang Yue, Siqian Yang, Jingyuan Chen, Lin Ma, Yaohui Wang",
+      "date": "2026-08-06",
+      "pdf": "https://arxiv.org/pdf/2608.05776v1",
+      "score": "7.0",
+      "evidence": "噪声感知残差修正缓解长视频生成中的视听不同步",
+      "tldr": "自回归生成音视频长视频时，历史误差累积导致身份漂移、过度平滑和音画不同步。Vorch-Director提出噪声感知残差校正，在训练时根据噪声水平注入匹配残差，纠正教师强制与推理的不匹配。基于LTX-2扩散变压器，结合任务嵌入和混合训练，支持多镜头、多主体参考引导长视频生成。实验表明方法显著提升长程一致性和音视频同步，在ST-Bench和新基准上超越强基线。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Autoregressive continuation provides a natural path toward minute-scale audio-visual generation by repeatedly extending a short-window generator conditioned on previously generated video and audio. However, models are trained on clean ground-truth histories, while inference relies on their own generated histories, where accumulated errors cause identity drift, over-smoothing, and audio-visual desynchronization. Recent methods reduce this mismatch by reusing prediction residuals as synthetic corruption, but we observe that the effectiveness of residual correction critically depends on the flow-matching noise level at which residuals are produced. We propose Vorch-Director, a noise-level-aware residual correction strategy that associates each residual with its originating noise level and injects residuals from matched noise regimes during training. By aligning injected errors with the denoising process, Vorch-Director produces more realistic autoregressive histories while retaining efficient teacher-forcing training. Built on the audio-visual LTX-2 diffusion transformer, Vorch-Director further introduces task embeddings to distinguish historical video, reference images, and target video, enabling unified conditioning for long-horizon generation. Together with a clean conditioning sink and mixed-task training, Vorch-Director supports multi-shot, multi-subject, reference-guided audio-visual long-video generation. We evaluate Vorch-Director on ST-Bench and introduce a new long-horizon audio-visual benchmark with metrics for quality drift and long-range consistency. Extensive experiments demonstrate improved stability and audio-visual fidelity over strong baselines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
