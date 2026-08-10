@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-10",
+  "date": "2026-08-10",
+  "generated_at": "2026-08-10T20:35:35",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/10/2608.05663v2-vorch-streamer-extending-human-audio-visual-generation-to-real-time-long-form-streaming",
+      "section": "deep",
+      "title_en": "Vorch-Streamer: Extending Human Audio-Visual Generation to Real-Time Long-Form Streaming",
+      "authors": "Menglin Han, Yang Ding, Yulei Lu, Haoran Yu, Xin Ma, Junyi Chen, Zhangkai Ni, Lin Ma, Yaohui Wang",
+      "date": "2026-08-06",
+      "pdf": "https://arxiv.org/pdf/2608.05663v2",
+      "score": "8.0",
+      "evidence": "化身音视频生成，保持音画同步和口型准确",
+      "tldr": "实时长时人像音频-视频生成要求因果连续合成并维持视听同步，但将预训练双向模型适配至此场景会因自回归复用产生暴露偏差，导致视频漂移累积，且全局语音无法指示局部生成时序。针对此，Vorch-Streamer借助合成80K长片段训练因果生成器，混合教师强制与扩散强制，并通过长时域自我强制与分布匹配蒸馏消除误差；同时用外部语言模型预测25Hz离散语音规划令牌，其连续特征条件化音频扩散分支，精准控制说话进度。仅四步去噪即可联合输出音视频，速率达27.12 FPS，超越实时播放，并保持唇音同步与身份保真。该框架首次实现高效长文本到音视频流式生成，为数字人实时交互奠定基础。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Real-time long-form avatar audio-video generation requires causal, continuous synthesis while maintaining audiovisual synchronization and visual consistency. Adapting a pretrained bidirectional model to this setting presents two key dilemmas. First, autoregressively reusing generated blocks as context creates exposure bias, causing errors and visual drift to accumulate over long rollouts. Second, a global speech utterance does not indicates a causal generator which portion should be spoken next when only limited local audio-video context is available. We present Vorch-Streamer, a post-training framework that addresses these challenges and enables real-time long-form Text-to-Audio-Video (T2AV) streaming. We construct a synthetic corpus of 80K avatar clips spanning 12-21 seconds and first train a causal generator with mixed Teacher Forcing and Diffusion Forcing. We then apply long-horizon Self Forcing with DMD distillation, exposing the model to its own rollout distribution while preserving the quality of the pretrained bidirectional teacher. To explicitly control speech progression, an external language model predicts discrete 25-Hz speech-planning tokens, whose continuous features condition the audio diffusion branch and align each causal block with the content it should speak. With bounded causal context and four-step denoising, Vorch-Streamer jointly generates audio and video from text at 27.12 FPS, exceeding the 24-FPS real-time playback rate while maintaining competitive audio-lip synchronization and strong identity preservation over long-form generation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/10/2608.06408v1-subtletalk-generating-controllable-weakly-correlated-facial-dynamics-for-3d-talking-heads-via-residual-flow-matching",
+      "section": "deep",
+      "title_en": "SubtleTalk: Generating Controllable Weakly-correlated Facial Dynamics for 3D Talking Heads via Residual Flow Matching",
+      "authors": "Chenyang Ding, Shuai Tan, Qunfen Lin, Xinwei Jiang, Zijiao Zeng, Ye Pan",
+      "date": "2026-08-03",
+      "pdf": "https://arxiv.org/pdf/2608.06408v1",
+      "score": "8.0",
+      "evidence": "音频驱动的3D说话人头生成，包含口型同步和面部动态",
+      "tldr": "音频驱动的3D面部动画中，弱相关动态（如眉毛、眨眼、头部运动）仍难以真实建模。本文提出SubtleTalk框架，通过多条件建模与残差流匹配，显式控制弱相关动态的时序、幅度和情感变化。在构建的大规模数据集SubtleTalk-Face上实验表明，该方法显著提升了弱相关动态的真实感与多样性，同时保持精确的唇部同步。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Audio-driven 3D facial animation aims to synthesize realistic and temporally coherent motions from speech. Despite notable progress in lip synchronization, weakly correlated dynamics, including eyebrow movements, eye blinks, and head motion, which are essential to photorealistic facial animation, remain difficult to model faithfully and often appear static or unnaturally repetitive. We attribute this limitation to three factors: (a) insufficient conditioning for weakly correlated dynamics; (b) the limited ability of deterministic regression to capture diverse motion patterns; (c) data bottlenecks from unreliable upper-face pseudo-labels and limited dataset diversity. To address these issues, we propose SubtleTalk, a framework for generating natural and controllable weakly correlated facial dynamics via multi-condition modeling and residual flow matching. First, to compensate for the limited guidance of speech alone, we introduce interpretable controls, including prosody, regional intensity, and Valence-Arousal signals, to explicitly capture the timing, magnitude, and affective variation of weakly correlated dynamics. Second, to overcome the limited expressiveness of deterministic regression, we build residual flow matching based on a stable speech-driven motion prior, allowing the model to capture stochastic deviations beyond deterministic prediction. Third, to alleviate the data bottleneck, we construct SubtleTalk-Face, a large-scale 3D facial animation dataset comprising about 3,900 identities and 74 hours of data, built via a simple and scalable pseudo-labeling pipeline and featuring improved upper-face tracking and frame-level VA annotations. Extensive experiments demonstrate that our method significantly improves the realism and diversity of weakly correlated facial dynamics while preserving accurate lip synchronization.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
