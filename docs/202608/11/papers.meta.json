@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-11",
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T21:30:34",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/11/2608.06009v2-wan-animate-2-pushing-the-application-boundaries-of-character-animation",
+      "section": "deep",
+      "title_en": "Wan-Animate-2: Pushing the Application Boundaries of Character Animation",
+      "authors": "Guangyuan Wang, Li Hu, Dechao Meng, Zhongyi Zhang, Peng Zhang, Xindi Zhang, Mingyang Huang, Ruoshi Zhang, Ke Sun, Zhe Zhang, Xingjun Wang, Gang Cheng, Hai Xu, Bang Zhang",
+      "date": "2026-08-06",
+      "pdf": "https://arxiv.org/pdf/2608.06009v2",
+      "score": "8.0",
+      "evidence": "Wan-Animate-2从单张图像生成角色动画，直接对应WAN模型的说话头视频生成与唇形同步",
+      "tldr": "现有角色动画方法分为显式运动表示、隐式特征和上下文学习，分别面临提取错误、细节丢失和高计算成本，且均只支持离线合成。Wan-Animate-2创新性地提出端到端扩散Transformer框架，直接驱动视频输入，摒弃中间运动提取器，实现高保真动作与身份保持，并引入文本引导视角控制。进一步推出Wan-Animate-2-Lite，通过教师强制预训练与错误缓冲、自强制蒸馏与块反向传播的三阶段训练，将推理延迟压缩至实时阈值，支持流式生成。该工作拓展了角色动画在数字人、直播等领域的应用边界，并将开源基础权重。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Character image animation remains a foundational yet challenging task in computer vision. Existing approaches can be broadly categorized into three paradigms: methods based on explicit motion representations suffer from extraction errors and identity drift; methods based on implicit motion features lose fine-grained dynamics through compression; and in-context learning approaches avoid intermediate representations but incur prohibitive computational costs. Furthermore, all current systems are designed for offline synthesis, unable to meet the real-time requirements of interactive applications such as digital avatars and live-streaming hosts. To address these limitations, we present Wan-Animate-2, an end-to-end character animation framework that directly consumes the driving video within a redesigned Diffusion Transformer. Our architecture achieves superior motion fidelity and identity preservation by eliminating intermediate motion extractors entirely. We further introduce text driven viewpoint control that decouples the output camera perspective from the driving video--a capability rarely supported by prior character animation methods that rely on explicit motion representations. Beyond generation quality, we present Wan-Animate-2-Lite, an efficient variant that reduces inference latency to real-time thresholds through a three-stage training paradigm: teacher forcing pretraining with error buffer mechanism, and Self-Forcing distillation with chunk-wise backpropagation. This enables streaming character animation for interactive applications, opening new deployment scenarios that were previously infeasible. Qualitative evaluations and user studies demonstrate that Wan-Animate-2 achieves high-fidelity animation results across diverse characters and motion patterns. To foster further research and community development, we will release the Wan-Animate-2-Base model weights to the public.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

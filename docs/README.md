@@ -6,26 +6,23 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-10
-- 运行时间：2026-08-10 20:35:22 UTC
+- 最新运行日期：2026-08-11
+- 运行时间：2026-08-11 21:30:22 UTC
 - 运行状态：成功
-- 本次总论文数：2
-- 精读区：2
+- 本次总论文数：1
+- 精读区：1
 - 速读区：0
 
 ### 今日简报（AI）
-今日聚焦音视频合成前沿，精读两篇8分论文，探索实时流式生成与3D面部动态控制。  
-关键突破：Vorch-Streamer 让长音频实时影像合成成为可能，SubtleTalk 用残差流匹配精确操控微表情，二者大幅提升自然度。  
-建议关注数字人直播、游戏NPC等场景，下一步可从流匹配与弱相关动态切入，理解“可控生成”背后的设计思路。
-- 详情：[/202608/10/README](/202608/10/README)
+今日精读了一篇高分动画框架论文，揭秘角色动起来的更多可能。  
+亮点在于 Wan-Animate-2 让多人协同与复杂场景动画更稳定、更可控。  
+想自己玩？不妨用它生成一段角色互动短片，看看背后模型如何处理姿态与场景。
+- 详情：[/202608/11/README](/202608/11/README)
 
 ### 精读区论文标签
-1. [Vorch-Streamer: Extending Human Audio-Visual Generation to Real-Time Long-Form Streaming](/202608/10/2608.05663v2-vorch-streamer-extending-human-audio-visual-generation-to-real-time-long-form-streaming)  
+1. [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](/202608/11/2608.06009v2-wan-animate-2-pushing-the-application-boundaries-of-character-animation)  
    标签：评分：8.0/10、query:wan-av-gen
-   evidence：化身音视频生成，保持音画同步和口型准确
-2. [SubtleTalk: Generating Controllable Weakly-correlated Facial Dynamics for 3D Talking Heads via Residual Flow Matching](/202608/10/2608.06408v1-subtletalk-generating-controllable-weakly-correlated-facial-dynamics-for-3d-talking-heads-via-residual-flow-matching)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：音频驱动的3D说话人头生成，包含口型同步和面部动态
+   evidence：Wan-Animate-2从单张图像生成角色动画，直接对应WAN模型的说话头视频生成与唇形同步
 
 ### 速读区论文标签
 - 本次无速读推荐。

@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-11 <!--dpr-date:20260811-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/11/2608.06009v2-wan-animate-2-pushing-the-application-boundaries-of-character-animation" data-sidebar-item="{&quot;title&quot;: &quot;Wan-Animate-2: Pushing the Application Boundaries of Character Animation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.06009v2-wan-animate-2-pushing-the-application-boundaries-of-character-animation&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;Wan-Animate-2从单张图像生成角色动画，直接对应WAN模型的说话头视频生成与唇形同步&quot;}">Wan-Animate-2: Pushing the Application Boundaries of Character Animation</a>
   * 2026-08-10 <!--dpr-date:20260810-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/10/2608.05663v2-vorch-streamer-extending-human-audio-visual-generation-to-real-time-long-form-streaming" data-sidebar-item="{&quot;title&quot;: &quot;Vorch-Streamer: Extending Human Audio-Visual Generation to Real-Time Long-Form Streaming&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.05663v2-vorch-streamer-extending-human-audio-visual-generation-to-real-time-long-form-streaming&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;化身音视频生成，保持音画同步和口型准确&quot;}">Vorch-Streamer: Extending Human Audio-Visual Generation to Real-Time Long-Form Streaming</a>
