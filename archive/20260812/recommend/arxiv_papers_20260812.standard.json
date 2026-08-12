@@ -1,0 +1,57 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-12T21:17:29.802845+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2608.10720v1",
+      "source": "arxiv",
+      "title": "Ex-Omni-2D: Expressive Omni-Modal Dialogue Models with Native Visual Presence",
+      "abstract": "Omni-modal dialogue models can understand multimodal inputs and synthesize spoken replies, yet their responses remain visually disembodied. We introduce \\textbf{Ex-Omni-2D}, an omni-modal dialogue framework that generates a coordinated response comprising text, personalized speech, and reference-conditioned video. Given a multimodal query, reference image, and reference audio, the model predicts a structured \\textit{Visual Thought Plan} (VTP) describing scene, emotion, and motion, followed by response text and native multi-codebook speech units. These units form a shared acoustic-temporal interface: they are decoded into speech and aligned online with video frames. This interface enables the response and avatar pathways to be learned from heterogeneous speech, dialogue, and avatar-video data, avoiding the need for large-scale query--text--speech--video supervision. A full-sequence Video Generator serves as the primary Teacher. For efficient incremental generation, we further distill it into a few-step block-causal \\emph{Streaming Student} whose Prefix Streaming mechanism carries a clean latent across consecutive chunks to reduce cumulative late-chunk degradation. With four-step inference, the complete four-GPU pipeline achieves an end-to-end RTF of 1.293 at $400\\times720$/$720\\times400$, providing a practical quality--efficiency operating point.",
+      "authors": [
+        "Haoyu Zhang",
+        "Zhipeng Li",
+        "Xiaoying Tang",
+        "Tianshu Yu",
+        "Yiwen Guo"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "published": "2026-08-11T09:37:11+00:00",
+      "link": "https://arxiv.org/pdf/2608.10720v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Image-to-video generation with audio-driven lip motion synthesis via shared acoustic-temporal interface",
+      "llm_evidence_cn": "通过共享声学-时间接口实现音频驱动唇动合成的图像到视频生成",
+      "llm_evidence": "通过共享声学-时间接口实现音频驱动唇动合成的图像到视频生成",
+      "canonical_evidence": "通过共享声学-时间接口实现音频驱动唇动合成的图像到视频生成",
+      "llm_tldr_en": "Omni-modal dialogue framework generating reference-conditioned video with speech units aligned to frames for lip synchronization.",
+      "llm_tldr_cn": "针对全模态对话模型生成回复缺乏视觉呈现的问题，提出Ex-Omni-2D框架，生成文本、个性化语音和参考条件视频。利用视觉思维计划和原生多码本语音单元，形成共享声学-时间接口，将语音解码并与视频帧在线对齐。实验表明该接口能实现自然唇动同步，支持从参考图像生成说话头视频。",
+      "llm_tldr": "针对全模态对话模型生成回复缺乏视觉呈现的问题，提出Ex-Omni-2D框架，生成文本、个性化语音和参考条件视频。利用视觉思维计划和原生多码本语音单元，形成共享声学-时间接口，将语音解码并与视频帧在线对齐。实验表明该接口能实现自然唇动同步，支持从参考图像生成说话头视频。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}

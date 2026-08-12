@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-12",
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T21:21:48",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/12/2608.10720v1-ex-omni-2d-expressive-omni-modal-dialogue-models-with-native-visual-presence",
+      "section": "deep",
+      "title_en": "Ex-Omni-2D: Expressive Omni-Modal Dialogue Models with Native Visual Presence",
+      "authors": "Haoyu Zhang, Zhipeng Li, Xiaoying Tang, Tianshu Yu, Yiwen Guo",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.10720v1",
+      "score": "9.0",
+      "evidence": "通过共享声学-时间接口实现音频驱动唇动合成的图像到视频生成",
+      "tldr": "全模态对话模型虽能理解多模态输入并合成语音回复，但视觉上仍无实体呈现。Ex-Omni-2D 提出视觉思维计划与共享声学-时间接口，联合生成文本、个性化语音和参考条件视频。通过全序列视频生成器蒸馏到四步块因果流式学生，在四 GPU 上实现端到端 RTF 1.293。该框架无需大规模查询-文本-语音-视频配对监督，提供实用质量效率平衡。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Omni-modal dialogue models can understand multimodal inputs and synthesize spoken replies, yet their responses remain visually disembodied. We introduce \\textbf{Ex-Omni-2D}, an omni-modal dialogue framework that generates a coordinated response comprising text, personalized speech, and reference-conditioned video. Given a multimodal query, reference image, and reference audio, the model predicts a structured \\textit{Visual Thought Plan} (VTP) describing scene, emotion, and motion, followed by response text and native multi-codebook speech units. These units form a shared acoustic-temporal interface: they are decoded into speech and aligned online with video frames. This interface enables the response and avatar pathways to be learned from heterogeneous speech, dialogue, and avatar-video data, avoiding the need for large-scale query--text--speech--video supervision. A full-sequence Video Generator serves as the primary Teacher. For efficient incremental generation, we further distill it into a few-step block-causal \\emph{Streaming Student} whose Prefix Streaming mechanism carries a clean latent across consecutive chunks to reduce cumulative late-chunk degradation. With four-step inference, the complete four-GPU pipeline achieves an end-to-end RTF of 1.293 at $400\\times720$/$720\\times400$, providing a practical quality--efficiency operating point.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

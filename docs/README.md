@@ -6,23 +6,23 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-11
-- 运行时间：2026-08-11 21:30:22 UTC
+- 最新运行日期：2026-08-12
+- 运行时间：2026-08-12 21:21:19 UTC
 - 运行状态：成功
 - 本次总论文数：1
 - 精读区：1
 - 速读区：0
 
 ### 今日简报（AI）
-今日精读了一篇高分动画框架论文，揭秘角色动起来的更多可能。  
-亮点在于 Wan-Animate-2 让多人协同与复杂场景动画更稳定、更可控。  
-想自己玩？不妨用它生成一段角色互动短片，看看背后模型如何处理姿态与场景。
-- 详情：[/202608/11/README](/202608/11/README)
+- 今日共生成 1 篇推荐（精读 1 篇，速读 0 篇）
+- 精读：《Ex-Omni-2D: Expressive Omni-Modal Dialogue Models with Native Visual Presence》（9.0/10）
+- 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
+- 详情：[/202608/12/README](/202608/12/README)
 
 ### 精读区论文标签
-1. [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](/202608/11/2608.06009v2-wan-animate-2-pushing-the-application-boundaries-of-character-animation)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：Wan-Animate-2从单张图像生成角色动画，直接对应WAN模型的说话头视频生成与唇形同步
+1. [Ex-Omni-2D: Expressive Omni-Modal Dialogue Models with Native Visual Presence](/202608/12/2608.10720v1-ex-omni-2d-expressive-omni-modal-dialogue-models-with-native-visual-presence)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：通过共享声学-时间接口实现音频驱动唇动合成的图像到视频生成
 
 ### 速读区论文标签
 - 本次无速读推荐。
