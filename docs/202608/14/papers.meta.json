@@ -1,0 +1,54 @@
+{
+  "label": "2026-08-14",
+  "date": "2026-08-14",
+  "generated_at": "2026-08-14T21:25:52",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202608/14/2608.11745v1-liveanimate-stable-long-form-streaming-human-animation-in-real-time",
+      "section": "deep",
+      "title_en": "LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time",
+      "authors": "Yuxuan Zhang, Haozhong Xiong, Yubo Huang, Jiayi Song, Jinpeng Yu, Haofan Wang, Jiaming Liu, Ruihua Huang, Liwei Wang",
+      "date": "2026-08-12",
+      "pdf": "https://arxiv.org/pdf/2608.11745v1",
+      "score": "8.0",
+      "evidence": "从单张参考图像合成目标人物视频",
+      "tldr": "姿势驱动人体动画实时生成对直播、远程呈现和虚拟形象至关重要，但现有扩散系统每段需数分钟到小时无法交互。LiveAnimate 基于 14B 视频 DiT，通过块因果自回归生成与三步蒸馏实现实时稳定长时流式。该方法在三分钟测试中保持质量与身份近乎恒定，并在双 H100 上达到 19.63 FPS。其有界缓存机制解决了长视频外观漂移与内存增长问题，为交互式全身动画建立新性能平衡点。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Pose-driven human animation synthesizes a video of a target person from a single reference image and a driving pose stream. Real-time generation is essential for interactive applications such as live streaming, telepresence, and virtual avatars, yet diffusion-based systems require minutes to hours per clip, precluding responsive interaction. We present LiveAnimate, to our knowledge the first animation system to combine real-time streaming with stable long-form generation at billion scale, built on a 14B-parameter video Diffusion Transformer (DiT). A two-stage training pipeline first adapts a pretrained bidirectional DiT into a block-causal autoregressive generator through Reference-Anchored Teacher-Forcing Adaptation, and then reduces the sampling budget to three steps through Block-wise Self-Forcing Distillation. To preserve appearance over extended streams, we introduce Pose-Retrieval Sink Attention (PR-Sink), a bounded KV-cache mechanism combining a Static Sink that permanently anchors the first generated block, a Dynamic Sink that holds a pose-retrieved historical block, and a three-slot Rolling Window. When a pose recurs, PR-Sink restores the relevant appearance context without retaining the entire sequence, so memory and per-block latency remain constant regardless of stream duration. Together with Ulysses sequence parallelism and operator fusion, these designs enable 19.63\\,FPS streaming inference on two NVIDIA H100 GPUs. On a three-minute benchmark, LiveAnimate maintains nearly constant perceptual quality and identity from the first 30 seconds to the final minute (IQA 4.047 vs.\\ 4.026), while prior systems degrade substantially or require hours of offline computation for the same rollout. These results establish a new operating point in quality, latency, and duration for interactive full-body animation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/14/2608.13205v1-hpsd-hybrid-policy-self-distillation-for-text-image-to-video-diffusion-models",
+      "section": "quick",
+      "title_en": "HPSD: Hybrid-Policy Self-Distillation for Text-Image-to-Video Diffusion Models",
+      "authors": "Jiazi Bu, Pengyang Ling, Yujie Zhou, Yibin Wang, Yuhang Zang, Xuanlang Dai, Shengyuan Ding, Tianyi Wei, Xiaohang Zhan, Jiaqi Wang, Tong Wu, Dahua Lin, Xingang Pan",
+      "date": "2026-08-13",
+      "pdf": "https://arxiv.org/pdf/2608.13205v1",
+      "score": "7.0",
+      "evidence": "针对文图到视频扩散模型的自蒸馏以改进 I2V",
+      "tldr": "文本-图像到视频（TI2V）模型在高质量首帧或详细提示下表现更优，但基础文本到视频（T2V）模式难以内化这种特权能力。现有自蒸馏方法或采用离策略监督缺乏精确校正，或在策略方法存在条件-状态不匹配。本文提出混合策略自蒸馏（HPSD），让同一模型在教师TI2V模式和学生T2V模式间交替，学生继承教师轨迹锚点并局部细化，接受速度级监督。实验表明HPSD显著提升T2V性能，同时增强TI2V，有效强化模型基础生成能力。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Text-Image-to-Video (TI2V) models are an emerging unified architecture, where a single model simultaneously supports text-to-video (T2V) and image-to-video (I2V) generation. Given a high-quality first frame or a detailed textual prompt, TI2V models unlock substantially better visual quality than their T2V mode, raising a natural question: can the capability elicited by such privileged conditions be internalized into the model's own base generation ability? A common approach toward this goal is model self-distillation. However, the most straightforward solution, supervised fine-tuning, follows an off-policy strategy: its supervision is confined to teacher-generated endpoints from a fixed offline distribution rather than student-visited states, lacking precise correction tailored to the evolving policy. Recent on-policy distillation methods instead suffer from condition-state mismatch, where supervision is steered toward the given first frame instead of the student's actual content, misleading the correction. To achieve self-distillation that absorbs the teacher's privileged prior while retaining precise policy correction, in this work, we propose Hybrid-Policy Self-Distillation (HPSD), a novel self-distillation framework where a single TI2V model acts as both teacher and student under different conditions: the teacher operates in TI2V mode with a high-quality first frame and an enhanced prompt, while the student runs in the base T2V mode with only the vanilla prompt. Specifically, the student inherits off-policy teacher trajectory points as anchors, locally refines them toward its own policy, and finally receives velocity-level supervision on these self-generated roll-outs. Extensive experiments demonstrate that HPSD significantly improves T2V performance while also delivering notable TI2V gains, effectively strengthening the model's base generation ability.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/14/2608.11745v2-liveanimate-stable-long-form-streaming-human-animation-in-real-time",
+      "section": "quick",
+      "title_en": "LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time",
+      "authors": "Yuxuan Zhang, Haozhong Xiong, Yubo Huang, Jiayi Song, Jinpeng Yu, Haofan Wang, Jiaming Liu, Ruihua Huang, Liwei Wang",
+      "date": "2026-08-12",
+      "pdf": "https://arxiv.org/pdf/2608.11745v2",
+      "score": "6.0",
+      "evidence": "从单张参考图像生成人体动画",
+      "tldr": "现有姿态驱动人体动画因扩散模型生成耗时，无法满足直播等实时交互需求。LiveAnimate首次将实时流式与长时稳定生成结合，基于14B视频DiT构建块因果自回归模型，并通过参考锚定蒸馏将采样降至三步。它引入PR-Sink有界KV缓存，在姿态重现时恢复外观上下文，内存与延迟不随流长增加，实现双H100上19.63 FPS。该工作为交互式全身动画确立了质量、延迟与时长的新基准。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Pose-driven human animation synthesizes a video of a target person from a single reference image and a driving pose stream. Real-time generation is essential for interactive applications such as live streaming, telepresence, and virtual avatars, yet diffusion-based systems require minutes to hours per clip, precluding responsive interaction. We present LiveAnimate, to our knowledge the first animation system to combine real-time streaming with stable long-form generation at billion scale, built on a 14B-parameter video Diffusion Transformer (DiT). A two-stage training pipeline first adapts a pretrained bidirectional DiT into a block-causal autoregressive generator through Reference-Anchored Teacher-Forcing Adaptation, and then reduces the sampling budget to three steps through Block-wise Self-Forcing Distillation. To preserve appearance over extended streams, we introduce Pose-Retrieval Sink Attention (PR-Sink), a bounded KV-cache mechanism combining a Static Sink that permanently anchors the first generated block, a Dynamic Sink that holds a pose-retrieved historical block, and a three-slot Rolling Window. When a pose recurs, PR-Sink restores the relevant appearance context without retaining the entire sequence, so memory and per-block latency remain constant regardless of stream duration. Together with Ulysses sequence parallelism and operator fusion, these designs enable 19.63\\,FPS streaming inference on two NVIDIA H100 GPUs. On a three-minute benchmark, LiveAnimate maintains nearly constant perceptual quality and identity from the first 30 seconds to the final minute, while prior systems degrade substantially or require hours of offline computation for the same rollout. These results establish a new operating point in quality, latency, and duration for interactive full-body animation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
