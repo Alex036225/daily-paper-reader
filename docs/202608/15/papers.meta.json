@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-15",
+  "date": "2026-08-15",
+  "generated_at": "2026-08-15T19:39:41",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/15/2608.12290v1-beyond-trial-and-error-agentic-optimization-for-image-to-video-adherence",
+      "section": "deep",
+      "title_en": "Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence",
+      "authors": "Aman Tyagi, Hemanth Boinpally, Jonathan Chen, Douglas Gebert, Steven Hickson",
+      "date": "2026-08-12",
+      "pdf": "https://arxiv.org/pdf/2608.12290v1",
+      "score": "8.0",
+      "evidence": "面向图像到视频生成的智能体自改进框架，直接优化I2V一致性",
+      "tldr": "针对图像到视频模型随机性导致低效试错的问题，提出Agentic Self-Improvement闭环优化框架。该方法通过迭代提示优化（利用DSG语义查询和CMQ伪影检测）与贝叶斯优化种子和CFG尺度，实现目标导向生成。在人类偏好评估中，该方法相比基线胜率高达69%，显著优于无引导搜索。该工作为视频生成模型提供了增强可控性与可预测性的实用扩展方法，推动其走向生产就绪。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Modern black-box Image-to-Video (I2V) models offer powerful capabilities in automated content creation, yet their lack of fine-grained control and reliability presents significant challenges in professional workflows. Their inherent stochasticity causes minor variations in textual prompts or hyperparameters to yield drastically different outputs often necessitating inefficient, brute-force trial-and-error processes. To address these limitations, we introduce the ``Agentic Self-Improvement\" framework, which reframes video synthesis into a closed-loop, goal-directed optimization. Our framework systematically navigates the generation parameter space using a novel two-stage approach. In the first stage, an iterative prompt optimization loop uses a multimodal Large Language Model (mLLM) to refine the input prompt. This refinement implements two automated evaluations: Davidsonian Scene Graph (DSG) queries ensure semantic adherence, and Common Mistake Questions (CMQ) for artifact detection. At the second stage, we use Bayesian optimization to efficiently co-optimize stochastic seeds and CFG scales. This search is guided by a suite of quality metrics, including the novel Video-Text Adherence (VTA) score derived from the DSG and CMQ evaluations. Our framework significantly outperforms unguided search methods: in human preference studies, videos generated via our agentic approach were strongly preferred over baseline outputs, achieving win rates up to 69\\%. This work provides a practical and extensible methodology for enhancing the predictability and control of state-of-the-art video generation models, moving the field beyond speculative curiosities toward reliable, production-ready tools.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

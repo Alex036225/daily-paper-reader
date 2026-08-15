@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-15 <!--dpr-date:20260815-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/15/2608.12290v1-beyond-trial-and-error-agentic-optimization-for-image-to-video-adherence" data-sidebar-item="{&quot;title&quot;: &quot;Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.12290v1-beyond-trial-and-error-agentic-optimization-for-image-to-video-adherence&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;面向图像到视频生成的智能体自改进框架，直接优化I2V一致性&quot;}">Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence</a>
   * 2026-08-14 <!--dpr-date:20260814-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/14/2608.11745v1-liveanimate-stable-long-form-streaming-human-animation-in-real-time" data-sidebar-item="{&quot;title&quot;: &quot;LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.11745v1-liveanimate-stable-long-form-streaming-human-animation-in-real-time&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;从单张参考图像合成目标人物视频&quot;}">LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time</a>

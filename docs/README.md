@@ -6,32 +6,24 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-14
-- 运行时间：2026-08-14 21:25:29 UTC
+- 最新运行日期：2026-08-15
+- 运行时间：2026-08-15 19:39:19 UTC
 - 运行状态：成功
-- 本次总论文数：3
+- 本次总论文数：1
 - 精读区：1
-- 速读区：2
+- 速读区：0
 
 ### 今日简报（AI）
-- 今日共生成 3 篇推荐（精读 1 篇，速读 2 篇）
-- 精读：《LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time》（8.0/10）
-- 速读：《HPSD: Hybrid-Policy Self-Distillation for Text-Image-to-Video Diffusion Models》（7.0/10）, 《LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time》（6.0/10）
-- 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
-- 详情：[/202608/14/README](/202608/14/README)
+今天精读了一篇高分论文，聚焦图生视频中反复试错的痛点，探索用智能体优化来提升视频对参考图像的遵循度。最值得关注的是它把一致性调优从人工重试转向自动优化，方向直指更可控的视频生成。建议读者先了解现有图生视频的一致性瓶颈，再观察这类智能体方法能否简化创作流程。
+- 详情：[/202608/15/README](/202608/15/README)
 
 ### 精读区论文标签
-1. [LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time](/202608/14/2608.11745v1-liveanimate-stable-long-form-streaming-human-animation-in-real-time)  
+1. [Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence](/202608/15/2608.12290v1-beyond-trial-and-error-agentic-optimization-for-image-to-video-adherence)  
    标签：评分：8.0/10、query:wan-av-gen
-   evidence：从单张参考图像合成目标人物视频
+   evidence：面向图像到视频生成的智能体自改进框架，直接优化I2V一致性
 
 ### 速读区论文标签
-1. [HPSD: Hybrid-Policy Self-Distillation for Text-Image-to-Video Diffusion Models](/202608/14/2608.13205v1-hpsd-hybrid-policy-self-distillation-for-text-image-to-video-diffusion-models)  
-   标签：评分：7.0/10、query:wan-av-gen
-   evidence：针对文图到视频扩散模型的自蒸馏以改进 I2V
-2. [LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time](/202608/14/2608.11745v2-liveanimate-stable-long-form-streaming-human-animation-in-real-time)  
-   标签：评分：6.0/10、query:wan-av-gen
-   evidence：从单张参考图像生成人体动画
+- 本次无速读推荐。
 
 
 <div class="dpr-home-promo-card">
