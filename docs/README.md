@@ -6,24 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-15
-- 运行时间：2026-08-15 19:39:19 UTC
+- 最新运行日期：2026-08-16
+- 运行时间：2026-08-16 20:21:24 UTC
 - 运行状态：成功
-- 本次总论文数：1
+- 本次总论文数：2
 - 精读区：1
-- 速读区：0
+- 速读区：1
 
 ### 今日简报（AI）
-今天精读了一篇高分论文，聚焦图生视频中反复试错的痛点，探索用智能体优化来提升视频对参考图像的遵循度。最值得关注的是它把一致性调优从人工重试转向自动优化，方向直指更可控的视频生成。建议读者先了解现有图生视频的一致性瓶颈，再观察这类智能体方法能否简化创作流程。
-- 详情：[/202608/15/README](/202608/15/README)
+- 今日共生成 2 篇推荐（精读 1 篇，速读 1 篇）
+- 精读：《UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos》（8.0/10）
+- 速读：《Alpha as an Efficiency Signal: Visibility-Routed RGBA Image-to-Video Generation》（6.0/10）
+- 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
+- 详情：[/202608/16/README](/202608/16/README)
 
 ### 精读区论文标签
-1. [Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence](/202608/15/2608.12290v1-beyond-trial-and-error-agentic-optimization-for-image-to-video-adherence)  
+1. [UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos](/202608/16/2608.11752v1-uniswap-streaming-audio-visual-identity-swapping-for-talking-videos)  
    标签：评分：8.0/10、query:wan-av-gen
-   evidence：面向图像到视频生成的智能体自改进框架，直接优化I2V一致性
+   evidence：说话人视频中联合音视频身份交换保持音视频时序和源运动以实现准确唇同步
 
 ### 速读区论文标签
-- 本次无速读推荐。
+1. [Alpha as an Efficiency Signal: Visibility-Routed RGBA Image-to-Video Generation](/202608/16/2608.09355v1-alpha-as-an-efficiency-signal-visibility-routed-rgba-image-to-video-generation)  
+   标签：评分：6.0/10、query:wan-av-gen
+   evidence：图像到视频生成，带RGBA alpha通道
 
 
 <div class="dpr-home-promo-card">

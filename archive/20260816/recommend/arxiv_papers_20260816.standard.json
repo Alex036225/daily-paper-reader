@@ -1,0 +1,100 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-16T20:17:35.203398+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2608.11752v1",
+      "source": "arxiv",
+      "title": "UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos",
+      "abstract": "Talking-video character replacement requires coordinated transfer of appearance and voice while preserving the source motion, scene, linguistic content, and audio-video timing. Existing methods use separately optimized models for the two modalities, making audio-visual consistency difficult to enforce. We present UniSwap, the first framework for streaming joint audio-visual identity replacement in talking videos. Given a source video, a reference image, and a reference voice clip, UniSwap transfers the reference appearance and vocal timbre within a single audio-visual diffusion transformer while preserving the source content and dynamics. To address the scarcity of aligned cross-identity training pairs, we introduce a swap-and-reconstruct pipeline that removes visual and vocal identity from real clips and uses the original clips as reconstruction targets. Starting from a bidirectional backbone, we progressively adapt the model through In-context Pretraining for joint replacement, Conditional Streaming Adaptation for block-causal KV-cached generation, and Efficient Self-forcing DMD for mitigating exposure bias and reducing sampling from 30 to 3 denoising steps per block. Efficient Multi-LoRA Switching enables the three DMD roles to share a single frozen backbone. Feature-RoPE Decomposition keeps cached positions within the training range, supporting stable long-form inference. Experiments demonstrate strong audio-visual synchronization, competitive identity preservation, efficient streaming, and stable long-form generation.",
+      "authors": [
+        "Yuxuan Zhang",
+        "Haozhong Xiong",
+        "Jiayi Song",
+        "Jinpeng Yu",
+        "Yang Shi",
+        "Jiaming Liu",
+        "Ruihua Huang",
+        "Liwei Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "published": "2026-08-12T07:45:39+00:00",
+      "link": "https://arxiv.org/pdf/2608.11752v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "joint audio-visual identity swapping in talking videos preserves audio-video timing and source motion for accurate lip sync",
+      "llm_evidence_cn": "说话人视频中联合音视频身份交换保持音视频时序和源运动以实现准确唇同步",
+      "llm_evidence": "说话人视频中联合音视频身份交换保持音视频时序和源运动以实现准确唇同步",
+      "canonical_evidence": "说话人视频中联合音视频身份交换保持音视频时序和源运动以实现准确唇同步",
+      "llm_tldr_en": "UniSwap transfers reference appearance and vocal timbre within a single audio-visual diffusion transformer while preserving source talking dynamics and audio-video timing, achieving coordinated identity replacement.",
+      "llm_tldr_cn": "针对现有说话人视频身份替换方法中音频与视觉模型分离导致音视频一致性难以保证的问题，本文提出UniSwap，第一个流式联合音视频身份替换框架。该框架在一个统一的音视频扩散Transformer中同时迁移参考外观和音色，同时保持源视频的内容与动态。通过交换-重建流水线解决跨身份配对数据稀缺问题，实现了协调的身份替换并保持精确的音视频时序。此工作为说话人视频生成中的唇同步和身份迁移提供了重要方法。",
+      "llm_tldr": "针对现有说话人视频身份替换方法中音频与视觉模型分离导致音视频一致性难以保证的问题，本文提出UniSwap，第一个流式联合音视频身份替换框架。该框架在一个统一的音视频扩散Transformer中同时迁移参考外观和音色，同时保持源视频的内容与动态。通过交换-重建流水线解决跨身份配对数据稀缺问题，实现了协调的身份替换并保持精确的音视频时序。此工作为说话人视频生成中的唇同步和身份迁移提供了重要方法。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.09355v1",
+      "source": "arxiv",
+      "title": "Alpha as an Efficiency Signal: Visibility-Routed RGBA Image-to-Video Generation",
+      "abstract": "RGBA videos combine RGB appearance with an alpha channel, enabling animated assets to be applied across arbitrary backgrounds, which are heavily used in gaming industry. However, generating high-quality RGBA animations for games remains challenging for two reasons. First, most existing RGBA video datasets are dominated by photorealistic content, with limited coverage of game assets. Second, the traditional generate-then-matte pipelines estimate alpha only after RGB synthesis, so semi-transparent regions are often blurred by background, resulting in unstable matting outputs. More recently, many methods have begun to model RGB and alpha jointly, but existing approaches are mostly text-conditioned, and still have unresolved issues in efficiency and quality. To address these challenges, we introduce GameAlpha-2.4K, a 2.4K-clip game-style RGBA video dataset built with matte-friendly synthesis, multi-hypothesis alpha recovery, and compositing-based quality gates. Using this dataset, we train a reference-conditioned RGBA video generator that jointly produces RGB frames and alpha mattes in a single pass. To improve efficiency, we propose a visibility router that identifies transparent tokens in an early stage and bypasses their later DiT updates, while x_0-lock guides them along the original flow-matching schedule toward self-predicted endpoints. Our model obtains lower FVD than traditional two-stage pipelines, and the visibility router skips 35% of token evaluations in the final two DiT denoising steps, providing a 1.2x backbone speedup with negligible quality degradation compared to dense inference.",
+      "authors": [
+        "Zhe Li",
+        "Honghao Qiao",
+        "Zhixin Xu",
+        "Qijie Wang",
+        "Bo Peng",
+        "Dawei Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-10T09:35:36+00:00",
+      "link": "https://arxiv.org/pdf/2608.09355v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Image-to-video generation with RGBA alpha channel",
+      "llm_evidence_cn": "图像到视频生成，带RGBA alpha通道",
+      "llm_evidence": "图像到视频生成，带RGBA alpha通道",
+      "canonical_evidence": "图像到视频生成，带RGBA alpha通道",
+      "llm_tldr_en": "This paper addresses RGBA video generation for game assets by jointly modeling RGB and alpha channels, using alpha as an efficiency signal to improve stability of semi-transparent regions over generate-then-matte pipelines.",
+      "llm_tldr_cn": "针对游戏行业中RGBA动画生成面临的半透明区域模糊和数据集偏差问题，本文提出一种基于可见性路由的RGBA图像到视频生成方法，联合建模RGB外观和alpha通道，利用alpha作为效率信号指导生成过程。实验表明，该方法相比先合成后抠图的传统流程，能更好地保留半透明细节并提升生成稳定性，为高质量游戏资产动画提供了新途径。",
+      "llm_tldr": "针对游戏行业中RGBA动画生成面临的半透明区域模糊和数据集偏差问题，本文提出一种基于可见性路由的RGBA图像到视频生成方法，联合建模RGB外观和alpha通道，利用alpha作为效率信号指导生成过程。实验表明，该方法相比先合成后抠图的传统流程，能更好地保留半透明细节并提升生成稳定性，为高质量游戏资产动画提供了新途径。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

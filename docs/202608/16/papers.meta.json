@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-16",
+  "date": "2026-08-16",
+  "generated_at": "2026-08-16T20:21:48",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/16/2608.11752v1-uniswap-streaming-audio-visual-identity-swapping-for-talking-videos",
+      "section": "deep",
+      "title_en": "UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos",
+      "authors": "Yuxuan Zhang, Haozhong Xiong, Jiayi Song, Jinpeng Yu, Yang Shi, Jiaming Liu, Ruihua Huang, Liwei Wang",
+      "date": "2026-08-12",
+      "pdf": "https://arxiv.org/pdf/2608.11752v1",
+      "score": "8.0",
+      "evidence": "说话人视频中联合音视频身份交换保持音视频时序和源运动以实现准确唇同步",
+      "tldr": "当前说话人视频角色替换中音视频模态独立优化，难以保证视听一致。UniSwap首次提出流式联合音视频身份替换框架，基于单个音视频扩散Transformer同时迁移参考外观和音色并保留源动态。通过swap-and-reconstruct自监督管线解决跨身份配对数据稀缺，配合DMD蒸馏将采样从30步降至3步。实验证明强音视频同步与竞争性身份保持，支持高效流式和长时稳定生成。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Talking-video character replacement requires coordinated transfer of appearance and voice while preserving the source motion, scene, linguistic content, and audio-video timing. Existing methods use separately optimized models for the two modalities, making audio-visual consistency difficult to enforce. We present UniSwap, the first framework for streaming joint audio-visual identity replacement in talking videos. Given a source video, a reference image, and a reference voice clip, UniSwap transfers the reference appearance and vocal timbre within a single audio-visual diffusion transformer while preserving the source content and dynamics. To address the scarcity of aligned cross-identity training pairs, we introduce a swap-and-reconstruct pipeline that removes visual and vocal identity from real clips and uses the original clips as reconstruction targets. Starting from a bidirectional backbone, we progressively adapt the model through In-context Pretraining for joint replacement, Conditional Streaming Adaptation for block-causal KV-cached generation, and Efficient Self-forcing DMD for mitigating exposure bias and reducing sampling from 30 to 3 denoising steps per block. Efficient Multi-LoRA Switching enables the three DMD roles to share a single frozen backbone. Feature-RoPE Decomposition keeps cached positions within the training range, supporting stable long-form inference. Experiments demonstrate strong audio-visual synchronization, competitive identity preservation, efficient streaming, and stable long-form generation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/16/2608.09355v1-alpha-as-an-efficiency-signal-visibility-routed-rgba-image-to-video-generation",
+      "section": "quick",
+      "title_en": "Alpha as an Efficiency Signal: Visibility-Routed RGBA Image-to-Video Generation",
+      "authors": "Zhe Li, Honghao Qiao, Zhixin Xu, Qijie Wang, Bo Peng, Dawei Li",
+      "date": "2026-08-10",
+      "pdf": "https://arxiv.org/pdf/2608.09355v1",
+      "score": "6.0",
+      "evidence": "图像到视频生成，带RGBA alpha通道",
+      "tldr": "RGBA视频生成对游戏行业至关重要，但现有数据集缺乏游戏资产，传统两阶段管线导致半透明区域matting不稳定。本文构建GameAlpha-2.4K游戏风格数据集，训练参考条件生成器单次联合输出RGB和alpha，并提出visibility router跳过透明token的后续DiT更新，x_0-lock维持流动匹配轨迹。模型FVD优于两阶段管线，在最后两步跳过35% token评估，骨干网络提速1.2倍且质量损失可忽略。该方法利用alpha作为效率信号，为高效高质量RGBA视频生成提供新思路。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "RGBA videos combine RGB appearance with an alpha channel, enabling animated assets to be applied across arbitrary backgrounds, which are heavily used in gaming industry. However, generating high-quality RGBA animations for games remains challenging for two reasons. First, most existing RGBA video datasets are dominated by photorealistic content, with limited coverage of game assets. Second, the traditional generate-then-matte pipelines estimate alpha only after RGB synthesis, so semi-transparent regions are often blurred by background, resulting in unstable matting outputs. More recently, many methods have begun to model RGB and alpha jointly, but existing approaches are mostly text-conditioned, and still have unresolved issues in efficiency and quality. To address these challenges, we introduce GameAlpha-2.4K, a 2.4K-clip game-style RGBA video dataset built with matte-friendly synthesis, multi-hypothesis alpha recovery, and compositing-based quality gates. Using this dataset, we train a reference-conditioned RGBA video generator that jointly produces RGB frames and alpha mattes in a single pass. To improve efficiency, we propose a visibility router that identifies transparent tokens in an early stage and bypasses their later DiT updates, while x_0-lock guides them along the original flow-matching schedule toward self-predicted endpoints. Our model obtains lower FVD than traditional two-stage pipelines, and the visibility router skips 35% of token evaluations in the final two DiT denoising steps, providing a 1.2x backbone speedup with negligible quality degradation compared to dense inference.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
