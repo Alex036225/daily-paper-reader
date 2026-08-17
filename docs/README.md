@@ -6,29 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-16
-- 运行时间：2026-08-16 20:21:24 UTC
+- 最新运行日期：2026-08-17
+- 运行时间：2026-08-17 19:28:43 UTC
 - 运行状态：成功
 - 本次总论文数：2
-- 精读区：1
-- 速读区：1
+- 精读区：0
+- 速读区：2
 
 ### 今日简报（AI）
-- 今日共生成 2 篇推荐（精读 1 篇，速读 1 篇）
-- 精读：《UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos》（8.0/10）
-- 速读：《Alpha as an Efficiency Signal: Visibility-Routed RGBA Image-to-Video Generation》（6.0/10）
+- 今日共生成 2 篇推荐（精读 0 篇，速读 2 篇）
+- 速读：《UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos》（7.0/10）, 《Beyond Text Conditioning: A Systematic Study of MLLM-DiT Fusion for Video Generation》（6.0/10）
 - 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
-- 详情：[/202608/16/README](/202608/16/README)
+- 详情：[/202608/17/README](/202608/17/README)
 
 ### 精读区论文标签
-1. [UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos](/202608/16/2608.11752v1-uniswap-streaming-audio-visual-identity-swapping-for-talking-videos)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：说话人视频中联合音视频身份交换保持音视频时序和源运动以实现准确唇同步
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Alpha as an Efficiency Signal: Visibility-Routed RGBA Image-to-Video Generation](/202608/16/2608.09355v1-alpha-as-an-efficiency-signal-visibility-routed-rgba-image-to-video-generation)  
+1. [UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos](/202608/17/2608.11752v2-uniswap-streaming-audio-visual-identity-swapping-for-talking-videos)  
+   标签：评分：7.0/10、query:wan-av-gen
+   evidence：说话视频中的音视频时序协调与语音迁移
+2. [Beyond Text Conditioning: A Systematic Study of MLLM-DiT Fusion for Video Generation](/202608/17/2608.14043v1-beyond-text-conditioning-a-systematic-study-of-mllm-dit-fusion-for-video-generation)  
    标签：评分：6.0/10、query:wan-av-gen
-   evidence：图像到视频生成，带RGBA alpha通道
+   evidence：研究MLLM与DiT融合用于视频生成，处理扩散视频模型中的多模态语义条件。
 
 
 <div class="dpr-home-promo-card">

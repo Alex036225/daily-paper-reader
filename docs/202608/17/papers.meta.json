@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-17",
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T19:29:08",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/17/2608.11752v2-uniswap-streaming-audio-visual-identity-swapping-for-talking-videos",
+      "section": "quick",
+      "title_en": "UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos",
+      "authors": "Yuxuan Zhang, Haozhong Xiong, Jiayi Song, Jinpeng Yu, Yang Shi, Jiaming Liu, Ruihua Huang, Liwei Wang",
+      "date": "2026-08-12",
+      "pdf": "https://arxiv.org/pdf/2608.11752v2",
+      "score": "7.0",
+      "evidence": "说话视频中的音视频时序协调与语音迁移",
+      "tldr": "针对说话人视频替换中视觉与声音身份通常分离优化、难以保证音视频一致性的问题，UniSwap提出首个流式联合音视频身份替换框架。该框架在单个扩散Transformer中同时迁移参考图像外观和参考语音音色，并保留源视频的运动、场景与语言内容。通过swap-and-reconstruct自监督管线、条件流式适配、高效自强迫DMD和特征RoPE分解，实现每块仅需3步采样的稳定长时生成。实验表明，UniSwap在音视频同步、身份保持和流式效率方面表现优异。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Talking-video character replacement requires coordinated transfer of appearance and voice while preserving the source motion, scene, linguistic content, and audio-video timing. Existing methods use separately optimized models for the two modalities, making audio-visual consistency difficult to enforce. We present UniSwap, the first framework for streaming joint audio-visual identity replacement in talking videos. Given a source video, a reference image, and a reference voice clip, UniSwap transfers the reference appearance and vocal timbre within a single audio-visual diffusion transformer while preserving the source content and dynamics. To address the scarcity of aligned cross-identity training pairs, we introduce a swap-and-reconstruct pipeline that removes visual and vocal identity from real clips and uses the original clips as reconstruction targets. Starting from a bidirectional backbone, we progressively adapt the model through In-context Pretraining for joint replacement, Conditional Streaming Adaptation for block-causal KV-cached generation, and Efficient Self-forcing DMD for mitigating exposure bias and reducing sampling from 30 to 3 denoising steps per block. Efficient Multi-LoRA Switching enables the three DMD roles to share a single frozen backbone. Feature-RoPE Decomposition keeps cached positions within the training range, supporting stable long-form inference. Experiments demonstrate strong audio-visual synchronization, competitive identity preservation, efficient streaming, and stable long-form generation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/17/2608.14043v1-beyond-text-conditioning-a-systematic-study-of-mllm-dit-fusion-for-video-generation",
+      "section": "quick",
+      "title_en": "Beyond Text Conditioning: A Systematic Study of MLLM-DiT Fusion for Video Generation",
+      "authors": "Yanbo Ding, Yijia Fan, Caihua Shan, Yifan Yang, Yifei Shen, Weijie Wang, Xirui Hu, Dongsheng Li, Lili Qiu, Yuqing Yang, Yali Wang",
+      "date": "2026-08-14",
+      "pdf": "https://arxiv.org/pdf/2608.14043v1",
+      "score": "6.0",
+      "evidence": "研究MLLM与DiT融合用于视频生成，处理扩散视频模型中的多模态语义条件。",
+      "tldr": "扩散Transformer主导视频生成但高层语义规划有限，MLLM-DiT融合在视频生成中缺乏系统研究。提出BiVidGen框架，MLLM先生成离散语义视觉token，DiT再以文本和token为条件通过多层交叉注意力渲染视频。实验显示BiVidGen在语义对齐与时间一致性上超越微调DiT基线，VBench-Long性能更强。证明显式MLLM视觉规划为文本到视频生成提供了超越文本条件的高效中间接口。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Diffusion Transformers (DiTs) have become the dominant paradigm for high-fidelity video generation, yet their ability to perform high-level semantic planning remains limited. While hybrid architectures integrating MLLMs with diffusion backbones have shown strong advantages in image synthesis, such designs remain underexplored in video generation, where existing approaches often treat MLLMs primarily as frozen feature encoders rather than semantic generators. To fill this gap, we systematically study how an MLLM should be integrated with a DiT for video generation by answering three questions: what intermediate representation should bridge the MLLM and DiT, how the MLLM should generate it, and how the DiT should incorporate it during diffusion rendering. Our analysis reveals three key findings: (1) discrete semantic visual tokens produced by an EMA-based tokenizer provide a stable and expressive interface, (2) autoregressive causal modeling is effective for generating these tokens, and (3) explicit visual-token conditioning is more effective than prompt refinement or latent bridging. Based on these findings, we propose BiVidGen, a hybrid framework where an MLLM first generates semantic visual tokens and a DiT renders videos conditioned on both text and these tokens via multi-layer cross-attention. Extensive experiments show that BiVidGen improves semantic alignment and temporal coherence over a fine-tuned DiT baseline, achieving stronger performance on VBench-Long. These results demonstrate that explicit MLLM-based visual planning provides an effective intermediate interface for text-to-video generation beyond text-only conditioning.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
