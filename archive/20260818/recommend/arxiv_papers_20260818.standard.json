@@ -1,0 +1,265 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-18T19:49:44.751805+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2608.14700v1",
+      "source": "arxiv",
+      "title": "Xemo-Talker: Unlock Emotions Explicitly for Audio-Driven Talking Portrait Synthesis",
+      "abstract": "Precise emotion control in audio-driven talking heads remains a challenge due to the reliance on implicit emotion regulation in existing systems, which often leads to indirect and insufficient control. Additionally, training with explicit emotion-related losses across the entire motion space poses significant difficulties due to the inherent trade-off between accurate lip synchronization and fine-grained emotion control. In this paper, we reveal a key finding: although emotional cues are distributed throughout the motion space, concentrating discriminative supervision on less-principal components achieves a better emotion-lip synchronization balance, as principal components mainly encode high-energy articulation and pose variations. Building on this insight, we propose Xemo-Talker, which first learns a neutral speech-to-motion mapping for stable articulation and lip synchronization, and then introduces a lightweight emotion branch guided by less-principal subspace supervision. To enhance emotion control, we design a Tri-Loss consisting of inter-class separation, intra-class compactness, and less-principal contrastive learning. Given an audio input, a reference image, and an emotion label, Xemo-Talker achieves state-of-the-art emotion classification accuracy while maintaining competitive lip synchronization and high inference efficiency, with performance approaching that measured on real videos.The source code is publicly available at https://github.com/chaolongy/Xemo-Talker.",
+      "authors": [
+        "Chaolong Yang",
+        "Yinuo Guo",
+        "Kai Yao",
+        "Yuyao Yan",
+        "Jie Sun",
+        "Guangliang Cheng",
+        "Shibin Wu",
+        "Bin Dong",
+        "Kaizhu Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "published": "2026-08-10T11:17:42+00:00",
+      "link": "https://arxiv.org/pdf/2608.14700v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "addresses trade-off between accurate lip synchronization and emotion control in audio-driven talking heads",
+      "llm_evidence_cn": "解决音频驱动说话人头像中准确唇同步与情感控制的权衡",
+      "llm_evidence": "解决音频驱动说话人头像中准确唇同步与情感控制的权衡",
+      "canonical_evidence": "解决音频驱动说话人头像中准确唇同步与情感控制的权衡",
+      "llm_tldr_en": "The paper tackles precise emotion control in audio-driven talking heads and finds that concentrating discriminative supervision on less-principal motion components achieves a better emotion-lip sync balance.",
+      "llm_tldr_cn": "该论文针对音频驱动说话人像中情感控制与唇同步的权衡问题，揭示了将判别性监督集中在次要运动分量上能更好平衡情感与唇同步。基于这一发现，构建显式情感控制方法。实验表明该方法在保持精确唇同步的同时实现了精细的情感控制。这项工作为高自然度说话人视频生成提供了关键技术支持。",
+      "llm_tldr": "该论文针对音频驱动说话人像中情感控制与唇同步的权衡问题，揭示了将判别性监督集中在次要运动分量上能更好平衡情感与唇同步。基于这一发现，构建显式情感控制方法。实验表明该方法在保持精确唇同步的同时实现了精细的情感控制。这项工作为高自然度说话人视频生成提供了关键技术支持。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.16220v1",
+      "source": "arxiv",
+      "title": "SingDance: Compositional Zero-Shot Singing-and-Dancing Video Generation with Role-Aware Audio Conditioning",
+      "abstract": "Generating personalized dance videos from a reference image, text prompt, and audio track requires music-conditioned body motion. Singing-and-dancing adds a second requirement: the visible subject must also articulate the vocals. Existing music-conditioned methods focus primarily on choreography, while speech-driven models generally assume that the visible subject produces the input voice, leaving this combined setting largely underexplored. We introduce SingDance, a unified video diffusion framework that formulates controllable vocal articulation as a semantic role: the visible subject is either the source, who produces the vocal signal, or the listener, who receives it from an off-screen performer. Hard-compact routing selects task-relevant speech, music, and role conditions, which are composed through frame-wise joint audio injection; source and listener retain the same speech pathway. Training uses asymmetric supervision: on-screen speaking and curated off-screen conversational-response videos establish role control, while instrumental and song-based dancing-only videos establish music-conditioned body motion. The target Song/Source configuration is never observed during training. At inference, assigning the source role to a song composes separately learned articulation and song-conditioned dance capabilities, enabling compositional zero-shot singing-and-dancing. Experiments demonstrate strong motion--beat alignment and visual fidelity, reliable paired switching of vocal articulation while preserving music-aligned body motion, and highly competitive lip synchronization with substantially fewer generation-time parameters than the strongest speech-driven baseline evaluated.",
+      "authors": [
+        "Tao Feng",
+        "Xu Li",
+        "Xiangyang Luo",
+        "Ming Wen",
+        "Huadai Liu",
+        "Chen Zhang",
+        "Wei Xue"
+      ],
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.CV"
+      ],
+      "published": "2026-08-17T07:53:43+00:00",
+      "link": "https://arxiv.org/pdf/2608.16220v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "audio-driven vocal articulation in personalized dance video generation from reference image",
+      "llm_evidence_cn": "从参考图像生成个性化舞蹈视频，音频驱动发声（对口型）",
+      "llm_evidence": "从参考图像生成个性化舞蹈视频，音频驱动发声（对口型）",
+      "canonical_evidence": "从参考图像生成个性化舞蹈视频，音频驱动发声（对口型）",
+      "llm_tldr_en": "SingDance is a unified video diffusion framework that generates singing-and-dancing videos from a reference image, text, and audio, with role-aware vocal articulation.",
+      "llm_tldr_cn": "论文针对现有方法难以同时处理音乐驱动舞蹈和歌声对口型的问题，提出了SingDance框架。该框架基于视频扩散模型，将发声作为可控语义角色分为声源和听众，从而在生成舞蹈动作的同时实现精确的口型同步。实验表明SingDance能在个性化舞蹈视频中有效实现音频驱动的发声动作，为多模态视频生成提供了新思路。",
+      "llm_tldr": "论文针对现有方法难以同时处理音乐驱动舞蹈和歌声对口型的问题，提出了SingDance框架。该框架基于视频扩散模型，将发声作为可控语义角色分为声源和听众，从而在生成舞蹈动作的同时实现精确的口型同步。实验表明SingDance能在个性化舞蹈视频中有效实现音频驱动的发声动作，为多模态视频生成提供了新思路。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.15110v1",
+      "source": "arxiv",
+      "title": "CETalk: Continuous Valence-Arousal Control for Audio-Driven 3D Talking Head Generation",
+      "abstract": "Emotional 3D talking head generation aims to synthesize expressive facial animations with accurate lip synchronization. However, existing methods often rely on discrete emotion categories, which fail to capture the continuous evolution of affect. They also overlook the temporal frequency mismatch between audio articulation and emotional expression. In this paper, we propose CETalk, an audio-driven 3D facial animation framework conditioned on continuous Valence--Arousal (VA) representations for fine-grained emotion control. CETalk predicts a sequence of FLAME parameters through three key components: a Dynamic Emotion Modulation Module that adaptively scales emotional intensity using audio-derived cues; a Multi-Scale Temporal Modeling mechanism that employs parallel branches to decouple high-frequency articulatory movements from low-frequency emotional dynamics; and a Dynamic Fusion Mechanism that integrates these multi-scale features via an adaptive gating network. To support training and evaluation, we construct 3D-VA-MEAD, a large-scale dataset with automatically estimated VA annotations and reconstructed 3D facial motions. Extensive experiments demonstrate that CETalk outperforms state-of-the-art methods in both lip-sync accuracy and emotional expressiveness, while enabling smooth and controllable emotion transitions.",
+      "authors": [
+        "Peng Jia",
+        "Li Dai",
+        "Zhen Xiao",
+        "Xueliang Liu",
+        "Jia Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-08-15T08:22:50+00:00",
+      "link": "https://arxiv.org/pdf/2608.15110v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "audio-driven 3D talking head generation with accurate lip synchronization via continuous valence-arousal control",
+      "llm_evidence_cn": "通过连续效价-唤醒控制实现音频驱动3D说话人头部生成，具有准确唇同步",
+      "llm_evidence": "通过连续效价-唤醒控制实现音频驱动3D说话人头部生成，具有准确唇同步",
+      "canonical_evidence": "通过连续效价-唤醒控制实现音频驱动3D说话人头部生成，具有准确唇同步",
+      "llm_tldr_en": "Introduces CETalk, an audio-driven 3D facial animation framework that uses continuous valence-arousal representations to control emotions while achieving accurate lip synchronization through dynamic emotion modulation and multi-scale temporal modeling.",
+      "llm_tldr_cn": "针对现有情感3D说话人头部生成依赖离散情绪类别且忽略音频-表情频率不匹配的问题，提出CETalk框架。该框架通过连续效价-唤醒表示进行细粒度情感控制，并采用动态情感调制模块和多尺度时序建模实现准确唇同步。实验表明CETalk能生成表达丰富且唇同步准确的3D面部动画，提升了虚拟角色的真实感。",
+      "llm_tldr": "针对现有情感3D说话人头部生成依赖离散情绪类别且忽略音频-表情频率不匹配的问题，提出CETalk框架。该框架通过连续效价-唤醒表示进行细粒度情感控制，并采用动态情感调制模块和多尺度时序建模实现准确唇同步。实验表明CETalk能生成表达丰富且唇同步准确的3D面部动画，提升了虚拟角色的真实感。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.16143v1",
+      "source": "arxiv",
+      "title": "AnyTalk: Speech Animation for Arbitrary Characters Leveraging a Video Generation Model",
+      "abstract": "We present AnyTalk, a novel method for generating 3D speech animations for arbitrary characters without requiring any animation data. While existing audio-driven 3D speech animation methods rely on character-specific training data or laborious rigging/re-meshing, AnyTalk circumvents these limitations by leveraging recent video diffusion models trained on extensive video datasets. We first adapt a pre-trained video diffusion model to a target character through our Character-specific Fine-tuning (\\textit{CsF}) technique. By fine-tuning on rendered images of the 3D character paired with zeroed-out audio embeddings (representing \"no motion\"), we eliminate the need for animation data while preserving the motion prior of large-scale video diffusion model. We then uplift the resulting talking-head video into a 3D speech animation by estimating blendshape parameters through a proposed optimization process. AnyTalk enables lip-synced animations across diverse face meshes and blendshape configurations, significantly reducing manual effort and data requirements. We further enhance usability by distilling AnyTalk into a streamlined network, $\\text{AnyTalk}_{RT}$, thereby enabling real-time performance. By leveraging talking-head video generation, our method broadens access to audio-driven speech animation technology for arbitrary characters. The code is publicly available at https://serin-yoon.github.io/projects/anytalk/.",
+      "authors": [
+        "Kwan Yun",
+        "Serin Yoon",
+        "Sunjin Jung",
+        "Jung Eun Yoo",
+        "Inyup Lee",
+        "Junyong Noh"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV",
+        "cs.MM",
+        "cs.SD"
+      ],
+      "published": "2026-08-17T05:53:42+00:00",
+      "link": "https://arxiv.org/pdf/2608.16143v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Proposes audio-driven 3D speech animation using video diffusion model, directly enabling lip sync in generated videos.",
+      "llm_evidence_cn": "提出利用视频扩散模型实现音频驱动的3D语音动画，直接生成带唇同步的视频。",
+      "llm_evidence": "提出利用视频扩散模型实现音频驱动的3D语音动画，直接生成带唇同步的视频。",
+      "canonical_evidence": "提出利用视频扩散模型实现音频驱动的3D语音动画，直接生成带唇同步的视频。",
+      "llm_tldr_en": "AnyTalk generates 3D speech animations for arbitrary characters by fine-tuning a video diffusion model with rendered character images and zeroed audio embeddings, eliminating the need for character-specific animation data.",
+      "llm_tldr_cn": "AnyTalk提出一种无需动画数据即可为任意角色生成3D语音动画的方法。它通过角色特定微调将预训练视频扩散模型适配到目标角色，仅使用渲染图像和无音频嵌入训练，从而保留大规模视频扩散模型的运动先验。实验表明，该方法能有效生成与音频同步的语音动画，为音频驱动的唇同步视频生成提供了新思路。",
+      "llm_tldr": "AnyTalk提出一种无需动画数据即可为任意角色生成3D语音动画的方法。它通过角色特定微调将预训练视频扩散模型适配到目标角色，仅使用渲染图像和无音频嵌入训练，从而保留大规模视频扩散模型的运动先验。实验表明，该方法能有效生成与音频同步的语音动画，为音频驱动的唇同步视频生成提供了新思路。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.15296v1",
+      "source": "arxiv",
+      "title": "FMReward: Aligning and Evaluating Audio-Driven 3D Facial Animation with Human Preferences",
+      "abstract": "Audio-driven 3D facial animation is essential for advancing immersion and interactivity in virtual experiences. Although recent advances have shown promising capabilities, the training and evaluation of existing methods typically rely on ground-truth-based errors, which fall short of aligning with human preferences. To address this, we present a comprehensive framework that learns an automatic perceptual model from human preference data and leverages it to improve and evaluate the perceptual quality of audio-driven 3D facial animation. To begin with, we construct FMPair (Facial Motion Pairwise preference), the first human preference dataset for audio-driven 3D facial animation, which is built through a systematic annotation pipeline and comprises 65,574 annotated 3D facial motion pairs from 8,834 distinct in-the-wild audio clips. Based on the pairwise comparison dataset, we propose a Facial Motion Reward model, termed FMReward, which takes audio and 3D facial motion as inputs and predicts a perceptual quality score aligned with human preferences. Building upon FMReward, we further introduce Facial Motion reward Feedback Learning (FMFL), a direct fine-tuning algorithm that leverages a pretrained reward model to optimize diffusion-based audio-driven 3D facial animation models for better alignment with human preferences. Extensive experiments demonstrate the superiority of FMReward over other metrics in aligning with human preferences and the effectiveness of FMFL in improving the perceptual quality of audio-driven 3D facial animation.",
+      "authors": [
+        "Sijing Wu",
+        "Yunhao Li",
+        "Zhilin Gao",
+        "Huiyu Duan",
+        "Yucheng Zhu",
+        "Guangtao Zhai",
+        "Patrick Le Callet"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-15T15:54:34+00:00",
+      "link": "https://arxiv.org/pdf/2608.15296v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "learning human preference-based reward model to improve and evaluate audio-driven 3D facial animation quality",
+      "llm_evidence_cn": "基于人类偏好学习奖励模型，改进和评估音频驱动3D面部动画质量",
+      "llm_evidence": "基于人类偏好学习奖励模型，改进和评估音频驱动3D面部动画质量",
+      "canonical_evidence": "基于人类偏好学习奖励模型，改进和评估音频驱动3D面部动画质量",
+      "llm_tldr_en": "Presents FMReward, a framework that constructs a human preference dataset for audio-driven 3D facial animation and uses it to learn an automatic perceptual model, enabling both evaluation and improvement of lip sync quality.",
+      "llm_tldr_cn": "针对现有音频驱动3D面部动画训练和评估依赖真值误差而无法与人类偏好对齐的问题，提出FMReward框架。该框架构建首个音频驱动3D面部动画人类偏好数据集FMPair，并学习自动感知模型用于评估和改进动画质量。实验表明该模型能有效提升感知质量，为更符合人类审美的动画生成提供了工具。",
+      "llm_tldr": "针对现有音频驱动3D面部动画训练和评估依赖真值误差而无法与人类偏好对齐的问题，提出FMReward框架。该框架构建首个音频驱动3D面部动画人类偏好数据集FMPair，并学习自动感知模型用于评估和改进动画质量。实验表明该模型能有效提升感知质量，为更符合人类审美的动画生成提供了工具。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.15522v1",
+      "source": "arxiv",
+      "title": "Efficient Audio-Visual Generation via Synchrony-Aware Cross-Modal Sparse Attention",
+      "abstract": "Recent audio-visual generation models can synthesize synchronized video and sound in a unified diffusion process, but their inference cost remains high because long video token sequences require repeated attention computation across denoising steps.A variety of acceleration techniques have been developed for video generation models, including low-bit quantization, attention sparsification, and feature caching.However, since these methods are originally designed for video generation, directly applying them to audio-visual models overlooks the interactions between the audio and video branches and may therefore disrupt audio-video synchronization.We present a synchronization-aware acceleration framework for efficient audio-visual generation.Our key observation is that bidirectional audio-video cross-attention reveals structured interactions between the two branches, with high responses often concentrated on a few sound-related visual and temporal regions.Guided by this interaction pattern, we introduce a protected sparse attention strategy that preserves high-fidelity computation for synchronization-critical tokens while sparsifying redundant attention interactions.By explicitly accounting for cross-modal dependence during acceleration, our method improves inference efficiency while keeping video quality, audio quality, and audio-video synchronization.",
+      "authors": [
+        "Shengchuan Gao",
+        "Teng Hu",
+        "Bohao Feng",
+        "Luchen Li",
+        "Wenqiang Wang",
+        "Hongqian Deng",
+        "Ran Yi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-16T04:26:05+00:00",
+      "link": "https://arxiv.org/pdf/2608.15522v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "synchrony-aware acceleration for audio-visual generation preserving sync",
+      "llm_evidence_cn": "同步感知的音视频生成加速，保持音画同步",
+      "llm_evidence": "同步感知的音视频生成加速，保持音画同步",
+      "canonical_evidence": "同步感知的音视频生成加速，保持音画同步",
+      "llm_tldr_en": "Audio-visual generation models suffer high inference cost; generic acceleration may break audio-video synchronization. The paper proposes synchrony-aware cross-modal sparse attention to reduce computation while preserving critical audio-video interactions. Results show efficient audio-visual generation without sacrificing synchronization, beneficial for lip-sync-sensitive tasks.",
+      "llm_tldr_cn": "音频-视频生成模型统一扩散过程可实现同步生成，但长序列导致推理成本高，通用加速方法可能破坏音视频同步。该论文提出同步感知的跨模态稀疏注意力加速框架，在降低计算量的同时保护音频与视频分支的关键交互。实验表明该方法在音频-视频生成上实现高效推理，且维持同步质量，对唇形同步等对时序敏感的任务具有重要价值。",
+      "llm_tldr": "音频-视频生成模型统一扩散过程可实现同步生成，但长序列导致推理成本高，通用加速方法可能破坏音视频同步。该论文提出同步感知的跨模态稀疏注意力加速框架，在降低计算量的同时保护音频与视频分支的关键交互。实验表明该方法在音频-视频生成上实现高效推理，且维持同步质量，对唇形同步等对时序敏感的任务具有重要价值。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
