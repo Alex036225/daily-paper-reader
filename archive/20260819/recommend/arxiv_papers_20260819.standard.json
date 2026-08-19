@@ -1,0 +1,103 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-19T20:02:14.982326+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2608.17707v1",
+      "source": "arxiv",
+      "title": "DynaForcing: Overcoming Dynamic Collapse in Self-Forcing Distillation for Streaming Avatar Generation",
+      "abstract": "Audio-driven avatar generation requires realistic lip-sync, expressive motion, and real-time streaming. Recent work achieves the latter via self-forcing with Distribution Matching Distillation (DMD), but this paradigm suffers from a critical failure that has not been systematically characterized: dynamic collapse, where the student model converges to a near-static optimum with high perceptual quality but severely suppressed temporal dynamics. We trace this to two causes: the reverse KL objective in DMD, which biases toward low-motion modes, and unanchored self-conditioning, which creates a feedback loop that amplifies collapse. This is especially harmful for avatars, where even subtle motion loss breaks lip-sync and expression.   To address this, we propose DynaForcing, a training framework with three complementary strategies applied at different levels. Specifically, Hybrid Forcing anchors rollouts to ground-truth dynamics at the data level to break the feedback loop. Dynamics-Aware Reward Regularization introduces explicit motion rewards via the RL interpretation of DMD to counteract the reverse KL bias at the loss level. Reference Perturbation perturbs reference images to decouple identity from static details, forcing the model to rely on audio for motion at the conditioning level. We further introduce computation graph pruning and gradient replay, reducing the GPU footprint of self-forcing by over an order of magnitude. Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31 -> 0.73, Sync-C: 7.03 -> 7.68) while improving visual quality, resolving the quality-dynamics trade-off throughout training without early stopping.",
+      "authors": [
+        "Yubo Huang",
+        "Sirui Zhao",
+        "Xinchen Yao",
+        "Zhengye Zhang",
+        "Jinyang Huang",
+        "Fengqi Cui",
+        "Shiwei Wu",
+        "Enhong Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.MM"
+      ],
+      "published": "2026-08-18T12:29:56+00:00",
+      "link": "https://arxiv.org/pdf/2608.17707v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "addresses dynamic collapse harming lip-sync in audio-driven avatar generation",
+      "llm_evidence_cn": "解决音频驱动化身生成中损害唇同步的动态坍缩问题",
+      "llm_evidence": "解决音频驱动化身生成中损害唇同步的动态坍缩问题",
+      "canonical_evidence": "解决音频驱动化身生成中损害唇同步的动态坍缩问题",
+      "llm_tldr_en": "The paper identifies dynamic collapse in self-forcing distillation for streaming audio-driven avatars, where students lose temporal dynamics and lip-sync, and proposes DynaForcing to overcome it.",
+      "llm_tldr_cn": "该论文针对音频驱动化身生成中自强制蒸馏存在动态坍缩问题，即学生模型收敛到近静态解、丢失时序动态，从而破坏唇同步和表情。作者追溯其原因在于DMD的反向KL目标偏向低运动模式以及无锚定自条件化形成反馈回路，并提出DynaForcing方法予以克服。实验表明该方法能保持真实唇同步和表现力运动，对实时流式化身生成至关重要。",
+      "llm_tldr": "该论文针对音频驱动化身生成中自强制蒸馏存在动态坍缩问题，即学生模型收敛到近静态解、丢失时序动态，从而破坏唇同步和表情。作者追溯其原因在于DMD的反向KL目标偏向低运动模式以及无锚定自条件化形成反馈回路，并提出DynaForcing方法予以克服。实验表明该方法能保持真实唇同步和表现力运动，对实时流式化身生成至关重要。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.15734v1",
+      "source": "arxiv",
+      "title": "CineDub: Scaling End-to-End Video Dubbing to Multi-Speaker Dialogues with Coherent Sound Effects",
+      "abstract": "Automatic video dubbing in the wild remains fundamentally limited by two competing constraints: hierarchical methods depend on brittle, multi-stage preprocessing pipelines that severely restrict data scalability and practical deployment, while holistic approaches operating on uncropped video suffer from weak temporal alignment and speaker-utterance ambiguity in multi-speaker settings. To overcome these limitations, we propose CineDub, a unified diffusion-based model that achieves precise multi-speaker dialogue dubbing directly from uncropped videos, without face cropping or speaker diarization. Central to our approach is the Implicitly-Coupled Holistic Conditioning (ICHC) paradigm, where holistic visual representations and a semantic-bundled transcription format are encoded independently, yet implicitly coupled through cross-modal training to resolve speaker ambiguity and enable precise multi-speaker multi-turn dialogue dubbing. Building on the unified temporal cues captured by holistic visual features, we further extend CineDub to joint speech and audio generation. We introduce an Ambient-to-Linguistic Curriculum Learning (ALC) to mitigate sub-task degradation, and a decoupled textual branch control mechanism to resolve cross-prompt interference during simultaneous generation. We also release two in-the-wild benchmarks, CineDub-Multi for multi-speaker dialogue dubbing and CineDub-SA for video-to-speech-and-audio (V2SA) generation, to enable evaluation under realistic conditions. Experiments show that CineDub achieves state-of-the-art results on established single-speaker dubbing and video-to-audio benchmarks while excelling in multi-speaker dialogue dubbing and acoustically coherent joint generation.",
+      "authors": [
+        "Yusheng Dai",
+        "Kangdi Wang",
+        "Baolong Gao",
+        "Yuxuan Jiang",
+        "Weiqiang Wang",
+        "Qiuhong Ke",
+        "Jianfei Cai"
+      ],
+      "primary_category": "eess.AS",
+      "categories": [
+        "eess.AS",
+        "cs.MM",
+        "cs.SD"
+      ],
+      "published": "2026-08-16T13:16:15+00:00",
+      "link": "https://arxiv.org/pdf/2608.15734v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "achieves precise multi-speaker dialogue dubbing with strong temporal alignment for lip sync",
+      "llm_evidence_cn": "实现精确多说话人配音，具有强时序对齐以实现唇同步",
+      "llm_evidence": "实现精确多说话人配音，具有强时序对齐以实现唇同步",
+      "canonical_evidence": "实现精确多说话人配音，具有强时序对齐以实现唇同步",
+      "llm_tldr_en": "Proposes CineDub, a unified diffusion model for multi-speaker video dubbing from uncropped videos, using Implicitly-Coupled Holistic Conditioning to achieve precise audio-visual alignment.",
+      "llm_tldr_cn": "该论文针对野外视频配音中多阶段管道脆弱、多说话人场景时序对齐弱的问题，提出统一扩散模型CineDub，可在不裁剪人脸、不做说话人分离的情况下直接从完整视频生成精确多说话人配音。其核心是隐式耦合整体条件（ICHC）范式，联合整体视觉表示和说话人信息，实现强时序对齐。实验表明该方法能生成连贯音效并处理多说话人对话，为端到端视频配音提供了可扩展方案。",
+      "llm_tldr": "该论文针对野外视频配音中多阶段管道脆弱、多说话人场景时序对齐弱的问题，提出统一扩散模型CineDub，可在不裁剪人脸、不做说话人分离的情况下直接从完整视频生成精确多说话人配音。其核心是隐式耦合整体条件（ICHC）范式，联合整体视觉表示和说话人信息，实现强时序对齐。实验表明该方法能生成连贯音效并处理多说话人对话，为端到端视频配音提供了可扩展方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
