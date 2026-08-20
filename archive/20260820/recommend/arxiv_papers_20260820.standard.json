@@ -1,0 +1,132 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-20T20:36:04.014835+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2608.18832v1",
+      "source": "arxiv",
+      "title": "EfficientSync: Real-Time Lip Synchronization via Deformation-Based Reference Texture Mixing",
+      "abstract": "Audio-driven lip synchronization manipulates the mouth region of a talking-face video to match the driving audio while preserving head pose, identity, and background. Although the task is inherently local editing, prevailing approaches reconstruct the entire lower face with heavy GAN- or diffusion-based decoders, incurring substantial latency and, more critically, hallucinating intra-oral details such as teeth and lip wrinkles instead of preserving authentic textures. We contend that the bottleneck in identity preservation is not the scarcity of reference frames, but the lack of a mechanism that faithfully transfers the genuine textures they already contain. We therefore present EfficientSync, a real-time deformation-based framework that retains reference textures rather than resynthesizing them. First, the Dynamic Texture Mixer reformulates multi-reference fusion as channel-wise selection, evaluating each spatially aligned reference in a global context and aggregating them by channel-wise weighted summation, preserving textural integrity at low cost. Second, Spatio-Temporal Shifted Adaptive Masking decomposes the source frame into lip-generation conditions and an independent background prior, suppressing lower-face leakage while blending the synthesized mouth seamlessly into the background. Third, STAR Sampling, a zero-overhead pre-processing step, retrieves the sharpest and most topologically diverse reference frames. Experiments on HDTF and VFHQ show state-of-the-art visual quality and identity preservation at 166 FPS on a single GPU. Video demos: https://alunaticat.github.io/EfficientSync/index.html.",
+      "authors": [
+        "Fa-Ting Hong",
+        "Runzhen Liu",
+        "Luchuan Song",
+        "Hongmin Cai",
+        "Chuhua Xian"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-19T11:49:06+00:00",
+      "link": "https://arxiv.org/pdf/2608.18832v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Audio-driven lip synchronization manipulates the mouth region of a talking-face video to match driving audio while preserving identity and background.",
+      "llm_evidence_cn": "音频驱动的口型同步，通过变形参考纹理混合实时编辑嘴部区域",
+      "llm_evidence": "音频驱动的口型同步，通过变形参考纹理混合实时编辑嘴部区域",
+      "canonical_evidence": "音频驱动的口型同步，通过变形参考纹理混合实时编辑嘴部区域",
+      "llm_tldr_en": "EfficientSync tackles slow and texture-hallucinating lip sync by only editing the mouth region via real-time deformation and reference texture mixing, preserving identity and background. It achieves real-time audio-driven lip synchronization without heavy GAN/diffusion decoders, ensuring authentic teeth and lip details.",
+      "llm_tldr_cn": "现有音频驱动口型同步方法重建整个下半脸，导致速度慢且口内细节不真实。本文提出EfficientSync，仅通过变形和参考纹理混合实时编辑嘴部区域，保留身份和背景。实验表明该方法能实现实时口型同步并保持真实纹理，避免了幻觉。",
+      "llm_tldr": "现有音频驱动口型同步方法重建整个下半脸，导致速度慢且口内细节不真实。本文提出EfficientSync，仅通过变形和参考纹理混合实时编辑嘴部区域，保留身份和背景。实验表明该方法能实现实时口型同步并保持真实纹理，避免了幻觉。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.14790v1",
+      "source": "arxiv",
+      "title": "Qwen-Video-Edit: Instruction-Based Video Editing by Repurposing an Image Editing Model",
+      "abstract": "Instruction-based video editing is commonly built on video-pretrained generative backbones: a video diffusion transformer is adapted, at considerable cost, to condition on a source video and an editing instruction. In this report we explore a different route and show that a strong instruction-based image editing model can edit videos by operating directly on video-VAE latents. Starting from Qwen-Image-Edit, we arrange the latent frames of a Wan~2.1 video VAE as tiles of one large virtual image, reuse the editor's image positional encoding for every tile, and bridge the two latent spaces with a pair of lightweight input/output projections warm-started from the editor's own patchify and unpatchify layers, so that at initialization a (static) video is embedded exactly as an image the model already understands. The whole system is then fine-tuned on the public Ditto-1M editing triplets, and a few denoising steps of Wan~2.2 serve as an optional temporal enhancer. We motivate the design with a chain of zero-training observations: the stock image editor already edits a video presented as a contact sheet; it is indifferent to whether the sheet's tokens come from one joint encode or from per-frame encodes stitched in latent space; and it even edits genuine video latents zero-shot to a clearly recognizable degree, leaving fine-tuning only a fidelity gap to close. Our results suggest that, despite the large investment in training video latent spaces, per-frame video latents remain close enough to the image domain that mature image editing priors transfer with minimal adaptation. Project Page: https://yunpeng1998.github.io/Qwen-Video-Edit-Page; Code: https://github.com/yunpeng1998/Qwen-Video-Edit; Model: https://huggingface.co/yunpeng1998/Qwen-Video-Edit.",
+      "authors": [
+        "Yunpeng Bai",
+        "Yossi Gandelsman",
+        "Michaël Gharbi",
+        "Qixing Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-14T18:01:29+00:00",
+      "link": "https://arxiv.org/pdf/2608.14790v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Repurposes image editing model on Wan 2.1 video VAE latents for instruction-based video editing",
+      "llm_evidence_cn": "在Wan 2.1视频VAE隐空间上重用图像编辑模型进行指令视频编辑",
+      "llm_evidence": "在Wan 2.1视频VAE隐空间上重用图像编辑模型进行指令视频编辑",
+      "canonical_evidence": "在Wan 2.1视频VAE隐空间上重用图像编辑模型进行指令视频编辑",
+      "llm_tldr_en": "Shows an instruction-based image editing model can edit videos by operating directly on Wan 2.1 video VAE latents, avoiding costly video-pretrained backbones.",
+      "llm_tldr_cn": "现有指令视频编辑通常依赖视频预训练生成骨干，适应成本高。本文探索一条不同路线：将Wan 2.1视频VAE的隐帧排列为一张大虚拟图像的瓦片，复用图像编辑器的位置编码，并用轻量输入输出投影桥接两个隐空间。暖启动后，该方法可在初始化时统计上无扰动地编辑视频，证明图像编辑模型可直接用于视频编辑任务。",
+      "llm_tldr": "现有指令视频编辑通常依赖视频预训练生成骨干，适应成本高。本文探索一条不同路线：将Wan 2.1视频VAE的隐帧排列为一张大虚拟图像的瓦片，复用图像编辑器的位置编码，并用轻量输入输出投影桥接两个隐空间。暖启动后，该方法可在初始化时统计上无扰动地编辑视频，证明图像编辑模型可直接用于视频编辑任务。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.14790v2",
+      "source": "arxiv",
+      "title": "Qwen-Video-Edit: Instruction-Based Video Editing by Repurposing an Image Editing Model",
+      "abstract": "Instruction-based video editing is commonly built on video-pretrained generative backbones: a video diffusion transformer is adapted, at considerable cost, to condition on a source video and an editing instruction. In this report we explore a different route and show that a strong instruction-based image editing model can edit videos by operating directly on video-VAE latents. Starting from Qwen-Image-Edit, we arrange the latent frames of a Wan~2.1 video VAE as tiles of one large virtual image, reuse the editor's image positional encoding for every tile, and bridge the two latent spaces with a pair of lightweight input/output projections warm-started from the editor's own patchify and unpatchify layers, so that at initialization a (static) video is embedded exactly as an image the model already understands. The whole system is then fine-tuned on the public Ditto-1M editing triplets, and a few denoising steps of Wan~2.2 serve as an optional temporal enhancer. We motivate the design with a chain of zero-training observations: the stock image editor already edits a video presented as a contact sheet; it is indifferent to whether the sheet's tokens come from one joint encode or from per-frame encodes stitched in latent space; and it even edits genuine video latents zero-shot to a clearly recognizable degree, leaving fine-tuning only a fidelity gap to close. Our results suggest that, despite the large investment in training video latent spaces, per-frame video latents remain close enough to the image domain that mature image editing priors transfer with minimal adaptation. Project Page: https://yunpeng1998.github.io/Qwen-Video-Edit-Page Code: https://github.com/yunpeng1998/Qwen-Video-Edit Model: https://huggingface.co/yunpeng1998/Qwen-Video-Edit",
+      "authors": [
+        "Yunpeng Bai",
+        "Yossi Gandelsman",
+        "Michaël Gharbi",
+        "Qixing Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-14T18:01:29+00:00",
+      "link": "https://arxiv.org/pdf/2608.14790v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Repurposes image editing model on Wan 2.1 video VAE latents for instruction-based video editing",
+      "llm_evidence_cn": "在Wan 2.1视频VAE隐空间上重用图像编辑模型进行指令视频编辑",
+      "llm_evidence": "在Wan 2.1视频VAE隐空间上重用图像编辑模型进行指令视频编辑",
+      "canonical_evidence": "在Wan 2.1视频VAE隐空间上重用图像编辑模型进行指令视频编辑",
+      "llm_tldr_en": "Shows an instruction-based image editing model can edit videos by operating directly on Wan 2.1 video VAE latents, avoiding costly video-pretrained backbones.",
+      "llm_tldr_cn": "现有指令视频编辑通常依赖视频预训练生成骨干，适应成本高。本文探索一条不同路线：将Wan 2.1视频VAE的隐帧排列为一张大虚拟图像的瓦片，复用图像编辑器的位置编码，并用轻量输入输出投影桥接两个隐空间。暖启动后，该方法可在初始化时统计上无扰动地编辑视频，证明图像编辑模型可直接用于视频编辑任务。",
+      "llm_tldr": "现有指令视频编辑通常依赖视频预训练生成骨干，适应成本高。本文探索一条不同路线：将Wan 2.1视频VAE的隐帧排列为一张大虚拟图像的瓦片，复用图像编辑器的位置编码，并用轻量输入输出投影桥接两个隐空间。暖启动后，该方法可在初始化时统计上无扰动地编辑视频，证明图像编辑模型可直接用于视频编辑任务。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
