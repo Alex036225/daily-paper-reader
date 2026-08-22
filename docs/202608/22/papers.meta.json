@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-22",
+  "date": "2026-08-22",
+  "generated_at": "2026-08-22T20:38:30",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/22/2608.16154v1-keyid-decoupled-drafting-and-keyframe-editing-for-identity-preserving-video-generation",
+      "section": "quick",
+      "title_en": "KeyID: Decoupled Drafting and Keyframe Editing for Identity-Preserving Video Generation",
+      "authors": "Jianjie Luo, Yiming Zhong, Haoming Shen, Yupeng Xiao, Zhenguo Yang",
+      "date": "2026-08-17",
+      "pdf": "https://arxiv.org/pdf/2608.16154v1",
+      "score": "6.0",
+      "evidence": "基于参考主体的身份保持视频生成（图像条件生成）",
+      "tldr": "身份保持视频生成需同时忠实参考主体与文本提示，现有方法调优成本高或仅输入级增强，难以在复杂长序列动作中保持严格身份一致性。KeyID提出免训练框架，解耦视频动态合成与身份注入，先产生身份无关草稿，再经稀疏关键帧校正与运动插值整合身份。该方法有效化解提示遵循与身份保真度的容量冲突，并支持多主体及序列动作扩展。在ACM Multimedia 2026 IPVG挑战赛序列动作赛道获亚军，验证了其优越性。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Identity-preserving video generation (IPVG) requires synthesizing videos that are faithful to both reference subjects and text prompts. Existing methods are often hindered by high tuning costs or limited input-level enhancements, struggling to maintain rigid identity consistency during complex, long-sequence actions. To address these limitations, we propose KeyID, a training-free IPVG framework that decouples the synthesis of video dynamics from the injection of identity. Specifically, KeyID comprises two components: (1) Reference-Aware Video Generation, which produces an identity-agnostic video draft aligned with multiple references, and (2) Identity-Preserved Keyframe Editing, which integrates the target identity via sparse keyframe correction and subsequent motion interpolation. By shifting from dense frame-level supervision to sparse keyframe-level refinement, KeyID effectively resolves the capacity conflict between prompt adherence and identity fidelity. Crucially, our modular design allows seamless extension to multi-subject references and complex sequential action generation without additional training. KeyID outperforms prior works and is validated by automatic and human evaluations on the official challenge benchmark, ultimately securing the runner-up position in the Track 2 (Sequential Action) of the ACM Multimedia 2026 IPVG Grand Challenge. Source code is available at https://github.com/WISLab-GDUT/KeyID.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

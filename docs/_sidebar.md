@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-22 <!--dpr-date:20260822-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/22/2608.16154v1-keyid-decoupled-drafting-and-keyframe-editing-for-identity-preserving-video-generation" data-sidebar-item="{&quot;title&quot;: &quot;KeyID: Decoupled Drafting and Keyframe Editing for Identity-Preserving Video Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.16154v1-keyid-decoupled-drafting-and-keyframe-editing-for-identity-preserving-video-generation&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;基于参考主体的身份保持视频生成（图像条件生成）&quot;}">KeyID: Decoupled Drafting and Keyframe Editing for Identity-Preserving Video Generation</a>
   * 2026-08-20 <!--dpr-date:20260820-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/20/2608.18832v1-efficientsync-real-time-lip-synchronization-via-deformation-based-reference-texture-mixing" data-sidebar-item="{&quot;title&quot;: &quot;EfficientSync: Real-Time Lip Synchronization via Deformation-Based Reference Texture Mixing&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.18832v1-efficientsync-real-time-lip-synchronization-via-deformation-based-reference-texture-mixing&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;音频驱动的口型同步，通过变形参考纹理混合实时编辑嘴部区域&quot;}">EfficientSync: Real-Time Lip Synchronization via Deformation-Based Reference Texture Mixing</a>

@@ -1,0 +1,58 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-22T20:37:26.609838+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.16154v1",
+      "source": "arxiv",
+      "title": "KeyID: Decoupled Drafting and Keyframe Editing for Identity-Preserving Video Generation",
+      "abstract": "Identity-preserving video generation (IPVG) requires synthesizing videos that are faithful to both reference subjects and text prompts. Existing methods are often hindered by high tuning costs or limited input-level enhancements, struggling to maintain rigid identity consistency during complex, long-sequence actions. To address these limitations, we propose KeyID, a training-free IPVG framework that decouples the synthesis of video dynamics from the injection of identity. Specifically, KeyID comprises two components: (1) Reference-Aware Video Generation, which produces an identity-agnostic video draft aligned with multiple references, and (2) Identity-Preserved Keyframe Editing, which integrates the target identity via sparse keyframe correction and subsequent motion interpolation. By shifting from dense frame-level supervision to sparse keyframe-level refinement, KeyID effectively resolves the capacity conflict between prompt adherence and identity fidelity. Crucially, our modular design allows seamless extension to multi-subject references and complex sequential action generation without additional training. KeyID outperforms prior works and is validated by automatic and human evaluations on the official challenge benchmark, ultimately securing the runner-up position in the Track 2 (Sequential Action) of the ACM Multimedia 2026 IPVG Grand Challenge. Source code is available at https://github.com/WISLab-GDUT/KeyID.",
+      "authors": [
+        "Jianjie Luo",
+        "Yiming Zhong",
+        "Haoming Shen",
+        "Yupeng Xiao",
+        "Zhenguo Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.MM"
+      ],
+      "published": "2026-08-17T06:16:04+00:00",
+      "link": "https://arxiv.org/pdf/2608.16154v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "identity-preserving video generation from reference subjects (image-conditioned generation)",
+      "llm_evidence_cn": "基于参考主体的身份保持视频生成（图像条件生成）",
+      "llm_evidence": "基于参考主体的身份保持视频生成（图像条件生成）",
+      "canonical_evidence": "基于参考主体的身份保持视频生成（图像条件生成）",
+      "llm_tldr_en": "Proposes training-free identity-preserving video generation by decoupling dynamic drafting from identity injection via sparse keyframe editing.",
+      "llm_tldr_cn": "针对身份保持视频生成中调优成本高、长序列动作下身份一致性难以维持的问题，本文提出 KeyID，将视频动态生成与身份注入解耦。该方法先基于多参考生成身份无关的视频草稿，再通过稀疏关键帧编辑注入目标身份。实验表明 KeyID 能在复杂长动作中保持身份一致性，且无需额外训练。该工作为图像条件视频生成中的身份控制提供了高效方案。",
+      "llm_tldr": "针对身份保持视频生成中调优成本高、长序列动作下身份一致性难以维持的问题，本文提出 KeyID，将视频动态生成与身份注入解耦。该方法先基于多参考生成身份无关的视频草稿，再通过稀疏关键帧编辑注入目标身份。实验表明 KeyID 能在复杂长动作中保持身份一致性，且无需额外训练。该工作为图像条件视频生成中的身份控制提供了高效方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
