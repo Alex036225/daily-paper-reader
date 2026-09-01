@@ -1,0 +1,179 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-01T00:12:18.540705+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2608.22819v1",
+      "source": "arxiv",
+      "title": "Direct, Parallel, or Sequential? A Comparative Study of Training-Free Multi-Subject Image-to-Video Generation",
+      "abstract": "Text-conditioned image-to-video (I2V) generation has advanced rapidly, yet generating videos with multiple subjects remains challenging. A model must simultaneously preserve the appearance of each subject, assign distinct motions, and maintain coherent spatial and temporal interactions. This paper presents a systematic study of three representative paradigms for training-free multi-subject I2V generation: direct, parallel, and sequential generation. Direct generation applies a pretrained I2V model to the complete reference image and prompt, requiring all subjects and motions to be synthesized jointly. Parallel and sequential generation instead decompose the reference image and prompt into subject-specific visual and textual conditions. Parallel generation synthesizes each subject independently and subsequently composes the resulting videos, reducing the complexity of each generation step at the cost of weaker inter-subject context. Sequential generation first synthesizes a background video and then progressively introduces individual subjects. This preserves accumulated scene context but introduces sensitivity to subject ordering and error propagation. We empirically evaluate the three paradigms across diverse multi-subject scenes, comparing appearance preservation, motion fidelity, temporal consistency, and inter-subject coherence, while also characterizing their distinct failure modes. Our findings reveal the strengths and limitations of each paradigm and offer practical insights for designing controllable multi-subject video generation systems.",
+      "authors": [
+        "Yanliang Qi",
+        "Kexi Chen",
+        "Muchao Ye",
+        "Haomiao Ni"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-24T05:30:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.22819v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Systematic study of training-free multi-subject image-to-video generation",
+      "llm_evidence_cn": "无训练多主体图像到视频生成的系统研究",
+      "llm_evidence": "无训练多主体图像到视频生成的系统研究",
+      "canonical_evidence": "无训练多主体图像到视频生成的系统研究",
+      "llm_tldr_en": "Compares direct, parallel, and sequential paradigms for training-free multi-subject image-to-video generation.",
+      "llm_tldr_cn": "文本条件的图像到视频生成在多主体场景中仍面临挑战，需同时保持外观、分配不同运动并维持时空一致性。本文系统研究了三种代表性的无训练多主体I2V生成范式：直接、并行和顺序生成。直接生成将完整参考图像和提示输入预训练I2V模型；并行和顺序生成则分解参考图像和提示。通过比较分析，揭示了各范式的优缺点。该研究为多主体I2V生成提供了实用指导。",
+      "llm_tldr": "文本条件的图像到视频生成在多主体场景中仍面临挑战，需同时保持外观、分配不同运动并维持时空一致性。本文系统研究了三种代表性的无训练多主体I2V生成范式：直接、并行和顺序生成。直接生成将完整参考图像和提示输入预训练I2V模型；并行和顺序生成则分解参考图像和提示。通过比较分析，揭示了各范式的优缺点。该研究为多主体I2V生成提供了实用指导。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.25157v1",
+      "source": "arxiv",
+      "title": "What Do Audio-Visual Synchronization Metrics Actually Measure?",
+      "abstract": "Automatic AV-sync metrics are widely used to rank and train audio-visual generators, but they are rarely audited as measurement instruments. We jointly audit AV-Align, ImageBind AV-relevance, JavisScore, and Synchformer/DeSync under a common reliability protocol: controlled-distortion monotonicity, preprocessing sensitivity, rank uncertainty, cross-metric agreement, PEAVS-proxy agreement, and learned fusion. The result is an axis split, not a single winner: Synchformer/DeSync is the strongest temporal-offset tracker ($τ=0.84$), ImageBind/JavisScore better match the PEAVS human-aligned proxy ($τ=0.20$) and content-disruption families, and AV-Align is the weakest standalone metric. The metrics mutually disagree (Krippendorff $α=0.066$), and neither linear nor simple $k$-NN fusion improves PEAVS agreement over the best individual metric. We recommend reporting AV-sync as a Reliability Card (metric-family breakdowns with confidence intervals) rather than a single bare synchronization score.",
+      "authors": [
+        "Jai Kumar Sharma",
+        "Peeyush Tapadiya"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.MM",
+        "cs.SD"
+      ],
+      "published": "2026-08-25T21:08:24+00:00",
+      "link": "https://arxiv.org/pdf/2608.25157v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "audits audio-visual synchronization metrics, informative for lip sync evaluation",
+      "llm_evidence_cn": "审计音视频同步指标，为唇同步评估提供参考",
+      "llm_evidence": "审计音视频同步指标，为唇同步评估提供参考",
+      "canonical_evidence": "审计音视频同步指标，为唇同步评估提供参考",
+      "llm_tldr_en": "Audits four AV-sync metrics under a reliability protocol, revealing their strengths, weaknesses, and disagreements, providing guidance for audio-visual generation evaluation including lip sync.",
+      "llm_tldr_cn": "针对自动音视频同步指标缺乏系统审计的问题，联合评估四种指标在扰动单调性、预处理敏感性等维度的表现，发现指标间显著分歧，为包括唇同步在内的音视频生成评估提供方法学参考。",
+      "llm_tldr": "针对自动音视频同步指标缺乏系统审计的问题，联合评估四种指标在扰动单调性、预处理敏感性等维度的表现，发现指标间显著分歧，为包括唇同步在内的音视频生成评估提供方法学参考。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.24674v1",
+      "source": "arxiv",
+      "title": "TurboT2VA: Fast Large-Scale Text-to-Video-Audio Generation via Score-Regularized Consistency Distillation",
+      "abstract": "Joint text-to-video-audio generation produces synchronized visual and acoustic content, but the long sampling trajectories and heterogeneous multimodal computation of large models make inference prohibitively expensive. We present TurboT2VA, a distillation and inference framework for accelerating a 19B-parameter joint video-audio model. Large-scale T2VA distillation is challenged by modality-imbalanced optimization, the difficulty of continuous-time consistency training at scale, and the quality--diversity trade-off. TurboT2VA addresses these issues with per-modality normalization and a progressive curriculum comprising discrete consistency warm-up, continuous consistency refinement, and joint consistency--distribution matching. The curriculum first establishes a stable, diverse generation trajectory and only then introduces distribution-level refinement. On LTX-2, four-step distillation reduces generator latency from 50.52s to 2.51s at the standard evaluation resolution of 512$\\times$768, achieving a 20.1$\\times$ speedup while maintaining strong visual quality, audio fidelity, diversity, and video-audio synchronization. We further develop an architecture-aware inference stack that combines guarded W8A8 and fused operators, padded-text compaction, and modality-aware sparse attention while preserving dense cross-modal and text-conditioning paths. Under the high-resolution deployment setting at 1024$\\times$1792, the complete stack reduces generator latency from 318.74s to 5.83s on one NVIDIA H20, achieving a 54.67$\\times$ generator-only speedup. Inference code and generation demos are available at https://github.com/thu-ml/TurboDiffusion/tree/main/turbot2va.",
+      "authors": [
+        "Xiaoda Yang",
+        "Yuxiang Liu",
+        "Kaiwen Zheng",
+        "Yuan Liu",
+        "Yibo Lai",
+        "Shengpeng Ji",
+        "Kai Jiang",
+        "Jianfei Chen",
+        "Xiaobin Hu",
+        "Shuicheng Yan",
+        "Jintao Zhang",
+        "Jun Zhu",
+        "Zhou Zhao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-25T15:09:02+00:00",
+      "link": "https://arxiv.org/pdf/2608.24674v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Joint text-to-video-audio generation with synchronized visual and acoustic content, distillation for accelerating large multimodal model",
+      "llm_evidence_cn": "联合文本到视频音频生成，同步视觉与听觉内容，通过蒸馏加速大型多模态模型",
+      "llm_evidence": "联合文本到视频音频生成，同步视觉与听觉内容，通过蒸馏加速大型多模态模型",
+      "canonical_evidence": "联合文本到视频音频生成，同步视觉与听觉内容，通过蒸馏加速大型多模态模型",
+      "llm_tldr_en": "TurboT2VA accelerates a 19B-parameter joint text-to-video-audio model using score-regularized consistency distillation, addressing modality-imbalanced optimization and quality-diversity trade-offs, enabling faster synchronized multimodal generation.",
+      "llm_tldr_cn": "大规模文本到视频音频联合生成模型推理成本高，且多模态计算复杂。TurboT2VA提出基于得分正则化一致性蒸馏的加速框架，通过逐模态归一化和渐进课程处理模态不平衡与质量多样性权衡。实验表明，该方法显著加速了19B联合模型推理，同时保持生成质量。",
+      "llm_tldr": "大规模文本到视频音频联合生成模型推理成本高，且多模态计算复杂。TurboT2VA提出基于得分正则化一致性蒸馏的加速框架，通过逐模态归一化和渐进课程处理模态不平衡与质量多样性权衡。实验表明，该方法显著加速了19B联合模型推理，同时保持生成质量。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.27123v1",
+      "source": "arxiv",
+      "title": "EditaLive! Unified Character Video Editing for Live Streaming",
+      "abstract": "Conventional video editing primarily focuses on scene-level content, whereas live streaming places greater emphasis on the human subject. However, directly applying existing video-editing methods to human-centric live streaming remains challenging, as they may introduce facial-expression inconsistencies and typically depend on multiple offline inference steps, making them unsuitable for real-time interaction. We propose EditaLive, a novel framework for real-time streaming character video editing. In detail, we start from a pretrained image animation model (Wan-Animate), which naturally decouples appearance from motion, and repurpose it as the base model for instruction-based human-centric video editing by reference frame editing and video reconstruction via the collected CharEdit-50K dataset. Besides, we adapt the model from offline bidirectional to causal streaming generation, and design an aligned self-rollout distillation strategy that compresses the model into a two-step sampler, where fixed RoPE and align forcing reduce training--inference discrepancies, and first-frame preserved sparse attention filters redundant historical information to mitigate appearance drift. Extensive experiments demonstrate that EditaLive delivers state-of-the-art editing performance with faithful preservation of facial expressions and low-latency real-time streaming inference.",
+      "authors": [
+        "Zhiyuan Li",
+        "Chi-Man Pun",
+        "Peng-Tao Jiang",
+        "Bo Li",
+        "Xiaodong Cun"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-27T13:37:45+00:00",
+      "link": "https://arxiv.org/pdf/2608.27123v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Repurposes pretrained Wan-Animate for instruction-based human-centric video editing, decoupling appearance from motion",
+      "llm_evidence_cn": "利用预训练Wan-Animate图像动画模型进行人物视频编辑，分离外观与运动",
+      "llm_evidence": "利用预训练Wan-Animate图像动画模型进行人物视频编辑，分离外观与运动",
+      "canonical_evidence": "利用预训练Wan-Animate图像动画模型进行人物视频编辑，分离外观与运动",
+      "llm_tldr_en": "EditaLive repurposes the Wan-Animate pretrained image animation model for real-time streaming character video editing, addressing facial-expression consistency and real-time constraints through reference frame editing and video reconstruction.",
+      "llm_tldr_cn": "现有视频编辑方法难以在真人直播场景中保持面部表情一致性并实时运行。EditaLive从预训练图像动画模型Wan-Animate出发，利用其外观与运动自然解耦的特性，将参考帧编辑与视频重建结合，实现基于指令的人物视频编辑。该方法在保持实时交互的同时，提高了编辑后人物的表情一致性。",
+      "llm_tldr": "现有视频编辑方法难以在真人直播场景中保持面部表情一致性并实时运行。EditaLive从预训练图像动画模型Wan-Animate出发，利用其外观与运动自然解耦的特性，将参考帧编辑与视频重建结合，实现基于指令的人物视频编辑。该方法在保持实时交互的同时，提高了编辑后人物的表情一致性。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
