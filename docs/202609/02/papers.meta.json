@@ -1,0 +1,54 @@
+{
+  "label": "2026-09-02",
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T23:06:38",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202609/02/2608.31106v1-dreamx-creator-democratizing-native-audio-video-generation-at-2k-resolution",
+      "section": "deep",
+      "title_en": "DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution",
+      "authors": "Jiashu Zhu, Yanhao Zheng, Ruitian Tian, Rujing Dang, Shen Zhang, Bingze Song, Jiachen Lei, Ruimin Lin, Jiahong Wu, Xiangxiang Chu",
+      "date": "2026-08-31",
+      "pdf": "https://arxiv.org/pdf/2608.31106v1",
+      "score": "8.0",
+      "evidence": "以首帧图像和文本提示为条件的原生联合音视频生成",
+      "tldr": "近期视频生成器普遍忽略音频或分阶段合成，导致视觉动态与声学事件难以相互对应，限制了音视频联合建模。DreamX-Creator 1.0提出紧凑7B原生联合音视频生成系统，以首帧和文本为条件，通过门控跨模态注意力耦合音频与视频流，并采用渐进联合训练、音视频强化学习及自回归1步2K细化。在2K分辨率下实现原生同步音视频生成，性能与最先进开源系统竞争。发布紧凑7B生成器和2K细化器，推动原生音视频生成民主化，为未来统一建模提供基础。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Recent video generators often omit audio or synthesize it in a separate stage, limiting reciprocal modeling of visual dynamics and acoustic events. We present DreamX-Creator 1.0, a compact native joint audio-video generation system centered on a 7B generator. Conditioned on a first frame and a text prompt, the generator jointly denoises modality-specialized audio and video streams. The streams are processed independently in the first half of the network and coupled in the latter half through Gated Cross-Modal Attention, whose token- and head-wise output gates modulate each active cross-modal attention-head output. A unified Audio-Video Data System constructs and filters temporally coherent clips, produces structured multimodal annotations, and organizes clips into capability-oriented data pools. Progressive Joint Training comprises two audio-video pre-training stages followed by High-Quality Finetuning. Audio-Video Reinforcement Learning further post-trains the generator with Modality-Aware Multimodal Feedback that routes video-, audio-, and cross-modal feedback to the corresponding streams. For high-resolution output, our Autoregressive 1-Step 2K Refinement pipeline adapts a bidirectional multi-step teacher into an autoregressive multi-step refiner and distills it into a student requiring one denoising evaluation per temporal chunk. Overall, DreamX-Creator 1.0 achieves native, synchronized audio-video generation with performance competitive with state-of-the-art open-source systems. By releasing our compact 7B generator and 2K Refiner, we seek to democratize native audio-video generation and provide an accessible foundation for future research in unified audio-video generative modeling.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/02/2609.01277v1-timesteer-inference-time-speech-scheduling-in-joint-audio-visual-diffusion-models",
+      "section": "deep",
+      "title_en": "TimeSteer: Inference-Time Speech Scheduling in Joint Audio-Visual Diffusion Models",
+      "authors": "Chao Zhou, Yiling Chen, Qi Chu, Tao Gong, Nenghai Yu, Tianyi We",
+      "date": "2026-09-01",
+      "pdf": "https://arxiv.org/pdf/2609.01277v1",
+      "score": "8.0",
+      "evidence": "推理时语音调度控制联合音视频扩散模型中语音和视觉发音的时间",
+      "tldr": "预训练联合音视频扩散模型虽能控制生成内容，却无法显式指定发声时间。TimeSteer 是一种免训练推理时调度框架，利用时间敏感交叉注意力定位话语源跨度，并通过区域感知潜在重映射将音视频内容转移到目标区间。在首个 SpeechShift 基准上，该方法大幅提升区间可控性，同时保持生成质量，为联合音视频生成引入时间维度控制。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Although pretrained joint audio-visual diffusion models offer rich control over \\emph{what} to generate, they provide no explicit control over \\emph{when} an utterance should occur. To address this, we study \\emph{inference-time speech scheduling}, a novel task that places coupled speech and visual articulation within user-specified begin--end intervals without finetuning the backbone model. We uncover two intrinsic properties of the denoising process that enable this task. First, a timing-sensitive text-to-audio cross-attention head exposes each utterance's model-implied source span along the latent timeline. Second, the predicted clean latent already organizes coupled speech and visual articulation, allowing their temporal placement to be edited without regenerating the content. Building on these discoveries, we propose \\textbf{TimeSteer}, a training-free framework that localizes each utterance's source span through \\textbf{Source Span Localization} and transfers the associated audio-visual latent content from the source interval to the specified target interval through \\textbf{Region-Aware Latent Remapping}. We further introduce \\textbf{SpeechShift}, the first benchmark for interval-level speech scheduling in joint audio-visual generation. Experiments across two representative backbones show that TimeSteer substantially improves interval controllability over training-free baselines while maintaining competitive overall generation quality.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/02/2608.29322v1-test-time-scaling-for-video-diffusion-models-via-diagnosis-guided-candidate-recycling",
+      "section": "quick",
+      "title_en": "Test-Time Scaling for Video Diffusion Models via Diagnosis-Guided Candidate Recycling",
+      "authors": "Hangzhou He, Lunhao Duan, Shanshan Zhao, Kaiwen Li, Qing-Guo Chen, Weihua Luo, Yanye Lu",
+      "date": "2026-08-29",
+      "pdf": "https://arxiv.org/pdf/2608.29322v1",
+      "score": "6.0",
+      "evidence": "视频扩散模型的测试时扩展",
+      "tldr": "视频扩散模型的高质量生成常依赖闭源或大规模资源，测试时缩放虽能提升轻量生成器，但现有噪声搜索范式浪费计算并丢弃可恢复结构。GEARS提出诊断引导的候选回收，利用生成-评估-编辑循环将低分候选转化为可编辑先验并回收进搜索池。在相同计算预算下，GEARS在VBench上显著优于现有方法，使1.3B模型总分达到14B级别。该训练无关框架为轻量视频扩散模型提供了高效测试时优化路径，消融验证关键组件必要性。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Recent video diffusion models have achieved remarkable generation quality, but high-fidelity results still largely depend on closed-source systems or costly large-scale infrastructure. Test-time scaling (TTS) offers a training-free way to improve lightweight generators by spending additional inference compute, yet existing methods mostly remain within a noise-search paradigm: they sample, select, or perturb denoising trajectories and discard low-scoring candidates after expensive generation. This generate-and-discard process wastes not only computation but also the partial motion, layout, or appearance structure already encoded in recoverable samples. We present \\textbf{GEARS} (\\textbf{G}uided \\textbf{E}diting for \\textbf{A}daptive \\textbf{R}ecycling \\textbf{S}earch), a training-free framework that introduces {diagnosis-guided candidate recycling} into video TTS by turning such candidates into editable priors through a generation-evaluation-editing loop. GEARS consists of two collaborative components. The \\textbf{Stage-Aware Scheduler} determines what to repair, when to repair it, and which candidates should be preserved, recycled, or discarded. The \\textbf{Candidate Recycler} diagnoses recoverable failures from keyframes and multi-dimensional reward feedback, derives candidate-specific repair prompts, and repairs the corresponding candidates through manifold-aware latent SDEdit. The repaired candidates are recycled into the search pool, creating refinement paths beyond standard noise perturbation while preserving useful structure. Under matched NFE budgets, GEARS consistently outperforms existing video TTS methods on VBench, bringing a 1.3B model to a total score comparable to a 14B counterpart, and ablations verify the necessity of adaptive scheduling, diagnosis-conditioned editing, and manifold-aware re-denoising. Code is available on GitHub.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

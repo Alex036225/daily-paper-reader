@@ -1,0 +1,144 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-02T22:56:46.219844+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2608.31106v1",
+      "source": "arxiv",
+      "title": "DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution",
+      "abstract": "Recent video generators often omit audio or synthesize it in a separate stage, limiting reciprocal modeling of visual dynamics and acoustic events. We present DreamX-Creator 1.0, a compact native joint audio-video generation system centered on a 7B generator. Conditioned on a first frame and a text prompt, the generator jointly denoises modality-specialized audio and video streams. The streams are processed independently in the first half of the network and coupled in the latter half through Gated Cross-Modal Attention, whose token- and head-wise output gates modulate each active cross-modal attention-head output. A unified Audio-Video Data System constructs and filters temporally coherent clips, produces structured multimodal annotations, and organizes clips into capability-oriented data pools. Progressive Joint Training comprises two audio-video pre-training stages followed by High-Quality Finetuning. Audio-Video Reinforcement Learning further post-trains the generator with Modality-Aware Multimodal Feedback that routes video-, audio-, and cross-modal feedback to the corresponding streams. For high-resolution output, our Autoregressive 1-Step 2K Refinement pipeline adapts a bidirectional multi-step teacher into an autoregressive multi-step refiner and distills it into a student requiring one denoising evaluation per temporal chunk. Overall, DreamX-Creator 1.0 achieves native, synchronized audio-video generation with performance competitive with state-of-the-art open-source systems. By releasing our compact 7B generator and 2K Refiner, we seek to democratize native audio-video generation and provide an accessible foundation for future research in unified audio-video generative modeling.",
+      "authors": [
+        "Jiashu Zhu",
+        "Yanhao Zheng",
+        "Ruitian Tian",
+        "Rujing Dang",
+        "Shen Zhang",
+        "Bingze Song",
+        "Jiachen Lei",
+        "Ruimin Lin",
+        "Jiahong Wu",
+        "Xiangxiang Chu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "published": "2026-08-31T17:11:05+00:00",
+      "link": "https://arxiv.org/pdf/2608.31106v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Native joint audio-video generation conditioned on first frame and text prompt",
+      "llm_evidence_cn": "以首帧图像和文本提示为条件的原生联合音视频生成",
+      "llm_evidence": "以首帧图像和文本提示为条件的原生联合音视频生成",
+      "canonical_evidence": "以首帧图像和文本提示为条件的原生联合音视频生成",
+      "llm_tldr_en": "DreamX-Creator is a 7B joint audio-video generator that produces synchronized audio and video from a first frame and text, using gated cross-modal attention.",
+      "llm_tldr_cn": "针对现有视频生成器忽略音频或分阶段合成导致视听协同不足的问题，该论文提出DreamX-Creator 1.0，一个以首帧图像和文本为条件的7B原生联合音视频生成模型。模型前半部分独立处理音频和视频流，后半部分通过门控跨模态注意力耦合，并配套统一音视频数据系统。该方法在2K分辨率下实现同步生成，展示了小型模型的高质量多模态生成能力。",
+      "llm_tldr": "针对现有视频生成器忽略音频或分阶段合成导致视听协同不足的问题，该论文提出DreamX-Creator 1.0，一个以首帧图像和文本为条件的7B原生联合音视频生成模型。模型前半部分独立处理音频和视频流，后半部分通过门控跨模态注意力耦合，并配套统一音视频数据系统。该方法在2K分辨率下实现同步生成，展示了小型模型的高质量多模态生成能力。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.01277v1",
+      "source": "arxiv",
+      "title": "TimeSteer: Inference-Time Speech Scheduling in Joint Audio-Visual Diffusion Models",
+      "abstract": "Although pretrained joint audio-visual diffusion models offer rich control over \\emph{what} to generate, they provide no explicit control over \\emph{when} an utterance should occur. To address this, we study \\emph{inference-time speech scheduling}, a novel task that places coupled speech and visual articulation within user-specified begin--end intervals without finetuning the backbone model. We uncover two intrinsic properties of the denoising process that enable this task. First, a timing-sensitive text-to-audio cross-attention head exposes each utterance's model-implied source span along the latent timeline. Second, the predicted clean latent already organizes coupled speech and visual articulation, allowing their temporal placement to be edited without regenerating the content. Building on these discoveries, we propose \\textbf{TimeSteer}, a training-free framework that localizes each utterance's source span through \\textbf{Source Span Localization} and transfers the associated audio-visual latent content from the source interval to the specified target interval through \\textbf{Region-Aware Latent Remapping}. We further introduce \\textbf{SpeechShift}, the first benchmark for interval-level speech scheduling in joint audio-visual generation. Experiments across two representative backbones show that TimeSteer substantially improves interval controllability over training-free baselines while maintaining competitive overall generation quality.",
+      "authors": [
+        "Chao Zhou",
+        "Yiling Chen",
+        "Qi Chu",
+        "Tao Gong",
+        "Nenghai Yu",
+        "Tianyi We"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MM"
+      ],
+      "published": "2026-09-01T14:12:57+00:00",
+      "link": "https://arxiv.org/pdf/2609.01277v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Inference-time speech scheduling controls timing of speech and visual articulation in joint audio-visual diffusion models",
+      "llm_evidence_cn": "推理时语音调度控制联合音视频扩散模型中语音和视觉发音的时间",
+      "llm_evidence": "推理时语音调度控制联合音视频扩散模型中语音和视觉发音的时间",
+      "canonical_evidence": "推理时语音调度控制联合音视频扩散模型中语音和视觉发音的时间",
+      "llm_tldr_en": "TimeSteer enables inference-time placement of coupled speech and visual articulation within user-specified intervals without finetuning, improving temporal control for precise lip sync.",
+      "llm_tldr_cn": "针对预训练联合音视频扩散模型缺乏对发声时间显式控制的问题，该论文提出TimeSteer，一种无需微调的推理时语音调度方法。方法利用去噪过程中时序敏感的文本到音频交叉注意力头定位发声区间，并借助预测干净潜变量中的耦合语音与视觉发音进行时间重排。实验表明该方法能精确控制语音和唇部动作的时间位置，为精确唇同步提供灵活控制手段。",
+      "llm_tldr": "针对预训练联合音视频扩散模型缺乏对发声时间显式控制的问题，该论文提出TimeSteer，一种无需微调的推理时语音调度方法。方法利用去噪过程中时序敏感的文本到音频交叉注意力头定位发声区间，并借助预测干净潜变量中的耦合语音与视觉发音进行时间重排。实验表明该方法能精确控制语音和唇部动作的时间位置，为精确唇同步提供灵活控制手段。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.29322v1",
+      "source": "arxiv",
+      "title": "Test-Time Scaling for Video Diffusion Models via Diagnosis-Guided Candidate Recycling",
+      "abstract": "Recent video diffusion models have achieved remarkable generation quality, but high-fidelity results still largely depend on closed-source systems or costly large-scale infrastructure. Test-time scaling (TTS) offers a training-free way to improve lightweight generators by spending additional inference compute, yet existing methods mostly remain within a noise-search paradigm: they sample, select, or perturb denoising trajectories and discard low-scoring candidates after expensive generation. This generate-and-discard process wastes not only computation but also the partial motion, layout, or appearance structure already encoded in recoverable samples. We present \\textbf{GEARS} (\\textbf{G}uided \\textbf{E}diting for \\textbf{A}daptive \\textbf{R}ecycling \\textbf{S}earch), a training-free framework that introduces {diagnosis-guided candidate recycling} into video TTS by turning such candidates into editable priors through a generation-evaluation-editing loop. GEARS consists of two collaborative components. The \\textbf{Stage-Aware Scheduler} determines what to repair, when to repair it, and which candidates should be preserved, recycled, or discarded. The \\textbf{Candidate Recycler} diagnoses recoverable failures from keyframes and multi-dimensional reward feedback, derives candidate-specific repair prompts, and repairs the corresponding candidates through manifold-aware latent SDEdit. The repaired candidates are recycled into the search pool, creating refinement paths beyond standard noise perturbation while preserving useful structure. Under matched NFE budgets, GEARS consistently outperforms existing video TTS methods on VBench, bringing a 1.3B model to a total score comparable to a 14B counterpart, and ablations verify the necessity of adaptive scheduling, diagnosis-conditioned editing, and manifold-aware re-denoising. Code is available on GitHub.",
+      "authors": [
+        "Hangzhou He",
+        "Lunhao Duan",
+        "Shanshan Zhao",
+        "Kaiwen Li",
+        "Qing-Guo Chen",
+        "Weihua Luo",
+        "Yanye Lu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-29T15:08:31+00:00",
+      "link": "https://arxiv.org/pdf/2608.29322v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "test-time scaling for video diffusion models",
+      "llm_evidence_cn": "视频扩散模型的测试时扩展",
+      "llm_evidence": "视频扩散模型的测试时扩展",
+      "canonical_evidence": "视频扩散模型的测试时扩展",
+      "llm_tldr_en": "Introduces GEARS, a test-time scaling method that recycles partially generated video candidates via diagnosis-guided editing, improving quality without retraining.",
+      "llm_tldr_cn": "该论文针对现有视频扩散模型测试时扩展方法浪费计算和丢弃可恢复结构的问题，提出诊断引导的候选回收方法GEARS。该方法分析生成过程中候选样本的失败原因，通过自适应编辑对低分但含有有用结构的样本进行修复，而非完全丢弃。实验表明在相同推理预算下能显著提升轻量级视频生成器的输出质量，为资源受限场景下的高质量视频生成提供了训练免的方法。",
+      "llm_tldr": "该论文针对现有视频扩散模型测试时扩展方法浪费计算和丢弃可恢复结构的问题，提出诊断引导的候选回收方法GEARS。该方法分析生成过程中候选样本的失败原因，通过自适应编辑对低分但含有有用结构的样本进行修复，而非完全丢弃。实验表明在相同推理预算下能显著提升轻量级视频生成器的输出质量，为资源受限场景下的高质量视频生成提供了训练免的方法。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
