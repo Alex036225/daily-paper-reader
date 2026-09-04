@@ -1,0 +1,104 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-04T22:42:47.897284+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.02367v1",
+      "source": "arxiv",
+      "title": "The Missing Temporal Link: Temporal Context Routing for Script-Driven Audio-Video Generation",
+      "abstract": "Joint audio-video generation models have made substantial progress in visual quality and audio-visual synchronization. However, they still provide limited control over when shot transitions occur and dialogue is spoken. This limitation constrains their application in script-driven content creation, where timing errors can undermine narrative coherence and the viewing experience. Current joint generators align video and audio representations on a shared temporal axis, yet the precise timing of shots and dialogue specified in a structured prompt is encoded only in the prompt's text representation and remains unaligned with the temporal coordinates of either modality. Consequently, video and audio may remain synchronized with each other while both fail to follow the script timeline. This mismatch motivates us to extend temporal alignment beyond video and audio to include the structured script. We therefore introduce Temporal Context Routing (TCR), which maps the script timing onto the shared temporal axis of video and audio generation and routes each prompt's guidance to the corresponding positions in both modalities. Compared with the baseline on 200 test scripts, TCR reduces Shot Boundary MAE by 96%, from 1.11 s to 0.042 s, and raises Dialogue Acc@0.5 s from 28.3% to 84.1%. TCR achieves these improvements while maintaining visual quality and audio-visual synchronization comparable to those of the baselines. A user study further shows that participants prefer TCR on all five evaluated dimensions.",
+      "authors": [
+        "Yichen Liu",
+        "Quanwei Zhang",
+        "Haozhe Wang",
+        "Donghao Zhou",
+        "Xiaojie Li",
+        "Yang Shi",
+        "Jiaming Liu",
+        "Ruihua Huang",
+        "Yingtian Zou",
+        "Daquan Zhou"
+      ],
+      "primary_category": "cs.MM",
+      "categories": [
+        "cs.MM",
+        "cs.CV"
+      ],
+      "published": "2026-09-02T09:39:50+00:00",
+      "link": "https://arxiv.org/pdf/2609.02367v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Joint audio-video generation with explicit control over dialogue timing and shot transitions, relevant to lip-sync accuracy",
+      "llm_evidence_cn": "联合音视频生成，显式控制对话时序和镜头切换，与唇形同步精度相关",
+      "llm_evidence": "联合音视频生成，显式控制对话时序和镜头切换，与唇形同步精度相关",
+      "canonical_evidence": "联合音视频生成，显式控制对话时序和镜头切换，与唇形同步精度相关",
+      "llm_tldr_en": "Proposes Temporal Context Routing for script-driven audio-video generation, aligning precise timing of shots and dialogue to improve narrative coherence.",
+      "llm_tldr_cn": "针对联合音视频生成中镜头切换和对话时序控制不足的问题，提出时序上下文路由方法。该方法在共享时间轴上对齐视频与音频表示，并将脚本中指定的时序信息与两模态的时间坐标对齐，从而实现更精确的时序控制。实验表明该方法改善了叙事连贯性和观看体验。该工作对多模态视频生成及唇形同步时序控制具有方法论参考价值。",
+      "llm_tldr": "针对联合音视频生成中镜头切换和对话时序控制不足的问题，提出时序上下文路由方法。该方法在共享时间轴上对齐视频与音频表示，并将脚本中指定的时序信息与两模态的时间坐标对齐，从而实现更精确的时序控制。实验表明该方法改善了叙事连贯性和观看体验。该工作对多模态视频生成及唇形同步时序控制具有方法论参考价值。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.03919v1",
+      "source": "arxiv",
+      "title": "OctWorld: Long-Range World-Consistent Video Generation with Octree-Based 3D Mapping",
+      "abstract": "We present OctWorld, a video diffusion framework with persistent 3D memory for generating explorable, world-consistent, and high-fidelity visual scenes. Given a single image, OctWorld performs stable autoregressive world generation along user-specified camera trajectories. We focus on long-range generation, characterized by extended camera paths and wide viewpoint coverage, where preserving spatial consistency is particularly challenging when previously generated regions are revisited. To address this problem, we introduce OctMap, an extensible and spatially adaptive 3D memory that progressively fuses generated visual observations and their corresponding depth maps into a global representation. OctMap employs TSDF fusion within a dynamic sparse octree whose spatial resolution adapts to image evidence. This design preserves geometric and appearance details across diverse scene scales while maintaining low memory overhead. Experiments demonstrate that OctWorld generates long-range, spatially consistent videos and outperforms prior methods on both existing benchmarks and challenging long-range generation settings. OctMap also provides clear advantages over point-based caches and fixed-resolution TSDF volumes. Project page: https://maxtirerror.github.io/octworldpage/",
+      "authors": [
+        "Zelong Lv",
+        "Sicheng Xu",
+        "Jianfeng Xiang",
+        "Ruicheng Wang",
+        "Yue Dong",
+        "Yu Deng",
+        "Guangzhong Sun",
+        "Jiaolong Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-03T14:35:38+00:00",
+      "link": "https://arxiv.org/pdf/2609.03919v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "video generation conditioned on a single image using video diffusion with 3D memory",
+      "llm_evidence_cn": "基于单张图像的条件下进行视频生成，利用视频扩散与3D记忆",
+      "llm_evidence": "基于单张图像的条件下进行视频生成，利用视频扩散与3D记忆",
+      "canonical_evidence": "基于单张图像的条件下进行视频生成，利用视频扩散与3D记忆",
+      "llm_tldr_en": "OctWorld presents a video diffusion framework with persistent 3D memory for generating world-consistent videos from a single image along camera trajectories, addressing long-range spatial consistency.",
+      "llm_tldr_cn": "OctWorld 提出了一个带有持久3D记忆的视频扩散框架，能够从单张图像出发沿用户指定的相机轨迹生成世界一致的视频。它针对长距离生成中重访区域的空间一致性问题，引入了可扩展的八叉树3D地图来融合生成的视觉观测与深度图。实验表明该方法在远距离、宽视角覆盖下保持了高保真度和一致性。该工作为图像条件下的长时序视频生成提供了有效方案。",
+      "llm_tldr": "OctWorld 提出了一个带有持久3D记忆的视频扩散框架，能够从单张图像出发沿用户指定的相机轨迹生成世界一致的视频。它针对长距离生成中重访区域的空间一致性问题，引入了可扩展的八叉树3D地图来融合生成的视觉观测与深度图。实验表明该方法在远距离、宽视角覆盖下保持了高保真度和一致性。该工作为图像条件下的长时序视频生成提供了有效方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

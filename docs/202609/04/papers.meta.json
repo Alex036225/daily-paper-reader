@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-04",
+  "date": "2026-09-04",
+  "generated_at": "2026-09-04T22:46:12",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/04/2609.02367v1-the-missing-temporal-link-temporal-context-routing-for-script-driven-audio-video-generation",
+      "section": "quick",
+      "title_en": "The Missing Temporal Link: Temporal Context Routing for Script-Driven Audio-Video Generation",
+      "authors": "Yichen Liu, Quanwei Zhang, Haozhe Wang, Donghao Zhou, Xiaojie Li, Yang Shi, Jiaming Liu, Ruihua Huang, Yingtian Zou, Daquan Zhou",
+      "date": "2026-09-02",
+      "pdf": "https://arxiv.org/pdf/2609.02367v1",
+      "score": "7.0",
+      "evidence": "联合音视频生成，显式控制对话时序和镜头切换，与唇形同步精度相关",
+      "tldr": "现有联合音视频生成缺乏对镜头切换与对话时序的精确控制，导致脚本驱动内容创作中叙事时间错位。本文提出时序上下文路由 TCR，将结构化脚本的时序映射到视频和音频共享时间轴，并路由引导至对应位置。在200个测试脚本上，TCR 将镜头边界 MAE 降低96%至0.042秒，对话准确率提升至84.1%，同时保持视觉与音视频同步质量。该工作使生成模型能够遵循脚本时间线，显著提升自动化内容创作的时序可控性。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Joint audio-video generation models have made substantial progress in visual quality and audio-visual synchronization. However, they still provide limited control over when shot transitions occur and dialogue is spoken. This limitation constrains their application in script-driven content creation, where timing errors can undermine narrative coherence and the viewing experience. Current joint generators align video and audio representations on a shared temporal axis, yet the precise timing of shots and dialogue specified in a structured prompt is encoded only in the prompt's text representation and remains unaligned with the temporal coordinates of either modality. Consequently, video and audio may remain synchronized with each other while both fail to follow the script timeline. This mismatch motivates us to extend temporal alignment beyond video and audio to include the structured script. We therefore introduce Temporal Context Routing (TCR), which maps the script timing onto the shared temporal axis of video and audio generation and routes each prompt's guidance to the corresponding positions in both modalities. Compared with the baseline on 200 test scripts, TCR reduces Shot Boundary MAE by 96%, from 1.11 s to 0.042 s, and raises Dialogue Acc@0.5 s from 28.3% to 84.1%. TCR achieves these improvements while maintaining visual quality and audio-visual synchronization comparable to those of the baselines. A user study further shows that participants prefer TCR on all five evaluated dimensions.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/04/2609.03919v1-octworld-long-range-world-consistent-video-generation-with-octree-based-3d-mapping",
+      "section": "quick",
+      "title_en": "OctWorld: Long-Range World-Consistent Video Generation with Octree-Based 3D Mapping",
+      "authors": "Zelong Lv, Sicheng Xu, Jianfeng Xiang, Ruicheng Wang, Yue Dong, Yu Deng, Guangzhong Sun, Jiaolong Yang",
+      "date": "2026-09-03",
+      "pdf": "https://arxiv.org/pdf/2609.03919v1",
+      "score": "6.0",
+      "evidence": "基于单张图像的条件下进行视频生成，利用视频扩散与3D记忆",
+      "tldr": "OctWorld 提出了一个带有持久3D记忆的视频扩散框架，能够从单张图像出发沿用户指定的相机轨迹生成世界一致的视频。它针对长距离生成中重访区域的空间一致性问题，引入了可扩展的八叉树3D地图来融合生成的视觉观测与深度图。实验表明该方法在远距离、宽视角覆盖下保持了高保真度和一致性。该工作为图像条件下的长时序视频生成提供了有效方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We present OctWorld, a video diffusion framework with persistent 3D memory for generating explorable, world-consistent, and high-fidelity visual scenes. Given a single image, OctWorld performs stable autoregressive world generation along user-specified camera trajectories. We focus on long-range generation, characterized by extended camera paths and wide viewpoint coverage, where preserving spatial consistency is particularly challenging when previously generated regions are revisited. To address this problem, we introduce OctMap, an extensible and spatially adaptive 3D memory that progressively fuses generated visual observations and their corresponding depth maps into a global representation. OctMap employs TSDF fusion within a dynamic sparse octree whose spatial resolution adapts to image evidence. This design preserves geometric and appearance details across diverse scene scales while maintaining low memory overhead. Experiments demonstrate that OctWorld generates long-range, spatially consistent videos and outperforms prior methods on both existing benchmarks and challenging long-range generation settings. OctMap also provides clear advantages over point-based caches and fixed-resolution TSDF volumes. Project page: https://maxtirerror.github.io/octworldpage/",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
