@@ -1,0 +1,24 @@
+{
+  "label": "2026-09-07",
+  "date": "2026-09-07",
+  "generated_at": "2026-09-07T23:16:33",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202609/07/2609.03639v1-stabilizing-camera-controlled-novel-view-synthesis-at-inference-time",
+      "section": "quick",
+      "title_en": "Stabilizing Camera-Controlled Novel View Synthesis at Inference Time",
+      "authors": "Prajwal Singh, Arjun Badola, Seema Kumari, Hajime Nagahara, Shanmuganathan Raman",
+      "date": "2026-09-03",
+      "pdf": "https://arxiv.org/pdf/2609.03639v1",
+      "score": "6.0",
+      "evidence": "利用视频扩散模型从单张图像进行相机控制的新视角合成",
+      "tldr": "针对基于预训练视频扩散模型的免训练相机控制新视角合成在大幅度运动和长序列下不稳定的问题，发现将相机运动分解为小步自回归可限制几何失真并减少误差累积。实验表明小步运动下性能稳定，且评估了几何约束注意力和低频外观约束等组件。该结论为图像条件视频生成的推理稳定性提供了简单有效的设计原则，与图像到视频生成需求相关。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Training-free, camera-controlled novel view synthesis from a single image using pre-trained video diffusion models often becomes unstable under large camera motion and long generation horizons. Existing approaches commonly combine several inference-time components, making it unclear which design choices are most important for stability. We show that the main source of stability is simple. Decomposing camera motion into small autoregressive steps limits per-step geometric distortion and reduces error accumulation. A controlled camera-step study shows that performance remains stable for small motions and degrades more strongly as the per-step motion approaches $18$-$20^\\circ$. We further evaluate geometry-constrained spatial attention and low-frequency appearance anchoring as supporting refinements, together with an efficient registration-free warping pipeline. Across RealEstate10K and MegaScene, CamTrol++ improves temporal and geometric consistency, downstream 3D reconstruction quality, and generation efficiency over training-free baselines. The method remains effective for 56-frame generation and under substantial controlled depth corruption. These results show that careful control of camera motion at inference time can substantially improve the stability of camera-controlled novel view synthesis without retraining or modifying the diffusion backbone.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

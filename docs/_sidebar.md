@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-07 <!--dpr-date:20260907-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/07/2609.03639v1-stabilizing-camera-controlled-novel-view-synthesis-at-inference-time" data-sidebar-item="{&quot;title&quot;: &quot;Stabilizing Camera-Controlled Novel View Synthesis at Inference Time&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.03639v1-stabilizing-camera-controlled-novel-view-synthesis-at-inference-time&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;利用视频扩散模型从单张图像进行相机控制的新视角合成&quot;}">Stabilizing Camera-Controlled Novel View Synthesis at Inference Time</a>
   * 2026-09-04 <!--dpr-date:20260904-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/04/2609.02367v1-the-missing-temporal-link-temporal-context-routing-for-script-driven-audio-video-generation" data-sidebar-item="{&quot;title&quot;: &quot;The Missing Temporal Link: Temporal Context Routing for Script-Driven Audio-Video Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.02367v1-the-missing-temporal-link-temporal-context-routing-for-script-driven-audio-video-generation&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;联合音视频生成，显式控制对话时序和镜头切换，与唇形同步精度相关&quot;}">The Missing Temporal Link: Temporal Context Routing for Script-Driven Audio-Video Generation</a>
