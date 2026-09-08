@@ -1,0 +1,58 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-08T22:43:51.880411+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.03586v1",
+      "source": "arxiv",
+      "title": "The Attention Triangle in Audio-Video Models",
+      "abstract": "Audio-video diffusion models rely on cross-modal attention to coordinate text, sound, and visual content, yet this same mechanism can introduce subtle and systematic semantic leakage. We study these models by probing and analyzing the ``attention triangle,'' comprising the three cross-attention edges connecting the text, audio, and video streams, and examine how semantic information is routed across modalities during generation. Our analysis reveals that routing along the audio-video edge is bidirectional: audio can influence video generation, while video can influence audio generation. This edge is shaped by biases encoded in the model's parameters and emerges as a major contributor to leakage: when prompts are in tension with learned priors, cross-modal interactions may override the intended conditioning and reroute semantics toward visually canonical but incorrect outcomes. These effects suggest that semantic artifacts arise not merely from attention spreading beyond its intended target, but from structured, bias-driven interactions along specific pathways. Building on this perspective, we extract attention-derived signals that expose how semantics are distributed and grounded across modalities, and use them as a diagnostic tool to both analyze and deliberately incur leakage under controlled conditions. This enables us to probe the internal dynamics of cross-modal routing and isolate the role of individual interactions. We further leverage these signals to guide inference-time interventions that encourage more consistent cross-modal alignment. Extensive experiments support our analysis and demonstrate improved semantic grounding while preserving generation quality.",
+      "authors": [
+        "Sagi Polaczek",
+        "Noa Kraicer",
+        "Gal Metzer",
+        "Zhuo Ning",
+        "Ali Mahdavi-Amiri",
+        "Daniel Cohen-Or",
+        "Raja Giryes"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-03T09:33:27+00:00",
+      "link": "https://arxiv.org/pdf/2609.03586v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Studies cross-modal attention in audio-video diffusion models, revealing bidirectional audio-video influence relevant to lip motion synthesis.",
+      "llm_evidence_cn": "研究音视频扩散模型中的跨模态注意力，揭示音频-视频双向影响，与唇部运动合成相关。",
+      "llm_evidence": "研究音视频扩散模型中的跨模态注意力，揭示音频-视频双向影响，与唇部运动合成相关。",
+      "canonical_evidence": "研究音视频扩散模型中的跨模态注意力，揭示音频-视频双向影响，与唇部运动合成相关。",
+      "llm_tldr_en": "Analyzes cross-modal attention in audio-video diffusion models, finding bidirectional audio-video influence and semantic leakage; insights can guide lip sync and multimodal generation.",
+      "llm_tldr_cn": "针对音视频扩散模型中跨模态注意力可能引入语义泄漏的问题，本文提出分析注意力三角结构，系统性探究文本、音频、视频流之间的信息路由机制。研究发现音频-视频边存在双向影响，且该边受模型参数偏置塑造，成为泄漏的主要贡献者。这一分析结果揭示了跨模态交互的潜在规律，为改进唇音同步等多模态视频生成任务提供了理论基础。",
+      "llm_tldr": "针对音视频扩散模型中跨模态注意力可能引入语义泄漏的问题，本文提出分析注意力三角结构，系统性探究文本、音频、视频流之间的信息路由机制。研究发现音频-视频边存在双向影响，且该边受模型参数偏置塑造，成为泄漏的主要贡献者。这一分析结果揭示了跨模态交互的潜在规律，为改进唇音同步等多模态视频生成任务提供了理论基础。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

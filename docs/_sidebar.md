@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-08 <!--dpr-date:20260908-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/08/2609.03586v1-the-attention-triangle-in-audio-video-models" data-sidebar-item="{&quot;title&quot;: &quot;The Attention Triangle in Audio-Video Models&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.03586v1-the-attention-triangle-in-audio-video-models&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;研究音视频扩散模型中的跨模态注意力，揭示音频-视频双向影响，与唇部运动合成相关。&quot;}">The Attention Triangle in Audio-Video Models</a>
   * 2026-09-07 <!--dpr-date:20260907-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/07/2609.03639v1-stabilizing-camera-controlled-novel-view-synthesis-at-inference-time" data-sidebar-item="{&quot;title&quot;: &quot;Stabilizing Camera-Controlled Novel View Synthesis at Inference Time&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.03639v1-stabilizing-camera-controlled-novel-view-synthesis-at-inference-time&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;利用视频扩散模型从单张图像进行相机控制的新视角合成&quot;}">Stabilizing Camera-Controlled Novel View Synthesis at Inference Time</a>
