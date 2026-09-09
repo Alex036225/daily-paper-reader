@@ -1,6 +1,11 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-09 <!--dpr-date:20260909-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/09/2609.06144v1-tbdub-production-oriented-visual-dubbing" data-sidebar-item="{&quot;title&quot;: &quot;TBDub: Production-Oriented Visual Dubbing&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.06144v1-tbdub-production-oriented-visual-dubbing&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;同步嘴部运动与替换语音&quot;}">TBDub: Production-Oriented Visual Dubbing</a>
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/09/2609.04903v1-intersing-explicit-interaction-dynamics-for-3d-duet-singing-animation-and-beyond" data-sidebar-item="{&quot;title&quot;: &quot;InterSing: Explicit Interaction Dynamics for 3D Duet Singing Animation and Beyond&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.04903v1-intersing-explicit-interaction-dynamics-for-3d-duet-singing-animation-and-beyond&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;音频驱动的三重唱3D头部动画与口型同步&quot;}">InterSing: Explicit Interaction Dynamics for 3D Duet Singing Animation and Beyond</a>
   * 2026-09-08 <!--dpr-date:20260908-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/08/2609.03586v1-the-attention-triangle-in-audio-video-models" data-sidebar-item="{&quot;title&quot;: &quot;The Attention Triangle in Audio-Video Models&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.03586v1-the-attention-triangle-in-audio-video-models&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;研究音视频扩散模型中的跨模态注意力，揭示音频-视频双向影响，与唇部运动合成相关。&quot;}">The Attention Triangle in Audio-Video Models</a>

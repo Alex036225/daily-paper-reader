@@ -6,26 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-09-08
-- 运行时间：2026-09-08 22:45:47 UTC
+- 最新运行日期：2026-09-09
+- 运行时间：2026-09-09 21:52:18 UTC
 - 运行状态：成功
-- 本次总论文数：1
-- 精读区：0
+- 本次总论文数：2
+- 精读区：1
 - 速读区：1
 
 ### 今日简报（AI）
-今日速读一篇关于音视频模型中“注意力三角”的论文，评分6.0/10，质量中等。
-最值得留意的方向是音频-视频多模态中注意力如何形成三角结构。
-建议普通读者若对多模态AI感兴趣，可先观望该方向是否有更高分或更多验证的后续研究。
-- 详情：[/202609/08/README](/202609/08/README)
+- 今日共生成 2 篇推荐（精读 1 篇，速读 1 篇）
+- 精读：《TBDub: Production-Oriented Visual Dubbing》（9.0/10）
+- 速读：《InterSing: Explicit Interaction Dynamics for 3D Duet Singing Animation and Beyond》（6.0/10）
+- 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
+- 详情：[/202609/09/README](/202609/09/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [TBDub: Production-Oriented Visual Dubbing](/202609/09/2609.06144v1-tbdub-production-oriented-visual-dubbing)  
+   标签：评分：9.0/10、query:wan-av-gen
+   evidence：同步嘴部运动与替换语音
 
 ### 速读区论文标签
-1. [The Attention Triangle in Audio-Video Models](/202609/08/2609.03586v1-the-attention-triangle-in-audio-video-models)  
+1. [InterSing: Explicit Interaction Dynamics for 3D Duet Singing Animation and Beyond](/202609/09/2609.04903v1-intersing-explicit-interaction-dynamics-for-3d-duet-singing-animation-and-beyond)  
    标签：评分：6.0/10、query:wan-av-gen
-   evidence：研究音视频扩散模型中的跨模态注意力，揭示音频-视频双向影响，与唇部运动合成相关。
+   evidence：音频驱动的三重唱3D头部动画与口型同步
 
 
 <div class="dpr-home-promo-card">

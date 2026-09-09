@@ -1,0 +1,96 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-09T21:45:53.985870+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2609.06144v1",
+      "source": "arxiv",
+      "title": "TBDub: Production-Oriented Visual Dubbing",
+      "abstract": "Visual dubbing must synchronize mouth motion with replacement speech while preserving identity, appearance, and temporal consistency. Although X-Dub provides a strong mask-free video-editing baseline, its application to livestream and generated-video content reveals limitations in production-domain robustness, temporal and motion stability, identity and oral-detail preservation, and inference efficiency. We present \\textbf{TBDub}, a production-oriented extension of X-Dub that combines task-adaptive post-training with task-aware few-step distillation. Post-training adapts the video DiT using production-domain data, production-specific conditioning and filtering, and enhanced audio features to obtain a 30-step Teacher. Distillation adapts DMD/DMD2 to conditional video editing and compresses the Teacher into a two-step Student. On 38 TalkVid clips, the Teacher improves all eight reported reconstruction, perceptual, identity, and synchronization metrics over X-Dub. In the MOS evaluation, it improves lip-sync consistency, identity consistency, and visual quality over X-Dub by 0.14, 0.95, and 0.90 points, while the Student achieves the highest lip-sync and visual-quality scores and remains close to the Teacher in identity consistency. In paired end-to-end generation timing from the first VAE encode through the final VAE decode on a single NVIDIA H20 GPU at $512\\times512$, the Student reaches 7.13 effective FPS and reduces total latency by $13.93\\times$; the DiT stage alone is accelerated by $42.49\\times$. The Student largely retains the Teacher's generation quality and audiovisual synchronization. The code is available on GitHub at \\https://github.com/TaoLiveAIGC/TBDub, and the 30-step Teacher and two-step Student weights are available on Hugging Face at https://huggingface.co/TaoLiveAIGC/TBDub.",
+      "authors": [
+        "Bihan Li",
+        "Xinyang Li",
+        "Zeran Xu",
+        "Meiguang Jin",
+        "Junfeng Ma"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-05T15:38:23+00:00",
+      "link": "https://arxiv.org/pdf/2609.06144v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "synchronize mouth motion with replacement speech",
+      "llm_evidence_cn": "同步嘴部运动与替换语音",
+      "llm_evidence": "同步嘴部运动与替换语音",
+      "canonical_evidence": "同步嘴部运动与替换语音",
+      "llm_tldr_en": "TBDub extends X-Dub for production-oriented visual dubbing, combining task-adaptive post-training and task-aware few-step distillation to improve lip-sync robustness, identity preservation, and efficiency.",
+      "llm_tldr_cn": "该论文针对现有X-Dub在直播和生成视频内容上生产环境鲁棒性不足、身份与口腔细节保持不佳的问题，提出TBDub方法，结合任务自适应后训练与任务感知少步蒸馏，适应视频DiT并增强音频特征，获得30步教师模型后蒸馏为条件视频编辑模型。实验表明TBDub提升了口型同步质量和推理效率，为视觉配音提供生产级方案。",
+      "llm_tldr": "该论文针对现有X-Dub在直播和生成视频内容上生产环境鲁棒性不足、身份与口腔细节保持不佳的问题，提出TBDub方法，结合任务自适应后训练与任务感知少步蒸馏，适应视频DiT并增强音频特征，获得30步教师模型后蒸馏为条件视频编辑模型。实验表明TBDub提升了口型同步质量和推理效率，为视觉配音提供生产级方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.04903v1",
+      "source": "arxiv",
+      "title": "InterSing: Explicit Interaction Dynamics for 3D Duet Singing Animation and Beyond",
+      "abstract": "We present InterSing, a framework for generating realistic 3D head animations for duet singing performances. Unlike solo singing, duet performance requires each singer to balance individual expressiveness with intermittent interaction at musically salient moments, such as phrase boundaries, synchronized rhythms, and call-and-response passages. Because these interactions are sparse and rhythm-dependent, existing audio-driven animation methods and conversational interaction models do not adequately capture their structure. Our key insight is that duet coordination can be represented as a time-varying signal that reflects how strongly performers engage with one another throughout a song. Based on this observation, we introduce interaction logits, an interpretable latent representation that models the degree of cross-performer engagement at each time step. We learn these logits using weak supervision and use them to condition an interaction-aware diffusion model jointly driven by audio features and interaction dynamics. This formulation enables unified multi-mode generation, spanning independent motion, coordinated behavior, and smooth transitions between them. Experiments show that InterSing generates realistic and expressive singing head animations with stronger coordination and musical alignment than existing methods, while preserving each performer's characteristic motion style. We further demonstrate that the same formulation generalizes to multi-singer performances and provides intuitive control over when and how performers engage.",
+      "authors": [
+        "Yihan Zhou",
+        "Zikai Huang",
+        "Yuyang Yu",
+        "Xuemiao Xu",
+        "Cheng Xu",
+        "Shengfeng He"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-04T09:02:52+00:00",
+      "link": "https://arxiv.org/pdf/2609.04903v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "audio-driven 3D head animation with lip sync for duet singing",
+      "llm_evidence_cn": "音频驱动的三重唱3D头部动画与口型同步",
+      "llm_evidence": "音频驱动的三重唱3D头部动画与口型同步",
+      "canonical_evidence": "音频驱动的三重唱3D头部动画与口型同步",
+      "llm_tldr_en": "The paper proposes InterSing, a framework for generating 3D head animations for duet singing with audio-driven lip sync and interaction dynamics.",
+      "llm_tldr_cn": "针对二重唱表演中不同歌手间交互稀疏且依赖节奏的问题，提出InterSing框架。该框架将二重唱协调表示为随时间变化的信号，反映歌手间的参与程度，并引入交互逻辑生成逼真的3D头部动画。实验表明该方法能有效捕捉音乐显著时刻的交互和口型同步。该工作为音频驱动的说话头动画提供了新思路。",
+      "llm_tldr": "针对二重唱表演中不同歌手间交互稀疏且依赖节奏的问题，提出InterSing框架。该框架将二重唱协调表示为随时间变化的信号，反映歌手间的参与程度，并引入交互逻辑生成逼真的3D头部动画。实验表明该方法能有效捕捉音乐显著时刻的交互和口型同步。该工作为音频驱动的说话头动画提供了新思路。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

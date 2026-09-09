@@ -1,0 +1,415 @@
+Title: InterSing: Explicit Interaction Dynamics for 3D Duet Singing Animation and Beyond
+
+URL Source: https://arxiv.org/pdf/2609.04903v1
+
+Published Time: Mon, 07 Sep 2026 00:43:51 GMT
+
+Number of Pages: 12
+
+Markdown Content:
+> 1
+
+# InterSing: Explicit Interaction Dynamics for 3D Duet Singing Animation and Beyond 
+
+Yihan Zhou, Zikai Huang, Yuyang Yu, Xuemiao Xu, Cheng Xu, and Shengfeng He, Senior Member, IEEE 
+
+Abstract —We present InterSing, a framework for generating realistic 3D head animations for duet singing performances. Unlike solo singing, duet performance requires each singer to balance individual expressiveness with intermittent interaction at musically salient moments, such as phrase boundaries, synchro-nized rhythms, and call-and-response passages. Because these interactions are sparse and rhythm-dependent, existing audio-driven animation methods and conversational interaction models do not adequately capture their structure. Our key insight is that duet coordination can be represented as a time-varying signal that reflects how strongly performers engage with one another throughout a song. Based on this observation, we introduce interaction logits, an interpretable latent representation that models the degree of cross-performer engagement at each time step. We learn these logits using weak supervision and use them to condition an interaction-aware diffusion model jointly driven by audio features and interaction dynamics. This formulation enables unified multi-mode generation, spanning independent motion, coordinated behavior, and smooth transitions between them. Experiments show that InterSing generates realistic and expressive singing head animations with stronger coordination and musical alignment than existing methods, while preserv-ing each performer’s characteristic motion style. We further demonstrate that the same formulation generalizes to multi-singer performances and provides intuitive control over when and how performers engage. Visual results and dataset are available on the project page. 
+
+Index Terms —Digital human, 3D head animation, virtual performance, multimodal learning. 
+
+I. I NTRODUCTION 
+
+# REALISTIC digital human animation plays a central role in modern virtual production, enabling applications such as virtual concerts, digital performers, and immersive enter-tainment [1]–[5]. Among these scenarios, singing performance presents a particularly challenging setting for motion synthesis. Unlike conventional speech-driven animation, singing requires the coordinated generation of facial expressions, head move-ments, and rhythmically aligned motion patterns governed by musical structure [6]–[11]. These expressive behaviors extend beyond phonetic articulation and demand temporally coherent 
+
+(Yihan Zhou and Zikai Huang contributed equally to this work.) 
+
+Yihan Zhou, Zikai Huang, Yuyang Yu and Xuemiao Xu are with the School of Computer Science and Engineering, South China University of Technology, Guangdong, China. Xuemiao Xu is also with Guangdong Engineering Center for Large Model and GenAI Technology, and also with State Key Laboratory of Subtropical Building and Urban Science, Ministry of Education Key Laboratory of Big Data and Intelligent Robot. E-mail: 202521044545@mail.scut.edu.cn; 202210188523@mail.scut.edu.cn; 202410190026@mail.scut.edu.cn; xuemx@scut.edu.cn. Cheng Xu and Shengfeng He are with the School of Comput-ing and Information Systems, Singapore Management University. Email: cschengxu@gmail.com; shengfenghe@smu.edu.sg. 
+
+dynamics that reflect both musical timing and performer expressiveness. Recent audio-driven 3D head animation methods have achieved promising results for single performers [5], [12]– [15]. However, singing often occurs as a shared performance. In duet singing, each performer must preserve individual ex-pressiveness while intermittently coordinating with a partner. Such coordination appears through subtle but perceptually important cues, including head orientation, facial affect, rhyth-mic emphasis, and synchronized motion at phrase bound-aries, choruses, or call-and-response passages. These moments create the sense of mutual awareness and stage presence that distinguishes a coherent duet from two independently animated singers. Duet interaction also differs fundamentally from conversational interaction. In dialogue, coordination is often continuous, with participants repeatedly exchanging gaze, nods, and backchannel feedback. In singing, by contrast, interaction is sparse and structured by music. Performers may remain visually and expressively independent for long intervals, then briefly align at musically salient moments. Moreover, these interactions are not merely reactive to another person’s motion, but are jointly driven by rhythm, phrasing, and performance structure. As a result, interaction models designed for conversational animation do not directly capture the intermittent and rhythm-aware nature of duet singing. Existing dyadic motion generation methods [3], [16]–[20] typically rely on joint latent spaces or shared generation pro-cesses. While such designs can synthesize two-person motion, they rarely expose the underlying interaction state between performers. Without an explicit representation of when and how strongly performers engage, generated results may either behave as two independent solo animations or exhibit overly coupled motion. This also limits controllability in production workflows, where artists may wish to adjust the timing, frequency, or intensity of interaction without resynthesizing individual performance styles. To address these challenges, we formulate duet-singing head animation as an interaction-conditioned motion generation problem. Our key idea is to separate performer motion from interaction dynamics by introducing interaction logits , a time-varying scalar representation that describes the degree of coordination between singers. The interaction logits act as an interpretable and editable control signal, enabling the model to generate independent motion, coordinated duet behavior, and smooth transitions between them within a unified framework, as shown in Fig. 1. Learning such a representation is non-trivial because inter-action in duet singing is difficult to annotate and inherently arXiv:2609.04903v1 [cs.CV] 4 Sep 2026 2(a) Dyadic Generation 
+
+> Score
+> (c) Score-guided Generation (b) Partner Generation
+> Fig. 1. InterSing generates duet-singing animations from audio, with interaction scores either given or predicted from the same audio. The framework supports tasks including (a) dyadic generation, (b) partner generation, and (c) score-guided generation. In the partner generation and score-guided illustrations, the gray head denotes the given reference motion sequence.
+
+subjective. We therefore propose a weakly supervised inter-action learning framework based on contrastive representation learning [21]–[24]. From paired FLAME motion sequences, we derive coarse geometric anchors using relative head ori-entation, motivated by the observation that performers often turn toward each other during moments of engagement. These anchors provide useful but incomplete supervision: some in-teractions occur without clear head orientation changes, while similar poses may arise without genuine coordination. We thus treat them not as ground truth labels, but as sparse cues that guide representation learning. However, this geometric heuris-tic provides only a partial and noisy observation of true inter-action dynamics. Many interaction events may occur without explicit head orientation changes, while similar orientations may arise without meaningful coordination. Consequently, the resulting signal inevitably contains both false negatives and false positives. Rather than treating these labels as ground-truth annotations, we interpret them as sparse anchors that provide an initial inductive bias for interaction representation learning. To further prevent the model from relying on trivial geometric shortcuts, we introduce a neck-masking strategy that occludes neck-related pose parameters during interaction encoding. This design prevents the encoder from directly inferring interaction from head orientation parameters and encourages it to capture richer coordination cues from facial dynamics and rhythmic motion patterns. Through contrastive learning with multiple negative sampling strategies, the model aggregates consistent temporal patterns across sequences and refines these sparse anchors into a temporally coherent inter-action representation. Building on the learned interaction representation, we propose an interaction-aware diffusion transformer for duet motion generation. The model conditions jointly on audio features and interaction logits to synthesize coordinated dyadic head motions. We further adopt diffusion forcing [25] to train the model under multiple noise conditions, allowing a single framework to support several practical modes: full duet synthesis, interaction-aware refinement of existing solo perfor-mances, and partner motion prediction. Extensive experiments show that explicit interaction modeling improves the realism, musical alignment, and perceived coordination of duet-singing animation. Our method generates expressive dual-performer motions while preserving each singer’s characteristic motion style. We also demonstrate that the learned interaction logits provide intuitive control over interaction timing and intensity, and that the formulation naturally extends to multi-singer performances. In summary, our contributions are threefold:  
+
+> •
+
+We formulate duet-singing head animation as an interaction-conditioned motion generation problem, emphasizing the intermittent and rhythm-driven coordination patterns of singing performance.  
+
+> •
+
+We introduce a weakly supervised interaction representation learning framework that uses geometric prior anchors, neck-occluded encoding, and contrastive learning to infer robust interaction logits from paired motion sequences.  
+
+> •
+
+We propose an interaction-aware diffusion generation frame-work with diffusion forcing, enabling unified and control-lable multi-mode synthesis for duet-singing head animation. II. R ELATED WORK 
+
+A. Audio-Driven 3D Head Animation 
+
+Audio-driven 3D head animation has long been an active research area in computer graphics and animation. Early approaches [26]–[28] mainly relied on rule-based systems that segmented speech into phonemes and mapped them to predefined lip-synchronized animations. Because these meth-ods depended heavily on handcrafted rules, they were limited in capturing subtle variations in human expression. More recently, deep learning has significantly advanced audio-driven 3D facial animation. Existing speech-driven methods [12]– [15], [29]–[35] generate realistic facial motions using mesh or vertex representations and show strong cross-identity gen-eralization for retargeting. However, these methods are mainly 3
+
+designed for general speech scenarios and remain less effective for singing, where capturing distinctive prosodic patterns and fine-grained emotional expressions is particularly important. To address this limitation, several singing-driven facial an-imation methods have recently been introduced. SingingHead [5] and MusicFace [4] model pitch variation and emotional transition from acoustic and ASR features within audio-driven frameworks, producing more natural singing anima-tions. Rather than relying only on low-level audio features, Think2Sing [2] uses LLMs to infer fine-grained facial motion descriptions from both lyrics and audio signals, enabling expressive animations that better reflect lyrical semantics. Although these methods achieve promising results for single-character animation, they are not designed for multi-character interaction. As a result, they often struggle to maintain emotional synchronization across characters and to generate naturally coordinated head motions. 
+
+B. Audio-Driven 3D Interactive Head Animation 
+
+In recent years, audio-driven 3D head animation has evolved from single-person generation toward multi-person interactive scenarios, with speak–listen facial animation becoming an important research direction. In conversational settings, early studies [18], [36]–[43] mainly focused on modeling nonverbal listener behaviors. For example, Learning2Listen [20] uses a unidirectional conditional generation framework to synthesize listener facial responses solely from the speaker’s audio and facial motions. Later methods [18], [39], [43] incorporate conversational context into expression prediction, but they still rely on decoupled short-term response modeling. As a result, these methods remain limited to isolated single-turn interactions and struggle to capture the fluid bidirectional interactions required in long conversations. DualTalk [19] partially addresses this limitation by jointly generating speaking and listening facial motions. However, it requires precomputed interlocutor motion sequences, which limits end-to-end learning and reduces applicability in real-time scenarios. UniLS [17] removes explicit facial motion inputs and directly models interactive facial animation from dual-channel speech audio, based on the assumption that listener behavior is governed by an audio-modulated inter-nal motion prior. Although these methods perform well in conversational settings, their interaction paradigm differs fun-damentally from duet singing. Conversations usually involve relatively stable interaction patterns with fixed speaker-listener roles, whereas duet singing involves intermittent, highly col-laborative interactions with frequent role transitions and tightly coordinated movements. This structural difference makes ex-isting speech-listening frameworks difficult to transfer directly to singing scenarios. Recently, PaChorus [3] introduced the first method for duet-singing head animation generation based on joint motion syn-thesis. However, the method models inter-singer interactions only implicitly, which often leads to limited motion coor-dination and weak temporal alignment between performers. In contrast, our work formulates duet-singing head anima-tion generation as an interaction-conditioned motion synthesis problem with explicit modeling of cross-performer relation-ships. The proposed interaction representation is interpretable and controllable, enabling fine-grained modulation of inter-singer dynamics while preserving each performer’s individual singing characteristics. III. M ETHOD 
+
+An overview of our method is presented in Fig. 2. We employ the widely used 3D Morphable Model FLAME [44] to obtain a parameterized 3D representation of the head, where facial expressions, neck pose, and jaw pose are respectively represented by the parameters ψ ∈ R|ψ|, θneck ∈ R3,and θjaw ∈ R3. Based on this representation, we propose a two-stage framework InterSing to capture the intermittent interaction dynamics in singing performances. The framework consists of weakly supervised interaction learning followed by interaction-aware diffusion-based generation. Section III-A de-tails our weakly supervised interaction learning method. Sec-tion III-B introduces the interaction-aware diffusion generation framework. Finally, Section III-C presents various inference strategies for generating duet-singing head animations based on the learned interaction cues and the diffusion generation framework. 
+
+A. Stage I: Weakly Supervised Interaction Learning 
+
+Modeling performer interaction in duet singing is challeng-ing due to the scarcity of reliable frame-level annotations. We observe that in duet singing, moments of high-intensity inter-action often correspond to performers orienting their heads toward each other, while during less coordinated passages, head orientations are more independent. Motivated by this observation, we derive frame-level pseudo-labels from the rel-ative neck orientations of the singers. Let ϕ denote the mutual neck rotation angle and η the predefined threshold. Frames satisfying ϕ > η are regarded as interaction samples, while the remaining frames are assigned to non-interaction samples. These sparse and noisy anchors provide a guiding signal for learning interaction representations without imposing strict ground-truth constraints. To capture temporal coordination patterns beyond these coarse cues, we employ a Transformer-based motion encoder 
+
+Em that maps duet motion sequences mA, mB ∈ RL×Dm
+
+into a joint latent space, where L is the number of frames and Dm denotes the motion dimension. However, directly learning from the original motion representation may introduce a potential shortcut, as the pseudo-labels are partially derived from mutual neck orientations. The encoder could therefore exploit explicit neck rotations to distinguish interaction and non-interaction states, rather than learning the underlying coor-dination patterns between performers. To mitigate trivial geo-metric shortcuts, we introduce a neck-masking strategy during training, where 40% of the neck pose features are randomly masked for each motion sequence. Instead of relying solely on explicit head orientation cues, the encoder is encouraged to infer interaction states from complementary signals, including subtle facial expression changes, synchronized head move-ments, and temporal dependencies between performers. As a 4            
+
+> Fig. 2. Overview of InterSing. Stage I partitions motion encoder Emembeddings into interaction Sinter and non-interaction Snon sets via weakly-supervised geometric priors. Intra-Temporal Alignment Loss Lintra maximizes temporally aligned positive pairs against temporally distant negatives to enforce temporal coherence, while Inter-Discriminative Loss Linter maximizes interaction positive pairs against non-interaction negatives to sharpen the interaction decision boundary. Stage II injects the learned interaction scores as explicit conditioning signals into a Diffusion Forcing framework with cascaded cross-attention, jointly denoising both singers’ motions under variable noise horizons that enable flexible generation modes.
+
+result, the learned embeddings capture higher-level interaction semantics beyond direct spatial alignment, providing a more robust representation for subsequent interaction-aware gener-ation. The encoded sequences pass through dual projection heads to produce individual embeddings eA, e B ∈ RL×De ,where De is the embedding dimension. Guided by pseudo-labels derived from interaction and non-interaction samples, 
+
+eA, e B are partitioned into interaction and non-interaction sets, denoted as Sinter and Snon :
+
+Sinter = {(eAi , e Bi ) | ϕi > η },
+
+Snon = {(eAi , e Bi ) | ϕi ≤ η}. (1) where eAi , e Bi ∈ RDe are the embeddings of performers A and 
+
+B at frame i. The embeddings are optimized with two comple-mentary contrastive objectives. The intra-temporal alignment loss Lintra encourages consistency of interaction embeddings within the same temporal frame, while the inter-discriminative loss Linter enforces separation between interaction and non-interaction pairs across frames. 
+
+Intra-Temporal Alignment Loss Lintra . To capture tem-poral coherence of interaction dynamics, we introduce aweakly supervised temporal interaction loss. Within the in-teraction set Sinter , embedding pairs (eAi , e Bi ) from the same frame are treated as positives, while pairs separated by more than d frames ( |i − k| > d ) serve as negatives. Temporally close pairs are excluded to avoid separating highly similar frames. This formulation encourages temporally aligned in-teraction embeddings to be close while pushing misaligned ones apart, yielding a discriminative and temporally coherent representation of dyadic coordination: 
+
+pintra,i = exp( eAi · eBi /τ )
+
+Pk∈S inter 
+
+> |i−k|>d
+
+exp( eAi · eBk /τ ) + exp( eAi · eBi /τ )
+
+(2) 
+
+Lintra = − 1
+
+Ninter Ninter X
+
+> i=1
+
+log pintra,i , (3) where Ninter denotes the number of interaction samples in 
+
+Sinter , k indexes this set, d is the temporal distance threshold, and τ is the temperature hyperparameter. By leveraging the weak pseudo-labels derived from geometric cues, this loss refines sparse interaction anchors into a robust temporal em-bedding. 
+
+Inter-Discriminative Loss Linter . To further enforce sepa-ration between interaction and non-interaction states, we define an interaction discrimination loss. Simultaneous embedding pairs from Sinter are treated as positives, while those from the non-interaction set Snon are treated as negatives. This loss encourages the model to pull together embeddings of inter-acting frames and push apart non-interacting ones, ensuring 5
+
+that the latent space captures meaningful dyadic coordination beyond trivial geometric correlations: 
+
+pinter,i = exp( eAi · eBi /τ )
+
+P 
+
+> k∈S non
+
+exp( eAk · eBk /τ ) + exp( eAi · eBi /τ ) (4) 
+
+Linter = − 1
+
+Ninter Ninter X
+
+> i=1
+
+log pinter,i . (5) The total loss is L = Lintra + Linter . By combining these objectives, the model transforms sparse geometric anchors into a robust, temporally coherent, and interpretable representation that captures semantically meaningful dyadic interaction pat-terns, forming a strong foundation for subsequent interaction-aware singing animation. 
+
+B. Stage II: Interaction-aware Diffusion Generation 
+
+Building upon the interaction encoder Em pretrained in the first stage, we aim to synthesize temporally coherent, coor-dinated duet-singing head animations. A key challenge lies in the inherently asymmetric and intermittent nature of duet interaction, where the degree of coordination varies over time, conditioned jointly on audio rhythm and interaction intensity. This motivates InterSing , a Transformer-based diffusion model that jointly generates dyadic singing head motions by incor-porating audio and interaction-aware control signals directly into the denoising process, enabling temporally coherent and controllable coordination between performers. Raw audio is first separated into vocal and accompaniment tracks using Spleeter [45], each track is encoded by a frozen Whisper encoder [46], and the resulting embeddings are concatenated and processed by an Audio Transformer Eaudio to produce the input latent representation z. Frame-wise speaker active signals ap ∈ [0 , 1] L are produced by an Active Speaker Detection module (LR-ASD) [47] and fused with the audio features z to obtain speaker-aware representations zp for each singer p ∈ { A, B }. Unlike conventional audio-driven anima-tion that models each performer independently, we introduce interaction intensity as an explicit latent variable to regu-late the coordination strength between two motion streams. Dyadic coordination is explicitly modeled using interaction signals from the pretrained encoder Em. Frame-level embed-ding similarities between paired motions (mA, mB ) define pseudo ground-truth scores sgt , providing a continuous signal to control cross-person coordination. Specifically, the cosine similarity between paired interaction embeddings is used as the interaction score: 
+
+sgt i = 12
+
+ eAi · eBi
+
+∥eAi ∥2∥eBi ∥2
+
++ 1 
+
+
+
+. (6) where sgt i ∈ [0 , 1] represents the continuous interaction in-tensity at frame i. During training, the interaction signal is randomly sampled either from sgt or predicted by an audio-to-score decoder Da2s. Since sgt is extracted from motion embeddings, it provides reliable interaction supervision during training but is unavailable at inference time when only audio input is provided. To bridge this gap, we train an auxil-iary audio-to-score decoder to estimate interaction dynamics from audio cues. Although interaction is primarily expressed through visual coordination, singing audio still contains com-plementary information, such as rhythmic structure and phras-ing patterns, that correlates with performer coordination. Da2s
+
+takes the concatenated speaker-aware audio features from both singers as input and predicts interaction scores saudio via a shallow Transformer. Inspired by previous works [37], [48]– [50], we instantiate the diffusion process in the Diffusion Forcing setting [25], which extends DDPM [51] by introducing token-wise stochasticity to enable flexible temporal modeling. For each singer p and frame i, we define the noisy motion token at diffusion step tpi as: 
+
+mpi (tpi ) = 
+
+q
+
+α(tpi ) mpi +
+
+q
+
+1 − α(tpi ) ϵpi , ϵpi ∼ N (0, I),
+
+(7) where mpi is the ground-truth motion for frame i of singer 
+
+p, tpi is the token-specific diffusion timestep, and ϵpi is in-dependently sampled Gaussian noise. Each tpi is drawn inde-pendently across frames and singers, allowing heterogeneous corruption across both temporal and motion dimensions. This token-wise noise formulation provides a unified stochastic space that can represent both tightly synchronized and loosely coupled motion segments. The generation is formulated as a conditional diffusion process that jointly denoises mA(tA) and mB (tB ) using a Transformer with cascading attention, conditioned on token-wise diffusion timesteps tA and tB , speaker-aware audio features zp, and interaction signals. To capture mutual depen-dencies between the two singers, the network further exploits cross-stream hidden states from the counterpart branch via interaction cross-attention [52]. The noisy motion inputs are projected into a shared latent space and encoded into initial hidden states h(0)  
+
+> A
+
+and h(0)  
+
+> B
+
+, which are iteratively refined through N stacked attention blocks and finally projected to reconstruct the denoised motions ˆmA and ˆmB . Each block integrates self-attention to preserve temporal coherence, audio cross-attention to inject speech-driven dynamics via zp, and interaction cross-attention [52] to model dyadic coupling. To enable controllable coordination, FiLM-based modulation [53] applies interaction signals to the cross-attention layers and injects the diffusion timestep t for noise-aware generation. The model is trained to enforce both motion fidelity and dyadic coordination. Motion fidelity is encouraged through three kinetic losses: 
+
+Lrec = ∥ ˆm − m∥22,
+
+Lvel = ∥ ˆm′ − m′∥22,
+
+Lacc = ∥ ˆm′′ − m′′ ∥22.
+
+(8) These terms jointly enforce accurate and temporally smooth motion. Dyadic coordination is enforced through two interaction-level losses: 
+
+Lalign = ∥saudio − sgt ∥22,
+
+Lint = ∥ˆs − sgt ∥22, (9) where ˆs is the interaction signal extracted from the generated motion ˆm via the interaction encoder Em. The alignment loss 
+
+Lalign enforces consistency between the audio-conditioned prediction and the pseudo ground-truth, enabling the model to 6(a) Dyadic Generation    
+
+> ... ... ... ... ... ... ... ...
+> ... ... ... ... ...
+> noise  0window denoise timestep frames
+> (b) Partner Generation (c) Score-guided Generation
+> Fig. 3. Flexible Inference via Diffusion-Forcing. Our framework enables (a) dyadic generation, (b) partner generation, and (c) score-guided generation through different noise scheduling
+
+infer interaction dynamics from audio alone during inference. The interaction consistency loss Lint further constrains the generated motions by matching the interaction intensity ex-tracted from synthesized motions with the desired interaction score. Together, these objectives prevent the model from generating individually plausible but mutually independent motions, encouraging the two streams to exhibit coordinated behaviors consistent with the desired interaction intensity. The overall objective is a weighted sum of all terms, expressed as 
+
+Ltotal = λ1Lrec +λ2Lvel +λ3Lacc +λ4Lalign +λ5Lint , where 
+
+λ1, . . . , λ 5 balance the contribution of each component. 
+
+C. Inference 
+
+InterSing provides a unified framework for controllable duet-singing head animation, combining an interaction-aware generation paradigm with a diffusion-forcing training strat-egy. Instead of requiring separate models for different ap-plications, a single architecture supports multiple inference modes by simply adjusting the noise initialization and con-ditioning strategy. This unified formulation enables flexi-ble deployment while preserving temporally coherent and interaction-consistent motion generation. As illustrated in Fig. 3, the framework can generate synchronized duets from audio (Fig. 3(a)), predict a partner’s motion given one per-former (Fig. 3(b)), or refine existing single-singer sequences with interaction-aware adjustments (Fig. 3(c)). 
+
+Dyadic Generation. Starting from pure Gaussian noise, the model progressively denoises both performers’ motion se-quences conditioned on separated audio features and interac-tion scores. Since neither motion stream is predefined, both singers are synthesized jointly, allowing mutual interaction patterns to emerge throughout the denoising process. This mode generates fully synchronized duet performances directly from audio. 
+
+Partner Generation. When one performer’s motion is avail-able, only a small amount of noise is injected into the known motion tokens, while the partner’s tokens remain heavily corrupted. During denoising, the model preserves the given performance while generating the missing partner conditioned on both audio and the learned interaction representation, resulting in temporally aligned and complementary motions without requiring retraining. 
+
+Score-guided Generation. Given a pre-generated single-singer sequence, interaction scores determine the amount of injected noise at each frame. Frames with stronger interaction receive larger perturbations to encourage expressive responses, whereas low-interaction regions remain largely unchanged to preserve the original performance. The diffusion model subsequently refines the sequence into an interaction-aware duet while maintaining the overall motion quality and temporal consistency. Across all inference modes, the same pretrained model is employed without task-specific fine-tuning or architectural modification. By exploiting the flexibility of diffusion forcing, InterSing supports training-free adaptation to different input conditions while maintaining interaction-aware generation. IV. E XPERIMENTS 
+
+A. Setting 1) Dataset: We adapt ChorusHead [3], the only available 3D chorus singing dataset to date, for interaction-aware duet animation. Since the original dataset focuses on collective chorus representation rather than pairwise interaction model-ing, we introduce a targeted preprocessing pipeline to extract reliable dyadic singing sequences and construct interaction-aware supervision. We first curate the data by removing unsuitable samples, including pseudo-duet cases such as single-person role switch-ing and non-interactive back-to-back performances, as well as unstable side-profile reconstructions that introduce unreliable motion estimation. We further supplement the dataset with real duet singing videos from publicly available sources to ensure sufficient scale and increase the diversity of interper-sonal coordination patterns. This step is necessary because ChorusHead, although providing a valuable foundation, is not designed for interaction-aware duet generation: over 75% of its frames correspond to face-to-face interaction according to the relative neck orientation criterion described in Sec. III-A, while common patterns such as one-sided gaze and weak/no-interaction segments are underrepresented, which may bias models toward the dominant interaction mode. For motion reconstruction, we replace the original center-line frame-splitting strategy with direct MTCNN [54] detec-tion on full two-person frames, yielding substantially more co-herent 3D head motion sequences. Audio-wise, we employ the AV-MossFormer2-TSE-16K pretrained model [55] to extract individual singer tracks from mixed audio-visual recordings, decoupling generation quality from separation fidelity. We further leverage an active speaker detection model to derive per-frame speaker activity scores as an auxiliary condition. The resulting dataset contains 9 hours of duet-singing performances, including 414 clips, 149 songs, and 972,394 frames at 30 FPS. It covers 61 singers (41 female and 20 male performers) from 39 groups, spanning diverse musical styles including R&B, pop, rock, and other genres. Approximately 90% of the songs are in English, with the remaining samples covering languages such as Chinese and Japanese. For evalu-ation, we adopt a song-disjoint 85:15 train/test split, ensuring that no songs overlap between training and testing sets. 
+
+2) Implementation Details: In Stage I, the interaction en-coder is optimized by AdamW [56] with a learning rate of 
+
+2.0 × 10 −4 and a batch size of 128 on 2 NVIDIA RTX 4090 GPUs. The interaction modeling process uses a neck-rotation 7                                                                                                                                                                    
+
+> TABLE I
+> QUANTITATIVE COMPARISONS WITH STATE -OF -THE -ART METHODS . B OLD INDICATES THE BEST RESULT ,AND UNDERLINE INDICATES THE SECOND BEST .↓MEANS LOWER IS BETTER ,↑MEANS HIGHER IS BETTER ,AND →MEANS CLOSER TO THE GT IS BETTER . LVE, FVE ARE REPORTED IN mm ,
+> AND FDD IN 1×10 −2mm .Method LVE ↓FVE ↓FDD →Freeze Rate ↓BA →FID ↓P-FID ↓
+> GT --0.0000 -0.2380 --Dyadic Generation PaChorus [3] 10.9839 2.6282 1.6824 7.2220 0.2487 40.8057 45.1401 UniLS [17] 9.9350 2.3844 0.3624 6.0304 0.2251 6.4385 9.1933 InterSing (Ours) 8.3317 2.0732 0.3212 5.9709 0.2472 4.5566 6.8160
+> Partner Generation DIM [18] 11.2558 2.6166 2.1906 10.0697 0.2712 34.9875 18.7729 DualTalk [19] 7.9793 1.9055 0.8370 11.5176 0.1991 4.7598 3.6627 InterSing (Ours) 7.8619 1.9792 0.0149 5.7853 0.2491 4.4513 3.4974
+> TABLE II
+> ABLATION STUDY ON DIFFERENT COMPONENTS IN OUR FRAMEWORK . B OLD INDICATES THE BEST RESULT ,AND UNDERLINE INDICATES THE SECOND BEST .↓MEANS LOWER IS BETTER ,↑MEANS HIGHER IS BETTER ,AND →MEANS CLOSER TO THE GT IS BETTER . LVE, FVE ARE REPORTED IN
+> mm ,AND FDD IN 1×10 −2mm .Method LVE ↓FVE ↓FDD →Freeze Rate ↓BA →FID ↓P-FID ↓
+> Stage I  w/o Linter 10.4212 2.3985 0.6701 11.7452 0.2423 10.5597 10.8571 w/o Lintra 8.8970 2.1960 0.3514 6.2953 0.2461 9.1012 9.6027 w/o neck mask 8.3711 2.0950 0.3223 7.0501 0.2414 7.9962 10.1200
+> Stage II  w/o inter attn 8.6504 2.1342 -0.1877 4.8153 0.2435 11.2109 13.3974 w/o score 9.0536 2.1820 0.4610 9.9407 0.2480 5.5752 7.8203 GT score 8.2576 2.0575 0.2955 5.9978 0.2499 4.5220 6.6525 Ours 8.3317 2.0732 0.3212 5.9709 0.2472 4.5566 6.8160
+
+threshold ϕ = 22 .5◦, a temporal distance threshold d = 15 
+
+frames, and a temperature coefficient τ = 0 .07 . In Stage II, the generation model is trained with AdamW using a learning rate of 4.0×10 −4 and the same batch size on 2 NVIDIA RTX 4090 GPUs, with loss weights set to λ1 = 1 , λ2 = 3 , λ3 = 2 ,
+
+λ4 = 2 , and λ5 = 0 .5. During inference, our method runs at over 250 FPS on a single NVIDIA RTX 4090 across all three inference modes. 
+
+3) Evaluation Metrics: Following existing works [2], [15], [17], [29]–[32], we evaluate the generated results from five as-pects: facial accuracy, head pose accuracy, rhythm alignment, temporal coherence and quality, and interaction consistency. For facial accuracy, Lip Vertex Error (LVE), Facial Dynamic Distance (FDD), Facial Vertex Error (FVE), and Freeze Rate are adopted to evaluate lip synchronization, upper facial dynamics, and overall facial geometry, respectively. Rhythm alignment is evaluated by Beat Alignment (BA), which mea-sures the consistency between singing-driven head motion and musical beats. Temporal coherence and motion quality are quantified using Fr´ echet Inception Distance (FID) computed on FLAME parameters. Interaction consistency is measured by Paired Fr´ echet Inception Distance (P-FID), which compares the distribution of generated and real dyadic motions to assess whether realistic interpersonal coordination is preserved. 
+
+B. Comparison with Existing Methods 
+
+The work most directly related to our task is PaChorus [3], which generates head animations of both performers from duet singing audio. Given the scarcity of duet-singing head animation methods, we further adopt representative conversa-tional interaction approaches as additional baselines, since they also model inter-participant motion dynamics. Specifically, DualTalk [19] and DIM [18] condition the generation process on the motion sequence of the counterpart in addition to the audio signals, while UniLS [17] jointly synthesizes head motions from the audio streams of both participants. All baselines are retrained on the same dataset for fair comparison. 
+
+1) Quantitative Results: Table I presents quantitative com-parisons on both the Dyadic Generation and Partner Genera-tion tasks. All baselines are retrained on our dataset using their official or author-provided implementations for fair compari-son. Crucially, a single checkpoint of our method is evaluated across both settings without task-specific fine-tuning, owing to the decoupled interaction conditioning that enables multi-task inference within a unified model. For dyadic generation, In-terSing achieves comprehensive superiority over all baselines across every metric. Most strikingly, it reduces LVE by 16.1% 
+
+relative to the strongest baseline UniLS (8.33 vs. 9.94), reflect-ing substantially more precise lip articulation. The FID/P-FID relative reductions of 29.2% /25.9% further confirm that the generated distributions closely approximate the ground-truth manifold, validating the effectiveness of our interaction-aware formulation in preserving both individual expressiveness and dyadic coherence. Notably, PaChorus exhibits a substantially higher FID, likely because it generates overly similar motions for both performers without explicit coordination modeling, leading to a less realistic duet motion distribution. For partner generation, while DualTalk attains a marginally lower FVE, this advantage comes at the cost of severely degraded temporal dynamics. Its Freeze Rate and BA reveal a collapse toward temporally averaged, expressively impoverished motions. In contrast, InterSing attains an order-of-magnitude lower FDD with the lowest Freeze Rate, recovering fine-grained facial dynamics at substantially higher fidelity while maintaining superior motion diversity, as further corroborated by consistent FID, P-FID, and BA gains. 8GT Ours PaChorus UniLS GT Ours DIM DualTalk     
+
+> Fig. 4. Qualitative comparison for dyadic generation. Compared with existing methods, our approach generates duet animations that better match the ground truth in lip synchronization, facial expression dynamics, and mutual interaction behaviors between performers. GT Ours PaChorus UniLS GT Ours DIM DualTalk
+> Fig. 5. Qualitative comparison for partner generation. Given the reference motion of one performer (shown in gray), our method generates more coherent and interaction-aware responses than competing methods, while better preserving lip synchronization, expression continuity, and responsive head dynamics.
+
+2) Qualitative Results: We present qualitative comparisons in Fig. 4 and Fig. 5, where existing methods often produce relatively mechanical and neutral facial animations, lacking the expressive variations and harmonious coordination required for duet singing. In contrast, InterSing generates more natural interaction patterns between singers, with better synchroniza-tion in facial movements and more coherent responses. Fig. 6 further illustrates motion variations under identical audio with different interaction score conditions, demonstrating that the generated animations can adapt to different levels of inter-action while maintaining consistent audio-driven dynamics. To further assess perceptual quality, we conducted a user study with 28 participants (16 males and 12 females, aged between 20 and 45 years old). Participants were presented with 40 randomly ordered animation samples (20 samples were selected from the dyadic generation task and 20 samples from the partner generation task), where the identities of the compared methods were concealed to avoid potential bias. For each sample, animations generated by different methods were rendered under the same audio input and displayed in a randomized order. Participants evaluated the generated singing animations on a 1–5 Likert scale according to three criteria: lip-sync accuracy, expression richness, and interaction naturalness. Lip-sync accuracy measures the synchronization between facial motion and singing audio, expression richness evaluates the diversity and intensity of facial expressions, and interaction naturalness assesses the perceived coordination and responsiveness between performers. As shown in Fig. 7, Inter-Sing achieves the highest scores across all perceptual dimen-sions, demonstrating its ability to generate more synchronized, expressive, and socially coherent duet singing animations. 9No-Interaction (Score = 0) 
+
+Low-Interaction (Score = 0.5) 
+
+High-Interaction (Score = 1) 
+
+Fig. 6. Visualization of score control. Facial motions generated from the same audio input under no-interaction, low-interaction and high-interaction score conditions. 6% 
+
+> 38%
+> 3%
+> 30%
+> 8%
+> 2%
+> 12%
+> 35%
+> 4%
+> 33%
+> 11%
+> 6%
+> 26%
+> 15%
+> 25%
+> 10%
+> 30%
+> 18%
+> 25%
+> 7%
+> 27%
+> 15%
+> 23%
+> 37%
+> 31%
+> 5%
+> 41%
+> 12%
+> 28%
+> 37%
+> DualTalk
+> DIM
+> Ours(Partner)
+> PaChorus
+> UniLS
+> Ours(Dyadic)
+
+Lip-Sync Accuracy 
+
+> 14%
+> 45%
+> 3%
+> 29%
+> 5%
+> 1%
+> 23%
+> 32%
+> 6%
+> 31%
+> 19%
+> 9%
+> 22%
+> 11%
+> 20%
+> 19%
+> 20%
+> 11%
+> 21%
+> 7%
+> 32%
+> 13%
+> 27%
+> 36%
+> 20%
+> 5%
+> 39%
+> 8%
+> 29%
+> 43%
+> DualTalk
+> DIM
+> Ours(Partner)
+> PaChorus
+> UniLS
+> Ours(Dyadic)
+
+Expression Richness 
+
+Interaction Naturalness 
+
+> 20%
+> 40%
+> 3%
+> 34%
+> 10%
+> 1%
+> 32%
+> 41%
+> 3%
+> 31%
+> 18%
+> 2%
+> 20%
+> 10%
+> 21%
+> 15%
+> 21%
+> 13%
+> 16%
+> 5%
+> 31%
+> 13%
+> 23%
+> 36%
+> 12%
+> 4%
+> 42%
+> 7%
+> 28%
+> 48%
+> DualTalk
+> DIM
+> Ours(Partner)
+> PaChorus
+> UniLS
+> Ours(Dyadic)
+
+Fig. 7. User study on lip-sync accuracy, expression richness, and interaction naturalness. Our method consistently achieves the highest user preference rates across all evaluation criteria. 
+
+C. Ablation Study 
+
+We conducted ablation experiments to evaluate the contri-bution of each component, with results summarized in Ta-ble II. For Stage I, the absence of Linter causes the most severe degradation across the board, with substantial increases in both distributional metrics and Freeze Rate, confirming that without explicit discrimination between interaction and non-interaction states, the encoder produces an ambiguous latent space incapable of guiding temporally stable generation. 
+
+Lintra proves similarly critical, as its removal inflates FID and P-FID, validating that temporal contrastive alignment is essential for resolving fine-grained coherence within interac-tion segments. Disabling neck masking preserves per-frame accuracy yet degrades P-FID, indicating that the encoder shortcuts through low-level motion cues rather than distilling genuine interaction semantics. These findings collectively con-firm that the representational quality of Stage I directly gov-erns downstream generation fidelity, with Lintra and Linter 
+
+serving as complementary regularizers that enforce temporal coherence and interaction discriminability, respectively. For Stage II, replacing interaction cross-attention with naive fea-ture concatenation yields the worst P-FID among all vari-ants, confirming that without explicit cross-person dependency modeling the generator produces independently plausible yet interactionally incoherent motions. Removing score injection preserves competitive FID/P-FID yet causes Freeze Rate and FDD to surge, exposing that cross-attention alone suffices for local realism but lacks the global temporal scaffold that the interaction score provides for long-range coordination. This complementarity is further corroborated when predicted scores are replaced with ground-truth ones, yielding the best FID and P-FID, which confirms that more precise interaction 10 N = 3 N = 4                                   
+
+> Fig. 8. Visualization of multi-person chorus generation. By decomposing global coordination into sequential pairwise interactions, InterSing extends training-free to multi-person singing, preserving coherent interpersonal interactions. TABLE III
+> QUANTITATIVE EVALUATION ON THE COLLECTED THREE -SINGER SUBSET . B OLD INDICATES BEST RESULT .↓MEANS LOWER IS BETTER ,
+> AND →MEANS CLOSER TO THE GT IS BETTER .Methods LVE ↓FVE ↓FDD →Freeze Rate ↓BA →
+> GT --0.0000 -0.2304 PaChuros 11.2342 2.7491 1.1570 7.7144 0.2520 InterSing (Ours) 8.8769 2.2356 0.3375 5.5617 0.2413
+
+priors translate directly into more stable diffusion guidance and validates the controllability of score conditioning for multi-person generation. V. E XTENSION TO MULTI -P ERSON SCENARIOS 
+
+The decoupled interaction modeling and score-conditioned generation of InterSing naturally lend themselves to a training-free extension beyond the duet setting, as shown in Fig. 8. By arranging avatars horizontally with interactions restricted to immediate neighbors, global multi-person coordination decomposes into sequential pairwise generation steps that directly reuse the pretrained dyadic framework. For three participants, the motions of A and B are first synthesized jointly via Dyadic Generation. With B’s motion fixed, the B– C pair is produced through score-guided Partner Generation under a mutual exclusion constraint, which prevents the B– C interaction score from occupying temporal regions already assigned to the A–B interaction during noise injection, thereby reducing conflicts between different interaction relationships. This formulation generalizes to arbitrary participant counts through a singing visual center that determines generation or-der. Central interactions are synthesized first, with generation expanding progressively outward, each peripheral interaction score constrained by already-established central ones. This prioritization grants higher stability to visually dominant par-ticipants while ensuring peripheral motions adapt coherently to the global interaction structure. To validate the composability of the proposed interaction representation in multi-singer scenarios, we collected 30 min-utes of three-singer performances and compared InterSing with PaChorus [3]. Unlike PaChorus, which represents all non-target singers as a single partner representation and therefore models only coarse one-to-many interactions, our framework explicitly captures pairwise interaction scores that can be composed to represent multiple interaction relationships simul-taneously. As summarized in Table III, InterSing consistently outperforms PaChorus on all metrics, demonstrating that ex-plicit pairwise interaction modeling provides a more effective foundation for extending duet singing animation to multi-singer scenarios. These results further verify that the learned interaction representation is compositional and can be flexibly reused to model complex multi-person coordination without additional training. VI. LIMITATION 
+
+Similar to other FLAME-based methods [3], [19], our framework does not explicitly capture fine-grained eye-gaze dynamics, due to the inherent limitations of the FLAME representation. Another limitation is the lack of large-scale multi-person chorus datasets, which prevents comprehensive quantitative evaluation in multi-singer scenarios. In the future, we will explore more expressive 3D facial representations with richer eye and gaze modeling capabilities, and investi-gate large-scale multi-person singing datasets to enable more thorough evaluation and further improve the scalability of interactive singing animation. VII. C ONCLUSION 
+
+We present InterSing, a framework for 3D multi-person singing animation that explicitly models the intermittent, rhythm-driven interaction dynamics in duet performances. Moving beyond conventional joint-generation paradigms and implicit interaction modeling, we reformulate duet head ani-mation as an interaction-conditioned motion generation prob-lem. Our approach consists of a two-stage pipeline. In Stage I, a weakly supervised contrastive learning scheme, guided by geometric pseudo-labels and enhanced with a neck-masking strategy, learns a time-varying and interpretable interaction signal that captures coordination strength beyond raw head ori-entation cues. In Stage II, an interaction-aware diffusion trans-former conditioned on audio, speaker activity, and the learned interaction signal generates temporally coherent and mutually responsive dyadic motions. By incorporating diffusion forcing, a single unified model supports multiple downstream tasks, including full duet synthesis, partner motion prediction, and interaction-guided refinement. Extensive quantitative evalua-tions and a user study show that InterSing consistently outper-forms state-of-the-art baselines in lip synchronization, facial 11 
+
+expressiveness, and perceived interaction realism. Ablation studies further confirm the importance of explicit interaction modeling and the proposed contrastive learning design. REFERENCES [1] J. Yu, C. W. Chen, and Z. Wang, “3d singing head for music vr: Learning external and internal articulatory synchronicity from lyric, audio and notes,” in Proceedings of the 27th ACM International Conference on Multimedia , 2019, pp. 945–952. [2] Z. Huang, Y. Zhou, X. Xu, C. Xu, X. Xing, J. Qin, and S. He, “Think2sing: Orchestrating structured motion subtitles for singing-driven 3d head animation,” IEEE Transactions on Visualization and Computer Graphics , 2025. [3] X. Xie, Z. Huang, W. Xu, P. Xiao, X. Xu, and H. Zhang, “Let’s chorus: Partner-aware hybrid song-driven 3d head animation,” in Proceedings of the Computer Vision and Pattern Recognition Conference , 2025, pp. 5467–5476. [4] P. Liu, W. Deng, H. Li, J. Wang, Y. Zheng, Y. Ding, X. Guo, and M. Zeng, “Musicface: Music-driven expressive singing face synthesis,” 
+
+Computational Visual Media , vol. 10, no. 1, pp. 119–136, 2024. [5] S. Wu, Y. Li, W. Zhang, J. Jia, Y. Zhu, Y. Yan, G. Zhai, and X. Yang, “Singinghead: A large-scale 4d dataset for singing head animation,” 
+
+IEEE Transactions on Multimedia , 2025. [6] L. Quinto, W. F. Thompson, and F. L. Keating, “Emotional communica-tion in speech and music: The role of melodic and rhythmic contrasts,” 
+
+Frontiers in psychology , vol. 4, p. 184, 2013. [7] S. R. Livingstone, K. Peck, and F. A. Russo, “Acoustic differences in the speaking and singing voice,” in Proceedings of Meetings on Acoustics ,vol. 19, no. 1. Acoustical Society of America, 2013, p. 035080. [8] F. Eyben, G. L. Salom˜ ao, J. Sundberg, K. R. Scherer, and B. W. Schuller, “Emotion in the singing voice—a deeperlook at acoustic features in the light ofautomatic classification,” EURASIP Journal on Audio, Speech, and Music Processing , vol. 2015, no. 1, p. 19, 2015. [9] S. R. Livingstone, W. F. Thompson, M. M. Wanderley, and C. Palmer, “Common cues to emotion in the dynamic facial expressions of speech and song,” Quarterly Journal of Experimental Psychology , vol. 68, no. 5, pp. 952–970, 2015. [10] Y. Pan, C. Landreth, E. Fiume, and K. Singh, “Vocal: Vowel and consonant layering for expressive animator-centric singing animation,” in SIGGRAPH Asia 2022 Conference Papers , 2022, pp. 1–9. [11] M. El Ayadi, M. S. Kamel, and F. Karray, “Survey on speech emotion recognition: Features, classification schemes, and databases,” Pattern recognition , vol. 44, no. 3, pp. 572–587, 2011. [12] X. Chu, N. Goswami, Z. Cui, H. Wang, and T. Harada, “Artalk: Speech-driven 3d head animation via autoregressive model,” in Proceedings of the SIGGRAPH Asia 2025 Conference Papers , 2025, pp. 1–9. [13] F. Nocentini, T. Besnier, C. Ferrari, S. Arguillere, S. Berretti, and M. Daoudi, “Scantalk: 3d talking heads from unregistered scans,” in 
+
+European Conference on Computer Vision . Springer, 2024, pp. 19–36. [14] X. Fan, J. Li, Z. Lin, W. Xiao, and L. Yang, “Unitalker: Scaling up audio-driven 3d facial animation through a unified model,” in European Conference on Computer Vision . Springer, 2024, pp. 204–221. [15] Y. Fan, Z. Lin, J. Saito, W. Wang, and T. Komura, “Faceformer: Speech-driven 3d facial animation with transformers,” in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2022, pp. 18 770–18 780. [16] Y. Peng, J.-T. Song, S. Jung, R. Liu, H. Liu, X. Chu, R. Liu, E. Wu, H. Koike, and K. Kitani, “Dyadit: A multi-modal diffusion transformer for socially favorable dyadic gesture generation,” 2026. [Online]. Available: https://arxiv.org/abs/2602.23165 [17] X. Chu, R. Liu, Y. Huang, Y. Liu, Y. Peng, and B. Zheng, “Unils: End-to-end audio-driven avatars for unified listening and speaking,” arXiv preprint arXiv:2512.09327 , 2025. [18] M. Tran, D. Chang, M. Siniukov, and M. Soleymani, “Dim: Dyadic interaction modeling for social behavior generation,” in European Con-ference on Computer Vision . Springer, 2024, pp. 484–503. [19] Z. Peng, Y. Fan, H. Wu, X. Wang, H. Liu, J. He, and Z. Fan, “Dualtalk: Dual-speaker interaction for 3d talking head conversations,” in Proceed-ings of the Computer Vision and Pattern Recognition Conference , 2025, pp. 21 055–21 064. [20] E. Ng, H. Joo, L. Hu, H. Li, T. Darrell, A. Kanazawa, and S. Ginosar, “Learning to listen: Modeling non-deterministic dyadic facial motion,” in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2022, pp. 20 395–20 405. [21] T. Chen, S. Kornblith, M. Norouzi, and G. Hinton, “A simple framework for contrastive learning of visual representations,” in International conference on machine learning . PmLR, 2020, pp. 1597–1607. [22] A. v. d. Oord, Y. Li, and O. Vinyals, “Representation learning with contrastive predictive coding,” arXiv preprint arXiv:1807.03748 , 2018. [23] P. Khosla, P. Teterwak, C. Wang, A. Sarna, Y. Tian, P. Isola, A. Maschinot, C. Liu, and D. Krishnan, “Supervised contrastive learn-ing,” Advances in neural information processing systems , vol. 33, pp. 18 661–18 673, 2020. [24] M. Zheng, F. Wang, S. You, C. Qian, C. Zhang, X. Wang, and C. Xu, “Weakly supervised contrastive learning,” in Proceedings of the IEEE/CVF International Conference on computer vision , 2021, pp. 10 042–10 051. [25] B. Chen, D. Mart´ ı Mons´ o, Y. Du, M. Simchowitz, R. Tedrake, and V. Sitzmann, “Diffusion forcing: Next-token prediction meets full-sequence diffusion,” Advances in Neural Information Processing Sys-tems , vol. 37, pp. 24 081–24 125, 2024. [26] P. Edwards, C. Landreth, E. Fiume, and K. Singh, “Jali: an animator-centric viseme model for expressive lip synchronization,” ACM Trans-actions on graphics (TOG) , vol. 35, no. 4, pp. 1–11, 2016. [27] S. L. Taylor, M. Mahler, B.-J. Theobald, and I. Matthews, “Dy-namic units of visual speech,” in Proceedings of the 11th ACM SIG-GRAPH/Eurographics conference on Computer Animation , 2012, pp. 275–284. [28] Y. Xu, A. W. Feng, S. Marsella, and A. Shapiro, “A practical and configurable lip sync method for games,” in Proceedings of Motion on Games , 2013, pp. 131–140. [29] Z. Peng, Y. Luo, Y. Shi, H. Xu, X. Zhu, H. Liu, J. He, and Z. Fan, “Selftalk: A self-supervised commutative training diagram to compre-hend 3d talking faces,” in Proceedings of the 31st ACM International Conference on Multimedia , 2023, pp. 5292–5301. [30] J. Xing, M. Xia, Y. Zhang, X. Cun, J. Wang, and T.-T. Wong, “Codetalker: Speech-driven 3d facial animation with discrete motion prior,” in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2023, pp. 12 780–12 790. [31] S. Stan, K. I. Haque, and Z. Yumak, “Facediffuser: Speech-driven 3d facial animation synthesis using diffusion,” in Proceedings of the 16th ACM SIGGRAPH Conference on Motion, Interaction and Games , 2023, pp. 1–11. [32] B. Thambiraja, I. Habibie, S. Aliakbarian, D. Cosker, C. Theobalt, and J. Thies, “Imitator: Personalized speech-driven 3d facial animation,” in 
+
+Proceedings of the IEEE/CVF international conference on computer vision , 2023, pp. 20 621–20 631. [33] Z. Peng, H. Wu, Z. Song, H. Xu, X. Zhu, J. He, H. Liu, and Z. Fan, “Emotalk: Speech-driven emotional disentanglement for 3d face animation,” in Proceedings of the IEEE/CVF international conference on computer vision , 2023, pp. 20 687–20 697. [34] R. Danˇ eˇ cek, K. Chhatre, S. Tripathi, Y. Wen, M. Black, and T. Bolkart, “Emotional speech-driven animation with content-emotion disentangle-ment,” in SIGGRAPH Asia 2023 Conference Papers , 2023, pp. 1–13. [35] W. Song, X. Wang, Y. Jiang, S. Li, A. Hao, X. Hou, and H. Qin, “Expressive 3d facial animation generation based on local-to-global latent diffusion,” IEEE Transactions on Visualization and Computer Graphics , vol. 30, no. 11, pp. 7397–7407, 2024. [36] Y. Wang, Y. Fan, X. Wang, G. Yu, and F. Wang, “Diffusion-based realistic listening head generation via hybrid motion modeling,” in Pro-ceedings of the Computer Vision and Pattern Recognition Conference ,2025, pp. 15 885–15 895. [37] Y. Cai, Y. Wu, K. Li, Y. Zhou, B. Zheng, and H. Liu, “Flooddiffusion: Tailored diffusion forcing for streaming motion generation,” arXiv preprint arXiv:2512.03520 , 2025. [38] J. Liu, X. Wang, X. Fu, Y. Chai, C. Yu, J. Dai, and J. Han, “Mfr-net: Multi-faceted responsive listening head generation via denoising diffu-sion model,” in Proceedings of the 31st ACM international conference on multimedia , 2023, pp. 6734–6743. [39] X. Liu, Y. Guo, C. Zhen, T. Li, Y. Ao, and P. Yan, “Customlistener: Text-guided responsive interaction for user-friendly listening head gener-ation,” in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2024, pp. 2415–2424. [40] E. Ng, S. Subramanian, D. Klein, A. Kanazawa, T. Darrell, and S. Ginosar, “Can language models learn to listen?” in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2023, pp. 10 083–10 093. [41] E. Ng, J. Romero, T. Bagautdinov, S. Bai, T. Darrell, A. Kanazawa, and A. Richard, “From audio to photoreal embodiment: Synthesizing humans in conversations,” in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2024, pp. 1001–1010. 12 
+
+[42] M. Zhou, Y. Bai, W. Zhang, T. Yao, T. Zhao, and T. Mei, “Responsive listening head generation: a benchmark dataset and baseline,” in Euro-pean conference on computer vision . Springer, 2022, pp. 124–142. [43] L. Song, G. Yin, Z. Jin, X. Dong, and C. Xu, “Emotional listener portrait: Neural listener head generation with emotion,” in Proceedings of the IEEE/CVF international conference on computer vision , 2023, pp. 20 839–20 849. [44] T. Li, T. Bolkart, M. J. Black, H. Li, and J. Romero, “Learning a model of facial shape and expression from 4d scans.” ACM Trans. Graph. ,vol. 36, no. 6, pp. 194–1, 2017. [45] R. Hennequin, A. Khlif, F. Voituret, and M. Moussallam, “Spleeter: a fast and efficient music source separation tool with pre-trained models,” 
+
+Journal of Open Source Software , vol. 5, no. 50, p. 2154, 2020, deezer Research. [Online]. Available: https://doi.org/10.21105/joss.02154 [46] A. Radford, J. W. Kim, T. Xu, G. Brockman, C. McLeavey, and I. Sutskever, “Robust speech recognition via large-scale weak supervi-sion,” in International conference on machine learning . PMLR, 2023, pp. 28 492–28 518. [47] J. Liao, H. Duan, K. Feng, W. Zhao, Y. Yang, L. Chen, and Y. Chen, “Lr-asd: Lightweight and robust network for active speaker detection,” 
+
+International Journal of Computer Vision , vol. 133, no. 7, pp. 4749– 4769, 2025. [48] V. H. Maluleke, K. Horiuchi, L. Wilken, E. Ng, J. Malik, and A. Kanazawa, “Diffusion forcing for multi-agent interaction sequence modeling,” arXiv preprint arXiv:2512.17900 , 2025. [49] I. A. Petrov, V. Guzov, R. Marin, E. Aksan, X. Chen, D. Cremers, T. Beeler, and G. Pons-Moll, “Echo: Ego-centric modeling of human-object interactions,” arXiv preprint arXiv:2508.21556 , 2025. [50] Y. Wu, K. Karunratanakul, Z. Luo, and S. Tang, “Uniphys: Unified planner and controller with diffusion for flexible physics-based character control,” in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2025, pp. 13 214–13 224. [51] J. Ho, A. Jain, and P. Abbeel, “Denoising diffusion probabilistic models,” 
+
+Advances in neural information processing systems , vol. 33, pp. 6840– 6851, 2020. [52] H. Liang, W. Zhang, W. Li, J. Yu, and L. Xu, “Intergen: Diffusion-based multi-human motion generation under complex interactions,” 
+
+International Journal of Computer Vision , vol. 132, no. 9, pp. 3463– 3483, 2024. [53] E. Perez, F. Strub, H. De Vries, V. Dumoulin, and A. Courville, “Film: Visual reasoning with a general conditioning layer,” in Proceedings of the AAAI conference on artificial intelligence , vol. 32, no. 1, 2018. [54] K. Zhang, Z. Zhang, Z. Li, and Y. Qiao, “Joint face detection and alignment using multitask cascaded convolutional networks,” IEEE signal processing letters , vol. 23, no. 10, pp. 1499–1503, 2016. [55] S. Zhao, Z. Pan, and B. Ma, “Clearervoice-studio: Bridging advanced speech processing research and practical deployment,” arXiv preprint arXiv:2506.19398 , 2025. [56] I. Loshchilov and F. Hutter, “Decoupled weight decay regularization,” 
+
+arXiv preprint arXiv:1711.05101 , 2017. 
+
+Yihan Zhou is a M.S. student in the School of Computer Science and Engineering, South China University of Technology. Her research interests include computer vision, computer graphics and multimodal learning. 
+
+Zikai Huang is currently pursuing a Ph.D. degree in the School of Computer Science and Engineering, South China University of Technology. His research interests include computer vision, computer graphics and multimodal learning. 
+
+Yuyang Yu received his B.Sc. degree in Com-munication Engineering from Jinan University in 2021. He is currently working toward the Ph.D. degree in the School of Computer Science and Engineering, South China University of Technology. His research interests include Multimodal Learning, Visual Anomaly Detection. 
+
+Xuemiao Xu received the BS and MS degrees in computer science and engineering from South China University of Technology, in 2002 and 2005, respec-tively, and the PhD degree in computer science and engineering from The Chinese University of Hong Kong in 2009. She is currently a professor with the School of Computer Science and Engineering, South China University of Technology. Her research interests include object detection, tracking, recogni-tion, and image, video understanding and synthesis, particularly their applications in the intelligent trans-portation. 
+
+Cheng Xu received his Ph.D. in Computer Sci-ence and Technology from South China University of Technology, China, in 2023. He is currently a Research Scientist at Singapore Management Uni-versity. Prior to this, he was a Post-Doctoral Fellow at The Hong Kong Polytechnic University from 2023 to 2026. His research interests primarily include human-centric visual representation, understanding, and generation. 
+
+Shengfeng He (Senior Member, IEEE) is an as-sociate professor in the School of Computing and Information Systems at Singapore Management Uni-versity. Previously, he was a faculty member at South China University of Technology. He earned his B.Sc. and M.Sc. from Macau University of Science and Technology and a Ph.D. from City University of Hong Kong. His research focuses on computer vision and generative models. He has received awards including the Google Research Award, PerCom 2024 Best Paper Award, and the Lee Kong Chian Fellowship. He is a senior IEEE member and distinguished CCF member. He serves as lead guest editor for IJCV and associate editor for IEEE TPAMI, IEEE TNNLS, IEEE TCSVT, Visual Intelligence, and Neurocomputing. He is an area chair/senior PC member for CVPR, NeurIPS, ICLR, ICML, AAAI, IJCAI, and BMVC, and will serve as Conference Chair of Pacific Graphics 2026.
