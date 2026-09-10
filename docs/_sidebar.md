@@ -1,6 +1,11 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-10 <!--dpr-date:20260910-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/10/2609.10317v1-decoupled-self-forcing-distillation-for-streaming-talking-head-generation" data-sidebar-item="{&quot;title&quot;: &quot;Decoupled Self-Forcing Distillation for Streaming Talking Head Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.10317v1-decoupled-self-forcing-distillation-for-streaming-talking-head-generation&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;通过低维运动空间实现音频驱动唇动的流式说话头生成。&quot;}">Decoupled Self-Forcing Distillation for Streaming Talking Head Generation</a>
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/10/2609.08496v1-signrefine-adapting-foundational-video-models-for-sign-language-generation" data-sidebar-item="{&quot;title&quot;: &quot;SignRefine: Adapting Foundational Video Models for Sign Language Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.08496v1-signrefine-adapting-foundational-video-models-for-sign-language-generation&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;提出局部适配器与空间定位选择性细化手部和面部区域以实现视频生成中的精确发音。&quot;}">SignRefine: Adapting Foundational Video Models for Sign Language Generation</a>
   * 2026-09-09 <!--dpr-date:20260909-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/09/2609.06144v1-tbdub-production-oriented-visual-dubbing" data-sidebar-item="{&quot;title&quot;: &quot;TBDub: Production-Oriented Visual Dubbing&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.06144v1-tbdub-production-oriented-visual-dubbing&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;同步嘴部运动与替换语音&quot;}">TBDub: Production-Oriented Visual Dubbing</a>

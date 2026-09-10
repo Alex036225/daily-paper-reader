@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-10",
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T21:43:26",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/10/2609.10317v1-decoupled-self-forcing-distillation-for-streaming-talking-head-generation",
+      "section": "deep",
+      "title_en": "Decoupled Self-Forcing Distillation for Streaming Talking Head Generation",
+      "authors": "Yanru An, Ruiyan Wang, Wenwu Wei, Rui Bu, Qi Wang, Hongwei Hu, Zhengxue Cheng, Rong Xie, Li Song, Wenjun Zhang",
+      "date": "2026-09-09",
+      "pdf": "https://arxiv.org/pdf/2609.10317v1",
+      "score": "8.0",
+      "evidence": "通过低维运动空间实现音频驱动唇动的流式说话头生成。",
+      "tldr": "流式说话人生成中，端到端方法高质量但计算开销大，两阶段方法虽快但保真度差，矛盾源于音频与像素级潜变量耦合浪费容量。本文在低维身份解耦运动空间融合条件，用小型因果自回归Transformer生成运动潜变量，由预训练扩散渲染器转视频。提出解耦自强迫蒸馏，以冻结教师同时蒸馏渲染器为块因果学生，并通过渲染视频与真实视频评分监督运动生成器。最终两模型并行因果流运行，达到15.4 FPS、1.3秒延迟且无质量下降，证明高保真无需大骨干。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Streaming talking-head generation produces each frame as its driving audio arrives, yet fidelity and efficiency have so far pulled in opposite directions: end-to-end methods condition a video diffusion model on audio directly and achieve high quality but only at large scale, while cheaper two-stage methods generate an intermediate motion representation and trail in fidelity. We argue the cost of the former lies in the target of fusion: the video latent is dominated by identity, appearance and background, none of which audio bears on, so coupling audio to every pixel blurs detail and wastes capacity. We instead fuse conditions in a low-dimensional identity-disentangled motion space, routing audio and motion captions by their temporal granularity, and generate motion latents with a small causal autoregressive transformer that a pretrained diffusion renderer turns into video. Conditions thus control video transitively, and high fidelity no longer requires a large backbone. Streaming this decomposition needs both models to be causal, and the exposure-bias problem could be solved by self-forcing given a bidirectional teacher. But there is no such teacher in motion space. Our decoupled self-forcing distillation resolves both models under one frozen teacher: conditioned on motion, it distills the renderer into a block-causal student; unconditionally, it scores rendered rollouts against real videos, supervising motion by the video it produces. This lifts the fidelity ceiling from the motion generator onto the stronger renderer. The two models run as parallel causal streams, reaching 15.4 FPS at 1.3 s latency with no quality degradation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/10/2609.08496v1-signrefine-adapting-foundational-video-models-for-sign-language-generation",
+      "section": "quick",
+      "title_en": "SignRefine: Adapting Foundational Video Models for Sign Language Generation",
+      "authors": "Anton Pelykh, Edward Fish, Ozge Mercanoglu Sincan, Richard Bowden",
+      "date": "2026-09-08",
+      "pdf": "https://arxiv.org/pdf/2609.08496v1",
+      "score": "6.0",
+      "evidence": "提出局部适配器与空间定位选择性细化手部和面部区域以实现视频生成中的精确发音。",
+      "tldr": "现代视频扩散模型多训练于口语视频，生成手语时常出现伪影，导致手语难以理解。SignRefine 基于预训练视频扩散 transformer，引入空间接地的局部适配器，仅以2D关键点条件选择性精炼手部和面部区域，生成可理解的手语视频。在自建大规模手语数据集 NVSign 上训练后，手部姿态精度较最强基线最高提升30%，超过80%的手语用户偏好其视觉质量与可理解性。该工作为高质量手语生成提供了有效模型与数据基础。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Sign language video generation demands precise hand and facial articulation, yet modern video diffusion models, trained predominantly on spoken-language video, produce artifacts that render signing unintelligible. We propose SignRefine, a sign language video generation model that produces comprehensible signing from 2D keypoint conditioning alone, generalizing across appearances and visual conditions. Our approach builds on a pretrained video diffusion transformer and introduces local adapters with spatial grounding to selectively refine hand and face regions, steering the strong base model's prior toward accurate articulation. To enable this work and support broader sign language research, we present NVSign, a large-scale dataset of video content natively produced in sign language, offering diverse signer appearances, environments, and natural conversational settings. Trained on this data, our model shows up to 30% improvement in hand pose precision metrics over the strongest baseline and is preferred by sign language users for visual quality and comprehensibility in more than 80% of comparisons.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
