@@ -6,29 +6,22 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-09-10
-- 运行时间：2026-09-10 21:43:00 UTC
+- 最新运行日期：2026-09-11
+- 运行时间：2026-09-11 21:45:23 UTC
 - 运行状态：成功
-- 本次总论文数：2
-- 精读区：1
-- 速读区：1
+- 本次总论文数：0
+- 精读区：0
+- 速读区：0
 
 ### 今日简报（AI）
-- 今日共生成 2 篇推荐（精读 1 篇，速读 1 篇）
-- 精读：《Decoupled Self-Forcing Distillation for Streaming Talking Head Generation》（8.0/10）
-- 速读：《SignRefine: Adapting Foundational Video Models for Sign Language Generation》（6.0/10）
-- 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
-- 详情：[/202609/10/README](/202609/10/README)
+> 今日无新推荐，系统未产出可展示论文。
+- 详情：[/202609/11/README](/202609/11/README)
 
 ### 精读区论文标签
-1. [Decoupled Self-Forcing Distillation for Streaming Talking Head Generation](/202609/10/2609.10317v1-decoupled-self-forcing-distillation-for-streaming-talking-head-generation)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：通过低维运动空间实现音频驱动唇动的流式说话头生成。
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [SignRefine: Adapting Foundational Video Models for Sign Language Generation](/202609/10/2609.08496v1-signrefine-adapting-foundational-video-models-for-sign-language-generation)  
-   标签：评分：6.0/10、query:wan-av-gen
-   evidence：提出局部适配器与空间定位选择性细化手部和面部区域以实现视频生成中的精确发音。
+- 本次无速读推荐。
 
 
 <div class="dpr-home-promo-card">
