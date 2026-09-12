@@ -1,0 +1,69 @@
+{
+  "label": "2026-09-12",
+  "date": "2026-09-12",
+  "generated_at": "2026-09-12T21:05:55",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202609/12/2609.11439v1-multi-modal-controlled-coherent-motion-generation",
+      "section": "quick",
+      "title_en": "Multi-Modal Controlled Coherent Motion Generation",
+      "authors": "Yifei Liu, Qiong Cao, Hongwei Yi, Huaiguang Jiang, Changxing Ding",
+      "date": "2026-09-10",
+      "pdf": "https://arxiv.org/pdf/2609.11439v1",
+      "score": "7.0",
+      "evidence": "基于扩散框架从语音音频和文本生成连贯的3D化身运动",
+      "tldr": "人类能自然做到边走边说，但现有3D虚拟人运动生成方法受限于缺乏对齐多模态数据，常产生不匹配动作。本文提出MOCO，一种基于扩散的框架，可同时处理语音、文本和轨迹等多模态输入，无需对齐数据。MOCO通过解耦去噪过程，逐步细化各模态贡献，生成连贯自然的运动。在自建多模态基准上，MOCO优于现有基线，推动了该领域发展。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "It is natural for humans to walk and talk simultaneously. This paper tackles the challenge of replicating such natural behaviors in 3D avatar motion generation driven by concurrent multimodal inputs, such as a text description of a man walking alongside speech audio. Existing methods, constrained by the scarcity of aligned multimodal data, typically combine motions from individual modalities sequentially or through weighted sums. However, they often result in mismatched or unrealistic movements. To overcome these limitations, we propose MOCO, a novel diffusion-based framework capable of processing multiple simultaneous inputs, including speech audio, text descriptions, and trajectory data, to generate coherent and lifelike motions without requiring aligned multimodal data. Our key innovation lies in decoupling the motion generation process. During each denoising step, the diffusion model independently generates motions for each modality from the input noise and assembles the body parts according to predefined spatial rules. The resulting combined motion is then diffused and serves as the input noise for the subsequent denoising step. This iterative approach enables each modality to refine its contribution within the context of the overall motion, progressively harmonizing movements across modalities. Consequently, the generated motions become increasingly natural and fluid with each iteration, achieving coherent and synchronized behaviors. We evaluate our approach using a purpose-built multimodal benchmark. Experimental results demonstrate that MOCO outperforms existing baselines, advancing the field of multimodal motion generation for 3D avatars.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/12/2609.04649v1-readit-guidance-control-for-image-and-video-generation-using-diffusion-transformer-features",
+      "section": "quick",
+      "title_en": "ReaDiT Guidance: Control for Image and Video Generation using Diffusion Transformer Features",
+      "authors": "Jay Mahajan, Chang Liu, Rauf Makharov, Viraj Shah, Alexander Schwing, Svetlana Lazebnik",
+      "date": "2026-09-04",
+      "pdf": "https://arxiv.org/pdf/2609.04649v1",
+      "score": "6.0",
+      "evidence": "利用DiT内部特征引导视频生成控制，适用于WAN等DiT架构视频模型",
+      "tldr": "扩散Transformer（DiT）已成为图像和视频生成的主流架构，但如何利用其内部特征实现精确的空间控制仍是一个开放问题。ReaDiT Guidance提出一种轻量级引导框架，仅使用单个DiT块的特征，根据测试时提供的深度、姿态或边缘图等空间目标来引导生成过程。该方法无需额外训练，参数极少，且因现代视频生成模型大多基于DiT，可自然扩展至视频生成，实现相机和运动控制。实验表明，与现有基于特征或适配器的方法相比，ReaDiT Guidance取得竞争性或更优结果。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We present DiT Readout (ReaDiT) Guidance, a lightweight framework for controlling generation with Diffusion Transformer (DiT) models via their internal feature representations. ReaDiT Guidance uses features from a single DiT block to steer the generative process according to spatial targets - like depth, pose, or edge maps - provided at test time. Furthermore, since modern text-to-video models are largely built on DiT backbones, ReaDiT Guidance naturally extends to video generation, enabling camera and motion control. Experimental results demonstrate that our approach achieves competitive or improved results compared to existing feature-based and off-the-shelf adapter-based approaches while requiring fewer parameters.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/12/2609.06478v1-mvweaver-a-hierarchical-music-video-generation-agent-with-a-learned-song-to-visual-bridge",
+      "section": "quick",
+      "title_en": "MVWeaver: A Hierarchical Music Video Generation Agent with a Learned Song-to-Visual Bridge",
+      "authors": "Sifei Li, Minyan Luo, Xu Li, Guodong Qi, Xincan Wang, Hanwen Wang, Chen Zhang, Pengfei Wan, Oliver Deussen, Weiming Dong",
+      "date": "2026-09-06",
+      "pdf": "https://arxiv.org/pdf/2609.06478v1",
+      "score": "6.0",
+      "evidence": "从歌曲生成音乐视频，利用分层规划与学习的歌曲到视觉桥，实现音频驱动的多模态视频生成",
+      "tldr": "现有自动音乐视频生成系统通常能生成视觉合理镜头，但缺乏长期连贯性与基于歌曲的视觉发展。MVWeaver 提出层次化规划与学习到的歌曲到视觉桥接，将歌曲理解转化为可执行的镜头计划。它从1861对真实歌曲-MV中学习桥接知识，通过LoRA微调大语言模型预测桥接，引导层次视觉规划。实验表明其增强了歌曲对齐的视觉转换、更丰富的视觉发展与镜头间连贯性，消融验证了桥接条件化的贡献。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Music videos are an important form of audiovisual expression in contemporary culture. They translate and extend the expressive content of songs through deliberate visual design. Existing automatic music video (MV) generation systems can generate visually plausible shots, yet often struggle with long-form coherence and song-grounded visual development. We present MVWeaver, a music video generation agent that integrates hierarchical planning with a learned song-to-visual bridge that translates song understanding into executable shot plans. The MVWeaver architecture comprises a comprehensive song analysis module, a visual planner that constructs hierarchical plans, and downstream image and video generation models that render the planned content. To equip a general-purpose LLM with MV-specific song-to-visual knowledge, we learn a bridge between song analysis and visual planning from real-MV-derived supervision and curate 1,861 real-world song--MV pairs with structured song-side, MV-side, and teacher-inferred song-to-visual rationale annotations. Using these annotations, we perform LoRA-based supervised fine-tuning (SFT) of a large language model to predict song-to-visual bridges that guide hierarchical visual planning. Our experiments demonstrate stronger song-grounded visual translation, richer visual development, and greater conceptual and shot-to-shot coherence, while ablations support the benefits of learned bridge conditioning.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/12/2609.11507v1-harnessing-intrinsic-subject-aware-attention-for-controllable-multi-subject-video-generation",
+      "section": "quick",
+      "title_en": "Harnessing Intrinsic Subject-Aware Attention for Controllable Multi-Subject Video Generation",
+      "authors": "Niange Yu, Ye Tian, Biaolong Chen, Miao Lu, Aixi Zhang, Hao Jiang, Yunhai Tong, Pipei Huang",
+      "date": "2026-09-10",
+      "pdf": "https://arxiv.org/pdf/2609.11507v1",
+      "score": "6.0",
+      "evidence": "基于DiT内在主体感知注意力的可控多主体视频生成，支持参考图像条件生成",
+      "tldr": "多主体视频生成面临保真度强度不可控与语义漂移难题。本文发现扩散变换器内部注意力块可形成内在空间定位图（ISGM），能精确定位参考主体。基于此提出双阶段内在注意力利用框架（DIAL），在低噪声阶段用ISGM引导注意力实现推理时保真度控制，在高噪声阶段自动构建偏好对进行强化学习。实验表明DIAL在OpenS2V-Eval上显著优于基线，提升身份一致性并实现可控保真度。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Multi-subject video generation faces two key challenges: uncontrollable fidelity strength and potential semantic drift. We address these by analyzing the internal mechanisms of Diffusion Transformers (DiTs). We found that certain attention blocks naturally form an Intrinsic Spatial Grounding Map (ISGM) that precisely locates reference subjects. Building on this insight, we propose Dual-phase Intrinsic Attention Leveraging (DIAL), a framework that uses these internal signals for both training and inference. In low-noise stages, we use ISGM to guide the attention mechanism, allowing precise control over fidelity strength during inference without retraining. In high-noise stages, we use these same maps to automatically build preference pairs at no additional cost for Reinforcement Learning (RL). This RL procedure effectively anchors the model's attention to reference subjects and mitigates semantic drift. Extensive experiments show that DIAL significantly outperforms baseline models on the OpenS2V-Eval benchmark, consistently improving identity consistency and enabling controllable fidelity strength.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

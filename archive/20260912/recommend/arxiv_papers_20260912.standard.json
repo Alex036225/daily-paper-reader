@@ -1,0 +1,183 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-12T21:02:19.002131+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.11439v1",
+      "source": "arxiv",
+      "title": "Multi-Modal Controlled Coherent Motion Generation",
+      "abstract": "It is natural for humans to walk and talk simultaneously. This paper tackles the challenge of replicating such natural behaviors in 3D avatar motion generation driven by concurrent multimodal inputs, such as a text description of a man walking alongside speech audio. Existing methods, constrained by the scarcity of aligned multimodal data, typically combine motions from individual modalities sequentially or through weighted sums. However, they often result in mismatched or unrealistic movements. To overcome these limitations, we propose MOCO, a novel diffusion-based framework capable of processing multiple simultaneous inputs, including speech audio, text descriptions, and trajectory data, to generate coherent and lifelike motions without requiring aligned multimodal data. Our key innovation lies in decoupling the motion generation process. During each denoising step, the diffusion model independently generates motions for each modality from the input noise and assembles the body parts according to predefined spatial rules. The resulting combined motion is then diffused and serves as the input noise for the subsequent denoising step. This iterative approach enables each modality to refine its contribution within the context of the overall motion, progressively harmonizing movements across modalities. Consequently, the generated motions become increasingly natural and fluid with each iteration, achieving coherent and synchronized behaviors. We evaluate our approach using a purpose-built multimodal benchmark. Experimental results demonstrate that MOCO outperforms existing baselines, advancing the field of multimodal motion generation for 3D avatars.",
+      "authors": [
+        "Yifei Liu",
+        "Qiong Cao",
+        "Hongwei Yi",
+        "Huaiguang Jiang",
+        "Changxing Ding"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-10T12:10:00+00:00",
+      "link": "https://arxiv.org/pdf/2609.11439v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "diffusion-based framework for generating coherent 3D avatar motions from speech audio and text",
+      "llm_evidence_cn": "基于扩散框架从语音音频和文本生成连贯的3D化身运动",
+      "llm_evidence": "基于扩散框架从语音音频和文本生成连贯的3D化身运动",
+      "canonical_evidence": "基于扩散框架从语音音频和文本生成连贯的3D化身运动",
+      "llm_tldr_en": "Proposes MOCO, a diffusion-based framework that generates coherent 3D avatar motions from concurrent multimodal inputs like speech audio and text, without needing aligned data.",
+      "llm_tldr_cn": "该论文针对多模态输入（如语音音频和文本）驱动的3D化身运动生成中数据稀缺和运动不连贯的问题，提出了MOCO框架。MOCO基于扩散模型，能够同时处理语音音频、文本描述和轨迹数据，生成自然协调的全身运动，包括边走边说的场景。实验表明，该方法无需对齐多模态数据即可生成高质量运动。该工作对音频驱动的口型同步等细节生成具有参考价值。",
+      "llm_tldr": "该论文针对多模态输入（如语音音频和文本）驱动的3D化身运动生成中数据稀缺和运动不连贯的问题，提出了MOCO框架。MOCO基于扩散模型，能够同时处理语音音频、文本描述和轨迹数据，生成自然协调的全身运动，包括边走边说的场景。实验表明，该方法无需对齐多模态数据即可生成高质量运动。该工作对音频驱动的口型同步等细节生成具有参考价值。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.04649v1",
+      "source": "arxiv",
+      "title": "ReaDiT Guidance: Control for Image and Video Generation using Diffusion Transformer Features",
+      "abstract": "We present DiT Readout (ReaDiT) Guidance, a lightweight framework for controlling generation with Diffusion Transformer (DiT) models via their internal feature representations. ReaDiT Guidance uses features from a single DiT block to steer the generative process according to spatial targets - like depth, pose, or edge maps - provided at test time. Furthermore, since modern text-to-video models are largely built on DiT backbones, ReaDiT Guidance naturally extends to video generation, enabling camera and motion control. Experimental results demonstrate that our approach achieves competitive or improved results compared to existing feature-based and off-the-shelf adapter-based approaches while requiring fewer parameters.",
+      "authors": [
+        "Jay Mahajan",
+        "Chang Liu",
+        "Rauf Makharov",
+        "Viraj Shah",
+        "Alexander Schwing",
+        "Svetlana Lazebnik"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-04T02:30:18+00:00",
+      "link": "https://arxiv.org/pdf/2609.04649v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "lightweight framework to control DiT-based video generation using internal features; applicable to WAN's DiT backbone",
+      "llm_evidence_cn": "利用DiT内部特征引导视频生成控制，适用于WAN等DiT架构视频模型",
+      "llm_evidence": "利用DiT内部特征引导视频生成控制，适用于WAN等DiT架构视频模型",
+      "canonical_evidence": "利用DiT内部特征引导视频生成控制，适用于WAN等DiT架构视频模型",
+      "llm_tldr_en": "Proposes ReaDiT Guidance, using features from a single DiT block to steer image and video generation with spatial targets like depth and pose, enabling camera and motion control in text-to-video models.",
+      "llm_tldr_cn": "针对扩散Transformer（DiT）视频生成控制成本高的问题，提出轻量级ReaDiT引导框架。该方法仅利用单个DiT块的特征，在测试时根据深度、姿态或边缘图等空间目标控制生成过程，自然扩展至视频生成，实现相机与运动控制。实验表明其性能与现有方法相当或更优，且参数更少。该工作为WAN等DiT视频模型的精细控制提供了高效途径。",
+      "llm_tldr": "针对扩散Transformer（DiT）视频生成控制成本高的问题，提出轻量级ReaDiT引导框架。该方法仅利用单个DiT块的特征，在测试时根据深度、姿态或边缘图等空间目标控制生成过程，自然扩展至视频生成，实现相机与运动控制。实验表明其性能与现有方法相当或更优，且参数更少。该工作为WAN等DiT视频模型的精细控制提供了高效途径。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.06478v1",
+      "source": "arxiv",
+      "title": "MVWeaver: A Hierarchical Music Video Generation Agent with a Learned Song-to-Visual Bridge",
+      "abstract": "Music videos are an important form of audiovisual expression in contemporary culture. They translate and extend the expressive content of songs through deliberate visual design. Existing automatic music video (MV) generation systems can generate visually plausible shots, yet often struggle with long-form coherence and song-grounded visual development. We present MVWeaver, a music video generation agent that integrates hierarchical planning with a learned song-to-visual bridge that translates song understanding into executable shot plans. The MVWeaver architecture comprises a comprehensive song analysis module, a visual planner that constructs hierarchical plans, and downstream image and video generation models that render the planned content. To equip a general-purpose LLM with MV-specific song-to-visual knowledge, we learn a bridge between song analysis and visual planning from real-MV-derived supervision and curate 1,861 real-world song--MV pairs with structured song-side, MV-side, and teacher-inferred song-to-visual rationale annotations. Using these annotations, we perform LoRA-based supervised fine-tuning (SFT) of a large language model to predict song-to-visual bridges that guide hierarchical visual planning. Our experiments demonstrate stronger song-grounded visual translation, richer visual development, and greater conceptual and shot-to-shot coherence, while ablations support the benefits of learned bridge conditioning.",
+      "authors": [
+        "Sifei Li",
+        "Minyan Luo",
+        "Xu Li",
+        "Guodong Qi",
+        "Xincan Wang",
+        "Hanwen Wang",
+        "Chen Zhang",
+        "Pengfei Wan",
+        "Oliver Deussen",
+        "Weiming Dong"
+      ],
+      "primary_category": "cs.MM",
+      "categories": [
+        "cs.MM",
+        "cs.SD"
+      ],
+      "published": "2026-09-06T08:50:45+00:00",
+      "link": "https://arxiv.org/pdf/2609.06478v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "generates music videos from songs using hierarchical planning and learned song-to-visual bridge; multimodal audio-to-video generation",
+      "llm_evidence_cn": "从歌曲生成音乐视频，利用分层规划与学习的歌曲到视觉桥，实现音频驱动的多模态视频生成",
+      "llm_evidence": "从歌曲生成音乐视频，利用分层规划与学习的歌曲到视觉桥，实现音频驱动的多模态视频生成",
+      "canonical_evidence": "从歌曲生成音乐视频，利用分层规划与学习的歌曲到视觉桥，实现音频驱动的多模态视频生成",
+      "llm_tldr_en": "Presents MVWeaver, a music video generation agent that translates song understanding into hierarchical shot plans via a learned song-to-visual bridge, then renders using image/video generation models.",
+      "llm_tldr_cn": "针对现有音乐视频生成系统长程连贯性和歌曲视觉发展不足的问题，提出MVWeaver分层音乐视频生成智能体。系统包含歌曲分析模块、视觉规划器和下游图像/视频生成模型，通过学习的歌曲到视觉桥将歌曲理解转化为可执行的镜头计划。实验表明该架构能够生成连贯且与歌曲内容匹配的音乐视频，推动了音频到视频的多模态生成。",
+      "llm_tldr": "针对现有音乐视频生成系统长程连贯性和歌曲视觉发展不足的问题，提出MVWeaver分层音乐视频生成智能体。系统包含歌曲分析模块、视觉规划器和下游图像/视频生成模型，通过学习的歌曲到视觉桥将歌曲理解转化为可执行的镜头计划。实验表明该架构能够生成连贯且与歌曲内容匹配的音乐视频，推动了音频到视频的多模态生成。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.11507v1",
+      "source": "arxiv",
+      "title": "Harnessing Intrinsic Subject-Aware Attention for Controllable Multi-Subject Video Generation",
+      "abstract": "Multi-subject video generation faces two key challenges: uncontrollable fidelity strength and potential semantic drift. We address these by analyzing the internal mechanisms of Diffusion Transformers (DiTs). We found that certain attention blocks naturally form an Intrinsic Spatial Grounding Map (ISGM) that precisely locates reference subjects. Building on this insight, we propose Dual-phase Intrinsic Attention Leveraging (DIAL), a framework that uses these internal signals for both training and inference. In low-noise stages, we use ISGM to guide the attention mechanism, allowing precise control over fidelity strength during inference without retraining. In high-noise stages, we use these same maps to automatically build preference pairs at no additional cost for Reinforcement Learning (RL). This RL procedure effectively anchors the model's attention to reference subjects and mitigates semantic drift. Extensive experiments show that DIAL significantly outperforms baseline models on the OpenS2V-Eval benchmark, consistently improving identity consistency and enabling controllable fidelity strength.",
+      "authors": [
+        "Niange Yu",
+        "Ye Tian",
+        "Biaolong Chen",
+        "Miao Lu",
+        "Aixi Zhang",
+        "Hao Jiang",
+        "Yunhai Tong",
+        "Pipei Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-10T13:15:03+00:00",
+      "link": "https://arxiv.org/pdf/2609.11507v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "controllable multi-subject video generation using intrinsic subject-aware attention in DiTs, enabling conditional generation from reference images",
+      "llm_evidence_cn": "基于DiT内在主体感知注意力的可控多主体视频生成，支持参考图像条件生成",
+      "llm_evidence": "基于DiT内在主体感知注意力的可控多主体视频生成，支持参考图像条件生成",
+      "canonical_evidence": "基于DiT内在主体感知注意力的可控多主体视频生成，支持参考图像条件生成",
+      "llm_tldr_en": "Analyzes DiT internals to find Intrinsic Spatial Grounding Maps, then proposes DIAL to guide attention for controllable fidelity and reduced semantic drift in multi-subject video generation without retraining.",
+      "llm_tldr_cn": "多主体视频生成面临保真度不可控和语义漂移问题。本文通过分析扩散变换器（DiT）的内部机制，发现某些注意力块能形成精确定位参考主体的内在空间定位图（ISGM）。基于此提出双阶段内在注意力利用框架DIAL，在低噪声阶段用ISGM引导注意力实现无需重训练的推理时保真度控制，在高噪声阶段自动构建偏好。实验表明该方法可提升多主体视频生成的可控性。",
+      "llm_tldr": "多主体视频生成面临保真度不可控和语义漂移问题。本文通过分析扩散变换器（DiT）的内部机制，发现某些注意力块能形成精确定位参考主体的内在空间定位图（ISGM）。基于此提出双阶段内在注意力利用框架DIAL，在低噪声阶段用ISGM引导注意力实现无需重训练的推理时保真度控制，在高噪声阶段自动构建偏好。实验表明该方法可提升多主体视频生成的可控性。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
