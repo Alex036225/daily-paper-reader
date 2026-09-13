@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-13 <!--dpr-date:20260913-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/13/2609.08153v1-geodesic-informed-generative-diffusion-model-for-topology-preserved-image-video-generation" data-sidebar-item="{&quot;title&quot;: &quot;Geodesic-informed Generative Diffusion Model For Topology-preserved Image Video Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.08153v1-geodesic-informed-generative-diffusion-model-for-topology-preserved-image-video-generation&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;测地线信息引导的拓扑保持图像视频生成扩散模型&quot;}">Geodesic-informed Generative Diffusion Model For Topology-preserved Image Video Generation</a>
   * 2026-09-12 <!--dpr-date:20260912-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/12/2609.11439v1-multi-modal-controlled-coherent-motion-generation" data-sidebar-item="{&quot;title&quot;: &quot;Multi-Modal Controlled Coherent Motion Generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.11439v1-multi-modal-controlled-coherent-motion-generation&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;基于扩散框架从语音音频和文本生成连贯的3D化身运动&quot;}">Multi-Modal Controlled Coherent Motion Generation</a>

@@ -1,0 +1,57 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-13T22:03:34.544936+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.08153v1",
+      "source": "arxiv",
+      "title": "Geodesic-informed Generative Diffusion Model For Topology-preserved Image Video Generation",
+      "abstract": "Generative diffusion models have emerged as a class of powerful techniques for various imaging applications, including but not limited to synthesis, reconstruction, and segmentation. Despite their success, current generative models pose two key limitations. First, they primarily rely on image intensity and texture information, with limited attention to underlying object geometry. As a result, they do not guarantee geometric or topological consistency during the generation process, which is a crucial requirement for high-stakes domains such as computational anatomy, biology, and robotics, where preserving object structure is critical. Second, existing models fail to explicitly learn or represent shape changes in the generative process. Such deformation dynamics remain occluded within network parameters; hence leaving the transformation process uninterpretable and physically uninformed. To address these challenges, we introduce IGG (Image Generation informed by Geodesic dynamics), a novel framework that integrates topology-preserving geodesic principles into the diffusion-based generative process. In contrast to conventional methods that operate in image intensity space, IGG learns and synthesizes diverse samples within geodesic deformation spaces, where geometric object changes are learned as smooth and invertible smooth mappings from a given template/source image. Our code is publicly available at https://github.com/nellie689/IGG.",
+      "authors": [
+        "Nian Wu",
+        "Nivetha Jayakumar",
+        "Jiarui Xing",
+        "Miaomiao Zhang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-09-08T02:37:50+00:00",
+      "link": "https://arxiv.org/pdf/2609.08153v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "geodesic-informed diffusion model for topology-preserving image-to-video generation",
+      "llm_evidence_cn": "测地线信息引导的拓扑保持图像视频生成扩散模型",
+      "llm_evidence": "测地线信息引导的拓扑保持图像视频生成扩散模型",
+      "canonical_evidence": "测地线信息引导的拓扑保持图像视频生成扩散模型",
+      "llm_tldr_en": "Existing diffusion models ignore geometry, failing to preserve topology in image-to-video generation. This paper proposes a geodesic-informed generative diffusion model that incorporates geometric constraints to maintain topology. It is evaluated in anatomy, biology, and robotics, showing improved structural consistency. The approach enables topology-preserving video generation for structure-sensitive applications.",
+      "llm_tldr_cn": "针对现有扩散模型在图像视频生成中忽视物体几何拓扑一致性的问题，本文提出一种测地线信息引导的生成扩散模型，在生成过程中显式利用几何信息保持拓扑结构。该模型在计算解剖、生物学和机器人等高风险领域验证了拓扑保持的有效性。该方法弥合了图像生成与拓扑约束之间的鸿沟，对结构敏感的视频生成具有重要意义。",
+      "llm_tldr": "针对现有扩散模型在图像视频生成中忽视物体几何拓扑一致性的问题，本文提出一种测地线信息引导的生成扩散模型，在生成过程中显式利用几何信息保持拓扑结构。该模型在计算解剖、生物学和机器人等高风险领域验证了拓扑保持的有效性。该方法弥合了图像生成与拓扑约束之间的鸿沟，对结构敏感的视频生成具有重要意义。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
