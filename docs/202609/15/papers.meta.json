@@ -1,0 +1,54 @@
+{
+  "label": "2026-09-15",
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T22:02:45",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202609/15/2609.15863v1-lynnreal-omni-native-multi-modal-video-generation-for-agentic-visual-workflows",
+      "section": "deep",
+      "title_en": "LynnReal-Omni: Native multi-modal Video Generation for Agentic Visual Workflows",
+      "authors": "Xiaofeng Mao, Peijia Lin, Shaohao Rui, Yibo Zhang, Haibin Wan, Weijie Ma",
+      "date": "2026-09-14",
+      "pdf": "https://arxiv.org/pdf/2609.15863v1",
+      "score": "8.0",
+      "evidence": "原生多模态视频生成框架，统一了图像条件生成和参考引导生成。",
+      "tldr": "视频扩散模型随机难控，代理视觉创建虽可提供显式参考但保真度不足。LynnReal-Omni 构建32B共享多模态扩散Transformer，统一文本、图像、参考、结构控制、编辑、恢复与长视频生成，并支持3D渲染、游戏录制等异质输入。Flash变体配合轻量VAE解码，将22帧540p生成解码降至377ms，实现实时流式。该框架成为代理视觉创建的统一、可控、高效基础。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Video diffusion models are stochastic and hard to control: precise content often requires repeated sampling without guaranteed success, and long-horizon scenes drift in appearance, interactions, and temporal coherence. Agentic visual creation provides explicit references, editable 3D scenes, or executable game states for stable control, but does not by itself guarantee high object or character fidelity. Combining the two can enable stable, high-quality generation. To realize this combination, we present LynnReal-Omni, a native multimodal video generation framework built on a 32B shared multimodal diffusion transformer that unifies text-to-video, image-conditioned generation, reference-guided generation, structural control, editing, degraded video restoration, and long-video generation. It accepts heterogeneous visual inputs, including appearance references, editable 3D renders, and game recordings, allowing agents to compose visual conditions within a unified model. We also train a dedicated 27B Flash shared multimodal diffusion transformer for real-time rendering. We build a systematic data pipeline for video cleaning, subject association, multimodal annotation, and aligned control construction, yielding a curated corpus of multi-shot audiovisual segments, and introduce MSAVP, a 100-prompt, 20-metric evaluation design that separates instruction following, generating plausibility, visual quality, temporal behavior, and audio coordination. LynnReal-Omni-Flash further reduces inference cost through model and decoding acceleration, including a lightweight VAE decoder; on one H100, warm generation and decoding of a 22-frame 540p video take 843 ms with LynnReal-Omni and 377 ms with Flash. These results provide a foundation for real-time streaming video generation, making LynnReal-Omni a unified, controllable, and efficient basis for agentic visual creation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/15/2609.13264v1-beacon-behavior-and-appearance-control-for-subject-specific-video-generation",
+      "section": "quick",
+      "title_en": "BEACON: Behavior and Appearance Control for Subject-Specific Video Generation",
+      "authors": "Pokrzywa Baptiste, Nabyl Quignon, Yara Bahram, Muhammad Osama Zeeshan, Antitza Dantcheva, Eric Granger",
+      "date": "2026-09-07",
+      "pdf": "https://arxiv.org/pdf/2609.13264v1",
+      "score": "7.0",
+      "evidence": "基于单张参考图像的个性化视频生成",
+      "tldr": "现有视频生成方法通常仅以单张参考图像为条件，缺少时间动态信息，导致生成人物表情变化有限、缺乏个体特异性。BEACON提出轻量级框架，将视觉身份与表达行为解耦，分别用参考图像编码身份、参考视频捕捉主体面部动态，联合条件生成。在MEAD和RAVDESS上微调约2000对数据并更新约1%的Wan视频扩散模型参数后，面部表情度显著提升，身份保留保持竞争力。该工作为个性化人像视频生成提供新思路，并支持身份-表情迁移。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Generating human-centric videos that preserve both visual identity and person-specific expressive behavior remains a fundamental challenge. In addition to reproducing appearance, a model must replicate the facial behaviors that characterize how a subject expresses emotion over time. However, most state-of-the-art methods condition generation on a single reference image, which contains no information about these temporal dynamics. As a result, they tend to preserve the subject's visual identity but often produce expressions with limited variation and weak subject specificity. To mitigate this issue, we introduce BEACON, a lightweight framework for person-specific video generation that produces more expressive videos by disentangling visual identity from expressive behavior. BEACON conditions generation on two complementary signals: a reference image encoding the identity and a reference video capturing subject-specific facial dynamics. By conditioning on these complementary signals, BEACON generates videos that better preserve both the subject's appearance and characteristic facial dynamics, while also supporting identity-expression transfer. Our experiments on the MEAD and RAVDESS datasets show that by fine-tuning on approximately 2,000 pairs and updating about 1% of the pretrained Wan video diffusion model, BEACON improves facial expressivity over state-of-the-art video generation methods while maintaining competitive identity preservation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/15/2609.14122v1-signmimic-robust-high-quality-sign-language-motion-generation-via-human-shape-oblivious-pose-transfer-guidance",
+      "section": "quick",
+      "title_en": "SignMimic: Robust High-Quality Sign Language Motion Generation via Human-Shape-Oblivious Pose Transfer Guidance",
+      "authors": "Zhewen He, Junyi Yu, Haomian Huang, Zhenhua Li, Yi Fang",
+      "date": "2026-09-12",
+      "pdf": "https://arxiv.org/pdf/2609.14122v1",
+      "score": "7.0",
+      "evidence": "单参考帧视频生成，包含姿态转移和面部关节运动",
+      "tldr": "现有手语视频模仿方法将刚性运动、非刚性变形和视图依赖完成耦合在单一生成器中，导致手型漂移和时空不稳定。SignMimic提出分阶段框架：先用TNet刚性规范化，再在规范空间用NIF2D做非刚性适应，最后经Pose-MAE完成并驱动条件视频扩散，注入几何和语言先验。在ASL 50K、How2Sign、CSL News上取得领先的视频质量、身份相似度和帧连续性，反向翻译损失最小。消融证实各模块作用，代码开源，显著推动手语生成质量。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We study the challenge of sign language video mimicking: given a driving video and a single reference frame, synthesize a video where the target signer reproduces the source   motion while preserving identity and linguistic form. Prior pipelines entangle rigid motion, non-rigid deformation, and view-dependent completion in a monolithic generator,   causing handshape drift and spatio-temporal instability. We present SignMimic, which (i) applies a TNet-based model to study SE(3) rigid canonicalization to stabilize global   pose, (ii) performs non-rigid adaptation in a canonical space to preserve fine-grained articulators (hands/face) and coarticulation via NIF2D, and (iii) uses Pose-MAE-style   completion before conditional video diffusion. This factorization injects geometric and linguistic priors, yielding shape and spatio-temporal consistency. On several large-scale   datasets (ASL 50K, How2Sign, CSL News), SignMimic achieves state-of-the-art-level performance on video quality, identity similarity, and frame continuity while also achieving   minimal loss when performing back translation (SLT) on generated videos. Ablations confirm the role of rigid canonicalization, non-rigid adaptation, and completion. Code, model   checkpoints, and video examples will be released.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
