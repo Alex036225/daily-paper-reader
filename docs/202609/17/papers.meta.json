@@ -1,0 +1,54 @@
+{
+  "label": "2026-09-17",
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T22:11:58",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202609/17/2609.18632v1-vibeavatar-aligning-phonetic-kinematics-and-human-aesthetics-for-high-fidelity-talking-avatar-synthesis",
+      "section": "deep",
+      "title_en": "VibeAvatar: Aligning Phonetic Kinematics and Human Aesthetics for High-Fidelity Talking Avatar Synthesis",
+      "authors": "Qilin Wang, Mingyu Li, Hao Tang",
+      "date": "2026-09-16",
+      "pdf": "https://arxiv.org/pdf/2609.18632v1",
+      "score": "9.0",
+      "evidence": "从参考肖像和语音合成说话头像，实现准确的唇部发音",
+      "tldr": "现有说话头像合成方法难以同时兼顾唇部发音准确性、人类偏好的运动美学和高效推理，源于二者需在不同阶段处理。VibeAvatar 通过 Phonetic Kinematics Adapter 将语音特征转化为语音-运动学条件，并由 Aesthetic Motion Policy 在后训练阶段优化随机采样策略，配合轻量 flow 生成器在紧凑 1D warp 潜在空间运行。该方法在发音、美学和效率上达到最优，生成10秒512px视频仅需不到10秒和约3GB显存。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Multi-modal talking avatar synthesis aims to generate realistic talking videos from a reference portrait and speech. Despite rapid progress in diffusion-based methods, existing approaches still struggle to jointly achieve accurate lip articulation, human-preferred motion aesthetics, and efficient inference. We observe that phonetic accuracy and motion aesthetics arise from fundamentally different sources and should be addressed at complementary stages rather than learned implicitly by a single generator. Based on this insight, we propose VibeAvatar, which disentangles these two objectives through a Phonetic Kinematics Adapter (PKA) that converts recognition-oriented speech features into phonetic-kinematic conditions at the conditioning stage, and an Aesthetic Motion Policy (AMP) that optimizes a flow-consistent stochastic sampling policy via Group Relative Policy Optimization (GRPO) at the post-training stage. With a lightweight flow-based motion generator operating in a compact 1D warp-based latent motion space, VibeAvatar achieves state-of-the-art results in articulation, aesthetics, and efficiency on both objective metrics and user studies, while generating a 10-second 512px video in under 10 seconds with only $\\sim$3GB VRAM.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/17/2609.18393v1-msr-multiple-subject-reference-for-video-generation",
+      "section": "quick",
+      "title_en": "MSR: Multiple Subject Reference for Video Generation",
+      "authors": "Guannan Li, Jiaji Chen, Jingyuan Liao, Yu Geng, Baolan Qiu",
+      "date": "2026-09-16",
+      "pdf": "https://arxiv.org/pdf/2609.18393v1",
+      "score": "7.0",
+      "evidence": "在多张参考图像上条件化视频生成并保持外观",
+      "tldr": "多参考图像视频生成需要在保持外观的同时准确关联每个参考对象及其角色，传统方法易出现参考混淆。本文提出 MSR，基于 LTX 的槽感知条件化方案：每个参考图像独立编码为 token 组，通过傅里叶特征 MLP 注入槽嵌入，并利用槽相关时间偏移修改旋转坐标。定性实验表明该方法能合成包含不同角色和引用环境的真实/风格化场景，显著降低参考混淆。作者公开了权重与推理流程，并扩展支持音频参考，为多主体视频生成提供实用基础。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Conditioning a video generator on multiple images requires preserving appearance while associating each reference with its intended role. We present MSR (Multiple Subject Reference), a slot-aware conditioning scheme for LTX-based video generation. Each reference image is independently encoded as a static clip and represented by a separate latent-token group. A compact Fourier-feature multilayer perceptron adds a numeric slot embedding, while slot-dependent temporal offsets modify the group's rotary coordinates. The reference groups are prepended to noisy target tokens and serve as clean context during target-only flow-matching training. We implement this scheme through low-rank adaptation and release the resulting weights and inference workflows. Qualitative examples demonstrate compositions containing distinct characters and referenced environments in realistic and stylized scenes. Development observations suggest reduced reference confusion relative to an earlier continuous-reference baseline, while similar clothing, complex garments, and viewpoint changes remain challenging. We describe the conditioning mechanism, the retained training configuration, and the observed strengths and limitations of the released system. A supplementary audio-reference experiment adds voice conditioning while keeping the visual parameters frozen.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/17/2609.17521v1-physstream-streaming-physics-grounded-video-generation-with-structured-scene-memory-and-fine-grained-motion-control",
+      "section": "quick",
+      "title_en": "PhysStream: Streaming Physics-Grounded Video Generation with Structured Scene Memory and Fine-Grained Motion Control",
+      "authors": "Chuhao Chen, Peter Wonka, Chaoyang Wang, Chen Wang, Qiao Feng, Sergey Tulyakov, Lingjie Liu",
+      "date": "2026-09-15",
+      "pdf": "https://arxiv.org/pdf/2609.17521v1",
+      "score": "6.0",
+      "evidence": "图像到视频合成，具有物理基础的细粒度运动控制",
+      "tldr": "现有可控视频生成方法要么要求生成前给出完整控制序列，要么使用像素级信号仅指定物体位置而非物理动态。PhysStream提出自回归框架，在线从已生成帧提取位置图和目标跟踪图作为结构化场景记忆，并利用稀疏速度增量信号编码物理量以学习潜在动力学。在合成基准上，运动分布距离（FVMD）降低33%，轨迹误差降低12%，野外人类评估中超过85%偏好。该方法首次支持多物体桌面刚体场景的生成中交互控制。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Interactive control for video generation is moving from coarse prompts toward fine-grained, physically meaningful manipulation of dynamic scenes. Yet existing controllable methods either require the full control schedule before generation starts, or use pixel-space signals that dictate object positions rather than physical dynamics. To address these limitations, we propose PhysStream, an autoregressive model for physics-grounded image-to-video synthesis that incorporates structured scene memory---positional maps and object tracking maps derived online from previously generated frames---and supports fine-grained motion control via sparse velocity-increment signals that encode physical quantities, letting the model learn the underlying dynamics. We train our model in two stages: a bidirectional model is first finetuned with motion-control conditioning, then a causal autoregressive model is trained with additional structured scene memory, further improving physical consistency. PhysStream enables interactive, mid-generation control over multi-object tabletop rigid-body scenes---a capability not supported by prior methods---reducing motion distribution distance (FVMD) by 33% and trajectory error by 12% over the strongest baselines on synthetic benchmarks, and is preferred by human evaluators in over 85% of in-the-wild comparisons. Please check our website for more details: https://czzzzh.github.io/PhysStream",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

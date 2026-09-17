@@ -1,0 +1,477 @@
+Title: VibeAvatar: Aligning Phonetic Kinematics and Human Aesthetics for High-Fidelity Talking Avatar Synthesis
+
+URL Source: https://arxiv.org/pdf/2609.18632v1
+
+Published Time: Thu, 17 Sep 2026 01:11:48 GMT
+
+Number of Pages: 10
+
+Markdown Content:
+# VibeAvatar: Aligning Phonetic Kinematics and Human Aesthetics for High-Fidelity Talking Avatar Synthesis 
+
+# Qilin Wang 
+
+School of Computer Science, Peking University Beijing, China qilinwang25@stu.pku.edu.cn 
+
+# Mingyu Li 
+
+School of Electronics Engineering and Computer Science, Peking University Beijing, China mingyulics@stu.pku.edu.cn 
+
+# Hao Tang ∗
+
+School of Computer Science, Peking University Beijing, China bjdxtanghao@gmail.com 
+
+https://kelu007.github.io/vibe-avatar/ Ref Image Generated Videos 
+
+15s 30s 45s 60s 
+
+75s 90s 105s 120s 135s 150s 165s 180s Long-Term Avatar AnimaAon Ref Image Generated Videos Talking Avatar AnimaAon 
+
+Singing Avatar AnimaAon 
+
+Stylized Avatar AnimaAon 
+
+Figure 1: VibeAvatar synthesizes high-fidelity talking avatars with accurate lip articulation, human-preferred motion aesthetics, and efficient inference. It preserves stable identity and natural facial dynamics across speech and singing scenarios. 
+
+## Abstract 
+
+Multi-modal talking avatar synthesis aims to generate realistic talking videos from a reference portrait and speech. Despite rapid progress in diffusion-based methods, existing approaches still strug-gle to jointly achieve accurate lip articulation, human-preferred motion aesthetics, and efficient inference. We observe that pho-netic accuracy and motion aesthetics arise from fundamentally different sources and should be addressed at complementary stages rather than learned implicitly by a single generator. Based on this insight, we propose VibeAvatar, which disentangles these two objec-tives through a Phonetic Kinematics Adapter (PKA) that converts recognition-oriented speech features into phonetic-kinematic con-ditions at the conditioning stage, and an Aesthetic Motion Policy (AMP) that optimizes a flow-consistent stochastic sampling policy 
+
+> ∗Corresponding author.
+> This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+> MM ’26, Rio de Janeiro, Brazil
+> © 2026 Copyright held by the owner/author(s). ACM ISBN 979-8-4007-2213-4/2026/11 https://doi.org/10.1145/3767308.3835899
+
+via Group Relative Policy Optimization (GRPO) at the post-training stage. With a lightweight flow-based motion generator operating in a compact 1D warp-based latent motion space, VibeAvatar achieves state-of-the-art results in articulation, aesthetics, and efficiency on both objective metrics and user studies, while generating a 10-second 512 px video in under 10 seconds with only ∼3 GB VRAM. 
+
+## CCS Concepts 
+
+• Computing methodologies → Computer vision .
+
+## Keywords 
+
+Talking Avatar Synthesis; Flow Matching 
+
+ACM Reference Format: 
+
+Qilin Wang, Mingyu Li, and Hao Tang. 2026. VibeAvatar: Aligning Phonetic Kinematics and Human Aesthetics for High-Fidelity Talking Avatar Synthe-sis. In Proceedings of the 34th ACM International Conference on Multimedia (MM ’26), November 10–14, 2026, Rio de Janeiro, Brazil. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3767308.3835899 
+
+## 1 Introduction 
+
+Talking avatar synthesis is a multi-modal generation task that pro-duces a talking human video by jointly reasoning over a reference arXiv:2609.18632v1 [cs.CV] 16 Sep 2026 MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil Qilin Wang, Mingyu Li, and Hao Tang 3 4 5 6 7 8 9     
+
+> Sync-C ( better)
+> 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7
+> ASE (  better)
+> EchoMimic FantasyTalking FLOAT Hallo3 Wan-S2V Ours
+> Model Size
+> 0.6B 0.7B 3B 10B 14B
+
+Figure 2: Comparison of recent talking avatar methods on ASE [53] and Sync-C [9]. Existing methods still struggle to jointly improve aesthetic quality and lip synchronization. 
+
+portrait and a speech signal. It serves as a core technology for digi-tal humans in entertainment, education, and virtual interaction. A practical system should simultaneously achieve accurate lip articu-lation, human-aligned motion aesthetics, and efficient inference. Driven by rapid advances in diffusion-based generative frame-works [12, 20, 34, 42, 43], talking avatar synthesis has progressed substantially. Early studies [8, 15, 16, 33, 35, 49, 52, 58, 60] typically relied on two-stage pipelines that first predicted facial motion pa-rameters, such as 3D Morphable Models [3] (3DMM) coefficients, followed by a rendering stage. While interpretable, these cascaded frameworks often produced rigid and emotionless facial movements. More recent end-to-end diffusion models [7, 10, 14, 22, 23, 26, 28, 44, 50] learn direct audio–visual correlations and further close the gap between synthesized and real talking videos. However, these end-to-end models still face three unresolved issues. (i) Generic speech encoders are primarily optimized for recognition semantics rather than facial kinematics, so the gener-ator must recover phonetic timing and co-articulation implicitly, making precise lip articulation difficult. (ii) Articulation accuracy alone does not guarantee human-preferred motion: viewers also judge global expressiveness, temporal rhythm, and facial dynamics, yet standard training objectives provide no explicit signal to opti-mize these perceptual factors. (iii) Many recent models operate in high-dimensional pixel or latent-video space and rely on iterative spatial-temporal denoising, tying quality gains to heavier back-bones and more sampling steps at the cost of practical efficiency. As shown in Figure 2, recent methods [7, 10, 14, 24, 50] still reveal a clear trade-off between synchronization and aesthetic quality. These observations suggest that the bottleneck is not simply model capacity. Fine-grained lip articulation is largely governed by phonetic structure and co-articulation, whereas motion aesthetics is a higher-level perceptual property shaped by global dynamics and human preference. Their optimal solutions therefore arise from dif-ferent sources, and asking a single generator to learn both implicitly makes the trade-off hard to resolve. The key insight behind VibeA-vatar is to treat phonetic accuracy and aesthetic motion quality as two related but distinct problems: the former should be handled at the conditioning stage by adapting speech representations to facial kinematics, while the latter should be addressed by post-training the sampling policy with human preference alignment. Once these two factors are disentangled, neither requires the generator itself to be large: a lightweight motion backbone suffices because phonetic precision is supplied by the adapted conditioning and aesthetic quality is injected through preference-driven policy optimization, rather than being learned implicitly through model capacity. Based on this insight, we propose VibeAvatar, an efficient frame-work for multi-modal talking avatar synthesis that jointly improves lip articulation, motion aesthetics, and inference efficiency. Our method is built upon three coordinated designs: (i) a Phonetic Kinematics Adapter (PKA) that uses hierarchical shifted atten-tion and a learnable kinematic gate to convert generic speech fea-tures into phonetic-kinematic conditions, bridging the gap between recognition-oriented representations and articulatory motion; (ii) an Aesthetic Motion Policy (AMP) that reformulates flow-based sampling as a stochastic policy and optimizes it via Group Relative Policy Optimization [40] (GRPO) within a flow-consistent neighbor-hood, with a timestep-truncated strategy that restricts preference optimization to early coarse-grained steps so that fine-grained lip details are preserved; and (iii) a lightweight flow-based motion generator operating in a compact 1D warp-based latent space, paired with a two-stage training strategy that first establishes a stable articulation-aware prior and then aligns motion dynamics with human aesthetics without degrading phonetic precision. With these designs working together, VibeAvatar establishes stronger performance on lip articulation, motion aesthetics, and efficiency, as shown in Figure 1. Extensive experiments further demonstrate that our method achieves better qualitative and quan-titative results. In summary, our contributions are as follows: 
+
+• We present VibeAvatar, which disentangles phonetic con-ditioning from aesthetic alignment, yielding a favorable quality–efficiency balance within a lightweight framework. 
+
+• We propose a Phonetic Kinematics Adapter (PKA) with hier-archical shifted attention and a learnable kinematic gate to convert speech features into phonetic-kinematic conditions for accurate lip articulation. 
+
+• We propose an Aesthetic Motion Policy (AMP) that optimizes a flow-consistent stochastic sampling policy via GRPO with a timestep-truncated strategy, aligning motion with human aesthetics without degrading articulation. 
+
+• Experiments show state-of-the-art results on both objective metrics and user studies, with under-10-second inference for a 10-second 512 px video and ∼3 GB VRAM. 
+
+## 2 Related Work 
+
+Controllable Video Generation. Recent advances in controllable video generation have been fueled by diffusion-based image synthe-sis models [12, 13, 19, 39, 46]. Early works [5, 18, 21, 41, 45, 54] ex-tended pretrained UNet-based diffusion backbones into the tempo-ral domain by adding motion-aware or temporal attention layers for joint spatiotemporal modeling. Representative methods such as Sta-ble Video Diffusion [4], Make-A-Video [41], and AnimateDiff [17] achieved high-quality short video generation by coupling spatial VibeAvatar: Aligning Phonetic Kinematics and Human Aesthetics for High-Fidelity Talking Avatar Synthesis MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil Noisy Mo(ons  
+
+> Flow-based Motion Generator Timestep-Truncated Sampler
+> A group of generated frame-wise mo3ons.
+> Motion Decoder
+
+C          
+
+> Mo(on Iden(ty A group of generated video clips.
+> Reward Computa3on
+> Wav2Vec
+> Hierarchical Shifted Attention
+> LayerNorm
+> MLP
+> 1D Conv
+> LayerNorm
+> Kinema3c Ga3ng
+> x N
+> Ref Image
+> Audio
+> Reward Model
+> 🌟 Visual Percep3on
+> ⭐Aesthe3c Realism
+> ✨Mo3on Dynamics
+> 📝 R1 📝 R2
+> 📝 R3 📝 R4
+> Aesthe(c Mo(on Policy (AMP)
+> MLP
+
+(a) Pipeline of VibeAvatar (b) PKA 
+
+> Image Encoder
+> Emotion Extractor
+> Phonetic Kinematics Adapter (PKA)
+> 𝑤 ! → #
+> 𝑤 # → !
+> Kinema3cs-aware Phoneme
+
+Figure 3: Overview of VibeAvatar. (a) The framework integrates a lightweight flow-based motion generator, a Phonetic Kinemat-ics Adapter (PKA), and an Aesthetic Motion Policy (AMP) to improve lip articulation, motion aesthetics, and inference efficiency. (b) PKA transforms generic speech features into phonetic-kinematic conditions through hierarchical shifted attention, enabling local bidirectional interaction, causal aggregation, and a progressively enlarged receptive field for accurate lip articulation. 
+
+priors with temporal modeling. More recent efforts transition to-ward transformer-based diffusion frameworks for improved scala-bility and temporal reasoning. The Diffusion-in-Transformer (DiT) family [2, 6, 25, 48, 56, 57] replaces convolutional UNets with trans-former blocks, exhibiting stronger modeling capacity for complex video dynamics. Large-scale frameworks such as CogVideoX [57], HunyuanVideo [25], and Wan [48] further integrate multimodal conditions such as text, audio, and pose within hierarchical or dual-stream pipelines, enhancing controllability across tasks including identity preservation [59], expression control [32], and virtual try-on [27]. While these methods provide powerful generative back-bones, they mainly target general video realism and controllability rather than the task-specific balance among lip articulation, motion aesthetics, and efficiency required by talking avatars. 
+
+Audio-driven Avatar Animation. Audio-driven avatar anima-tion aims to generate realistic talking human videos from speech. Early studies [8, 15, 16, 33, 35, 49, 52, 60 ? ] employed two-stage pipelines that predicted facial motion parameters based on 3D Mor-phable Models [3] (3DMM) or landmarks and then rendered frames. Although interpretable, such cascaded methods exhibited limited expressiveness, often resulting in rigid lip movements and insuffi-cient emotional dynamics. Recent advances have been driven by diffusion-based end-to-end frameworks [7, 10, 14, 22, 23, 26, 28, 44, 50] that directly learn audio–visual correlations for coherent speech-to-video generation. Among them, FLOAT [24] enhances audio-lip synchronization and temporal coherence through multi-stage refinement. Hallo3 [10] introduces a diffusion transformer architecture for highly dynamic and photorealistic portrait anima-tion. EchoMimic [7] enables editable landmark-conditioned syn-thesis for fine-grained local control. FantasyTalking [50] extends the task toward coherent facial and upper-body motion with im-proved identity preservation, while Wan-S2V [14] demonstrates the strong generative potential of large commercial video models in portrait animation. Despite recent advances, existing methods still struggle to jointly achieve accurate lip articulation, human-aligned motion aesthetics, and efficient inference in talking avatar synthe-sis. In contrast, our work explicitly separates phonetic conditioning from aesthetic alignment, enabling a lightweight generator to focus on stable motion prediction while dedicated designs improve lip articulation and human-preferred motion dynamics. 
+
+## 3 The Proposed Method 3.1 Overview 
+
+Given a reference image and an audio clip, VibeAvatar synthesizes talking-avatar videos with accurate lip articulation, human-aligned motion aesthetics, and efficient inference. As shown in Figure 3, our framework achieves these goals through three coordinated designs. A flow-based motion generator (Section 3.2) predicts mo-tion efficiently in a compact latent space. A Phonetic Kinematics Adapter (PKA, Section 3.3) transforms raw speech features into motion-oriented conditions that preserve phonetic details for lip articulation. An Aesthetic Motion Policy (AMP, Section 3.4) refor-mulates flow-based sampling as a stochastic policy and optimizes it via GRPO [40] toward human-preferred dynamics. Finally, the two-stage training strategy (Section 3.5) first learns a motion prior and then aligns motion sampling with human aesthetic preference. 
+
+## 3.2 Flow-based Motion Generator 
+
+As shown in Figure 3(a), our flow-based motion generator disentan-gles identity from facial dynamics and predicts motion in a compact MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil Qilin Wang, Mingyu Li, and Hao Tang 
+
+latent space. It applies conditioning at the frame level for precise motion control. These designs mainly provide a stable and efficient foundation for the later PKA and AMP modules. 
+
+1D Motion Representation. To preserve identity while keeping motion generation lightweight, we represent facial dynamics in the latent warp space of LIA [51]. Given a reference image 𝑆 ∈ R3×𝐻 ×𝑊 ,the autoencoder produces an identity warp, a motion warp, and multi-scale features: Enc : 𝑆 ↦ →  𝑤 𝑆 →𝑟 , 𝑤 𝑟 →𝑆 , 𝐹 𝑆 
+
+. (1) Here 𝑤 𝑆 →𝑟 ∈ R𝑑 𝑤 encodes identity as the warp from 𝑆 to a canonical neutral pose 𝑟 , 𝑤 𝑟 →𝑆 ∈ R𝑑 𝑤 encodes motion as the warp from 𝑟 
+
+back to 𝑆 , and 𝐹 𝑆 preserves high-frequency appearance details. We further expand the motion code on a learnable, low-dimensional orthogonal basis Λ = {𝜆 1, . . . , 𝜆 𝑚 }, yielding a compact 1D trajectory for facial dynamics. To animate 𝑆 with a driver 𝐷 , we decode Dec :  𝑤 𝑆 →𝑟 , 𝑤 𝑟 →𝐷 , 𝐹 𝑆 
+
+ ↦ → ˆ𝐷 (𝑆 ), (2) which preserves identity via (𝑤 𝑆 →𝑟 , 𝐹 𝑆 ) while substituting motion via 𝑤 𝑟 →𝐷 . This factorization confines controllable facial dynamics to a low-dimensional space, which reduces computational cost and makes the backbone well suited for efficient inference. 
+
+Flow-based Motion Generation. To generate coherent facial mo-tion with low overhead, we predict motion latents of 𝐿 consecutive frames jointly rather than reconstructing each frame independently. Let the framewise audio conditions be 𝑐 ∈ R𝐿 ×𝑑 𝑐 , the past 𝐿 ′ motion latents be 𝑊 past ∈ R𝐿 ′ ×𝑑 𝑤 , and the reference motion warp of image 
+
+𝑆 be 𝑤 𝑟 →𝑆 ∈ R𝑑 𝑤 . We form a trajectory 𝑧 𝑡 ∈ R(𝐿 ′+𝐿 ) × 𝑑 𝑤 and learn a conditional vector field 𝑣 𝜃 
+
+ 𝑧 𝑡 , 𝑡 ; 𝑊 past , 𝑤 𝑟 →𝑆 , 𝑐 , solving the ODE 
+
+𝑑𝑧 𝑡 
+
+𝑑𝑡 = 𝑣 𝜃 
+
+ 𝑧 𝑡 , 𝑡 ; 𝑊 past , 𝑤 𝑟 →𝑆 , 𝑐 , 𝑧 1 ∼ N ( 0, 𝐼 ), (3) to obtain 𝑧 0. The last 𝐿 rows of 𝑧 0 are the predicted motion latents for the current clip, while the leading 𝐿 ′ rows provide temporal context to enforce a smooth transition. This clip-wise latent predic-tion keeps the backbone compact while supplying stable motion trajectories for the later PKA conditioning and AMP optimization. 
+
+Framewise Conditioning via AdaLN. We implement the flow-based motion generator as a framewise DiT [37], which is well suited for modeling latent motion tokens. Conditioning is then injected into each block through adaptive LayerNorm. For the 𝑖 -th frame in the 𝑗 -th DiT block, we predict adaptive LayerNorm parameters (𝛼 ( 𝑗 ) 
+
+> 𝑖
+
+, 𝛽 ( 𝑗 ) 
+
+> 𝑖
+
+, 𝛾 ( 𝑗 ) 
+
+> 𝑖
+
+) from a linear head fed by the fused conditioning. The scale–shift pair (𝛼, 𝛽 ) affords fine-grained frame-level control, while the gate 𝛾 modulates the residual pathway to stabilize conditioning strength. Each block also includes localized inter-frame cross-attention over a small temporal window, ensuring temporal coherence without sacrificing per-frame precision. 
+
+Emotion Extractor. To complement phonetic conditioning with expression cues, we additionally incorporate an emotion prior from the audio stream. Specifically, we apply the pretrained classifier of [38] to the frame-aligned audio features, embed the predicted emotion label, and concatenate it with the other conditioning sig-nals. This simple design supplies prosody-related expression infor-mation to DiT without introducing a heavy auxiliary branch. Input   
+
+> Layer 1 Layer 2 Layer 3
+> Output
+> (a) Full Attention (b) Causal Attention (c) Hierarchical Shifted Attention
+> Inside Chunk (Bidirectional) Between Chunks (Causal)
+
+Figure 4: Comparison of audio context modeling schemes. (a) Full Attention captures global context but incurs high cost and leaks future information. (b) Causal Attention preserves causality but weakens local bidirectional interaction. (c) Our Hierarchical Shifted Attention supports bidirectional inter-action within chunks and causal aggregation across chunks, while progressively enlarging the receptive field. 
+
+## 3.3 Phonetic Kinematics Adapter (PKA) 
+
+Accurate lip articulation requires audio conditions that preserve fine-grained co-articulation while respecting utterance-level tempo-ral causality. However, self-supervised encoders such as Wav2Vec [1] produce recognition-oriented frame-wise representations whose semantics are indirectly related to facial kinematics. Directly con-ditioning the motion backbone on these raw features forces it to recover phonetic timing, cross-phoneme transitions, and motion saliency by itself, leading to imprecise or unstable mouth motion. The Phonetic Kinematics Adapter (PKA) resolves this mismatch by explicitly adapting generic speech representations into phonetic-kinematic conditions before they are injected into the flow-based backbone. Full attention in Figure 4(a) enriches context but leaks future information, while causal attention in Figure 4(b) preserves causality but weakens local bidirectional interactions that are im-portant for co-articulation. To balance these two extremes, PKA introduces two key designs. First, Hierarchical Shifted Attention 
+
+progressively enlarges chunk size across layers and applies alter-nating shifted windows, enabling bidirectional interaction inside each chunk and causal aggregation between chunks, as shown in Figure 4(c). Second, a Learnable Kinematic Gate filters motion-irrelevant semantics and amplifies articulation-related variations. Together, these designs convert raw speech features into phonetic-kinematic conditions that are more suitable for lip articulation. 
+
+Hierarchical Shifted Attention. As illustrated in Figure 3(b), the raw frame-wise audio features 𝐴 raw ∈ R𝐿 ×𝑑 audio are first projected into the adapter space as 𝐴 (0) ∈ R𝐿 ×𝑑 . PKA then applies 𝑁 stacked attention blocks with progressively enlarged chunk sizes. In the 
+
+𝑙 -th block, the chunk size grows as 
+
+𝐾 (𝑙 ) = 𝐾 base × 2⌊ ( 𝑙 −1)/ 2⌋, (4) and the temporal shift is set to 𝑆 (𝑙 ) = 0 for odd-numbered blocks and 𝑆 (𝑙 ) = 𝐾 (𝑙 ) /2 for even-numbered. This hierarchical schedule ex-pands the receptive field from local phoneme transitions to broader speech context. And the shifted window mechanism ensures that phonetic events divided by a chunk boundary in layer 𝑙 − 1 are cen-tered within the chunk of layer 𝑙 , reducing boundary fragmentation for phonetic events that straddle chunk borders. Given the shifted partition, we construct the chunk-causal at-tention mask 𝑀 (𝑙 ) that determines the visibility between a query 𝑖 VibeAvatar: Aligning Phonetic Kinematics and Human Aesthetics for High-Fidelity Talking Avatar Synthesis MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil 
+
+and a key 𝑗 as: 
+
+𝑀 (𝑙 ) 
+
+> 𝑖,𝑗
+
+=
+
+(0, if 
+
+j 𝑗 +𝑆 (𝑙 )  
+
+> 𝐾 (𝑙 )
+
+k
+
+≤
+
+j 𝑖 +𝑆 (𝑙 )  
+
+> 𝐾 (𝑙 )
+
+k
+
+,
+
+−∞ , otherwise . (5) The forward pass of the 𝑙 -th block is then written as 
+
+𝐻 (𝑙 ) = 𝐴 (𝑙 −1) + Attn 
+
+
+
+LN 
+
+
+
+𝐴 (𝑙 −1) 
+
+; 𝑀 (𝑙 ) 
+
+, (6) 
+
+𝐴 (𝑙 ) = 𝐻 (𝑙 ) + MLP 
+
+
+
+Conv1D 
+
+
+
+LN 
+
+
+
+𝐻 (𝑙 )  
+
+. (7) This design preserves bidirectional interactions within each local chunk, enforces causal aggregation across chunks, and expands context hierarchically from fine co-articulation to broader prosodic structure. The lightweight Conv1D+MLP branch further smooths temporal features and improves local mixing, making the resulting representation both articulation-aware and causally consistent. 
+
+Learnable Kinematic Gate. After hierarchical refinement, we fur-ther adapt the audio representation with a learnable kinematic gate. Instead of passing all semantic content directly to the motion back-bone, the gate predicts frame-wise scale and shift factors (𝛼 𝑡 , 𝛽 𝑡 )
+
+from the refined features and modulates them as ˜ 𝑐 𝑡 = 𝛼 𝑡 ⊙𝐴 (𝑁 ) 
+
+> 𝑡
+
++ 𝛽 𝑡 .This modulation emphasizes articulation-related transitions and de-emphasizes silent or weakly informative regions. The zero-initialized gate provides a stable conditioning path at the start of training and gradually learns to transform generic speech repre-sentations into motion-driving cues. The final PKA output is used as the conditioning signal 𝑐 for the flow-based motion generator. 
+
+## 3.4 Aesthetic Motion Policy (AMP) 
+
+A remaining challenge is that a standard flow-matching sampler is almost deterministic once the condition and initial noise are fixed. Such low-entropy sampling provides little room to explore alternative motion realizations, making it difficult to align facial dynamics with human aesthetic preference. To address this issue, we introduce an Aesthetic Motion Policy (AMP), which reformu-lates flow-based sampling as a stochastic policy while preserving consistency with the learned motion field. AMP enables prefer-ence optimization over motion trajectories without abandoning the strong articulation prior learned by the motion generator and PKA. 
+
+Flow-consistent Stochastic Motion Sampling. Let 𝑧 1 denote the initial noise latent at pseudo-time 𝑡 = 1, 𝑧 0 the terminal latent at 
+
+𝑡 = 0, and 𝑧 𝑡 the latent at intermediate time 𝑡 ∈ [ 0, 1]. The base sampler uses a deterministic Euler update 
+
+𝑧 𝛼 = 𝑧 𝑡 − 𝑣 𝜃 
+
+ 𝑧 𝑡 , 𝑡 ;𝑊 past , 𝑤 𝑟 →𝑆 , 𝑐  (𝑡 − 𝛼 ), (8) which produces same trajectories given fixed noise and conditions. AMP introduces controlled exploration by replacing this deter-ministic transition with a flow-consistent stochastic update. We construct two extrapolated endpoints: ˆ𝑧 0 = 𝑧 𝑡 − 𝑡 𝑣 𝜃 
+
+ 𝑧 𝑡 , 𝑡 ;𝑊 past , 𝑤 𝑟 →𝑆 , 𝑐 , (9) ˆ𝑧 1 = 𝑧 𝑡 + ( 1 − 𝑡 ) 𝑣 𝜃 
+
+ 𝑧 𝑡 , 𝑡 ;𝑊 past , 𝑤 𝑟 →𝑆 , 𝑐 , (10) which approximate the latent states toward 𝑡 = 0 and 𝑡 = 1, respec-tively. For the backward step 𝑡 → 𝛼 = 𝑡 − Δ𝑡 , we then sample 
+
+𝑧 𝛼 = 𝜇 𝜃 (𝑧 𝑡 , 𝑡, 𝛼 ) + 𝜎 (𝑡 ) sin 
+
+ 𝜂𝜋 
+
+2
+
+
+
+𝜖, 𝜖 ∼ N ( 0, 𝐼 ), (11) with 
+
+𝜇 𝜃 (𝑧 𝑡 , 𝑡, 𝛼 ) = (1 − 𝛼 ) ˆ𝑧 0 + 𝛼 cos 
+
+ 𝜂𝜋 
+
+2
+
+
+
+ˆ𝑧 1, (12) where 𝜂 ∈ [ 0, 1] controls exploration strength and 𝜎 (𝑡 ) decreases with 𝑡 . When 𝜂 → 0, Eq. (11) recovers the deterministic update in Eq. (8), so AMP remains compatible with the original flow dynamics. Intuitively, ( ˆ𝑧 0, ˆ𝑧 1) defines a local flow-consistent neighborhood, and the noise term explores randomized directions within this neighborhood rather than perturbing the trajectory arbitrarily. This property is important for aesthetic alignment: early steps with larger uncertainty can propose diverse motion hypotheses, whereas later steps become nearly deterministic and preserve identity, articu-lation, and temporal stability. Therefore, AMP provides a structured policy 𝑝 𝜃 (𝑧 𝛼 | 𝑧 𝑡 ) in latent space whose sampling behavior can be optimized by GRPO [40] toward human-aligned motion aesthet-ics in Stage 2. In our implementation, this aesthetic preference is instantiated by a reward ensemble composed of HPS-v2 [55] and the visual-quality and motion-quality heads of VideoReward [29], while the detailed objective is deferred to Sec. 3.5. 
+
+Timestep-Truncated Aesthetic Alignment. We further observe that flow-based generation exhibits a coarse-to-fine structure: early denoising steps mainly determine global motion attributes such as head movement and overall expressiveness, whereas later steps refine high-frequency details that are critical for precise articula-tion and visual stability. Directly applying preference optimization to all timesteps would therefore entangle global aesthetic explo-ration with the local motion details already well learned in previous training stage. To preserve this strong articulation prior, we intro-duce timestep-truncated aesthetic alignment. Specifically, given a threshold 𝑡 thresh ∈ [ 0, 1], we apply AMP and optimize it with GRPO only on the early stage 𝑡 ≥ 𝑡 thresh , while the later stage 𝑡 < 𝑡 thresh 
+
+follows the deterministic flow update. This strategy allows the model to explore more human-preferred motion patterns at coarse scales without disturbing the fine-grained lip articulation already established by the flow-based motion generator and PKA. 
+
+## 3.5 Training Strategy 
+
+We train VibeAvatar in two stages. Stage 1 learns an articulation-aware flow prior under PKA conditioning. Stage 2 freezes PKA and aligns AMP with human aesthetic preference through GRPO, so that preference optimization improves motion aesthetics without disturbing the articulation prior learned in Stage 1. 
+
+Mixed Preceding-frame Conditions. A key challenge is the dis-tribution shift of the preceding motion condition 𝑊 past : supervised training naturally uses ground-truth history, whereas inference depends on model-generated history. To reduce this mismatch, we construct 𝑊 past from a mixture of three sources: 
+
+𝑊 past =
+
+
+
+0, w.p. 𝑝 0 (no history) ,𝑊 GT , w.p. 𝑝 gt (ground-truth history) ,𝑊 model , w.p. 𝑝 model (self-generated history) ,
+
+(13) where 𝑝 0 + 𝑝 gt + 𝑝 model = 1. This is shared by both stages. 
+
+Stage 1: Flow-matching with PKA. In Stage 1, we sample a train-ing clip (𝑆 −𝐿 ′:𝐿 , 𝑎 −𝐿 ′:𝐿 ), choose a reference frame 𝑆 𝑘 , and encode the target segment {𝑆 0, . . . , 𝑆 𝐿 } into motion latents 𝑧 0 = 𝑤 𝑟 →𝑆 0: 𝐿 .We then draw 𝑧 1 ∼ N ( 0, 𝐼 ) and 𝑡 ∼ Uniform (0, 1), and form the MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil Qilin Wang, Mingyu Li, and Hao Tang Obama /m/ 
+
+Ref Image FantasyTalking EchoMimic Wan-S2V Hallo3 FLOAT Ours 
+
+Thousands /θ/ 
+
+Llamándome /o/ 
+
+Step /s/ 0 px 
+
+Figure 5: Lip-articulation comparison on challenging phonemes. VibeAvatar produces more accurate lip shapes. 
+
+interpolated latent 
+
+𝑧 𝑡 = (1 − 𝑡 ) 𝑧 0 + 𝑡 𝑧 1. (14) The audio segment 𝑎 −𝐿 ′:𝐿 is encoded by PKA to obtain conditioning 
+
+𝑐 . Following Rectified Flow [30], we supervise the velocity field on the current clip by 
+
+LOT (𝜃 ) = 𝑣 𝜃 
+
+ 𝑧 𝑡 , 𝑡 ;𝑊 past , 𝑤 𝑟 →𝑆 𝑘 , 𝑐  
+
+> 0: 𝐿
+
+− ( 𝑧 1 − 𝑧 0) . (15) To encourage temporal consistency and effective use of history, we further regularize the prediction on the preceding window: 
+
+Lcon (𝜃 ) = 𝑣 𝜃 
+
+ 𝑧 𝑡 , 𝑡 ;𝑊 past , 𝑤 𝑟 →𝑆 𝑘 , 𝑐  
+
+> −𝐿 ′:0
+
+− 𝑊 past . (16) The Stage 1 objective is 
+
+LFM (𝜃 ) = LOT (𝜃 ) + 𝜆 con Lcon (𝜃 ). (17) This stage establishes a stable articulation-aware motion prior, which later serves as the base policy for AMP. 
+
+Stage 2: GRPO on AMP. Starting from the pretrained parameters 
+
+𝜃 0, we freeze PKA and optimize AMP with GRPO over the truncated timestep range 𝑡 ≥ 𝑡 thresh , while keeping the later stage determin-istic. For each condition set, AMP generates a group of candidate motion trajectories over the early denoising stage. These candi-dates are decoded into videos and evaluated by a reward ensemble composed of HPS-v2 [55] and the visual-quality and motion-quality heads of VideoReward [29]. We aggregate these signals as 
+
+𝑅 (𝑖 ) = 𝑤 ae 𝑅 (𝑖 ) 
+
+> ae
+
++ 𝑤 vq 𝑅 (𝑖 ) 
+
+> vq
+
++ 𝑤 mq 𝑅 (𝑖 )
+
+> mq
+
+, (18) where 𝑤 ae , 𝑤 vq , 𝑤 mq are fixed coefficients. We then compute group-relative advantages and optimize the truncated AMP policy with the standard clipped GRPO objective. Overall, Stage 2 reshapes AMP to favor motion trajectories with higher human-aligned rewards at coarse motion scales, while preserving the fine-grained articulation and audio-motion alignment learned in Stage 1. 
+
+## 4 Experiments 4.1 Settings 
+
+Datasets. We train VibeAvatar on HDTF [61] and RAVDESS [31]. We extract one subject per video, resample audio to 16 kHz, nor-malize to 25 FPS, and crop 512 × 512 face regions, discarding clips under 2s or severely corrupted. To ensure fair evaluation, we build test sets with no overlap between training and testing speakers. For HDTF, we select 15 videos from unseen speakers and uniformly crop 15s segments, yielding a fixed 15 × 15s test set. For RAVDESS, we reserve 50 full-length videos from 2 actors as the test set, and VibeAvatar: Aligning Phonetic Kinematics and Human Aesthetics for High-Fidelity Talking Avatar Synthesis MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil 
+
+Table 1: Quantitative comparisons. The best and second-best results are shown in bold and underlined, respectively.                                                                                                    
+
+> Method HDTF RAVDESS FID ↓FVD ↓CSIM ↑Sync-C ↑Sync-D ↓VQA ↑ASE ↑FID ↓FVD ↓CSIM ↑Sync-C ↑Sync-D ↓VQA ↑ASE ↑
+> EchoMimic [7] 40.776 352.494 0.851 6.225 9.169 3.402 1.856 69.339 449.586 0.845 4.297 8.485 3.827 2.257 FantasyTalking [50] 53.089 506.815 0.556 3.086 12.191 3.314 1.974 21.774 330.826 0.852 4.009 9.322 3.748 2.330 FLOAT [24] 25.848 220.927 0.842 7.345 8.172 3.616 2.021 18.754 233.079 0.839 5.632 7.771 3.882 2.358 Wan-S2V [14] 29.035 317.665 0.744 7.669 8.110 3.629 2.102 18.824 233.341 0.828 6.092 8.371 4.016 2.458 Hallo3 [10] 26.277 253.995 0.729 7.648 8.571 3.497 2.024 24.418 237.575 0.823 5.421 8.046 3.679 2.103 VibeAvatar (Ours) 22.033 166.913 0.912 8.639 6.910 3.678 2.152 16.282 220.975 0.866 6.134 7.439 4.121 2.577 .52 7.32 12.73
+> 1.46 2.08
+> Generated Videos Ref Image EchoMimic FantasyTalking FLOAT Ours  Wan-S2V  Hallo3
+> Ref Image
+
+Figure 6: Multi-frame qualitative comparisons. 
+
+use all remaining identities for training. The same test splits are used for all metrics, qualitative visualizations, and the user study. 
+
+Evaluation Metrics. We evaluate performance using Sync-C [9] and Sync-D [9] for lip-sync accuracy, FID [36], FVD [47] for visual and temporal quality, CSIM [11] for identity consistency and ASE and VQA from Q-Align [53] for aesthetic quality. A user study further assesses perceived realism and overall human preference. 
+
+Comparison Methods. We compare VibeAvatar with state-of-the-art talking avatar methods, including FantasyTalking (MM’25) [50], EchoMimic (AAAI’25) [7], FLOAT (ICCV’25) [24], Wan-S2V (com-mercial model) [14] and Hallo3 (CVPR’25) [10]. All methods are evaluated under recommended settings, using same reference im-age, driving audio, and held-out test videos for a fair comparison. 
+
+## 4.2 State-of-the-Art Comparisons 
+
+Lip-articulation Comparison. Figure 5 compares lip articulation on challenging phonemes that require accurate mouth closures and fine lip shapes. Existing methods often produce incomplete closures or ambiguous lip contours, which weakens articulation clarity and makes the speech look mumbled. In contrast, VibeAvatar better captures phonetic mouth configurations, producing clearer plosives and sharper lip transitions. This visual evidence is consistent with the stronger Sync-C and Sync-D results in Table 1. 0.74 0.78 0.82 0.86 0.90 
+
+> Lip Sync Motion Diversity Identity Similarity Temporal Smoothness Aesthetic Perception
+> Fantasy Talking EchoMimic FLOAT Hallo3 Wan-S2V VibeAvatar (Ours)
+
+Figure 7: User study across five perceptual dimensions. Multi-frame Qualitative Comparison. Figure 6 compares multi-ple frames from generated videos on HDTF and RAVDESS. Existing methods still show visible trade-offs among appearance sharpness, identity preservation, and motion coherence. EchoMimic tends to over-smooth facial details, FantasyTalking often introduces texture flickering and color artifacts, and FLOAT may drift in lip shape or identity under expressive motion. Hallo3 and Wan-S2V are visually stronger than these earlier baselines, but they still show noticeable issues in multi-frame consistency: Hallo3 occasionally produces exaggerated facial deformation around the mouth and cheeks, while Wan-S2V tends to yield less coherent expression transitions across frames. By contrast, VibeAvatar preserves cleaner facial details, more stable identity, and more coherent facial dynamics through-out the sequence, leading to stronger multi-frame visual quality. 
+
+Quantitative Comparison. Table 1 reports comprehensive quan-titative results on HDTF and RAVDESS. VibeAvatar achieves the best results on all reported metrics across both datasets, including Sync-C/Sync-D, FID/FVD, CSIM, VQA, and ASE. These results show stronger articulation accuracy, visual quality, identity preservation, and aesthetic quality than prior methods. 
+
+User Study. We further conduct a user study across five dimen-sions: Lip Sync, Motion Diversity, Identity Similarity, Temporal Smoothness, and Aesthetic Perception. Participants compare ran-domly ordered videos from all methods, and the normalized mean scores are summarized in Figure 7. VibeAvatar receives the high-est ratings in lip sync, aesthetic perception, and motion diversity, MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil Qilin Wang, Mingyu Li, and Hao Tang 
+
+Table 2: Ablation results on HDTF and RAVDESS. The best and second-best results are shown in bold and underlined, respectively.                                                              
+
+> PKA AMP HDTF RAVDESS FID ↓FVD ↓CSIM ↑Sync-C ↑Sync-D ↓VQA ↑ASE ↑FID ↓FVD ↓CSIM ↑Sync-C ↑Sync-D ↓VQA ↑ASE ↑××26.135 215.733 0.829 7.523 8.232 3.583 2.004 19.480 240.107 0.850 5.890 7.925 3.887 2.379
+> ✓×28.236 190.595 0.885 8.615 6.948 3.595 1.921 17.679 251.314 0.829 6.042 7.608 3.892 2.417
+> ✓✓22.033 166.913 0.912 8.639 6.910 3.678 2.152 16.282 220.975 0.866 6.134 7.439 4.121 2.577
+
+# 0.83 3.56 6.54 8.19 
+
+Generated Videos Baseline w/o PKA w/o AMP Ours 
+
+Figure 8: Qualitative ablation on the core components. 
+
+while remaining competitive in identity similarity and temporal smoothness. These results further suggest that our method better matches human perception in both realism and expressiveness. 
+
+## 4.3 Ablation Study 
+
+We conduct ablations on the two core components of VibeAvatar, i.e., PKA and AMP. We further compare different audio context modeling strategies inside PKA. In Table 2, baseline denotes the flow-based motion generator trained without PKA or AMP. Corre-sponding qualitative results are shown in Figure 8. 
+
+Effectiveness of PKA. Adding PKA to the baseline mainly im-proves articulation accuracy and semantic alignment, which is ex-actly the behavior it is designed to target. The clearest gains appear on the synchronization metrics, showing that explicitly adapting generic speech features into phonetic-kinematic conditions is more effective than directly feeding recognition-oriented audio features into the generator. Although PKA alone does not improve every perceptual metric, it establishes a much stronger articulation prior, which later becomes the basis for the full model. 
+
+Effectiveness of AMP. Adding AMP on top of PKA improves overall perceptual quality while preserving the articulation gains brought by PKA. Compared with the PKA-only model, AMP con-sistently improves fidelity, identity, and aesthetic metrics, while keeping synchronization strong. This pattern is important: AMP does not merely make videos look better in isolation, but improves human-preferred motion quality without sacrificing lip accuracy. 
+
+Table 3: Ablation on audio context modeling strategies.                              
+
+> Strategy HDTF RAVDESS Sync-C ↑Sync-D ↓Sync-C ↑Sync-D ↓
+> baseline 7.523 8.232 5.890 7.925 causal 8.295 7.525 5.920 7.727 full attention 8.346 7.328 5.991 7.686 fixed chunk 8.428 7.454 6.009 7.648 hierarchical shifted 8.639 6.910 6.134 7.439
+
+Table 4: Efficiency comparison on a 10-second 512px video. 
+
+Method Params Inference Time VRAM EchoMimic [7] 3B ∼8 min ∼7 GB FantasyTalking [50] 14B ∼80 min ∼51 GB Wan-S2V [14] 14B ∼25 min ∼57 GB Hallo3 [10] 10B ∼50 min ∼70 GB FLOAT [24] 0.6B <10 s ∼7 GB VibeAvatar (Ours) 0.7B <10 s ∼3 GB 
+
+In other words, PKA and AMP play different roles, with PKA build-ing a strong articulation prior and AMP refining motion dynamics toward more realistic and aesthetically aligned behavior. 
+
+Effectiveness of Audio Context Modeling Strategies. Table 3 compares audio context modeling strategies inside PKA. Causal attention already improves over the baseline, confirming that audio conditioning should respect the temporal structure of motion gen-eration. Full attention and fixed chunk size bring further gains by using broader context, but they also expose the limitation of two naive extremes: full attention ignores causality, while fixed chunks use broader context without adapting receptive fields across layers. Our hierarchical shifted strategy performs best overall, suggesting that accurate lip articulation requires both local bidirectional in-teraction and progressively expanded phonetic context. This result provides direct evidence for the core design choice in PKA. 
+
+## 4.4 Efficiency Analysis 
+
+Table 4 reports the computational cost of generating a 10-second 512px video. VibeAvatar finishes inference in under 10 seconds and remains much faster than larger diffusion-based or commercial baselines that require minutes of generation. It is also lightweight in resource usage, with only 0 .7B parameters and about 3 GB of VRAM, making it substantially more efficient than recent large mod-els. These results show that VibeAvatar offers a favorable balance between generation quality and deployment cost. VibeAvatar: Aligning Phonetic Kinematics and Human Aesthetics for High-Fidelity Talking Avatar Synthesis MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil 
+
+## 5 Conclusion 
+
+We present VibeAvatar, an efficient multi-modal talking avatar framework built on the insight that phonetic accuracy and motion aesthetics arise from different sources and should be addressed at complementary stages. A Phonetic Kinematics Adapter (PKA) converts speech features into phonetic-kinematic conditions for accurate lip articulation, while an Aesthetic Motion Policy (AMP) aligns motion dynamics with human aesthetics through GRPO-based post-training without degrading the established articulation prior. Operating in a compact 1D warp-based latent motion space, VibeAvatar achieves state-of-the-art results on both objective met-rics and user studies while maintaining practical efficiency. 
+
+## Acknowledgments 
+
+This work is supported by the Fundamental Research Funds for the Central Universities, Peking University. 
+
+## References 
+
+[1] Alexei Baevski, Yuhao Zhou, Abdelrahman Mohamed, and Michael Auli. 2020. wav2vec 2.0: A framework for self-supervised learning of speech representations. 
+
+Advances in neural information processing systems 33 (2020), 12449–12460. [2] Fan Bao, Chendong Xiang, Gang Yue, Guande He, Hongzhou Zhu, Kaiwen Zheng, Min Zhao, Shilong Liu, Yaole Wang, and Jun Zhu. 2024. Vidu: a highly consistent, dynamic and skilled text-to-video generator with diffusion models. arXiv preprint arXiv:2405.04233 (2024). [3] Volker Blanz and Thomas Vetter. 1999. A Morphable Model for the Synthesis of 3D Faces. In SIGGRAPH . ACM, 187–194. [4] Andreas Blattmann, Tim Dockhorn, Sumith Kulal, Daniel Mendelevitch, Maciej Kilian, Dominik Lorenz, Yam Levi, Zion English, Vikram Voleti, Adam Letts, et al. 2023. Stable video diffusion: Scaling latent video diffusion models to large datasets. arXiv preprint arXiv:2311.15127 (2023). [5] Tim Brooks, Bill Peebles, Connor Holmes, Will DePue, Yufei Guo, Li Jing, David Schnurr, Joe Taylor, Troy Luhman, Eric Luhman, Clarence Ng, Ricky Wang, and Aditya Ramesh. 2024. Video generation models as world simulators. (2024). https://openai.com/research/video-generation-models-as-world-simulators [6] Shoufa Chen, Chongjian Ge, Yuqi Zhang, Yida Zhang, Fengda Zhu, Hao Yang, Hongxiang Hao, Hui Wu, Zhichao Lai, Yifei Hu, et al. 2025. Goku: Flow based video generative foundation models. In Proceedings of the Computer Vision and Pattern Recognition Conference . 23516–23527. [7] Zhiyuan Chen, Jiajiong Cao, Zhiquan Chen, Yuming Li, and Chenguang Ma. 2025. Echomimic: Lifelike audio-driven portrait animations through editable landmark conditions. In Proceedings of the AAAI Conference on Artificial Intelligence , Vol. 39. 2403–2410. [8] Kun Cheng, Xiaodong Cun, Yong Zhang, Menghan Xia, Fei Yin, Mingrui Zhu, Xuan Wang, Jue Wang, and Nannan Wang. 2022. Videoretalking: Audio-based lip synchronization for talking head video editing in the wild. In SIGGRAPH Asia 2022 Conference Papers . 1–9. [9] Joon Son Chung and Andrew Zisserman. 2016. Out of time: automated lip sync in the wild. In Asian conference on computer vision . Springer, 251–263. [10] Jiahao Cui, Hui Li, Yun Zhan, Hanlin Shang, Kaihui Cheng, Yuqi Ma, Shan Mu, Hang Zhou, Jingdong Wang, and Siyu Zhu. 2025. Hallo3: Highly dynamic and realistic portrait image animation with video diffusion transformer. In Proceedings of the Computer Vision and Pattern Recognition Conference . 21086–21095. [11] Jiankang Deng, Jia Guo, Niannan Xue, and Stefanos Zafeiriou. 2019. Arcface: Additive angular margin loss for deep face recognition. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition . 4690–4699. [12] Prafulla Dhariwal and Alexander Nichol. 2021. Diffusion models beat gans on image synthesis. Advances in neural information processing systems 34 (2021), 8780–8794. [13] Patrick Esser, Sumith Kulal, Andreas Blattmann, Rahim Entezari, Jonas Müller, Harry Saini, Yam Levi, Dominik Lorenz, Axel Sauer, Frederic Boesel, et al. 2024. Scaling rectified flow transformers for high-resolution image synthesis. In Forty-first international conference on machine learning .[14] Xin Gao, Li Hu, Siqi Hu, Mingyang Huang, Chaonan Ji, Dechao Meng, Jinwei Qi, Penchong Qiao, Zhen Shen, Yafei Song, et al. 2025. Wan-s2v: Audio-driven cinematic video generation. arXiv preprint arXiv:2508.18621 (2025). [15] Yuan Gong, Yong Zhang, Xiaodong Cun, Fei Yin, Yanbo Fan, Xuan Wang, Baoyuan Wu, and Yujiu Yang. 2023. ToonTalker: Cross-domain face reenactment. In 
+
+Proceedings of the IEEE/CVF international conference on computer vision . 7690– 7700. [16] Jiazhi Guan, Zhanwang Zhang, Hang Zhou, Tianshu Hu, Kaisiyuan Wang, Dongliang He, Haocheng Feng, Jingtuo Liu, Errui Ding, Ziwei Liu, et al. 2023. Stylesync: High-fidelity generalized and personalized lip sync in style-based generator. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 1505–1515. [17] Yuwei Guo, Ceyuan Yang, Anyi Rao, Zhengyang Liang, Yaohui Wang, Yu Qiao, Maneesh Agrawala, Dahua Lin, and Bo Dai. 2023. Animatediff: Animate your personalized text-to-image diffusion models without specific tuning. arXiv preprint arXiv:2307.04725 (2023). [18] William Harvey, Saeid Naderiparizi, Vaden Masrani, Christian Weilbach, and Frank Wood. 2022. Flexible diffusion modeling of long videos. Advances in neural information processing systems 35 (2022), 27953–27965. [19] Amir Hertz, Ron Mokady, Jay Tenenbaum, Kfir Aberman, Yael Pritch, and Daniel Cohen-Or. 2022. Prompt-to-prompt image editing with cross attention control. 
+
+arXiv preprint arXiv:2208.01626 (2022). [20] Jonathan Ho, Ajay Jain, and Pieter Abbeel. 2020. Denoising diffusion probabilistic models. Advances in neural information processing systems 33 (2020), 6840–6851. [21] Jonathan Ho, Tim Salimans, Alexey Gritsenko, William Chan, Mohammad Norouzi, and David J Fleet. 2022. Video diffusion models. Advances in neu-ral information processing systems 35 (2022), 8633–8646. [22] Xiaozhong Ji, Xiaobin Hu, Zhihong Xu, Junwei Zhu, Chuming Lin, Qingdong He, Jiangning Zhang, Donghao Luo, Yi Chen, Qin Lin, et al. 2025. Sonic: Shifting focus to global audio perception in portrait animation. In Proceedings of the Computer Vision and Pattern Recognition Conference . 193–203. [23] Jianwen Jiang, Chao Liang, Jiaqi Yang, Gaojie Lin, Tianyun Zhong, and Yanbo Zheng. 2024. Loopy: Taming audio-driven portrait avatar with long-term motion dependency. arXiv preprint arXiv:2409.02634 (2024). [24] Taekyung Ki, Dongchan Min, and Gyeongsu Chae. 2025. Float: Generative motion latent flow matching for audio-driven talking portrait. In Proceedings of the IEEE/CVF International Conference on Computer Vision . 14699–14710. [25] Weijie Kong, Qi Tian, Zijian Zhang, Rox Min, Zuozhuo Dai, Jin Zhou, Jiangfeng Xiong, Xin Li, Bo Wu, Jianwei Zhang, et al. 2024. Hunyuanvideo: A systematic framework for large video generative models. arXiv preprint arXiv:2412.03603 
+
+(2024). [26] Chunyu Li, Chao Zhang, Weikai Xu, Jingyu Lin, Jinghui Xie, Weiguo Feng, Bingyue Peng, Cunjian Chen, and Weiwei Xing. 2025. LatentSync: Taming Audio-Conditioned Latent Diffusion Models for Lip Sync with SyncNet Supervision. 
+
+arXiv preprint arXiv:2412.09262 (2025). [27] Dong Li, Wenqi Zhong, Wei Yu, Yingwei Pan, Dingwen Zhang, Ting Yao, Junwei Han, and Tao Mei. 2025. Pursuing Temporal-Consistent Video Virtual Try-On via Dynamic Pose Interaction. In Proceedings of the Computer Vision and Pattern Recognition Conference . 22648–22657. [28] Gaojie Lin, Jianwen Jiang, Chao Liang, Tianyun Zhong, Jiaqi Yang, Zerong Zheng, and Yanbo Zheng. 2025. Cyberhost: A one-stage diffusion framework for audio-driven talking body generation. In The Thirteenth International Conference on Learning Representations .[29] Jie Liu, Gongye Liu, Jiajun Liang, Ziyang Yuan, Xiaokun Liu, Mingwu Zheng, Xiele Wu, Qiulin Wang, Wenyu Qin, Menghan Xia, et al. 2025. Improving video generation with human feedback. arXiv preprint arXiv:2501.13918 (2025). [30] Xingchao Liu, Chengyue Gong, and Qiang Liu. 2022. Flow straight and fast: Learning to generate and transfer data with rectified flow. arXiv preprint arXiv:2209.03003 (2022). [31] Steven R Livingstone and Frank A Russo. 2018. The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions in North American English. PloS one 13, 5 (2018), e0196391. [32] Yue Ma, Hongyu Liu, Hongfa Wang, Heng Pan, Yingqing He, Junkun Yuan, Ailing Zeng, Chengfei Cai, Heung-Yeung Shum, Wei Liu, et al. 2024. Follow-your-emoji: Fine-controllable and expressive freestyle portrait animation. In SIGGRAPH Asia 2024 Conference Papers . 1–12. [33] Yifeng Ma, Shiwei Zhang, Jiayu Wang, Xiang Wang, Yingya Zhang, and Zhidong Deng. 2023. Dreamtalk: When emotional talking head generation meets diffusion probabilistic models. arXiv preprint arXiv:2312.09767 (2023). [34] Alexander Quinn Nichol and Prafulla Dhariwal. 2021. Improved denoising diffu-sion probabilistic models. In International conference on machine learning . PMLR, 8162–8171. [35] Youxin Pang, Yong Zhang, Weize Quan, Yanbo Fan, Xiaodong Cun, Ying Shan, and Dong-ming Yan. 2023. Dpe: Disentanglement of pose and expression for general video portrait editing. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 427–436. [36] Gaurav Parmar, Richard Zhang, and Jun-Yan Zhu. 2022. On aliased resizing and surprising subtleties in gan evaluation. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition . 11410–11420. [37] William Peebles and Saining Xie. 2023. Scalable diffusion models with transform-ers. In Proceedings of the IEEE/CVF international conference on computer vision .4195–4205. [38] Leonardo Pepino, Pablo Riera, and Luciana Ferrer. 2021. Emotion recognition from speech using wav2vec 2.0 embeddings. arXiv preprint arXiv:2104.03502 
+
+(2021). MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil Qilin Wang, Mingyu Li, and Hao Tang 
+
+[39] Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn Ommer. 2022. High-resolution image synthesis with latent diffusion models. In 
+
+Proceedings of the IEEE/CVF conference on computer vision and pattern recognition .10684–10695. [40] Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan Zhang, YK Li, Yang Wu, et al. 2024. Deepseekmath: Pushing the limits of mathematical reasoning in open language models. arXiv preprint arXiv:2402.03300 (2024). [41] Uriel Singer, Adam Polyak, Thomas Hayes, Xi Yin, Jie An, Songyang Zhang, Qiyuan Hu, Harry Yang, Oron Ashual, Oran Gafni, et al. 2022. Make-a-video: Text-to-video generation without text-video data. arXiv preprint arXiv:2209.14792 
+
+(2022). [42] Jiaming Song, Chenlin Meng, and Stefano Ermon. 2020. Denoising diffusion implicit models. arXiv preprint arXiv:2010.02502 (2020). [43] Yang Song, Jascha Sohl-Dickstein, Diederik P Kingma, Abhishek Kumar, Stefano Ermon, and Ben Poole. 2020. Score-based generative modeling through stochastic differential equations. arXiv preprint arXiv:2011.13456 (2020). [44] Linrui Tian, Qi Wang, Bang Zhang, and Liefeng Bo. 2024. Emo: Emote portrait alive generating expressive portrait videos with audio2video diffusion model under weak conditions. In European Conference on Computer Vision . Springer, 244–260. [45] Shuyuan Tu, Qi Dai, Zhi-Qi Cheng, Han Hu, Xintong Han, Zuxuan Wu, and Yu-Gang Jiang. 2024. Motioneditor: Editing video motion via content-aware diffusion. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 7882–7891. [46] Narek Tumanyan, Michal Geyer, Shai Bagon, and Tali Dekel. 2023. Plug-and-play diffusion features for text-driven image-to-image translation. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition . 1921–1930. [47] Thomas Unterthiner, Sjoerd Van Steenkiste, Karol Kurach, Raphael Marinier, Marcin Michalski, and Sylvain Gelly. 2018. Towards accurate generative models of video: A new metric & challenges. arXiv preprint arXiv:1812.01717 (2018). [48] Team Wan, Ang Wang, Baole Ai, Bin Wen, Chaojie Mao, Chen-Wei Xie, Di Chen, Feiwu Yu, Haiming Zhao, Jianxiao Yang, et al. 2025. Wan: Open and advanced large-scale video generative models. arXiv preprint arXiv:2503.20314 (2025). [49] Cong Wang, Kuan Tian, Jun Zhang, Yonghang Guan, Feng Luo, Fei Shen, Zhiwei Jiang, Qing Gu, Xiao Han, and Wei Yang. 2024. V-express: Conditional dropout for progressive training of portrait video generation. arXiv preprint arXiv:2406.02511 
+
+(2024). [50] Mengchao Wang, Qiang Wang, Fan Jiang, Yaqi Fan, Yunpeng Zhang, Yonggang Qi, Kun Zhao, and Mu Xu. 2025. Fantasytalking: Realistic talking portrait generation via coherent motion synthesis. In Proceedings of the 33rd ACM International Conference on Multimedia . 9891–9900. [51] Yaohui Wang, Di Yang, Francois Bremond, and Antitza Dantcheva. 2022. Latent image animator: Learning to animate images via latent space navigation. arXiv preprint arXiv:2203.09043 (2022). [52] Huawei Wei, Zejun Yang, and Zhisheng Wang. 2024. Aniportrait: Audio-driven synthesis of photorealistic portrait animation. arXiv preprint arXiv:2403.17694 
+
+(2024). [53] Haoning Wu, Zicheng Zhang, Weixia Zhang, Chaofeng Chen, Liang Liao, Chunyi Li, Yixuan Gao, Annan Wang, Erli Zhang, Wenxiu Sun, et al. 2023. Q-align: Teaching lmms for visual scoring via discrete text-defined levels. arXiv preprint arXiv:2312.17090 (2023). [54] Jay Zhangjie Wu, Yixiao Ge, Xintao Wang, Stan Weixian Lei, Yuchao Gu, Yufei Shi, Wynne Hsu, Ying Shan, Xiaohu Qie, and Mike Zheng Shou. 2023. Tune-a-video: One-shot tuning of image diffusion models for text-to-video generation. In Proceedings of the IEEE/CVF international conference on computer vision . 7623– 7633. [55] Xiaoshi Wu, Yiming Hao, Keqiang Sun, Yixiong Chen, Feng Zhu, Rui Zhao, and Hongsheng Li. 2023. Human Preference Score v2: A Solid Benchmark for Evaluating Human Preferences of Text-to-Image Synthesis. arXiv preprint arXiv:2306.09341 (2023). [56] Jiaqi Xu, Xinyi Zou, Kunzhe Huang, Yunkuo Chen, Bo Liu, MengLi Cheng, Xing Shi, and Jun Huang. 2024. Easyanimate: A high-performance long video genera-tion method based on transformer architecture. arXiv preprint arXiv:2405.18991 
+
+(2024). [57] Zhuoyi Yang, Jiayan Teng, Wendi Zheng, Ming Ding, Shiyu Huang, Jiazheng Xu, Yuanming Yang, Wenyi Hong, Xiaohan Zhang, Guanyu Feng, et al. 2024. Cogvideox: Text-to-video diffusion models with an expert transformer. arXiv preprint arXiv:2408.06072 (2024). [58] Fei Yin, Yong Zhang, Xiaodong Cun, Mingdeng Cao, Yanbo Fan, Xuan Wang, Qingyan Bai, Baoyuan Wu, Jue Wang, and Yujiu Yang. 2022. Styleheat: One-shot high-resolution editable talking face generation via pre-trained stylegan. In 
+
+European conference on computer vision . Springer, 85–101. [59] Shenghai Yuan, Jinfa Huang, Xianyi He, Yunyang Ge, Yujun Shi, Liuhan Chen, Jiebo Luo, and Li Yuan. 2025. Identity-preserving text-to-video generation by frequency decomposition. In Proceedings of the Computer Vision and Pattern Recognition Conference . 12978–12988. [60] Wenxuan Zhang, Xiaodong Cun, Xuan Wang, Yong Zhang, Xi Shen, Yu Guo, Ying Shan, and Fei Wang. 2023. Sadtalker: Learning realistic 3d motion coefficients for stylized audio-driven single image talking face animation. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition . 8652–8661. [61] Zhimeng Zhang, Lincheng Li, Yu Ding, and Changjie Fan. 2021. Flow-Guided One-Shot Talking Face Generation With a High-Resolution Audio-Visual Dataset. In 
+
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition .3661–3670.
