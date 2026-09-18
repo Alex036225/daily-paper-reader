@@ -6,32 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-09-17
-- 运行时间：2026-09-17 22:11:44 UTC
+- 最新运行日期：2026-09-18
+- 运行时间：2026-09-18 21:50:27 UTC
 - 运行状态：成功
-- 本次总论文数：3
-- 精读区：1
+- 本次总论文数：2
+- 精读区：0
 - 速读区：2
 
 ### 今日简报（AI）
-- 今日共生成 3 篇推荐（精读 1 篇，速读 2 篇）
-- 精读：《VibeAvatar: Aligning Phonetic Kinematics and Human Aesthetics for High-Fidelity Talking Avatar Synthesis》（9.0/10）
-- 速读：《MSR: Multiple Subject Reference for Video Generation》（7.0/10）, 《PhysStream: Streaming Physics-Grounded Video Generation with Structured Scene Memory and Fine-Grained Motion Control》（6.0/10）
-- 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
-- 详情：[/202609/17/README](/202609/17/README)
+今天速读了两篇均分6.0的论文，聚焦视频生成中的世界建模与对象表示。  
+最值得看的方向：AlayaVista用全景状态流式生成透视视频，SlotDiT用对象中心表示改进扩散Transformer。  
+普通读者可先从这两篇速读的图表和结论入手，判断是否值得深入阅读全文。
+- 详情：[/202609/18/README](/202609/18/README)
 
 ### 精读区论文标签
-1. [VibeAvatar: Aligning Phonetic Kinematics and Human Aesthetics for High-Fidelity Talking Avatar Synthesis](/202609/17/2609.18632v1-vibeavatar-aligning-phonetic-kinematics-and-human-aesthetics-for-high-fidelity-talking-avatar-synthesis)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：从参考肖像和语音合成说话头像，实现准确的唇部发音
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [MSR: Multiple Subject Reference for Video Generation](/202609/17/2609.18393v1-msr-multiple-subject-reference-for-video-generation)  
-   标签：评分：7.0/10、query:wan-av-gen
-   evidence：在多张参考图像上条件化视频生成并保持外观
-2. [PhysStream: Streaming Physics-Grounded Video Generation with Structured Scene Memory and Fine-Grained Motion Control](/202609/17/2609.17521v1-physstream-streaming-physics-grounded-video-generation-with-structured-scene-memory-and-fine-grained-motion-control)  
+1. [AlayaVista: Streaming World Modeling from Panoramic States to Perspective Video](/202609/18/2609.14462v1-alayavista-streaming-world-modeling-from-panoramic-states-to-perspective-video)  
    标签：评分：6.0/10、query:wan-av-gen
-   evidence：图像到视频合成，具有物理基础的细粒度运动控制
+   evidence：单张透视图像到视频的世界模型
+2. [SlotDiT: Object-Centric Representations for Diffusion Transformers](/202609/18/2609.17414v1-slotdit-object-centric-representations-for-diffusion-transformers)  
+   标签：评分：6.0/10、query:wan-av-gen
+   evidence：从参考图像和指令生成视频
 
 
 <div class="dpr-home-promo-card">

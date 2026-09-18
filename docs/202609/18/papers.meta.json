@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-18",
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T21:50:42",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/18/2609.14462v1-alayavista-streaming-world-modeling-from-panoramic-states-to-perspective-video",
+      "section": "quick",
+      "title_en": "AlayaVista: Streaming World Modeling from Panoramic States to Perspective Video",
+      "authors": "Jiaming Tan, Mingliang Zhai, Zhen Li, Yuwei Wu, Chuanhao Li, Kaipeng Zhang",
+      "date": "2026-09-13",
+      "pdf": "https://arxiv.org/pdf/2609.14462v1",
+      "score": "6.0",
+      "evidence": "单张透视图像到视频的世界模型",
+      "tldr": "交互式视频世界模型需在相机运动下兼顾全局场景上下文与高保真低延迟观测，现有方法存在表示权衡。AlayaVista提出解耦全景世界演化与透视观测合成，从单张透视图像构建360度场景先验并演化为相机条件全景隐状态，经视口渲染和透视细化生成视频。通过分块自回归与少步蒸馏实现高效流式生成，并构建含1318小时4K以上全景视频的MUGEN数据集。该工作为流式世界建模提供了兼顾全局上下文与局部细节的新范式。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Interactive video world models must maintain broad scene context under camera motion while producing high-fidelity observations with low latency. Existing approaches face a representation trade-off: perspective models operate on local views and must preserve off-screen content over long rollouts, whereas broader spatial coverage is typically obtained by synthesizing full-sphere videos or constructing explicit 3D representations. Motivated by the complementary roles of global context and selective local acuity in visual perception, we present AlayaVista, a camera-controllable streaming video world model that decouples panoramic world evolution from perspective observation synthesis. Given a single perspective image, AlayaVista constructs a 360-degree scene prior using a pretrained panorama expansion model and then evolves the scene as a camera-conditioned panoramic latent state. A latent viewport renderer maps this state to the requested perspective video latents, while a perspective refiner restores details, suppresses artifacts, and performs super-resolution. To support efficient streaming, we adapt the panoramic generator to chunk-autoregressive generation and distill both panoramic generation and perspective refinement into few-step processes. To provide the supervision required by this design, we construct MUGEN, a large-scale real-world panoramic video dataset containing 1,318 hours of videos at resolutions of at least 4K, together with rich semantic and geometric annotations.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/18/2609.17414v1-slotdit-object-centric-representations-for-diffusion-transformers",
+      "section": "quick",
+      "title_en": "SlotDiT: Object-Centric Representations for Diffusion Transformers",
+      "authors": "Gjergj Plepi, Sven Behnke",
+      "date": "2026-09-15",
+      "pdf": "https://arxiv.org/pdf/2609.17414v1",
+      "score": "6.0",
+      "evidence": "从参考图像和指令生成视频",
+      "tldr": "现有文本条件扩散模型依赖像素或VAE潜在表示，缺乏显式语义结构，限制了机器人场景建模效果。SlotDiT 提出在对象中心 slot 潜在空间中运行文本引导扩散 Transformer，将场景分解为多个实体槽位，并自回归去噪未来槽轨迹以预测动力学。在四个机器人数据集上，该方法视频生成质量有竞争力且任务完成率持续提升，计算更高效。结果表明对象中心结构是机器人扩散生成建模的强大归纳偏置。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Text-conditioned latent diffusion models perform strongly in video generation and are promising backbones for robotic applications. However, existing approaches rely on pixel-level or VAE-based latent representations that lack explicit semantic structure, leaving the impact of the representation space largely unexplored. Slot-based object-centric representations offer a structured alternative by decomposing scenes into object-level latents, or slots. While they have shown success in dynamics modeling and planning, they have not yet been explored for diffusion-based generative modeling. We introduce SlotDiT, a text-guided Diffusion Transformer (DiT) that operates in a slot-based latent space. Given a reference image and a language instruction, SlotDiT decomposes the scene into object-centric slots representing individual entities. Conditioned on the instruction and observed scene context, the model autoregressively denoises future slot trajectories to predict scene dynamics. To systematically investigate latent-space design for diffusion transformers, we compare slot-based representations against VAE-based and semantics-aligned alternatives within a unified DiT framework. Our experiments show that using slots as DiT latents yields competitive video generation quality while consistently improving task-completion rates across four robotic datasets. Furthermore, their compact representation provides a computationally efficient alternative to VAE-based and semantics-aligned latent spaces. Overall, our results demonstrate that object-centric structure is a powerful inductive bias for diffusion-based generative modeling in robotic environments. The project page is available at https://slot-dit.github.io/.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
