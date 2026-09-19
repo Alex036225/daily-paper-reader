@@ -1,0 +1,344 @@
+Title: KoUniTalk: A Lightweight Articulation-Centered Korean-English 3D Talking Face Benchmark
+
+URL Source: https://arxiv.org/pdf/2609.19840v1
+
+Published Time: Fri, 18 Sep 2026 00:46:29 GMT
+
+Number of Pages: 22
+
+Markdown Content:
+# KoUniTalk: A Lightweight Articulation-Centered Korean-English 3D Talking Face Benchmark 
+
+Hyunjung Chung and Unsang Park ⋆
+
+Sogang University, Seoul, Republic of Korea 
+
+{phone1263,unsangpark}@sogang.ac.kr 
+
+Abstract. High-quality 3D talking face datasets remain largely English-centric, and Korean 3D facial motion data are difficult to combine with standard English benchmarks because of differences in mesh topology, spatial scale, coordinate system, and temporal sampling. We present 
+
+KoUniTalk , a lightweight articulation-centered Korean-English 3D talk-ing face benchmark that retargets VOCASET and the released Korean speech-based 3D talking face data to a shared mesh topology using de-formation transfer. Rather than proposing a new deformation-transfer algorithm or a full-head identity-preserving avatar dataset, KoUniTalk provides an identity-neutral canonical output space for controlled speech-driven facial articulation training and evaluation across English and Ko-rean. The unified template contains 1,176 vertices and focuses on the mouth and adjacent lower- and mid-face regions, reducing the output dimensionality from 15,069 and 72,147 dimensions to 3,528 dimensions, corresponding to 4.27-fold and 20.45-fold reductions compared with VO-CASET/FLAME and the original Korean mesh, respectively. To exam-ine whether retargeting preserves speech-relevant motion, we evaluate semantic mouth-landmark trajectories, including mouth opening, mouth width, aperture ratio, and mouth-opening dynamics. Since the official test set of the Korean dataset is not publicly released, we additionally define a subject-disjoint Korean benchmark split. The processed matched benchmark contains 22 speakers, 4,978 sequences, and 642,781 frames, enabling Korean-English cross-dataset evaluation of speech-driven 3D fa-cial animation models in a single compact articulation-template space. Source-reported inventory counts are listed separately from these pro-cessed counts. 
+
+Keywords: 3D talking face · Speech-driven facial animation · Korean-English benchmark · Deformation transfer · Facial articulation 
+
+## 1 Introduction 
+
+3D talking face animation has attracted considerable attention as a key tech-nology in diverse applications such as virtual avatars, AI news anchors, and communication assistive systems. Deep learning-based methods, including  
+
+> ⋆
+
+Corresponding author. arXiv:2609.19840v1 [cs.CV] 17 Sep 2026 2 H. Chung and U. Park 
+
+MeshTalk [33], FaceFormer [14], and Karras et al. [19], have demonstrated promising results in generating 3D talking meshes directly from speech, yet they require large-scale, high-quality 3D datasets. Most publicly available datasets are centered on English speakers, resulting in a significant lack of linguistic diversity. For languages such as Korean, differ-ences in phoneme–viseme distributions and articulation patterns can introduce domain gaps that are not well covered by English-centric benchmarks. Accord-ingly, target-language 3D speech data and compatible evaluation protocols are important for studying multilingual talking face models. The primary barrier to integrating heterogeneous datasets is mesh topology mismatch. Datasets with differing vertex counts and face connectivity structures cannot be directly merged; VOCASET employs triangular meshes while the released Korean speech-based data uses quadrilateral meshes, making the mesh structures fundamentally incompatible. Resolving this requires a mesh alignment pipeline to a common template. Furthermore, the approximately 20-fold vertex density gap between the released Korean speech-based data (24,049 vertices) and our unified template (1,176 vertices) demands careful parameter design. In this paper, we integrate VOCASET [10] and the released Korean speech-based 3D talking face data [1] into a single output space using a custom lightweight unified template. Since the two source datasets differ substantially in scale and orientation, we first coarsely align the unified template to each source dataset manually, then apply Deformation Transfer [36] to propagate per-frame facial motions onto the unified template. Finally, because the two resulting mesh sets still exhibit residual scale and orientation discrepancies, we apply Procrustes Alignment to bring them into a common coordinate frame. The overall workflow is illustrated in Fig. 1. The resulting dataset is aligned to a single topology and can be used to configure Korean-English training and evaluation environments for existing speech-driven 3D facial animation models. KoUniTalk should be interpreted as an articulation-centered benchmark rather than a full-head identity-preserving avatar benchmark: it uses an identity-neutral template to study canonical speech-related mouth and lower/mid-face motion across languages. Our contributions are summarized as follows: 
+
+– We construct a unified-topology Korean-English 3D talking face benchmark by retargeting VOCASET and the released Korean speech-based 3D talking face data to a common lightweight articulation template. 
+
+– We introduce an articulation-centered lightweight representation that reduces output dimensionality while retaining the mouth and adjacent lower/mid-face geometry required for speech-driven articulation analysis. 
+
+– We define a subject-disjoint Korean evaluation split for the released Korean subset and introduce semantic mouth-landmark metrics to evaluate how well the retargeting process preserves speech-related mouth articulation. KoUniTalk: A Lightweight Articulation-Centered Benchmark 3 
+
+> Fig. 1: Dataset integration pipeline. Starting from two heterogeneous source datasets (VOCASET and the released Korean speech-based data), we apply Deformation Trans-fer to a common unified template and then perform Procrustes Alignment to produce a coordinate-consistent multilingual dataset.
+
+## 2 Related Work 
+
+2.1 Speech-Driven 3D Facial Animation 
+
+Speech-driven 3D facial animation has progressed from early end-to-end audio-driven animation models [19, 38] to neural mesh generation methods that learn speech-to-vertex mappings from 4D face data. VOCA [10] intro-duced a speaker-conditioned model for learning and synthesizing 3D speaking styles. MeshTalk [33] addressed cross-modality disentanglement between audio and facial motion. Recent architectures further improve temporal modeling and lip accuracy using transformers [14], discrete motion priors [44], self-supervised cross-modal training [29], key-motion embeddings [45], 2D-to-3D supervision [49], probabilistic motion modeling [47], and diffusion-based gener-ation [24, 35, 37]. In parallel, recent works explicitly target lip readability and speech articulation through audio-visual guidance or phonetic/viseme-aware objectives [16,20]. Other works emphasize emotional expression, personalization, and speaker style [21, 30, 39]. Related methods address regional facial motion control and holistic expression–gesture generation [6, 42]. Recent scaling efforts further highlight the need for multilingual data and unified training across heterogeneous annotations [13, 22]. These methods demonstrate substantial progress in speech-driven facial animation, but most are trained and evaluated within a fixed output topology or require model-side multi-head handling for different annotation spaces. KoUniTalk addresses a complementary problem: constructing a common articulation-centered output space that enables con-trolled Korean-English evaluation across originally incompatible mesh datasets. 
+
+2.2 3D Talking Face Datasets and Language Coverage 
+
+VOCASET [10] consists of approximately 104,400 frames recorded from 12 En-glish speakers, providing 5,023-vertex sequences based on the FLAME template at 60 fps, and has been widely adopted as a benchmark in works such as Face-Former [14] and CodeTalker [44]. BIWI [15] and MultiFace [43] provide addi-tional 3D facial motion resources, but public speech-driven 3D benchmarks re-main heavily English-centric and are usually tied to their own mesh representa-tions. Broader audio-visual talking-face resources, including AVSpeech, MEAD, 4 H. Chung and U. Park 
+
+and HDTF, support large-scale video-based speech or talking-face research [12, 41, 48], and OLKAVS provides a large-scale Korean audio-visual speech re-source [28]. However, these resources do not directly provide Korean-English 3D mesh sequences in a shared audio-synchronized topology. Large-scale and dynamic 3D face resources such as FaceWarehouse, FaceScape, 4DFAB, and D3DFACS provide valuable identity, expression, and motion geometry [5, 7, 9, 46], but they are not designed as Korean-English speech-driven 3D talking face benchmarks with a shared output topology. The released Korean speech-based 3D talking face data [1] is a large-scale Korean-specific dataset comprising 512,780 frames from 10 Korean speakers, providing 24,049-vertex sequences at 30 fps based on its own template. However, because its topology, vertex den-sity, and coordinate conventions differ from VOCASET/FLAME, it cannot be directly concatenated with existing English 3D talking face benchmarks. Our work therefore targets the integration of VOCASET’s English sequences and the Korean sequences into a shared articulation-template space. 
+
+2.3 Mesh Retargeting and Canonical Face Spaces 
+
+Deformation Transfer proposed by Sumner and Popović [36] is a deformation propagation technique applicable even when vertex counts, face counts, and connectivity differ between meshes. It consists of correspondence establishment followed by per-frame deformation transfer: the correspondences are computed once per source–target pair and then reused across all frames of the correspond-ing sequence. Classical registration methods, including rigid ICP [3], Coherent Point Drift [25], and non-rigid ICP [2], aim to align heterogeneous 3D surfaces to a common template, while deformation regularizers such as as-rigid-as-possible modeling [34] provide useful priors for surface deformation. Classical morphable face models [4], FLAME [23], and mesh autoencoder-based representations such as CoMA [32] define canonical spaces for facial shape, pose, and expression mod-eling. Recent topology-agnostic talking-head studies, including ScanTalk and Be-yond Fixed Topologies, further highlight the practical limitations of fixed mesh assumptions in speech-driven 3D face animation [26, 27]. In addition, the Pro-crustes/Kabsch alignment used in our normalization stage follows standard least-squares rigid alignment formulations [18, 40]. Rather than proposing a new reg-istration or deformation-transfer solver, KoUniTalk uses these classical tools to construct a compact, identity-neutral articulation space for cross-dataset speech-driven facial animation evaluation. 
+
+## 3 Method 
+
+3.1 Source Datasets 
+
+VOCASET [10] comprises 12 speakers across 480 sequences. The released Korean speech-based 3D talking face data [1] provides a training set of 455,291 frames and a validation set of 57,489 frames at 30 fps. Both datasets include audio KoUniTalk: A Lightweight Articulation-Centered Benchmark 5 
+
+> Fig. 2: Source mesh and unified-template comparison. (a) VOCASET/FLAME mesh, (b) released Korean source mesh, and (c) the proposed unified articulation template. Red markers indicate mouth corners and orange markers indicate upper/lower lip cen-ters used for semantic mouth-motion evaluation.
+
+corresponding to each utterance sequence, and this correspondence is preserved after integration. To preserve the temporal fidelity of each source, the two subsets retain their original frame rates (60 fps for VOCASET, 30 fps for the released Korean speech-based data) within the unified dataset. 
+
+3.2 Unified Template 
+
+The unified template is a lightweight custom 3D face mesh with 1,176 ver-tices and 2,236 triangles. It intentionally focuses on the mouth and adjacent lower/mid-face region, especially the lips and surrounding mouth geometry, while retaining nasal and mid-face context that provides stable spatial cues for reg-istration and rendering. Marker vertex correspondences between each source dataset’s neutral mesh and the unified template were manually specified using Blender. Figure 2 visualizes the topology gap between the two source meshes and the proposed unified articulation template. The red markers denote the left and right mouth corners, while the orange markers denote the upper and lower lip centers used for the mouth-motion preservation protocol in Sec. 4.4. 
+
+Scope of the unified template. The unified template is not intended to reproduce the full head or preserve subject-specific identity geometry. Instead, it serves as an identity-neutral canonical articulation space. We intentionally retain the mouth and adjacent mid-face/nasal region, which are most directly relevant to speech-driven facial articulation and provide stable geometric context for reg-istration. Upper-face details such as eyes, gaze, hair, and head shape are ex-cluded from the target topology because they are weakly constrained by speech and would substantially increase the output dimensionality. Subject labels are 6 H. Chung and U. Park 
+
+Table 1: Mesh and output-dimensionality comparison. Output dimension is computed as 3V , where V is the number of mesh vertices.                 
+
+> Representation Vertices Faces Output dim. Relative dim.
+> VOCASET / FLAME 5,023 9,976 15,069 4.27 ×
+> Korean original 24,049 24,002 72,147 20 .45 ×
+> Unified (Ours) 1,176 2,236 3,528 1.00 ×
+
+still retained for subject-disjoint training and evaluation, but the output geom-etry itself should be interpreted as canonical articulatory motion rather than a subject-specific avatar mesh. 
+
+3.3 Lightweight Common Representation 
+
+The unified template is designed to reduce the output dimensionality of speech-driven 3D facial animation models while retaining the lower/mid-face geometry most relevant to articulatory motion. For a vertex-based regression model, the output dimensionality scales linearly with 3V , where V is the number of vertices. As summarized in Table 1, the proposed template reduces the output space from 15,069 dimensions in VOCASET/FLAME and 72,147 dimensions in the original Korean mesh to 3,528 dimensions. This dimensionality reduction is particularly useful for controlled Korean-English training and evaluation, where both datasets must share the same output space. 
+
+3.4 Deformation Transfer 
+
+The objective function E is defined as a weighted sum of three energy terms. The smoothness energy Es encourages smooth variation of deformation between adjacent triangles by minimizing the change in deformation rather than the mesh geometry itself. The identity-transformation energy EI keeps the triangle transformations in unconstrained regions close to the identity matrix, prevent-ing excessive shape distortion induced by Es. The closest-valid-point energy Ec
+
+drives each vertex of the source mesh toward the closest valid point on the target mesh. Here, wS , wI , and wC denote the respective weights. Because the Korean source mesh is represented with quadrilateral faces whereas Deformation Trans-fer is defined over triangular elements, we triangulate the Korean connectivity using a deterministic diagonal split before correspondence search and per-frame affine transformation estimation. The resulting triangulated connectivity is kept fixed for all Korean frames. Deformation Transfer [36] is applied to each source dataset in the following three steps. 1. Correspondence establishment. Minimize E = wS ·Es +wI ·EI +wC ·Ec
+
+in two stages. In stage 1, wC = 0 so that only marker constraints are used; in stage 2, wC is gradually increased for precise local registration. This step is performed once per source–target pair. KoUniTalk: A Lightweight Articulation-Centered Benchmark 7                          
+
+> Table 2: Parameters for the correspondence establishment stage.
+> Parameter Value
+> wS5×10 −6–1×10 −4
+> wI1×10 −7–5×10 −7
+> wC(4 stages) (1 ∼10 .0) →50 →200 .0→500 .0
+> k500 –1,200 thresh dist 0.5
+
+2. Triangle correspondence search. Correspondence pairs between the de-formed source and the unified template are established based on triangle centroid distance and normal direction, and are reused across all frames together with the stored LU factorization. 3. Deformation transfer. Per-frame affine transformations for each triangle are computed from the correspondences, and deformed vertex positions on the unified template are obtained via LU back-substitution using the stored factorization. 
+
+3.5 Parameter Design for Correspondence Establishment 
+
+Parameters were set independently for VOCASET and the released Korean speech-based data according to the vertex density and geometric complexity of each source mesh. Table 2 summarizes the applied parameters. 
+
+wC is progressively increased across four stages in the second phase: 
+
+(1 ∼10 .0) → 50 → 200 .0 → 500 .0. Global shape alignment is first achieved with a low initial wC , after which stepwise increases enable precise local registration, thereby avoiding convergence instability and local minima. Since the Korean mesh has approximately 20-fold the vertex density of the unified template, k and thresh _dist were found to be sensitive to registration quality. In contrast, VOCASET has fewer vertices, resulting in comparatively higher convergence stability with respect to parameter variation. 
+
+3.6 Procrustes Alignment 
+
+After Deformation Transfer, the two resulting mesh sets—one derived from VO-CASET and the other from the released Korean speech-based data—reside in different coordinate frames due to the substantial differences in scale and ori-entation between the two source datasets. Direct concatenation without further normalization would therefore prevent a model from learning consistent motion representations across languages. To resolve this, we apply Procrustes Alignment to bring both mesh sets into a common coordinate frame. The alignment is performed in three steps with respect to the neutral mesh of each source: 8 H. Chung and U. Park 
+
+1. Translation. The centroid of each neutral mesh is translated to the origin so that all sequences share a common reference point. 2. Scale normalization. Each mesh is scaled by the inverse of its root-mean-square (RMS) vertex distance from the origin, normalizing the overall size across datasets. 3. Rotation (SVD). The optimal rotation matrix R that aligns the neutral mesh to a reference orientation is computed via Singular Value Decompo-sition (SVD). A Y-axis flip is automatically detected and corrected during this step. The transformation derived from the neutral mesh is then applied uniformly to all frames of the corresponding sequence, preserving temporal consistency. This per-source normalization ensures that the VOCASET-derived and Korean-derived meshes share the same scale and orientation in the unified dataset, enabling direct use for multilingual model training without additional topology conversion. 
+
+## 4 Experiments 
+
+4.1 Dataset Statistics Comparison 
+
+Table 3 compares the key statistics of the two source datasets and the uni-fied dataset. The two source datasets differ across most dimensions—language, speaker count, vertex count, and FPS—and this heterogeneity is the primary obstacle to direct integration. In particular, VOCASET uses triangular meshes while the released Korean speech-based data uses quadrilateral meshes, intro-ducing structural incompatibility beyond a simple vertex count mismatch. The processed matched inventory contains 22 speakers, 4,978 sequences, and 642,781 frames. Of these, 478 sequences and 123,341 frames are from VOCASET, and 4,500 sequences and 519,440 frames are from the Korean subset. The ap-proximately 617,180 frames above instead summarize the two source-reported inventories and are retained only for source-level comparison. All meshes are aligned to the unified template and can be used for model training without ad-ditional topology conversion. Speaker ID and language labels are retained for subject-disjoint splits and cross-domain analysis, while the mesh geometry itself is represented in an identity-neutral articulation space. 
+
+4.2 Benchmark Splits 
+
+For VOCASET, we follow the commonly used FaceFormer subject-disjoint split. For the released Korean speech-based data, the official test set is not publicly released; therefore, we define a new subject-disjoint split on the released Korean subset. This protocol is not intended to reproduce the official evaluation protocol for the released Korean speech-based data, but to provide a controlled Korean test set compatible with the VOCASET subject-disjoint evaluation setting. We use speakers M01–M08 for training, M09 for validation, and M10 for testing; KoUniTalk: A Lightweight Articulation-Centered Benchmark 9
+
+Table 3: Dataset statistics comparison. Source inventory counts and exact processed matched counts are reported separately because they are defined over different scopes.                                     
+
+> VOCASET Korean speech-based data Unified (Ours)
+> Language English Korean English + Korean Speakers 12 10 22 Source sequences 480 4,500 †4,980 Source-reported frames ∼104,400 ‡512,780 †,‡∼617,180 Processed matched sequences 478 4,500 4,978 Processed matched frames 123,341 519,440 642,781 Vertices 5,023 24,049 1,176 (Ours) Faces 9,976 24,002 §2,236 FPS 60 30 60 / 30 (preserved) Topology FLAME own template Ours Released split full train+val –
+> †
+
+Only the Korean train+validation sets are used (test set not publicly released).  
+
+> ‡
+
+Source-reported frame counts follow the released metadata or the commonly reported approximate VOCASET count. Processed counts are exact counts of frame-matched original/retargeted pairs enumerated by our pipeline and used in the preservation audit; they are not obtained by summing the source-reported estimates.  
+
+> §
+
+Korean face count denotes the original quadrilateral connectivity; the mesh is triangulated internally for deformation transfer. 
+
+Table 4: Subject-disjoint benchmark split. For the released Korean speech-based data, folders with the “_val” suffix are assigned to the same split as their corresponding subject.             
+
+> Dataset Protocol Train Val Test
+> VOCASET FaceFormer split 8 FaceTalk subjects 2 FaceTalk subjects 2 FaceTalk subjects Korean speech-based data Proposed split M01–M08 M09 M10
+
+folders with the “_val” suffix are assigned to the same split as their corresponding speaker. Table 4 summarizes the benchmark split used in this work. 
+
+Availability. Upon acceptance, we will release the unified articulation template, split files, evaluation scripts, and preprocessing code. Redistribution of source-derived mesh sequences follows the license terms of the original datasets; when direct redistribution is restricted, the released code will reproduce the retargeted sequences from the corresponding licensed source data. 
+
+4.3 Qualitative Retargeting Results 
+
+Fig. 3 shows qualitative retargeting examples for both VOCASET and the Ko-rean source data under neutral/closed, open, and rounded mouth configurations. The examples illustrate that visible speech-related mouth configurations from the original source meshes are transferred to the lightweight unified articulation template. 10 H. Chung and U. Park 
+
+Fig. 3: Qualitative retargeting examples under different mouth configurations. For each dataset, we show the original source mesh and the corresponding retargeted result on our unified articulation template. The examples include neutral/closed, open, and rounded mouth configurations, illustrating that visible articulation patterns from both VOCASET and Korean source meshes are transferred to the lightweight template. 
+
+4.4 Mouth Motion Preservation Protocol 
+
+Since the source and retargeted meshes have different topologies, we do not com-pute dense vertex-wise errors. Instead, we evaluate whether speech-related artic-ulation is preserved using semantic mouth-landmark trajectories. This landmark-based design is motivated by lip-sync, viseme, and evaluation studies that em-phasize visible mouth shapes and audio-visual synchrony rather than pointwise vertex identity [8,11,17,31]. For each sequence, we extract the two mouth corners and the upper/lower lip-center vertices, and compute mouth width, mouth open-ing, and aperture ratio over time. The landmark indices used in our experiments are listed in Table 5. 
+
+Table 5: Semantic mouth landmarks used for motion-preservation evaluation.              
+
+> Topology Left corner Right corner Upper lip Lower lip
+> VOCASET original 487 198 688 667 Korean original 4707 3010 4118 910 Unified (Ours) 327 467 864 151
+
+For each sequence, we compute mouth opening, mouth width, aperture ratio, and opening velocity as 
+
+dopen (t) = ∥vupper (t) − vlower (t)∥2 , (1) 
+
+dwidth (t) = ∥vleft (t) − vright (t)∥2 , (2) 
+
+raperture (t) = dopen (t)
+
+dwidth (t) , (3) 
+
+vopen (t) = dopen (t) − dopen (t − 1) . (4) Opening and width trajectories are normalized by the corresponding first-frame mouth width, and the aperture-ratio trajectory is centered by subtracting its KoUniTalk: A Lightweight Articulation-Centered Benchmark 11 
+
+first-frame value. We then compare the original and retargeted trajectories using Pearson correlation, z-normalized RMSE, amplitude error, and velocity correla-tion computed on first-order temporal differences. For this audit, we use all original/retargeted pairs available in the processed matched inventory: 478 VOCASET sequences (123,341 frames) and 4,500 Ko-rean sequences (519,440 frames). All included pairs have matched frame counts, enabling direct frame-aligned comparison of semantic landmark trajectories. We aggregate sequence metrics within each subject and report the mean and stan-dard deviation across subject-level summaries. 
+
+Table 6: Full-set mouth-motion preservation audit between original and retargeted sequences. All available processed matched pairs are compared using semantic mouth-landmark curves. Values are mean ±std across subject-level summaries.                                                                                
+
+> Dataset Transfer Curve #Subj. #Seq. #Frames Corr. ↑z-RMSE ↓Amp. Err. ↓Vel. Corr. ↑
+> VOCASET original →ours Opening 12 478 123,341 0.9890 ±0.0113 0.1302 ±0.0593 0.2239 ±0.1101 0.9864 ±0.0124
+> VOCASET original →ours Width 12 478 123,341 0.6489 ±0.1245 0.8044 ±0.1517 0.4877 ±0.1961 0.5995 ±0.1139
+> VOCASET original →ours Aperture ratio 12 478 123,341 0.9899 ±0.0073 0.1289 ±0.0473 0.2064 ±0.0861 0.9889 ±0.0096
+> Korean original →ours Opening 10 4,500 519,440 0.9929 ±0.0067 0.1018 ±0.0508 0.5682 ±0.0208 0.9957 ±0.0034
+> Korean original →ours Width 10 4,500 519,440 0.8871 ±0.0767 0.4332 ±0.1512 0.4514 ±0.0788 0.8255 ±0.0749
+> Korean original →ours Aperture ratio 10 4,500 519,440 0.9915 ±0.0055 0.1210 ±0.0377 0.2819 ±0.0515 0.9928 ±0.0034
+
+Table 6 shows strong preservation of the temporal shape and timing of ver-tical mouth opening and aperture ratio. Amplitude is not uniformly preserved, especially for Korean opening, and mouth width is substantially weaker, particu-larly for VOCASET. We therefore treat width as a diagnostic sensitive to lateral scale and mouth-corner correspondence rather than claiming uniform preserva-tion of every articulation component. 
+
+4.5 Downstream Compatibility Evaluation 
+
+The unified topology enables speech-driven 3D facial animation models to be trained and evaluated under a single Korean-English output space. Since the goal of KoUniTalk is not to propose a new generator architecture, the down-stream experiment is designed as a compatibility evaluation for the proposed articulation-template space. We evaluate an audio-agnostic fixed-motion control together with SelfTalk and CodeTalker as representative speech-driven 3D facial animation baselines adapted to the proposed 3,528-dimensional unified-template output space. For CodeTalker, we report the primary all-condition evaluation rather than the best-condition-per-utterance variant to avoid cherry-picking across generated con-ditions. For both learning-based baselines, the dataset-specific output layer is replaced with a 3,528-dimensional regression head corresponding to the 1,176-vertex unified template, and all configurations are trained and evaluated in the same Procrustes-aligned coordinate frame using the subject-disjoint splits de-fined in Sec. 4.2. 12 H. Chung and U. Park 
+
+Table 7: Downstream compatibility evaluation on English and Korean test sets. All predictions and ground truths are represented in the unified ours-template topol-ogy. LVE/MVE values are coordinate MSE ×10 6 over the lip region and all vertices, respectively. Macro and Worst are computed from English/Korean LVE. The VO-CASET+Korean setting uses natural-ratio pooled training, not balanced 1:1 sampling.                                                                       
+
+> Model Train data Sampling En LVE ↓Ko LVE ↓Macro LVE ↓Worst LVE ↓En MVE ↓Ko MVE ↓
+> Neutral template Mean motion –4.19 13.58 8.88 13.58 2.57 13.23 SelfTalk VOCASET only –1.99 14.00 7.99 14.00 1.34 13.54 SelfTalk Korean only –9.45 1.22 5.33 9.45 9.32 1.82 SelfTalk VOCASET+Korean natural ratio 2.46 2.30 2.38 2.46 1.61 2.89 CodeTalker VOCASET only –2.62 31.07 16.85 31.07 1.76 29.87 CodeTalker Korean only –7.40 7.22 7.31 7.40 6.95 7.54 CodeTalker VOCASET+Korean natural ratio 2.43 4.82 3.62 4.82 1.68 5.21
+
+We define three training configurations: VOCASET-only, Korean-only, and pooled VOCASET+Korean training. In the mixed setting, the two training sub-sets are concatenated and shuffled without domain-balanced sampling. Conse-quently, the mixed model is trained with the natural dataset proportions, where the Korean subset is substantially larger than VOCASET. We therefore interpret this setting as a Korean-dominant pooled mixed baseline rather than a balanced bilingual training result. The audio–mesh-paired training inventory used by the learning-based baseline contains 314 VOCASET and 3,200 Korean sequences. These counts are smaller than the processed mesh inventory in Table 3 because model training additionally requires a valid paired audio record. Evaluation is reported separately on the English VOCASET test split and the Korean test split. This train/evaluation matrix separates three effects: in-domain performance (VOCASET-only on English and Korean-only on Korean), cross-domain generalization (VOCASET-only on Korean and Korean-only on English), and pooled mixed training (VOCASET+Korean on both test domains). We report all-vertex and lip-region coordinate mean-squared errors over the unified template, denoted as MVE and LVE, respectively. Following the result sheet, all LVE/MVE values in Table 7 are multiplied by 10 6 for readability. Macro LVE is the arithmetic mean of English and Korean LVE, and Worst LVE is the larger of the two. The single-source rows reveal substantial cross-domain degradation: for ex-ample, SelfTalk trained on VOCASET obtains 1.99 LVE on the English test split but 14.00 LVE on the Korean test split, while SelfTalk trained on Korean obtains 1.22 LVE on Korean but 9.45 LVE on English. CodeTalker shows a similar source sensitivity, with 2.62/31.07 LVE for VOCASET-only training on English/Korean and 7.40/7.22 LVE for Korean-only training. The natural-ratio pooled setting reduces worst-domain errors compared with these single-source cross-domain baselines, but it is not necessarily the per-domain optimum for every model. This supports our interpretation that KoUniTalk enables direct Korean-English training and evaluation in a shared topology, while the choice of sampling strategy remains important for optimizing per-domain accuracy. To support this interpretation, we analyze the ground-truth motion distribu-tions over the retargeted sequences for which the motion statistics are available. This motion-analysis inventory is distinct from the audio–mesh-paired model-KoUniTalk: A Lightweight Articulation-Centered Benchmark 13 
+
+Table 8: Ground-truth mouth-motion distribution after retargeting to the unified topology. Values are computed on the retargeted sequences. Lip displacement denotes the mean native-frame lip displacement magnitude. Because VOCASET and Korean sequences retain different frame rates, these values are not physical per-second veloci-ties. The natural training set is highly imbalanced toward the Korean subset, and the relative motion scale differs across train/test splits.                                   
+
+> Dataset Split Seq. Lip disp. ↑Open disp. ↑Mouth open ↑Aperture ↑
+> VOCASET train 319 0.000500 0.000702 0.0126 0.2241 Korean train 3,599 0.000700 0.001402 0.0155 0.2848 VOCASET test 79 0.000776 0.001348 0.0164 0.2966 Korean test 450 0.000413 0.001021 0.0134 0.2338
+
+Table 9: Predicted-to-ground-truth lip motion ratio on English and Korean test sets. Ratios below 1 indicate under-articulation or overly static motion, while ratios above 1 indicate over-driving or noisy motion scale. The VOCASET+Korean setting uses natural-ratio pooled training.                                     
+
+> Model Train data Sampling En ratio →1Ko ratio →1
+> Neutral template Mean motion –0.00 0.00 SelfTalk VOCASET only –0.74 1.21 SelfTalk Korean only –1.65 1.33 SelfTalk VOCASET+Korean natural ratio 0.62 1.68 CodeTalker VOCASET only –0.69 1.74 CodeTalker Korean only –0.58 1.46 CodeTalker VOCASET+Korean natural ratio 0.69 1.60
+
+training inventory described above. As shown in Table 8, the Korean training split contains 3,599 sequences, whereas the VOCASET training split contains 319 sequences, corresponding to an 11.28 × sequence imbalance. The two do-mains also differ in native-frame motion scale: in the training split, the Ko-rean subset has 1.40 × larger mean lip displacement and 2.00 × larger mean mouth-opening displacement than VOCASET. However, this relationship is not fixed across splits; in the test split, VOCASET has 1.88 × larger mean lip dis-placement than the Korean test split. Because the two source frame rates are preserved, these statistics should be interpreted as native-frame displacement measurements rather than physical per-second velocities. They indicate that the unified topology removes mesh-format incompatibility, but it does not remove domain imbalance or motion-distribution mismatch. For model outputs, we further compute a predicted-to-ground-truth mo-tion ratio from lip displacement magnitudes. A ratio below 1 indicates under-articulation or overly static predictions, whereas a ratio above 1 indicates exag-gerated motion. As shown in Table 9, the pooled mixed models exhibit source-dependent motion-scale bias: SelfTalk under-drives VOCASET motion (0.62) while over-driving Korean motion (1.68), and CodeTalker shows the same trend (0.69 on VOCASET and 1.60 on Korean). This explains why natural-ratio mixed training does not uniformly improve LVE/MVE over domain-specific training, even though it enables a single model to be evaluated on both domains. 14 H. Chung and U. Park 
+
+Taken together, Tables 7–9 should be interpreted as a diagnostic compatibil-ity evaluation rather than a claim that pooled training is the optimal bilingual training strategy. The natural-ratio union enables a single model to be trained and evaluated across English and Korean in one compact articulation space, but balanced or language-aware sampling remains necessary for optimizing per-domain accuracy. This is a limitation of the current downstream baseline, not a failure of the topology integration itself. 
+
+## 5 Limitations 
+
+KoUniTalk uses a single lightweight canonical template, which improves topology compatibility and reduces output dimensionality but does not preserve subject-specific full-head geometry, eye motion, gaze, or upper-face expressions. The benchmark should therefore be interpreted as an articulation-centered evalu-ation space rather than a complete identity-preserving avatar representation. Subject labels are retained for subject-disjoint splitting and cross-speaker anal-ysis, but the output mesh geometry is identity-neutral. Extending KoUniTalk to subject-specific neutral templates, such as FLAME-topology identities with neutral-conditioned generation, is an important direction for future work. The template retains the lips and adjacent lower/mid-face context but omits broad lateral cheeks and the upper face. Its 1,176-vertex resolution was not selected by a resolution ablation, and the present landmark protocol does not measure anterior–posterior lip protrusion. Accordingly, the current results do not establish fidelity for strongly rounded or puckered mouth shapes. The four-landmark protocol is also sparse and should be read as a trajectory diagnostic rather than a dense mouth-surface validation. Our downstream evaluation is not intended to be exhaustive. Because exist-ing speech-driven 3D facial animation models often rely on dataset-specific out-put topologies, adapting every architecture to a newly unified template requires non-trivial engineering and computational cost. We therefore report an initial set of representative baselines together with diagnostic motion-scale analyses, and leave a broader model zoo for future extensions of KoUniTalk. KoUniTalk re-moves mesh-topology mismatch, but it does not remove linguistic, recording, or motion-distribution bias between the two source datasets. Moreover, language co-varies with speaker identity, capture setup, frame rate, scale, and motion distribution in the two source datasets. The observed differences are therefore cross-dataset/domain effects and cannot be interpreted as causal effects of lan-guage. The Korean validation and test splits each contain only one speaker, so the reported results do not quantify variation across alternative speaker splits. 
+
+Ethical considerations. We use publicly released speech-driven 3D facial datasets and do not collect new human-subject data. Source data are processed accord-ing to their respective dataset terms. The proposed benchmark is intended for research on speech-driven facial articulation, and the unified template is identity-neutral rather than designed to reconstruct or preserve subject-specific full-head identity. KoUniTalk: A Lightweight Articulation-Centered Benchmark 15 
+
+## 6 Conclusion 
+
+We presented KoUniTalk, a lightweight articulation-centered Korean-English 3D talking face benchmark constructed by retargeting VOCASET and the released Korean speech-based 3D talking face data onto a single unified topology using Deformation Transfer and Procrustes Alignment. Rather than proposing a new deformation transfer solver, this work focuses on building an identity-neutral common representation for controlled training and evaluation across datasets that originally have incompatible mesh structures. The unified representation re-duces the output dimensionality from 15,069 dimensions in VOCASET/FLAME and 72,147 dimensions in the original Korean mesh to 3,528 dimensions, while retaining the mouth and adjacent lower/mid-face geometry required for speech-driven articulation analysis. We also define a subject-disjoint Korean evaluation split for the released Korean subset and a semantic mouth-landmark protocol for evaluating motion preservation after retargeting. The downstream compatibility protocol further provides an initial basis for evaluating future speech-driven 3D facial animation models under a shared Korean-English articulation space. 
+
+## References 
+
+1. AI Hub: Korean speech-based 3D talking face data. Dataset (2023), https:// aihub.or.kr 
+
+2. Amberg, B., Romdhani, S., Vetter, T.: Optimal step nonrigid icp algorithms for surface registration. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. pp. 1–8 (2007) 3. Besl, P.J., McKay, N.D.: A method for registration of 3-D shapes. IEEE Trans-actions on Pattern Analysis and Machine Intelligence 14 (2), 239–256 (1992). 
+
+https://doi.org/10.1109/34.121791 
+
+4. Blanz, V., Vetter, T.: A morphable model for the synthesis of 3d faces. In: Pro-ceedings of SIGGRAPH. pp. 187–194 (1999) 5. Cao, C., Weng, Y., Zhou, S., Tong, Y., Zhou, K.: Facewarehouse: A 3d facial expression database for visual computing. IEEE Transactions on Visualization and Computer Graphics 20 (3), 413–425 (2014) 6. Chen, J., Liu, Y., Wang, J., Zeng, A., Li, Y., Chen, Q.: Diffsheg: A diffusion-based approach for real-time speech-driven holistic 3d expression and gesture generation. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. pp. 7352–7361 (2024) 7. Cheng, S., Kotsia, I., Pantic, M., Zafeiriou, S.: 4DFAB: A large scale 4D database for facial expression analysis and biometric applications. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR). pp. 5117– 5126 (2018). https://doi.org/10.1109/CVPR.2018.00537 
+
+8. Chung, J.S., Zisserman, A.: Out of time: Automated lip sync in the wild. In: Computer Vision – ACCV 2016 Workshops. pp. 251–263. Springer (2017) 9. Cosker, D., Krumhuber, E., Hilton, A.: A FACS valid 3D dynamic action unit database with applications to 3D dynamic morphable facial modeling. In: Pro-ceedings of the IEEE International Conference on Computer Vision (ICCV). pp. 2296–2303 (2011). https://doi.org/10.1109/ICCV.2011.6126510 16 H. Chung and U. Park 10. Cudeiro, D., Bolkart, T., Laidlaw, C., Ranjan, A., Black, M.J.: Capture, learning, and synthesis of 3d speaking styles. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. pp. 10101–10111 (2019) 11. Edwards, P., Landreth, C., Fiume, E., Singh, K.: JALI: An animator-centric viseme model for expressive lip synchronization. ACM Transactions on Graphics 35 (4), 1–11 (2016). https://doi.org/10.1145/2897824.2925984 
+
+12. Ephrat, A., Mosseri, I., Lang, O., Dekel, T., Wilson, K., Hassidim, A., Free-man, W.T., Rubinstein, M.: Looking to listen at the cocktail party: A speaker-independent audio-visual model for speech separation. ACM Transactions on Graphics 37 (4), 1–11 (2018). https://doi.org/10.1145/3197517.3201357 
+
+13. Fan, X., Li, J., Lin, Z., Xiao, W., Yang, L.: Unitalker: Scaling up audio-driven 3d facial animation through a unified model. In: Proceedings of the European Conference on Computer Vision (2024) 14. Fan, Y., Lin, Z., Saito, J., Wang, W., Komura, T.: Faceformer: Speech-driven 3d facial animation with transformers. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. pp. 18770–18780 (2022) 15. Fanelli, G., Gall, J., Romsdorfer, H., Weise, T., Van Gool, L.: A 3-d audio-visual corpus of affective communication. IEEE Transactions on Multimedia 12 (6), 591– 598 (2010) 16. Han, E., Oh, H.B., Kim, S.B., Nivelet Etcheberry, C., Nam, S., Ju, J., Oh, T.H.: Enhancing speech-driven 3D facial animation with audio-visual guidance from lip reading expert. In: Interspeech 2024. pp. 2940–2944 (2024). https://doi.org/10. 21437/Interspeech.2024-1595 
+
+17. Haque, K.I., Pavlou, A., Yumak, Z.: “Wild West” of Evaluating Speech-Driven 3D Facial Animation Synthesis: A benchmark study. Computer Graphics Forum 
+
+44 (2), e70073 (2025). https://doi.org/10.1111/cgf.70073 
+
+18. Kabsch, W.: A solution for the best rotation to relate two sets of vectors. Acta Crystallographica Section A 32 (5), 922–923 (1976) 19. Karras, T., Aila, T., Laine, S., Herva, A., Lehtinen, J.: Audio-driven facial ani-mation by joint end-to-end learning of pose and emotion. ACM Transactions on Graphics 36 (4), 1–12 (2017) 20. Kim, H.K., Kim, H.G.: Learning phonetic context-dependent viseme for enhancing speech-driven 3D facial animation. In: Interspeech 2025. pp. 3763–3767 (2025). 
+
+https://doi.org/10.21437/Interspeech.2025-1692 
+
+21. Kim, H.K., Lee, S., Kim, H.G.: MemoryTalker: Personalized speech-driven 3D fa-cial animation via audio-guided stylization. In: Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV). pp. 11241–11251 (October 2025) 22. Kim, S.B., Lee, C.Y., Son, G., Oh, H.B., Ju, J., Nam, S., Oh, T.H.: Multitalk: Enhancing 3d talking head generation across languages with multilingual video dataset. In: Proceedings of Interspeech (2024) 23. Li, T., Bolkart, T., Black, M.J., Li, H., Romero, J.: Learning a model of facial shape and expression from 4d scans. ACM Transactions on Graphics 36 (6), 1–17 (2017) 24. Lin, Y., Fan, Z., Wu, X., Xiong, L., Li, X., Kang, W., Peng, L., Lei, S., Xu, H.: Glditalker: Speech-driven 3d facial animation with graph latent diffusion trans-former. In: Proceedings of the International Joint Conference on Artificial Intelli-gence (2025) 25. Myronenko, A., Song, X.: Point set registration: Coherent point drift. IEEE Trans-actions on Pattern Analysis and Machine Intelligence 32 (12), 2262–2275 (2010). 
+
+https://doi.org/10.1109/TPAMI.2010.46 KoUniTalk: A Lightweight Articulation-Centered Benchmark 17 26. Nocentini, F., Besnier, T., Ferrari, C., Arguillère, S., Berretti, S., Daoudi, M.: ScanTalk: 3D talking heads from unregistered scans. In: Proceedings of the Euro-pean Conference on Computer Vision (ECCV). pp. 19–36 (2024). https://doi. org/10.1007/978-3-031-73397-0_2 
+
+27. Nocentini, F., Besnier, T., Ferrari, C., Arguillère, S., Berretti, S., Daoudi, M.: Beyond fixed topologies: Unregistered training and comprehensive evaluation met-rics for 3D talking heads. International Journal of Computer Vision 134 (3), 105 (2026). https://doi.org/10.1007/s11263-025-02726-7 
+
+28. Park, J., Hwang, J.W., Choi, K., Lee, S.H., Ahn, J.H., Park, R.H., Park, H.M.: OLKAVS: An open large-scale korean audio-visual speech dataset. In: ICASSP 2024 – 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). pp. 6385–6389 (2024). https://doi.org/10.1109/ ICASSP48485.2024.10446901 
+
+29. Peng, Z., Luo, Y., Shi, Y., Xu, H., Zhu, X., Liu, H., He, J., Fan, Z.: Selftalk: A self-supervised commutative training diagram to comprehend 3d talking faces. In: Proceedings of the ACM International Conference on Multimedia. pp. 5292–5301 (2023) 30. Peng, Z., Wu, H., Song, Z., Xu, H., Zhu, X., He, J., Liu, H., Fan, Z.: Emotalk: Speech-driven emotional disentanglement for 3d face animation. In: Proceedings of the IEEE/CVF International Conference on Computer Vision (2023) 31. Prajwal, K.R., Mukhopadhyay, R., Namboodiri, V.P., Jawahar, C.V.: A lip sync expert is all you need for speech to lip generation in the wild. In: Proceedings of the 28th ACM International Conference on Multimedia. pp. 484–492 (2020). 
+
+https://doi.org/10.1145/3394171.3413532 
+
+32. Ranjan, A., Bolkart, T., Sanyal, S., Black, M.J.: Generating 3D faces using con-volutional mesh autoencoders. In: Proceedings of the European Conference on Computer Vision (ECCV). pp. 704–720 (2018). https://doi.org/10.1007/978-3-030-01219-9_43 
+
+33. Richard, A., Zollhöfer, M., Wen, Y., de la Torre, F., Sheikh, Y.: Meshtalk: 3d face animation from speech using cross-modality disentanglement. In: Proceedings of the IEEE/CVF International Conference on Computer Vision. pp. 1173–1182 (2021) 34. Sorkine, O., Alexa, M.: As-rigid-as-possible surface modeling. In: Proceedings of the Fifth Eurographics Symposium on Geometry Processing. pp. 109–116 (2007) 35. Stan, S., Haque, K.I., Yumak, Z.: Facediffuser: Speech-driven 3d facial animation synthesis using diffusion. In: Proceedings of the ACM SIGGRAPH Conference on Motion, Interaction and Games. pp. 1–11 (2023) 36. Sumner, R.W., Popović, J.: Deformation transfer for triangle meshes. In: ACM SIGGRAPH 2004 Papers. pp. 399–405 (2004) 37. Sun, Z., Lv, T., Ye, S., Lin, M.G., Sheng, J., Wen, Y.H., Yu, M., Liu, Y.J.: Diff-posetalk: Speech-driven stylistic 3d facial animation and head pose generation via diffusion models. ACM Transactions on Graphics 43 (4), 1–9 (2024) 38. Taylor, S.L., Kim, T., Yue, Y., Mahler, M., Krahe, J., Rodriguez, A.G., Hodgins, J.K., Matthews, I.: A deep learning approach for generalized speech animation. ACM Transactions on Graphics 36 (4), 1–11 (2017) 39. Thambiraja, B., Habibie, I., Aliakbarian, S., Cosker, D., Theobalt, C., Thies, J.: Imitator: Personalized speech-driven 3d facial animation. In: Proceedings of the IEEE/CVF International Conference on Computer Vision. pp. 20564–20574 (2023) 40. Umeyama, S.: Least-squares estimation of transformation parameters between two point patterns. IEEE Transactions on Pattern Analysis and Machine Intelligence 
+
+13 (4), 376–380 (1991) 18 H. Chung and U. Park 41. Wang, K., Wu, Q., Song, L., Yang, Z., Wu, W., Qian, C., He, R., Qiao, Y., Loy, C.C.: MEAD: A large-scale audio-visual dataset for emotional talking-face generation. In: Computer Vision – ECCV 2020. pp. 700–717. Springer (2020). 
+
+https://doi.org/10.1007/978-3-030-58589-1_42 
+
+42. Wu, H., Zhou, S., Jia, J., Xing, J., Wen, Q., Wen, X.: Speech-driven 3d face anima-tion with composite and regional facial movements. In: Proceedings of the ACM International Conference on Multimedia (2023) 43. Wuu, C.H., et al.: MultiFace: A dataset for neural face rendering. arXiv preprint arXiv:2207.11243 (2022) 44. Xing, J., Xia, M., Zhang, Y., Cun, X., Wang, J., Wong, T.T.: Codetalker: Speech-driven 3d facial animation with discrete motion prior. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. pp. 12780– 12790 (2023) 45. Xu, Z., Gong, S., Tang, J., Liang, L., Huang, Y., Li, H., Huang, S.: Kmtalk: Speech-driven 3d facial animation with key motion embedding. In: Proceedings of the European Conference on Computer Vision. pp. 236–253 (2024) 46. Yang, H., Zhu, H., Wang, Y., Huang, M., Shen, Q., Yang, R., Cao, X.: Facescape: A large-scale high quality 3d face dataset and detailed riggable 3d face prediction. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. pp. 601–610 (2020) 47. Yang, K.C.D., Ranjan, A., Chang, J.H.R., Vemulapalli, R., Tuzel, O.: Probabilistic speech-driven 3d facial motion synthesis: New benchmarks, methods, and appli-cations. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (2024) 48. Zhang, Z., Li, L., Ding, Y., Fan, C.: Flow-guided one-shot talking face generation with a high-resolution audio-visual dataset. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR). pp. 3661–3670 (2021) 49. Zhuang, Y., Cheng, B., Cheng, Y., Jin, Y., Liu, R., Li, C., Cheng, X., Liao, J., Lin, J.: Learn2talk: 3d talking face learns from 2d talking face. IEEE Transactions on Visualization and Computer Graphics (2024) KoUniTalk: A Lightweight Articulation-Centered Benchmark 19 
+
+## Supplementary Material S1 Overview 
+
+This supplementary material supports the main submission with additional details and analysis for the KoUniTalk benchmark. The main paper is self-contained; this document provides additional evidence for retargeting quality and reproducibility rather than a revised method or a new central claim. 
+
+## S2 Unified Template, Landmarks, and Lip Mask 
+
+KoUniTalk uses a lightweight unified articulation template with 1,176 vertices and 2,236 triangular faces. The resulting output dimensionality is 1,176 × 3 = 3,528 . The template is intended as an identity-neutral canonical output space for speech-related mouth and lower/mid-face articulation. 
+
+Table S1: Semantic mouth landmarks used to evaluate mouth-motion preservation. The original and retargeted meshes have different topologies, so preservation is mea-sured through these semantic landmark trajectories rather than through direct vertex-wise comparison.              
+
+> Topology Left corner Right corner Upper lip Lower lip
+> VOCASET original 487 198 688 667 Korean original 4707 3010 4118 910 Unified template 327 467 864 151
+
+Lip-region mask. For downstream lip-region evaluation, let L denote the fixed lip-region vertex set on the unified template. The mask contains 262 vertices and was manually selected on the unified template to include the lip contour, inner mouth boundary, and immediate perioral vertices used for lip-region evaluation. The indices are 0-based, range from 27 to 1,175, and contain no duplicates. The same mask is used for all datasets and baselines when computing lip-region vertex error (LVE). The 0-based vertex indices and metadata are provided in 
+
+anc/code/splits/lip_mask_indices.txt and anc/code/splits/lip_mask_ metadata.json , respectively. 
+
+## S3 Benchmark Split and Dataset Statistics 
+
+For VOCASET, we follow the subject-disjoint split used in prior speech-driven 3D facial animation work. For the released Korean speech-based 3D facial motion data, the official test set is not publicly released; therefore, KoUniTalk defines a subject-disjoint split from the released data. The Korean split uses M01–M08 for training, M09 for validation, and M10 for testing. Folders with the “_val” suffix are assigned to the same split as their corresponding speaker. 20 H. Chung and U. Park 
+
+Table S2: Benchmark split statistics computed from the processed split records. Du-ration is reported in minutes. 
+
+Dataset Split Subjects FPS Seq. Frames Duration (min) 
+
+VOCASET Train 8 speakers 60 319 85,064 23.6 VOCASET Val 2 speakers 60 80 20,079 5.6 VOCASET Test 2 speakers 60 79 18,198 5.1 Korean Train M01–M08 30 3,600 459,645 255.4 Korean Val M09 30 450 32,387 18.0 Korean Test M10 30 450 27,408 15.2 VOCASET Total 12 speakers 60 478 123,341 34.3 Korean Total 10 speakers 30 4,500 519,440 288.6 Combined Total 22 speakers 60 / 30 4,978 642,781 322.9 
+
+## S4 Extended Mouth-Motion Preservation Evaluation 
+
+The main paper reports the full-set mouth-motion preservation audit over the processed matched inventory: 478 VOCASET sequences from 12 subjects and 4,500 Korean sequences from 10 subjects. We reproduce the detailed results here alongside the supplementary protocol and visualizations. The exact counts are 123,341 VOCASET frames and 519,440 Korean frames, for a combined total of 4,978 sequences and 642,781 frames. Because the source meshes and unified-template meshes have different topolo-gies, we compare semantic mouth-motion curves. For each sequence, we compute 
+
+dopen (t) = ∥vupper (t) − vlower (t)∥2, (S1) 
+
+dwidth (t) = ∥vleft (t) − vright (t)∥2, (S2) 
+
+raperture (t) = dopen (t)
+
+dwidth (t) . (S3) For each signal s(t) ∈ { dopen (t), d width (t), r aperture (t)}, we also compute the tem-poral difference 
+
+∆s (t) = s(t) − s(t − 1) , (S4) and report the correlation between original and retargeted temporal-difference curves as velocity correlation. 
+
+Table S3: Extended mouth-motion preservation results. Values are reported as mean ±std across subject-level summaries.                                                                     
+
+> Dataset Sampling Signal #Subj. #Seq. #Frames Corr. ↑z-RMSE ↓Amp. Err. ↓Vel. Corr. ↑
+> VOCASET Matched set Opening 12 478 123,341 0.9890 ±0.0113 0.1302 ±0.0593 0.2239 ±0.1101 0.9864 ±0.0124
+> VOCASET Matched set Width 12 478 123,341 0.6489 ±0.1245 0.8044 ±0.1517 0.4877 ±0.1961 0.5995 ±0.1139
+> VOCASET Matched set Aperture 12 478 123,341 0.9899 ±0.0073 0.1289 ±0.0473 0.2064 ±0.0861 0.9889 ±0.0096
+> Korean Matched set Opening 10 4,500 519,440 0.9929 ±0.0067 0.1018 ±0.0508 0.5682 ±0.0208 0.9957 ±0.0034
+> Korean Matched set Width 10 4,500 519,440 0.8871 ±0.0767 0.4332 ±0.1512 0.4514 ±0.0788 0.8255 ±0.0749
+> Korean Matched set Aperture 10 4,500 519,440 0.9915 ±0.0055 0.1210 ±0.0377 0.2819 ±0.0515 0.9928 ±0.0034 KoUniTalk: A Lightweight Articulation-Centered Benchmark 21
+
+The full-set audit shows strong preservation of the temporal shape and timing of vertical mouth opening and aperture-ratio dynamics on both source datasets. Amplitude is not uniformly preserved, especially for Korean opening. The mouth-width signal is reported as a diagnostic because it is more sensitive to lateral scale and landmark placement across the source and unified topologies; this sensitivity is especially visible in the VOCASET width statistics. These four landmarks do not measure anterior–posterior protrusion or constitute a dense mouth-surface evaluation. 
+
+CSV schema. The per-frame curve files should use the same schema for both original and retargeted meshes: 
+
+> dataset, subject_id, sequence_id, frame_idx, opening, width, aperture .
+
+The preservation script merges original and retargeted curves using dataset ,
+
+subject_id , sequence_id , and frame_idx .
+
+## S5 Additional Qualitative Retargeting Examples 
+
+In addition to the representative qualitative examples in the main paper, we provide additional temporal retargeting examples from both VOCASET and Korean data. Figures S1 and S2 complement the extended preservation statis-tics in Table S3. The supplementary PDF includes four image panels in total: a VOCASET mouth-opening trajectory, VOCASET representative frames, a Ko-rean mouth-opening trajectory, and Korean representative frames. We group each trajectory with its corresponding frame contact sheet so that the temporal curve and selected frames can be read together while keeping labels and mesh details readable.          
+
+> Fig. S1: VOCASET temporal retargeting example. The top panel compares the mouth-opening trajectory of the original and retargeted sequence, and the lower panel shows representative frames at selected time steps.
+
+22 H. Chung and U. Park 
+
+Fig. S2: Korean temporal retargeting example. The top panel compares the mouth-opening trajectory of the original landmark sequence and the retargeted unified-template sequence, and the lower panel shows representative frames at selected time steps.

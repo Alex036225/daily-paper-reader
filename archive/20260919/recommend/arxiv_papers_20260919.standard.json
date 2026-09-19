@@ -1,0 +1,93 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-19T21:32:17.756107+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2609.20051v1",
+      "source": "arxiv",
+      "title": "DART: Distillation-Aware Reparameterization for Training-Free LoRA Reuse in Few-Step Video Diffusion Models",
+      "abstract": "Step distillation reduces the cost of video generation, but reusing a LoRA trained for a longer trajectory can alter its functional effect or degrade target quality. Static parameter compatibility offers one perspective on this problem; our observations show that similar measured geometry can coexist with different adapter behavior under a shortened denoising schedule. We propose DART, a training-free method that combines low-rank coordinate transport with target-schedule response calibration using forward evaluations and no source training videos. On a four-step Wan2.2 target, DART-F improves the joint quality score from 0.9029 to 0.9227 and changes macro functional retention from -0.4644 to +0.1349. Component analysis shows that calibration accounts for most of the quality improvement, while coordinate transport provides complementary gains when combined with calibration. Adapter-level results reveal positive functional effects for some adapters and strong attenuation with reduced negative functional effects for others. Evaluations on two additional targets show the same aggregate trend. These results motivate evaluating distilled-model LoRA reuse jointly through functional preservation and negative-transfer avoidance, without assuming recovery for every adapter.",
+      "authors": [
+        "Shihong Li",
+        "Juntao Xu",
+        "JinCao",
+        "Maowen Tang",
+        "Jun Huang",
+        "Jintao Li"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-17T10:58:04+00:00",
+      "link": "https://arxiv.org/pdf/2609.20051v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "training-free LoRA reuse on a four-step Wan2.2 target",
+      "llm_evidence_cn": "在四步Wan2.2目标上的免训练LoRA重用",
+      "llm_evidence": "在四步Wan2.2目标上的免训练LoRA重用",
+      "canonical_evidence": "在四步Wan2.2目标上的免训练LoRA重用",
+      "llm_tldr_en": "The paper addresses the problem that reusing a LoRA trained for longer trajectories degrades under step distillation in video diffusion models. It proposes DART, a training-free method combining low-rank coordinate transport with target-schedule response calibration, and shows improved quality on a four-step Wan2.2 target.",
+      "llm_tldr_cn": "该论文针对步骤蒸馏导致视频扩散模型中LoRA适配器功能变化或质量下降的问题，提出DART，一种免训练的重参数化方法。DART结合低秩坐标传输与目标调度响应校准，无需源训练视频。在四步Wan2.2目标上，DART-F将联合质量分数从0.9029提升至0.9227，宏观功能保持从-0.4644转为+0.1349。该方法为少步视频扩散模型的LoRA复用提供了有效解决方案，促进了Wan模型在低计算成本下的应用。",
+      "llm_tldr": "该论文针对步骤蒸馏导致视频扩散模型中LoRA适配器功能变化或质量下降的问题，提出DART，一种免训练的重参数化方法。DART结合低秩坐标传输与目标调度响应校准，无需源训练视频。在四步Wan2.2目标上，DART-F将联合质量分数从0.9029提升至0.9227，宏观功能保持从-0.4644转为+0.1349。该方法为少步视频扩散模型的LoRA复用提供了有效解决方案，促进了Wan模型在低计算成本下的应用。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.19840v1",
+      "source": "arxiv",
+      "title": "KoUniTalk: A Lightweight Articulation-Centered Korean-English 3D Talking Face Benchmark",
+      "abstract": "High-quality 3D talking face datasets remain largely English- centric, and Korean 3D facial motion data are difficult to combine with standard English benchmarks because of differences in mesh topology, spatial scale, coordinate system, and temporal sampling. We present KoUniTalk, a lightweight articulation-centered Korean-English 3D talk- ing face benchmark that retargets VOCASET and the released Korean speech-based 3D talking face data to a shared mesh topology using de- formation transfer. Rather than proposing a new deformation-transfer algorithm or a full-head identity-preserving avatar dataset, KoUniTalk provides an identity-neutral canonical output space for controlled speech- driven facial articulation training and evaluation across English and Ko- rean. The unified template contains 1,176 vertices and focuses on the mouth and adjacent lower- and mid-face regions, reducing the output dimensionality from 15,069 and 72,147 dimensions to 3,528 dimensions, corresponding to 4.27-fold and 20.45-fold reductions compared with VO- CASET/FLAME and the original Korean mesh, respectively. To exam- ine whether retargeting preserves speech-relevant motion, we evaluate semantic mouth-landmark trajectories, including mouth opening, mouth width, aperture ratio, and mouth-opening dynamics. Since the official test set of the Korean dataset is not publicly released, we additionally define a subject-disjoint Korean benchmark split. The processed matched benchmark contains 22 speakers, 4,978 sequences, and 642,781 frames, enabling Korean-English cross-dataset evaluation of speech-driven 3D fa- cial animation models in a single compact articulation-template space. Source-reported inventory counts are listed separately from these pro- cessed counts",
+      "authors": [
+        "Hyunjung Chung",
+        "Unsang Park"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-17T07:46:37+00:00",
+      "link": "https://arxiv.org/pdf/2609.19840v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "provides benchmark for speech-driven facial articulation for talking faces",
+      "llm_evidence_cn": "提供面向说话人脸的语音驱动面部发音基准",
+      "llm_evidence": "提供面向说话人脸的语音驱动面部发音基准",
+      "canonical_evidence": "提供面向说话人脸的语音驱动面部发音基准",
+      "llm_tldr_en": "Introduces KoUniTalk, a lightweight benchmark that unifies Korean and English 3D talking face data into a shared mesh topology for speech-driven facial articulation training and evaluation.",
+      "llm_tldr_cn": "针对高质量3D说话人脸数据集主要以英语为中心、韩语数据难以与英语基准整合的问题，提出KoUniTalk轻量级基准。该基准通过变形转移将VOCASET和韩语语音3D数据重定向到统一网格拓扑，提供身份中立的规范输出空间。它支持语音驱动面部发音的受控训练和评估，促进跨语言唇形同步研究。此数据资源有助于评估和改进多语言说话人脸生成中的唇部自然度。",
+      "llm_tldr": "针对高质量3D说话人脸数据集主要以英语为中心、韩语数据难以与英语基准整合的问题，提出KoUniTalk轻量级基准。该基准通过变形转移将VOCASET和韩语语音3D数据重定向到统一网格拓扑，提供身份中立的规范输出空间。它支持语音驱动面部发音的受控训练和评估，促进跨语言唇形同步研究。此数据资源有助于评估和改进多语言说话人脸生成中的唇部自然度。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

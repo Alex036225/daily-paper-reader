@@ -6,29 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-09-18
-- 运行时间：2026-09-18 21:50:27 UTC
+- 最新运行日期：2026-09-19
+- 运行时间：2026-09-19 21:35:37 UTC
 - 运行状态：成功
 - 本次总论文数：2
-- 精读区：0
-- 速读区：2
+- 精读区：1
+- 速读区：1
 
 ### 今日简报（AI）
-今天速读了两篇均分6.0的论文，聚焦视频生成中的世界建模与对象表示。  
-最值得看的方向：AlayaVista用全景状态流式生成透视视频，SlotDiT用对象中心表示改进扩散Transformer。  
-普通读者可先从这两篇速读的图表和结论入手，判断是否值得深入阅读全文。
-- 详情：[/202609/18/README](/202609/18/README)
+- 今日共生成 2 篇推荐（精读 1 篇，速读 1 篇）
+- 精读：《DART: Distillation-Aware Reparameterization for Training-Free LoRA Reuse in Few-Step Video Diffusion Models》（8.0/10）
+- 速读：《KoUniTalk: A Lightweight Articulation-Centered Korean-English 3D Talking Face Benchmark》（7.0/10）
+- 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
+- 详情：[/202609/19/README](/202609/19/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [DART: Distillation-Aware Reparameterization for Training-Free LoRA Reuse in Few-Step Video Diffusion Models](/202609/19/2609.20051v1-dart-distillation-aware-reparameterization-for-training-free-lora-reuse-in-few-step-video-diffusion-models)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：在四步Wan2.2目标上的免训练LoRA重用
 
 ### 速读区论文标签
-1. [AlayaVista: Streaming World Modeling from Panoramic States to Perspective Video](/202609/18/2609.14462v1-alayavista-streaming-world-modeling-from-panoramic-states-to-perspective-video)  
-   标签：评分：6.0/10、query:wan-av-gen
-   evidence：单张透视图像到视频的世界模型
-2. [SlotDiT: Object-Centric Representations for Diffusion Transformers](/202609/18/2609.17414v1-slotdit-object-centric-representations-for-diffusion-transformers)  
-   标签：评分：6.0/10、query:wan-av-gen
-   evidence：从参考图像和指令生成视频
+1. [KoUniTalk: A Lightweight Articulation-Centered Korean-English 3D Talking Face Benchmark](/202609/19/2609.19840v1-kounitalk-a-lightweight-articulation-centered-korean-english-3d-talking-face-benchmark)  
+   标签：评分：7.0/10、query:wan-av-gen
+   evidence：提供面向说话人脸的语音驱动面部发音基准
 
 
 <div class="dpr-home-promo-card">
