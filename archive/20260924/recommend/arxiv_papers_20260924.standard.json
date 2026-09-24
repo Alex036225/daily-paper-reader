@@ -1,0 +1,190 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-24T22:19:13.452313+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2609.22913v1",
+      "source": "arxiv",
+      "title": "AVTR-1: Open Stack for Real-Time Interactive Avatars",
+      "abstract": "Talking-head and dyadic models now achieve real-time inference, yet fast motion generation alone does not produce an interactive conversation. A live system must synchronize the model's output with speech from an external voice agent, schedule video frames for playback, and handle interruptions. We introduce AVTR-1, an open stack for real-time interactive avatar conversations, built around a compact 153M-parameter autoregressive flow-matching motion generator conditioned on both participants' audio. We adapt its audio encoder for streaming through self-distillation. The stack turns the model's chunk-based generation into a continuous, synchronized audio-video stream driven by an external voice agent, and we analytically derive its contribution to the user-facing latencies and validate the resulting bounds with two commercial voice agents. Further experiments demonstrate that AVTR-1 leads the compared dyadic systems on all reported visual-quality metrics and most conventional listening-motion metrics while remaining competitive in lip synchronization. Its inference runtime operates in real time on data-center and consumer GPUs. However, conventional listening metrics do not establish whether the paired speaker's speech contributes to generated motion. We therefore introduce the Reference-Based Directed Granger Gain (R-DGG), which measures the additional predictive information carried by speaker speech after accounting for listener history and speaker motion. R-DGG finds statistically supported predictive dependence for recorded listeners and all evaluated dyadic systems, but not for talking-head generators without paired audio or mismatched speaker-listener pairs. We release the model weights, renderer, and serving backend under component-specific licenses.",
+      "authors": [
+        "Artem Kravtsov",
+        "Dmitrii Ziganshin",
+        "Vsevolod Poletaev",
+        "Gleb Balitskiy",
+        "Anastasia Tikhonova",
+        "Egor Burkov",
+        "Vadim Lebedev"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-09-19T09:45:26+00:00",
+      "link": "https://arxiv.org/pdf/2609.22913v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Real-time interactive avatars conditioned on audio; synchronized audio-video stream",
+      "llm_evidence_cn": "实时交互虚拟人由音频驱动并同步音视频流",
+      "llm_evidence": "实时交互虚拟人由音频驱动并同步音视频流",
+      "canonical_evidence": "实时交互虚拟人由音频驱动并同步音视频流",
+      "llm_tldr_en": "AVTR-1 is an open stack for real-time interactive avatar conversations, built on a compact autoregressive flow-matching motion generator conditioned on both participants' audio. It synchronizes model output with speech from external voice agents and schedules video frames for playback.",
+      "llm_tldr_cn": "AVTR-1针对实时交互虚拟人对话中的同步问题，提出开放栈。现有模型虽能实时推理，但音频视频同步、帧调度和打断处理仍是挑战。该栈基于153M参数的流匹配自回归运动生成器，以双方音频为条件，并通过自蒸馏适配流式音频编码器。实验表明其能将分块生成转化为连续同步的音视频流，降低用户感知延迟。该工作为实时对话虚拟人提供了完整解决方案。",
+      "llm_tldr": "AVTR-1针对实时交互虚拟人对话中的同步问题，提出开放栈。现有模型虽能实时推理，但音频视频同步、帧调度和打断处理仍是挑战。该栈基于153M参数的流匹配自回归运动生成器，以双方音频为条件，并通过自蒸馏适配流式音频编码器。实验表明其能将分块生成转化为连续同步的音视频流，降低用户感知延迟。该工作为实时对话虚拟人提供了完整解决方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.27901v1",
+      "source": "arxiv",
+      "title": "All modalities are equal, but video is more equal: Closing the Cross-Attention Gap in Joint Video Generation",
+      "abstract": "Video is a rich representation of a physical event, capturing appearance, geometry, motion, and temporal evolution. Other modalities, such as 3D body motion or audio, encode narrower aspects of the same event. We find that joint multimodal diffusion transformers exhibit a corresponding asymmetry in cross-modal correspondence: companion modalities develop strong correspondences to video, but the reciprocal correspondences through which they constrain video remain substantially weaker. We express both directions as comparable correspondence distributions over video tokens and define their disagreement as the reciprocal correspondence gap. We introduce RecCAR, standing for Reciprocal Cross-modal Attention Regularization, a KL regularizer that uses the well-established video-to-modality correspondence as a fixed reference and aligns the weaker modality-to-video correspondence toward it. Across joint video-motion and video-audio generation, RecCAR improves the Human Anatomy score from 0.69 to 0.75 and reduces audio-video desynchronization from 0.804 to 0.752, while improving overall generation",
+      "authors": [
+        "Ohad Rahamim",
+        "Dvir Samuel",
+        "Idan Schwartz",
+        "Gal Chechik"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-23T12:02:23+00:00",
+      "link": "https://arxiv.org/pdf/2609.27901v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Addresses joint multimodal video generation and improves cross-modal attention so audio/3D motion better constrain video.",
+      "llm_evidence_cn": "解决联合多模态视频生成问题，改进交叉注意力让音频/3D动作更好约束视频。",
+      "llm_evidence": "解决联合多模态视频生成问题，改进交叉注意力让音频/3D动作更好约束视频。",
+      "canonical_evidence": "解决联合多模态视频生成问题，改进交叉注意力让音频/3D动作更好约束视频。",
+      "llm_tldr_en": "Proposes RecCAR, a reciprocal cross-modal attention regularization, to close the gap where companion modalities fail to constrain video generation in joint diffusion transformers.",
+      "llm_tldr_cn": "该论文指出，在联合多模态扩散Transformer中，音频、3D动作等伴生模态对视频的约束远弱于视频对它们的约束，导致生成视频与伴生模态不一致。作者提出RecCAR（互逆跨模态注意力正则化），通过将两个方向的对应分布对齐来缩小这一差距。实验表明，该方法能显著提升多模态视频生成中伴生模态对视频内容的一致性控制。该工作为WAN等多模态视频生成模型提供了改善跨模态协同的方法。",
+      "llm_tldr": "该论文指出，在联合多模态扩散Transformer中，音频、3D动作等伴生模态对视频的约束远弱于视频对它们的约束，导致生成视频与伴生模态不一致。作者提出RecCAR（互逆跨模态注意力正则化），通过将两个方向的对应分布对齐来缩小这一差距。实验表明，该方法能显著提升多模态视频生成中伴生模态对视频内容的一致性控制。该工作为WAN等多模态视频生成模型提供了改善跨模态协同的方法。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.19991v1",
+      "source": "arxiv",
+      "title": "AVTrace: Diagnosing Audio-Visual Temporal Reasoning in Omni Models",
+      "abstract": "Omni models can describe video content, but can they locate events in time, preserve event order, and judge audio-visual synchronization? We introduce AVTrace (Audio-Visual Temporal Reasoning Assessment and Capability Evaluation), a silver-standard diagnostic suite spanning onset and span grounding, synchronization, next-step prediction, cross-modal localization, chain parsing, and event-conditioned comprehension. It contains 34,114 training examples and category-balanced development and test splits of 3,500 and 7,000 examples. We evaluate five open omni models under their respective input configurations using reference-blind response normalization followed by deterministic scoring. All five off-the-shelf systems score below the test split's majority-label baseline of 0.556 on synchronization verification, and obtain low scores on chain parsing and event-conditioned grounding and comprehension. Development-set perturbations reveal task-dependent sensitivity in Qwen3-Omni-30B to modality removal and changes in visual input processing, without isolating their underlying causes. Parameter-efficient temporal post-training improves Gemma4-E4B-it on several benchmark metrics. On three external image benchmarks, task metrics change modestly, including some degradations, while teacher-forcing perplexity decreases. Together, these findings show that semantic reference-text overlap should not be treated as a proxy for temporal localization, and that AVTrace can identify task-specific weaknesses while providing a testbed for temporal post-training.",
+      "authors": [
+        "Longyin Zhang",
+        "Parth Sakhare Mahendra",
+        "Chengwei Wei",
+        "Ning Zhang",
+        "Lim Ming Chong",
+        "Sirui He",
+        "Ai Ti Aw"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-09-17T09:58:27+00:00",
+      "link": "https://arxiv.org/pdf/2609.19991v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "evaluates audio-visual synchronization in omni models",
+      "llm_evidence_cn": "评估全模态模型的视听同步",
+      "llm_evidence": "评估全模态模型的视听同步",
+      "canonical_evidence": "评估全模态模型的视听同步",
+      "llm_tldr_en": "Introduces AVTrace, a diagnostic suite for audio-visual temporal reasoning including synchronization, useful for evaluating lip sync accuracy.",
+      "llm_tldr_cn": "针对全模态模型在视听时间推理上的能力缺乏系统评估问题，提出AVTrace诊断套件，涵盖起始与跨度定位、同步、下一步预测等任务。在五个开源模型上评估，发现现有模型表现不佳。该基准可用于检验包括唇音同步在内的视听对齐能力。",
+      "llm_tldr": "针对全模态模型在视听时间推理上的能力缺乏系统评估问题，提出AVTrace诊断套件，涵盖起始与跨度定位、同步、下一步预测等任务。在五个开源模型上评估，发现现有模型表现不佳。该基准可用于检验包括唇音同步在内的视听对齐能力。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.22069v1",
+      "source": "arxiv",
+      "title": "OmniVBench: A Benchmark and Large-Scale Dataset for Omni Reference-to-Video Generation",
+      "abstract": "Reference-to-video (R2V) generation is evolving toward increasingly general and versatile reference control, giving rise to the emerging paradigm of omni R2V generation. However, existing benchmarks fall short of these emerging capabilities: their test cases cover limited reference types and compositions, and their evaluation protocols largely assess holistic reference consistency, overlooking whether reference factors are properly preserved, disentangled, and routed. Meanwhile, the high cost of constructing omni R2V training data makes suitable training resources scarce. To address these gaps, we introduce OmniVBench and the Omni-R2V Dataset for evaluating and training omni R2V models. OmniVBench expands R2V evaluation across broader reference types, fine-grained control tasks, and richer reference compositions, covering 7 task families and 18 fine-grained tasks spanning content, motion, style, structure, narrative, and multi-reference settings. We introduce factor-grounded evaluation with 12,172 case-specific checklist items, assessing whether intended reference factors are faithfully preserved, correctly disentangled and bound to their targets, and properly realized according to the instruction. We further introduce the Omni-R2V Dataset, bringing industrial-grade training resources for diverse R2V tasks to the broader research community. Drawing primarily on a large-scale corpus of professional video footage, it comprises 340K processed training samples spanning diverse reference types and multi-reference compositions. We develop task-specific pipelines for reference-target pair construction, offering a practical and scalable recipe for omni R2V data construction. Extensive evaluation of advanced open- and closed-source R2V models reveals clear performance gaps across task families and evaluation dimensions on OmniVBench, highlighting remaining limitations of current R2V models.",
+      "authors": [
+        "Wenxue Li",
+        "Peiyan Guan",
+        "Haoyang Jiang",
+        "Junxian Cai",
+        "Hualuo Liu",
+        "Chunjie Zhang",
+        "Chong Guan",
+        "Kai Huang",
+        "Songlian Li",
+        "Taiyi Wu",
+        "Yongjian Yu",
+        "Xiaotong Zhao",
+        "Alan Zhao",
+        "Eric Liu",
+        "Xi Chen",
+        "Yu Liu",
+        "Lei Zhu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-18T17:55:49+00:00",
+      "link": "https://arxiv.org/pdf/2609.22069v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "benchmark for reference-to-video generation, includes image reference",
+      "llm_evidence_cn": "参考到视频生成的基准，包含图像参考",
+      "llm_evidence": "参考到视频生成的基准，包含图像参考",
+      "canonical_evidence": "参考到视频生成的基准，包含图像参考",
+      "llm_tldr_en": "OmniVBench provides a benchmark and dataset for omni reference-to-video generation, including image-conditioned video synthesis.",
+      "llm_tldr_cn": "针对全参考视频生成缺乏全面基准和训练数据的问题，提出OmniVBench和Omni-R2V数据集。扩大参考类型和组合，并改进评估协议以关注参考属性的保持与解耦。该资源支持包括图像条件在内的视频生成研究。",
+      "llm_tldr": "针对全参考视频生成缺乏全面基准和训练数据的问题，提出OmniVBench和Omni-R2V数据集。扩大参考类型和组合，并改进评估协议以关注参考属性的保持与解耦。该资源支持包括图像条件在内的视频生成研究。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
