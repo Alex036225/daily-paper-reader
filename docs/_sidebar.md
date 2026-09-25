@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-25 <!--dpr-date:20260925-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/25/2609.29225v1-complexsync-high-fidelity-and-real-time-lip-sync-in-complex-scenarios" data-sidebar-item="{&quot;title&quot;: &quot;ComplexSync: High-Fidelity and Real-Time Lip Sync in Complex Scenarios&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.29225v1-complexsync-high-fidelity-and-real-time-lip-sync-in-complex-scenarios&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;音频驱动唇形同步，实时扩散生成准确唇动&quot;}">ComplexSync: High-Fidelity and Real-Time Lip Sync in Complex Scenarios</a>
   * 2026-09-24 <!--dpr-date:20260924-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/24/2609.22913v1-avtr-1-open-stack-for-real-time-interactive-avatars" data-sidebar-item="{&quot;title&quot;: &quot;AVTR-1: Open Stack for Real-Time Interactive Avatars&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.22913v1-avtr-1-open-stack-for-real-time-interactive-avatars&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;实时交互虚拟人由音频驱动并同步音视频流&quot;}">AVTR-1: Open Stack for Real-Time Interactive Avatars</a>
