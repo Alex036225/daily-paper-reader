@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-26",
+  "date": "2026-09-26",
+  "generated_at": "2026-09-26T21:37:05",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/26/2609.22641v1-consistworld-evidence-routing-for-consistent-multi-agent-world-models",
+      "section": "deep",
+      "title_en": "ConsistWorld: Evidence Routing for Consistent Multi-Agent World Models",
+      "authors": "Qianxun Xu, Xianfang Zeng, Xinyao Liao, Wei Cheng, Gang Yu, Chi Zhang",
+      "date": "2026-09-18",
+      "pdf": "https://arxiv.org/pdf/2609.22641v1",
+      "score": "8.0",
+      "evidence": "基于图像条件生成多智能体世界模型视频",
+      "tldr": "自回归视频世界模型在单一观察者下能生成时间连贯视频，但扩展到多智能体时难以保持跨视图和跨时间一致性。ConsistWorld从一张共享图像生成相机控制的多智能体视频流，通过姿态条件记忆检索和可见性门控peer共享路由历史与并发证据。实验表明其在证据共享、视频长度和智能体数量泛化上实现强一致性，同时保持竞争性生成质量。该工作为多智能体世界模型的一致生成提供了有效且可扩展的解决方案。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Autoregressive video world models enable temporally coherent generation for a single observer. Extending them to multiple agents requires consistency across independently controlled views and temporal gaps under causal streaming. We present ConsistWorld, a multi-agent world model that generates camera-controlled video streams of a static scene from one shared image. We formulate consistency as routing evidence from committed multi-agent history and concurrently generated peer views to the tokens being generated. Pose Conditioned Memory Retrieval selects relevant historical observations from all agents, recovering evidence beyond the recent context window. Visibility-Gated Peer Sharing regulates current peer information according to estimated historical coverage and current-view overlap. Together, they determine which historical observations enter the context and where concurrent peer information contributes, supporting long-term recall and coordinated exploration. Both mechanisms use camera geometry and maintain a bounded active context for a fixed agent count and retrieval budget. Experiments on evidence sharing cases and video length and agent number generalizations show that ConsistWorld achieves a strong cross-time and cross-agent consistency while preserving competitive generation quality.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/26/2609.29816v1-av-grpo-modality-anchored-decoupling-diffusion-reinforcement-learning-for-joint-audio-video-generation",
+      "section": "deep",
+      "title_en": "AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation",
+      "authors": "Zhiyu Xu, Weilong Yan, Yufei Shi, Shiyang Li, Yihao Liu, Kin-Man Lam, Yuewen Cao",
+      "date": "2026-09-24",
+      "pdf": "https://arxiv.org/pdf/2609.29816v1",
+      "score": "8.0",
+      "evidence": "通过强化学习实现跨模态同步的联合音视频生成",
+      "tldr": "联合音视频生成面临单模态保真度低、文本对齐差和跨模态同步弱的挑战，直接应用强化学习后训练因奖励纠缠和优化成本高而困难。本文提出模态锚定的在线扩散强化学习框架AV-GRPO，通过模态锚定rollouts、轨迹锁定冻结塔优化及自适应目标扰动，将耦合多模态偏好学习分解为单模态子问题，并配套五维解耦数据集5DAV。在JavisBench和VABench上，AV-GRPO在生成质量、语义对齐和跨模态同步指标上均超越基线LTX-2.3，且适用于LoRA和全微调。该工作为联合音视频生成提供了高效的强化学习训练范式。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Recent years have witnessed major progress in joint audio-video generation. Existing models still suffer from limited per-modality fidelity, insufficient text-modality alignment and weak cross-modal synchronization. While reinforcement-learning post-training offers a promising remedy, directly adapting it to joint audio-video generation is challenging. Heterogeneous multimodal rewards entangle learning signals and complicate credit assignment. Joint optimization of two modality towers is computationally expensive given their divergent dynamics. Moreover, synchronization evaluation difficulty depends on paired samples, preventing fair reward comparisons. We propose AV-GRPO, a modality-anchored online diffusion RL framework, and 5DAV, a decoupled, difficulty-controllable training dataset. AV-GRPO includes three key modules: (1) modality-anchored rollouts to disentangle learning signals and stabilize difficulty; (2) trajectory-locked frozen-tower optimization to reduce cost and reassign credit; (3) adaptive objectives and perturbation strengths tailored to modality-specific dynamics. This converts coupled multimodal preference learning into unimodal subproblems for precise reward attribution and better synchronization. Our 5DAV dataset decouples samples across five dimensions for systematic training. Experiments on JavisBench and VABench demonstrate AV-GRPO outperforms LTX-2.3 in generation quality, semantic alignment and cross-modal synchronization under LoRA and full fine-tuning. Ablations confirm our designs. Code and data: https://github.com/zhiyuxu03/AV-GRPO",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

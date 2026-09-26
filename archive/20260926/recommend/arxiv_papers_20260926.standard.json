@@ -1,0 +1,97 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-26T21:31:50.445459+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2609.22641v1",
+      "source": "arxiv",
+      "title": "ConsistWorld: Evidence Routing for Consistent Multi-Agent World Models",
+      "abstract": "Autoregressive video world models enable temporally coherent generation for a single observer. Extending them to multiple agents requires consistency across independently controlled views and temporal gaps under causal streaming. We present ConsistWorld, a multi-agent world model that generates camera-controlled video streams of a static scene from one shared image. We formulate consistency as routing evidence from committed multi-agent history and concurrently generated peer views to the tokens being generated. Pose Conditioned Memory Retrieval selects relevant historical observations from all agents, recovering evidence beyond the recent context window. Visibility-Gated Peer Sharing regulates current peer information according to estimated historical coverage and current-view overlap. Together, they determine which historical observations enter the context and where concurrent peer information contributes, supporting long-term recall and coordinated exploration. Both mechanisms use camera geometry and maintain a bounded active context for a fixed agent count and retrieval budget. Experiments on evidence sharing cases and video length and agent number generalizations show that ConsistWorld achieves a strong cross-time and cross-agent consistency while preserving competitive generation quality.",
+      "authors": [
+        "Qianxun Xu",
+        "Xianfang Zeng",
+        "Xinyao Liao",
+        "Wei Cheng",
+        "Gang Yu",
+        "Chi Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-18T23:31:01+00:00",
+      "link": "https://arxiv.org/pdf/2609.22641v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "image-conditioned video generation for multi-agent world models",
+      "llm_evidence_cn": "基于图像条件生成多智能体世界模型视频",
+      "llm_evidence": "基于图像条件生成多智能体世界模型视频",
+      "canonical_evidence": "基于图像条件生成多智能体世界模型视频",
+      "llm_tldr_en": "This paper presents ConsistWorld, a multi-agent world model that generates camera-controlled video streams from a single shared image. It routes evidence from historical and peer views to ensure consistency across agents and temporal gaps. Experiments demonstrate coherent multi-view video generation from a static image.",
+      "llm_tldr_cn": "针对多智能体扩展中视图一致性和时序一致性不足的问题，本文提出ConsistWorld世界模型，从单一共享图像生成相机控制的多智能体视频流。该方法通过姿态条件记忆检索和可见性门控共享来路由证据。实验表明能够从静态图像生成一致的多视图视频，为图像条件的视频生成提供了有力支持。",
+      "llm_tldr": "针对多智能体扩展中视图一致性和时序一致性不足的问题，本文提出ConsistWorld世界模型，从单一共享图像生成相机控制的多智能体视频流。该方法通过姿态条件记忆检索和可见性门控共享来路由证据。实验表明能够从静态图像生成一致的多视图视频，为图像条件的视频生成提供了有力支持。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.29816v1",
+      "source": "arxiv",
+      "title": "AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation",
+      "abstract": "Recent years have witnessed major progress in joint audio-video generation. Existing models still suffer from limited per-modality fidelity, insufficient text-modality alignment and weak cross-modal synchronization. While reinforcement-learning post-training offers a promising remedy, directly adapting it to joint audio-video generation is challenging. Heterogeneous multimodal rewards entangle learning signals and complicate credit assignment. Joint optimization of two modality towers is computationally expensive given their divergent dynamics. Moreover, synchronization evaluation difficulty depends on paired samples, preventing fair reward comparisons. We propose AV-GRPO, a modality-anchored online diffusion RL framework, and 5DAV, a decoupled, difficulty-controllable training dataset. AV-GRPO includes three key modules: (1) modality-anchored rollouts to disentangle learning signals and stabilize difficulty; (2) trajectory-locked frozen-tower optimization to reduce cost and reassign credit; (3) adaptive objectives and perturbation strengths tailored to modality-specific dynamics. This converts coupled multimodal preference learning into unimodal subproblems for precise reward attribution and better synchronization. Our 5DAV dataset decouples samples across five dimensions for systematic training. Experiments on JavisBench and VABench demonstrate AV-GRPO outperforms LTX-2.3 in generation quality, semantic alignment and cross-modal synchronization under LoRA and full fine-tuning. Ablations confirm our designs. Code and data: https://github.com/zhiyuxu03/AV-GRPO",
+      "authors": [
+        "Zhiyu Xu",
+        "Weilong Yan",
+        "Yufei Shi",
+        "Shiyang Li",
+        "Yihao Liu",
+        "Kin-Man Lam",
+        "Yuewen Cao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "published": "2026-09-24T13:53:05+00:00",
+      "link": "https://arxiv.org/pdf/2609.29816v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "joint audio-video generation with cross-modal synchronization via RL",
+      "llm_evidence_cn": "通过强化学习实现跨模态同步的联合音视频生成",
+      "llm_evidence": "通过强化学习实现跨模态同步的联合音视频生成",
+      "canonical_evidence": "通过强化学习实现跨模态同步的联合音视频生成",
+      "llm_tldr_en": "This paper proposes AV-GRPO, a modality-anchored decoupling diffusion RL framework for joint audio-video generation, improving per-modality fidelity, text alignment and cross-modal synchronization.",
+      "llm_tldr_cn": "该论文针对联合音视频生成中模态保真度有限、文本对齐不足和跨模态同步弱的问题，提出AV-GRPO框架，一种模态锚定的解耦扩散强化学习后训练方法。通过将异构多模态奖励解耦并分别优化两个模态塔，同时解决同步评估的公平性问题。实验表明该方法提升了音视频生成的质量和同步性。该工作为多模态视频生成尤其是唇形同步等任务提供了强化学习优化路线。",
+      "llm_tldr": "该论文针对联合音视频生成中模态保真度有限、文本对齐不足和跨模态同步弱的问题，提出AV-GRPO框架，一种模态锚定的解耦扩散强化学习后训练方法。通过将异构多模态奖励解耦并分别优化两个模态塔，同时解决同步评估的公平性问题。实验表明该方法提升了音视频生成的质量和同步性。该工作为多模态视频生成尤其是唇形同步等任务提供了强化学习优化路线。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}

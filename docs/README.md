@@ -6,23 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-09-25
-- 运行时间：2026-09-25 22:11:39 UTC
+- 最新运行日期：2026-09-26
+- 运行时间：2026-09-26 21:36:48 UTC
 - 运行状态：成功
-- 本次总论文数：1
-- 精读区：1
+- 本次总论文数：2
+- 精读区：2
 - 速读区：0
 
 ### 今日简报（AI）
-- 今日共生成 1 篇推荐（精读 1 篇，速读 0 篇）
-- 精读：《ComplexSync: High-Fidelity and Real-Time Lip Sync in Complex Scenarios》（9.0/10）
+- 今日共生成 2 篇推荐（精读 2 篇，速读 0 篇）
+- 精读：《ConsistWorld: Evidence Routing for Consistent Multi-Agent World Models》（8.0/10）, 《AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation》（8.0/10）
 - 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
-- 详情：[/202609/25/README](/202609/25/README)
+- 详情：[/202609/26/README](/202609/26/README)
 
 ### 精读区论文标签
-1. [ComplexSync: High-Fidelity and Real-Time Lip Sync in Complex Scenarios](/202609/25/2609.29225v1-complexsync-high-fidelity-and-real-time-lip-sync-in-complex-scenarios)  
-   标签：评分：9.0/10、query:wan-av-gen
-   evidence：音频驱动唇形同步，实时扩散生成准确唇动
+1. [ConsistWorld: Evidence Routing for Consistent Multi-Agent World Models](/202609/26/2609.22641v1-consistworld-evidence-routing-for-consistent-multi-agent-world-models)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：基于图像条件生成多智能体世界模型视频
+2. [AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation](/202609/26/2609.29816v1-av-grpo-modality-anchored-decoupling-diffusion-reinforcement-learning-for-joint-audio-video-generation)  
+   标签：评分：8.0/10、query:wan-av-gen
+   evidence：通过强化学习实现跨模态同步的联合音视频生成
 
 ### 速读区论文标签
 - 本次无速读推荐。
