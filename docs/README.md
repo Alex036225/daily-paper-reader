@@ -6,29 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-09-26
-- 运行时间：2026-09-26 21:36:48 UTC
+- 最新运行日期：2026-09-27
+- 运行时间：2026-09-27 21:54:53 UTC
 - 运行状态：成功
 - 本次总论文数：2
-- 精读区：2
-- 速读区：0
+- 精读区：0
+- 速读区：2
 
 ### 今日简报（AI）
-- 今日共生成 2 篇推荐（精读 2 篇，速读 0 篇）
-- 精读：《ConsistWorld: Evidence Routing for Consistent Multi-Agent World Models》（8.0/10）, 《AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation》（8.0/10）
-- 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
-- 详情：[/202609/26/README](/202609/26/README)
+今天速读了两篇视频生成方向的新论文：一篇用圆柱体网格做粗粒度 3D 布局控制，一篇聚焦电影级提示词增强。  
+最值得关注的是 3D 布局控制与提示工程这两个方向——一个给视频生成加空间约束，一个提升画面质感。  
+建议普通读者先各花几分钟看摘要和效果图，再判断是否深入阅读。
+- 详情：[/202609/27/README](/202609/27/README)
 
 ### 精读区论文标签
-1. [ConsistWorld: Evidence Routing for Consistent Multi-Agent World Models](/202609/26/2609.22641v1-consistworld-evidence-routing-for-consistent-multi-agent-world-models)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：基于图像条件生成多智能体世界模型视频
-2. [AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation](/202609/26/2609.29816v1-av-grpo-modality-anchored-decoupling-diffusion-reinforcement-learning-for-joint-audio-video-generation)  
-   标签：评分：8.0/10、query:wan-av-gen
-   evidence：通过强化学习实现跨模态同步的联合音视频生成
+- 本次无精读推荐。
 
 ### 速读区论文标签
-- 本次无速读推荐。
+1. [CoaG: Cylinders on a Grid: Coarse 3D Layout Control for Video Generation](/202609/27/2609.24208v1-coag-cylinders-on-a-grid-coarse-3d-layout-control-for-video-generation)  
+   标签：评分：6.0/10、query:wan-av-gen
+   evidence：从背景参考图像和几何生成视频
+2. [WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation](/202609/27/2609.30221v1-wanpe-towards-cinematic-prompt-enhancement-for-modern-text-to-video-generation)  
+   标签：评分：6.0/10、query:wan-av-gen
+   evidence：文本到视频生成的提示增强（与Wan相关）
 
 
 <div class="dpr-home-promo-card">

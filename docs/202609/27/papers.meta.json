@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-27",
+  "date": "2026-09-27",
+  "generated_at": "2026-09-27T21:55:11",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/27/2609.24208v1-coag-cylinders-on-a-grid-coarse-3d-layout-control-for-video-generation",
+      "section": "quick",
+      "title_en": "CoaG: Cylinders on a Grid: Coarse 3D Layout Control for Video Generation",
+      "authors": "Zhangsihao Yang, Mengyi Shan",
+      "date": "2026-09-21",
+      "pdf": "https://arxiv.org/pdf/2609.24208v1",
+      "score": "6.0",
+      "evidence": "从背景参考图像和几何生成视频",
+      "tldr": "在视频生成中，精确控制人物位置和相机运动通常需要专业几何操作，门槛较高。本文提出 CoaG，让用户只需绘制一个地面网格和每人一个圆柱体，即可同时指定人物站位和相机轨迹。为解决缺乏几何-视频配对数据的问题，作者自动构建了2000条配对数据，并在 Wan2.2-Fun-Control 上训练 LoRA。实验表明，生成视频中的人物数量、顺序、位置和高度均与圆柱体对齐，且能跟随推拉、环绕、平移和升降等相机路径，大幅简化了布局控制流程。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "We ask how little geometry a person has to draw to control both where people stand and where the camera moves in a generated video. Our answer is a ground plane and one cylinder per person. A user draws a grid on the ground, places one cylinder where each person should stand, moves the cylinders and the camera over 81 frames, and the model renders a photoreal video in which the people occupy the cylinders' positions, move as the cylinders move, and are seen from the drawn camera. Appearance comes from a text prompt and a background reference image; layout and motion come from the geometry. Because no dataset pairs such a signal with video, we build the pairs ourselves: an automatic engine writes 2000 captions from a combinatorial seed, generates a clip for each with a text-to-video model, and lifts every clip back to its geometry with person tracking, background inpainting, an agentic ground-mask loop, feed-forward multi-view reconstruction and a plane fit, with no real footage and no manual labels. A LoRA on Wan2.2-Fun-Control trained on 1935 such tuples follows drawn layouts and camera paths on hold-out clips: the generated people match the cylinders' count, order, position and height, the text changes who they are, the reference image changes where they are, and dolly-in, orbit, pan and crane paths are followed, dolly-out only weakly.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/27/2609.30221v1-wanpe-towards-cinematic-prompt-enhancement-for-modern-text-to-video-generation",
+      "section": "quick",
+      "title_en": "WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation",
+      "authors": "Yubo Zhu, Yawen Shao, Ziyun Dai, Zixun Fang, Kai Zhu, Siyang Sun, Haolan Xue, Chuxin Wang, Tingyu Weng, Jingming Luo, Chen Shi, Lianghua Huang, Yufeng Ai, Yuzheng Wang, Wenyuan Zhang, Yu Shang, Yuxiang Bao, Zoubin Bi, Jie Xiao, Jinbo Xing, Jiaxing Zhao, Chongyang Zhong, Hengjian Chen, Chenwei Xie, Akide Liu, Zhehan Kan, Yu Liu, Wei Zhai, Sheng Zhong, Wei Tong",
+      "date": "2026-09-24",
+      "pdf": "https://arxiv.org/pdf/2609.30221v1",
+      "score": "6.0",
+      "evidence": "文本到视频生成的提示增强（与Wan相关）",
+      "tldr": "当代视频生成已能支持30秒多镜头创作，但用户文本提示常缺乏导演级规划，难以有效控制动作、镜头、灯光与声音。WanPE提出397B参数提示增强模型，在1.05M真实视频上训练，通过视频反向构建生成镜头级电影计划，并用SC-GRPO确保跨镜头语义一致性。在WanPEval测试中，WanPE-397B使5-15秒人类偏好提升10.66-18.84分，30秒提升50.86分。该工作证明了大规模提示增强对复杂长视频生成的关键价值，并提供了可对标商业系统的技术路径。",
+      "tags": "query:wan-av-gen",
+      "abstract_en": "Video generation begins in text space by authoring a cinematic screenplay, then materializes into pixels. As contemporary video generators scale to 30 seconds and faithfully follow complex conditions, the textual prompt largely directs the production, planning how actions, camera trajectories, lighting, and sound unfold across multi-shot sequences. In this paper, we present WanPE, a 397B-parameter prompt enhancement model trained on 1.05M real-world videos to master director-level cinematic planning. WanPE formulates shot-level cinematic plans via video-grounded reverse construction and employs Semantic-Consistency GRPO (SC-GRPO) to faithfully preserve user requirements across shots and over time. To benchmark this capability, we curate WanPEval, a human-annotated testbed covering durations from 5 to 30 seconds across varying intent granularities, supported by approximately 11K blind pairwise assessments. When powering Wan3.0's video generator, WanPE-397B boosts human preference over raw user prompts by 10.66-18.84 points at 5-15 seconds and by a dramatic 50.86 points in the 30-second arena. Ablation studies show that reverse construction demonstrates clear superiority over forward rewriting, while SC-GRPO robustly preserves semantic fidelity across model scales. Ultimately, WanPE leads all evaluated commercial offerings at 5-15 seconds and remains competitive with Seedance 2.5 at 30 seconds.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

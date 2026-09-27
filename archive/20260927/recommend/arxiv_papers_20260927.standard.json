@@ -1,0 +1,117 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-27T21:53:19.586161+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.24208v1",
+      "source": "arxiv",
+      "title": "CoaG: Cylinders on a Grid: Coarse 3D Layout Control for Video Generation",
+      "abstract": "We ask how little geometry a person has to draw to control both where people stand and where the camera moves in a generated video. Our answer is a ground plane and one cylinder per person. A user draws a grid on the ground, places one cylinder where each person should stand, moves the cylinders and the camera over 81 frames, and the model renders a photoreal video in which the people occupy the cylinders' positions, move as the cylinders move, and are seen from the drawn camera. Appearance comes from a text prompt and a background reference image; layout and motion come from the geometry. Because no dataset pairs such a signal with video, we build the pairs ourselves: an automatic engine writes 2000 captions from a combinatorial seed, generates a clip for each with a text-to-video model, and lifts every clip back to its geometry with person tracking, background inpainting, an agentic ground-mask loop, feed-forward multi-view reconstruction and a plane fit, with no real footage and no manual labels. A LoRA on Wan2.2-Fun-Control trained on 1935 such tuples follows drawn layouts and camera paths on hold-out clips: the generated people match the cylinders' count, order, position and height, the text changes who they are, the reference image changes where they are, and dolly-in, orbit, pan and crane paths are followed, dolly-out only weakly.",
+      "authors": [
+        "Zhangsihao Yang",
+        "Mengyi Shan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-21T07:28:10+00:00",
+      "link": "https://arxiv.org/pdf/2609.24208v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "generates video from background reference image and geometry",
+      "llm_evidence_cn": "从背景参考图像和几何生成视频",
+      "llm_evidence": "从背景参考图像和几何生成视频",
+      "canonical_evidence": "从背景参考图像和几何生成视频",
+      "llm_tldr_en": "Proposes CoaG, which uses coarse 3D layout (ground plane and cylinders) plus a background reference image to control person placement and camera motion in generated video.",
+      "llm_tldr_cn": "针对仅用文本难以同时控制人物位置和摄像机运动的视频生成问题，本文提出CoaG方法，用户只需绘制地面网格和每个人物的圆柱体，并移动圆柱体和摄像机位置，模型即可渲染照片级视频。外观来自文本提示和背景参考图像，布局与运动来自几何。作者构建了2000个自动配对样本训练模型，展示了基于图像条件的可控视频生成能力。",
+      "llm_tldr": "针对仅用文本难以同时控制人物位置和摄像机运动的视频生成问题，本文提出CoaG方法，用户只需绘制地面网格和每个人物的圆柱体，并移动圆柱体和摄像机位置，模型即可渲染照片级视频。外观来自文本提示和背景参考图像，布局与运动来自几何。作者构建了2000个自动配对样本训练模型，展示了基于图像条件的可控视频生成能力。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation conditioned on an image",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.30221v1",
+      "source": "arxiv",
+      "title": "WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation",
+      "abstract": "Video generation begins in text space by authoring a cinematic screenplay, then materializes into pixels. As contemporary video generators scale to 30 seconds and faithfully follow complex conditions, the textual prompt largely directs the production, planning how actions, camera trajectories, lighting, and sound unfold across multi-shot sequences. In this paper, we present WanPE, a 397B-parameter prompt enhancement model trained on 1.05M real-world videos to master director-level cinematic planning. WanPE formulates shot-level cinematic plans via video-grounded reverse construction and employs Semantic-Consistency GRPO (SC-GRPO) to faithfully preserve user requirements across shots and over time. To benchmark this capability, we curate WanPEval, a human-annotated testbed covering durations from 5 to 30 seconds across varying intent granularities, supported by approximately 11K blind pairwise assessments. When powering Wan3.0's video generator, WanPE-397B boosts human preference over raw user prompts by 10.66-18.84 points at 5-15 seconds and by a dramatic 50.86 points in the 30-second arena. Ablation studies show that reverse construction demonstrates clear superiority over forward rewriting, while SC-GRPO robustly preserves semantic fidelity across model scales. Ultimately, WanPE leads all evaluated commercial offerings at 5-15 seconds and remains competitive with Seedance 2.5 at 30 seconds.",
+      "authors": [
+        "Yubo Zhu",
+        "Yawen Shao",
+        "Ziyun Dai",
+        "Zixun Fang",
+        "Kai Zhu",
+        "Siyang Sun",
+        "Haolan Xue",
+        "Chuxin Wang",
+        "Tingyu Weng",
+        "Jingming Luo",
+        "Chen Shi",
+        "Lianghua Huang",
+        "Yufeng Ai",
+        "Yuzheng Wang",
+        "Wenyuan Zhang",
+        "Yu Shang",
+        "Yuxiang Bao",
+        "Zoubin Bi",
+        "Jie Xiao",
+        "Jinbo Xing",
+        "Jiaxing Zhao",
+        "Chongyang Zhong",
+        "Hengjian Chen",
+        "Chenwei Xie",
+        "Akide Liu",
+        "Zhehan Kan",
+        "Yu Liu",
+        "Wei Zhai",
+        "Sheng Zhong",
+        "Wei Tong"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-24T17:48:19+00:00",
+      "link": "https://arxiv.org/pdf/2609.30221v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "prompt enhancement for text-to-video generation (Wan-related)",
+      "llm_evidence_cn": "文本到视频生成的提示增强（与Wan相关）",
+      "llm_evidence": "文本到视频生成的提示增强（与Wan相关）",
+      "canonical_evidence": "文本到视频生成的提示增强（与Wan相关）",
+      "llm_tldr_en": "Proposes WanPE, a 397B prompt enhancement model for cinematic planning in text-to-video generation, trained on 1.05M videos.",
+      "llm_tldr_cn": "针对现代视频生成模型在长时序和多镜头场景下难以忠实跟随复杂文本条件的问题，本文提出WanPE，一个397B参数的提示增强模型，在1.05M真实视频上训练以掌握导演级电影规划能力。WanPE通过视频引导的反向构建生成镜头级规划，并采用语义一致性GRPO在多个镜头和时间上保持用户需求。实验表明，所提出方法能显著提升视频生成的电影级规划质量。",
+      "llm_tldr": "针对现代视频生成模型在长时序和多镜头场景下难以忠实跟随复杂文本条件的问题，本文提出WanPE，一个397B参数的提示增强模型，在1.05M真实视频上训练以掌握导演级电影规划能力。WanPE通过视频引导的反向构建生成镜头级规划，并采用语义一致性GRPO在多个镜头和时间上保持用户需求。实验表明，所提出方法能显著提升视频生成的电影级规划质量。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "video generation using Wan model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
