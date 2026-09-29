@@ -1,0 +1,181 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-28T23:58:17.922750+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2609.30517v1",
+      "source": "arxiv",
+      "title": "Seeing Speech: Learning Visible Articulatory Dynamics for Speech-Driven 3D Facial Animation",
+      "abstract": "Recent progress in speech-driven 3D facial animation has improved vertex-level reconstruction quality, but speech-consistent visible articulation remains difficult. This is because speech production follows structured and constrained articulators' coordination and the mapping from acoustics to motion is inherently one-to-many. Motivated by the structured patterns of visible articulation, we propose a novel articulation-aware framework that models visible speech through directional articulatory motions and composes them into surface-consistent 3D facial motion. To represent visible articulation with three directional articulatory motions, spreading, opening, and protrusion, we propose a Speech--Articulatory Memory (SAM) that captures the correspondence between speech and these motions under phonetic context through retrieval and decoding based on a key-value memory structure. Then, a Topology-aware Articulatory Composition (TAC) integrates the predicted directional articulatory motions under mesh topology to produce surface-consistent 3D facial motion. Experiments on VOCASET and TFHP show that our method achieves state-of-the-art performance on standard reconstruction metrics and improves visible articulatory distance and velocity errors for lip articulation, while a user study confirms clear preference in lip sync and realism.",
+      "authors": [
+        "Hyung Kyu Kim",
+        "Byungchan Hwang",
+        "Hak Gu Kim"
+      ],
+      "primary_category": "eess.AS",
+      "categories": [
+        "eess.AS",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "published": "2026-09-24T20:12:36+00:00",
+      "link": "https://arxiv.org/pdf/2609.30517v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "speech-driven 3D facial animation with directional articulatory motions for visible speech",
+      "llm_evidence_cn": "语音驱动3D面部动画，方向性发音运动建模可见语音",
+      "llm_evidence": "语音驱动3D面部动画，方向性发音运动建模可见语音",
+      "canonical_evidence": "语音驱动3D面部动画，方向性发音运动建模可见语音",
+      "llm_tldr_en": "Addresses weak speech-consistent visible articulation in speech-driven 3D facial animation. Proposes articulation-aware framework with Speech-Articulatory Memory modeling spreading, opening and protrusion. Improves lip motion naturalness and synchronization.",
+      "llm_tldr_cn": "针对语音驱动3D面部动画中唇部可见发音与语音一致性的不足，提出发音感知框架，通过方向性发音运动（展开、张开、前突）建模可见语音。该方法利用语音-发音记忆模块合成表面一致的3D面部运动，实验表明能提升唇动自然度和与语音的同步性。其发音建模思想可迁移至图像驱动的说话人视频生成中的唇形合成。",
+      "llm_tldr": "针对语音驱动3D面部动画中唇部可见发音与语音一致性的不足，提出发音感知框架，通过方向性发音运动（展开、张开、前突）建模可见语音。该方法利用语音-发音记忆模块合成表面一致的3D面部运动，实验表明能提升唇动自然度和与语音的同步性。其发音建模思想可迁移至图像驱动的说话人视频生成中的唇形合成。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.30963v1",
+      "source": "arxiv",
+      "title": "Where and When to Force: Routed Forcing for Streaming Avatars",
+      "abstract": "Audio-driven streaming avatar generation requires real-time synthesis of speech-synchronized videos with dynamic and diverse motion. Self Forcing uses Distribution Matching Distillation (DMD) to distill bidirectional video diffusion models into causal, few-step generators for real-time streaming. However, DMD minimizes a reverse KL divergence, which is inherently mode-seeking: it causes the student to discard high-dynamic modes and collapse onto static outputs, compressing both dynamics and diversity of generated videos. We find that this collapse is region-heterogeneous: person regions involving pose and gesture variations suffer the largest diversity loss, the audio-driven mouth region shows a small loss, and the background remains nearly stable. Based on this observation, we propose Routed Forcing, which routes the distillation objective by semantic region and noise stage to improve dynamics and diversity while preserving visual quality. Specifically, (1) Where to Force: Semantic-Region Routing applies Data-Forcing Distillation (DFD), which supervises the student with real videos, to the person region where diversity collapse is most severe, while retaining DMD for the mouth and background to preserve lip synchronization and scene stability. (2) When to Force: Noise-Stage Routing activates DFD at high noise stages, where real video serves as effective supervision to inject diverse and dynamic motion patterns. At low noise stages, DMD is used to refine details, avoiding blur and artifacts from spatial differences between real video and student-generated video. Experiments show that Routed Forcing improves dynamics by up to 45% and diversity by 7-25% over Self Forcing, while preserving video quality and lip synchronization.",
+      "authors": [
+        "Zihan Su",
+        "Siwen Lu",
+        "Junhao Zhuang",
+        "Zeyue Xue",
+        "Haoyang Huang",
+        "Guanghao Li",
+        "Xiaofeng Tan",
+        "Chun Yuan",
+        "Nan Duan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-25T08:15:11+00:00",
+      "link": "https://arxiv.org/pdf/2609.30963v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "audio-driven streaming avatar generation, speech-synchronized mouth region",
+      "llm_evidence_cn": "音频驱动的流式化身生成，语音同步口型区域",
+      "llm_evidence": "音频驱动的流式化身生成，语音同步口型区域",
+      "canonical_evidence": "音频驱动的流式化身生成，语音同步口型区域",
+      "llm_tldr_en": "Identifies region-heterogeneous diversity collapse in distilled streaming avatars and proposes routed forcing to preserve dynamics while maintaining lip sync.",
+      "llm_tldr_cn": "针对音频驱动流式化身生成中蒸馏导致的高动态模态丢失问题，本文观察到多样性坍缩具有区域异质性：口型区域损失小，人物姿态手势损失大。提出路径强制方法，在蒸馏过程中对高动态区域差异化施加约束。实验表明能在保持语音同步的同时恢复运动多样性与动态性。该工作为实时音视频同步化身生成提供了新思路。",
+      "llm_tldr": "针对音频驱动流式化身生成中蒸馏导致的高动态模态丢失问题，本文观察到多样性坍缩具有区域异质性：口型区域损失小，人物姿态手势损失大。提出路径强制方法，在蒸馏过程中对高动态区域差异化施加约束。实验表明能在保持语音同步的同时恢复运动多样性与动态性。该工作为实时音视频同步化身生成提供了新思路。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "Image to video generation with audio driven lip motion synthesis.",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.29816v2",
+      "source": "arxiv",
+      "title": "AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation",
+      "abstract": "Recent years have witnessed major progress in joint audio-video generation. Existing models still suffer from limited per-modality fidelity, insufficient text-modality alignment and weak cross-modal synchronization. While reinforcement-learning post-training offers a promising remedy, directly adapting it to joint audio-video generation is challenging. Heterogeneous multimodal rewards entangle learning signals and complicate credit assignment. Joint optimization of two modality towers is computationally expensive given their divergent dynamics. Moreover, synchronization evaluation difficulty depends on paired samples, preventing fair reward comparisons. We propose AV-GRPO, a modality-anchored online diffusion RL framework, and 5DAV, a decoupled, difficulty-controllable training dataset. AV-GRPO includes three key modules: (1) modality-anchored rollouts to disentangle learning signals and stabilize difficulty; (2) trajectory-locked frozen-tower optimization to reduce cost and reassign credit; (3) adaptive objectives and perturbation strengths tailored to modality-specific dynamics. This converts coupled multimodal preference learning into unimodal subproblems for precise reward attribution and better synchronization. Our 5DAV dataset decouples samples across five dimensions for systematic training. Experiments on JavisBench and VABench demonstrate AV-GRPO outperforms LTX-2.3 in generation quality, semantic alignment and cross-modal synchronization under LoRA and full fine-tuning. Ablations confirm our designs. Code and data: https://github.com/zhiyuxu03/AV-GRPO",
+      "authors": [
+        "Zhiyu Xu",
+        "Weilong Yan",
+        "Yufei Shi",
+        "Shiyang Li",
+        "Yihao Liu",
+        "Kin-Man Lam",
+        "Yuewen Cao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "published": "2026-09-24T13:53:05+00:00",
+      "link": "https://arxiv.org/pdf/2609.29816v2",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "modality-anchored diffusion RL for joint audio-video generation improving cross-modal synchronization",
+      "llm_evidence_cn": "模态锚定的扩散强化学习用于联合音视频生成，改善跨模态同步",
+      "llm_evidence": "模态锚定的扩散强化学习用于联合音视频生成，改善跨模态同步",
+      "canonical_evidence": "模态锚定的扩散强化学习用于联合音视频生成，改善跨模态同步",
+      "llm_tldr_en": "AV-GRPO proposes a modality-anchored online diffusion RL framework to improve per-modality fidelity, text alignment, and cross-modal synchronization in joint audio-video generation.",
+      "llm_tldr_cn": "AV-GRPO针对联合音视频生成中模态保真度不足、文本对齐弱和跨模态同步差的问题，提出模态锚定的在线扩散强化学习框架。该方法通过解耦异构多模态奖励和公平同步评估，提升各模态质量和同步性。实验表明其能改善联合生成性能，为多模态视频生成提供了有效后训练策略。",
+      "llm_tldr": "AV-GRPO针对联合音视频生成中模态保真度不足、文本对齐弱和跨模态同步差的问题，提出模态锚定的在线扩散强化学习框架。该方法通过解耦异构多模态奖励和公平同步评估，提升各模态质量和同步性。实验表明其能改善联合生成性能，为多模态视频生成提供了有效后训练策略。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.26486v1",
+      "source": "arxiv",
+      "title": "Not Quite My Tempo: Voice Activity-aware Speech Synthesis for Lip-Synchronous Dubbing",
+      "abstract": "Automatic lip-synchronous dubbing requires a speech synthesis model to generate alternating voice and silence patterns in the target language that match the timing of the source clip precisely to ensure an optimal viewing experience. Prior works address this problem by conditioning the speech synthesis process on lip movements extracted from the video signal. In this work, we condition the speech generation on a binary voice-activity signal, which has a lightweight representation and can be produced in multiple ways. We show that the model follows the voice-activity signal with high accuracy while maintaining natural prosody and semantically appropriate pause placement within sentences, as demonstrated through extensive objective and subjective evaluations. By randomly masking this condition during training, we make the feature entirely optional during inference, allowing editors to enforce or relax lip-sync constraints when desired.",
+      "authors": [
+        "Alejandro Pérez-González-de-Martos",
+        "Florian Lux",
+        "Angelina Elizarova",
+        "Milana Shkhanukova",
+        "Andreas Kellner",
+        "Mattia Antonino Di Gangi"
+      ],
+      "primary_category": "eess.AS",
+      "categories": [
+        "eess.AS",
+        "cs.AI"
+      ],
+      "published": "2026-09-22T14:24:10+00:00",
+      "link": "https://arxiv.org/pdf/2609.26486v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "lip-synchronous dubbing via voice activity-aware speech synthesis",
+      "llm_evidence_cn": "基于语音活动感知的唇同步配音",
+      "llm_evidence": "基于语音活动感知的唇同步配音",
+      "canonical_evidence": "基于语音活动感知的唇同步配音",
+      "llm_tldr_en": "This paper addresses lip-synchronous dubbing by conditioning speech synthesis on a lightweight binary voice-activity signal instead of lip movements, achieving high timing accuracy while preserving natural prosody.",
+      "llm_tldr_cn": "针对自动唇同步配音中语音合成需精确匹配源视频时序的问题，本文提出使用轻量级二值语音活动信号作为语音合成的条件，替代传统的唇动特征。实验表明，该方法能高精度跟随语音活动信号，同时保持自然韵律和语义停顿，为高效唇同步配音提供了新方案。",
+      "llm_tldr": "针对自动唇同步配音中语音合成需精确匹配源视频时序的问题，本文提出使用轻量级二值语音活动信号作为语音合成的条件，替代传统的唇动特征。实验表明，该方法能高精度跟随语音活动信号，同时保持自然韵律和语义停顿，为高效唇同步配音提供了新方案。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "accurate lip sync in generated videos",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
