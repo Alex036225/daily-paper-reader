@@ -1,0 +1,78 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-10-01T23:39:14.398082+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.34381v1",
+      "source": "arxiv",
+      "title": "Joint and Cross-Modal Video-Audio Generation and Editing: A Unified Formulation and Design Taxonomy",
+      "abstract": "Video and audio are perceived together, yet most generative models treat them in isolation. We examine methods that model the two modalities jointly, generate one from the other, or edit them in a coupled manner, organized around a single question: how is the output kept coherent across modalities in time and semantics? A unified formulation casts joint generation, cross-modal generation, and joint editing as three problems defined on a single distribution over audio-visual pairs, and a taxonomy compares methods along five design axes. To our knowledge, this is the first overview to systematically taxonomize joint audio-visual editing, which we map as nine edit categories spanning 28 edit types. We describe methods, datasets, and metrics for each setting and close with the open problems we view as most consequential.",
+      "authors": [
+        "Abhinav Sharma",
+        "Sai Karthik Navuluru",
+        "Wang Wei",
+        "Daksh Dangi",
+        "Xiangbo Gao",
+        "Li Li",
+        "Bo Ni",
+        "Vardhan Dongre",
+        "Junda Wu",
+        "Xiyang Hu",
+        "Jiuxiang Gu",
+        "Seunghyun Yoon",
+        "Tong Yu",
+        "Chien Van Nguyen",
+        "Mohamed Elmoghany",
+        "Nedim Lipka",
+        "Hoda Eldardiry",
+        "Hongjie Chen",
+        "Tyler Derr",
+        "Thien Huu Nguyen",
+        "Zhengzhong Tu",
+        "Nesreen K. Ahmed",
+        "Franck Dernoncourt",
+        "Ryan A. Rossi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.MM",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "published": "2026-09-28T05:57:37+00:00",
+      "link": "https://arxiv.org/pdf/2609.34381v1",
+      "tags": [
+        "keyword:wan-av-gen",
+        "query:wan-av-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "systematic taxonomy of joint and cross-modal video-audio generation",
+      "llm_evidence_cn": "联合与跨模态视频音频生成的系统分类法",
+      "llm_evidence": "联合与跨模态视频音频生成的系统分类法",
+      "canonical_evidence": "联合与跨模态视频音频生成的系统分类法",
+      "llm_tldr_en": "This paper provides a unified formulation and design taxonomy for joint generation, cross-modal generation, and joint editing of audio-visual content, organizing methods by five design axes and mapping nine edit categories.",
+      "llm_tldr_cn": "视频与音频通常同时感知，但多数生成模型孤立处理两者。本文提出统一公式，将联合生成、跨模态生成和联合编辑定义为同一音视频对分布上的三个问题，并按五个设计轴构建分类法。文章还首次系统分类了联合音视频编辑，涵盖9大类28种编辑类型。该综述为理解音视频生成与编辑的跨模态一致性提供了结构化框架。",
+      "llm_tldr": "视频与音频通常同时感知，但多数生成模型孤立处理两者。本文提出统一公式，将联合生成、跨模态生成和联合编辑定义为同一音视频对分布上的三个问题，并按五个设计轴构建分类法。文章还首次系统分类了联合音视频编辑，涵盖9大类28种编辑类型。该综述为理解音视频生成与编辑的跨模态一致性提供了结构化框架。",
+      "llm_tags": [
+        "query:wan-av-gen"
+      ],
+      "matched_query_tag": "query:wan-av-gen",
+      "matched_query_text": "generating video with multiple modalities",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

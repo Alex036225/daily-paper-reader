@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-10-01 <!--dpr-date:20261001-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202610/01/2609.34381v1-joint-and-cross-modal-video-audio-generation-and-editing-a-unified-formulation-and-design-taxonomy" data-sidebar-item="{&quot;title&quot;: &quot;Joint and Cross-Modal Video-Audio Generation and Editing: A Unified Formulation and Design Taxonomy&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.34381v1-joint-and-cross-modal-video-audio-generation-and-editing-a-unified-formulation-and-design-taxonomy&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;联合与跨模态视频音频生成的系统分类法&quot;}">Joint and Cross-Modal Video-Audio Generation and Editing: A Unified Formulation and Design Taxonomy</a>
   * 2026-09-29 <!--dpr-date:20260929-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/29/2609.34502v1-subjectanchor-subject-aware-memory-to-video-for-multi-shot-storytelling" data-sidebar-item="{&quot;title&quot;: &quot;SubjectAnchor: Subject-Aware Memory-to-Video for Multi-Shot Storytelling&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.34502v1-subjectanchor-subject-aware-memory-to-video-for-multi-shot-storytelling&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;wan-av-gen&quot;}], &quot;evidence&quot;: &quot;基于Wan2.2-I2V-A14B，实现主题感知记忆到视频，以图像为条件生成视频。&quot;}">SubjectAnchor: Subject-Aware Memory-to-Video for Multi-Shot Storytelling</a>
