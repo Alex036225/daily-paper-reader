@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-01T23:39:14.398763+00:00",
-  "updated_date": "20261001",
+  "generated_at": "2026-10-02T23:05:42.673533+00:00",
+  "updated_date": "20261002",
   "carryover_days": 9,
   "tag_states": {
     "wan-av-gen": {
-      "updated_date": "20261001",
+      "updated_date": "20261002",
       "carryover_days": 9,
       "items": []
     }
